@@ -1,0 +1,193 @@
+{
+  "prompt_text": "",
+  "json_schema": {
+    "name": "relation_sentences",
+    "type": "json_schema",
+    "strict": true,
+    "schema": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "english",
+        "japanese"
+      ],
+      "properties": {
+        "english": {
+          "type": "object",
+          "additionalProperties": false,
+          "required": [
+            "IsA",
+            "HasA",
+            "HasFeatureOf",
+            "UsedFor",
+            "LocatedIn",
+            "BuiltIn",
+            "BuiltBy",
+            "OriginatedIn",
+            "FoundedBy",
+            "FoundedIn",
+            "CreatedBy",
+            "CreatedIn",
+            "DevelopedBy",
+            "DevelopedIn",
+            "DiscoveredBy",
+            "DiscoveredIn",
+            "InventedBy",
+            "InventedIn",
+            "PublishedIn",
+            "WrittenBy",
+            "ComposedBy",
+            "DirectedBy",
+            "PerformedBy",
+            "ManufacturedBy",
+            "ProducedBy",
+            "CausedBy",
+            "Affects",
+            "ConsistsOf",
+            "PartOf",
+            "MemberOf",
+            "BelongsTo",
+            "KnownFor",
+            "AssociatedWith",
+            "NamedAfter",
+            "OccurredIn",
+            "HeldIn",
+            "WonBy",
+            "About",
+            "InfluencedBy",
+            "Influenced"
+          ],
+          "properties": {
+            "IsA": {
+              "type": "array",
+              "items": {
+                "type": "string"
+              },
+              "minItems": 5,
+              "maxItems": 5
+            },
+            "HasA": {
+              "type": "array",
+              "items": {
+                "type": "string"
+              },
+              "minItems": 5,
+              "maxItems": 5
+            },
+            "HasFeatureOf": {
+              "type": "array",
+              "items": {
+                "type": "string"
+              },
+              "minItems": 5,
+              "maxItems": 5
+            },
+            "UsedFor": {
+              "type": "array",
+              "items": {
+                "type": "string"
+              },
+              "minItems": 5,
+              "maxItems": 5
+            },
+            "LocatedIn": {
+              "type": "array",
+              "items": {
+                "type": "string"
+              },
+              "minItems": 5,
+              "maxItems": 5
+            },
+            "BuiltIn": {
+              "type": "array",
+              "items": {
+                "type": "string"
+              },
+              "minItems": 5,
+              "maxItems": 5
+            },
+            "BuiltBy": {
+              "type": "array",
+              "items": {
+                "type": "string"
+              },
+              "minItems": 5,
+              "maxItems": 5
+            }
+          }
+        },
+        "japanese": {
+          "type": "object",
+          "additionalProperties": false,
+          "required": [
+            "IsA",
+            "HasA",
+            "HasFeatureOf",
+            "UsedFor",
+            "LocatedIn",
+            "BuiltIn",
+            "BuiltBy"
+          ],
+          "properties": {
+            "IsA": {
+              "type": "array",
+              "items": {
+                "type": "string"
+              },
+              "minItems": 5,
+              "maxItems": 5
+            },
+            "HasA": {
+              "type": "array",
+              "items": {
+                "type": "string"
+              },
+              "minItems": 5,
+              "maxItems": 5
+            },
+            "HasFeatureOf": {
+              "type": "array",
+              "items": {
+                "type": "string"
+              },
+              "minItems": 5,
+              "maxItems": 5
+            },
+            "UsedFor": {
+              "type": "array",
+              "items": {
+                "type": "string"
+              },
+              "minItems": 5,
+              "maxItems": 5
+            },
+            "LocatedIn": {
+              "type": "array",
+              "items": {
+                "type": "string"
+              },
+              "minItems": 5,
+              "maxItems": 5
+            },
+            "BuiltIn": {
+              "type": "array",
+              "items": {
+                "type": "string"
+              },
+              "minItems": 5,
+              "maxItems": 5
+            },
+            "BuiltBy": {
+              "type": "array",
+              "items": {
+                "type": "string"
+              },
+              "minItems": 5,
+              "maxItems": 5
+            }
+          }
+        }
+      }
+    }
+  }
+}

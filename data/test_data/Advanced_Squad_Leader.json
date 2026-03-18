@@ -1,0 +1,602 @@
+[
+    {
+        "test_id": 0,
+        "relation": "About",
+        "correct_feat": "actions of squad sized units in World War II",
+        "options": "1. actions of squad sized units in World War II\n2. the representation of the Nativity and its importance in cycles of the Life of the Virgin and Life of Christ\n3. Mary seated in a landscape with the Christ child",
+        "correct_num": 1,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is about [MASK].\n\nOptions:\n1. actions of squad sized units in World War II\n2. the representation of the Nativity and its importance in cycles of the Life of the Virgin and Life of Christ\n3. Mary seated in a landscape with the Christ child"
+    },
+    {
+        "test_id": 1,
+        "relation": "AssociatedWith",
+        "correct_feat": "Avalon Hill Games",
+        "options": "1. the ups and downs of the life of the practiser of virtue versus sin\n2. Avalon Hill Games\n3. the reign of Humayun",
+        "correct_num": 2,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is associated with [MASK].\n\nOptions:\n1. the ups and downs of the life of the practiser of virtue versus sin\n2. Avalon Hill Games\n3. the reign of Humayun"
+    },
+    {
+        "test_id": 2,
+        "relation": "ConsistsOf",
+        "correct_feat": "the ASL Rulebook and various games called modules",
+        "options": "1. singers wearing predominantly orange and yellow costumes\n2. ten panels arranged in five sections\n3. the ASL Rulebook and various games called modules",
+        "correct_num": 3,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> consists of [MASK].\n\nOptions:\n1. singers wearing predominantly orange and yellow costumes\n2. ten panels arranged in five sections\n3. the ASL Rulebook and various games called modules"
+    },
+    {
+        "test_id": 3,
+        "relation": "ConsistsOf",
+        "correct_feat": "geomorphic mapboards and counters",
+        "options": "1. geomorphic mapboards and counters\n2. a wolflike demon\n3. oil paints, house paint, and tempura",
+        "correct_num": 1,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> consists of [MASK].\n\nOptions:\n1. geomorphic mapboards and counters\n2. a wolflike demon\n3. oil paints, house paint, and tempura"
+    },
+    {
+        "test_id": 4,
+        "relation": "HasA",
+        "correct_feat": "a detailed game system for two or more players",
+        "options": "1. corn growing around the Kiva\n2. a detailed game system for two or more players\n3. two flanking panels representing socialism and capitalism",
+        "correct_num": 2,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> has [MASK].\n\nOptions:\n1. corn growing around the Kiva\n2. a detailed game system for two or more players\n3. two flanking panels representing socialism and capitalism"
+    },
+    {
+        "test_id": 5,
+        "relation": "HasA",
+        "correct_feat": "solitary play also possible",
+        "options": "1. an ancient Byzantine icon of the Mother of God \"Nikopea\" from the 6th century\n2. compartments\n3. solitary play also possible",
+        "correct_num": 3,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> has [MASK].\n\nOptions:\n1. an ancient Byzantine icon of the Mother of God \"Nikopea\" from the 6th century\n2. compartments\n3. solitary play also possible"
+    },
+    {
+        "test_id": 6,
+        "relation": "HasA",
+        "correct_feat": "geomorphic mapboards and counters",
+        "options": "1. geomorphic mapboards and counters\n2. abrasions on the surface\n3. a storm",
+        "correct_num": 1,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> has [MASK].\n\nOptions:\n1. geomorphic mapboards and counters\n2. abrasions on the surface\n3. a storm"
+    },
+    {
+        "test_id": 7,
+        "relation": "HasA",
+        "correct_feat": "separate counters for 56 different types of tanks and assault guns for the Germans alone",
+        "options": "1. a parallel drawn between Jacob's vision and Muhammad's event of the Miʿrāj\n2. separate counters for 56 different types of tanks and assault guns for the Germans alone\n3. angels representing the continually changing affairs of humankind",
+        "correct_num": 2,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> has [MASK].\n\nOptions:\n1. a parallel drawn between Jacob's vision and Muhammad's event of the Miʿrāj\n2. separate counters for 56 different types of tanks and assault guns for the Germans alone\n3. angels representing the continually changing affairs of humankind"
+    },
+    {
+        "test_id": 8,
+        "relation": "HasA",
+        "correct_feat": "armor values from 0 to 26",
+        "options": "1. hands folded in prayer\n2. the words \"is mightier than the sword\" upside down\n3. armor values from 0 to 26",
+        "correct_num": 3,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> has [MASK].\n\nOptions:\n1. hands folded in prayer\n2. the words \"is mightier than the sword\" upside down\n3. armor values from 0 to 26"
+    },
+    {
+        "test_id": 9,
+        "relation": "HasA",
+        "correct_feat": "99 separate German vehicles simulated in the game",
+        "options": "1. 99 separate German vehicles simulated in the game\n2. a painting depicting the apparition\n3. a biblical basis in the Gospel of Matthew",
+        "correct_num": 1,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> has [MASK].\n\nOptions:\n1. 99 separate German vehicles simulated in the game\n2. a painting depicting the apparition\n3. a biblical basis in the Gospel of Matthew"
+    },
+    {
+        "test_id": 10,
+        "relation": "HasA",
+        "correct_feat": "a brand new counter mix for the German, Russian and Finnish armies",
+        "options": "1. a feast day celebrated on November 27 O.S./December 10 N.S\n2. a brand new counter mix for the German, Russian and Finnish armies\n3. angels representing souls descending to and ascending from bodies",
+        "correct_num": 2,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> has [MASK].\n\nOptions:\n1. a feast day celebrated on November 27 O.S./December 10 N.S\n2. a brand new counter mix for the German, Russian and Finnish armies\n3. angels representing souls descending to and ascending from bodies"
+    },
+    {
+        "test_id": 11,
+        "relation": "HasA",
+        "correct_feat": "a limited counter mix for system markers, US paratrooper units and their German opponents in Normandy",
+        "options": "1. a tender manner in which the child is nestled against her cheek\n2. an olfactory element provided by seaweed and tar\n3. a limited counter mix for system markers, US paratrooper units and their German opponents in Normandy",
+        "correct_num": 3,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> has [MASK].\n\nOptions:\n1. a tender manner in which the child is nestled against her cheek\n2. an olfactory element provided by seaweed and tar\n3. a limited counter mix for system markers, US paratrooper units and their German opponents in Normandy"
+    },
+    {
+        "test_id": 12,
+        "relation": "HasA",
+        "correct_feat": "a very strong systemic approach",
+        "options": "1. a very strong systemic approach\n2. a depiction of a tornado\n3. an ancient Byzantine icon of the Mother of God \"Nikopea\" from the 6th century",
+        "correct_num": 1,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> has [MASK].\n\nOptions:\n1. a very strong systemic approach\n2. a depiction of a tornado\n3. an ancient Byzantine icon of the Mother of God \"Nikopea\" from the 6th century"
+    },
+    {
+        "test_id": 13,
+        "relation": "HasFeatureOf",
+        "correct_feat": "detailed game system",
+        "options": "1. its veneration during the annual Makariev Fair in Nizhny Novgorod\n2. detailed game system\n3. the multiplication of the sensorial direction of the panorama",
+        "correct_num": 2,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is characterized by [MASK].\n\nOptions:\n1. its veneration during the annual Makariev Fair in Nizhny Novgorod\n2. detailed game system\n3. the multiplication of the sensorial direction of the panorama"
+    },
+    {
+        "test_id": 14,
+        "relation": "HasFeatureOf",
+        "correct_feat": "geomorphic mapboards",
+        "options": "1. brown and red tones in the bottom field\n2. its absence\n3. geomorphic mapboards",
+        "correct_num": 3,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is characterized by [MASK].\n\nOptions:\n1. brown and red tones in the bottom field\n2. its absence\n3. geomorphic mapboards"
+    },
+    {
+        "test_id": 15,
+        "relation": "HasFeatureOf",
+        "correct_feat": "counters",
+        "options": "1. counters\n2. luxuriant patterns\n3. its interpretation as a symbol of paradise, political order, and dynastic unity",
+        "correct_num": 1,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is characterized by [MASK].\n\nOptions:\n1. counters\n2. luxuriant patterns\n3. its interpretation as a symbol of paradise, political order, and dynastic unity"
+    },
+    {
+        "test_id": 16,
+        "relation": "HasFeatureOf",
+        "correct_feat": "researched scenarios depicting historical battles",
+        "options": "1. the traditional deesis form\n2. researched scenarios depicting historical battles\n3. its unique attraction",
+        "correct_num": 2,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is characterized by [MASK].\n\nOptions:\n1. the traditional deesis form\n2. researched scenarios depicting historical battles\n3. its unique attraction"
+    },
+    {
+        "test_id": 17,
+        "relation": "HasFeatureOf",
+        "correct_feat": "card stock for scenarios",
+        "options": "1. the Christ child's face depicted as that of an old man\n2. the seating arrangement of Akbar, Jahangir, and Shah Jahan opposite Humayun\n3. card stock for scenarios",
+        "correct_num": 3,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is characterized by [MASK].\n\nOptions:\n1. the Christ child's face depicted as that of an old man\n2. the seating arrangement of Akbar, Jahangir, and Shah Jahan opposite Humayun\n3. card stock for scenarios"
+    },
+    {
+        "test_id": 18,
+        "relation": "HasFeatureOf",
+        "correct_feat": "specifications of game length, map board configuration, counters involved, special rules for the conditions of the particular battle such as weather, and victory conditions",
+        "options": "1. specifications of game length, map board configuration, counters involved, special rules for the conditions of the particular battle such as weather, and victory conditions\n2. representations of different times of day on each wall\n3. scholarly debate regarding the size of the crowd",
+        "correct_num": 1,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is characterized by [MASK].\n\nOptions:\n1. specifications of game length, map board configuration, counters involved, special rules for the conditions of the particular battle such as weather, and victory conditions\n2. representations of different times of day on each wall\n3. scholarly debate regarding the size of the crowd"
+    },
+    {
+        "test_id": 19,
+        "relation": "HasFeatureOf",
+        "correct_feat": "a detailed set of instructions in the ASL Rulebook for Design Your Own scenarios",
+        "options": "1. brush and ink\n2. a detailed set of instructions in the ASL Rulebook for Design Your Own scenarios\n3. the possibility of only one mounted knight dying",
+        "correct_num": 2,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is characterized by [MASK].\n\nOptions:\n1. brush and ink\n2. a detailed set of instructions in the ASL Rulebook for Design Your Own scenarios\n3. the possibility of only one mounted knight dying"
+    },
+    {
+        "test_id": 20,
+        "relation": "HasFeatureOf",
+        "correct_feat": "Deluxe ASL",
+        "options": "1. luxuriant patterns\n2. the practice of leaving Christmas decorations up until Candlemas\n3. Deluxe ASL",
+        "correct_num": 3,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is characterized by [MASK].\n\nOptions:\n1. luxuriant patterns\n2. the practice of leaving Christmas decorations up until Candlemas\n3. Deluxe ASL"
+    },
+    {
+        "test_id": 21,
+        "relation": "HasFeatureOf",
+        "correct_feat": "Historical ASL",
+        "options": "1. Historical ASL\n2. the juxtaposition of multiple forms\n3. being poetically called \"More spacious than the Heavens\"",
+        "correct_num": 1,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is characterized by [MASK].\n\nOptions:\n1. Historical ASL\n2. the juxtaposition of multiple forms\n3. being poetically called \"More spacious than the Heavens\""
+    },
+    {
+        "test_id": 22,
+        "relation": "HasFeatureOf",
+        "correct_feat": "Solitaire ASL",
+        "options": "1. warfare being far less brutal than in later periods\n2. Solitaire ASL\n3. the niddy-noddy's arms giving it the shape of a cross",
+        "correct_num": 2,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is characterized by [MASK].\n\nOptions:\n1. warfare being far less brutal than in later periods\n2. Solitaire ASL\n3. the niddy-noddy's arms giving it the shape of a cross"
+    },
+    {
+        "test_id": 23,
+        "relation": "IsA",
+        "correct_feat": "a tactical-level board wargame",
+        "options": "1. a depiction of artists and activists among the Chicano community\n2. a work of moral education\n3. a tactical-level board wargame",
+        "correct_num": 3,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is [MASK].\n\nOptions:\n1. a depiction of artists and activists among the Chicano community\n2. a work of moral education\n3. a tactical-level board wargame"
+    },
+    {
+        "test_id": 24,
+        "relation": "IsA",
+        "correct_feat": "a detailed game system",
+        "options": "1. a detailed game system\n2. a painting\n3. a miraculous icon",
+        "correct_num": 1,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is [MASK].\n\nOptions:\n1. a detailed game system\n2. a painting\n3. a miraculous icon"
+    },
+    {
+        "test_id": 25,
+        "relation": "IsA",
+        "correct_feat": "a successor to the award-winning Squad Leader series",
+        "options": "1. a rock painting tradition\n2. a successor to the award-winning Squad Leader series\n3. a type of icon",
+        "correct_num": 2,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is [MASK].\n\nOptions:\n1. a rock painting tradition\n2. a successor to the award-winning Squad Leader series\n3. a type of icon"
+    },
+    {
+        "test_id": 26,
+        "relation": "IsA",
+        "correct_feat": "a complete replacement of the games of the original SL series",
+        "options": "1. a chapel\n2. a theme\n3. a complete replacement of the games of the original SL series",
+        "correct_num": 3,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is [MASK].\n\nOptions:\n1. a chapel\n2. a theme\n3. a complete replacement of the games of the original SL series"
+    },
+    {
+        "test_id": 27,
+        "relation": "IsA",
+        "correct_feat": "the first of Avalon Hill's 'advanced' games",
+        "options": "1. the first of Avalon Hill's 'advanced' games\n2. a painted icon\n3. a transmitter",
+        "correct_num": 1,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is [MASK].\n\nOptions:\n1. the first of Avalon Hill's 'advanced' games\n2. a painted icon\n3. a transmitter"
+    },
+    {
+        "test_id": 28,
+        "relation": "IsA",
+        "correct_feat": "a gaming company founded in 1994 by Perry Cocke and Brian Youse",
+        "options": "1. a counterprocession\n2. a gaming company founded in 1994 by Perry Cocke and Brian Youse\n3. a related subject",
+        "correct_num": 2,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is [MASK].\n\nOptions:\n1. a counterprocession\n2. a gaming company founded in 1994 by Perry Cocke and Brian Youse\n3. a related subject"
+    },
+    {
+        "test_id": 29,
+        "relation": "IsA",
+        "correct_feat": "a Java-based application",
+        "options": "1. a gift from Norway to the United Nations\n2. a celebration of Latino and Chicano culture and influence\n3. a Java-based application",
+        "correct_num": 3,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is [MASK].\n\nOptions:\n1. a gift from Norway to the United Nations\n2. a celebration of Latino and Chicano culture and influence\n3. a Java-based application"
+    },
+    {
+        "test_id": 30,
+        "relation": "IsA",
+        "correct_feat": "known as ASL",
+        "options": "1. known as ASL\n2. a three-dimensional diorama\n3. a creature",
+        "correct_num": 1,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is [MASK].\n\nOptions:\n1. known as ASL\n2. a three-dimensional diorama\n3. a creature"
+    },
+    {
+        "test_id": 31,
+        "relation": "IsA",
+        "correct_feat": "known for simulating actions of squad sized units in World War II",
+        "options": "1. a civil function\n2. known for simulating actions of squad sized units in World War II\n3. a venerated icon",
+        "correct_num": 2,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is [MASK].\n\nOptions:\n1. a civil function\n2. known for simulating actions of squad sized units in World War II\n3. a venerated icon"
+    },
+    {
+        "test_id": 32,
+        "relation": "IsA",
+        "correct_feat": "known for its detailed game system",
+        "options": "1. a Black Virgin\n2. a subject that conflates with the Adoration of the Shepherds\n3. known for its detailed game system",
+        "correct_num": 3,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is [MASK].\n\nOptions:\n1. a Black Virgin\n2. a subject that conflates with the Adoration of the Shepherds\n3. known for its detailed game system"
+    },
+    {
+        "test_id": 33,
+        "relation": "IsA",
+        "correct_feat": "known for its geomorphic mapboards and counters",
+        "options": "1. known for its geomorphic mapboards and counters\n2. a 16th-century copy of the icon\n3. a general or Last Judgment",
+        "correct_num": 1,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is [MASK].\n\nOptions:\n1. known for its geomorphic mapboards and counters\n2. a 16th-century copy of the icon\n3. a general or Last Judgment"
+    },
+    {
+        "test_id": 34,
+        "relation": "IsA",
+        "correct_feat": "known for its researched scenarios depicting historical battles",
+        "options": "1. a miraculous icon\n2. known for its researched scenarios depicting historical battles\n3. a sonnet",
+        "correct_num": 2,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is [MASK].\n\nOptions:\n1. a miraculous icon\n2. known for its researched scenarios depicting historical battles\n3. a sonnet"
+    },
+    {
+        "test_id": 35,
+        "relation": "IsA",
+        "correct_feat": "known for Deluxe ASL, Historical ASL, Solitaire ASL, and ASL Starter Kits",
+        "options": "1. an early example of Mughal political imagery\n2. a sensory journey both in time and space\n3. known for Deluxe ASL, Historical ASL, Solitaire ASL, and ASL Starter Kits",
+        "correct_num": 3,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is [MASK].\n\nOptions:\n1. an early example of Mughal political imagery\n2. a sensory journey both in time and space\n3. known for Deluxe ASL, Historical ASL, Solitaire ASL, and ASL Starter Kits"
+    },
+    {
+        "test_id": 36,
+        "relation": "IsA",
+        "correct_feat": "known for being a successor to the award-winning Squad Leader series",
+        "options": "1. known for being a successor to the award-winning Squad Leader series\n2. a powerful demonic entity\n3. a celebration of Latino and Chicano culture and influence",
+        "correct_num": 1,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is [MASK].\n\nOptions:\n1. known for being a successor to the award-winning Squad Leader series\n2. a powerful demonic entity\n3. a celebration of Latino and Chicano culture and influence"
+    },
+    {
+        "test_id": 37,
+        "relation": "IsA",
+        "correct_feat": "known for its extensive simulation of tanks and assault guns",
+        "options": "1. a holy tile\n2. known for its extensive simulation of tanks and assault guns\n3. a cartoon",
+        "correct_num": 2,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is [MASK].\n\nOptions:\n1. a holy tile\n2. known for its extensive simulation of tanks and assault guns\n3. a cartoon"
+    },
+    {
+        "test_id": 38,
+        "relation": "IsA",
+        "correct_feat": "known for its systemic approach to rules",
+        "options": "1. a work of moral education\n2. a painting\n3. known for its systemic approach to rules",
+        "correct_num": 3,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is [MASK].\n\nOptions:\n1. a work of moral education\n2. a painting\n3. known for its systemic approach to rules"
+    },
+    {
+        "test_id": 39,
+        "relation": "IsA",
+        "correct_feat": "known for its large and active worldwide hobby community",
+        "options": "1. known for its large and active worldwide hobby community\n2. an integrated element of the Great Wall of China\n3. a funeral procession",
+        "correct_num": 1,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is [MASK].\n\nOptions:\n1. known for its large and active worldwide hobby community\n2. an integrated element of the Great Wall of China\n3. a funeral procession"
+    },
+    {
+        "test_id": 40,
+        "relation": "IsA",
+        "correct_feat": "known for being one of \"The Big Three\" games of the hobbyist game industry",
+        "options": "1. a patron icon\n2. known for being one of \"The Big Three\" games of the hobbyist game industry\n3. a Catholic title of the Blessed Virgin Mary",
+        "correct_num": 2,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is [MASK].\n\nOptions:\n1. a patron icon\n2. known for being one of \"The Big Three\" games of the hobbyist game industry\n3. a Catholic title of the Blessed Virgin Mary"
+    },
+    {
+        "test_id": 41,
+        "relation": "IsA",
+        "correct_feat": "part of the ASL game system",
+        "options": "1. the only extant surviving piece by Zhao Gan\n2. one of the most venerated icons in the Upper Volga region\n3. part of the ASL game system",
+        "correct_num": 3,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is [MASK].\n\nOptions:\n1. the only extant surviving piece by Zhao Gan\n2. one of the most venerated icons in the Upper Volga region\n3. part of the ASL game system"
+    },
+    {
+        "test_id": 42,
+        "relation": "IsA",
+        "correct_feat": "used for simulating actions of squad sized units in World War II",
+        "options": "1. used for simulating actions of squad sized units in World War II\n2. a talking point\n3. a copy painted in the \"academic\" style",
+        "correct_num": 1,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is [MASK].\n\nOptions:\n1. used for simulating actions of squad sized units in World War II\n2. a talking point\n3. a copy painted in the \"academic\" style"
+    },
+    {
+        "test_id": 43,
+        "relation": "IsA",
+        "correct_feat": "used for playing ASL",
+        "options": "1. a statue\n2. used for playing ASL\n3. a particular judgment in Catholicism and Eastern Orthodoxy",
+        "correct_num": 2,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is [MASK].\n\nOptions:\n1. a statue\n2. used for playing ASL\n3. a particular judgment in Catholicism and Eastern Orthodoxy"
+    },
+    {
+        "test_id": 44,
+        "relation": "IsA",
+        "correct_feat": "used for representing nearly every troop type, vehicle, and weapon to see combat action from any nationality involved in World War II",
+        "options": "1. a depiction of Saint Onuphrius\n2. an interpretation of the original in a contemporary Netherlandish style\n3. used for representing nearly every troop type, vehicle, and weapon to see combat action from any nationality involved in World War II",
+        "correct_num": 3,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is [MASK].\n\nOptions:\n1. a depiction of Saint Onuphrius\n2. an interpretation of the original in a contemporary Netherlandish style\n3. used for representing nearly every troop type, vehicle, and weapon to see combat action from any nationality involved in World War II"
+    },
+    {
+        "test_id": 45,
+        "relation": "IsA",
+        "correct_feat": "used for depicting historical battles",
+        "options": "1. used for depicting historical battles\n2. a Blessed Virgin depiction\n3. an image of the Child Jesus",
+        "correct_num": 1,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is [MASK].\n\nOptions:\n1. used for depicting historical battles\n2. a Blessed Virgin depiction\n3. an image of the Child Jesus"
+    },
+    {
+        "test_id": 46,
+        "relation": "IsA",
+        "correct_feat": "used for Design Your Own scenarios",
+        "options": "1. a funeral procession\n2. used for Design Your Own scenarios\n3. an Eastern Orthodox icon of the Virgin of the Passion called Amolyntos",
+        "correct_num": 2,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is [MASK].\n\nOptions:\n1. a funeral procession\n2. used for Design Your Own scenarios\n3. an Eastern Orthodox icon of the Virgin of the Passion called Amolyntos"
+    },
+    {
+        "test_id": 47,
+        "relation": "IsA",
+        "correct_feat": "used for fusing miniature wargaming with ASL",
+        "options": "1. a pilgrim feast\n2. a painted icon\n3. used for fusing miniature wargaming with ASL",
+        "correct_num": 3,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is [MASK].\n\nOptions:\n1. a pilgrim feast\n2. a painted icon\n3. used for fusing miniature wargaming with ASL"
+    },
+    {
+        "test_id": 48,
+        "relation": "IsA",
+        "correct_feat": "used for simulating armor protection and penetration in tank combat",
+        "options": "1. used for simulating armor protection and penetration in tank combat\n2. an outdoor art\n3. a Catholic title of the Blessed Virgin Mary",
+        "correct_num": 1,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is [MASK].\n\nOptions:\n1. used for simulating armor protection and penetration in tank combat\n2. an outdoor art\n3. a Catholic title of the Blessed Virgin Mary"
+    },
+    {
+        "test_id": 49,
+        "relation": "IsA",
+        "correct_feat": "used for simulating tank and assault gun types",
+        "options": "1. a repeater\n2. used for simulating tank and assault gun types\n3. a work of moral education",
+        "correct_num": 2,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is [MASK].\n\nOptions:\n1. a repeater\n2. used for simulating tank and assault gun types\n3. a work of moral education"
+    },
+    {
+        "test_id": 50,
+        "relation": "IsA",
+        "correct_feat": "used for simulating German vehicles",
+        "options": "1. one of the longest murals in the world\n2. a small Italo-Byzantine replica of an Eleusa (Virgin of Tenderness) icon\n3. used for simulating German vehicles",
+        "correct_num": 3,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is [MASK].\n\nOptions:\n1. one of the longest murals in the world\n2. a small Italo-Byzantine replica of an Eleusa (Virgin of Tenderness) icon\n3. used for simulating German vehicles"
+    },
+    {
+        "test_id": 51,
+        "relation": "IsA",
+        "correct_feat": "used for playing the included scenarios",
+        "options": "1. used for playing the included scenarios\n2. a painting\n3. the county's business hub",
+        "correct_num": 1,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is [MASK].\n\nOptions:\n1. used for playing the included scenarios\n2. a painting\n3. the county's business hub"
+    },
+    {
+        "test_id": 52,
+        "relation": "IsA",
+        "correct_feat": "used in World War II simulations",
+        "options": "1. a demonstration of the artist's skill for potential new clients\n2. used in World War II simulations\n3. a work of Emmanuel Tzanes",
+        "correct_num": 2,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is [MASK].\n\nOptions:\n1. a demonstration of the artist's skill for potential new clients\n2. used in World War II simulations\n3. a work of Emmanuel Tzanes"
+    },
+    {
+        "test_id": 53,
+        "relation": "IsA",
+        "correct_feat": "used in solitaire play",
+        "options": "1. a hackney, or hackney carriage\n2. a square pyramid floating on a raft\n3. used in solitaire play",
+        "correct_num": 3,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is [MASK].\n\nOptions:\n1. a hackney, or hackney carriage\n2. a square pyramid floating on a raft\n3. used in solitaire play"
+    },
+    {
+        "test_id": 54,
+        "relation": "IsA",
+        "correct_feat": "used in campaign settings",
+        "options": "1. used in campaign settings\n2. a technological march towards an increasingly perfectly realistic reproduction\n3. a Passover meal",
+        "correct_num": 1,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is [MASK].\n\nOptions:\n1. used in campaign settings\n2. a technological march towards an increasingly perfectly realistic reproduction\n3. a Passover meal"
+    },
+    {
+        "test_id": 55,
+        "relation": "IsA",
+        "correct_feat": "used in introductory kits",
+        "options": "1. a pastel on monotype\n2. used in introductory kits\n3. a type of rail transport",
+        "correct_num": 2,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is [MASK].\n\nOptions:\n1. a pastel on monotype\n2. used in introductory kits\n3. a type of rail transport"
+    },
+    {
+        "test_id": 56,
+        "relation": "IsA",
+        "correct_feat": "used in tank combat",
+        "options": "1. a 1978 mural\n2. an icon\n3. used in tank combat",
+        "correct_num": 3,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is [MASK].\n\nOptions:\n1. a 1978 mural\n2. an icon\n3. used in tank combat"
+    },
+    {
+        "test_id": 57,
+        "relation": "IsA",
+        "correct_feat": "used in hobbyist game industry",
+        "options": "1. used in hobbyist game industry\n2. a public test of the artist's skill\n3. a scene often used to represent the Nativity",
+        "correct_num": 1,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is [MASK].\n\nOptions:\n1. used in hobbyist game industry\n2. a public test of the artist's skill\n3. a scene often used to represent the Nativity"
+    },
+    {
+        "test_id": 58,
+        "relation": "IsA",
+        "correct_feat": "used in tournaments, community websites, clubs, and fanzines",
+        "options": "1. album cover art\n2. used in tournaments, community websites, clubs, and fanzines\n3. a pastel on monotype",
+        "correct_num": 2,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is [MASK].\n\nOptions:\n1. album cover art\n2. used in tournaments, community websites, clubs, and fanzines\n3. a pastel on monotype"
+    },
+    {
+        "test_id": 59,
+        "relation": "IsA",
+        "correct_feat": "used in a trading and auction community",
+        "options": "1. a public test of the artist's skill\n2. a group portrait of the Timurid dynasty\n3. used in a trading and auction community",
+        "correct_num": 3,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is [MASK].\n\nOptions:\n1. a public test of the artist's skill\n2. a group portrait of the Timurid dynasty\n3. used in a trading and auction community"
+    },
+    {
+        "test_id": 60,
+        "relation": "IsA",
+        "correct_feat": "used in the hobby community",
+        "options": "1. used in the hobby community\n2. a diving platform\n3. a form of transport",
+        "correct_num": 1,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is [MASK].\n\nOptions:\n1. used in the hobby community\n2. a diving platform\n3. a form of transport"
+    },
+    {
+        "test_id": 61,
+        "relation": "IsA",
+        "correct_feat": "used in real-time input by one or more participants",
+        "options": "1. a departure from Byzantine tradition\n2. used in real-time input by one or more participants\n3. a communications tower",
+        "correct_num": 2,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is [MASK].\n\nOptions:\n1. a departure from Byzantine tradition\n2. used in real-time input by one or more participants\n3. a communications tower"
+    },
+    {
+        "test_id": 62,
+        "relation": "IsA",
+        "correct_feat": "used to regulate fire and movement",
+        "options": "1. a feast of the Presentation of Our Lord\n2. a chapel\n3. used to regulate fire and movement",
+        "correct_num": 3,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is [MASK].\n\nOptions:\n1. a feast of the Presentation of Our Lord\n2. a chapel\n3. used to regulate fire and movement"
+    },
+    {
+        "test_id": 63,
+        "relation": "IsA",
+        "correct_feat": "used to represent different historical locations",
+        "options": "1. used to represent different historical locations\n2. a feast of the Purification of the Virgin\n3. a companion mural",
+        "correct_num": 1,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is [MASK].\n\nOptions:\n1. used to represent different historical locations\n2. a feast of the Purification of the Virgin\n3. a companion mural"
+    },
+    {
+        "test_id": 64,
+        "relation": "IsA",
+        "correct_feat": "used to depict squads of soldiers, crews, individual leaders, support weapons, heavy weapons, and vehicles",
+        "options": "1. primarily very green and hilly\n2. used to depict squads of soldiers, crews, individual leaders, support weapons, heavy weapons, and vehicles\n3. the first pictorial representation of a scene of prehistoric life based on evidence from fossil reconstructions",
+        "correct_num": 2,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is [MASK].\n\nOptions:\n1. primarily very green and hilly\n2. used to depict squads of soldiers, crews, individual leaders, support weapons, heavy weapons, and vehicles\n3. the first pictorial representation of a scene of prehistoric life based on evidence from fossil reconstructions"
+    },
+    {
+        "test_id": 65,
+        "relation": "IsA",
+        "correct_feat": "used to provide the standard equipment for playing ASL",
+        "options": "1. a Minor Basilica\n2. a frieze\n3. used to provide the standard equipment for playing ASL",
+        "correct_num": 3,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is [MASK].\n\nOptions:\n1. a Minor Basilica\n2. a frieze\n3. used to provide the standard equipment for playing ASL"
+    },
+    {
+        "test_id": 66,
+        "relation": "IsA",
+        "correct_feat": "used to enhance solitaire play",
+        "options": "1. used to enhance solitaire play\n2. a full-sized theatre\n3. a painting",
+        "correct_num": 1,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is [MASK].\n\nOptions:\n1. used to enhance solitaire play\n2. a full-sized theatre\n3. a painting"
+    },
+    {
+        "test_id": 67,
+        "relation": "IsA",
+        "correct_feat": "used to simulate armor protection and penetration in tank combat",
+        "options": "1. a means of transportation\n2. used to simulate armor protection and penetration in tank combat\n3. a Black Virgin",
+        "correct_num": 2,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is [MASK].\n\nOptions:\n1. a means of transportation\n2. used to simulate armor protection and penetration in tank combat\n3. a Black Virgin"
+    },
+    {
+        "test_id": 68,
+        "relation": "IsA",
+        "correct_feat": "used to simulate tank and assault gun types",
+        "options": "1. a demonstration of the artist's skill for potential new clients\n2. a feast of the Lord\n3. used to simulate tank and assault gun types",
+        "correct_num": 3,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is [MASK].\n\nOptions:\n1. a demonstration of the artist's skill for potential new clients\n2. a feast of the Lord\n3. used to simulate tank and assault gun types"
+    },
+    {
+        "test_id": 69,
+        "relation": "IsA",
+        "correct_feat": "used to simulate German vehicles",
+        "options": "1. used to simulate German vehicles\n2. art\n3. a drop tube",
+        "correct_num": 1,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is [MASK].\n\nOptions:\n1. used to simulate German vehicles\n2. art\n3. a drop tube"
+    },
+    {
+        "test_id": 70,
+        "relation": "IsA",
+        "correct_feat": "used to play the included scenarios",
+        "options": "1. a depiction of the history of the U.S.-Mexico border and the culture of migration across it\n2. used to play the included scenarios\n3. the boat in the Genesis flood narrative",
+        "correct_num": 2,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is [MASK].\n\nOptions:\n1. a depiction of the history of the U.S.-Mexico border and the culture of migration across it\n2. used to play the included scenarios\n3. the boat in the Genesis flood narrative"
+    },
+    {
+        "test_id": 71,
+        "relation": "IsA",
+        "correct_feat": "used to learn a concept and it applies in all similar situations",
+        "options": "1. a common subject in Christian art from the High Middle Ages to the Baroque\n2. a spectacular mural\n3. used to learn a concept and it applies in all similar situations",
+        "correct_num": 3,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is [MASK].\n\nOptions:\n1. a common subject in Christian art from the High Middle Ages to the Baroque\n2. a spectacular mural\n3. used to learn a concept and it applies in all similar situations"
+    },
+    {
+        "test_id": 72,
+        "relation": "ProducedBy",
+        "correct_feat": "Multi-Man Publishing, LLC",
+        "options": "1. Multi-Man Publishing, LLC\n2. various entities\n3. sculptors",
+        "correct_num": 1,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> was produced by [MASK].\n\nOptions:\n1. Multi-Man Publishing, LLC\n2. various entities\n3. sculptors"
+    },
+    {
+        "test_id": 73,
+        "relation": "PublishedBy",
+        "correct_feat": "Avalon Hill",
+        "options": "1. Michelangelo\n2. Avalon Hill\n3. Cornelis Bos",
+        "correct_num": 2,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> was published by [MASK].\n\nOptions:\n1. Michelangelo\n2. Avalon Hill\n3. Cornelis Bos"
+    },
+    {
+        "test_id": 74,
+        "relation": "PublishedIn",
+        "correct_feat": "1985",
+        "options": "1. Becky Ohlsen's book Walking Portland: 30 Tours of Stumptown's Funky Neighborhoods, Historic Landmarks, Park Trails, Farmers Markets, and Brewpubs\n2. Fátima, Portugal\n3. 1985",
+        "correct_num": 3,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> was published in [MASK].\n\nOptions:\n1. Becky Ohlsen's book Walking Portland: 30 Tours of Stumptown's Funky Neighborhoods, Historic Landmarks, Park Trails, Farmers Markets, and Brewpubs\n2. Fátima, Portugal\n3. 1985"
+    }
+]

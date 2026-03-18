@@ -1,0 +1,514 @@
+[
+    {
+        "test_id": 0,
+        "relation": "About",
+        "correct_feat": "two British policemen kissing",
+        "options": "1. two British policemen kissing\n2. the return to the South following the Battle of Gettysburg\n3. the meeting of the United States and Soviet Armies near the end of World War II",
+        "correct_num": 1,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is about [MASK].\n\nOptions:\n1. two British policemen kissing\n2. the return to the South following the Battle of Gettysburg\n3. the meeting of the United States and Soviet Armies near the end of World War II"
+    },
+    {
+        "test_id": 1,
+        "relation": "Affects",
+        "correct_feat": "the perception of authority and law enforcement",
+        "options": "1. a vaccinated individual\n2. the perception of authority and law enforcement\n3. the York-Hanover-Gettysburg, PA Combined Statistical Area",
+        "correct_num": 2,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> affects [MASK].\n\nOptions:\n1. a vaccinated individual\n2. the perception of authority and law enforcement\n3. the York-Hanover-Gettysburg, PA Combined Statistical Area"
+    },
+    {
+        "test_id": 2,
+        "relation": "AssociatedWith",
+        "correct_feat": "Banksy's notoriety as a provocative street artist and activist",
+        "options": "1. the Tsardom of Russia\n2. the terms Kaiserreich and Königreich\n3. Banksy's notoriety as a provocative street artist and activist",
+        "correct_num": 3,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is associated with [MASK].\n\nOptions:\n1. the Tsardom of Russia\n2. the terms Kaiserreich and Königreich\n3. Banksy's notoriety as a provocative street artist and activist"
+    },
+    {
+        "test_id": 3,
+        "relation": "AssociatedWith",
+        "correct_feat": "Michelangelo's Sistine Ceiling",
+        "options": "1. Michelangelo's Sistine Ceiling\n2. Valorant\n3. computing applications",
+        "correct_num": 1,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is associated with [MASK].\n\nOptions:\n1. Michelangelo's Sistine Ceiling\n2. Valorant\n3. computing applications"
+    },
+    {
+        "test_id": 4,
+        "relation": "AssociatedWith",
+        "correct_feat": "the LGBTQ+ Capital of the UK",
+        "options": "1. Norway, Sweden, Denmark, Iceland, Britain, Ireland, and Sápmi\n2. the LGBTQ+ Capital of the UK\n3. the Albertine line of the Wettin dynasty",
+        "correct_num": 2,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is associated with [MASK].\n\nOptions:\n1. Norway, Sweden, Denmark, Iceland, Britain, Ireland, and Sápmi\n2. the LGBTQ+ Capital of the UK\n3. the Albertine line of the Wettin dynasty"
+    },
+    {
+        "test_id": 5,
+        "relation": "AssociatedWith",
+        "correct_feat": "the LGBTQ community in Brighton",
+        "options": "1. the Spanish Civil War\n2. the Viking Age\n3. the LGBTQ community in Brighton",
+        "correct_num": 3,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is associated with [MASK].\n\nOptions:\n1. the Spanish Civil War\n2. the Viking Age\n3. the LGBTQ community in Brighton"
+    },
+    {
+        "test_id": 6,
+        "relation": "AssociatedWith",
+        "correct_feat": "the country's attitude toward homosexuality",
+        "options": "1. the country's attitude toward homosexuality\n2. polyominoes\n3. the Electorate of Saxony",
+        "correct_num": 1,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is associated with [MASK].\n\nOptions:\n1. the country's attitude toward homosexuality\n2. polyominoes\n3. the Electorate of Saxony"
+    },
+    {
+        "test_id": 7,
+        "relation": "BelongsTo",
+        "correct_feat": "the genre of stencil graffiti",
+        "options": "1. the National Cemetery\n2. the genre of stencil graffiti\n3. the 1940s decade",
+        "correct_num": 2,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> belongs to [MASK].\n\nOptions:\n1. the National Cemetery\n2. the genre of stencil graffiti\n3. the 1940s decade"
+    },
+    {
+        "test_id": 8,
+        "relation": "CausedBy",
+        "correct_feat": "Banksy's artistic expression",
+        "options": "1. an exhausted carbon dioxide scrubber\n2. mounted soldiers securing a system of hereditary rule over their allocated land\n3. Banksy's artistic expression",
+        "correct_num": 3,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is caused by [MASK].\n\nOptions:\n1. an exhausted carbon dioxide scrubber\n2. mounted soldiers securing a system of hereditary rule over their allocated land\n3. Banksy's artistic expression"
+    },
+    {
+        "test_id": 9,
+        "relation": "ConsistsOf",
+        "correct_feat": "two police officers painted in black and white",
+        "options": "1. two police officers painted in black and white\n2. numbered cards depicting locations, objects, or characters\n3. an elliptical wing",
+        "correct_num": 1,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> consists of [MASK].\n\nOptions:\n1. two police officers painted in black and white\n2. numbered cards depicting locations, objects, or characters\n3. an elliptical wing"
+    },
+    {
+        "test_id": 10,
+        "relation": "ConsistsOf",
+        "correct_feat": "evident handcuffs and a baton around their respective belts",
+        "options": "1. a Rolls-Royce Merlin engine\n2. evident handcuffs and a baton around their respective belts\n3. players being given European Currency Units (ECU), Demand cards, and one freight Loco card",
+        "correct_num": 2,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> consists of [MASK].\n\nOptions:\n1. a Rolls-Royce Merlin engine\n2. evident handcuffs and a baton around their respective belts\n3. players being given European Currency Units (ECU), Demand cards, and one freight Loco card"
+    },
+    {
+        "test_id": 11,
+        "relation": "CreatedBy",
+        "correct_feat": "Banksy",
+        "options": "1. Narcís Monturiol\n2. Daphne du Maurier\n3. Banksy",
+        "correct_num": 3,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> was created by [MASK].\n\nOptions:\n1. Narcís Monturiol\n2. Daphne du Maurier\n3. Banksy"
+    },
+    {
+        "test_id": 12,
+        "relation": "CreatedIn",
+        "correct_feat": "Brighton, England",
+        "options": "1. Brighton, England\n2. the incunabula period\n3. 2004",
+        "correct_num": 1,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> was created in [MASK].\n\nOptions:\n1. Brighton, England\n2. the incunabula period\n3. 2004"
+    },
+    {
+        "test_id": 13,
+        "relation": "CreatedTo",
+        "correct_feat": "deliver a critique of an aspect of society",
+        "options": "1. run blockades\n2. deliver a critique of an aspect of society\n3. attack enemy surface ships",
+        "correct_num": 2,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> was created to [MASK].\n\nOptions:\n1. run blockades\n2. deliver a critique of an aspect of society\n3. attack enemy surface ships"
+    },
+    {
+        "test_id": 14,
+        "relation": "CreatedTo",
+        "correct_feat": "orient public attention and conversation to their intended political or social message",
+        "options": "1. run blockades\n2. approach enemy ships undetected\n3. orient public attention and conversation to their intended political or social message",
+        "correct_num": 3,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> was created to [MASK].\n\nOptions:\n1. run blockades\n2. approach enemy ships undetected\n3. orient public attention and conversation to their intended political or social message"
+    },
+    {
+        "test_id": 15,
+        "relation": "CreatedTo",
+        "correct_feat": "normalize and cultivate an increased societal acceptance of homosexuality",
+        "options": "1. normalize and cultivate an increased societal acceptance of homosexuality\n2. be a short-range, high-performance interceptor aircraft\n3. replace the republican lunisolar calendar",
+        "correct_num": 1,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> was created to [MASK].\n\nOptions:\n1. normalize and cultivate an increased societal acceptance of homosexuality\n2. be a short-range, high-performance interceptor aircraft\n3. replace the republican lunisolar calendar"
+    },
+    {
+        "test_id": 16,
+        "relation": "HasA",
+        "correct_feat": "a portrayal of same-sex intimacy",
+        "options": "1. a \"fin\" in European usage\n2. a portrayal of same-sex intimacy\n3. a central king-piece",
+        "correct_num": 2,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> has [MASK].\n\nOptions:\n1. a \"fin\" in European usage\n2. a portrayal of same-sex intimacy\n3. a central king-piece"
+    },
+    {
+        "test_id": 17,
+        "relation": "HasA",
+        "correct_feat": "iconic figures and images deconstructed and juxtaposed into an atypical context",
+        "options": "1. a two-player format\n2. a base, stem and usually a cover\n3. iconic figures and images deconstructed and juxtaposed into an atypical context",
+        "correct_num": 3,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> has [MASK].\n\nOptions:\n1. a two-player format\n2. a base, stem and usually a cover\n3. iconic figures and images deconstructed and juxtaposed into an atypical context"
+    },
+    {
+        "test_id": 18,
+        "relation": "HasFeatureOf",
+        "correct_feat": "its strategic placement",
+        "options": "1. its strategic placement\n2. a die\n3. pieces being crowned upon reaching the opposite end of the board",
+        "correct_num": 1,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is characterized by [MASK].\n\nOptions:\n1. its strategic placement\n2. a die\n3. pieces being crowned upon reaching the opposite end of the board"
+    },
+    {
+        "test_id": 19,
+        "relation": "HasFeatureOf",
+        "correct_feat": "the speed and ease of stencil graffiti",
+        "options": "1. squarish proportions\n2. the speed and ease of stencil graffiti\n3. being rebuilt in exactly the same style as the destroyed bridge",
+        "correct_num": 2,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is characterized by [MASK].\n\nOptions:\n1. squarish proportions\n2. the speed and ease of stencil graffiti\n3. being rebuilt in exactly the same style as the destroyed bridge"
+    },
+    {
+        "test_id": 20,
+        "relation": "HasFeatureOf",
+        "correct_feat": "the deconstruction and juxtaposition of iconic figures and images into an atypical context",
+        "options": "1. \"lively corp/army level simulation of anti-Communist revolts in Eastern Europe\"\n2. its official languages being Spanish and English\n3. the deconstruction and juxtaposition of iconic figures and images into an atypical context",
+        "correct_num": 3,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is characterized by [MASK].\n\nOptions:\n1. \"lively corp/army level simulation of anti-Communist revolts in Eastern Europe\"\n2. its official languages being Spanish and English\n3. the deconstruction and juxtaposition of iconic figures and images into an atypical context"
+    },
+    {
+        "test_id": 21,
+        "relation": "HasFeatureOf",
+        "correct_feat": "considerable damage due to repeated vandalism",
+        "options": "1. considerable damage due to repeated vandalism\n2. being subject to specific national laws and regulations\n3. the meaning analogous to the English word realm",
+        "correct_num": 1,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is characterized by [MASK].\n\nOptions:\n1. considerable damage due to repeated vandalism\n2. being subject to specific national laws and regulations\n3. the meaning analogous to the English word realm"
+    },
+    {
+        "test_id": 22,
+        "relation": "InfluencedBy",
+        "correct_feat": "Michelangelo's Sistine Ceiling",
+        "options": "1. the Allies' superior numbers and improved tactics\n2. Michelangelo's Sistine Ceiling\n3. Spanish settlers",
+        "correct_num": 2,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> was influenced by [MASK].\n\nOptions:\n1. the Allies' superior numbers and improved tactics\n2. Michelangelo's Sistine Ceiling\n3. Spanish settlers"
+    },
+    {
+        "test_id": 23,
+        "relation": "InfluencedBy",
+        "correct_feat": "Banksy's own remarks on street art",
+        "options": "1. the Yalta Agreement\n2. the Treaty of Leipzig partition of the Wettin inheritance\n3. Banksy's own remarks on street art",
+        "correct_num": 3,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> was influenced by [MASK].\n\nOptions:\n1. the Yalta Agreement\n2. the Treaty of Leipzig partition of the Wettin inheritance\n3. Banksy's own remarks on street art"
+    },
+    {
+        "test_id": 24,
+        "relation": "InfluencedBy",
+        "correct_feat": "the city's rich history with the LGBTQ community",
+        "options": "1. the city's rich history with the LGBTQ community\n2. the Puerto Rico Federal Relations Act of 1950\n3. the Battle of Mühlberg",
+        "correct_num": 1,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> was influenced by [MASK].\n\nOptions:\n1. the city's rich history with the LGBTQ community\n2. the Puerto Rico Federal Relations Act of 1950\n3. the Battle of Mühlberg"
+    },
+    {
+        "test_id": 25,
+        "relation": "IsA",
+        "correct_feat": "a Banksy stencil",
+        "options": "1. a photo-reconnaissance aircraft\n2. a Banksy stencil\n3. a war",
+        "correct_num": 2,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is [MASK].\n\nOptions:\n1. a photo-reconnaissance aircraft\n2. a Banksy stencil\n3. a war"
+    },
+    {
+        "test_id": 26,
+        "relation": "IsA",
+        "correct_feat": "a stencil graffiti",
+        "options": "1. a subtype of mancala games\n2. 3D tic-tac-toe\n3. a stencil graffiti",
+        "correct_num": 3,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is [MASK].\n\nOptions:\n1. a subtype of mancala games\n2. 3D tic-tac-toe\n3. a stencil graffiti"
+    },
+    {
+        "test_id": 27,
+        "relation": "IsA",
+        "correct_feat": "a provocative work of street art",
+        "options": "1. a provocative work of street art\n2. considered the national game of Antigua & Barbuda\n3. a foolscap quarto writing paper",
+        "correct_num": 1,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is [MASK].\n\nOptions:\n1. a provocative work of street art\n2. considered the national game of Antigua & Barbuda\n3. a foolscap quarto writing paper"
+    },
+    {
+        "test_id": 28,
+        "relation": "IsA",
+        "correct_feat": "a cultural staple of Brighton",
+        "options": "1. a Bailey bridge\n2. a cultural staple of Brighton\n3. part of what is known as the \"Crayon Rails\" games",
+        "correct_num": 2,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is [MASK].\n\nOptions:\n1. a Bailey bridge\n2. a cultural staple of Brighton\n3. part of what is known as the \"Crayon Rails\" games"
+    },
+    {
+        "test_id": 29,
+        "relation": "IsA",
+        "correct_feat": "a revolutionary piece of art",
+        "options": "1. the fourth episode of the 1965 Doctor Who serial The Crusade\n2. not a state\n3. a revolutionary piece of art",
+        "correct_num": 3,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is [MASK].\n\nOptions:\n1. the fourth episode of the 1965 Doctor Who serial The Crusade\n2. not a state\n3. a revolutionary piece of art"
+    },
+    {
+        "test_id": 30,
+        "relation": "IsA",
+        "correct_feat": "known as Kissing Coppers",
+        "options": "1. known as Kissing Coppers\n2. a town that fell to the Ernestine line after the Treaty of Leipzig\n3. a submersible",
+        "correct_num": 1,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is [MASK].\n\nOptions:\n1. known as Kissing Coppers\n2. a town that fell to the Ernestine line after the Treaty of Leipzig\n3. a submersible"
+    },
+    {
+        "test_id": 31,
+        "relation": "IsA",
+        "correct_feat": "known for being one of Banksy’s most notable works",
+        "options": "1. a Roman territory\n2. known for being one of Banksy’s most notable works\n3. a game with rules for setup and play sequence",
+        "correct_num": 2,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is [MASK].\n\nOptions:\n1. a Roman territory\n2. known for being one of Banksy’s most notable works\n3. a game with rules for setup and play sequence"
+    },
+    {
+        "test_id": 32,
+        "relation": "IsA",
+        "correct_feat": "known for its portrayal of two British policemen kissing",
+        "options": "1. a game played with cowrie shells, pebbles, or tamarind seeds\n2. a trainer aircraft\n3. known for its portrayal of two British policemen kissing",
+        "correct_num": 3,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is [MASK].\n\nOptions:\n1. a game played with cowrie shells, pebbles, or tamarind seeds\n2. a trainer aircraft\n3. known for its portrayal of two British policemen kissing"
+    },
+    {
+        "test_id": 33,
+        "relation": "IsA",
+        "correct_feat": "known for its strategic placement",
+        "options": "1. known for its strategic placement\n2. a series of games played on a hexagonal board\n3. a board game",
+        "correct_num": 1,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is [MASK].\n\nOptions:\n1. known for its strategic placement\n2. a series of games played on a hexagonal board\n3. a board game"
+    },
+    {
+        "test_id": 34,
+        "relation": "IsA",
+        "correct_feat": "known for its deconstruction and juxtaposition of iconic figures and images",
+        "options": "1. a tafl variant\n2. known for its deconstruction and juxtaposition of iconic figures and images\n3. a town on the banks of the Elbe in northwestern Saxony, Germany",
+        "correct_num": 2,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is [MASK].\n\nOptions:\n1. a tafl variant\n2. known for its deconstruction and juxtaposition of iconic figures and images\n3. a town on the banks of the Elbe in northwestern Saxony, Germany"
+    },
+    {
+        "test_id": 35,
+        "relation": "IsA",
+        "correct_feat": "located on the wall of The Prince Albert pub in Brighton",
+        "options": "1. a solved game\n2. a place\n3. located on the wall of The Prince Albert pub in Brighton",
+        "correct_num": 3,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is [MASK].\n\nOptions:\n1. a solved game\n2. a place\n3. located on the wall of The Prince Albert pub in Brighton"
+    },
+    {
+        "test_id": 36,
+        "relation": "IsA",
+        "correct_feat": "located in Brighton, England",
+        "options": "1. located in Brighton, England\n2. a kids version\n3. a Chinese cross-and-circle board game",
+        "correct_num": 1,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is [MASK].\n\nOptions:\n1. located in Brighton, England\n2. a kids version\n3. a Chinese cross-and-circle board game"
+    },
+    {
+        "test_id": 37,
+        "relation": "IsA",
+        "correct_feat": "located in London for The Other Art Fair",
+        "options": "1. a political alliance\n2. located in London for The Other Art Fair\n3. a town that fell to the Ernestine line after the Treaty of Leipzig",
+        "correct_num": 2,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is [MASK].\n\nOptions:\n1. a political alliance\n2. located in London for The Other Art Fair\n3. a town that fell to the Ernestine line after the Treaty of Leipzig"
+    },
+    {
+        "test_id": 38,
+        "relation": "IsA",
+        "correct_feat": "part of Banksy's body of work",
+        "options": "1. an outsider to the conflict\n2. high-energy X-rays\n3. part of Banksy's body of work",
+        "correct_num": 3,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is [MASK].\n\nOptions:\n1. an outsider to the conflict\n2. high-energy X-rays\n3. part of Banksy's body of work"
+    },
+    {
+        "test_id": 39,
+        "relation": "IsA",
+        "correct_feat": "part of the history of street art",
+        "options": "1. part of the history of street art\n2. a board wargame\n3. a game that can be played with pencil and paper",
+        "correct_num": 1,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is [MASK].\n\nOptions:\n1. part of the history of street art\n2. a board wargame\n3. a game that can be played with pencil and paper"
+    },
+    {
+        "test_id": 40,
+        "relation": "IsA",
+        "correct_feat": "part of the cultural landscape of Brighton",
+        "options": "1. a permanent link across the Lower Rhine\n2. part of the cultural landscape of Brighton\n3. a game that is a variant of Halma",
+        "correct_num": 2,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is [MASK].\n\nOptions:\n1. a permanent link across the Lower Rhine\n2. part of the cultural landscape of Brighton\n3. a game that is a variant of Halma"
+    },
+    {
+        "test_id": 41,
+        "relation": "IsA",
+        "correct_feat": "used as an example of stencil graffiti",
+        "options": "1. an aircraft carrier-based adaptation\n2. a 2005 novel\n3. used as an example of stencil graffiti",
+        "correct_num": 3,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is [MASK].\n\nOptions:\n1. an aircraft carrier-based adaptation\n2. a 2005 novel\n3. used as an example of stencil graffiti"
+    },
+    {
+        "test_id": 42,
+        "relation": "IsA",
+        "correct_feat": "used as a critique of society",
+        "options": "1. used as a critique of society\n2. an island organized as an unincorporated territory of the United States\n3. a British single-seat fighter aircraft",
+        "correct_num": 1,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is [MASK].\n\nOptions:\n1. used as a critique of society\n2. an island organized as an unincorporated territory of the United States\n3. a British single-seat fighter aircraft"
+    },
+    {
+        "test_id": 43,
+        "relation": "IsA",
+        "correct_feat": "used as a symbol of Brighton's LGBTQ+ community",
+        "options": "1. a two-player combat-oriented game\n2. used as a symbol of Brighton's LGBTQ+ community\n3. a museum",
+        "correct_num": 2,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is [MASK].\n\nOptions:\n1. a two-player combat-oriented game\n2. used as a symbol of Brighton's LGBTQ+ community\n3. a museum"
+    },
+    {
+        "test_id": 44,
+        "relation": "IsA",
+        "correct_feat": "used for orienting public attention and conversation",
+        "options": "1. an abstract strategy board game\n2. a tafl variant\n3. used for orienting public attention and conversation",
+        "correct_num": 3,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is [MASK].\n\nOptions:\n1. an abstract strategy board game\n2. a tafl variant\n3. used for orienting public attention and conversation"
+    },
+    {
+        "test_id": 45,
+        "relation": "IsA",
+        "correct_feat": "used for delivering a critique of an aspect of society",
+        "options": "1. used for delivering a critique of an aspect of society\n2. a military air arm\n3. a fictional work loosely based on the true story of Johann Schwerdfeger",
+        "correct_num": 1,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is [MASK].\n\nOptions:\n1. used for delivering a critique of an aspect of society\n2. a military air arm\n3. a fictional work loosely based on the true story of Johann Schwerdfeger"
+    },
+    {
+        "test_id": 46,
+        "relation": "IsA",
+        "correct_feat": "used for normalizing and cultivating increased societal acceptance of homosexuality",
+        "options": "1. the capital of the district Nordsachsen\n2. used for normalizing and cultivating increased societal acceptance of homosexuality\n3. a hole game",
+        "correct_num": 2,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is [MASK].\n\nOptions:\n1. the capital of the district Nordsachsen\n2. used for normalizing and cultivating increased societal acceptance of homosexuality\n3. a hole game"
+    },
+    {
+        "test_id": 47,
+        "relation": "IsA",
+        "correct_feat": "used in street art",
+        "options": "1. a game that is a variant of Halma\n2. a 2016 novel\n3. used in street art",
+        "correct_num": 3,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is [MASK].\n\nOptions:\n1. a game that is a variant of Halma\n2. a 2016 novel\n3. used in street art"
+    },
+    {
+        "test_id": 48,
+        "relation": "IsA",
+        "correct_feat": "used in the context of political and social messages",
+        "options": "1. used in the context of political and social messages\n2. a spin-off of Empire Builder\n3. a foolscap quarto writing paper",
+        "correct_num": 1,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is [MASK].\n\nOptions:\n1. used in the context of political and social messages\n2. a spin-off of Empire Builder\n3. a foolscap quarto writing paper"
+    },
+    {
+        "test_id": 49,
+        "relation": "IsA",
+        "correct_feat": "used in Brighton's cultural identity",
+        "options": "1. a strategy board game\n2. used in Brighton's cultural identity\n3. a 2005 novel",
+        "correct_num": 2,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is [MASK].\n\nOptions:\n1. a strategy board game\n2. used in Brighton's cultural identity\n3. a 2005 novel"
+    },
+    {
+        "test_id": 50,
+        "relation": "IsA",
+        "correct_feat": "used to keep Banksy's anonymity",
+        "options": "1. a new Rijnbrug\n2. a board wargame\n3. used to keep Banksy's anonymity",
+        "correct_num": 3,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is [MASK].\n\nOptions:\n1. a new Rijnbrug\n2. a board wargame\n3. used to keep Banksy's anonymity"
+    },
+    {
+        "test_id": 51,
+        "relation": "IsA",
+        "correct_feat": "used to orient public attention and conversation",
+        "options": "1. used to orient public attention and conversation\n2. similar in concept to traditional tic-tac-toe\n3. a game that is mentioned in Upton Sinclair's Dragon's Teeth",
+        "correct_num": 1,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is [MASK].\n\nOptions:\n1. used to orient public attention and conversation\n2. similar in concept to traditional tic-tac-toe\n3. a game that is mentioned in Upton Sinclair's Dragon's Teeth"
+    },
+    {
+        "test_id": 52,
+        "relation": "IsA",
+        "correct_feat": "used to deliver a critique of an aspect of society",
+        "options": "1. a pit and pebble game\n2. used to deliver a critique of an aspect of society\n3. a medium-sized vessel",
+        "correct_num": 2,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is [MASK].\n\nOptions:\n1. a pit and pebble game\n2. used to deliver a critique of an aspect of society\n3. a medium-sized vessel"
+    },
+    {
+        "test_id": 53,
+        "relation": "OccurredAt",
+        "correct_feat": "The Prince Albert pub in Brighton",
+        "options": "1. Peru\n2. Wotje\n3. The Prince Albert pub in Brighton",
+        "correct_num": 3,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> occurred at [MASK].\n\nOptions:\n1. Peru\n2. Wotje\n3. The Prince Albert pub in Brighton"
+    },
+    {
+        "test_id": 54,
+        "relation": "OccurredAt",
+        "correct_feat": "an auction in Miami",
+        "options": "1. an auction in Miami\n2. the ford east of Torgau\n3. the Indus Valley",
+        "correct_num": 1,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> occurred at [MASK].\n\nOptions:\n1. an auction in Miami\n2. the ford east of Torgau\n3. the Indus Valley"
+    },
+    {
+        "test_id": 55,
+        "relation": "OccurredDuring",
+        "correct_feat": "2004",
+        "options": "1. the 1727\n2. 2004\n3. the summer of 1974",
+        "correct_num": 2,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> occurred during [MASK].\n\nOptions:\n1. the 1727\n2. 2004\n3. the summer of 1974"
+    },
+    {
+        "test_id": 56,
+        "relation": "OccurredDuring",
+        "correct_feat": "February 2014",
+        "options": "1. the 1776\n2. World War II\n3. February 2014",
+        "correct_num": 3,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> occurred during [MASK].\n\nOptions:\n1. the 1776\n2. World War II\n3. February 2014"
+    },
+    {
+        "test_id": 57,
+        "relation": "OccurredIn",
+        "correct_feat": "Brighton",
+        "options": "1. Brighton\n2. Celebes\n3. the 16th century",
+        "correct_num": 1,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> occurred in [MASK].\n\nOptions:\n1. Brighton\n2. Celebes\n3. the 16th century"
+    },
+    {
+        "test_id": 58,
+        "relation": "OccurredIn",
+        "correct_feat": "London",
+        "options": "1. 1966\n2. London\n3. 70 BC",
+        "correct_num": 2,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> occurred in [MASK].\n\nOptions:\n1. 1966\n2. London\n3. 70 BC"
+    },
+    {
+        "test_id": 59,
+        "relation": "OccurredIn",
+        "correct_feat": "Miami",
+        "options": "1. December 2007\n2. Poland and Lithuania\n3. Miami",
+        "correct_num": 3,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> occurred in [MASK].\n\nOptions:\n1. December 2007\n2. Poland and Lithuania\n3. Miami"
+    },
+    {
+        "test_id": 60,
+        "relation": "OriginatedIn",
+        "correct_feat": "Brighton, England",
+        "options": "1. Brighton, England\n2. Egypt\n3. Common Germanic",
+        "correct_num": 1,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> originated in [MASK].\n\nOptions:\n1. Brighton, England\n2. Egypt\n3. Common Germanic"
+    },
+    {
+        "test_id": 61,
+        "relation": "PublishedAs",
+        "correct_feat": "a stencil graffiti",
+        "options": "1. a \"bad quarto\"\n2. a stencil graffiti\n3. Blokish",
+        "correct_num": 2,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> was published as [MASK].\n\nOptions:\n1. a \"bad quarto\"\n2. a stencil graffiti\n3. Blokish"
+    },
+    {
+        "test_id": 62,
+        "relation": "PublishedIn",
+        "correct_feat": "2004",
+        "options": "1. stages from 29 July 1954 to 20 October 1955\n2. 1604\n3. 2004",
+        "correct_num": 3,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> was published in [MASK].\n\nOptions:\n1. stages from 29 July 1954 to 20 October 1955\n2. 1604\n3. 2004"
+    },
+    {
+        "test_id": 63,
+        "relation": "PublishedIn",
+        "correct_feat": "February 2014",
+        "options": "1. February 2014\n2. 2003\n3. Torgau",
+        "correct_num": 1,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> was published in [MASK].\n\nOptions:\n1. February 2014\n2. 2003\n3. Torgau"
+    }
+]

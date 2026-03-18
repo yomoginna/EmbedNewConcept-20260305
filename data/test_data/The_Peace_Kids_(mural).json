@@ -1,0 +1,522 @@
+[
+    {
+        "test_id": 0,
+        "relation": "About",
+        "correct_feat": "a mural depicting Srulik, a symbol of Israel, in embrace with Handala, a symbol of Palestine",
+        "options": "1. a mural depicting Srulik, a symbol of Israel, in embrace with Handala, a symbol of Palestine\n2. the return to the South following the Battle of Gettysburg\n3. the meeting of the United States and Soviet Armies near the end of World War II",
+        "correct_num": 1,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is about [MASK].\n\nOptions:\n1. a mural depicting Srulik, a symbol of Israel, in embrace with Handala, a symbol of Palestine\n2. the return to the South following the Battle of Gettysburg\n3. the meeting of the United States and Soviet Armies near the end of World War II"
+    },
+    {
+        "test_id": 1,
+        "relation": "AssociatedWith",
+        "correct_feat": "Srulik",
+        "options": "1. the Caribbean\n2. Srulik\n3. the Viking Age",
+        "correct_num": 2,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is associated with [MASK].\n\nOptions:\n1. the Caribbean\n2. Srulik\n3. the Viking Age"
+    },
+    {
+        "test_id": 2,
+        "relation": "AssociatedWith",
+        "correct_feat": "Handala",
+        "options": "1. the Tsardom of Russia\n2. the terms Kaiserreich and Königreich\n3. Handala",
+        "correct_num": 3,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is associated with [MASK].\n\nOptions:\n1. the Tsardom of Russia\n2. the terms Kaiserreich and Königreich\n3. Handala"
+    },
+    {
+        "test_id": 3,
+        "relation": "AssociatedWith",
+        "correct_feat": "John Kiss",
+        "options": "1. John Kiss\n2. Valorant\n3. computing applications",
+        "correct_num": 1,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is associated with [MASK].\n\nOptions:\n1. John Kiss\n2. Valorant\n3. computing applications"
+    },
+    {
+        "test_id": 4,
+        "relation": "AssociatedWith",
+        "correct_feat": "Moodi Abdallah",
+        "options": "1. Norway, Sweden, Denmark, Iceland, Britain, Ireland, and Sápmi\n2. Moodi Abdallah\n3. the Albertine line of the Wettin dynasty",
+        "correct_num": 2,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is associated with [MASK].\n\nOptions:\n1. Norway, Sweden, Denmark, Iceland, Britain, Ireland, and Sápmi\n2. Moodi Abdallah\n3. the Albertine line of the Wettin dynasty"
+    },
+    {
+        "test_id": 5,
+        "relation": "AssociatedWith",
+        "correct_feat": "Naji al-Ali",
+        "options": "1. the Spanish Civil War\n2. the Viking Age\n3. Naji al-Ali",
+        "correct_num": 3,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is associated with [MASK].\n\nOptions:\n1. the Spanish Civil War\n2. the Viking Age\n3. Naji al-Ali"
+    },
+    {
+        "test_id": 6,
+        "relation": "AssociatedWith",
+        "correct_feat": "Dosh",
+        "options": "1. Dosh\n2. polyominoes\n3. the Electorate of Saxony",
+        "correct_num": 1,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is associated with [MASK].\n\nOptions:\n1. Dosh\n2. polyominoes\n3. the Electorate of Saxony"
+    },
+    {
+        "test_id": 7,
+        "relation": "AssociatedWith",
+        "correct_feat": "the West Bank barrier",
+        "options": "1. the Wehrmacht\n2. the West Bank barrier\n3. Ludo, Aggravation or Sorry!",
+        "correct_num": 2,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is associated with [MASK].\n\nOptions:\n1. the Wehrmacht\n2. the West Bank barrier\n3. Ludo, Aggravation or Sorry!"
+    },
+    {
+        "test_id": 8,
+        "relation": "AssociatedWith",
+        "correct_feat": "the wall in Bethlehem",
+        "options": "1. John Agar\n2. teaching arithmetic to African children\n3. the wall in Bethlehem",
+        "correct_num": 3,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is associated with [MASK].\n\nOptions:\n1. John Agar\n2. teaching arithmetic to African children\n3. the wall in Bethlehem"
+    },
+    {
+        "test_id": 9,
+        "relation": "AssociatedWith",
+        "correct_feat": "the Israeli street artist John Kiss",
+        "options": "1. the Israeli street artist John Kiss\n2. the Ascanian dynasty\n3. Counter-Strike: Global Offensive",
+        "correct_num": 1,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is associated with [MASK].\n\nOptions:\n1. the Israeli street artist John Kiss\n2. the Ascanian dynasty\n3. Counter-Strike: Global Offensive"
+    },
+    {
+        "test_id": 10,
+        "relation": "AssociatedWith",
+        "correct_feat": "the Palestinian artist Moodi Abdallah",
+        "options": "1. deathmatch\n2. the Palestinian artist Moodi Abdallah\n3. facility inspection and maintenance",
+        "correct_num": 2,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is associated with [MASK].\n\nOptions:\n1. deathmatch\n2. the Palestinian artist Moodi Abdallah\n3. facility inspection and maintenance"
+    },
+    {
+        "test_id": 11,
+        "relation": "ConsistsOf",
+        "correct_feat": "Srulik, a symbol of Israel, in embrace with Handala, a symbol of Palestine",
+        "options": "1. carved wooden elongated boat-shaped boards with cup-shaped holes\n2. an oware board\n3. Srulik, a symbol of Israel, in embrace with Handala, a symbol of Palestine",
+        "correct_num": 3,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> consists of [MASK].\n\nOptions:\n1. carved wooden elongated boat-shaped boards with cup-shaped holes\n2. an oware board\n3. Srulik, a symbol of Israel, in embrace with Handala, a symbol of Palestine"
+    },
+    {
+        "test_id": 12,
+        "relation": "CreatedBy",
+        "correct_feat": "Israeli artist John Kiss",
+        "options": "1. Israeli artist John Kiss\n2. Wilhelm Bauer\n3. Cryptozoic Entertainment",
+        "correct_num": 1,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> was created by [MASK].\n\nOptions:\n1. Israeli artist John Kiss\n2. Wilhelm Bauer\n3. Cryptozoic Entertainment"
+    },
+    {
+        "test_id": 13,
+        "relation": "CreatedBy",
+        "correct_feat": "John Kiss and Palestinian artist Moodi Abdallah",
+        "options": "1. Paul Philippoteaux\n2. John Kiss and Palestinian artist Moodi Abdallah\n3. designer Kris Burm",
+        "correct_num": 2,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> was created by [MASK].\n\nOptions:\n1. Paul Philippoteaux\n2. John Kiss and Palestinian artist Moodi Abdallah\n3. designer Kris Burm"
+    },
+    {
+        "test_id": 14,
+        "relation": "CreatedIn",
+        "correct_feat": "Bethlehem, Palestine",
+        "options": "1. Ireland\n2. France\n3. Bethlehem, Palestine",
+        "correct_num": 3,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> was created in [MASK].\n\nOptions:\n1. Ireland\n2. France\n3. Bethlehem, Palestine"
+    },
+    {
+        "test_id": 15,
+        "relation": "CreatedIn",
+        "correct_feat": "Tel Aviv, Israel",
+        "options": "1. Tel Aviv, Israel\n2. France\n3. 1921",
+        "correct_num": 1,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> was created in [MASK].\n\nOptions:\n1. Tel Aviv, Israel\n2. France\n3. 1921"
+    },
+    {
+        "test_id": 16,
+        "relation": "CreatedTo",
+        "correct_feat": "express yearning for peace in a non-verbal and visual way",
+        "options": "1. set up timed gunpowder charges on their hulls\n2. express yearning for peace in a non-verbal and visual way\n3. cycle through the game's arsenal from weakest to strongest",
+        "correct_num": 2,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> was created to [MASK].\n\nOptions:\n1. set up timed gunpowder charges on their hulls\n2. express yearning for peace in a non-verbal and visual way\n3. cycle through the game's arsenal from weakest to strongest"
+    },
+    {
+        "test_id": 17,
+        "relation": "CreatedTo",
+        "correct_feat": "bring happiness to viewers",
+        "options": "1. provide general surveillance radar\n2. aid Nationalist forces in the Spanish Civil War\n3. bring happiness to viewers",
+        "correct_num": 3,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> was created to [MASK].\n\nOptions:\n1. provide general surveillance radar\n2. aid Nationalist forces in the Spanish Civil War\n3. bring happiness to viewers"
+    },
+    {
+        "test_id": 18,
+        "relation": "CreatedTo",
+        "correct_feat": "represent the hope for peace in the Middle East",
+        "options": "1. represent the hope for peace in the Middle East\n2. hold liquids for drinking\n3. house a railway museum",
+        "correct_num": 1,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> was created to [MASK].\n\nOptions:\n1. represent the hope for peace in the Middle East\n2. hold liquids for drinking\n3. house a railway museum"
+    },
+    {
+        "test_id": 19,
+        "relation": "CreatedTo",
+        "correct_feat": "further peace",
+        "options": "1. provide general surveillance radar\n2. further peace\n3. represent colors",
+        "correct_num": 2,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> was created to [MASK].\n\nOptions:\n1. provide general surveillance radar\n2. further peace\n3. represent colors"
+    },
+    {
+        "test_id": 20,
+        "relation": "CreatedTo",
+        "correct_feat": "show commitment to peace",
+        "options": "1. run blockades\n2. be a short-range, high-performance interceptor aircraft\n3. show commitment to peace",
+        "correct_num": 3,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> was created to [MASK].\n\nOptions:\n1. run blockades\n2. be a short-range, high-performance interceptor aircraft\n3. show commitment to peace"
+    },
+    {
+        "test_id": 21,
+        "relation": "CreatedTo",
+        "correct_feat": "show a yearning for peace",
+        "options": "1. show a yearning for peace\n2. increase the appeal of games\n3. cycle through the game's arsenal from weakest to strongest",
+        "correct_num": 1,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> was created to [MASK].\n\nOptions:\n1. show a yearning for peace\n2. increase the appeal of games\n3. cycle through the game's arsenal from weakest to strongest"
+    },
+    {
+        "test_id": 22,
+        "relation": "CreatedTo",
+        "correct_feat": "highlight criticism at the state of the stagnant peace process between the Israelis and the Palestinians",
+        "options": "1. interrupt a phone conversation of another caller\n2. highlight criticism at the state of the stagnant peace process between the Israelis and the Palestinians\n3. recreate the adrenaline rush and tension experienced during the final minutes of a live escape room within a card game format",
+        "correct_num": 2,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> was created to [MASK].\n\nOptions:\n1. interrupt a phone conversation of another caller\n2. highlight criticism at the state of the stagnant peace process between the Israelis and the Palestinians\n3. recreate the adrenaline rush and tension experienced during the final minutes of a live escape room within a card game format"
+    },
+    {
+        "test_id": 23,
+        "relation": "CreatedTo",
+        "correct_feat": "be used freely with anything associated with peace, reconciliation, and conflict resolution",
+        "options": "1. house a railway museum\n2. increase the appeal of games\n3. be used freely with anything associated with peace, reconciliation, and conflict resolution",
+        "correct_num": 3,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> was created to [MASK].\n\nOptions:\n1. house a railway museum\n2. increase the appeal of games\n3. be used freely with anything associated with peace, reconciliation, and conflict resolution"
+    },
+    {
+        "test_id": 24,
+        "relation": "HasA",
+        "correct_feat": "a message of peace",
+        "options": "1. a message of peace\n2. a rectangular grid map of the town\n3. a multimedia group",
+        "correct_num": 1,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> has [MASK].\n\nOptions:\n1. a message of peace\n2. a rectangular grid map of the town\n3. a multimedia group"
+    },
+    {
+        "test_id": 25,
+        "relation": "HasA",
+        "correct_feat": "a spirit of reconciliation and brotherhood",
+        "options": "1. a board shaped like a symmetrical cross\n2. a spirit of reconciliation and brotherhood\n3. a sword and sorcery comics series",
+        "correct_num": 2,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> has [MASK].\n\nOptions:\n1. a board shaped like a symmetrical cross\n2. a spirit of reconciliation and brotherhood\n3. a sword and sorcery comics series"
+    },
+    {
+        "test_id": 26,
+        "relation": "HasA",
+        "correct_feat": "a political message",
+        "options": "1. two dice used for movement\n2. a new Rijnbrug rebuilt in exactly the same style as the destroyed bridge\n3. a political message",
+        "correct_num": 3,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> has [MASK].\n\nOptions:\n1. two dice used for movement\n2. a new Rijnbrug rebuilt in exactly the same style as the destroyed bridge\n3. a political message"
+    },
+    {
+        "test_id": 27,
+        "relation": "HasA",
+        "correct_feat": "a message directed at both sides of the conflict",
+        "options": "1. a message directed at both sides of the conflict\n2. a king that must be surrounded on four sides to be captured\n3. rules of capture that depend on the variant of the game played",
+        "correct_num": 1,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> has [MASK].\n\nOptions:\n1. a message directed at both sides of the conflict\n2. a king that must be surrounded on four sides to be captured\n3. rules of capture that depend on the variant of the game played"
+    },
+    {
+        "test_id": 28,
+        "relation": "HasFeatureOf",
+        "correct_feat": "the embrace of Srulik and Handala",
+        "options": "1. having land and sea power be almost equally significant\n2. the embrace of Srulik and Handala\n3. multiplayer board games",
+        "correct_num": 2,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is characterized by [MASK].\n\nOptions:\n1. having land and sea power be almost equally significant\n2. the embrace of Srulik and Handala\n3. multiplayer board games"
+    },
+    {
+        "test_id": 29,
+        "relation": "HasFeatureOf",
+        "correct_feat": "its dual locations in Bethlehem and Tel Aviv",
+        "options": "1. pieces being able to jump over other pieces\n2. abstract strategy games\n3. its dual locations in Bethlehem and Tel Aviv",
+        "correct_num": 3,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is characterized by [MASK].\n\nOptions:\n1. pieces being able to jump over other pieces\n2. abstract strategy games\n3. its dual locations in Bethlehem and Tel Aviv"
+    },
+    {
+        "test_id": 30,
+        "relation": "HasFeatureOf",
+        "correct_feat": "its large size",
+        "options": "1. its large size\n2. cooperative gameplay\n3. an adventure",
+        "correct_num": 1,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is characterized by [MASK].\n\nOptions:\n1. its large size\n2. cooperative gameplay\n3. an adventure"
+    },
+    {
+        "test_id": 31,
+        "relation": "HasFeatureOf",
+        "correct_feat": "its optimistic message",
+        "options": "1. being the location where the Torgauer Artikel was composed\n2. its optimistic message\n3. a game of sacrifice",
+        "correct_num": 2,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is characterized by [MASK].\n\nOptions:\n1. being the location where the Torgauer Artikel was composed\n2. its optimistic message\n3. a game of sacrifice"
+    },
+    {
+        "test_id": 32,
+        "relation": "HasFeatureOf",
+        "correct_feat": "its criticism of the peace process",
+        "options": "1. its classification as a developed jurisdiction by the International Monetary Fund\n2. a reception center\n3. its criticism of the peace process",
+        "correct_num": 3,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is characterized by [MASK].\n\nOptions:\n1. its classification as a developed jurisdiction by the International Monetary Fund\n2. a reception center\n3. its criticism of the peace process"
+    },
+    {
+        "test_id": 33,
+        "relation": "InfluencedBy",
+        "correct_feat": "the West Bank barrier",
+        "options": "1. the West Bank barrier\n2. philology\n3. the Foraker Act of 1900",
+        "correct_num": 1,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> was influenced by [MASK].\n\nOptions:\n1. the West Bank barrier\n2. philology\n3. the Foraker Act of 1900"
+    },
+    {
+        "test_id": 34,
+        "relation": "InfluencedBy",
+        "correct_feat": "the wall in Bethlehem",
+        "options": "1. witnessing a public execution\n2. the wall in Bethlehem\n3. the Anti-Pinkerton Act in the United States",
+        "correct_num": 2,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> was influenced by [MASK].\n\nOptions:\n1. witnessing a public execution\n2. the wall in Bethlehem\n3. the Anti-Pinkerton Act in the United States"
+    },
+    {
+        "test_id": 35,
+        "relation": "InfluencedBy",
+        "correct_feat": "the work of Banksy",
+        "options": "1. The Wild Bunch\n2. the card game of Hearts\n3. the work of Banksy",
+        "correct_num": 3,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> was influenced by [MASK].\n\nOptions:\n1. The Wild Bunch\n2. the card game of Hearts\n3. the work of Banksy"
+    },
+    {
+        "test_id": 36,
+        "relation": "InfluencedBy",
+        "correct_feat": "the caricatures of Handala",
+        "options": "1. the caricatures of Handala\n2. the formality of sitting at a table\n3. the bathyscaphe",
+        "correct_num": 1,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> was influenced by [MASK].\n\nOptions:\n1. the caricatures of Handala\n2. the formality of sitting at a table\n3. the bathyscaphe"
+    },
+    {
+        "test_id": 37,
+        "relation": "InfluencedBy",
+        "correct_feat": "the cartoon character Srulik",
+        "options": "1. the French Revolution\n2. the cartoon character Srulik\n3. a lack of trained pilots and aviation fuel",
+        "correct_num": 2,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> was influenced by [MASK].\n\nOptions:\n1. the French Revolution\n2. the cartoon character Srulik\n3. a lack of trained pilots and aviation fuel"
+    },
+    {
+        "test_id": 38,
+        "relation": "InfluencedBy",
+        "correct_feat": "the art of Dosh",
+        "options": "1. the growth of the power of Athens\n2. the age of Obama\n3. the art of Dosh",
+        "correct_num": 3,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> was influenced by [MASK].\n\nOptions:\n1. the growth of the power of Athens\n2. the age of Obama\n3. the art of Dosh"
+    },
+    {
+        "test_id": 39,
+        "relation": "InfluencedBy",
+        "correct_feat": "the art of Naji al-Ali",
+        "options": "1. the art of Naji al-Ali\n2. the French Revolution\n3. the Battle of Mühlberg",
+        "correct_num": 1,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> was influenced by [MASK].\n\nOptions:\n1. the art of Naji al-Ali\n2. the French Revolution\n3. the Battle of Mühlberg"
+    },
+    {
+        "test_id": 40,
+        "relation": "IsA",
+        "correct_feat": "a Tel Aviv street art mural",
+        "options": "1. a board wargame\n2. a Tel Aviv street art mural\n3. a game that can be played with pencil and paper",
+        "correct_num": 2,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is [MASK].\n\nOptions:\n1. a board wargame\n2. a Tel Aviv street art mural\n3. a game that can be played with pencil and paper"
+    },
+    {
+        "test_id": 41,
+        "relation": "IsA",
+        "correct_feat": "a work of graffiti",
+        "options": "1. a permanent link across the Lower Rhine\n2. a game that is a variant of Halma\n3. a work of graffiti",
+        "correct_num": 3,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is [MASK].\n\nOptions:\n1. a permanent link across the Lower Rhine\n2. a game that is a variant of Halma\n3. a work of graffiti"
+    },
+    {
+        "test_id": 42,
+        "relation": "IsA",
+        "correct_feat": "a symbol for peace",
+        "options": "1. a symbol for peace\n2. an aircraft carrier-based adaptation\n3. a 2005 novel",
+        "correct_num": 1,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is [MASK].\n\nOptions:\n1. a symbol for peace\n2. an aircraft carrier-based adaptation\n3. a 2005 novel"
+    },
+    {
+        "test_id": 43,
+        "relation": "IsA",
+        "correct_feat": "an optimistic piece",
+        "options": "1. an island organized as an unincorporated territory of the United States\n2. an optimistic piece\n3. a British single-seat fighter aircraft",
+        "correct_num": 2,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is [MASK].\n\nOptions:\n1. an island organized as an unincorporated territory of the United States\n2. an optimistic piece\n3. a British single-seat fighter aircraft"
+    },
+    {
+        "test_id": 44,
+        "relation": "IsA",
+        "correct_feat": "one of the most beautiful works of art in Florentin",
+        "options": "1. a two-player combat-oriented game\n2. a museum\n3. one of the most beautiful works of art in Florentin",
+        "correct_num": 3,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is [MASK].\n\nOptions:\n1. a two-player combat-oriented game\n2. a museum\n3. one of the most beautiful works of art in Florentin"
+    },
+    {
+        "test_id": 45,
+        "relation": "IsA",
+        "correct_feat": "known as The Peace Kids",
+        "options": "1. known as The Peace Kids\n2. an abstract strategy board game\n3. a tafl variant",
+        "correct_num": 1,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is [MASK].\n\nOptions:\n1. known as The Peace Kids\n2. an abstract strategy board game\n3. a tafl variant"
+    },
+    {
+        "test_id": 46,
+        "relation": "IsA",
+        "correct_feat": "known as The Peace Kids Mural",
+        "options": "1. a military air arm\n2. known as The Peace Kids Mural\n3. a fictional work loosely based on the true story of Johann Schwerdfeger",
+        "correct_num": 2,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is [MASK].\n\nOptions:\n1. a military air arm\n2. known as The Peace Kids Mural\n3. a fictional work loosely based on the true story of Johann Schwerdfeger"
+    },
+    {
+        "test_id": 47,
+        "relation": "IsA",
+        "correct_feat": "known for depicting Srulik and Handala embracing",
+        "options": "1. the capital of the district Nordsachsen\n2. a hole game\n3. known for depicting Srulik and Handala embracing",
+        "correct_num": 3,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is [MASK].\n\nOptions:\n1. the capital of the district Nordsachsen\n2. a hole game\n3. known for depicting Srulik and Handala embracing"
+    },
+    {
+        "test_id": 48,
+        "relation": "IsA",
+        "correct_feat": "known for its message of peace",
+        "options": "1. known for its message of peace\n2. a game that is a variant of Halma\n3. a 2016 novel",
+        "correct_num": 1,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is [MASK].\n\nOptions:\n1. known for its message of peace\n2. a game that is a variant of Halma\n3. a 2016 novel"
+    },
+    {
+        "test_id": 49,
+        "relation": "IsA",
+        "correct_feat": "known for being a symbol for peace",
+        "options": "1. a spin-off of Empire Builder\n2. known for being a symbol for peace\n3. a foolscap quarto writing paper",
+        "correct_num": 2,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is [MASK].\n\nOptions:\n1. a spin-off of Empire Builder\n2. known for being a symbol for peace\n3. a foolscap quarto writing paper"
+    },
+    {
+        "test_id": 50,
+        "relation": "IsA",
+        "correct_feat": "known for its dual creation in Palestine and Israel",
+        "options": "1. a strategy board game\n2. a 2005 novel\n3. known for its dual creation in Palestine and Israel",
+        "correct_num": 3,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is [MASK].\n\nOptions:\n1. a strategy board game\n2. a 2005 novel\n3. known for its dual creation in Palestine and Israel"
+    },
+    {
+        "test_id": 51,
+        "relation": "IsA",
+        "correct_feat": "located in Bethlehem, Palestine",
+        "options": "1. located in Bethlehem, Palestine\n2. a new Rijnbrug\n3. a board wargame",
+        "correct_num": 1,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is [MASK].\n\nOptions:\n1. located in Bethlehem, Palestine\n2. a new Rijnbrug\n3. a board wargame"
+    },
+    {
+        "test_id": 52,
+        "relation": "IsA",
+        "correct_feat": "located in Tel Aviv, Israel",
+        "options": "1. similar in concept to traditional tic-tac-toe\n2. located in Tel Aviv, Israel\n3. a game that is mentioned in Upton Sinclair's Dragon's Teeth",
+        "correct_num": 2,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is [MASK].\n\nOptions:\n1. similar in concept to traditional tic-tac-toe\n2. located in Tel Aviv, Israel\n3. a game that is mentioned in Upton Sinclair's Dragon's Teeth"
+    },
+    {
+        "test_id": 53,
+        "relation": "IsA",
+        "correct_feat": "located on the Bethlehem wall",
+        "options": "1. a pit and pebble game\n2. a medium-sized vessel\n3. located on the Bethlehem wall",
+        "correct_num": 3,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is [MASK].\n\nOptions:\n1. a pit and pebble game\n2. a medium-sized vessel\n3. located on the Bethlehem wall"
+    },
+    {
+        "test_id": 54,
+        "relation": "IsA",
+        "correct_feat": "located on Frenkel street in Tel Aviv",
+        "options": "1. located on Frenkel street in Tel Aviv\n2. a Polish-language version\n3. an abstract strategy game",
+        "correct_num": 1,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is [MASK].\n\nOptions:\n1. located on Frenkel street in Tel Aviv\n2. a Polish-language version\n3. an abstract strategy game"
+    },
+    {
+        "test_id": 55,
+        "relation": "IsA",
+        "correct_feat": "used as a symbol for peace",
+        "options": "1. a German word\n2. used as a symbol for peace\n3. a title",
+        "correct_num": 2,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is [MASK].\n\nOptions:\n1. a German word\n2. used as a symbol for peace\n3. a title"
+    },
+    {
+        "test_id": 56,
+        "relation": "IsA",
+        "correct_feat": "used as the front cover for the June 2019 issue of Peace Science Digest",
+        "options": "1. an Indian game similar to Pachisi\n2. a Canadian documentary film\n3. used as the front cover for the June 2019 issue of Peace Science Digest",
+        "correct_num": 3,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is [MASK].\n\nOptions:\n1. an Indian game similar to Pachisi\n2. a Canadian documentary film\n3. used as the front cover for the June 2019 issue of Peace Science Digest"
+    },
+    {
+        "test_id": 57,
+        "relation": "IsA",
+        "correct_feat": "used in artistic films",
+        "options": "1. used in artistic films\n2. a young kids version\n3. an abstract strategy game",
+        "correct_num": 1,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is [MASK].\n\nOptions:\n1. used in artistic films\n2. a young kids version\n3. an abstract strategy game"
+    },
+    {
+        "test_id": 58,
+        "relation": "IsA",
+        "correct_feat": "used on posters",
+        "options": "1. an official mode in Counter-Strike: Global Offensive\n2. used on posters\n3. known as Congkak or Congklakin in Indonesia",
+        "correct_num": 2,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is [MASK].\n\nOptions:\n1. an official mode in Counter-Strike: Global Offensive\n2. used on posters\n3. known as Congkak or Congklakin in Indonesia"
+    },
+    {
+        "test_id": 59,
+        "relation": "IsA",
+        "correct_feat": "used on peace conference invitations",
+        "options": "1. generally for two players\n2. a Russian drama film\n3. used on peace conference invitations",
+        "correct_num": 3,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is [MASK].\n\nOptions:\n1. generally for two players\n2. a Russian drama film\n3. used on peace conference invitations"
+    },
+    {
+        "test_id": 60,
+        "relation": "IsA",
+        "correct_feat": "used in artistic films",
+        "options": "1. used in artistic films\n2. a microgame\n3. a military vessel",
+        "correct_num": 1,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is [MASK].\n\nOptions:\n1. used in artistic films\n2. a microgame\n3. a military vessel"
+    },
+    {
+        "test_id": 61,
+        "relation": "IsA",
+        "correct_feat": "used on posters",
+        "options": "1. a general description of size of books\n2. used on posters\n3. an official mode in Counter-Strike: Global Offensive",
+        "correct_num": 2,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is [MASK].\n\nOptions:\n1. a general description of size of books\n2. used on posters\n3. an official mode in Counter-Strike: Global Offensive"
+    },
+    {
+        "test_id": 62,
+        "relation": "IsA",
+        "correct_feat": "used on peace conference invitations",
+        "options": "1. a microgame\n2. a series of American Civil War military engagements\n3. used on peace conference invitations",
+        "correct_num": 3,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is [MASK].\n\nOptions:\n1. a microgame\n2. a series of American Civil War military engagements\n3. used on peace conference invitations"
+    },
+    {
+        "test_id": 63,
+        "relation": "PublishedAs",
+        "correct_feat": "the front cover for the June 2019 issue of Peace Science Digest",
+        "options": "1. the front cover for the June 2019 issue of Peace Science Digest\n2. Blokish\n3. Le Tour du monde en quatre-vingts jours",
+        "correct_num": 1,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> was published as [MASK].\n\nOptions:\n1. the front cover for the June 2019 issue of Peace Science Digest\n2. Blokish\n3. Le Tour du monde en quatre-vingts jours"
+    },
+    {
+        "test_id": 64,
+        "relation": "PublishedIn",
+        "correct_feat": "the British Reform Magazine in October 2019",
+        "options": "1. 1604\n2. the British Reform Magazine in October 2019\n3. 2003",
+        "correct_num": 2,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> was published in [MASK].\n\nOptions:\n1. 1604\n2. the British Reform Magazine in October 2019\n3. 2003"
+    }
+]

@@ -1,0 +1,530 @@
+[
+    {
+        "test_id": 0,
+        "relation": "About",
+        "correct_feat": "a simulated journey at sea",
+        "options": "1. a simulated journey at sea\n2. the return to the South following the Battle of Gettysburg\n3. the meeting of the United States and Soviet Armies near the end of World War II",
+        "correct_num": 1,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is about [MASK].\n\nOptions:\n1. a simulated journey at sea\n2. the return to the South following the Battle of Gettysburg\n3. the meeting of the United States and Soviet Armies near the end of World War II"
+    },
+    {
+        "test_id": 1,
+        "relation": "Affects",
+        "correct_feat": "the senses",
+        "options": "1. a vaccinated individual\n2. the senses\n3. the York-Hanover-Gettysburg, PA Combined Statistical Area",
+        "correct_num": 2,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> affects [MASK].\n\nOptions:\n1. a vaccinated individual\n2. the senses\n3. the York-Hanover-Gettysburg, PA Combined Statistical Area"
+    },
+    {
+        "test_id": 2,
+        "relation": "AssociatedWith",
+        "correct_feat": "the 1900 Paris Exposition",
+        "options": "1. the Tsardom of Russia\n2. the terms Kaiserreich and Königreich\n3. the 1900 Paris Exposition",
+        "correct_num": 3,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is associated with [MASK].\n\nOptions:\n1. the Tsardom of Russia\n2. the terms Kaiserreich and Königreich\n3. the 1900 Paris Exposition"
+    },
+    {
+        "test_id": 3,
+        "relation": "AssociatedWith",
+        "correct_feat": "pantomimes lumineuses",
+        "options": "1. pantomimes lumineuses\n2. Valorant\n3. computing applications",
+        "correct_num": 1,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is associated with [MASK].\n\nOptions:\n1. pantomimes lumineuses\n2. Valorant\n3. computing applications"
+    },
+    {
+        "test_id": 4,
+        "relation": "AssociatedWith",
+        "correct_feat": "moving images",
+        "options": "1. Norway, Sweden, Denmark, Iceland, Britain, Ireland, and Sápmi\n2. moving images\n3. the Albertine line of the Wettin dynasty",
+        "correct_num": 2,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is associated with [MASK].\n\nOptions:\n1. Norway, Sweden, Denmark, Iceland, Britain, Ireland, and Sápmi\n2. moving images\n3. the Albertine line of the Wettin dynasty"
+    },
+    {
+        "test_id": 5,
+        "relation": "AssociatedWith",
+        "correct_feat": "the technology of panoramas",
+        "options": "1. the Spanish Civil War\n2. the Viking Age\n3. the technology of panoramas",
+        "correct_num": 3,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is associated with [MASK].\n\nOptions:\n1. the Spanish Civil War\n2. the Viking Age\n3. the technology of panoramas"
+    },
+    {
+        "test_id": 6,
+        "relation": "BelongsTo",
+        "correct_feat": "the amusement section of the 1900 Paris Exposition",
+        "options": "1. the amusement section of the 1900 Paris Exposition\n2. mancala games\n3. Terry Pratchett's Discworld novels",
+        "correct_num": 1,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> belongs to [MASK].\n\nOptions:\n1. the amusement section of the 1900 Paris Exposition\n2. mancala games\n3. Terry Pratchett's Discworld novels"
+    },
+    {
+        "test_id": 7,
+        "relation": "BuiltIn",
+        "correct_feat": "in the amusement section of the 1900 Paris Exposition",
+        "options": "1. in 1864\n2. in the amusement section of the 1900 Paris Exposition\n3. in August 1944",
+        "correct_num": 2,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> was built [MASK].\n\nOptions:\n1. in 1864\n2. in the amusement section of the 1900 Paris Exposition\n3. in August 1944"
+    },
+    {
+        "test_id": 8,
+        "relation": "ConsistsOf",
+        "correct_feat": "moving panoramic paintings and a large motion platform",
+        "options": "1. two straight rows of six pits called houses\n2. an oware board\n3. moving panoramic paintings and a large motion platform",
+        "correct_num": 3,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> consists of [MASK].\n\nOptions:\n1. two straight rows of six pits called houses\n2. an oware board\n3. moving panoramic paintings and a large motion platform"
+    },
+    {
+        "test_id": 9,
+        "relation": "ConsistsOf",
+        "correct_feat": "two panoramas on large rollers, one for the port side and one for the starboard",
+        "options": "1. two panoramas on large rollers, one for the port side and one for the starboard\n2. numbered cards depicting locations, objects, or characters\n3. an elliptical wing",
+        "correct_num": 1,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> consists of [MASK].\n\nOptions:\n1. two panoramas on large rollers, one for the port side and one for the starboard\n2. numbered cards depicting locations, objects, or characters\n3. an elliptical wing"
+    },
+    {
+        "test_id": 10,
+        "relation": "ConsistsOf",
+        "correct_feat": "a 33 m long replica of a steamship",
+        "options": "1. a Rolls-Royce Merlin engine\n2. a 33 m long replica of a steamship\n3. players being given European Currency Units (ECU), Demand cards, and one freight Loco card",
+        "correct_num": 2,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> consists of [MASK].\n\nOptions:\n1. a Rolls-Royce Merlin engine\n2. a 33 m long replica of a steamship\n3. players being given European Currency Units (ECU), Demand cards, and one freight Loco card"
+    },
+    {
+        "test_id": 11,
+        "relation": "CreatedBy",
+        "correct_feat": "Hugo d'Alesi",
+        "options": "1. Narcís Monturiol\n2. Daphne du Maurier\n3. Hugo d'Alesi",
+        "correct_num": 3,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> was created by [MASK].\n\nOptions:\n1. Narcís Monturiol\n2. Daphne du Maurier\n3. Hugo d'Alesi"
+    },
+    {
+        "test_id": 12,
+        "relation": "CreatedFor",
+        "correct_feat": "the 1900 Paris Exposition",
+        "options": "1. the 1900 Paris Exposition\n2. stealth operations\n3. multiplayer video games",
+        "correct_num": 1,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> was created for [MASK].\n\nOptions:\n1. the 1900 Paris Exposition\n2. stealth operations\n3. multiplayer video games"
+    },
+    {
+        "test_id": 13,
+        "relation": "CreatedIn",
+        "correct_feat": "Paris",
+        "options": "1. Ireland\n2. Paris\n3. France",
+        "correct_num": 2,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> was created in [MASK].\n\nOptions:\n1. Ireland\n2. Paris\n3. France"
+    },
+    {
+        "test_id": 14,
+        "relation": "CreatedTo",
+        "correct_feat": "provide the illusion of being on the deck of a ship",
+        "options": "1. replace the republican lunisolar calendar\n2. resist the Luftwaffe\n3. provide the illusion of being on the deck of a ship",
+        "correct_num": 3,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> was created to [MASK].\n\nOptions:\n1. replace the republican lunisolar calendar\n2. resist the Luftwaffe\n3. provide the illusion of being on the deck of a ship"
+    },
+    {
+        "test_id": 15,
+        "relation": "DirectedBy",
+        "correct_feat": "Hugo d'Alesi",
+        "options": "1. Hugo d'Alesi\n2. Li Han-hsiang\n3. Sam Peckinpah",
+        "correct_num": 1,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> was directed by [MASK].\n\nOptions:\n1. Hugo d'Alesi\n2. Li Han-hsiang\n3. Sam Peckinpah"
+    },
+    {
+        "test_id": 16,
+        "relation": "HasA",
+        "correct_feat": "a rolling and pitching motion",
+        "options": "1. a base, stem and usually a cover\n2. a rolling and pitching motion\n3. commercial sets of apparatus that have been sold for the game",
+        "correct_num": 2,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> has [MASK].\n\nOptions:\n1. a base, stem and usually a cover\n2. a rolling and pitching motion\n3. commercial sets of apparatus that have been sold for the game"
+    },
+    {
+        "test_id": 17,
+        "relation": "HasA",
+        "correct_feat": "lighting effects that created day- and night-time",
+        "options": "1. Event cards that happen immediately\n2. a temporary replacement pontoon bridge\n3. lighting effects that created day- and night-time",
+        "correct_num": 3,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> has [MASK].\n\nOptions:\n1. Event cards that happen immediately\n2. a temporary replacement pontoon bridge\n3. lighting effects that created day- and night-time"
+    },
+    {
+        "test_id": 18,
+        "relation": "HasA",
+        "correct_feat": "sound effects of the ship's screw and the steam siren",
+        "options": "1. sound effects of the ship's screw and the steam siren\n2. a two-player format\n3. been analyzed mathematically",
+        "correct_num": 1,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> has [MASK].\n\nOptions:\n1. sound effects of the ship's screw and the steam siren\n2. a two-player format\n3. been analyzed mathematically"
+    },
+    {
+        "test_id": 19,
+        "relation": "HasA",
+        "correct_feat": "an olfactory element provided by seaweed and tar",
+        "options": "1. a fine-pitch propeller\n2. an olfactory element provided by seaweed and tar\n3. common color tokens in an extended two versus two players variant",
+        "correct_num": 2,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> has [MASK].\n\nOptions:\n1. a fine-pitch propeller\n2. an olfactory element provided by seaweed and tar\n3. common color tokens in an extended two versus two players variant"
+    },
+    {
+        "test_id": 20,
+        "relation": "HasA",
+        "correct_feat": "actors portraying deck hands",
+        "options": "1. a rectangular grid map of the town\n2. a multimedia group\n3. actors portraying deck hands",
+        "correct_num": 3,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> has [MASK].\n\nOptions:\n1. a rectangular grid map of the town\n2. a multimedia group\n3. actors portraying deck hands"
+    },
+    {
+        "test_id": 21,
+        "relation": "HasA",
+        "correct_feat": "a symphony composed by H. Kowalski",
+        "options": "1. a symphony composed by H. Kowalski\n2. a board shaped like a symmetrical cross\n3. a sword and sorcery comics series",
+        "correct_num": 1,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> has [MASK].\n\nOptions:\n1. a symphony composed by H. Kowalski\n2. a board shaped like a symmetrical cross\n3. a sword and sorcery comics series"
+    },
+    {
+        "test_id": 22,
+        "relation": "HasFeatureOf",
+        "correct_feat": "the illusion of being on the deck of a ship",
+        "options": "1. the migration of humans out of Africa\n2. the illusion of being on the deck of a ship\n3. randomness of the rebellions",
+        "correct_num": 2,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is characterized by [MASK].\n\nOptions:\n1. the migration of humans out of Africa\n2. the illusion of being on the deck of a ship\n3. randomness of the rebellions"
+    },
+    {
+        "test_id": 23,
+        "relation": "HasFeatureOf",
+        "correct_feat": "the combination of moving panoramic paintings and a large motion platform",
+        "options": "1. its visual style\n2. high performance\n3. the combination of moving panoramic paintings and a large motion platform",
+        "correct_num": 3,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is characterized by [MASK].\n\nOptions:\n1. its visual style\n2. high performance\n3. the combination of moving panoramic paintings and a large motion platform"
+    },
+    {
+        "test_id": 24,
+        "relation": "HasFeatureOf",
+        "correct_feat": "the realism derived from the theme and technology",
+        "options": "1. the realism derived from the theme and technology\n2. having land and sea power be almost equally significant\n3. multiplayer board games",
+        "correct_num": 1,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is characterized by [MASK].\n\nOptions:\n1. the realism derived from the theme and technology\n2. having land and sea power be almost equally significant\n3. multiplayer board games"
+    },
+    {
+        "test_id": 25,
+        "relation": "HasFeatureOf",
+        "correct_feat": "a simulated voyage itinerary",
+        "options": "1. pieces being able to jump over other pieces\n2. a simulated voyage itinerary\n3. abstract strategy games",
+        "correct_num": 2,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is characterized by [MASK].\n\nOptions:\n1. pieces being able to jump over other pieces\n2. a simulated voyage itinerary\n3. abstract strategy games"
+    },
+    {
+        "test_id": 26,
+        "relation": "HasFeatureOf",
+        "correct_feat": "the use of optical illusions",
+        "options": "1. cooperative gameplay\n2. an adventure\n3. the use of optical illusions",
+        "correct_num": 3,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is characterized by [MASK].\n\nOptions:\n1. cooperative gameplay\n2. an adventure\n3. the use of optical illusions"
+    },
+    {
+        "test_id": 27,
+        "relation": "HasFeatureOf",
+        "correct_feat": "the mechanical simulation of movement",
+        "options": "1. the mechanical simulation of movement\n2. being the location where the Torgauer Artikel was composed\n3. a game of sacrifice",
+        "correct_num": 1,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is characterized by [MASK].\n\nOptions:\n1. the mechanical simulation of movement\n2. being the location where the Torgauer Artikel was composed\n3. a game of sacrifice"
+    },
+    {
+        "test_id": 28,
+        "relation": "HasFeatureOf",
+        "correct_feat": "the juxtaposition of multiple forms",
+        "options": "1. its classification as a developed jurisdiction by the International Monetary Fund\n2. the juxtaposition of multiple forms\n3. a reception center",
+        "correct_num": 2,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is characterized by [MASK].\n\nOptions:\n1. its classification as a developed jurisdiction by the International Monetary Fund\n2. the juxtaposition of multiple forms\n3. a reception center"
+    },
+    {
+        "test_id": 29,
+        "relation": "HasFeatureOf",
+        "correct_feat": "sensory elements including breeze, lighting, sound, and smell",
+        "options": "1. military engagements during the 1863 Gettysburg Campaign\n2. the emergence of early civilizations\n3. sensory elements including breeze, lighting, sound, and smell",
+        "correct_num": 3,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is characterized by [MASK].\n\nOptions:\n1. military engagements during the 1863 Gettysburg Campaign\n2. the emergence of early civilizations\n3. sensory elements including breeze, lighting, sound, and smell"
+    },
+    {
+        "test_id": 30,
+        "relation": "HasFeatureOf",
+        "correct_feat": "the multiplication of the sensorial direction of the panorama",
+        "options": "1. the multiplication of the sensorial direction of the panorama\n2. two sets of seven holes for each player\n3. the 4×4×4 board having 16 cells lying on the body diagonals",
+        "correct_num": 1,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is characterized by [MASK].\n\nOptions:\n1. the multiplication of the sensorial direction of the panorama\n2. two sets of seven holes for each player\n3. the 4×4×4 board having 16 cells lying on the body diagonals"
+    },
+    {
+        "test_id": 31,
+        "relation": "HeldIn",
+        "correct_feat": "the amusement section of the 1900 Paris Exposition",
+        "options": "1. the Caribbean\n2. the amusement section of the 1900 Paris Exposition\n3. the Western Region of Ghana",
+        "correct_num": 2,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> was held in [MASK].\n\nOptions:\n1. the Caribbean\n2. the amusement section of the 1900 Paris Exposition\n3. the Western Region of Ghana"
+    },
+    {
+        "test_id": 32,
+        "relation": "HeldIn",
+        "correct_feat": "Paris",
+        "options": "1. Sri Lanka\n2. the United States\n3. Paris",
+        "correct_num": 3,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> was held in [MASK].\n\nOptions:\n1. Sri Lanka\n2. the United States\n3. Paris"
+    },
+    {
+        "test_id": 33,
+        "relation": "Influenced",
+        "correct_feat": "the technological march towards the invention of cinema",
+        "options": "1. the technological march towards the invention of cinema\n2. the review of South Africa's Foreign Military Assistance Act\n3. the application of the term 'feudal' to other societies",
+        "correct_num": 1,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> influenced [MASK].\n\nOptions:\n1. the technological march towards the invention of cinema\n2. the review of South Africa's Foreign Military Assistance Act\n3. the application of the term 'feudal' to other societies"
+    },
+    {
+        "test_id": 34,
+        "relation": "InfluencedBy",
+        "correct_feat": "the success of pantomimes lumineuses",
+        "options": "1. the French Revolution\n2. the success of pantomimes lumineuses\n3. the Battle of Mühlberg",
+        "correct_num": 2,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> was influenced by [MASK].\n\nOptions:\n1. the French Revolution\n2. the success of pantomimes lumineuses\n3. the Battle of Mühlberg"
+    },
+    {
+        "test_id": 35,
+        "relation": "InfluencedBy",
+        "correct_feat": "the success of moving images",
+        "options": "1. the Puerto Rico Federal Relations Act of 1950\n2. the medieval Holy Roman Empire\n3. the success of moving images",
+        "correct_num": 3,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> was influenced by [MASK].\n\nOptions:\n1. the Puerto Rico Federal Relations Act of 1950\n2. the medieval Holy Roman Empire\n3. the success of moving images"
+    },
+    {
+        "test_id": 36,
+        "relation": "InfluencedBy",
+        "correct_feat": "Thomas Edison's kinetoscope",
+        "options": "1. Thomas Edison's kinetoscope\n2. the development of agriculture\n3. Christianity",
+        "correct_num": 1,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> was influenced by [MASK].\n\nOptions:\n1. Thomas Edison's kinetoscope\n2. the development of agriculture\n3. Christianity"
+    },
+    {
+        "test_id": 37,
+        "relation": "InfluencedBy",
+        "correct_feat": "the Lumière brothers' films",
+        "options": "1. the concept of beneficium\n2. the Lumière brothers' films\n3. the Foraker Act of 1900",
+        "correct_num": 2,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> was influenced by [MASK].\n\nOptions:\n1. the concept of beneficium\n2. the Lumière brothers' films\n3. the Foraker Act of 1900"
+    },
+    {
+        "test_id": 38,
+        "relation": "IsA",
+        "correct_feat": "an entertainment attraction",
+        "options": "1. a 2005 novel\n2. an island organized as an unincorporated territory of the United States\n3. an entertainment attraction",
+        "correct_num": 3,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is [MASK].\n\nOptions:\n1. a 2005 novel\n2. an island organized as an unincorporated territory of the United States\n3. an entertainment attraction"
+    },
+    {
+        "test_id": 39,
+        "relation": "IsA",
+        "correct_feat": "a combination of moving panoramic paintings and a large motion platform",
+        "options": "1. a combination of moving panoramic paintings and a large motion platform\n2. a British single-seat fighter aircraft\n3. a two-player combat-oriented game",
+        "correct_num": 1,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is [MASK].\n\nOptions:\n1. a combination of moving panoramic paintings and a large motion platform\n2. a British single-seat fighter aircraft\n3. a two-player combat-oriented game"
+    },
+    {
+        "test_id": 40,
+        "relation": "IsA",
+        "correct_feat": "regarded as one of the last major developments in the technology of panoramas",
+        "options": "1. a museum\n2. regarded as one of the last major developments in the technology of panoramas\n3. an abstract strategy board game",
+        "correct_num": 2,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is [MASK].\n\nOptions:\n1. a museum\n2. regarded as one of the last major developments in the technology of panoramas\n3. an abstract strategy board game"
+    },
+    {
+        "test_id": 41,
+        "relation": "IsA",
+        "correct_feat": "a sensory journey both in time and space",
+        "options": "1. a tafl variant\n2. a military air arm\n3. a sensory journey both in time and space",
+        "correct_num": 3,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is [MASK].\n\nOptions:\n1. a tafl variant\n2. a military air arm\n3. a sensory journey both in time and space"
+    },
+    {
+        "test_id": 42,
+        "relation": "IsA",
+        "correct_feat": "a technological march towards an increasingly perfectly realistic reproduction",
+        "options": "1. a technological march towards an increasingly perfectly realistic reproduction\n2. a fictional work loosely based on the true story of Johann Schwerdfeger\n3. the capital of the district Nordsachsen",
+        "correct_num": 1,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is [MASK].\n\nOptions:\n1. a technological march towards an increasingly perfectly realistic reproduction\n2. a fictional work loosely based on the true story of Johann Schwerdfeger\n3. the capital of the district Nordsachsen"
+    },
+    {
+        "test_id": 43,
+        "relation": "IsA",
+        "correct_feat": "known for being an entertainment attraction at the 1900 Paris Exposition",
+        "options": "1. a hole game\n2. known for being an entertainment attraction at the 1900 Paris Exposition\n3. a game that is a variant of Halma",
+        "correct_num": 2,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is [MASK].\n\nOptions:\n1. a hole game\n2. known for being an entertainment attraction at the 1900 Paris Exposition\n3. a game that is a variant of Halma"
+    },
+    {
+        "test_id": 44,
+        "relation": "IsA",
+        "correct_feat": "known for its combination of moving panoramic paintings and a large motion platform",
+        "options": "1. a 2016 novel\n2. a spin-off of Empire Builder\n3. known for its combination of moving panoramic paintings and a large motion platform",
+        "correct_num": 3,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is [MASK].\n\nOptions:\n1. a 2016 novel\n2. a spin-off of Empire Builder\n3. known for its combination of moving panoramic paintings and a large motion platform"
+    },
+    {
+        "test_id": 45,
+        "relation": "IsA",
+        "correct_feat": "known for simulating the emotion of traveling by sea",
+        "options": "1. known for simulating the emotion of traveling by sea\n2. a foolscap quarto writing paper\n3. a strategy board game",
+        "correct_num": 1,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is [MASK].\n\nOptions:\n1. known for simulating the emotion of traveling by sea\n2. a foolscap quarto writing paper\n3. a strategy board game"
+    },
+    {
+        "test_id": 46,
+        "relation": "IsA",
+        "correct_feat": "known for its realism achieved through technology and sensory elements",
+        "options": "1. a 2005 novel\n2. known for its realism achieved through technology and sensory elements\n3. a new Rijnbrug",
+        "correct_num": 2,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is [MASK].\n\nOptions:\n1. a 2005 novel\n2. known for its realism achieved through technology and sensory elements\n3. a new Rijnbrug"
+    },
+    {
+        "test_id": 47,
+        "relation": "IsA",
+        "correct_feat": "located inside a building in the amusement section on the Champ de Mars",
+        "options": "1. a board wargame\n2. similar in concept to traditional tic-tac-toe\n3. located inside a building in the amusement section on the Champ de Mars",
+        "correct_num": 3,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is [MASK].\n\nOptions:\n1. a board wargame\n2. similar in concept to traditional tic-tac-toe\n3. located inside a building in the amusement section on the Champ de Mars"
+    },
+    {
+        "test_id": 48,
+        "relation": "IsA",
+        "correct_feat": "located at the corner of Quai d'Alesi and avenue de Suffren",
+        "options": "1. located at the corner of Quai d'Alesi and avenue de Suffren\n2. a game that is mentioned in Upton Sinclair's Dragon's Teeth\n3. a pit and pebble game",
+        "correct_num": 1,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is [MASK].\n\nOptions:\n1. located at the corner of Quai d'Alesi and avenue de Suffren\n2. a game that is mentioned in Upton Sinclair's Dragon's Teeth\n3. a pit and pebble game"
+    },
+    {
+        "test_id": 49,
+        "relation": "IsA",
+        "correct_feat": "part of the amusement section of the 1900 Paris Exposition",
+        "options": "1. a medium-sized vessel\n2. part of the amusement section of the 1900 Paris Exposition\n3. a Polish-language version",
+        "correct_num": 2,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is [MASK].\n\nOptions:\n1. a medium-sized vessel\n2. part of the amusement section of the 1900 Paris Exposition\n3. a Polish-language version"
+    },
+    {
+        "test_id": 50,
+        "relation": "IsA",
+        "correct_feat": "used as a simulated journey at sea",
+        "options": "1. an abstract strategy game\n2. a German word\n3. used as a simulated journey at sea",
+        "correct_num": 3,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is [MASK].\n\nOptions:\n1. an abstract strategy game\n2. a German word\n3. used as a simulated journey at sea"
+    },
+    {
+        "test_id": 51,
+        "relation": "IsA",
+        "correct_feat": "used for entertainment",
+        "options": "1. used for entertainment\n2. a title\n3. an Indian game similar to Pachisi",
+        "correct_num": 1,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is [MASK].\n\nOptions:\n1. used for entertainment\n2. a title\n3. an Indian game similar to Pachisi"
+    },
+    {
+        "test_id": 52,
+        "relation": "IsA",
+        "correct_feat": "used to create the illusion of being on the deck of a ship",
+        "options": "1. a Canadian documentary film\n2. used to create the illusion of being on the deck of a ship\n3. a young kids version",
+        "correct_num": 2,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is [MASK].\n\nOptions:\n1. a Canadian documentary film\n2. used to create the illusion of being on the deck of a ship\n3. a young kids version"
+    },
+    {
+        "test_id": 53,
+        "relation": "IsA",
+        "correct_feat": "used to simulate the emotion of traveling by sea",
+        "options": "1. an abstract strategy game\n2. an official mode in Counter-Strike: Global Offensive\n3. used to simulate the emotion of traveling by sea",
+        "correct_num": 3,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is [MASK].\n\nOptions:\n1. an abstract strategy game\n2. an official mode in Counter-Strike: Global Offensive\n3. used to simulate the emotion of traveling by sea"
+    },
+    {
+        "test_id": 54,
+        "relation": "IsA",
+        "correct_feat": "used to provide a plausible itinerary to several ports",
+        "options": "1. used to provide a plausible itinerary to several ports\n2. known as Congkak or Congklakin in Indonesia\n3. generally for two players",
+        "correct_num": 1,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is [MASK].\n\nOptions:\n1. used to provide a plausible itinerary to several ports\n2. known as Congkak or Congklakin in Indonesia\n3. generally for two players"
+    },
+    {
+        "test_id": 55,
+        "relation": "IsA",
+        "correct_feat": "used to impact in all senses at once",
+        "options": "1. a Russian drama film\n2. used to impact in all senses at once\n3. a microgame",
+        "correct_num": 2,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is [MASK].\n\nOptions:\n1. a Russian drama film\n2. used to impact in all senses at once\n3. a microgame"
+    },
+    {
+        "test_id": 56,
+        "relation": "IsA",
+        "correct_feat": "used to obtain the most realistic effect possible",
+        "options": "1. a military vessel\n2. a general description of size of books\n3. used to obtain the most realistic effect possible",
+        "correct_num": 3,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is [MASK].\n\nOptions:\n1. a military vessel\n2. a general description of size of books\n3. used to obtain the most realistic effect possible"
+    },
+    {
+        "test_id": 57,
+        "relation": "IsA",
+        "correct_feat": "used in the amusement section of the 1900 Paris Exposition",
+        "options": "1. used in the amusement section of the 1900 Paris Exposition\n2. an official mode in Counter-Strike: Global Offensive\n3. a microgame",
+        "correct_num": 1,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is [MASK].\n\nOptions:\n1. used in the amusement section of the 1900 Paris Exposition\n2. an official mode in Counter-Strike: Global Offensive\n3. a microgame"
+    },
+    {
+        "test_id": 58,
+        "relation": "IsA",
+        "correct_feat": "used to create the illusion of being on the deck of a ship",
+        "options": "1. a series of American Civil War military engagements\n2. used to create the illusion of being on the deck of a ship\n3. Britain's best-loved novel of all time",
+        "correct_num": 2,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is [MASK].\n\nOptions:\n1. a series of American Civil War military engagements\n2. used to create the illusion of being on the deck of a ship\n3. Britain's best-loved novel of all time"
+    },
+    {
+        "test_id": 59,
+        "relation": "IsA",
+        "correct_feat": "used to give a rolling and pitching motion to the platform",
+        "options": "1. encouraged for kids to learn to count\n2. an international co-production between British and West German financiers\n3. used to give a rolling and pitching motion to the platform",
+        "correct_num": 3,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is [MASK].\n\nOptions:\n1. encouraged for kids to learn to count\n2. an international co-production between British and West German financiers\n3. used to give a rolling and pitching motion to the platform"
+    },
+    {
+        "test_id": 60,
+        "relation": "IsA",
+        "correct_feat": "used to create an ocean breeze",
+        "options": "1. used to create an ocean breeze\n2. a pontoon bridge\n3. a 1979 novel",
+        "correct_num": 1,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is [MASK].\n\nOptions:\n1. used to create an ocean breeze\n2. a pontoon bridge\n3. a 1979 novel"
+    },
+    {
+        "test_id": 61,
+        "relation": "IsA",
+        "correct_feat": "used to create day- and night-time lighting effects",
+        "options": "1. 3D tic-tac-toe\n2. used to create day- and night-time lighting effects\n3. a Hong Kong manhua",
+        "correct_num": 2,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is [MASK].\n\nOptions:\n1. 3D tic-tac-toe\n2. used to create day- and night-time lighting effects\n3. a Hong Kong manhua"
+    },
+    {
+        "test_id": 62,
+        "relation": "IsA",
+        "correct_feat": "used to present a symphony",
+        "options": "1. a form of checkers\n2. a Java-based application\n3. used to present a symphony",
+        "correct_num": 3,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is [MASK].\n\nOptions:\n1. a form of checkers\n2. a Java-based application\n3. used to present a symphony"
+    },
+    {
+        "test_id": 63,
+        "relation": "OccurredAt",
+        "correct_feat": "the 1900 Paris Exposition",
+        "options": "1. the 1900 Paris Exposition\n2. Lipetsk in 1924 for training\n3. Cemetery Hill",
+        "correct_num": 1,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> occurred at [MASK].\n\nOptions:\n1. the 1900 Paris Exposition\n2. Lipetsk in 1924 for training\n3. Cemetery Hill"
+    },
+    {
+        "test_id": 64,
+        "relation": "OccurredBetween",
+        "correct_feat": "1892 and 1900",
+        "options": "1. the United States and Soviet Armies\n2. 1892 and 1900\n3. 12,000 years ago and the present",
+        "correct_num": 2,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> occurred between [MASK].\n\nOptions:\n1. the United States and Soviet Armies\n2. 1892 and 1900\n3. 12,000 years ago and the present"
+    },
+    {
+        "test_id": 65,
+        "relation": "OccurredIn",
+        "correct_feat": "Paris",
+        "options": "1. Sri Lanka\n2. France\n3. Paris",
+        "correct_num": 3,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> occurred in [MASK].\n\nOptions:\n1. Sri Lanka\n2. France\n3. Paris"
+    }
+]

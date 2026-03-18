@@ -1,0 +1,514 @@
+[
+    {
+        "test_id": 0,
+        "relation": "About",
+        "correct_feat": "the commission received by St. Francis of Assisi to rebuild the Church",
+        "options": "1. the commission received by St. Francis of Assisi to rebuild the Church\n2. the return to the South following the Battle of Gettysburg\n3. the meeting of the United States and Soviet Armies near the end of World War II",
+        "correct_num": 1,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is about [MASK].\n\nOptions:\n1. the commission received by St. Francis of Assisi to rebuild the Church\n2. the return to the South following the Battle of Gettysburg\n3. the meeting of the United States and Soviet Armies near the end of World War II"
+    },
+    {
+        "test_id": 1,
+        "relation": "About",
+        "correct_feat": "the incident of Christ's crucifixion",
+        "options": "1. a board game\n2. the incident of Christ's crucifixion\n3. actions of squad sized units in World War II",
+        "correct_num": 2,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is about [MASK].\n\nOptions:\n1. a board game\n2. the incident of Christ's crucifixion\n3. actions of squad sized units in World War II"
+    },
+    {
+        "test_id": 2,
+        "relation": "About",
+        "correct_feat": "the meaning of the event depicted and strengthening the faith of the people",
+        "options": "1. foreign national servicemen serving in another country's armed forces\n2. the definition and legal status of individuals participating in armed conflicts for payment\n3. the meaning of the event depicted and strengthening the faith of the people",
+        "correct_num": 3,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is about [MASK].\n\nOptions:\n1. foreign national servicemen serving in another country's armed forces\n2. the definition and legal status of individuals participating in armed conflicts for payment\n3. the meaning of the event depicted and strengthening the faith of the people"
+    },
+    {
+        "test_id": 3,
+        "relation": "AssociatedWith",
+        "correct_feat": "St. Francis of Assisi",
+        "options": "1. St. Francis of Assisi\n2. Valorant\n3. computing applications",
+        "correct_num": 1,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is associated with [MASK].\n\nOptions:\n1. St. Francis of Assisi\n2. Valorant\n3. computing applications"
+    },
+    {
+        "test_id": 4,
+        "relation": "AssociatedWith",
+        "correct_feat": "the Basilica of Saint Clare",
+        "options": "1. Norway, Sweden, Denmark, Iceland, Britain, Ireland, and Sápmi\n2. the Basilica of Saint Clare\n3. the Albertine line of the Wettin dynasty",
+        "correct_num": 2,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is associated with [MASK].\n\nOptions:\n1. Norway, Sweden, Denmark, Iceland, Britain, Ireland, and Sápmi\n2. the Basilica of Saint Clare\n3. the Albertine line of the Wettin dynasty"
+    },
+    {
+        "test_id": 5,
+        "relation": "AssociatedWith",
+        "correct_feat": "the church of San Damiano",
+        "options": "1. the Spanish Civil War\n2. the Viking Age\n3. the church of San Damiano",
+        "correct_num": 3,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is associated with [MASK].\n\nOptions:\n1. the Spanish Civil War\n2. the Viking Age\n3. the church of San Damiano"
+    },
+    {
+        "test_id": 6,
+        "relation": "AssociatedWith",
+        "correct_feat": "Franciscans",
+        "options": "1. Franciscans\n2. polyominoes\n3. the Electorate of Saxony",
+        "correct_num": 1,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is associated with [MASK].\n\nOptions:\n1. Franciscans\n2. polyominoes\n3. the Electorate of Saxony"
+    },
+    {
+        "test_id": 7,
+        "relation": "AssociatedWith",
+        "correct_feat": "the Eastern Church",
+        "options": "1. the Wehrmacht\n2. the Eastern Church\n3. Ludo, Aggravation or Sorry!",
+        "correct_num": 2,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is associated with [MASK].\n\nOptions:\n1. the Wehrmacht\n2. the Eastern Church\n3. Ludo, Aggravation or Sorry!"
+    },
+    {
+        "test_id": 8,
+        "relation": "AssociatedWith",
+        "correct_feat": "Montenegro",
+        "options": "1. John Agar\n2. teaching arithmetic to African children\n3. Montenegro",
+        "correct_num": 3,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is associated with [MASK].\n\nOptions:\n1. John Agar\n2. teaching arithmetic to African children\n3. Montenegro"
+    },
+    {
+        "test_id": 9,
+        "relation": "AssociatedWith",
+        "correct_feat": "Croatia",
+        "options": "1. Croatia\n2. the Ascanian dynasty\n3. Counter-Strike: Global Offensive",
+        "correct_num": 1,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is associated with [MASK].\n\nOptions:\n1. Croatia\n2. the Ascanian dynasty\n3. Counter-Strike: Global Offensive"
+    },
+    {
+        "test_id": 10,
+        "relation": "AssociatedWith",
+        "correct_feat": "Umbria",
+        "options": "1. deathmatch\n2. Umbria\n3. facility inspection and maintenance",
+        "correct_num": 2,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is associated with [MASK].\n\nOptions:\n1. deathmatch\n2. Umbria\n3. facility inspection and maintenance"
+    },
+    {
+        "test_id": 11,
+        "relation": "AssociatedWith",
+        "correct_feat": "Cimabue",
+        "options": "1. the German Kuban bridgehead\n2. the Caribbean\n3. Cimabue",
+        "correct_num": 3,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is associated with [MASK].\n\nOptions:\n1. the German Kuban bridgehead\n2. the Caribbean\n3. Cimabue"
+    },
+    {
+        "test_id": 12,
+        "relation": "AssociatedWith",
+        "correct_feat": "Giotto",
+        "options": "1. Giotto\n2. Brunei\n3. traditional tic-tac-toe",
+        "correct_num": 1,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is associated with [MASK].\n\nOptions:\n1. Giotto\n2. Brunei\n3. traditional tic-tac-toe"
+    },
+    {
+        "test_id": 13,
+        "relation": "ConsistsOf",
+        "correct_feat": "the main figure of Christ",
+        "options": "1. a paratrooper force known as the Fallschirmjäger\n2. the main figure of Christ\n3. pieces that may be small checkers or counters, or wooden or plastic cones or men resembling small chess pawns",
+        "correct_num": 2,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> consists of [MASK].\n\nOptions:\n1. a paratrooper force known as the Fallschirmjäger\n2. the main figure of Christ\n3. pieces that may be small checkers or counters, or wooden or plastic cones or men resembling small chess pawns"
+    },
+    {
+        "test_id": 14,
+        "relation": "ConsistsOf",
+        "correct_feat": "images of other saints and people related to the incident of Christ's crucifixion",
+        "options": "1. a painting\n2. costs varying depending on terrain and city\n3. images of other saints and people related to the incident of Christ's crucifixion",
+        "correct_num": 3,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> consists of [MASK].\n\nOptions:\n1. a painting\n2. costs varying depending on terrain and city\n3. images of other saints and people related to the incident of Christ's crucifixion"
+    },
+    {
+        "test_id": 15,
+        "relation": "ConsistsOf",
+        "correct_feat": "five witnesses of the crucifixion",
+        "options": "1. five witnesses of the crucifixion\n2. a cross position for rows\n3. innovative sunken rivets",
+        "correct_num": 1,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> consists of [MASK].\n\nOptions:\n1. five witnesses of the crucifixion\n2. a cross position for rows\n3. innovative sunken rivets"
+    },
+    {
+        "test_id": 16,
+        "relation": "ConsistsOf",
+        "correct_feat": "two smaller figures in the corners with the witnesses",
+        "options": "1. six books\n2. two smaller figures in the corners with the witnesses\n3. potential pieces with special powers",
+        "correct_num": 2,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> consists of [MASK].\n\nOptions:\n1. six books\n2. two smaller figures in the corners with the witnesses\n3. potential pieces with special powers"
+    },
+    {
+        "test_id": 17,
+        "relation": "ConsistsOf",
+        "correct_feat": "six angels",
+        "options": "1. 3 pages of rules errata\n2. one or more full sheets of paper\n3. six angels",
+        "correct_num": 3,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> consists of [MASK].\n\nOptions:\n1. 3 pages of rules errata\n2. one or more full sheets of paper\n3. six angels"
+    },
+    {
+        "test_id": 18,
+        "relation": "ConsistsOf",
+        "correct_feat": "a damaged picture of six figures at the foot of the cross",
+        "options": "1. a damaged picture of six figures at the foot of the cross\n2. a multicolored track\n3. pottery, glass, metal, wood, stone, polystyrene, plastic, lacquerware, or other materials",
+        "correct_num": 1,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> consists of [MASK].\n\nOptions:\n1. a damaged picture of six figures at the foot of the cross\n2. a multicolored track\n3. pottery, glass, metal, wood, stone, polystyrene, plastic, lacquerware, or other materials"
+    },
+    {
+        "test_id": 19,
+        "relation": "ConsistsOf",
+        "correct_feat": "ten angels crowded around the top",
+        "options": "1. two armies of uneven numbers\n2. ten angels crowded around the top\n3. one or more full sheets of paper",
+        "correct_num": 2,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> consists of [MASK].\n\nOptions:\n1. two armies of uneven numbers\n2. ten angels crowded around the top\n3. one or more full sheets of paper"
+    },
+    {
+        "test_id": 20,
+        "relation": "ConsistsOf",
+        "correct_feat": "the Hand of God at the very top",
+        "options": "1. a gun replacement after each kill\n2. a painting\n3. the Hand of God at the very top",
+        "correct_num": 3,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> consists of [MASK].\n\nOptions:\n1. a gun replacement after each kill\n2. a painting\n3. the Hand of God at the very top"
+    },
+    {
+        "test_id": 21,
+        "relation": "ConsistsOf",
+        "correct_feat": "a small figure of a fowl on the right side",
+        "options": "1. a small figure of a fowl on the right side\n2. a workshop in Munich-Giesing\n3. \"I Go, You Go\" alternating system of turns",
+        "correct_num": 1,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> consists of [MASK].\n\nOptions:\n1. a small figure of a fowl on the right side\n2. a workshop in Munich-Giesing\n3. \"I Go, You Go\" alternating system of turns"
+    },
+    {
+        "test_id": 22,
+        "relation": "CreatedAround",
+        "correct_feat": "the year 1100",
+        "options": "1. June 1936\n2. the year 1100\n3. July 1934",
+        "correct_num": 2,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> was created around [MASK].\n\nOptions:\n1. June 1936\n2. the year 1100\n3. July 1934"
+    },
+    {
+        "test_id": 23,
+        "relation": "CreatedIn",
+        "correct_feat": "Umbria",
+        "options": "1. 1979\n2. Arnhem\n3. Umbria",
+        "correct_num": 3,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> was created in [MASK].\n\nOptions:\n1. 1979\n2. Arnhem\n3. Umbria"
+    },
+    {
+        "test_id": 24,
+        "relation": "CreatedTo",
+        "correct_feat": "teach the meaning of the event depicted",
+        "options": "1. teach the meaning of the event depicted\n2. prevent seizures\n3. hold offerings or supplies for the afterlife",
+        "correct_num": 1,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> was created to [MASK].\n\nOptions:\n1. teach the meaning of the event depicted\n2. prevent seizures\n3. hold offerings or supplies for the afterlife"
+    },
+    {
+        "test_id": 25,
+        "relation": "CreatedTo",
+        "correct_feat": "strengthen the faith of the people",
+        "options": "1. have a flying speed of 250 mph\n2. strengthen the faith of the people\n3. prevent seizures",
+        "correct_num": 2,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> was created to [MASK].\n\nOptions:\n1. have a flying speed of 250 mph\n2. strengthen the faith of the people\n3. prevent seizures"
+    },
+    {
+        "test_id": 26,
+        "relation": "HasA",
+        "correct_feat": "an inscription in Latin above the head of Christ",
+        "options": "1. two dice used for movement\n2. a new Rijnbrug rebuilt in exactly the same style as the destroyed bridge\n3. an inscription in Latin above the head of Christ",
+        "correct_num": 3,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> has [MASK].\n\nOptions:\n1. two dice used for movement\n2. a new Rijnbrug rebuilt in exactly the same style as the destroyed bridge\n3. an inscription in Latin above the head of Christ"
+    },
+    {
+        "test_id": 27,
+        "relation": "HasA",
+        "correct_feat": "a replica in its original position in the church of San Damiano nearby",
+        "options": "1. a replica in its original position in the church of San Damiano nearby\n2. a king that must be surrounded on four sides to be captured\n3. rules of capture that depend on the variant of the game played",
+        "correct_num": 1,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> has [MASK].\n\nOptions:\n1. a replica in its original position in the church of San Damiano nearby\n2. a king that must be surrounded on four sides to be captured\n3. rules of capture that depend on the variant of the game played"
+    },
+    {
+        "test_id": 28,
+        "relation": "HasA",
+        "correct_feat": "a copy hanging over the altar of the ancient church of San Damiano",
+        "options": "1. a score house at each end\n2. a copy hanging over the altar of the ancient church of San Damiano\n3. computer opponents",
+        "correct_num": 2,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> has [MASK].\n\nOptions:\n1. a score house at each end\n2. a copy hanging over the altar of the ancient church of San Damiano\n3. computer opponents"
+    },
+    {
+        "test_id": 29,
+        "relation": "HasA",
+        "correct_feat": "a damaged picture of six figures at the foot of the cross",
+        "options": "1. Captain Stransky\n2. been associated with private military companies\n3. a damaged picture of six figures at the foot of the cross",
+        "correct_num": 3,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> has [MASK].\n\nOptions:\n1. Captain Stransky\n2. been associated with private military companies\n3. a damaged picture of six figures at the foot of the cross"
+    },
+    {
+        "test_id": 30,
+        "relation": "HasA",
+        "correct_feat": "the Hand of God at the very top",
+        "options": "1. the Hand of God at the very top\n2. inspired many derivative works\n3. a base-16 number system",
+        "correct_num": 1,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> has [MASK].\n\nOptions:\n1. the Hand of God at the very top\n2. inspired many derivative works\n3. a base-16 number system"
+    },
+    {
+        "test_id": 31,
+        "relation": "HasA",
+        "correct_feat": "a small figure of a fowl on the right side",
+        "options": "1. a high school\n2. a small figure of a fowl on the right side\n3. an interesting situation",
+        "correct_num": 2,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> has [MASK].\n\nOptions:\n1. a high school\n2. a small figure of a fowl on the right side\n3. an interesting situation"
+    },
+    {
+        "test_id": 32,
+        "relation": "HasFeatureOf",
+        "correct_feat": "the main figure of Christ represented upright in full stature",
+        "options": "1. a reception center\n2. military engagements during the 1863 Gettysburg Campaign\n3. the main figure of Christ represented upright in full stature",
+        "correct_num": 3,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is characterized by [MASK].\n\nOptions:\n1. a reception center\n2. military engagements during the 1863 Gettysburg Campaign\n3. the main figure of Christ represented upright in full stature"
+    },
+    {
+        "test_id": 33,
+        "relation": "HasFeatureOf",
+        "correct_feat": "surrounding figures that are smaller",
+        "options": "1. surrounding figures that are smaller\n2. the emergence of early civilizations\n3. two sets of seven holes for each player",
+        "correct_num": 1,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is characterized by [MASK].\n\nOptions:\n1. surrounding figures that are smaller\n2. the emergence of early civilizations\n3. two sets of seven holes for each player"
+    },
+    {
+        "test_id": 34,
+        "relation": "HasFeatureOf",
+        "correct_feat": "the bright white of his body contrasting with the dark red and black around it",
+        "options": "1. the 4×4×4 board having 16 cells lying on the body diagonals\n2. the bright white of his body contrasting with the dark red and black around it\n3. detailed game system",
+        "correct_num": 2,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is characterized by [MASK].\n\nOptions:\n1. the 4×4×4 board having 16 cells lying on the body diagonals\n2. the bright white of his body contrasting with the dark red and black around it\n3. detailed game system"
+    },
+    {
+        "test_id": 35,
+        "relation": "HasFeatureOf",
+        "correct_feat": "the inscription Jesus of Nazareth, King of the Jews",
+        "options": "1. a failure mode in rebreathers\n2. slight variations as to the layout of the game, number of players and strategy of play\n3. the inscription Jesus of Nazareth, King of the Jews",
+        "correct_num": 3,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is characterized by [MASK].\n\nOptions:\n1. a failure mode in rebreathers\n2. slight variations as to the layout of the game, number of players and strategy of play\n3. the inscription Jesus of Nazareth, King of the Jews"
+    },
+    {
+        "test_id": 36,
+        "relation": "HasFeatureOf",
+        "correct_feat": "five witnesses of the crucifixion",
+        "options": "1. five witnesses of the crucifixion\n2. a winning condition of capturing 25 seeds\n3. its ultimate origin from Proto-Indo-European *reg-",
+        "correct_num": 1,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is characterized by [MASK].\n\nOptions:\n1. five witnesses of the crucifixion\n2. a winning condition of capturing 25 seeds\n3. its ultimate origin from Proto-Indo-European *reg-"
+    },
+    {
+        "test_id": 37,
+        "relation": "HasFeatureOf",
+        "correct_feat": "Mary and Mary Magdalene having their hands placed on their cheeks to reflect extreme grief and anguish",
+        "options": "1. diminished unitary power in empires\n2. Mary and Mary Magdalene having their hands placed on their cheeks to reflect extreme grief and anguish\n3. its role as a major military post during wars",
+        "correct_num": 2,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is characterized by [MASK].\n\nOptions:\n1. diminished unitary power in empires\n2. Mary and Mary Magdalene having their hands placed on their cheeks to reflect extreme grief and anguish\n3. its role as a major military post during wars"
+    },
+    {
+        "test_id": 38,
+        "relation": "HasFeatureOf",
+        "correct_feat": "four witnesses represented with halos",
+        "options": "1. being the location where the Torgauer Artikel was composed\n2. its adoption by the Nazis to legitimize their government\n3. four witnesses represented with halos",
+        "correct_num": 3,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is characterized by [MASK].\n\nOptions:\n1. being the location where the Torgauer Artikel was composed\n2. its adoption by the Nazis to legitimize their government\n3. four witnesses represented with halos"
+    },
+    {
+        "test_id": 39,
+        "relation": "HasFeatureOf",
+        "correct_feat": "two smaller figures located in the corners with the witnesses",
+        "options": "1. two smaller figures located in the corners with the witnesses\n2. a musical group\n3. a wager",
+        "correct_num": 1,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is characterized by [MASK].\n\nOptions:\n1. two smaller figures located in the corners with the witnesses\n2. a musical group\n3. a wager"
+    },
+    {
+        "test_id": 40,
+        "relation": "HasFeatureOf",
+        "correct_feat": "six angels positioned at both ends of the crossbar",
+        "options": "1. its official languages being Spanish and English\n2. six angels positioned at both ends of the crossbar\n3. the circle being collapsed onto the cross",
+        "correct_num": 2,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is characterized by [MASK].\n\nOptions:\n1. its official languages being Spanish and English\n2. six angels positioned at both ends of the crossbar\n3. the circle being collapsed onto the cross"
+    },
+    {
+        "test_id": 41,
+        "relation": "HasFeatureOf",
+        "correct_feat": "a damaged picture of six figures at the foot of the cross",
+        "options": "1. operating a paratrooper force known as the Fallschirmjäger\n2. the advent of transformative philosophical and religious ideas\n3. a damaged picture of six figures at the foot of the cross",
+        "correct_num": 3,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is characterized by [MASK].\n\nOptions:\n1. operating a paratrooper force known as the Fallschirmjäger\n2. the advent of transformative philosophical and religious ideas\n3. a damaged picture of six figures at the foot of the cross"
+    },
+    {
+        "test_id": 42,
+        "relation": "HeldIn",
+        "correct_feat": "the Basilica of Saint Clare",
+        "options": "1. the Basilica of Saint Clare\n2. Barbados\n3. the Royal Canadian Navy",
+        "correct_num": 1,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> was held in [MASK].\n\nOptions:\n1. the Basilica of Saint Clare\n2. Barbados\n3. the Royal Canadian Navy"
+    },
+    {
+        "test_id": 43,
+        "relation": "HeldIn",
+        "correct_feat": "the chapel of San Damiano",
+        "options": "1. the Royal Marines\n2. the chapel of San Damiano\n3. France",
+        "correct_num": 2,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> was held in [MASK].\n\nOptions:\n1. the Royal Marines\n2. the chapel of San Damiano\n3. France"
+    },
+    {
+        "test_id": 44,
+        "relation": "InfluencedBy",
+        "correct_feat": "the tradition of painted crucifixes that began in the Eastern Church",
+        "options": "1. the diving bell\n2. the movement to create an ethnically German Empire\n3. the tradition of painted crucifixes that began in the Eastern Church",
+        "correct_num": 3,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> was influenced by [MASK].\n\nOptions:\n1. the diving bell\n2. the movement to create an ethnically German Empire\n3. the tradition of painted crucifixes that began in the Eastern Church"
+    },
+    {
+        "test_id": 45,
+        "relation": "InfluencedBy",
+        "correct_feat": "the Byzantine style common in Italy before Cimabue and Giotto",
+        "options": "1. the Byzantine style common in Italy before Cimabue and Giotto\n2. Burm's childhood experiences of playing \"race\" cars with his brother\n3. the development of the Whitehead torpedo",
+        "correct_num": 1,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> was influenced by [MASK].\n\nOptions:\n1. the Byzantine style common in Italy before Cimabue and Giotto\n2. Burm's childhood experiences of playing \"race\" cars with his brother\n3. the development of the Whitehead torpedo"
+    },
+    {
+        "test_id": 46,
+        "relation": "IsA",
+        "correct_feat": "a large Romanesque rood cross",
+        "options": "1. a fictional work loosely based on the true story of Johann Schwerdfeger\n2. a large Romanesque rood cross\n3. the capital of the district Nordsachsen",
+        "correct_num": 2,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is [MASK].\n\nOptions:\n1. a fictional work loosely based on the true story of Johann Schwerdfeger\n2. a large Romanesque rood cross\n3. the capital of the district Nordsachsen"
+    },
+    {
+        "test_id": 47,
+        "relation": "IsA",
+        "correct_feat": "a crucifix",
+        "options": "1. a hole game\n2. a game that is a variant of Halma\n3. a crucifix",
+        "correct_num": 3,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is [MASK].\n\nOptions:\n1. a hole game\n2. a game that is a variant of Halma\n3. a crucifix"
+    },
+    {
+        "test_id": 48,
+        "relation": "IsA",
+        "correct_feat": "an icon cross",
+        "options": "1. an icon cross\n2. a 2016 novel\n3. a spin-off of Empire Builder",
+        "correct_num": 1,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is [MASK].\n\nOptions:\n1. an icon cross\n2. a 2016 novel\n3. a spin-off of Empire Builder"
+    },
+    {
+        "test_id": 49,
+        "relation": "IsA",
+        "correct_feat": "a copy",
+        "options": "1. a foolscap quarto writing paper\n2. a copy\n3. a strategy board game",
+        "correct_num": 2,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is [MASK].\n\nOptions:\n1. a foolscap quarto writing paper\n2. a copy\n3. a strategy board game"
+    },
+    {
+        "test_id": 50,
+        "relation": "IsA",
+        "correct_feat": "known as an icon cross",
+        "options": "1. a 2005 novel\n2. a new Rijnbrug\n3. known as an icon cross",
+        "correct_num": 3,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is [MASK].\n\nOptions:\n1. a 2005 novel\n2. a new Rijnbrug\n3. known as an icon cross"
+    },
+    {
+        "test_id": 51,
+        "relation": "IsA",
+        "correct_feat": "known for St. Francis of Assisi praying before it and receiving the commission to rebuild the Church",
+        "options": "1. known for St. Francis of Assisi praying before it and receiving the commission to rebuild the Church\n2. a board wargame\n3. similar in concept to traditional tic-tac-toe",
+        "correct_num": 1,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is [MASK].\n\nOptions:\n1. known for St. Francis of Assisi praying before it and receiving the commission to rebuild the Church\n2. a board wargame\n3. similar in concept to traditional tic-tac-toe"
+    },
+    {
+        "test_id": 52,
+        "relation": "IsA",
+        "correct_feat": "known as the symbol of the Franciscan mission from God",
+        "options": "1. a game that is mentioned in Upton Sinclair's Dragon's Teeth\n2. known as the symbol of the Franciscan mission from God\n3. a pit and pebble game",
+        "correct_num": 2,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is [MASK].\n\nOptions:\n1. a game that is mentioned in Upton Sinclair's Dragon's Teeth\n2. known as the symbol of the Franciscan mission from God\n3. a pit and pebble game"
+    },
+    {
+        "test_id": 53,
+        "relation": "IsA",
+        "correct_feat": "known as a symbol of their mission to commit their lives and resources to renewing and rebuilding the Church",
+        "options": "1. a medium-sized vessel\n2. a Polish-language version\n3. known as a symbol of their mission to commit their lives and resources to renewing and rebuilding the Church",
+        "correct_num": 3,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is [MASK].\n\nOptions:\n1. a medium-sized vessel\n2. a Polish-language version\n3. known as a symbol of their mission to commit their lives and resources to renewing and rebuilding the Church"
+    },
+    {
+        "test_id": 54,
+        "relation": "IsA",
+        "correct_feat": "located in the Basilica of Saint Clare in Assisi, Italy",
+        "options": "1. located in the Basilica of Saint Clare in Assisi, Italy\n2. an abstract strategy game\n3. a German word",
+        "correct_num": 1,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is [MASK].\n\nOptions:\n1. located in the Basilica of Saint Clare in Assisi, Italy\n2. an abstract strategy game\n3. a German word"
+    },
+    {
+        "test_id": 55,
+        "relation": "IsA",
+        "correct_feat": "located in the church of San Damiano nearby",
+        "options": "1. a title\n2. located in the church of San Damiano nearby\n3. an Indian game similar to Pachisi",
+        "correct_num": 2,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is [MASK].\n\nOptions:\n1. a title\n2. located in the church of San Damiano nearby\n3. an Indian game similar to Pachisi"
+    },
+    {
+        "test_id": 56,
+        "relation": "IsA",
+        "correct_feat": "located in the chapel of San Damiano just outside Assisi",
+        "options": "1. a Canadian documentary film\n2. a young kids version\n3. located in the chapel of San Damiano just outside Assisi",
+        "correct_num": 3,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is [MASK].\n\nOptions:\n1. a Canadian documentary film\n2. a young kids version\n3. located in the chapel of San Damiano just outside Assisi"
+    },
+    {
+        "test_id": 57,
+        "relation": "IsA",
+        "correct_feat": "used as a symbol of the Franciscan mission from God",
+        "options": "1. used as a symbol of the Franciscan mission from God\n2. an abstract strategy game\n3. an official mode in Counter-Strike: Global Offensive",
+        "correct_num": 1,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is [MASK].\n\nOptions:\n1. used as a symbol of the Franciscan mission from God\n2. an abstract strategy game\n3. an official mode in Counter-Strike: Global Offensive"
+    },
+    {
+        "test_id": 58,
+        "relation": "IsA",
+        "correct_feat": "used as a symbol of their mission to commit their lives and resources to renewing and rebuilding the Church",
+        "options": "1. known as Congkak or Congklakin in Indonesia\n2. used as a symbol of their mission to commit their lives and resources to renewing and rebuilding the Church\n3. generally for two players",
+        "correct_num": 2,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is [MASK].\n\nOptions:\n1. known as Congkak or Congklakin in Indonesia\n2. used as a symbol of their mission to commit their lives and resources to renewing and rebuilding the Church\n3. generally for two players"
+    },
+    {
+        "test_id": 59,
+        "relation": "IsA",
+        "correct_feat": "used for teaching the meaning of the event depicted",
+        "options": "1. a Russian drama film\n2. a microgame\n3. used for teaching the meaning of the event depicted",
+        "correct_num": 3,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is [MASK].\n\nOptions:\n1. a Russian drama film\n2. a microgame\n3. used for teaching the meaning of the event depicted"
+    },
+    {
+        "test_id": 60,
+        "relation": "IsA",
+        "correct_feat": "used for strengthening the faith of the people",
+        "options": "1. used for strengthening the faith of the people\n2. a military vessel\n3. a general description of size of books",
+        "correct_num": 1,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is [MASK].\n\nOptions:\n1. used for strengthening the faith of the people\n2. a military vessel\n3. a general description of size of books"
+    },
+    {
+        "test_id": 61,
+        "relation": "IsA",
+        "correct_feat": "used in the Basilica of Saint Clare",
+        "options": "1. an official mode in Counter-Strike: Global Offensive\n2. used in the Basilica of Saint Clare\n3. a microgame",
+        "correct_num": 2,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is [MASK].\n\nOptions:\n1. an official mode in Counter-Strike: Global Offensive\n2. used in the Basilica of Saint Clare\n3. a microgame"
+    },
+    {
+        "test_id": 62,
+        "relation": "IsA",
+        "correct_feat": "used in the church of San Damiano",
+        "options": "1. a series of American Civil War military engagements\n2. Britain's best-loved novel of all time\n3. used in the church of San Damiano",
+        "correct_num": 3,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is [MASK].\n\nOptions:\n1. a series of American Civil War military engagements\n2. Britain's best-loved novel of all time\n3. used in the church of San Damiano"
+    },
+    {
+        "test_id": 63,
+        "relation": "OccurredIn",
+        "correct_feat": "the 11th century in Umbria",
+        "options": "1. the 11th century in Umbria\n2. Germany\n3. the Caribbean",
+        "correct_num": 1,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> occurred in [MASK].\n\nOptions:\n1. the 11th century in Umbria\n2. Germany\n3. the Caribbean"
+    }
+]

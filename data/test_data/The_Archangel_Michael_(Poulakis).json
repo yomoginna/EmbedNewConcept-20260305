@@ -1,0 +1,578 @@
+[
+    {
+        "test_id": 0,
+        "relation": "About",
+        "correct_feat": "a biblical figure associated with the old testament",
+        "options": "1. a biblical figure associated with the old testament\n2. the return to the South following the Battle of Gettysburg\n3. the meeting of the United States and Soviet Armies near the end of World War II",
+        "correct_num": 1,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is about [MASK].\n\nOptions:\n1. a biblical figure associated with the old testament\n2. the return to the South following the Battle of Gettysburg\n3. the meeting of the United States and Soviet Armies near the end of World War II"
+    },
+    {
+        "test_id": 1,
+        "relation": "Affects",
+        "correct_feat": "the audience with its expression of fright and terror",
+        "options": "1. a vaccinated individual\n2. the audience with its expression of fright and terror\n3. the York-Hanover-Gettysburg, PA Combined Statistical Area",
+        "correct_num": 2,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> affects [MASK].\n\nOptions:\n1. a vaccinated individual\n2. the audience with its expression of fright and terror\n3. the York-Hanover-Gettysburg, PA Combined Statistical Area"
+    },
+    {
+        "test_id": 2,
+        "relation": "AssociatedWith",
+        "correct_feat": "the old testament",
+        "options": "1. the Tsardom of Russia\n2. the terms Kaiserreich and Königreich\n3. the old testament",
+        "correct_num": 3,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is associated with [MASK].\n\nOptions:\n1. the Tsardom of Russia\n2. the terms Kaiserreich and Königreich\n3. the old testament"
+    },
+    {
+        "test_id": 3,
+        "relation": "AssociatedWith",
+        "correct_feat": "the apocalypse",
+        "options": "1. the apocalypse\n2. Valorant\n3. computing applications",
+        "correct_num": 1,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is associated with [MASK].\n\nOptions:\n1. the apocalypse\n2. Valorant\n3. computing applications"
+    },
+    {
+        "test_id": 4,
+        "relation": "BelongsTo",
+        "correct_feat": "the Benaki Museum in Athens Greece",
+        "options": "1. book formats\n2. the Benaki Museum in Athens Greece\n3. a series of Doctor Who audio plays",
+        "correct_num": 2,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> belongs to [MASK].\n\nOptions:\n1. book formats\n2. the Benaki Museum in Athens Greece\n3. a series of Doctor Who audio plays"
+    },
+    {
+        "test_id": 5,
+        "relation": "ConsistsOf",
+        "correct_feat": "tempera and gold leaf on wood panel",
+        "options": "1. historic properties, buildings, and structures\n2. two straight rows of six pits called houses\n3. tempera and gold leaf on wood panel",
+        "correct_num": 3,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> consists of [MASK].\n\nOptions:\n1. historic properties, buildings, and structures\n2. two straight rows of six pits called houses\n3. tempera and gold leaf on wood panel"
+    },
+    {
+        "test_id": 6,
+        "relation": "ConsistsOf",
+        "correct_feat": "a wolflike demon",
+        "options": "1. a wolflike demon\n2. four sets of 4 colored airplane pieces\n3. costs varying depending on terrain and city",
+        "correct_num": 1,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> consists of [MASK].\n\nOptions:\n1. a wolflike demon\n2. four sets of 4 colored airplane pieces\n3. costs varying depending on terrain and city"
+    },
+    {
+        "test_id": 7,
+        "relation": "ConsistsOf",
+        "correct_feat": "a powerful demonic entity",
+        "options": "1. numbered cards depicting locations, objects, or characters\n2. a powerful demonic entity\n3. potential pieces with special powers",
+        "correct_num": 2,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> consists of [MASK].\n\nOptions:\n1. numbered cards depicting locations, objects, or characters\n2. a powerful demonic entity\n3. potential pieces with special powers"
+    },
+    {
+        "test_id": 8,
+        "relation": "ConsistsOf",
+        "correct_feat": "a lavish costume",
+        "options": "1. a workshop in Munich-Giesing\n2. two straight rows of six pits called houses\n3. a lavish costume",
+        "correct_num": 3,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> consists of [MASK].\n\nOptions:\n1. a workshop in Munich-Giesing\n2. two straight rows of six pits called houses\n3. a lavish costume"
+    },
+    {
+        "test_id": 9,
+        "relation": "ConsistsOf",
+        "correct_feat": "brilliant colors",
+        "options": "1. brilliant colors\n2. an oware board\n3. numbered cards depicting locations, objects, or characters",
+        "correct_num": 1,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> consists of [MASK].\n\nOptions:\n1. brilliant colors\n2. an oware board\n3. numbered cards depicting locations, objects, or characters"
+    },
+    {
+        "test_id": 10,
+        "relation": "ConsistsOf",
+        "correct_feat": "a cape that floats creating a weightless setting",
+        "options": "1. an elliptical wing\n2. a cape that floats creating a weightless setting\n3. a Rolls-Royce Merlin engine",
+        "correct_num": 2,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> consists of [MASK].\n\nOptions:\n1. an elliptical wing\n2. a cape that floats creating a weightless setting\n3. a Rolls-Royce Merlin engine"
+    },
+    {
+        "test_id": 11,
+        "relation": "CreatedBy",
+        "correct_feat": "Greek painter Theodore Poulakis",
+        "options": "1. Nathaniel Symons\n2. Narcís Monturiol\n3. Greek painter Theodore Poulakis",
+        "correct_num": 3,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> was created by [MASK].\n\nOptions:\n1. Nathaniel Symons\n2. Narcís Monturiol\n3. Greek painter Theodore Poulakis"
+    },
+    {
+        "test_id": 12,
+        "relation": "HasA",
+        "correct_feat": "a gilded gold background",
+        "options": "1. a gilded gold background\n2. a map of 1901 Europe plus Turkey, Syria and North Africa\n3. a guided-missile cruiser",
+        "correct_num": 1,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> has [MASK].\n\nOptions:\n1. a gilded gold background\n2. a map of 1901 Europe plus Turkey, Syria and North Africa\n3. a guided-missile cruiser"
+    },
+    {
+        "test_id": 13,
+        "relation": "HasA",
+        "correct_feat": "a wolflike demon",
+        "options": "1. a remarkable architecture\n2. a wolflike demon\n3. a hex grid map",
+        "correct_num": 2,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> has [MASK].\n\nOptions:\n1. a remarkable architecture\n2. a wolflike demon\n3. a hex grid map"
+    },
+    {
+        "test_id": 14,
+        "relation": "HasA",
+        "correct_feat": "a sculpturesque figure dressed in a lavish costume",
+        "options": "1. a liberal arts college\n2. trains that may move freely on a player's own track or pay ECU $4 million to operate on another player's track\n3. a sculpturesque figure dressed in a lavish costume",
+        "correct_num": 3,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> has [MASK].\n\nOptions:\n1. a liberal arts college\n2. trains that may move freely on a player's own track or pay ECU $4 million to operate on another player's track\n3. a sculpturesque figure dressed in a lavish costume"
+    },
+    {
+        "test_id": 15,
+        "relation": "HasA",
+        "correct_feat": "luxuriant patterns",
+        "options": "1. luxuriant patterns\n2. an undercarriage position indicator\n3. a \"fin\" in European usage",
+        "correct_num": 1,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> has [MASK].\n\nOptions:\n1. luxuriant patterns\n2. an undercarriage position indicator\n3. a \"fin\" in European usage"
+    },
+    {
+        "test_id": 16,
+        "relation": "HasA",
+        "correct_feat": "brilliant colors",
+        "options": "1. a central king-piece\n2. brilliant colors\n3. a two-player format",
+        "correct_num": 2,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> has [MASK].\n\nOptions:\n1. a central king-piece\n2. brilliant colors\n3. a two-player format"
+    },
+    {
+        "test_id": 17,
+        "relation": "HasA",
+        "correct_feat": "a cape that floats creating a weightless setting",
+        "options": "1. a base, stem and usually a cover\n2. commercial sets of apparatus that have been sold for the game\n3. a cape that floats creating a weightless setting",
+        "correct_num": 3,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> has [MASK].\n\nOptions:\n1. a base, stem and usually a cover\n2. commercial sets of apparatus that have been sold for the game\n3. a cape that floats creating a weightless setting"
+    },
+    {
+        "test_id": 18,
+        "relation": "HasA",
+        "correct_feat": "an advanced shadowing method",
+        "options": "1. an advanced shadowing method\n2. Event cards that happen immediately\n3. a temporary replacement pontoon bridge",
+        "correct_num": 1,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> has [MASK].\n\nOptions:\n1. an advanced shadowing method\n2. Event cards that happen immediately\n3. a temporary replacement pontoon bridge"
+    },
+    {
+        "test_id": 19,
+        "relation": "HasA",
+        "correct_feat": "dimension added to the shallow stage for the figures",
+        "options": "1. a two-player format\n2. dimension added to the shallow stage for the figures\n3. been analyzed mathematically",
+        "correct_num": 2,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> has [MASK].\n\nOptions:\n1. a two-player format\n2. dimension added to the shallow stage for the figures\n3. been analyzed mathematically"
+    },
+    {
+        "test_id": 20,
+        "relation": "HasA",
+        "correct_feat": "a wolflike demonic figure",
+        "options": "1. a fine-pitch propeller\n2. common color tokens in an extended two versus two players variant\n3. a wolflike demonic figure",
+        "correct_num": 3,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> has [MASK].\n\nOptions:\n1. a fine-pitch propeller\n2. common color tokens in an extended two versus two players variant\n3. a wolflike demonic figure"
+    },
+    {
+        "test_id": 21,
+        "relation": "HasA",
+        "correct_feat": "a muscular demonic figure",
+        "options": "1. a muscular demonic figure\n2. a rectangular grid map of the town\n3. a multimedia group",
+        "correct_num": 1,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> has [MASK].\n\nOptions:\n1. a muscular demonic figure\n2. a rectangular grid map of the town\n3. a multimedia group"
+    },
+    {
+        "test_id": 22,
+        "relation": "HasFeatureOf",
+        "correct_feat": "the Late Cretan School",
+        "options": "1. a wager\n2. the Late Cretan School\n3. a hexagonal grid",
+        "correct_num": 2,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is characterized by [MASK].\n\nOptions:\n1. a wager\n2. the Late Cretan School\n3. a hexagonal grid"
+    },
+    {
+        "test_id": 23,
+        "relation": "HasFeatureOf",
+        "correct_feat": "the Early Heptanese School",
+        "options": "1. the migration of humans out of Africa\n2. randomness of the rebellions\n3. the Early Heptanese School",
+        "correct_num": 3,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is characterized by [MASK].\n\nOptions:\n1. the migration of humans out of Africa\n2. randomness of the rebellions\n3. the Early Heptanese School"
+    },
+    {
+        "test_id": 24,
+        "relation": "HasFeatureOf",
+        "correct_feat": "the traditional maniera greca",
+        "options": "1. the traditional maniera greca\n2. its visual style\n3. high performance",
+        "correct_num": 1,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is characterized by [MASK].\n\nOptions:\n1. the traditional maniera greca\n2. its visual style\n3. high performance"
+    },
+    {
+        "test_id": 25,
+        "relation": "HasFeatureOf",
+        "correct_feat": "an advanced painting style that evolved on the Ionian Islands",
+        "options": "1. having land and sea power be almost equally significant\n2. an advanced painting style that evolved on the Ionian Islands\n3. multiplayer board games",
+        "correct_num": 2,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is characterized by [MASK].\n\nOptions:\n1. having land and sea power be almost equally significant\n2. an advanced painting style that evolved on the Ionian Islands\n3. multiplayer board games"
+    },
+    {
+        "test_id": 26,
+        "relation": "HasFeatureOf",
+        "correct_feat": "a gilded gold background",
+        "options": "1. pieces being able to jump over other pieces\n2. abstract strategy games\n3. a gilded gold background",
+        "correct_num": 3,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is characterized by [MASK].\n\nOptions:\n1. pieces being able to jump over other pieces\n2. abstract strategy games\n3. a gilded gold background"
+    },
+    {
+        "test_id": 27,
+        "relation": "HasFeatureOf",
+        "correct_feat": "a sculpturesque figure",
+        "options": "1. a sculpturesque figure\n2. cooperative gameplay\n3. an adventure",
+        "correct_num": 1,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is characterized by [MASK].\n\nOptions:\n1. a sculpturesque figure\n2. cooperative gameplay\n3. an adventure"
+    },
+    {
+        "test_id": 28,
+        "relation": "HasFeatureOf",
+        "correct_feat": "a lavish costume",
+        "options": "1. being the location where the Torgauer Artikel was composed\n2. a lavish costume\n3. a game of sacrifice",
+        "correct_num": 2,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is characterized by [MASK].\n\nOptions:\n1. being the location where the Torgauer Artikel was composed\n2. a lavish costume\n3. a game of sacrifice"
+    },
+    {
+        "test_id": 29,
+        "relation": "HasFeatureOf",
+        "correct_feat": "luxuriant patterns",
+        "options": "1. its classification as a developed jurisdiction by the International Monetary Fund\n2. a reception center\n3. luxuriant patterns",
+        "correct_num": 3,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is characterized by [MASK].\n\nOptions:\n1. its classification as a developed jurisdiction by the International Monetary Fund\n2. a reception center\n3. luxuriant patterns"
+    },
+    {
+        "test_id": 30,
+        "relation": "HasFeatureOf",
+        "correct_feat": "brilliant colors",
+        "options": "1. brilliant colors\n2. military engagements during the 1863 Gettysburg Campaign\n3. the emergence of early civilizations",
+        "correct_num": 1,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is characterized by [MASK].\n\nOptions:\n1. brilliant colors\n2. military engagements during the 1863 Gettysburg Campaign\n3. the emergence of early civilizations"
+    },
+    {
+        "test_id": 31,
+        "relation": "HasFeatureOf",
+        "correct_feat": "a floating cape creating a weightless setting",
+        "options": "1. two sets of seven holes for each player\n2. a floating cape creating a weightless setting\n3. the 4×4×4 board having 16 cells lying on the body diagonals",
+        "correct_num": 2,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is characterized by [MASK].\n\nOptions:\n1. two sets of seven holes for each player\n2. a floating cape creating a weightless setting\n3. the 4×4×4 board having 16 cells lying on the body diagonals"
+    },
+    {
+        "test_id": 32,
+        "relation": "HeldIn",
+        "correct_feat": "Venice",
+        "options": "1. the Caribbean\n2. the Western Region of Ghana\n3. Venice",
+        "correct_num": 3,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> was held in [MASK].\n\nOptions:\n1. the Caribbean\n2. the Western Region of Ghana\n3. Venice"
+    },
+    {
+        "test_id": 33,
+        "relation": "HeldIn",
+        "correct_feat": "the Benaki Museum in Athens Greece",
+        "options": "1. the Benaki Museum in Athens Greece\n2. Sri Lanka\n3. the United States",
+        "correct_num": 1,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> was held in [MASK].\n\nOptions:\n1. the Benaki Museum in Athens Greece\n2. Sri Lanka\n3. the United States"
+    },
+    {
+        "test_id": 34,
+        "relation": "InfluencedBy",
+        "correct_feat": "Italian art",
+        "options": "1. the age of Obama\n2. Italian art\n3. the French Revolution",
+        "correct_num": 2,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> was influenced by [MASK].\n\nOptions:\n1. the age of Obama\n2. Italian art\n3. the French Revolution"
+    },
+    {
+        "test_id": 35,
+        "relation": "InfluencedBy",
+        "correct_feat": "Greek prototypes",
+        "options": "1. the Battle of Mühlberg\n2. the Puerto Rico Federal Relations Act of 1950\n3. Greek prototypes",
+        "correct_num": 3,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> was influenced by [MASK].\n\nOptions:\n1. the Battle of Mühlberg\n2. the Puerto Rico Federal Relations Act of 1950\n3. Greek prototypes"
+    },
+    {
+        "test_id": 36,
+        "relation": "InfluencedBy",
+        "correct_feat": "Italian prototypes",
+        "options": "1. Italian prototypes\n2. the medieval Holy Roman Empire\n3. the development of agriculture",
+        "correct_num": 1,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> was influenced by [MASK].\n\nOptions:\n1. Italian prototypes\n2. the medieval Holy Roman Empire\n3. the development of agriculture"
+    },
+    {
+        "test_id": 37,
+        "relation": "IsA",
+        "correct_feat": "a painting",
+        "options": "1. a game that is a variant of Halma\n2. a painting\n3. an aircraft carrier-based adaptation",
+        "correct_num": 2,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is [MASK].\n\nOptions:\n1. a game that is a variant of Halma\n2. a painting\n3. an aircraft carrier-based adaptation"
+    },
+    {
+        "test_id": 38,
+        "relation": "IsA",
+        "correct_feat": "a biblical figure",
+        "options": "1. a 2005 novel\n2. an island organized as an unincorporated territory of the United States\n3. a biblical figure",
+        "correct_num": 3,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is [MASK].\n\nOptions:\n1. a 2005 novel\n2. an island organized as an unincorporated territory of the United States\n3. a biblical figure"
+    },
+    {
+        "test_id": 39,
+        "relation": "IsA",
+        "correct_feat": "a blend of both Italian and Greek prototypes",
+        "options": "1. a blend of both Italian and Greek prototypes\n2. a British single-seat fighter aircraft\n3. a two-player combat-oriented game",
+        "correct_num": 1,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is [MASK].\n\nOptions:\n1. a blend of both Italian and Greek prototypes\n2. a British single-seat fighter aircraft\n3. a two-player combat-oriented game"
+    },
+    {
+        "test_id": 40,
+        "relation": "IsA",
+        "correct_feat": "a work of art",
+        "options": "1. a museum\n2. a work of art\n3. an abstract strategy board game",
+        "correct_num": 2,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is [MASK].\n\nOptions:\n1. a museum\n2. a work of art\n3. an abstract strategy board game"
+    },
+    {
+        "test_id": 41,
+        "relation": "IsA",
+        "correct_feat": "a masterpiece",
+        "options": "1. a tafl variant\n2. a military air arm\n3. a masterpiece",
+        "correct_num": 3,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is [MASK].\n\nOptions:\n1. a tafl variant\n2. a military air arm\n3. a masterpiece"
+    },
+    {
+        "test_id": 42,
+        "relation": "IsA",
+        "correct_feat": "a wolflike demon",
+        "options": "1. a wolflike demon\n2. a fictional work loosely based on the true story of Johann Schwerdfeger\n3. the capital of the district Nordsachsen",
+        "correct_num": 1,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is [MASK].\n\nOptions:\n1. a wolflike demon\n2. a fictional work loosely based on the true story of Johann Schwerdfeger\n3. the capital of the district Nordsachsen"
+    },
+    {
+        "test_id": 43,
+        "relation": "IsA",
+        "correct_feat": "a powerful demonic entity",
+        "options": "1. a hole game\n2. a powerful demonic entity\n3. a game that is a variant of Halma",
+        "correct_num": 2,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is [MASK].\n\nOptions:\n1. a hole game\n2. a powerful demonic entity\n3. a game that is a variant of Halma"
+    },
+    {
+        "test_id": 44,
+        "relation": "IsA",
+        "correct_feat": "a muscular demonic figure",
+        "options": "1. a 2016 novel\n2. a spin-off of Empire Builder\n3. a muscular demonic figure",
+        "correct_num": 3,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is [MASK].\n\nOptions:\n1. a 2016 novel\n2. a spin-off of Empire Builder\n3. a muscular demonic figure"
+    },
+    {
+        "test_id": 45,
+        "relation": "IsA",
+        "correct_feat": "a creature",
+        "options": "1. a creature\n2. a foolscap quarto writing paper\n3. a strategy board game",
+        "correct_num": 1,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is [MASK].\n\nOptions:\n1. a creature\n2. a foolscap quarto writing paper\n3. a strategy board game"
+    },
+    {
+        "test_id": 46,
+        "relation": "IsA",
+        "correct_feat": "known for its blend of Italian and Greek prototypes",
+        "options": "1. a 2005 novel\n2. known for its blend of Italian and Greek prototypes\n3. a new Rijnbrug",
+        "correct_num": 2,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is [MASK].\n\nOptions:\n1. a 2005 novel\n2. known for its blend of Italian and Greek prototypes\n3. a new Rijnbrug"
+    },
+    {
+        "test_id": 47,
+        "relation": "IsA",
+        "correct_feat": "known for its advanced painting style",
+        "options": "1. a board wargame\n2. similar in concept to traditional tic-tac-toe\n3. known for its advanced painting style",
+        "correct_num": 3,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is [MASK].\n\nOptions:\n1. a board wargame\n2. similar in concept to traditional tic-tac-toe\n3. known for its advanced painting style"
+    },
+    {
+        "test_id": 48,
+        "relation": "IsA",
+        "correct_feat": "known for its sculpturesque figure",
+        "options": "1. known for its sculpturesque figure\n2. a game that is mentioned in Upton Sinclair's Dragon's Teeth\n3. a pit and pebble game",
+        "correct_num": 1,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is [MASK].\n\nOptions:\n1. known for its sculpturesque figure\n2. a game that is mentioned in Upton Sinclair's Dragon's Teeth\n3. a pit and pebble game"
+    },
+    {
+        "test_id": 49,
+        "relation": "IsA",
+        "correct_feat": "known for its lavish costume",
+        "options": "1. a medium-sized vessel\n2. known for its lavish costume\n3. a Polish-language version",
+        "correct_num": 2,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is [MASK].\n\nOptions:\n1. a medium-sized vessel\n2. known for its lavish costume\n3. a Polish-language version"
+    },
+    {
+        "test_id": 50,
+        "relation": "IsA",
+        "correct_feat": "known for its brilliant colors",
+        "options": "1. an abstract strategy game\n2. a German word\n3. known for its brilliant colors",
+        "correct_num": 3,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is [MASK].\n\nOptions:\n1. an abstract strategy game\n2. a German word\n3. known for its brilliant colors"
+    },
+    {
+        "test_id": 51,
+        "relation": "IsA",
+        "correct_feat": "known for its advanced shadowing method",
+        "options": "1. known for its advanced shadowing method\n2. a title\n3. an Indian game similar to Pachisi",
+        "correct_num": 1,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is [MASK].\n\nOptions:\n1. known for its advanced shadowing method\n2. a title\n3. an Indian game similar to Pachisi"
+    },
+    {
+        "test_id": 52,
+        "relation": "IsA",
+        "correct_feat": "known for the depiction of a wolflike demon",
+        "options": "1. a Canadian documentary film\n2. known for the depiction of a wolflike demon\n3. a young kids version",
+        "correct_num": 2,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is [MASK].\n\nOptions:\n1. a Canadian documentary film\n2. known for the depiction of a wolflike demon\n3. a young kids version"
+    },
+    {
+        "test_id": 53,
+        "relation": "IsA",
+        "correct_feat": "known for the suppression and subjugation of a powerful demonic entity",
+        "options": "1. an abstract strategy game\n2. an official mode in Counter-Strike: Global Offensive\n3. known for the suppression and subjugation of a powerful demonic entity",
+        "correct_num": 3,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is [MASK].\n\nOptions:\n1. an abstract strategy game\n2. an official mode in Counter-Strike: Global Offensive\n3. known for the suppression and subjugation of a powerful demonic entity"
+    },
+    {
+        "test_id": 54,
+        "relation": "IsA",
+        "correct_feat": "known for the artist's expertise in cangiante",
+        "options": "1. known for the artist's expertise in cangiante\n2. known as Congkak or Congklakin in Indonesia\n3. generally for two players",
+        "correct_num": 1,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is [MASK].\n\nOptions:\n1. known for the artist's expertise in cangiante\n2. known as Congkak or Congklakin in Indonesia\n3. generally for two players"
+    },
+    {
+        "test_id": 55,
+        "relation": "IsA",
+        "correct_feat": "located on the Ionian Islands",
+        "options": "1. a Russian drama film\n2. located on the Ionian Islands\n3. a microgame",
+        "correct_num": 2,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is [MASK].\n\nOptions:\n1. a Russian drama film\n2. located on the Ionian Islands\n3. a microgame"
+    },
+    {
+        "test_id": 56,
+        "relation": "IsA",
+        "correct_feat": "located in Venice",
+        "options": "1. a military vessel\n2. a general description of size of books\n3. located in Venice",
+        "correct_num": 3,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is [MASK].\n\nOptions:\n1. a military vessel\n2. a general description of size of books\n3. located in Venice"
+    },
+    {
+        "test_id": 57,
+        "relation": "IsA",
+        "correct_feat": "located in Athens Greece",
+        "options": "1. located in Athens Greece\n2. an official mode in Counter-Strike: Global Offensive\n3. a microgame",
+        "correct_num": 1,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is [MASK].\n\nOptions:\n1. located in Athens Greece\n2. an official mode in Counter-Strike: Global Offensive\n3. a microgame"
+    },
+    {
+        "test_id": 58,
+        "relation": "IsA",
+        "correct_feat": "a member of the quarantia",
+        "options": "1. a series of American Civil War military engagements\n2. a member of the quarantia\n3. Britain's best-loved novel of all time",
+        "correct_num": 2,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is [MASK].\n\nOptions:\n1. a series of American Civil War military engagements\n2. a member of the quarantia\n3. Britain's best-loved novel of all time"
+    },
+    {
+        "test_id": 59,
+        "relation": "IsA",
+        "correct_feat": "part of the Cretan School",
+        "options": "1. encouraged for kids to learn to count\n2. an international co-production between British and West German financiers\n3. part of the Cretan School",
+        "correct_num": 3,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is [MASK].\n\nOptions:\n1. encouraged for kids to learn to count\n2. an international co-production between British and West German financiers\n3. part of the Cretan School"
+    },
+    {
+        "test_id": 60,
+        "relation": "IsA",
+        "correct_feat": "part of the Heptanese School",
+        "options": "1. part of the Heptanese School\n2. a pontoon bridge\n3. a 1979 novel",
+        "correct_num": 1,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is [MASK].\n\nOptions:\n1. part of the Heptanese School\n2. a pontoon bridge\n3. a 1979 novel"
+    },
+    {
+        "test_id": 61,
+        "relation": "IsA",
+        "correct_feat": "part of Greek Italian Byzantine art",
+        "options": "1. 3D tic-tac-toe\n2. part of Greek Italian Byzantine art\n3. a Hong Kong manhua",
+        "correct_num": 2,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is [MASK].\n\nOptions:\n1. 3D tic-tac-toe\n2. part of Greek Italian Byzantine art\n3. a Hong Kong manhua"
+    },
+    {
+        "test_id": 62,
+        "relation": "IsA",
+        "correct_feat": "part of Cretan Renaissance art",
+        "options": "1. a form of checkers\n2. a Java-based application\n3. part of Cretan Renaissance art",
+        "correct_num": 3,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is [MASK].\n\nOptions:\n1. a form of checkers\n2. a Java-based application\n3. part of Cretan Renaissance art"
+    },
+    {
+        "test_id": 63,
+        "relation": "IsA",
+        "correct_feat": "part of Baroque Roccoco Ionian art",
+        "options": "1. part of Baroque Roccoco Ionian art\n2. a midget submarine\n3. a game where players connect cities by building and extending train lines through Europe to deliver cargo and earn money",
+        "correct_num": 1,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is [MASK].\n\nOptions:\n1. part of Baroque Roccoco Ionian art\n2. a midget submarine\n3. a game where players connect cities by building and extending train lines through Europe to deliver cargo and earn money"
+    },
+    {
+        "test_id": 64,
+        "relation": "IsA",
+        "correct_feat": "used as a representation of the Archangel Michael",
+        "options": "1. a game where both players can guarantee a draw with perfect play\n2. used as a representation of the Archangel Michael\n3. a documentary television series",
+        "correct_num": 2,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is [MASK].\n\nOptions:\n1. a game where both players can guarantee a draw with perfect play\n2. used as a representation of the Archangel Michael\n3. a documentary television series"
+    },
+    {
+        "test_id": 65,
+        "relation": "IsA",
+        "correct_feat": "used for the care of humanity",
+        "options": "1. a series of games that can be played free online\n2. a work by Jules Verne\n3. used for the care of humanity",
+        "correct_num": 3,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is [MASK].\n\nOptions:\n1. a series of games that can be played free online\n2. a work by Jules Verne\n3. used for the care of humanity"
+    },
+    {
+        "test_id": 66,
+        "relation": "IsA",
+        "correct_feat": "used in Greek Italian Byzantine art",
+        "options": "1. used in Greek Italian Byzantine art\n2. a series of games that introduce potential pieces\n3. played in Sri Lanka, Trinidad, Guyana and Singapore",
+        "correct_num": 1,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is [MASK].\n\nOptions:\n1. used in Greek Italian Byzantine art\n2. a series of games that introduce potential pieces\n3. played in Sri Lanka, Trinidad, Guyana and Singapore"
+    },
+    {
+        "test_id": 67,
+        "relation": "IsA",
+        "correct_feat": "used in Cretan Renaissance art",
+        "options": "1. a trainer aircraft\n2. used in Cretan Renaissance art\n3. a Polish-language version",
+        "correct_num": 2,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is [MASK].\n\nOptions:\n1. a trainer aircraft\n2. used in Cretan Renaissance art\n3. a Polish-language version"
+    },
+    {
+        "test_id": 68,
+        "relation": "IsA",
+        "correct_feat": "used in Baroque Roccoco Ionian art",
+        "options": "1. a comic\n2. a game identified from the Iron Age\n3. used in Baroque Roccoco Ionian art",
+        "correct_num": 3,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is [MASK].\n\nOptions:\n1. a comic\n2. a game identified from the Iron Age\n3. used in Baroque Roccoco Ionian art"
+    },
+    {
+        "test_id": 69,
+        "relation": "IsA",
+        "correct_feat": "used to battle Satan",
+        "options": "1. used to battle Satan\n2. an epic high fantasy novel\n3. a base-16 number system",
+        "correct_num": 1,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is [MASK].\n\nOptions:\n1. used to battle Satan\n2. an epic high fantasy novel\n3. a base-16 number system"
+    },
+    {
+        "test_id": 70,
+        "relation": "OccurredIn",
+        "correct_feat": "Venice",
+        "options": "1. fiscal year 2023\n2. Venice\n3. 1423",
+        "correct_num": 2,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> occurred in [MASK].\n\nOptions:\n1. fiscal year 2023\n2. Venice\n3. 1423"
+    },
+    {
+        "test_id": 71,
+        "relation": "OccurredOn",
+        "correct_feat": "the Ionian Islands",
+        "options": "1. 416 BC\n2. 418 BC\n3. the Ionian Islands",
+        "correct_num": 3,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> occurred on [MASK].\n\nOptions:\n1. 416 BC\n2. 418 BC\n3. the Ionian Islands"
+    }
+]

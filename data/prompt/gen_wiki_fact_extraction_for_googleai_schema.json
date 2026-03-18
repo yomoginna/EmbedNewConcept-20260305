@@ -1,0 +1,710 @@
+{
+    "responseMimeType": "application/json",
+    "responseSchema": {
+        "type": "object",
+        "properties": {
+            "english": {
+                "type": "object",
+                "properties": {
+                    "About": {
+                        "type": "array",
+                        "items": { "type": "string" },
+                        "minItems": 1
+                    },
+                    "Affects": {
+                        "type": "array",
+                        "items": { "type": "string" },
+                        "minItems": 1
+                    },
+                    "AssociatedWith": {
+                        "type": "array",
+                        "items": { "type": "string" },
+                        "minItems": 1
+                    },
+                    "BelongsTo": {
+                        "type": "array",
+                        "items": { "type": "string" },
+                        "minItems": 1
+                    },
+                    "BuiltBy": {
+                        "type": "array",
+                        "items": { "type": "string" },
+                        "minItems": 1
+                    },
+                    "BuiltIn": {
+                        "type": "array",
+                        "items": { "type": "string" },
+                        "minItems": 1
+                    },
+                    "CausedBy": {
+                        "type": "array",
+                        "items": { "type": "string" },
+                        "minItems": 1
+                    },
+                    "ComposedBy": {
+                        "type": "array",
+                        "items": { "type": "string" },
+                        "minItems": 1
+                    },
+                    "ConsistsOf": {
+                        "type": "array",
+                        "items": { "type": "string" },
+                        "minItems": 1
+                    },
+                    "CreatedAround": {
+                        "type": "array",
+                        "items": { "type": "string" },
+                        "minItems": 1
+                    },
+                    "CreatedBy": {
+                        "type": "array",
+                        "items": { "type": "string" },
+                        "minItems": 1
+                    },
+                    "CreatedFor": {
+                        "type": "array",
+                        "items": { "type": "string" },
+                        "minItems": 1
+                    },
+                    "CreatedIn": {
+                        "type": "array",
+                        "items": { "type": "string" },
+                        "minItems": 1
+                    },
+                    "CreatedTo": {
+                        "type": "array",
+                        "items": { "type": "string" },
+                        "minItems": 1
+                    },
+                    "DevelopedBy": {
+                        "type": "array",
+                        "items": { "type": "string" },
+                        "minItems": 1
+                    },
+                    "DevelopedIn": {
+                        "type": "array",
+                        "items": { "type": "string" },
+                        "minItems": 1
+                    },
+                    "DirectedBy": {
+                        "type": "array",
+                        "items": { "type": "string" },
+                        "minItems": 1
+                    },
+                    "DiscoveredAt": {
+                        "type": "array",
+                        "items": { "type": "string" },
+                        "minItems": 1
+                    },
+                    "DiscoveredBy": {
+                        "type": "array",
+                        "items": { "type": "string" },
+                        "minItems": 1
+                    },
+                    "DiscoveredIn": {
+                        "type": "array",
+                        "items": { "type": "string" },
+                        "minItems": 1
+                    },
+                    "FoundedBy": {
+                        "type": "array",
+                        "items": { "type": "string" },
+                        "minItems": 1
+                    },
+                    "FoundedIn": {
+                        "type": "array",
+                        "items": { "type": "string" },
+                        "minItems": 1
+                    },
+                    "HasA": {
+                        "type": "array",
+                        "items": { "type": "string" },
+                        "minItems": 1
+                    },
+                    "HasFeatureOf": {
+                        "type": "array",
+                        "items": { "type": "string" },
+                        "minItems": 1
+                    },
+                    "HeldIn": {
+                        "type": "array",
+                        "items": { "type": "string" },
+                        "minItems": 1
+                    },
+                    "HeldOn": {
+                        "type": "array",
+                        "items": { "type": "string" },
+                        "minItems": 1
+                    },
+                    "Influenced": {
+                        "type": "array",
+                        "items": { "type": "string" },
+                        "minItems": 1
+                    },
+                    "InfluencedBy": {
+                        "type": "array",
+                        "items": { "type": "string" },
+                        "minItems": 1
+                    },
+                    "InventedBy": {
+                        "type": "array",
+                        "items": { "type": "string" },
+                        "minItems": 1
+                    },
+                    "InventedIn": {
+                        "type": "array",
+                        "items": { "type": "string" },
+                        "minItems": 1
+                    },
+                    "IsA": {
+                        "type": "array",
+                        "items": { "type": "string" },
+                        "minItems": 1
+                    },
+                    "KnownAs": {
+                        "type": "array",
+                        "items": { "type": "string" },
+                        "minItems": 1
+                    },
+                    "KnownFor": {
+                        "type": "array",
+                        "items": { "type": "string" },
+                        "minItems": 1
+                    },
+                    "LocatedIn": {
+                        "type": "array",
+                        "items": { "type": "string" },
+                        "minItems": 1
+                    },
+                    "ManufacturedBy": {
+                        "type": "array",
+                        "items": { "type": "string" },
+                        "minItems": 1
+                    },
+                    "MemberOf": {
+                        "type": "array",
+                        "items": { "type": "string" },
+                        "minItems": 1
+                    },
+                    "NamedAfter": {
+                        "type": "array",
+                        "items": { "type": "string" },
+                        "minItems": 1
+                    },
+                    "OccurredAround": {
+                        "type": "array",
+                        "items": { "type": "string" },
+                        "minItems": 1
+                    },
+                    "OccurredAt": {
+                        "type": "array",
+                        "items": { "type": "string" },
+                        "minItems": 1
+                    },
+                    "OccurredBetween": {
+                        "type": "array",
+                        "items": { "type": "string" },
+                        "minItems": 1
+                    },
+                    "OccurredDuring": {
+                        "type": "array",
+                        "items": { "type": "string" },
+                        "minItems": 1
+                    },
+                    "OccurredIn": {
+                        "type": "array",
+                        "items": { "type": "string" },
+                        "minItems": 1
+                    },
+                    "OccurredOn": {
+                        "type": "array",
+                        "items": { "type": "string" },
+                        "minItems": 1
+                    },
+                    "OriginatedIn": {
+                        "type": "array",
+                        "items": { "type": "string" },
+                        "minItems": 1
+                    },
+                    "PartOf": {
+                        "type": "array",
+                        "items": { "type": "string" },
+                        "minItems": 1
+                    },
+                    "PerformedBy": {
+                        "type": "array",
+                        "items": { "type": "string" },
+                        "minItems": 1
+                    },
+                    "ProducedBy": {
+                        "type": "array",
+                        "items": { "type": "string" },
+                        "minItems": 1
+                    },
+                    "PublishedAs": {
+                        "type": "array",
+                        "items": { "type": "string" },
+                        "minItems": 1
+                    },
+                    "PublishedBy": {
+                        "type": "array",
+                        "items": { "type": "string" },
+                        "minItems": 1
+                    },
+                    "PublishedIn": {
+                        "type": "array",
+                        "items": { "type": "string" },
+                        "minItems": 1
+                    },
+                    "UsedAs": {
+                        "type": "array",
+                        "items": { "type": "string" },
+                        "minItems": 1
+                    },
+                    "UsedFor": {
+                        "type": "array",
+                        "items": { "type": "string" },
+                        "minItems": 1
+                    },
+                    "UsedIn": {
+                        "type": "array",
+                        "items": { "type": "string" },
+                        "minItems": 1
+                    },
+                    "UsedTo": {
+                        "type": "array",
+                        "items": { "type": "string" },
+                        "minItems": 1
+                    },
+                    "WonBy": {
+                        "type": "array",
+                        "items": { "type": "string" },
+                        "minItems": 1
+                    },
+                    "WrittenBy": {
+                        "type": "array",
+                        "items": { "type": "string" },
+                        "minItems": 1
+                    },
+                    "WrittenIn": {
+                        "type": "array",
+                        "items": { "type": "string" },
+                        "minItems": 1
+                    }
+                },
+                "required": [
+                    "About",
+                    "Affects",
+                    "AssociatedWith",
+                    "BelongsTo",
+                    "BuiltBy",
+                    "BuiltIn",
+                    "CausedBy",
+                    "ComposedBy",
+                    "ConsistsOf",
+                    "CreatedAround",
+                    "CreatedBy",
+                    "CreatedFor",
+                    "CreatedIn",
+                    "CreatedTo",
+                    "DevelopedBy",
+                    "DevelopedIn",
+                    "DirectedBy",
+                    "DiscoveredAt",
+                    "DiscoveredBy",
+                    "DiscoveredIn",
+                    "FoundedBy",
+                    "FoundedIn",
+                    "HasA",
+                    "HasFeatureOf",
+                    "HeldIn",
+                    "HeldOn",
+                    "Influenced",
+                    "InfluencedBy",
+                    "InventedBy",
+                    "InventedIn",
+                    "IsA",
+                    "KnownAs",
+                    "KnownFor",
+                    "LocatedIn",
+                    "ManufacturedBy",
+                    "MemberOf",
+                    "NamedAfter",
+                    "OccurredAround",
+                    "OccurredAt",
+                    "OccurredBetween",
+                    "OccurredDuring",
+                    "OccurredIn",
+                    "OccurredOn",
+                    "OriginatedIn",
+                    "PartOf",
+                    "PerformedBy",
+                    "ProducedBy",
+                    "PublishedAs",
+                    "PublishedBy",
+                    "PublishedIn",
+                    "UsedAs",
+                    "UsedFor",
+                    "UsedIn",
+                    "UsedTo",
+                    "WonBy",
+                    "WrittenBy",
+                    "WrittenIn"
+                ]
+            },
+            "japanese": {
+                  "type": "object",
+                  "properties": {
+                      "About": {
+                          "type": "array",
+                          "items": { "type": "string" },
+                          "minItems": 1
+                      },
+                      "Affects": {
+                          "type": "array",
+                          "items": { "type": "string" },
+                          "minItems": 1
+                      },
+                      "AssociatedWith": {
+                          "type": "array",
+                          "items": { "type": "string" },
+                          "minItems": 1
+                      },
+                      "BelongsTo": {
+                          "type": "array",
+                          "items": { "type": "string" },
+                          "minItems": 1
+                      },
+                      "BuiltBy": {
+                          "type": "array",
+                          "items": { "type": "string" },
+                          "minItems": 1
+                      },
+                      "BuiltIn": {
+                          "type": "array",
+                          "items": { "type": "string" },
+                          "minItems": 1
+                      },
+                      "CausedBy": {
+                          "type": "array",
+                          "items": { "type": "string" },
+                          "minItems": 1
+                      },
+                      "ComposedBy": {
+                          "type": "array",
+                          "items": { "type": "string" },
+                          "minItems": 1
+                      },
+                      "ConsistsOf": {
+                          "type": "array",
+                          "items": { "type": "string" },
+                          "minItems": 1
+                      },
+                      "CreatedAround": {
+                          "type": "array",
+                          "items": { "type": "string" },
+                          "minItems": 1
+                      },
+                      "CreatedBy": {
+                          "type": "array",
+                          "items": { "type": "string" },
+                          "minItems": 1
+                      },
+                      "CreatedFor": {
+                          "type": "array",
+                          "items": { "type": "string" },
+                          "minItems": 1
+                      },
+                      "CreatedIn": {
+                          "type": "array",
+                          "items": { "type": "string" },
+                          "minItems": 1
+                      },
+                      "CreatedTo": {
+                          "type": "array",
+                          "items": { "type": "string" },
+                          "minItems": 1
+                      },
+                      "DevelopedBy": {
+                          "type": "array",
+                          "items": { "type": "string" },
+                          "minItems": 1
+                      },
+                      "DevelopedIn": {
+                          "type": "array",
+                          "items": { "type": "string" },
+                          "minItems": 1
+                      },
+                      "DirectedBy": {
+                          "type": "array",
+                          "items": { "type": "string" },
+                          "minItems": 1
+                      },
+                      "DiscoveredAt": {
+                          "type": "array",
+                          "items": { "type": "string" },
+                          "minItems": 1
+                      },
+                      "DiscoveredBy": {
+                          "type": "array",
+                          "items": { "type": "string" },
+                          "minItems": 1
+                      },
+                      "DiscoveredIn": {
+                          "type": "array",
+                          "items": { "type": "string" },
+                          "minItems": 1
+                      },
+                      "FoundedBy": {
+                          "type": "array",
+                          "items": { "type": "string" },
+                          "minItems": 1
+                      },
+                      "FoundedIn": {
+                          "type": "array",
+                          "items": { "type": "string" },
+                          "minItems": 1
+                      },
+                      "HasA": {
+                          "type": "array",
+                          "items": { "type": "string" },
+                          "minItems": 1
+                      },
+                      "HasFeatureOf": {
+                          "type": "array",
+                          "items": { "type": "string" },
+                          "minItems": 1
+                      },
+                      "HeldIn": {
+                          "type": "array",
+                          "items": { "type": "string" },
+                          "minItems": 1
+                      },
+                      "HeldOn": {
+                          "type": "array",
+                          "items": { "type": "string" },
+                          "minItems": 1
+                      },
+                      "Influenced": {
+                          "type": "array",
+                          "items": { "type": "string" },
+                          "minItems": 1
+                      },
+                      "InfluencedBy": {
+                          "type": "array",
+                          "items": { "type": "string" },
+                          "minItems": 1
+                      },
+                      "InventedBy": {
+                          "type": "array",
+                          "items": { "type": "string" },
+                          "minItems": 1
+                      },
+                      "InventedIn": {
+                          "type": "array",
+                          "items": { "type": "string" },
+                          "minItems": 1
+                      },
+                      "IsA": {
+                          "type": "array",
+                          "items": { "type": "string" },
+                          "minItems": 1
+                      },
+                      "KnownAs": {
+                          "type": "array",
+                          "items": { "type": "string" },
+                          "minItems": 1
+                      },
+                      "KnownFor": {
+                          "type": "array",
+                          "items": { "type": "string" },
+                          "minItems": 1
+                      },
+                      "LocatedIn": {
+                          "type": "array",
+                          "items": { "type": "string" },
+                          "minItems": 1
+                      },
+                      "ManufacturedBy": {
+                          "type": "array",
+                          "items": { "type": "string" },
+                          "minItems": 1
+                      },
+                      "MemberOf": {
+                          "type": "array",
+                          "items": { "type": "string" },
+                          "minItems": 1
+                      },
+                      "NamedAfter": {
+                          "type": "array",
+                          "items": { "type": "string" },
+                          "minItems": 1
+                      },
+                      "OccurredAround": {
+                          "type": "array",
+                          "items": { "type": "string" },
+                          "minItems": 1
+                      },
+                      "OccurredAt": {
+                          "type": "array",
+                          "items": { "type": "string" },
+                          "minItems": 1
+                      },
+                      "OccurredBetween": {
+                          "type": "array",
+                          "items": { "type": "string" },
+                          "minItems": 1
+                      },
+                      "OccurredDuring": {
+                          "type": "array",
+                          "items": { "type": "string" },
+                          "minItems": 1
+                      },
+                      "OccurredIn": {
+                          "type": "array",
+                          "items": { "type": "string" },
+                          "minItems": 1
+                      },
+                      "OccurredOn": {
+                          "type": "array",
+                          "items": { "type": "string" },
+                          "minItems": 1
+                      },
+                      "OriginatedIn": {
+                          "type": "array",
+                          "items": { "type": "string" },
+                          "minItems": 1
+                      },
+                      "PartOf": {
+                          "type": "array",
+                          "items": { "type": "string" },
+                          "minItems": 1
+                      },
+                      "PerformedBy": {
+                          "type": "array",
+                          "items": { "type": "string" },
+                          "minItems": 1
+                      },
+                      "ProducedBy": {
+                          "type": "array",
+                          "items": { "type": "string" },
+                          "minItems": 1
+                      },
+                      "PublishedAs": {
+                          "type": "array",
+                          "items": { "type": "string" },
+                          "minItems": 1
+                      },
+                      "PublishedBy": {
+                          "type": "array",
+                          "items": { "type": "string" },
+                          "minItems": 1
+                      },
+                      "PublishedIn": {
+                          "type": "array",
+                          "items": { "type": "string" },
+                          "minItems": 1
+                      },
+                      "UsedAs": {
+                          "type": "array",
+                          "items": { "type": "string" },
+                          "minItems": 1
+                      },
+                      "UsedFor": {
+                          "type": "array",
+                          "items": { "type": "string" },
+                          "minItems": 1
+                      },
+                      "UsedIn": {
+                          "type": "array",
+                          "items": { "type": "string" },
+                          "minItems": 1
+                      },
+                      "UsedTo": {
+                          "type": "array",
+                          "items": { "type": "string" },
+                          "minItems": 1
+                      },
+                      "WonBy": {
+                          "type": "array",
+                          "items": { "type": "string" },
+                          "minItems": 1
+                      },
+                      "WrittenBy": {
+                          "type": "array",
+                          "items": { "type": "string" },
+                          "minItems": 1
+                      },
+                      "WrittenIn": {
+                          "type": "array",
+                          "items": { "type": "string" },
+                          "minItems": 1
+                    }
+                },
+                "required": [
+                    "About",
+                    "Affects",
+                    "AssociatedWith",
+                    "BelongsTo",
+                    "BuiltBy",
+                    "BuiltIn",
+                    "CausedBy",
+                    "ComposedBy",
+                    "ConsistsOf",
+                    "CreatedAround",
+                    "CreatedBy",
+                    "CreatedFor",
+                    "CreatedIn",
+                    "CreatedTo",
+                    "DevelopedBy",
+                    "DevelopedIn",
+                    "DirectedBy",
+                    "DiscoveredAt",
+                    "DiscoveredBy",
+                    "DiscoveredIn",
+                    "FoundedBy",
+                    "FoundedIn",
+                    "HasA",
+                    "HasFeatureOf",
+                    "HeldIn",
+                    "HeldOn",
+                    "Influenced",
+                    "InfluencedBy",
+                    "InventedBy",
+                    "InventedIn",
+                    "IsA",
+                    "KnownAs",
+                    "KnownFor",
+                    "LocatedIn",
+                    "ManufacturedBy",
+                    "MemberOf",
+                    "NamedAfter",
+                    "OccurredAround",
+                    "OccurredAt",
+                    "OccurredBetween",
+                    "OccurredDuring",
+                    "OccurredIn",
+                    "OccurredOn",
+                    "OriginatedIn",
+                    "PartOf",
+                    "PerformedBy",
+                    "ProducedBy",
+                    "PublishedAs",
+                    "PublishedBy",
+                    "PublishedIn",
+                    "UsedAs",
+                    "UsedFor",
+                    "UsedIn",
+                    "UsedTo",
+                    "WonBy",
+                    "WrittenBy",
+                    "WrittenIn"
+                ]
+            }
+        },
+        "required": [
+            "english",
+            "japanese"
+        ]
+    }
+}

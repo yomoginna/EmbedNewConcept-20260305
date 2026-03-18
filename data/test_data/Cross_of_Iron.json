@@ -1,0 +1,498 @@
+[
+    {
+        "test_id": 0,
+        "relation": "About",
+        "correct_feat": "a war film directed by Sam Peckinpah",
+        "options": "1. a war film directed by Sam Peckinpah\n2. the representation of the Nativity and its importance in cycles of the Life of the Virgin and Life of Christ\n3. Mary seated in a landscape with the Christ child",
+        "correct_num": 1,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is about [MASK].\n\nOptions:\n1. a war film directed by Sam Peckinpah\n2. the representation of the Nativity and its importance in cycles of the Life of the Virgin and Life of Christ\n3. Mary seated in a landscape with the Christ child"
+    },
+    {
+        "test_id": 1,
+        "relation": "About",
+        "correct_feat": "the class conflict between a newly arrived, aristocratic Prussian officer and a cynical, battle-hardened infantry NCO",
+        "options": "1. the final meal that Jesus shared with his apostles in Jerusalem before his crucifixion\n2. the class conflict between a newly arrived, aristocratic Prussian officer and a cynical, battle-hardened infantry NCO\n3. a particular type of icon of the Theotokos (Virgin Mary)",
+        "correct_num": 2,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is about [MASK].\n\nOptions:\n1. the final meal that Jesus shared with his apostles in Jerusalem before his crucifixion\n2. the class conflict between a newly arrived, aristocratic Prussian officer and a cynical, battle-hardened infantry NCO\n3. a particular type of icon of the Theotokos (Virgin Mary)"
+    },
+    {
+        "test_id": 2,
+        "relation": "About",
+        "correct_feat": "the Eastern Front in World War II during the Soviets' Caucasus operations against the German Kuban bridgehead on the Taman Peninsula in late 1943",
+        "options": "1. the Mandylion\n2. a simulated journey at sea\n3. the Eastern Front in World War II during the Soviets' Caucasus operations against the German Kuban bridgehead on the Taman Peninsula in late 1943",
+        "correct_num": 3,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is about [MASK].\n\nOptions:\n1. the Mandylion\n2. a simulated journey at sea\n3. the Eastern Front in World War II during the Soviets' Caucasus operations against the German Kuban bridgehead on the Taman Peninsula in late 1943"
+    },
+    {
+        "test_id": 3,
+        "relation": "AssociatedWith",
+        "correct_feat": "the Wehrmacht",
+        "options": "1. the Wehrmacht\n2. the Virgin of the Passion in Eastern Orthodoxy\n3. the Chicano Movement of the 1970s",
+        "correct_num": 1,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is associated with [MASK].\n\nOptions:\n1. the Wehrmacht\n2. the Virgin of the Passion in Eastern Orthodoxy\n3. the Chicano Movement of the 1970s"
+    },
+    {
+        "test_id": 4,
+        "relation": "AssociatedWith",
+        "correct_feat": "the Eastern Front of World War II",
+        "options": "1. Bonne of Artois\n2. the Eastern Front of World War II\n3. a Persian Gulf flood",
+        "correct_num": 2,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is associated with [MASK].\n\nOptions:\n1. Bonne of Artois\n2. the Eastern Front of World War II\n3. a Persian Gulf flood"
+    },
+    {
+        "test_id": 5,
+        "relation": "AssociatedWith",
+        "correct_feat": "the Soviets' Caucasus operations",
+        "options": "1. Byzantine art styles\n2. the reign of Humayun\n3. the Soviets' Caucasus operations",
+        "correct_num": 3,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is associated with [MASK].\n\nOptions:\n1. Byzantine art styles\n2. the reign of Humayun\n3. the Soviets' Caucasus operations"
+    },
+    {
+        "test_id": 6,
+        "relation": "AssociatedWith",
+        "correct_feat": "the German Kuban bridgehead",
+        "options": "1. the German Kuban bridgehead\n2. service structures\n3. earlier Mesopotamian flood myths",
+        "correct_num": 1,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is associated with [MASK].\n\nOptions:\n1. the German Kuban bridgehead\n2. service structures\n3. earlier Mesopotamian flood myths"
+    },
+    {
+        "test_id": 7,
+        "relation": "AssociatedWith",
+        "correct_feat": "the Taman Peninsula",
+        "options": "1. the Tower of Babel\n2. the Taman Peninsula\n3. the Eastern Church",
+        "correct_num": 2,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is associated with [MASK].\n\nOptions:\n1. the Tower of Babel\n2. the Taman Peninsula\n3. the Eastern Church"
+    },
+    {
+        "test_id": 8,
+        "relation": "AssociatedWith",
+        "correct_feat": "the Battle of the Caucasus",
+        "options": "1. the reunion of Heaven and Earth\n2. Jesus bridging the gap between Heaven and Earth\n3. the Battle of the Caucasus",
+        "correct_num": 3,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is associated with [MASK].\n\nOptions:\n1. the reunion of Heaven and Earth\n2. Jesus bridging the gap between Heaven and Earth\n3. the Battle of the Caucasus"
+    },
+    {
+        "test_id": 9,
+        "relation": "AssociatedWith",
+        "correct_feat": "the Kuban pocket",
+        "options": "1. the Kuban pocket\n2. religious traditions from Judaism, Christianity, Islam, Gnosticism, Mandaeism, and the Baháʼí Faith\n3. the novena to Our Mother of Perpetual Help",
+        "correct_num": 1,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is associated with [MASK].\n\nOptions:\n1. the Kuban pocket\n2. religious traditions from Judaism, Christianity, Islam, Gnosticism, Mandaeism, and the Baháʼí Faith\n3. the novena to Our Mother of Perpetual Help"
+    },
+    {
+        "test_id": 10,
+        "relation": "AssociatedWith",
+        "correct_feat": "the Yugoslav People's Army",
+        "options": "1. the city of Kazan\n2. the Yugoslav People's Army\n3. drilling towers",
+        "correct_num": 2,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is associated with [MASK].\n\nOptions:\n1. the city of Kazan\n2. the Yugoslav People's Army\n3. drilling towers"
+    },
+    {
+        "test_id": 11,
+        "relation": "AssociatedWith",
+        "correct_feat": "EMI Films",
+        "options": "1. the LGBTQ+ Capital of the UK\n2. the continually changing affairs of humankind\n3. EMI Films",
+        "correct_num": 3,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is associated with [MASK].\n\nOptions:\n1. the LGBTQ+ Capital of the UK\n2. the continually changing affairs of humankind\n3. EMI Films"
+    },
+    {
+        "test_id": 12,
+        "relation": "AssociatedWith",
+        "correct_feat": "ITC Entertainment",
+        "options": "1. ITC Entertainment\n2. cooling towers\n3. the Epiphany season",
+        "correct_num": 1,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is associated with [MASK].\n\nOptions:\n1. ITC Entertainment\n2. cooling towers\n3. the Epiphany season"
+    },
+    {
+        "test_id": 13,
+        "relation": "CreatedIn",
+        "correct_feat": "1977",
+        "options": "1. Kansas\n2. 1977\n3. Brighton, England",
+        "correct_num": 2,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> was created in [MASK].\n\nOptions:\n1. Kansas\n2. 1977\n3. Brighton, England"
+    },
+    {
+        "test_id": 14,
+        "relation": "DevelopedBy",
+        "correct_feat": "Sam Peckinpah",
+        "options": "1. artists to display their rendering of varied textures\n2. inventors\n3. Sam Peckinpah",
+        "correct_num": 3,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> was developed by [MASK].\n\nOptions:\n1. artists to display their rendering of varied textures\n2. inventors\n3. Sam Peckinpah"
+    },
+    {
+        "test_id": 15,
+        "relation": "HasA",
+        "correct_feat": "James Coburn",
+        "options": "1. James Coburn\n2. tuned mass dampers\n3. Persian inscriptions identifying each figure",
+        "correct_num": 1,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> has [MASK].\n\nOptions:\n1. James Coburn\n2. tuned mass dampers\n3. Persian inscriptions identifying each figure"
+    },
+    {
+        "test_id": 16,
+        "relation": "HasA",
+        "correct_feat": "Maximilian Schell",
+        "options": "1. ten robust steel-framed panels bolted together\n2. Maximilian Schell\n3. Americana imagery",
+        "correct_num": 2,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> has [MASK].\n\nOptions:\n1. ten robust steel-framed panels bolted together\n2. Maximilian Schell\n3. Americana imagery"
+    },
+    {
+        "test_id": 17,
+        "relation": "HasA",
+        "correct_feat": "James Mason",
+        "options": "1. a crowing rooster perched atop the east window frame\n2. a storm\n3. James Mason",
+        "correct_num": 3,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> has [MASK].\n\nOptions:\n1. a crowing rooster perched atop the east window frame\n2. a storm\n3. James Mason"
+    },
+    {
+        "test_id": 18,
+        "relation": "HasA",
+        "correct_feat": "David Warner",
+        "options": "1. David Warner\n2. a Byzantine Eleusa type\n3. ten robust steel-framed panels bolted together",
+        "correct_num": 1,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> has [MASK].\n\nOptions:\n1. David Warner\n2. a Byzantine Eleusa type\n3. ten robust steel-framed panels bolted together"
+    },
+    {
+        "test_id": 19,
+        "relation": "HasA",
+        "correct_feat": "Corporal Rolf Steiner",
+        "options": "1. a door that led into the main cottage\n2. Corporal Rolf Steiner\n3. handprint shapes",
+        "correct_num": 2,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> has [MASK].\n\nOptions:\n1. a door that led into the main cottage\n2. Corporal Rolf Steiner\n3. handprint shapes"
+    },
+    {
+        "test_id": 20,
+        "relation": "HasA",
+        "correct_feat": "Captain Stransky",
+        "options": "1. elaborate examples of zoomorphic style glyphs\n2. corn growing around the Kiva\n3. Captain Stransky",
+        "correct_num": 3,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> has [MASK].\n\nOptions:\n1. elaborate examples of zoomorphic style glyphs\n2. corn growing around the Kiva\n3. Captain Stransky"
+    },
+    {
+        "test_id": 21,
+        "relation": "HasA",
+        "correct_feat": "Colonel Brandt",
+        "options": "1. Colonel Brandt\n2. hands folded in prayer\n3. steel tracks",
+        "correct_num": 1,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> has [MASK].\n\nOptions:\n1. Colonel Brandt\n2. hands folded in prayer\n3. steel tracks"
+    },
+    {
+        "test_id": 22,
+        "relation": "HasA",
+        "correct_feat": "Captain Kiesel",
+        "options": "1. images inspired by the native history of the land\n2. Captain Kiesel\n3. a central image of a rising phoenix",
+        "correct_num": 2,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> has [MASK].\n\nOptions:\n1. images inspired by the native history of the land\n2. Captain Kiesel\n3. a central image of a rising phoenix"
+    },
+    {
+        "test_id": 23,
+        "relation": "HasA",
+        "correct_feat": "Lieutenant Triebig",
+        "options": "1. dry reeds\n2. an akathist composed in Russian and English\n3. Lieutenant Triebig",
+        "correct_num": 3,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> has [MASK].\n\nOptions:\n1. dry reeds\n2. an akathist composed in Russian and English\n3. Lieutenant Triebig"
+    },
+    {
+        "test_id": 24,
+        "relation": "HasA",
+        "correct_feat": "Lieutenant Meyer",
+        "options": "1. Lieutenant Meyer\n2. a cape that floats creating a weightless setting\n3. predictions about the impending betrayal of Jesus",
+        "correct_num": 1,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> has [MASK].\n\nOptions:\n1. Lieutenant Meyer\n2. a cape that floats creating a weightless setting\n3. predictions about the impending betrayal of Jesus"
+    },
+    {
+        "test_id": 25,
+        "relation": "HasFeatureOf",
+        "correct_feat": "historically accurate weaponry and equipment",
+        "options": "1. Klimt's characteristic use of gold leaf\n2. historically accurate weaponry and equipment\n3. a white phoenix with its wings unfolded",
+        "correct_num": 2,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is characterized by [MASK].\n\nOptions:\n1. Klimt's characteristic use of gold leaf\n2. historically accurate weaponry and equipment\n3. a white phoenix with its wings unfolded"
+    },
+    {
+        "test_id": 26,
+        "relation": "HasFeatureOf",
+        "correct_feat": "the slow motion during violent scenes",
+        "options": "1. its stiffness\n2. Joseph usually being a bearded older man, often richly dressed\n3. the slow motion during violent scenes",
+        "correct_num": 3,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is characterized by [MASK].\n\nOptions:\n1. its stiffness\n2. Joseph usually being a bearded older man, often richly dressed\n3. the slow motion during violent scenes"
+    },
+    {
+        "test_id": 27,
+        "relation": "HasFeatureOf",
+        "correct_feat": "its visual style",
+        "options": "1. its visual style\n2. its unique vehicle design for the London market\n3. the depiction of the Kiva, a Native American ceremonial structure",
+        "correct_num": 1,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is characterized by [MASK].\n\nOptions:\n1. its visual style\n2. its unique vehicle design for the London market\n3. the depiction of the Kiva, a Native American ceremonial structure"
+    },
+    {
+        "test_id": 28,
+        "relation": "HasFeatureOf",
+        "correct_feat": "its bleak, anti-war tone",
+        "options": "1. its height\n2. its bleak, anti-war tone\n3. its theme of multicultural artistic expression forming into a unified cultural entity",
+        "correct_num": 2,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is characterized by [MASK].\n\nOptions:\n1. its height\n2. its bleak, anti-war tone\n3. its theme of multicultural artistic expression forming into a unified cultural entity"
+    },
+    {
+        "test_id": 29,
+        "relation": "HasFeatureOf",
+        "correct_feat": "graphic mayhem",
+        "options": "1. visible ribs\n2. its systems\n3. graphic mayhem",
+        "correct_num": 3,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is characterized by [MASK].\n\nOptions:\n1. visible ribs\n2. its systems\n3. graphic mayhem"
+    },
+    {
+        "test_id": 30,
+        "relation": "HasFeatureOf",
+        "correct_feat": "violence",
+        "options": "1. violence\n2. its support\n3. its controversial nature",
+        "correct_num": 1,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is characterized by [MASK].\n\nOptions:\n1. violence\n2. its support\n3. its controversial nature"
+    },
+    {
+        "test_id": 31,
+        "relation": "HasFeatureOf",
+        "correct_feat": "carnage",
+        "options": "1. the fratricidal fury that first flamed on the plains of Kansas\n2. carnage\n3. the Impressionist aesthetic",
+        "correct_num": 2,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is characterized by [MASK].\n\nOptions:\n1. the fratricidal fury that first flamed on the plains of Kansas\n2. carnage\n3. the Impressionist aesthetic"
+    },
+    {
+        "test_id": 32,
+        "relation": "HasFeatureOf",
+        "correct_feat": "its international co-production",
+        "options": "1. its substances\n2. the facts being known at the time to artist and patron\n3. its international co-production",
+        "correct_num": 3,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is characterized by [MASK].\n\nOptions:\n1. its substances\n2. the facts being known at the time to artist and patron\n3. its international co-production"
+    },
+    {
+        "test_id": 33,
+        "relation": "Influenced",
+        "correct_feat": "Inglourious Basterds",
+        "options": "1. Inglourious Basterds\n2. a wide number of paintings from the following century\n3. Origen's explanation of two ladders in the life of a Christian",
+        "correct_num": 1,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> influenced [MASK].\n\nOptions:\n1. Inglourious Basterds\n2. a wide number of paintings from the following century\n3. Origen's explanation of two ladders in the life of a Christian"
+    },
+    {
+        "test_id": 34,
+        "relation": "InfluencedBy",
+        "correct_feat": "The Wild Bunch",
+        "options": "1. the Book of Genesis\n2. The Wild Bunch\n3. the coming of the railroad",
+        "correct_num": 2,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> was influenced by [MASK].\n\nOptions:\n1. the Book of Genesis\n2. The Wild Bunch\n3. the coming of the railroad"
+    },
+    {
+        "test_id": 35,
+        "relation": "InfluencedBy",
+        "correct_feat": "All Quiet on the Western Front",
+        "options": "1. the Gospel of Luke\n2. Jesus' teaching of the narrow gate\n3. All Quiet on the Western Front",
+        "correct_num": 3,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> was influenced by [MASK].\n\nOptions:\n1. the Gospel of Luke\n2. Jesus' teaching of the narrow gate\n3. All Quiet on the Western Front"
+    },
+    {
+        "test_id": 36,
+        "relation": "IsA",
+        "correct_feat": "a 1977 war film",
+        "options": "1. a 1977 war film\n2. a powerful demonic entity\n3. a celebration of Latino and Chicano culture and influence",
+        "correct_num": 1,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is [MASK].\n\nOptions:\n1. a 1977 war film\n2. a powerful demonic entity\n3. a celebration of Latino and Chicano culture and influence"
+    },
+    {
+        "test_id": 37,
+        "relation": "IsA",
+        "correct_feat": "an international co-production between British and West German financiers",
+        "options": "1. a holy tile\n2. an international co-production between British and West German financiers\n3. a cartoon",
+        "correct_num": 2,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is [MASK].\n\nOptions:\n1. a holy tile\n2. an international co-production between British and West German financiers\n3. a cartoon"
+    },
+    {
+        "test_id": 38,
+        "relation": "IsA",
+        "correct_feat": "a joint Anglo-German production",
+        "options": "1. a work of moral education\n2. a painting\n3. a joint Anglo-German production",
+        "correct_num": 3,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is [MASK].\n\nOptions:\n1. a work of moral education\n2. a painting\n3. a joint Anglo-German production"
+    },
+    {
+        "test_id": 39,
+        "relation": "IsA",
+        "correct_feat": "a fictional work loosely based on the true story of Johann Schwerdfeger",
+        "options": "1. a fictional work loosely based on the true story of Johann Schwerdfeger\n2. an integrated element of the Great Wall of China\n3. a funeral procession",
+        "correct_num": 1,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is [MASK].\n\nOptions:\n1. a fictional work loosely based on the true story of Johann Schwerdfeger\n2. an integrated element of the Great Wall of China\n3. a funeral procession"
+    },
+    {
+        "test_id": 40,
+        "relation": "IsA",
+        "correct_feat": "a war movie",
+        "options": "1. a patron icon\n2. a war movie\n3. a Catholic title of the Blessed Virgin Mary",
+        "correct_num": 2,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is [MASK].\n\nOptions:\n1. a patron icon\n2. a war movie\n3. a Catholic title of the Blessed Virgin Mary"
+    },
+    {
+        "test_id": 41,
+        "relation": "IsA",
+        "correct_feat": "a bloodbath picture",
+        "options": "1. the only extant surviving piece by Zhao Gan\n2. one of the most venerated icons in the Upper Volga region\n3. a bloodbath picture",
+        "correct_num": 3,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is [MASK].\n\nOptions:\n1. the only extant surviving piece by Zhao Gan\n2. one of the most venerated icons in the Upper Volga region\n3. a bloodbath picture"
+    },
+    {
+        "test_id": 42,
+        "relation": "IsA",
+        "correct_feat": "an action film",
+        "options": "1. an action film\n2. a talking point\n3. a copy painted in the \"academic\" style",
+        "correct_num": 1,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is [MASK].\n\nOptions:\n1. an action film\n2. a talking point\n3. a copy painted in the \"academic\" style"
+    },
+    {
+        "test_id": 43,
+        "relation": "IsA",
+        "correct_feat": "known as Steiner – Das Eiserne Kreuz",
+        "options": "1. a statue\n2. known as Steiner – Das Eiserne Kreuz\n3. a particular judgment in Catholicism and Eastern Orthodoxy",
+        "correct_num": 2,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is [MASK].\n\nOptions:\n1. a statue\n2. known as Steiner – Das Eiserne Kreuz\n3. a particular judgment in Catholicism and Eastern Orthodoxy"
+    },
+    {
+        "test_id": 44,
+        "relation": "IsA",
+        "correct_feat": "known for its portrayal of the Eastern Front in World War II",
+        "options": "1. a depiction of Saint Onuphrius\n2. an interpretation of the original in a contemporary Netherlandish style\n3. known for its portrayal of the Eastern Front in World War II",
+        "correct_num": 3,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is [MASK].\n\nOptions:\n1. a depiction of Saint Onuphrius\n2. an interpretation of the original in a contemporary Netherlandish style\n3. known for its portrayal of the Eastern Front in World War II"
+    },
+    {
+        "test_id": 45,
+        "relation": "IsA",
+        "correct_feat": "known for its depiction of class conflict",
+        "options": "1. known for its depiction of class conflict\n2. a Blessed Virgin depiction\n3. an image of the Child Jesus",
+        "correct_num": 1,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is [MASK].\n\nOptions:\n1. known for its depiction of class conflict\n2. a Blessed Virgin depiction\n3. an image of the Child Jesus"
+    },
+    {
+        "test_id": 46,
+        "relation": "IsA",
+        "correct_feat": "known for its historically accurate weaponry and equipment",
+        "options": "1. a funeral procession\n2. known for its historically accurate weaponry and equipment\n3. an Eastern Orthodox icon of the Virgin of the Passion called Amolyntos",
+        "correct_num": 2,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is [MASK].\n\nOptions:\n1. a funeral procession\n2. known for its historically accurate weaponry and equipment\n3. an Eastern Orthodox icon of the Virgin of the Passion called Amolyntos"
+    },
+    {
+        "test_id": 47,
+        "relation": "IsA",
+        "correct_feat": "known for its anti-war tone",
+        "options": "1. a pilgrim feast\n2. a painted icon\n3. known for its anti-war tone",
+        "correct_num": 3,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is [MASK].\n\nOptions:\n1. a pilgrim feast\n2. a painted icon\n3. known for its anti-war tone"
+    },
+    {
+        "test_id": 48,
+        "relation": "IsA",
+        "correct_feat": "known for its graphic violence",
+        "options": "1. known for its graphic violence\n2. an outdoor art\n3. a Catholic title of the Blessed Virgin Mary",
+        "correct_num": 1,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is [MASK].\n\nOptions:\n1. known for its graphic violence\n2. an outdoor art\n3. a Catholic title of the Blessed Virgin Mary"
+    },
+    {
+        "test_id": 49,
+        "relation": "OccurredDuring",
+        "correct_feat": "World War II",
+        "options": "1. World War I\n2. World War II\n3. the summer of 1608",
+        "correct_num": 2,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> occurred during [MASK].\n\nOptions:\n1. World War I\n2. World War II\n3. the summer of 1608"
+    },
+    {
+        "test_id": 50,
+        "relation": "OccurredIn",
+        "correct_feat": "Yugoslavia",
+        "options": "1. 1986\n2. the Roman Empire\n3. Yugoslavia",
+        "correct_num": 3,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> occurred in [MASK].\n\nOptions:\n1. 1986\n2. the Roman Empire\n3. Yugoslavia"
+    },
+    {
+        "test_id": 51,
+        "relation": "OccurredIn",
+        "correct_feat": "occupied France",
+        "options": "1. occupied France\n2. Šiluva\n3. Gorodets",
+        "correct_num": 1,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> occurred in [MASK].\n\nOptions:\n1. occupied France\n2. Šiluva\n3. Gorodets"
+    },
+    {
+        "test_id": 52,
+        "relation": "OccurredIn",
+        "correct_feat": "Trieste in Italy",
+        "options": "1. the Middle Ages\n2. Trieste in Italy\n3. Valley Glen",
+        "correct_num": 2,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> occurred in [MASK].\n\nOptions:\n1. the Middle Ages\n2. Trieste in Italy\n3. Valley Glen"
+    },
+    {
+        "test_id": 53,
+        "relation": "OccurredIn",
+        "correct_feat": "Zagreb and Savudrija in Croatia",
+        "options": "1. Christianity\n2. the San Rafael Mountains\n3. Zagreb and Savudrija in Croatia",
+        "correct_num": 3,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> occurred in [MASK].\n\nOptions:\n1. Christianity\n2. the San Rafael Mountains\n3. Zagreb and Savudrija in Croatia"
+    },
+    {
+        "test_id": 54,
+        "relation": "OccurredOn",
+        "correct_feat": "the Eastern Front",
+        "options": "1. the Eastern Front\n2. 1834\n3. 16 October 2016",
+        "correct_num": 1,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> occurred on [MASK].\n\nOptions:\n1. the Eastern Front\n2. 1834\n3. 16 October 2016"
+    },
+    {
+        "test_id": 55,
+        "relation": "OccurredAround",
+        "correct_feat": "Obrov in Slovenia",
+        "options": "1. 1533\n2. Obrov in Slovenia\n3. the early 19th century",
+        "correct_num": 2,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> occurred around [MASK].\n\nOptions:\n1. 1533\n2. Obrov in Slovenia\n3. the early 19th century"
+    },
+    {
+        "test_id": 56,
+        "relation": "OccurredAt",
+        "correct_feat": "Pinewood Studios in England",
+        "options": "1. Tibet\n2. the RCA Building\n3. Pinewood Studios in England",
+        "correct_num": 3,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> occurred at [MASK].\n\nOptions:\n1. Tibet\n2. the RCA Building\n3. Pinewood Studios in England"
+    },
+    {
+        "test_id": 57,
+        "relation": "ProducedBy",
+        "correct_feat": "Wolf C. Hartwig",
+        "options": "1. Wolf C. Hartwig\n2. Filippo Lippi\n3. the Social and Public Art Resource Center (SPARC)",
+        "correct_num": 1,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> was produced by [MASK].\n\nOptions:\n1. Wolf C. Hartwig\n2. Filippo Lippi\n3. the Social and Public Art Resource Center (SPARC)"
+    },
+    {
+        "test_id": 58,
+        "relation": "ProducedBy",
+        "correct_feat": "Alex Winitsky",
+        "options": "1. photographers\n2. Alex Winitsky\n3. various entities",
+        "correct_num": 2,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> was produced by [MASK].\n\nOptions:\n1. photographers\n2. Alex Winitsky\n3. various entities"
+    },
+    {
+        "test_id": 59,
+        "relation": "WrittenBy",
+        "correct_feat": "Julius Epstein",
+        "options": "1. Flavio Biondo\n2. Leonardo Bruni\n3. Julius Epstein",
+        "correct_num": 3,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> was written by [MASK].\n\nOptions:\n1. Flavio Biondo\n2. Leonardo Bruni\n3. Julius Epstein"
+    },
+    {
+        "test_id": 60,
+        "relation": "WrittenBy",
+        "correct_feat": "James Hamilton",
+        "options": "1. James Hamilton\n2. Saint Luke\n3. Flavio Biondo",
+        "correct_num": 1,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> was written by [MASK].\n\nOptions:\n1. James Hamilton\n2. Saint Luke\n3. Flavio Biondo"
+    },
+    {
+        "test_id": 61,
+        "relation": "WrittenBy",
+        "correct_feat": "Walter Kelley",
+        "options": "1. Procopius\n2. Walter Kelley\n3. Ronsard",
+        "correct_num": 2,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> was written by [MASK].\n\nOptions:\n1. Procopius\n2. Walter Kelley\n3. Ronsard"
+    }
+]

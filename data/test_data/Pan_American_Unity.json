@@ -1,0 +1,674 @@
+[
+    {
+        "test_id": 0,
+        "relation": "About",
+        "correct_feat": "the marriage of the artistic expression of the North and of the South on this continent",
+        "options": "1. the marriage of the artistic expression of the North and of the South on this continent\n2. the return to the South following the Battle of Gettysburg\n3. the meeting of the United States and Soviet Armies near the end of World War II",
+        "correct_num": 1,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is about [MASK].\n\nOptions:\n1. the marriage of the artistic expression of the North and of the South on this continent\n2. the return to the South following the Battle of Gettysburg\n3. the meeting of the United States and Soviet Armies near the end of World War II"
+    },
+    {
+        "test_id": 1,
+        "relation": "AssociatedWith",
+        "correct_feat": "the Art in Action exhibition at Treasure Island's Golden Gate International Exposition",
+        "options": "1. the Caribbean\n2. the Art in Action exhibition at Treasure Island's Golden Gate International Exposition\n3. the Viking Age",
+        "correct_num": 2,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is associated with [MASK].\n\nOptions:\n1. the Caribbean\n2. the Art in Action exhibition at Treasure Island's Golden Gate International Exposition\n3. the Viking Age"
+    },
+    {
+        "test_id": 2,
+        "relation": "AssociatedWith",
+        "correct_feat": "San Francisco Junior College",
+        "options": "1. the Tsardom of Russia\n2. the terms Kaiserreich and Königreich\n3. San Francisco Junior College",
+        "correct_num": 3,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is associated with [MASK].\n\nOptions:\n1. the Tsardom of Russia\n2. the terms Kaiserreich and Königreich\n3. San Francisco Junior College"
+    },
+    {
+        "test_id": 3,
+        "relation": "AssociatedWith",
+        "correct_feat": "the San Francisco Arts Commission",
+        "options": "1. the San Francisco Arts Commission\n2. Valorant\n3. computing applications",
+        "correct_num": 1,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is associated with [MASK].\n\nOptions:\n1. the San Francisco Arts Commission\n2. Valorant\n3. computing applications"
+    },
+    {
+        "test_id": 4,
+        "relation": "AssociatedWith",
+        "correct_feat": "the San Francisco Board of Education",
+        "options": "1. Norway, Sweden, Denmark, Iceland, Britain, Ireland, and Sápmi\n2. the San Francisco Board of Education\n3. the Albertine line of the Wettin dynasty",
+        "correct_num": 2,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is associated with [MASK].\n\nOptions:\n1. Norway, Sweden, Denmark, Iceland, Britain, Ireland, and Sápmi\n2. the San Francisco Board of Education\n3. the Albertine line of the Wettin dynasty"
+    },
+    {
+        "test_id": 5,
+        "relation": "AssociatedWith",
+        "correct_feat": "the de Young Museum",
+        "options": "1. the Spanish Civil War\n2. the Viking Age\n3. the de Young Museum",
+        "correct_num": 3,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is associated with [MASK].\n\nOptions:\n1. the Spanish Civil War\n2. the Viking Age\n3. the de Young Museum"
+    },
+    {
+        "test_id": 6,
+        "relation": "AssociatedWith",
+        "correct_feat": "the Getty Conservation Institute",
+        "options": "1. the Getty Conservation Institute\n2. polyominoes\n3. the Electorate of Saxony",
+        "correct_num": 1,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is associated with [MASK].\n\nOptions:\n1. the Getty Conservation Institute\n2. polyominoes\n3. the Electorate of Saxony"
+    },
+    {
+        "test_id": 7,
+        "relation": "AssociatedWith",
+        "correct_feat": "the San Francisco Museum of Modern Art",
+        "options": "1. the Wehrmacht\n2. the San Francisco Museum of Modern Art\n3. Ludo, Aggravation or Sorry!",
+        "correct_num": 2,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is associated with [MASK].\n\nOptions:\n1. the Wehrmacht\n2. the San Francisco Museum of Modern Art\n3. Ludo, Aggravation or Sorry!"
+    },
+    {
+        "test_id": 8,
+        "relation": "AssociatedWith",
+        "correct_feat": "Diego Rivera's America exhibition",
+        "options": "1. John Agar\n2. teaching arithmetic to African children\n3. Diego Rivera's America exhibition",
+        "correct_num": 3,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is associated with [MASK].\n\nOptions:\n1. John Agar\n2. teaching arithmetic to African children\n3. Diego Rivera's America exhibition"
+    },
+    {
+        "test_id": 9,
+        "relation": "ConsistsOf",
+        "correct_feat": "ten panels arranged in five sections",
+        "options": "1. ten panels arranged in five sections\n2. numbered cards depicting locations, objects, or characters\n3. an elliptical wing",
+        "correct_num": 1,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> consists of [MASK].\n\nOptions:\n1. ten panels arranged in five sections\n2. numbered cards depicting locations, objects, or characters\n3. an elliptical wing"
+    },
+    {
+        "test_id": 10,
+        "relation": "ConsistsOf",
+        "correct_feat": "a larger upper panel and a smaller lower panel in each section",
+        "options": "1. a Rolls-Royce Merlin engine\n2. a larger upper panel and a smaller lower panel in each section\n3. players being given European Currency Units (ECU), Demand cards, and one freight Loco card",
+        "correct_num": 2,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> consists of [MASK].\n\nOptions:\n1. a Rolls-Royce Merlin engine\n2. a larger upper panel and a smaller lower panel in each section\n3. players being given European Currency Units (ECU), Demand cards, and one freight Loco card"
+    },
+    {
+        "test_id": 11,
+        "relation": "CreatedBy",
+        "correct_feat": "Mexican artist and muralist Diego Rivera",
+        "options": "1. Narcís Monturiol\n2. Daphne du Maurier\n3. Mexican artist and muralist Diego Rivera",
+        "correct_num": 3,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> was created by [MASK].\n\nOptions:\n1. Narcís Monturiol\n2. Daphne du Maurier\n3. Mexican artist and muralist Diego Rivera"
+    },
+    {
+        "test_id": 12,
+        "relation": "CreatedFor",
+        "correct_feat": "the Art in Action exhibition at Treasure Island's Golden Gate International Exposition",
+        "options": "1. the Art in Action exhibition at Treasure Island's Golden Gate International Exposition\n2. stealth operations\n3. multiplayer video games",
+        "correct_num": 1,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> was created for [MASK].\n\nOptions:\n1. the Art in Action exhibition at Treasure Island's Golden Gate International Exposition\n2. stealth operations\n3. multiplayer video games"
+    },
+    {
+        "test_id": 13,
+        "relation": "CreatedFor",
+        "correct_feat": "San Francisco Junior College",
+        "options": "1. the National Register of Historic Places\n2. San Francisco Junior College\n3. the Consecration of the National Cemetery",
+        "correct_num": 2,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> was created for [MASK].\n\nOptions:\n1. the National Register of Historic Places\n2. San Francisco Junior College\n3. the Consecration of the National Cemetery"
+    },
+    {
+        "test_id": 14,
+        "relation": "CreatedIn",
+        "correct_feat": "San Francisco, California",
+        "options": "1. Ireland\n2. France\n3. San Francisco, California",
+        "correct_num": 3,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> was created in [MASK].\n\nOptions:\n1. Ireland\n2. France\n3. San Francisco, California"
+    },
+    {
+        "test_id": 15,
+        "relation": "HasA",
+        "correct_feat": "a formal title of Unión de la Expresión Artistica del Norte y Sur de este Continente",
+        "options": "1. a formal title of Unión de la Expresión Artistica del Norte y Sur de este Continente\n2. an undercarriage position indicator\n3. a \"fin\" in European usage",
+        "correct_num": 1,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> has [MASK].\n\nOptions:\n1. a formal title of Unión de la Expresión Artistica del Norte y Sur de este Continente\n2. an undercarriage position indicator\n3. a \"fin\" in European usage"
+    },
+    {
+        "test_id": 16,
+        "relation": "HasA",
+        "correct_feat": "images of Frida Kahlo, Dudley C. Carter, Paulette Goddard, and Timothy L. Pflueger",
+        "options": "1. a central king-piece\n2. images of Frida Kahlo, Dudley C. Carter, Paulette Goddard, and Timothy L. Pflueger\n3. a two-player format",
+        "correct_num": 2,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> has [MASK].\n\nOptions:\n1. a central king-piece\n2. images of Frida Kahlo, Dudley C. Carter, Paulette Goddard, and Timothy L. Pflueger\n3. a two-player format"
+    },
+    {
+        "test_id": 17,
+        "relation": "HasA",
+        "correct_feat": "ten robust steel-framed panels bolted together",
+        "options": "1. a base, stem and usually a cover\n2. commercial sets of apparatus that have been sold for the game\n3. ten robust steel-framed panels bolted together",
+        "correct_num": 3,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> has [MASK].\n\nOptions:\n1. a base, stem and usually a cover\n2. commercial sets of apparatus that have been sold for the game\n3. ten robust steel-framed panels bolted together"
+    },
+    {
+        "test_id": 18,
+        "relation": "HasA",
+        "correct_feat": "a size of 22 ft × 74 ft",
+        "options": "1. a size of 22 ft × 74 ft\n2. Event cards that happen immediately\n3. a temporary replacement pontoon bridge",
+        "correct_num": 1,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> has [MASK].\n\nOptions:\n1. a size of 22 ft × 74 ft\n2. Event cards that happen immediately\n3. a temporary replacement pontoon bridge"
+    },
+    {
+        "test_id": 19,
+        "relation": "HasA",
+        "correct_feat": "a depiction of Coatlicue, Aztec Goddess of Life, merged with a huge stamping machine from Detroit in the central section",
+        "options": "1. a two-player format\n2. a depiction of Coatlicue, Aztec Goddess of Life, merged with a huge stamping machine from Detroit in the central section\n3. been analyzed mathematically",
+        "correct_num": 2,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> has [MASK].\n\nOptions:\n1. a two-player format\n2. a depiction of Coatlicue, Aztec Goddess of Life, merged with a huge stamping machine from Detroit in the central section\n3. been analyzed mathematically"
+    },
+    {
+        "test_id": 20,
+        "relation": "HasA",
+        "correct_feat": "a depiction of the modern carver eschewing motorized tools for hand axes",
+        "options": "1. a fine-pitch propeller\n2. common color tokens in an extended two versus two players variant\n3. a depiction of the modern carver eschewing motorized tools for hand axes",
+        "correct_num": 3,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> has [MASK].\n\nOptions:\n1. a fine-pitch propeller\n2. common color tokens in an extended two versus two players variant\n3. a depiction of the modern carver eschewing motorized tools for hand axes"
+    },
+    {
+        "test_id": 21,
+        "relation": "HasA",
+        "correct_feat": "Frida Kahlo looking for inspiration in native traditions",
+        "options": "1. Frida Kahlo looking for inspiration in native traditions\n2. a rectangular grid map of the town\n3. a multimedia group",
+        "correct_num": 1,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> has [MASK].\n\nOptions:\n1. Frida Kahlo looking for inspiration in native traditions\n2. a rectangular grid map of the town\n3. a multimedia group"
+    },
+    {
+        "test_id": 22,
+        "relation": "HasA",
+        "correct_feat": "a depiction of the symbolic joining of Rivera and Goddard holding the \"Tree of Life and Love\" together",
+        "options": "1. a board shaped like a symmetrical cross\n2. a depiction of the symbolic joining of Rivera and Goddard holding the \"Tree of Life and Love\" together\n3. a sword and sorcery comics series",
+        "correct_num": 2,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> has [MASK].\n\nOptions:\n1. a board shaped like a symmetrical cross\n2. a depiction of the symbolic joining of Rivera and Goddard holding the \"Tree of Life and Love\" together\n3. a sword and sorcery comics series"
+    },
+    {
+        "test_id": 23,
+        "relation": "HasA",
+        "correct_feat": "five sections, each consisting of a larger upper panel and a smaller lower panel",
+        "options": "1. two dice used for movement\n2. a new Rijnbrug rebuilt in exactly the same style as the destroyed bridge\n3. five sections, each consisting of a larger upper panel and a smaller lower panel",
+        "correct_num": 3,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> has [MASK].\n\nOptions:\n1. two dice used for movement\n2. a new Rijnbrug rebuilt in exactly the same style as the destroyed bridge\n3. five sections, each consisting of a larger upper panel and a smaller lower panel"
+    },
+    {
+        "test_id": 24,
+        "relation": "HasFeatureOf",
+        "correct_feat": "being a true fresco",
+        "options": "1. being a true fresco\n2. its visual style\n3. high performance",
+        "correct_num": 1,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is characterized by [MASK].\n\nOptions:\n1. being a true fresco\n2. its visual style\n3. high performance"
+    },
+    {
+        "test_id": 25,
+        "relation": "HasFeatureOf",
+        "correct_feat": "its large size, being too large to move conventionally",
+        "options": "1. having land and sea power be almost equally significant\n2. its large size, being too large to move conventionally\n3. multiplayer board games",
+        "correct_num": 2,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is characterized by [MASK].\n\nOptions:\n1. having land and sea power be almost equally significant\n2. its large size, being too large to move conventionally\n3. multiplayer board games"
+    },
+    {
+        "test_id": 26,
+        "relation": "HasFeatureOf",
+        "correct_feat": "a 20 in gash near the portrait of Sarah Gerstel in Section 5",
+        "options": "1. pieces being able to jump over other pieces\n2. abstract strategy games\n3. a 20 in gash near the portrait of Sarah Gerstel in Section 5",
+        "correct_num": 3,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is characterized by [MASK].\n\nOptions:\n1. pieces being able to jump over other pieces\n2. abstract strategy games\n3. a 20 in gash near the portrait of Sarah Gerstel in Section 5"
+    },
+    {
+        "test_id": 27,
+        "relation": "HasFeatureOf",
+        "correct_feat": "its deliberate design to be portable",
+        "options": "1. its deliberate design to be portable\n2. cooperative gameplay\n3. an adventure",
+        "correct_num": 1,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is characterized by [MASK].\n\nOptions:\n1. its deliberate design to be portable\n2. cooperative gameplay\n3. an adventure"
+    },
+    {
+        "test_id": 28,
+        "relation": "HasFeatureOf",
+        "correct_feat": "its composition of ten panels arranged in five sections",
+        "options": "1. being the location where the Torgauer Artikel was composed\n2. its composition of ten panels arranged in five sections\n3. a game of sacrifice",
+        "correct_num": 2,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is characterized by [MASK].\n\nOptions:\n1. being the location where the Torgauer Artikel was composed\n2. its composition of ten panels arranged in five sections\n3. a game of sacrifice"
+    },
+    {
+        "test_id": 29,
+        "relation": "HasFeatureOf",
+        "correct_feat": "its theme of multicultural artistic expression forming into a unified cultural entity",
+        "options": "1. its classification as a developed jurisdiction by the International Monetary Fund\n2. a reception center\n3. its theme of multicultural artistic expression forming into a unified cultural entity",
+        "correct_num": 3,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is characterized by [MASK].\n\nOptions:\n1. its classification as a developed jurisdiction by the International Monetary Fund\n2. a reception center\n3. its theme of multicultural artistic expression forming into a unified cultural entity"
+    },
+    {
+        "test_id": 30,
+        "relation": "HasFeatureOf",
+        "correct_feat": "its imagery of a marriage of Mexican artistry and US technology",
+        "options": "1. its imagery of a marriage of Mexican artistry and US technology\n2. military engagements during the 1863 Gettysburg Campaign\n3. the emergence of early civilizations",
+        "correct_num": 1,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is characterized by [MASK].\n\nOptions:\n1. its imagery of a marriage of Mexican artistry and US technology\n2. military engagements during the 1863 Gettysburg Campaign\n3. the emergence of early civilizations"
+    },
+    {
+        "test_id": 31,
+        "relation": "HasFeatureOf",
+        "correct_feat": "its depiction of women in diverse and empowered roles",
+        "options": "1. two sets of seven holes for each player\n2. its depiction of women in diverse and empowered roles\n3. the 4×4×4 board having 16 cells lying on the body diagonals",
+        "correct_num": 2,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is characterized by [MASK].\n\nOptions:\n1. two sets of seven holes for each player\n2. its depiction of women in diverse and empowered roles\n3. the 4×4×4 board having 16 cells lying on the body diagonals"
+    },
+    {
+        "test_id": 32,
+        "relation": "HeldIn",
+        "correct_feat": "Treasure Island's Golden Gate International Exposition",
+        "options": "1. the Caribbean\n2. the Western Region of Ghana\n3. Treasure Island's Golden Gate International Exposition",
+        "correct_num": 3,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> was held in [MASK].\n\nOptions:\n1. the Caribbean\n2. the Western Region of Ghana\n3. Treasure Island's Golden Gate International Exposition"
+    },
+    {
+        "test_id": 33,
+        "relation": "HeldIn",
+        "correct_feat": "the Roberts Family Gallery at the San Francisco Museum of Modern Art",
+        "options": "1. the Roberts Family Gallery at the San Francisco Museum of Modern Art\n2. Sri Lanka\n3. the United States",
+        "correct_num": 1,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> was held in [MASK].\n\nOptions:\n1. the Roberts Family Gallery at the San Francisco Museum of Modern Art\n2. Sri Lanka\n3. the United States"
+    },
+    {
+        "test_id": 34,
+        "relation": "HeldIn",
+        "correct_feat": "storage at the college",
+        "options": "1. the shire of Neletici\n2. storage at the college\n3. Sri Lanka",
+        "correct_num": 2,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> was held in [MASK].\n\nOptions:\n1. the shire of Neletici\n2. storage at the college\n3. Sri Lanka"
+    },
+    {
+        "test_id": 35,
+        "relation": "HeldIn",
+        "correct_feat": "storage on Treasure Island",
+        "options": "1. the duchy of Saxe-Wittenberg\n2. the Royal New Zealand Navy\n3. storage on Treasure Island",
+        "correct_num": 3,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> was held in [MASK].\n\nOptions:\n1. the duchy of Saxe-Wittenberg\n2. the Royal New Zealand Navy\n3. storage on Treasure Island"
+    },
+    {
+        "test_id": 36,
+        "relation": "HeldOn",
+        "correct_feat": "Sunday, December 1",
+        "options": "1. Sunday, December 1\n2. January 7\n3. January 13",
+        "correct_num": 1,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> was held on [MASK].\n\nOptions:\n1. Sunday, December 1\n2. January 7\n3. January 13"
+    },
+    {
+        "test_id": 37,
+        "relation": "InfluencedBy",
+        "correct_feat": "the destruction of Man at the Crossroads",
+        "options": "1. Christianity\n2. the destruction of Man at the Crossroads\n3. the concept of beneficium",
+        "correct_num": 2,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> was influenced by [MASK].\n\nOptions:\n1. Christianity\n2. the destruction of Man at the Crossroads\n3. the concept of beneficium"
+    },
+    {
+        "test_id": 38,
+        "relation": "InfluencedBy",
+        "correct_feat": "the necessity of making life possible in a new and empty land",
+        "options": "1. the Foraker Act of 1900\n2. the Geneva Conventions\n3. the necessity of making life possible in a new and empty land",
+        "correct_num": 3,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> was influenced by [MASK].\n\nOptions:\n1. the Foraker Act of 1900\n2. the Geneva Conventions\n3. the necessity of making life possible in a new and empty land"
+    },
+    {
+        "test_id": 39,
+        "relation": "InfluencedBy",
+        "correct_feat": "the belief in the eventual unity of the Americas",
+        "options": "1. the belief in the eventual unity of the Americas\n2. the Jones–Shafroth Act of 1917\n3. the Spanish–American War",
+        "correct_num": 1,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> was influenced by [MASK].\n\nOptions:\n1. the belief in the eventual unity of the Americas\n2. the Jones–Shafroth Act of 1917\n3. the Spanish–American War"
+    },
+    {
+        "test_id": 40,
+        "relation": "IsA",
+        "correct_feat": "a mural",
+        "options": "1. a two-player combat-oriented game\n2. a mural\n3. a museum",
+        "correct_num": 2,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is [MASK].\n\nOptions:\n1. a two-player combat-oriented game\n2. a mural\n3. a museum"
+    },
+    {
+        "test_id": 41,
+        "relation": "IsA",
+        "correct_feat": "a true fresco",
+        "options": "1. an abstract strategy board game\n2. a tafl variant\n3. a true fresco",
+        "correct_num": 3,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is [MASK].\n\nOptions:\n1. an abstract strategy board game\n2. a tafl variant\n3. a true fresco"
+    },
+    {
+        "test_id": 42,
+        "relation": "IsA",
+        "correct_feat": "the centerpiece of the Art In Action exhibit",
+        "options": "1. the centerpiece of the Art In Action exhibit\n2. a military air arm\n3. a fictional work loosely based on the true story of Johann Schwerdfeger",
+        "correct_num": 1,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is [MASK].\n\nOptions:\n1. the centerpiece of the Art In Action exhibit\n2. a military air arm\n3. a fictional work loosely based on the true story of Johann Schwerdfeger"
+    },
+    {
+        "test_id": 43,
+        "relation": "IsA",
+        "correct_feat": "the largest contiguous work by Diego Rivera",
+        "options": "1. the capital of the district Nordsachsen\n2. the largest contiguous work by Diego Rivera\n3. a hole game",
+        "correct_num": 2,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is [MASK].\n\nOptions:\n1. the capital of the district Nordsachsen\n2. the largest contiguous work by Diego Rivera\n3. a hole game"
+    },
+    {
+        "test_id": 44,
+        "relation": "IsA",
+        "correct_feat": "a comprehensive marriage of the themes of Mexican artistry and US technology in Pan-American Unity",
+        "options": "1. a game that is a variant of Halma\n2. a 2016 novel\n3. a comprehensive marriage of the themes of Mexican artistry and US technology in Pan-American Unity",
+        "correct_num": 3,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is [MASK].\n\nOptions:\n1. a game that is a variant of Halma\n2. a 2016 novel\n3. a comprehensive marriage of the themes of Mexican artistry and US technology in Pan-American Unity"
+    },
+    {
+        "test_id": 45,
+        "relation": "IsA",
+        "correct_feat": "known as Pan American Unity",
+        "options": "1. known as Pan American Unity\n2. a spin-off of Empire Builder\n3. a foolscap quarto writing paper",
+        "correct_num": 1,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is [MASK].\n\nOptions:\n1. known as Pan American Unity\n2. a spin-off of Empire Builder\n3. a foolscap quarto writing paper"
+    },
+    {
+        "test_id": 46,
+        "relation": "IsA",
+        "correct_feat": "known for being the centerpiece of the Art In Action exhibit",
+        "options": "1. a strategy board game\n2. known for being the centerpiece of the Art In Action exhibit\n3. a 2005 novel",
+        "correct_num": 2,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is [MASK].\n\nOptions:\n1. a strategy board game\n2. known for being the centerpiece of the Art In Action exhibit\n3. a 2005 novel"
+    },
+    {
+        "test_id": 47,
+        "relation": "IsA",
+        "correct_feat": "known for its large size",
+        "options": "1. a new Rijnbrug\n2. a board wargame\n3. known for its large size",
+        "correct_num": 3,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is [MASK].\n\nOptions:\n1. a new Rijnbrug\n2. a board wargame\n3. known for its large size"
+    },
+    {
+        "test_id": 48,
+        "relation": "IsA",
+        "correct_feat": "known for its theme of multicultural artistic expression",
+        "options": "1. known for its theme of multicultural artistic expression\n2. similar in concept to traditional tic-tac-toe\n3. a game that is mentioned in Upton Sinclair's Dragon's Teeth",
+        "correct_num": 1,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is [MASK].\n\nOptions:\n1. known for its theme of multicultural artistic expression\n2. similar in concept to traditional tic-tac-toe\n3. a game that is mentioned in Upton Sinclair's Dragon's Teeth"
+    },
+    {
+        "test_id": 49,
+        "relation": "IsA",
+        "correct_feat": "known for its imagery of a marriage of Mexican artistry and US technology",
+        "options": "1. a pit and pebble game\n2. known for its imagery of a marriage of Mexican artistry and US technology\n3. a medium-sized vessel",
+        "correct_num": 2,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is [MASK].\n\nOptions:\n1. a pit and pebble game\n2. known for its imagery of a marriage of Mexican artistry and US technology\n3. a medium-sized vessel"
+    },
+    {
+        "test_id": 50,
+        "relation": "IsA",
+        "correct_feat": "located on the City College of San Francisco campus",
+        "options": "1. a Polish-language version\n2. an abstract strategy game\n3. located on the City College of San Francisco campus",
+        "correct_num": 3,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is [MASK].\n\nOptions:\n1. a Polish-language version\n2. an abstract strategy game\n3. located on the City College of San Francisco campus"
+    },
+    {
+        "test_id": 51,
+        "relation": "IsA",
+        "correct_feat": "located in the college's Diego Rivera Theater",
+        "options": "1. located in the college's Diego Rivera Theater\n2. a German word\n3. a title",
+        "correct_num": 1,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is [MASK].\n\nOptions:\n1. located in the college's Diego Rivera Theater\n2. a German word\n3. a title"
+    },
+    {
+        "test_id": 52,
+        "relation": "IsA",
+        "correct_feat": "located in a vacant lot on the CCSF campus for the future Diego Rivera Performing Arts Center",
+        "options": "1. an Indian game similar to Pachisi\n2. located in a vacant lot on the CCSF campus for the future Diego Rivera Performing Arts Center\n3. a Canadian documentary film",
+        "correct_num": 2,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is [MASK].\n\nOptions:\n1. an Indian game similar to Pachisi\n2. located in a vacant lot on the CCSF campus for the future Diego Rivera Performing Arts Center\n3. a Canadian documentary film"
+    },
+    {
+        "test_id": 53,
+        "relation": "IsA",
+        "correct_feat": "part of the Art in Action exhibition",
+        "options": "1. a young kids version\n2. an abstract strategy game\n3. part of the Art in Action exhibition",
+        "correct_num": 3,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is [MASK].\n\nOptions:\n1. a young kids version\n2. an abstract strategy game\n3. part of the Art in Action exhibition"
+    },
+    {
+        "test_id": 54,
+        "relation": "IsA",
+        "correct_feat": "part of the Diego Rivera's America exhibition",
+        "options": "1. part of the Diego Rivera's America exhibition\n2. an official mode in Counter-Strike: Global Offensive\n3. known as Congkak or Congklakin in Indonesia",
+        "correct_num": 1,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is [MASK].\n\nOptions:\n1. part of the Diego Rivera's America exhibition\n2. an official mode in Counter-Strike: Global Offensive\n3. known as Congkak or Congklakin in Indonesia"
+    },
+    {
+        "test_id": 55,
+        "relation": "IsA",
+        "correct_feat": "used as a centerpiece",
+        "options": "1. generally for two players\n2. used as a centerpiece\n3. a Russian drama film",
+        "correct_num": 2,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is [MASK].\n\nOptions:\n1. generally for two players\n2. used as a centerpiece\n3. a Russian drama film"
+    },
+    {
+        "test_id": 56,
+        "relation": "IsA",
+        "correct_feat": "used as a depiction of the union between north and south",
+        "options": "1. a microgame\n2. a military vessel\n3. used as a depiction of the union between north and south",
+        "correct_num": 3,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is [MASK].\n\nOptions:\n1. a microgame\n2. a military vessel\n3. used as a depiction of the union between north and south"
+    },
+    {
+        "test_id": 57,
+        "relation": "IsA",
+        "correct_feat": "used as a representation of multicultural artistic expression",
+        "options": "1. used as a representation of multicultural artistic expression\n2. a general description of size of books\n3. an official mode in Counter-Strike: Global Offensive",
+        "correct_num": 1,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is [MASK].\n\nOptions:\n1. used as a representation of multicultural artistic expression\n2. a general description of size of books\n3. an official mode in Counter-Strike: Global Offensive"
+    },
+    {
+        "test_id": 58,
+        "relation": "IsA",
+        "correct_feat": "used for the Art in Action exhibition",
+        "options": "1. a microgame\n2. used for the Art in Action exhibition\n3. a series of American Civil War military engagements",
+        "correct_num": 2,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is [MASK].\n\nOptions:\n1. a microgame\n2. used for the Art in Action exhibition\n3. a series of American Civil War military engagements"
+    },
+    {
+        "test_id": 59,
+        "relation": "IsA",
+        "correct_feat": "used for the exhibition Diego Rivera's America",
+        "options": "1. Britain's best-loved novel of all time\n2. encouraged for kids to learn to count\n3. used for the exhibition Diego Rivera's America",
+        "correct_num": 3,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is [MASK].\n\nOptions:\n1. Britain's best-loved novel of all time\n2. encouraged for kids to learn to count\n3. used for the exhibition Diego Rivera's America"
+    },
+    {
+        "test_id": 60,
+        "relation": "IsA",
+        "correct_feat": "used for the future Diego Rivera Performing Arts Center",
+        "options": "1. used for the future Diego Rivera Performing Arts Center\n2. an international co-production between British and West German financiers\n3. a pontoon bridge",
+        "correct_num": 1,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is [MASK].\n\nOptions:\n1. used for the future Diego Rivera Performing Arts Center\n2. an international co-production between British and West German financiers\n3. a pontoon bridge"
+    },
+    {
+        "test_id": 61,
+        "relation": "IsA",
+        "correct_feat": "used in the lobby of the college's Diego Rivera Theater",
+        "options": "1. a 1979 novel\n2. used in the lobby of the college's Diego Rivera Theater\n3. 3D tic-tac-toe",
+        "correct_num": 2,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is [MASK].\n\nOptions:\n1. a 1979 novel\n2. used in the lobby of the college's Diego Rivera Theater\n3. 3D tic-tac-toe"
+    },
+    {
+        "test_id": 62,
+        "relation": "IsA",
+        "correct_feat": "used in the Roberts Family Gallery at the San Francisco Museum of Modern Art",
+        "options": "1. a Hong Kong manhua\n2. a form of checkers\n3. used in the Roberts Family Gallery at the San Francisco Museum of Modern Art",
+        "correct_num": 3,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is [MASK].\n\nOptions:\n1. a Hong Kong manhua\n2. a form of checkers\n3. used in the Roberts Family Gallery at the San Francisco Museum of Modern Art"
+    },
+    {
+        "test_id": 63,
+        "relation": "IsA",
+        "correct_feat": "used to symbolize the union between north and south",
+        "options": "1. used to symbolize the union between north and south\n2. a Java-based application\n3. a midget submarine",
+        "correct_num": 1,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is [MASK].\n\nOptions:\n1. used to symbolize the union between north and south\n2. a Java-based application\n3. a midget submarine"
+    },
+    {
+        "test_id": 64,
+        "relation": "IsA",
+        "correct_feat": "used to represent the marriage of Mexican artistry and US technology",
+        "options": "1. a game where players connect cities by building and extending train lines through Europe to deliver cargo and earn money\n2. used to represent the marriage of Mexican artistry and US technology\n3. a game where both players can guarantee a draw with perfect play",
+        "correct_num": 2,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is [MASK].\n\nOptions:\n1. a game where players connect cities by building and extending train lines through Europe to deliver cargo and earn money\n2. used to represent the marriage of Mexican artistry and US technology\n3. a game where both players can guarantee a draw with perfect play"
+    },
+    {
+        "test_id": 65,
+        "relation": "IsA",
+        "correct_feat": "used to depict the eventual unity of the Americas",
+        "options": "1. a documentary television series\n2. a series of games that can be played free online\n3. used to depict the eventual unity of the Americas",
+        "correct_num": 3,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is [MASK].\n\nOptions:\n1. a documentary television series\n2. a series of games that can be played free online\n3. used to depict the eventual unity of the Americas"
+    },
+    {
+        "test_id": 66,
+        "relation": "OccurredAt",
+        "correct_feat": "Treasure Island",
+        "options": "1. Treasure Island\n2. Arnhem\n3. medieval Europe",
+        "correct_num": 1,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> occurred at [MASK].\n\nOptions:\n1. Treasure Island\n2. Arnhem\n3. medieval Europe"
+    },
+    {
+        "test_id": 67,
+        "relation": "OccurredAt",
+        "correct_feat": "San Francisco, California",
+        "options": "1. San Francisco\n2. San Francisco, California\n3. Bombay",
+        "correct_num": 2,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> occurred at [MASK].\n\nOptions:\n1. San Francisco\n2. San Francisco, California\n3. Bombay"
+    },
+    {
+        "test_id": 68,
+        "relation": "OccurredDuring",
+        "correct_feat": "the second session of GGIE",
+        "options": "1. the modern age\n2. the Greek War of Independence\n3. the second session of GGIE",
+        "correct_num": 3,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> occurred during [MASK].\n\nOptions:\n1. the modern age\n2. the Greek War of Independence\n3. the second session of GGIE"
+    },
+    {
+        "test_id": 69,
+        "relation": "OccurredDuring",
+        "correct_feat": "the summer of 1940",
+        "options": "1. the summer of 1940\n2. Operation Cerberus\n3. the New Guinea campaign",
+        "correct_num": 1,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> occurred during [MASK].\n\nOptions:\n1. the summer of 1940\n2. Operation Cerberus\n3. the New Guinea campaign"
+    },
+    {
+        "test_id": 70,
+        "relation": "OccurredDuring",
+        "correct_feat": "the 1939–1940 GGIE",
+        "options": "1. the invasion of Germany\n2. the 1939–1940 GGIE\n3. the mid-seventeenth century",
+        "correct_num": 2,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> occurred during [MASK].\n\nOptions:\n1. the invasion of Germany\n2. the 1939–1940 GGIE\n3. the mid-seventeenth century"
+    },
+    {
+        "test_id": 71,
+        "relation": "OccurredDuring",
+        "correct_feat": "the start of the Second World War",
+        "options": "1. the rainy season\n2. the Unification of Germany\n3. the start of the Second World War",
+        "correct_num": 3,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> occurred during [MASK].\n\nOptions:\n1. the rainy season\n2. the Unification of Germany\n3. the start of the Second World War"
+    },
+    {
+        "test_id": 72,
+        "relation": "OccurredIn",
+        "correct_feat": "San Francisco",
+        "options": "1. San Francisco\n2. France\n3. Yugoslavia",
+        "correct_num": 1,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> occurred in [MASK].\n\nOptions:\n1. San Francisco\n2. France\n3. Yugoslavia"
+    },
+    {
+        "test_id": 73,
+        "relation": "OccurredIn",
+        "correct_feat": "San Francisco, California",
+        "options": "1. tournaments\n2. San Francisco, California\n3. the Elizabethan era",
+        "correct_num": 2,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> occurred in [MASK].\n\nOptions:\n1. tournaments\n2. San Francisco, California\n3. the Elizabethan era"
+    },
+    {
+        "test_id": 74,
+        "relation": "OccurredIn",
+        "correct_feat": "1940",
+        "options": "1. the United States\n2. Trieste in Italy\n3. 1940",
+        "correct_num": 3,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> occurred in [MASK].\n\nOptions:\n1. the United States\n2. Trieste in Italy\n3. 1940"
+    },
+    {
+        "test_id": 75,
+        "relation": "OccurredIn",
+        "correct_feat": "the summer of 1940",
+        "options": "1. the summer of 1940\n2. 1945\n3. the Indus Valley",
+        "correct_num": 1,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> occurred in [MASK].\n\nOptions:\n1. the summer of 1940\n2. 1945\n3. the Indus Valley"
+    },
+    {
+        "test_id": 76,
+        "relation": "OccurredIn",
+        "correct_feat": "the second session of GGIE",
+        "options": "1. Egypt\n2. the second session of GGIE\n3. Trieste in Italy",
+        "correct_num": 2,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> occurred in [MASK].\n\nOptions:\n1. Egypt\n2. the second session of GGIE\n3. Trieste in Italy"
+    },
+    {
+        "test_id": 77,
+        "relation": "OccurredIn",
+        "correct_feat": "1941",
+        "options": "1. 1907/1908\n2. the 18th century\n3. 1941",
+        "correct_num": 3,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> occurred in [MASK].\n\nOptions:\n1. 1907/1908\n2. the 18th century\n3. 1941"
+    },
+    {
+        "test_id": 78,
+        "relation": "OccurredIn",
+        "correct_feat": "1942",
+        "options": "1. 1942\n2. the Eastern Mediterranean\n3. 2000",
+        "correct_num": 1,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> occurred in [MASK].\n\nOptions:\n1. 1942\n2. the Eastern Mediterranean\n3. 2000"
+    },
+    {
+        "test_id": 79,
+        "relation": "OccurredIn",
+        "correct_feat": "1961",
+        "options": "1. Europe\n2. 1961\n3. the Elizabethan era",
+        "correct_num": 2,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> occurred in [MASK].\n\nOptions:\n1. Europe\n2. 1961\n3. the Elizabethan era"
+    },
+    {
+        "test_id": 80,
+        "relation": "OccurredIn",
+        "correct_feat": "1995",
+        "options": "1. Al-Andalus\n2. 1525\n3. 1995",
+        "correct_num": 3,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> occurred in [MASK].\n\nOptions:\n1. Al-Andalus\n2. 1525\n3. 1995"
+    },
+    {
+        "test_id": 81,
+        "relation": "OccurredIn",
+        "correct_feat": "1999",
+        "options": "1. 1999\n2. the mid-seventeenth century\n3. Germany",
+        "correct_num": 1,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> occurred in [MASK].\n\nOptions:\n1. 1999\n2. the mid-seventeenth century\n3. Germany"
+    },
+    {
+        "test_id": 82,
+        "relation": "OccurredOn",
+        "correct_feat": "Sunday, December 1",
+        "options": "1. 5 March 1936\n2. Sunday, December 1\n3. January 11",
+        "correct_num": 2,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> occurred on [MASK].\n\nOptions:\n1. 5 March 1936\n2. Sunday, December 1\n3. January 11"
+    },
+    {
+        "test_id": 83,
+        "relation": "OriginatedIn",
+        "correct_feat": "San Francisco, California",
+        "options": "1. the Soviet Union\n2. Africa\n3. San Francisco, California",
+        "correct_num": 3,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> originated in [MASK].\n\nOptions:\n1. the Soviet Union\n2. Africa\n3. San Francisco, California"
+    }
+]

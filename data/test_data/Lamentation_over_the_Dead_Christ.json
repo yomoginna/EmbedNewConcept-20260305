@@ -1,0 +1,490 @@
+[
+    {
+        "test_id": 0,
+        "relation": "About",
+        "correct_feat": "the mourning of Jesus' body after crucifixion",
+        "options": "1. the mourning of Jesus' body after crucifixion\n2. the return to the South following the Battle of Gettysburg\n3. the meeting of the United States and Soviet Armies near the end of World War II",
+        "correct_num": 1,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is about [MASK].\n\nOptions:\n1. the mourning of Jesus' body after crucifixion\n2. the return to the South following the Battle of Gettysburg\n3. the meeting of the United States and Soviet Armies near the end of World War II"
+    },
+    {
+        "test_id": 1,
+        "relation": "About",
+        "correct_feat": "the depiction of Jesus' mother Mary cradling his body",
+        "options": "1. a board game\n2. the depiction of Jesus' mother Mary cradling his body\n3. actions of squad sized units in World War II",
+        "correct_num": 2,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is about [MASK].\n\nOptions:\n1. a board game\n2. the depiction of Jesus' mother Mary cradling his body\n3. actions of squad sized units in World War II"
+    },
+    {
+        "test_id": 2,
+        "relation": "AssociatedWith",
+        "correct_feat": "cycles of the Life of Christ",
+        "options": "1. the Tsardom of Russia\n2. the terms Kaiserreich and Königreich\n3. cycles of the Life of Christ",
+        "correct_num": 3,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is associated with [MASK].\n\nOptions:\n1. the Tsardom of Russia\n2. the terms Kaiserreich and Königreich\n3. cycles of the Life of Christ"
+    },
+    {
+        "test_id": 3,
+        "relation": "AssociatedWith",
+        "correct_feat": "the Stations of the Cross",
+        "options": "1. the Stations of the Cross\n2. Valorant\n3. computing applications",
+        "correct_num": 1,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is associated with [MASK].\n\nOptions:\n1. the Stations of the Cross\n2. Valorant\n3. computing applications"
+    },
+    {
+        "test_id": 4,
+        "relation": "AssociatedWith",
+        "correct_feat": "the Seven Sorrows of the Virgin",
+        "options": "1. Norway, Sweden, Denmark, Iceland, Britain, Ireland, and Sápmi\n2. the Seven Sorrows of the Virgin\n3. the Albertine line of the Wettin dynasty",
+        "correct_num": 2,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is associated with [MASK].\n\nOptions:\n1. Norway, Sweden, Denmark, Iceland, Britain, Ireland, and Sápmi\n2. the Seven Sorrows of the Virgin\n3. the Albertine line of the Wettin dynasty"
+    },
+    {
+        "test_id": 5,
+        "relation": "AssociatedWith",
+        "correct_feat": "cycles of the Life of the Virgin",
+        "options": "1. the Spanish Civil War\n2. the Viking Age\n3. cycles of the Life of the Virgin",
+        "correct_num": 3,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is associated with [MASK].\n\nOptions:\n1. the Spanish Civil War\n2. the Viking Age\n3. cycles of the Life of the Virgin"
+    },
+    {
+        "test_id": 6,
+        "relation": "DevelopedIn",
+        "correct_feat": "the 11th century",
+        "options": "1. the 11th century\n2. Germany\n3. Supermarine Aviation Works",
+        "correct_num": 1,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> was developed in [MASK].\n\nOptions:\n1. the 11th century\n2. Germany\n3. Supermarine Aviation Works"
+    },
+    {
+        "test_id": 7,
+        "relation": "DevelopedIn",
+        "correct_feat": "Western Gothic art",
+        "options": "1. different locations\n2. Western Gothic art\n3. the 19th century",
+        "correct_num": 2,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> was developed in [MASK].\n\nOptions:\n1. different locations\n2. Western Gothic art\n3. the 19th century"
+    },
+    {
+        "test_id": 8,
+        "relation": "DevelopedIn",
+        "correct_feat": "Early Netherlandish painting of the 15th century",
+        "options": "1. Canada\n2. medieval Europe\n3. Early Netherlandish painting of the 15th century",
+        "correct_num": 3,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> was developed in [MASK].\n\nOptions:\n1. Canada\n2. medieval Europe\n3. Early Netherlandish painting of the 15th century"
+    },
+    {
+        "test_id": 9,
+        "relation": "DevelopedIn",
+        "correct_feat": "art north of the Alps in the 14th century",
+        "options": "1. art north of the Alps in the 14th century\n2. Supermarine Aviation Works\n3. the mid-20th century",
+        "correct_num": 1,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> was developed in [MASK].\n\nOptions:\n1. art north of the Alps in the 14th century\n2. Supermarine Aviation Works\n3. the mid-20th century"
+    },
+    {
+        "test_id": 10,
+        "relation": "HasA",
+        "correct_feat": "a subject of Jesus' mother Mary cradling his body",
+        "options": "1. a financial oversight board\n2. a subject of Jesus' mother Mary cradling his body\n3. two sets of seven holes for each player",
+        "correct_num": 2,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> has [MASK].\n\nOptions:\n1. a financial oversight board\n2. a subject of Jesus' mother Mary cradling his body\n3. two sets of seven holes for each player"
+    },
+    {
+        "test_id": 11,
+        "relation": "HasA",
+        "correct_feat": "figures shown with the body including The Three Marys, John the Apostle, Joseph and Nicodemus, and often others of both sexes, angels and donor portraits",
+        "options": "1. a king that started in the centre\n2. a map of 1901 Europe plus Turkey, Syria and North Africa\n3. figures shown with the body including The Three Marys, John the Apostle, Joseph and Nicodemus, and often others of both sexes, angels and donor portraits",
+        "correct_num": 3,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> has [MASK].\n\nOptions:\n1. a king that started in the centre\n2. a map of 1901 Europe plus Turkey, Syria and North Africa\n3. figures shown with the body including The Three Marys, John the Apostle, Joseph and Nicodemus, and often others of both sexes, angels and donor portraits"
+    },
+    {
+        "test_id": 12,
+        "relation": "HasA",
+        "correct_feat": "ten further female figures in Giotto di Bondone's depiction",
+        "options": "1. ten further female figures in Giotto di Bondone's depiction\n2. a guided-missile cruiser\n3. a remarkable architecture",
+        "correct_num": 1,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> has [MASK].\n\nOptions:\n1. ten further female figures in Giotto di Bondone's depiction\n2. a guided-missile cruiser\n3. a remarkable architecture"
+    },
+    {
+        "test_id": 13,
+        "relation": "HasFeatureOf",
+        "correct_feat": "the centrality of Mary to the composition",
+        "options": "1. a detailed set of instructions in the ASL Rulebook for Design Your Own scenarios\n2. the centrality of Mary to the composition\n3. its belated use of advanced turbojet and rocket-propelled aircraft",
+        "correct_num": 2,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is characterized by [MASK].\n\nOptions:\n1. a detailed set of instructions in the ASL Rulebook for Design Your Own scenarios\n2. the centrality of Mary to the composition\n3. its belated use of advanced turbojet and rocket-propelled aircraft"
+    },
+    {
+        "test_id": 14,
+        "relation": "HasFeatureOf",
+        "correct_feat": "the typical position of Christ's body changing from being flat on the ground or slab, usually seen in profile across the centre of the work, to the upper torso being raised by Mary or others, and finally being held in a near-vertical position, seen frontally, or across Mary's lap",
+        "options": "1. being approximately 10 inches tall by 8 inches wide\n2. games based on elements\n3. the typical position of Christ's body changing from being flat on the ground or slab, usually seen in profile across the centre of the work, to the upper torso being raised by Mary or others, and finally being held in a near-vertical position, seen frontally, or across Mary's lap",
+        "correct_num": 3,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is characterized by [MASK].\n\nOptions:\n1. being approximately 10 inches tall by 8 inches wide\n2. games based on elements\n3. the typical position of Christ's body changing from being flat on the ground or slab, usually seen in profile across the centre of the work, to the upper torso being raised by Mary or others, and finally being held in a near-vertical position, seen frontally, or across Mary's lap"
+    },
+    {
+        "test_id": 15,
+        "relation": "HasFeatureOf",
+        "correct_feat": "Mary Magdalene typically holding Jesus' feet",
+        "options": "1. Mary Magdalene typically holding Jesus' feet\n2. its temporary defense during the Battle of Arnhem\n3. its use for historical empires",
+        "correct_num": 1,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is characterized by [MASK].\n\nOptions:\n1. Mary Magdalene typically holding Jesus' feet\n2. its temporary defense during the Battle of Arnhem\n3. its use for historical empires"
+    },
+    {
+        "test_id": 16,
+        "relation": "HasFeatureOf",
+        "correct_feat": "Joseph usually being a bearded older man, often richly dressed",
+        "options": "1. a rule for snake eyes on the first throw\n2. Joseph usually being a bearded older man, often richly dressed\n3. winning by being first to transfer all of one's pieces from one's own camp into the camp in the opposing corner",
+        "correct_num": 2,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is characterized by [MASK].\n\nOptions:\n1. a rule for snake eyes on the first throw\n2. Joseph usually being a bearded older man, often richly dressed\n3. winning by being first to transfer all of one's pieces from one's own camp into the camp in the opposing corner"
+    },
+    {
+        "test_id": 17,
+        "relation": "HasFeatureOf",
+        "correct_feat": "increasingly becoming a separate devotional image, concentrating on Mary's grief for her son, with less narrative emphasis",
+        "options": "1. its official languages being Spanish and English\n2. different styles for different liquids or foodstuffs\n3. increasingly becoming a separate devotional image, concentrating on Mary's grief for her son, with less narrative emphasis",
+        "correct_num": 3,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is characterized by [MASK].\n\nOptions:\n1. its official languages being Spanish and English\n2. different styles for different liquids or foodstuffs\n3. increasingly becoming a separate devotional image, concentrating on Mary's grief for her son, with less narrative emphasis"
+    },
+    {
+        "test_id": 18,
+        "relation": "HasFeatureOf",
+        "correct_feat": "the Pietà as a logical outcome of the trend",
+        "options": "1. the Pietà as a logical outcome of the trend\n2. a die\n3. pieces being crowned upon reaching the opposite end of the board",
+        "correct_num": 1,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is characterized by [MASK].\n\nOptions:\n1. the Pietà as a logical outcome of the trend\n2. a die\n3. pieces being crowned upon reaching the opposite end of the board"
+    },
+    {
+        "test_id": 19,
+        "relation": "HasFeatureOf",
+        "correct_feat": "being the 13th of the Stations of the Cross",
+        "options": "1. squarish proportions\n2. being the 13th of the Stations of the Cross\n3. being rebuilt in exactly the same style as the destroyed bridge",
+        "correct_num": 2,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is characterized by [MASK].\n\nOptions:\n1. squarish proportions\n2. being the 13th of the Stations of the Cross\n3. being rebuilt in exactly the same style as the destroyed bridge"
+    },
+    {
+        "test_id": 20,
+        "relation": "HasFeatureOf",
+        "correct_feat": "being one of Seven Sorrows of the Virgin",
+        "options": "1. \"lively corp/army level simulation of anti-Communist revolts in Eastern Europe\"\n2. its official languages being Spanish and English\n3. being one of Seven Sorrows of the Virgin",
+        "correct_num": 3,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is characterized by [MASK].\n\nOptions:\n1. \"lively corp/army level simulation of anti-Communist revolts in Eastern Europe\"\n2. its official languages being Spanish and English\n3. being one of Seven Sorrows of the Virgin"
+    },
+    {
+        "test_id": 21,
+        "relation": "HasFeatureOf",
+        "correct_feat": "being a common component of cycles of the Life of the Virgin",
+        "options": "1. being a common component of cycles of the Life of the Virgin\n2. being subject to specific national laws and regulations\n3. the meaning analogous to the English word realm",
+        "correct_num": 1,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is characterized by [MASK].\n\nOptions:\n1. being a common component of cycles of the Life of the Virgin\n2. being subject to specific national laws and regulations\n3. the meaning analogous to the English word realm"
+    },
+    {
+        "test_id": 22,
+        "relation": "HasFeatureOf",
+        "correct_feat": "shared characteristics of the Lamentation and the Entombment",
+        "options": "1. reciprocal legal and military obligations of the warrior nobility\n2. shared characteristics of the Lamentation and the Entombment\n3. the game ending when one player captures all the shells",
+        "correct_num": 2,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is characterized by [MASK].\n\nOptions:\n1. reciprocal legal and military obligations of the warrior nobility\n2. shared characteristics of the Lamentation and the Entombment\n3. the game ending when one player captures all the shells"
+    },
+    {
+        "test_id": 23,
+        "relation": "InfluencedBy",
+        "correct_feat": "the Deposition of Christ",
+        "options": "1. the Yalta Agreement\n2. the Treaty of Leipzig partition of the Wettin inheritance\n3. the Deposition of Christ",
+        "correct_num": 3,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> was influenced by [MASK].\n\nOptions:\n1. the Yalta Agreement\n2. the Treaty of Leipzig partition of the Wettin inheritance\n3. the Deposition of Christ"
+    },
+    {
+        "test_id": 24,
+        "relation": "InfluencedBy",
+        "correct_feat": "the Bearing of the Body",
+        "options": "1. the Bearing of the Body\n2. the Puerto Rico Federal Relations Act of 1950\n3. the Battle of Mühlberg",
+        "correct_num": 1,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> was influenced by [MASK].\n\nOptions:\n1. the Bearing of the Body\n2. the Puerto Rico Federal Relations Act of 1950\n3. the Battle of Mühlberg"
+    },
+    {
+        "test_id": 25,
+        "relation": "InfluencedBy",
+        "correct_feat": "the laying-out of Jesus' body on a slab or bier",
+        "options": "1. the Spanish–American War\n2. the laying-out of Jesus' body on a slab or bier\n3. African slaves",
+        "correct_num": 2,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> was influenced by [MASK].\n\nOptions:\n1. the Spanish–American War\n2. the laying-out of Jesus' body on a slab or bier\n3. African slaves"
+    },
+    {
+        "test_id": 26,
+        "relation": "InfluencedBy",
+        "correct_feat": "the Entombment of Christ",
+        "options": "1. the French game Jeu des petits chevaux\n2. the advent of national feeling\n3. the Entombment of Christ",
+        "correct_num": 3,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> was influenced by [MASK].\n\nOptions:\n1. the French game Jeu des petits chevaux\n2. the advent of national feeling\n3. the Entombment of Christ"
+    },
+    {
+        "test_id": 27,
+        "relation": "InfluencedBy",
+        "correct_feat": "interest in foreshortening",
+        "options": "1. interest in foreshortening\n2. the Latin word feodum or feudum\n3. the formality of sitting at a table",
+        "correct_num": 1,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> was influenced by [MASK].\n\nOptions:\n1. interest in foreshortening\n2. the Latin word feodum or feudum\n3. the formality of sitting at a table"
+    },
+    {
+        "test_id": 28,
+        "relation": "IsA",
+        "correct_feat": "a common subject in Christian art from the High Middle Ages to the Baroque",
+        "options": "1. a foolscap quarto writing paper\n2. a common subject in Christian art from the High Middle Ages to the Baroque\n3. a Bailey bridge",
+        "correct_num": 2,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is [MASK].\n\nOptions:\n1. a foolscap quarto writing paper\n2. a common subject in Christian art from the High Middle Ages to the Baroque\n3. a Bailey bridge"
+    },
+    {
+        "test_id": 29,
+        "relation": "IsA",
+        "correct_feat": "a specific type of Lamentation depicting only Jesus' mother Mary cradling his body",
+        "options": "1. part of what is known as the \"Crayon Rails\" games\n2. the fourth episode of the 1965 Doctor Who serial The Crusade\n3. a specific type of Lamentation depicting only Jesus' mother Mary cradling his body",
+        "correct_num": 3,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is [MASK].\n\nOptions:\n1. part of what is known as the \"Crayon Rails\" games\n2. the fourth episode of the 1965 Doctor Who serial The Crusade\n3. a specific type of Lamentation depicting only Jesus' mother Mary cradling his body"
+    },
+    {
+        "test_id": 30,
+        "relation": "IsA",
+        "correct_feat": "a scene developed covering the period between the death of Jesus on the Cross and his being placed in his tomb",
+        "options": "1. a scene developed covering the period between the death of Jesus on the Cross and his being placed in his tomb\n2. not a state\n3. a town that fell to the Ernestine line after the Treaty of Leipzig",
+        "correct_num": 1,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is [MASK].\n\nOptions:\n1. a scene developed covering the period between the death of Jesus on the Cross and his being placed in his tomb\n2. not a state\n3. a town that fell to the Ernestine line after the Treaty of Leipzig"
+    },
+    {
+        "test_id": 31,
+        "relation": "IsA",
+        "correct_feat": "a type that arose from the 11th century",
+        "options": "1. a submersible\n2. a type that arose from the 11th century\n3. a Roman territory",
+        "correct_num": 2,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is [MASK].\n\nOptions:\n1. a submersible\n2. a type that arose from the 11th century\n3. a Roman territory"
+    },
+    {
+        "test_id": 32,
+        "relation": "IsA",
+        "correct_feat": "the standard scene in Western Gothic art",
+        "options": "1. a game with rules for setup and play sequence\n2. a game played with cowrie shells, pebbles, or tamarind seeds\n3. the standard scene in Western Gothic art",
+        "correct_num": 3,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is [MASK].\n\nOptions:\n1. a game with rules for setup and play sequence\n2. a game played with cowrie shells, pebbles, or tamarind seeds\n3. the standard scene in Western Gothic art"
+    },
+    {
+        "test_id": 33,
+        "relation": "IsA",
+        "correct_feat": "a devotional image",
+        "options": "1. a devotional image\n2. a trainer aircraft\n3. a series of games played on a hexagonal board",
+        "correct_num": 1,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is [MASK].\n\nOptions:\n1. a devotional image\n2. a trainer aircraft\n3. a series of games played on a hexagonal board"
+    },
+    {
+        "test_id": 34,
+        "relation": "IsA",
+        "correct_feat": "a Pietà",
+        "options": "1. a board game\n2. a Pietà\n3. a tafl variant",
+        "correct_num": 2,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is [MASK].\n\nOptions:\n1. a board game\n2. a Pietà\n3. a tafl variant"
+    },
+    {
+        "test_id": 35,
+        "relation": "IsA",
+        "correct_feat": "a related subject",
+        "options": "1. a town on the banks of the Elbe in northwestern Saxony, Germany\n2. a solved game\n3. a related subject",
+        "correct_num": 3,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is [MASK].\n\nOptions:\n1. a town on the banks of the Elbe in northwestern Saxony, Germany\n2. a solved game\n3. a related subject"
+    },
+    {
+        "test_id": 36,
+        "relation": "IsA",
+        "correct_feat": "known as Pietà",
+        "options": "1. known as Pietà\n2. a place\n3. a kids version",
+        "correct_num": 1,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is [MASK].\n\nOptions:\n1. known as Pietà\n2. a place\n3. a kids version"
+    },
+    {
+        "test_id": 37,
+        "relation": "IsA",
+        "correct_feat": "known as Epitaphios in Greek",
+        "options": "1. a Chinese cross-and-circle board game\n2. known as Epitaphios in Greek\n3. a political alliance",
+        "correct_num": 2,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is [MASK].\n\nOptions:\n1. a Chinese cross-and-circle board game\n2. known as Epitaphios in Greek\n3. a political alliance"
+    },
+    {
+        "test_id": 38,
+        "relation": "IsA",
+        "correct_feat": "known as Anointing of Christ in Western equivalents in painting",
+        "options": "1. a town that fell to the Ernestine line after the Treaty of Leipzig\n2. an outsider to the conflict\n3. known as Anointing of Christ in Western equivalents in painting",
+        "correct_num": 3,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is [MASK].\n\nOptions:\n1. a town that fell to the Ernestine line after the Treaty of Leipzig\n2. an outsider to the conflict\n3. known as Anointing of Christ in Western equivalents in painting"
+    },
+    {
+        "test_id": 39,
+        "relation": "IsA",
+        "correct_feat": "known for being a common subject in Christian art",
+        "options": "1. known for being a common subject in Christian art\n2. high-energy X-rays\n3. a board wargame",
+        "correct_num": 1,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is [MASK].\n\nOptions:\n1. known for being a common subject in Christian art\n2. high-energy X-rays\n3. a board wargame"
+    },
+    {
+        "test_id": 40,
+        "relation": "IsA",
+        "correct_feat": "known for depicting Jesus' mother Mary cradling his body",
+        "options": "1. a game that can be played with pencil and paper\n2. known for depicting Jesus' mother Mary cradling his body\n3. a permanent link across the Lower Rhine",
+        "correct_num": 2,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is [MASK].\n\nOptions:\n1. a game that can be played with pencil and paper\n2. known for depicting Jesus' mother Mary cradling his body\n3. a permanent link across the Lower Rhine"
+    },
+    {
+        "test_id": 41,
+        "relation": "IsA",
+        "correct_feat": "known for its development from the 11th century",
+        "options": "1. a game that is a variant of Halma\n2. an aircraft carrier-based adaptation\n3. known for its development from the 11th century",
+        "correct_num": 3,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is [MASK].\n\nOptions:\n1. a game that is a variant of Halma\n2. an aircraft carrier-based adaptation\n3. known for its development from the 11th century"
+    },
+    {
+        "test_id": 42,
+        "relation": "IsA",
+        "correct_feat": "known for becoming very popular north of the Alps",
+        "options": "1. known for becoming very popular north of the Alps\n2. a 2005 novel\n3. an island organized as an unincorporated territory of the United States",
+        "correct_num": 1,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is [MASK].\n\nOptions:\n1. known for becoming very popular north of the Alps\n2. a 2005 novel\n3. an island organized as an unincorporated territory of the United States"
+    },
+    {
+        "test_id": 43,
+        "relation": "IsA",
+        "correct_feat": "known for its increasing devotional emphasis",
+        "options": "1. a British single-seat fighter aircraft\n2. known for its increasing devotional emphasis\n3. a two-player combat-oriented game",
+        "correct_num": 2,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is [MASK].\n\nOptions:\n1. a British single-seat fighter aircraft\n2. known for its increasing devotional emphasis\n3. a two-player combat-oriented game"
+    },
+    {
+        "test_id": 44,
+        "relation": "IsA",
+        "correct_feat": "known for its connection to the Stations of the Cross and Seven Sorrows of the Virgin",
+        "options": "1. a museum\n2. an abstract strategy board game\n3. known for its connection to the Stations of the Cross and Seven Sorrows of the Virgin",
+        "correct_num": 3,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is [MASK].\n\nOptions:\n1. a museum\n2. an abstract strategy board game\n3. known for its connection to the Stations of the Cross and Seven Sorrows of the Virgin"
+    },
+    {
+        "test_id": 45,
+        "relation": "IsA",
+        "correct_feat": "used as a separate devotional image",
+        "options": "1. used as a separate devotional image\n2. a tafl variant\n3. a military air arm",
+        "correct_num": 1,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is [MASK].\n\nOptions:\n1. used as a separate devotional image\n2. a tafl variant\n3. a military air arm"
+    },
+    {
+        "test_id": 46,
+        "relation": "IsA",
+        "correct_feat": "used as sculpture in the case of Pietà",
+        "options": "1. a fictional work loosely based on the true story of Johann Schwerdfeger\n2. used as sculpture in the case of Pietà\n3. the capital of the district Nordsachsen",
+        "correct_num": 2,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is [MASK].\n\nOptions:\n1. a fictional work loosely based on the true story of Johann Schwerdfeger\n2. used as sculpture in the case of Pietà\n3. the capital of the district Nordsachsen"
+    },
+    {
+        "test_id": 47,
+        "relation": "IsA",
+        "correct_feat": "used for depicting the mourning of Jesus' body",
+        "options": "1. a hole game\n2. a game that is a variant of Halma\n3. used for depicting the mourning of Jesus' body",
+        "correct_num": 3,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is [MASK].\n\nOptions:\n1. a hole game\n2. a game that is a variant of Halma\n3. used for depicting the mourning of Jesus' body"
+    },
+    {
+        "test_id": 48,
+        "relation": "IsA",
+        "correct_feat": "used for depicting Jesus' mother Mary cradling his body",
+        "options": "1. used for depicting Jesus' mother Mary cradling his body\n2. a 2016 novel\n3. a spin-off of Empire Builder",
+        "correct_num": 1,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is [MASK].\n\nOptions:\n1. used for depicting Jesus' mother Mary cradling his body\n2. a 2016 novel\n3. a spin-off of Empire Builder"
+    },
+    {
+        "test_id": 49,
+        "relation": "IsA",
+        "correct_feat": "used for forming the subject of many individual works",
+        "options": "1. a foolscap quarto writing paper\n2. used for forming the subject of many individual works\n3. a strategy board game",
+        "correct_num": 2,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is [MASK].\n\nOptions:\n1. a foolscap quarto writing paper\n2. used for forming the subject of many individual works\n3. a strategy board game"
+    },
+    {
+        "test_id": 50,
+        "relation": "IsA",
+        "correct_feat": "used for concentrating on Mary's grief for her son",
+        "options": "1. a 2005 novel\n2. a new Rijnbrug\n3. used for concentrating on Mary's grief for her son",
+        "correct_num": 3,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is [MASK].\n\nOptions:\n1. a 2005 novel\n2. a new Rijnbrug\n3. used for concentrating on Mary's grief for her son"
+    },
+    {
+        "test_id": 51,
+        "relation": "IsA",
+        "correct_feat": "used in cycles of the Life of Christ",
+        "options": "1. used in cycles of the Life of Christ\n2. a board wargame\n3. similar in concept to traditional tic-tac-toe",
+        "correct_num": 1,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is [MASK].\n\nOptions:\n1. used in cycles of the Life of Christ\n2. a board wargame\n3. similar in concept to traditional tic-tac-toe"
+    },
+    {
+        "test_id": 52,
+        "relation": "IsA",
+        "correct_feat": "used in Early Netherlandish painting of the 15th century",
+        "options": "1. a game that is mentioned in Upton Sinclair's Dragon's Teeth\n2. used in Early Netherlandish painting of the 15th century\n3. a pit and pebble game",
+        "correct_num": 2,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is [MASK].\n\nOptions:\n1. a game that is mentioned in Upton Sinclair's Dragon's Teeth\n2. used in Early Netherlandish painting of the 15th century\n3. a pit and pebble game"
+    },
+    {
+        "test_id": 53,
+        "relation": "IsA",
+        "correct_feat": "used in cycles of the Life of the Virgin",
+        "options": "1. a medium-sized vessel\n2. a Polish-language version\n3. used in cycles of the Life of the Virgin",
+        "correct_num": 3,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is [MASK].\n\nOptions:\n1. a medium-sized vessel\n2. a Polish-language version\n3. used in cycles of the Life of the Virgin"
+    },
+    {
+        "test_id": 54,
+        "relation": "OccurredIn",
+        "correct_feat": "the High Middle Ages",
+        "options": "1. the High Middle Ages\n2. Spanish culture\n3. the Spanish Empire",
+        "correct_num": 1,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> occurred in [MASK].\n\nOptions:\n1. the High Middle Ages\n2. Spanish culture\n3. the Spanish Empire"
+    },
+    {
+        "test_id": 55,
+        "relation": "OccurredIn",
+        "correct_feat": "the Baroque",
+        "options": "1. FY 2013\n2. the Baroque\n3. Germany",
+        "correct_num": 2,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> occurred in [MASK].\n\nOptions:\n1. FY 2013\n2. the Baroque\n3. Germany"
+    },
+    {
+        "test_id": 56,
+        "relation": "OccurredIn",
+        "correct_feat": "the first millennium",
+        "options": "1. October 1979\n2. the 16th century\n3. the first millennium",
+        "correct_num": 3,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> occurred in [MASK].\n\nOptions:\n1. October 1979\n2. the 16th century\n3. the first millennium"
+    },
+    {
+        "test_id": 57,
+        "relation": "OccurredIn",
+        "correct_feat": "the 11th century",
+        "options": "1. the 11th century\n2. Celebes\n3. the 16th century",
+        "correct_num": 1,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> occurred in [MASK].\n\nOptions:\n1. the 11th century\n2. Celebes\n3. the 16th century"
+    },
+    {
+        "test_id": 58,
+        "relation": "OccurredIn",
+        "correct_feat": "Western Gothic art",
+        "options": "1. 1966\n2. Western Gothic art\n3. 70 BC",
+        "correct_num": 2,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> occurred in [MASK].\n\nOptions:\n1. 1966\n2. Western Gothic art\n3. 70 BC"
+    },
+    {
+        "test_id": 59,
+        "relation": "OccurredIn",
+        "correct_feat": "Early Netherlandish painting of the 15th century",
+        "options": "1. December 2007\n2. Poland and Lithuania\n3. Early Netherlandish painting of the 15th century",
+        "correct_num": 3,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> occurred in [MASK].\n\nOptions:\n1. December 2007\n2. Poland and Lithuania\n3. Early Netherlandish painting of the 15th century"
+    },
+    {
+        "test_id": 60,
+        "relation": "OccurredIn",
+        "correct_feat": "Italian Trecento",
+        "options": "1. Italian Trecento\n2. the 16th century\n3. 70 BC",
+        "correct_num": 1,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> occurred in [MASK].\n\nOptions:\n1. Italian Trecento\n2. the 16th century\n3. 70 BC"
+    }
+]

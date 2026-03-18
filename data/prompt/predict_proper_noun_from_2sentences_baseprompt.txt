@@ -1,0 +1,37 @@
+You are given two factual sentences describing a specific proper noun (e.g., a person, place, organization, product, work, or event).
+
+Your job is to decide whether the proper noun can be uniquely identified from ONLY these two sentences.
+
+Rules:
+- If the two sentences uniquely identify ONE proper noun, set "identifiable" to true and provide the exact name in "proper_noun".
+- If the information is insufficient OR multiple candidates could fit, set "identifiable" to false and set "proper_noun" to null.
+- Do NOT guess when ambiguous.
+- Output MUST be valid JSON that matches the provided schema. Do not include any extra keys.
+
+Output JSON fields:
+- identifiable: boolean
+- proper_noun: string or null
+- confidence: number between 0 and 1 (how confident you are in the identifiable decision)
+
+Examples:
+Example 1 (identifiable = true)
+Input:
+Sentence 1: "It is located in Paris, France."
+Sentence 2: "It is a famous iron lattice tower."
+Output:
+{"identifiable": true, "proper_noun": "Eiffel Tower", "confidence": 0.99}
+
+Example 2 (identifiable = false)
+Input:
+Sentence 1: "It is a famous tower in a capital city."
+Sentence 2: "It is a popular tourist attraction."
+Output:
+{"identifiable": false, "proper_noun": null, "confidence": 0.95}
+
+Now, evaluate the following input.
+
+Sentence 1:
+{sentence_1}
+
+Sentence 2:
+{sentence_2}

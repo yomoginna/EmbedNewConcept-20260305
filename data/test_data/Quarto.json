@@ -1,0 +1,738 @@
+[
+    {
+        "test_id": 0,
+        "relation": "About",
+        "correct_feat": "the format of a book or pamphlet",
+        "options": "1. the format of a book or pamphlet\n2. the representation of the Nativity and its importance in cycles of the Life of the Virgin and Life of Christ\n3. Mary seated in a landscape with the Christ child",
+        "correct_num": 1,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is about [MASK].\n\nOptions:\n1. the format of a book or pamphlet\n2. the representation of the Nativity and its importance in cycles of the Life of the Virgin and Life of Christ\n3. Mary seated in a landscape with the Christ child"
+    },
+    {
+        "test_id": 1,
+        "relation": "About",
+        "correct_feat": "the size of books",
+        "options": "1. the final meal that Jesus shared with his apostles in Jerusalem before his crucifixion\n2. the size of books\n3. a particular type of icon of the Theotokos (Virgin Mary)",
+        "correct_num": 2,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is about [MASK].\n\nOptions:\n1. the final meal that Jesus shared with his apostles in Jerusalem before his crucifixion\n2. the size of books\n3. a particular type of icon of the Theotokos (Virgin Mary)"
+    },
+    {
+        "test_id": 2,
+        "relation": "Affects",
+        "correct_feat": "the size of books",
+        "options": "1. the events of the Passion of Jesus\n2. the visibility of the clock\n3. the size of books",
+        "correct_num": 3,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> affects [MASK].\n\nOptions:\n1. the events of the Passion of Jesus\n2. the visibility of the clock\n3. the size of books"
+    },
+    {
+        "test_id": 3,
+        "relation": "AssociatedWith",
+        "correct_feat": "book sizes",
+        "options": "1. book sizes\n2. the Virgin of the Passion in Eastern Orthodoxy\n3. the Chicano Movement of the 1970s",
+        "correct_num": 1,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is associated with [MASK].\n\nOptions:\n1. book sizes\n2. the Virgin of the Passion in Eastern Orthodoxy\n3. the Chicano Movement of the 1970s"
+    },
+    {
+        "test_id": 4,
+        "relation": "BelongsTo",
+        "correct_feat": "book formats",
+        "options": "1. the Lutheran Church\n2. book formats\n3. the Roman Rite",
+        "correct_num": 2,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> belongs to [MASK].\n\nOptions:\n1. the Lutheran Church\n2. book formats\n3. the Roman Rite"
+    },
+    {
+        "test_id": 5,
+        "relation": "ConsistsOf",
+        "correct_feat": "one or more full sheets of paper",
+        "options": "1. artists including \"Bichitr,\" \"Govardhana,\" \"Dawlat,\" \"Mohan,\" and \"Nanha\n2. support structures at the periphery of the building\n3. one or more full sheets of paper",
+        "correct_num": 3,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> consists of [MASK].\n\nOptions:\n1. artists including \"Bichitr,\" \"Govardhana,\" \"Dawlat,\" \"Mohan,\" and \"Nanha\n2. support structures at the periphery of the building\n3. one or more full sheets of paper"
+    },
+    {
+        "test_id": 6,
+        "relation": "ConsistsOf",
+        "correct_feat": "four leaves",
+        "options": "1. four leaves\n2. a roof or a skylight\n3. a tsohar",
+        "correct_num": 1,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> consists of [MASK].\n\nOptions:\n1. four leaves\n2. a roof or a skylight\n3. a tsohar"
+    },
+    {
+        "test_id": 7,
+        "relation": "ConsistsOf",
+        "correct_feat": "eight pages of text",
+        "options": "1. depictions of artists and activists among the Chicano community\n2. eight pages of text\n3. scenes from the 1970s and 1980s",
+        "correct_num": 2,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> consists of [MASK].\n\nOptions:\n1. depictions of artists and activists among the Chicano community\n2. eight pages of text\n3. scenes from the 1970s and 1980s"
+    },
+    {
+        "test_id": 8,
+        "relation": "CreatedAround",
+        "correct_feat": "the mid-nineteenth century",
+        "options": "1. 1978\n2. the 10th century when crowns first appeared in depictions\n3. the mid-nineteenth century",
+        "correct_num": 3,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> was created around [MASK].\n\nOptions:\n1. 1978\n2. the 10th century when crowns first appeared in depictions\n3. the mid-nineteenth century"
+    },
+    {
+        "test_id": 9,
+        "relation": "CreatedIn",
+        "correct_feat": "the incunabula period",
+        "options": "1. the incunabula period\n2. the United States\n3. ancient Greece",
+        "correct_num": 1,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> was created in [MASK].\n\nOptions:\n1. the incunabula period\n2. the United States\n3. ancient Greece"
+    },
+    {
+        "test_id": 10,
+        "relation": "CreatedIn",
+        "correct_feat": "the Elizabethan era",
+        "options": "1. the 4th century\n2. the Elizabethan era\n3. Chapel Hill",
+        "correct_num": 2,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> was created in [MASK].\n\nOptions:\n1. the 4th century\n2. the Elizabethan era\n3. Chapel Hill"
+    },
+    {
+        "test_id": 11,
+        "relation": "CreatedIn",
+        "correct_feat": "the mid-seventeenth century",
+        "options": "1. Kansas\n2. Brighton, England\n3. the mid-seventeenth century",
+        "correct_num": 3,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> was created in [MASK].\n\nOptions:\n1. Kansas\n2. Brighton, England\n3. the mid-seventeenth century"
+    },
+    {
+        "test_id": 12,
+        "relation": "HasA",
+        "correct_feat": "squarish proportions",
+        "options": "1. squarish proportions\n2. a lighthouse\n3. 33 dogs",
+        "correct_num": 1,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> has [MASK].\n\nOptions:\n1. squarish proportions\n2. a lighthouse\n3. 33 dogs"
+    },
+    {
+        "test_id": 13,
+        "relation": "HasA",
+        "correct_feat": "more squarish proportions than folios or octavos",
+        "options": "1. tuned mass dampers\n2. more squarish proportions than folios or octavos\n3. Persian inscriptions identifying each figure",
+        "correct_num": 2,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> has [MASK].\n\nOptions:\n1. tuned mass dampers\n2. more squarish proportions than folios or octavos\n3. Persian inscriptions identifying each figure"
+    },
+    {
+        "test_id": 14,
+        "relation": "HasA",
+        "correct_feat": "leaves that are trimmed along the folds",
+        "options": "1. ten robust steel-framed panels bolted together\n2. Americana imagery\n3. leaves that are trimmed along the folds",
+        "correct_num": 3,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> has [MASK].\n\nOptions:\n1. ten robust steel-framed panels bolted together\n2. Americana imagery\n3. leaves that are trimmed along the folds"
+    },
+    {
+        "test_id": 15,
+        "relation": "HasA",
+        "correct_feat": "eight pages of text printed on full sheets",
+        "options": "1. eight pages of text printed on full sheets\n2. a crowing rooster perched atop the east window frame\n3. a storm",
+        "correct_num": 1,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> has [MASK].\n\nOptions:\n1. eight pages of text printed on full sheets\n2. a crowing rooster perched atop the east window frame\n3. a storm"
+    },
+    {
+        "test_id": 16,
+        "relation": "HasA",
+        "correct_feat": "four leaves produced by folding",
+        "options": "1. a Byzantine Eleusa type\n2. four leaves produced by folding\n3. ten robust steel-framed panels bolted together",
+        "correct_num": 2,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> has [MASK].\n\nOptions:\n1. a Byzantine Eleusa type\n2. four leaves produced by folding\n3. ten robust steel-framed panels bolted together"
+    },
+    {
+        "test_id": 17,
+        "relation": "HasFeatureOf",
+        "correct_feat": "folding sheets twice",
+        "options": "1. the practice of leaving Christmas decorations up until Candlemas\n2. the juxtaposition of multiple forms\n3. folding sheets twice",
+        "correct_num": 3,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is characterized by [MASK].\n\nOptions:\n1. the practice of leaving Christmas decorations up until Candlemas\n2. the juxtaposition of multiple forms\n3. folding sheets twice"
+    },
+    {
+        "test_id": 18,
+        "relation": "HasFeatureOf",
+        "correct_feat": "printing eight pages of text on a full sheet",
+        "options": "1. printing eight pages of text on a full sheet\n2. being poetically called \"More spacious than the Heavens\"\n3. warfare being far less brutal than in later periods",
+        "correct_num": 1,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is characterized by [MASK].\n\nOptions:\n1. printing eight pages of text on a full sheet\n2. being poetically called \"More spacious than the Heavens\"\n3. warfare being far less brutal than in later periods"
+    },
+    {
+        "test_id": 19,
+        "relation": "HasFeatureOf",
+        "correct_feat": "leaves trimmed along the folds",
+        "options": "1. the niddy-noddy's arms giving it the shape of a cross\n2. leaves trimmed along the folds\n3. the depiction of los ranchos",
+        "correct_num": 2,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is characterized by [MASK].\n\nOptions:\n1. the niddy-noddy's arms giving it the shape of a cross\n2. leaves trimmed along the folds\n3. the depiction of los ranchos"
+    },
+    {
+        "test_id": 20,
+        "relation": "HasFeatureOf",
+        "correct_feat": "squarish proportions",
+        "options": "1. strict Conditions of Fitness mandated by Transport for London\n2. the depiction of a soldier labeled \"The Silver Dollar\"\n3. squarish proportions",
+        "correct_num": 3,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is characterized by [MASK].\n\nOptions:\n1. strict Conditions of Fitness mandated by Transport for London\n2. the depiction of a soldier labeled \"The Silver Dollar\"\n3. squarish proportions"
+    },
+    {
+        "test_id": 21,
+        "relation": "HasFeatureOf",
+        "correct_feat": "being about 12 inches tall",
+        "options": "1. being about 12 inches tall\n2. the influence of French caricaturists of the era\n3. the manifestation of God’s justice",
+        "correct_num": 1,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is characterized by [MASK].\n\nOptions:\n1. being about 12 inches tall\n2. the influence of French caricaturists of the era\n3. the manifestation of God’s justice"
+    },
+    {
+        "test_id": 22,
+        "relation": "HasFeatureOf",
+        "correct_feat": "being approximately 10 inches tall by 8 inches wide",
+        "options": "1. being one of the most frequently represented battles of the era\n2. being approximately 10 inches tall by 8 inches wide\n3. its range",
+        "correct_num": 2,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is characterized by [MASK].\n\nOptions:\n1. being one of the most frequently represented battles of the era\n2. being approximately 10 inches tall by 8 inches wide\n3. its range"
+    },
+    {
+        "test_id": 23,
+        "relation": "IsA",
+        "correct_feat": "a format of a book or pamphlet",
+        "options": "1. a chapel\n2. a theme\n3. a format of a book or pamphlet",
+        "correct_num": 3,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is [MASK].\n\nOptions:\n1. a chapel\n2. a theme\n3. a format of a book or pamphlet"
+    },
+    {
+        "test_id": 24,
+        "relation": "IsA",
+        "correct_feat": "a general description of size of books",
+        "options": "1. a general description of size of books\n2. a painted icon\n3. a transmitter",
+        "correct_num": 1,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is [MASK].\n\nOptions:\n1. a general description of size of books\n2. a painted icon\n3. a transmitter"
+    },
+    {
+        "test_id": 25,
+        "relation": "IsA",
+        "correct_feat": "a book or pamphlet",
+        "options": "1. a counterprocession\n2. a book or pamphlet\n3. a related subject",
+        "correct_num": 2,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is [MASK].\n\nOptions:\n1. a counterprocession\n2. a book or pamphlet\n3. a related subject"
+    },
+    {
+        "test_id": 26,
+        "relation": "IsA",
+        "correct_feat": "a demy quarto",
+        "options": "1. a gift from Norway to the United Nations\n2. a celebration of Latino and Chicano culture and influence\n3. a demy quarto",
+        "correct_num": 3,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is [MASK].\n\nOptions:\n1. a gift from Norway to the United Nations\n2. a celebration of Latino and Chicano culture and influence\n3. a demy quarto"
+    },
+    {
+        "test_id": 27,
+        "relation": "IsA",
+        "correct_feat": "a medium quarto",
+        "options": "1. a medium quarto\n2. a three-dimensional diorama\n3. a creature",
+        "correct_num": 1,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is [MASK].\n\nOptions:\n1. a medium quarto\n2. a three-dimensional diorama\n3. a creature"
+    },
+    {
+        "test_id": 28,
+        "relation": "IsA",
+        "correct_feat": "a royal quarto",
+        "options": "1. a civil function\n2. a royal quarto\n3. a venerated icon",
+        "correct_num": 2,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is [MASK].\n\nOptions:\n1. a civil function\n2. a royal quarto\n3. a venerated icon"
+    },
+    {
+        "test_id": 29,
+        "relation": "IsA",
+        "correct_feat": "a small quarto",
+        "options": "1. a Black Virgin\n2. a subject that conflates with the Adoration of the Shepherds\n3. a small quarto",
+        "correct_num": 3,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is [MASK].\n\nOptions:\n1. a Black Virgin\n2. a subject that conflates with the Adoration of the Shepherds\n3. a small quarto"
+    },
+    {
+        "test_id": 30,
+        "relation": "IsA",
+        "correct_feat": "a foolscap quarto writing paper",
+        "options": "1. a foolscap quarto writing paper\n2. a 16th-century copy of the icon\n3. a general or Last Judgment",
+        "correct_num": 1,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is [MASK].\n\nOptions:\n1. a foolscap quarto writing paper\n2. a 16th-century copy of the icon\n3. a general or Last Judgment"
+    },
+    {
+        "test_id": 31,
+        "relation": "IsA",
+        "correct_feat": "a \"bad quarto\"",
+        "options": "1. a miraculous icon\n2. a \"bad quarto\"\n3. a sonnet",
+        "correct_num": 2,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is [MASK].\n\nOptions:\n1. a miraculous icon\n2. a \"bad quarto\"\n3. a sonnet"
+    },
+    {
+        "test_id": 32,
+        "relation": "IsA",
+        "correct_feat": "known as Qto",
+        "options": "1. an early example of Mughal political imagery\n2. a sensory journey both in time and space\n3. known as Qto",
+        "correct_num": 3,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is [MASK].\n\nOptions:\n1. an early example of Mughal political imagery\n2. a sensory journey both in time and space\n3. known as Qto"
+    },
+    {
+        "test_id": 33,
+        "relation": "IsA",
+        "correct_feat": "known as 4to",
+        "options": "1. known as 4to\n2. a powerful demonic entity\n3. a celebration of Latino and Chicano culture and influence",
+        "correct_num": 1,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is [MASK].\n\nOptions:\n1. known as 4to\n2. a powerful demonic entity\n3. a celebration of Latino and Chicano culture and influence"
+    },
+    {
+        "test_id": 34,
+        "relation": "IsA",
+        "correct_feat": "known as 4º",
+        "options": "1. a holy tile\n2. known as 4º\n3. a cartoon",
+        "correct_num": 2,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is [MASK].\n\nOptions:\n1. a holy tile\n2. known as 4º\n3. a cartoon"
+    },
+    {
+        "test_id": 35,
+        "relation": "IsA",
+        "correct_feat": "known as \"quarto in 8s\"",
+        "options": "1. a work of moral education\n2. a painting\n3. known as \"quarto in 8s\"",
+        "correct_num": 3,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is [MASK].\n\nOptions:\n1. a work of moral education\n2. a painting\n3. known as \"quarto in 8s\""
+    },
+    {
+        "test_id": 36,
+        "relation": "IsA",
+        "correct_feat": "known as \"demy quarto\"",
+        "options": "1. known as \"demy quarto\"\n2. an integrated element of the Great Wall of China\n3. a funeral procession",
+        "correct_num": 1,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is [MASK].\n\nOptions:\n1. known as \"demy quarto\"\n2. an integrated element of the Great Wall of China\n3. a funeral procession"
+    },
+    {
+        "test_id": 37,
+        "relation": "IsA",
+        "correct_feat": "known as \"medium quarto\"",
+        "options": "1. a patron icon\n2. known as \"medium quarto\"\n3. a Catholic title of the Blessed Virgin Mary",
+        "correct_num": 2,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is [MASK].\n\nOptions:\n1. a patron icon\n2. known as \"medium quarto\"\n3. a Catholic title of the Blessed Virgin Mary"
+    },
+    {
+        "test_id": 38,
+        "relation": "IsA",
+        "correct_feat": "known as \"royal quarto\"",
+        "options": "1. the only extant surviving piece by Zhao Gan\n2. one of the most venerated icons in the Upper Volga region\n3. known as \"royal quarto\"",
+        "correct_num": 3,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is [MASK].\n\nOptions:\n1. the only extant surviving piece by Zhao Gan\n2. one of the most venerated icons in the Upper Volga region\n3. known as \"royal quarto\""
+    },
+    {
+        "test_id": 39,
+        "relation": "IsA",
+        "correct_feat": "known as \"small quarto\"",
+        "options": "1. known as \"small quarto\"\n2. a talking point\n3. a copy painted in the \"academic\" style",
+        "correct_num": 1,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is [MASK].\n\nOptions:\n1. known as \"small quarto\"\n2. a talking point\n3. a copy painted in the \"academic\" style"
+    },
+    {
+        "test_id": 40,
+        "relation": "IsA",
+        "correct_feat": "known as \"sermon paper\"",
+        "options": "1. a statue\n2. known as \"sermon paper\"\n3. a particular judgment in Catholicism and Eastern Orthodoxy",
+        "correct_num": 2,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is [MASK].\n\nOptions:\n1. a statue\n2. known as \"sermon paper\"\n3. a particular judgment in Catholicism and Eastern Orthodoxy"
+    },
+    {
+        "test_id": 41,
+        "relation": "IsA",
+        "correct_feat": "known as comedia suelta in Spanish culture",
+        "options": "1. a depiction of Saint Onuphrius\n2. an interpretation of the original in a contemporary Netherlandish style\n3. known as comedia suelta in Spanish culture",
+        "correct_num": 3,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is [MASK].\n\nOptions:\n1. a depiction of Saint Onuphrius\n2. an interpretation of the original in a contemporary Netherlandish style\n3. known as comedia suelta in Spanish culture"
+    },
+    {
+        "test_id": 42,
+        "relation": "IsA",
+        "correct_feat": "known for being the format of the earliest known European printed book",
+        "options": "1. known for being the format of the earliest known European printed book\n2. a Blessed Virgin depiction\n3. an image of the Child Jesus",
+        "correct_num": 1,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is [MASK].\n\nOptions:\n1. known for being the format of the earliest known European printed book\n2. a Blessed Virgin depiction\n3. an image of the Child Jesus"
+    },
+    {
+        "test_id": 43,
+        "relation": "IsA",
+        "correct_feat": "known for being the most common format of books printed in the incunabula period",
+        "options": "1. a funeral procession\n2. known for being the most common format of books printed in the incunabula period\n3. an Eastern Orthodox icon of the Virgin of the Passion called Amolyntos",
+        "correct_num": 2,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is [MASK].\n\nOptions:\n1. a funeral procession\n2. known for being the most common format of books printed in the incunabula period\n3. an Eastern Orthodox icon of the Virgin of the Passion called Amolyntos"
+    },
+    {
+        "test_id": 44,
+        "relation": "IsA",
+        "correct_feat": "known for plays and poems being commonly printed as separate works in this format during the Elizabethan era",
+        "options": "1. a pilgrim feast\n2. a painted icon\n3. known for plays and poems being commonly printed as separate works in this format during the Elizabethan era",
+        "correct_num": 3,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is [MASK].\n\nOptions:\n1. a pilgrim feast\n2. a painted icon\n3. known for plays and poems being commonly printed as separate works in this format during the Elizabethan era"
+    },
+    {
+        "test_id": 45,
+        "relation": "IsA",
+        "correct_feat": "known for Shakespeare's plays being previously separately printed in this format",
+        "options": "1. known for Shakespeare's plays being previously separately printed in this format\n2. an outdoor art\n3. a Catholic title of the Blessed Virgin Mary",
+        "correct_num": 1,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is [MASK].\n\nOptions:\n1. known for Shakespeare's plays being previously separately printed in this format\n2. an outdoor art\n3. a Catholic title of the Blessed Virgin Mary"
+    },
+    {
+        "test_id": 46,
+        "relation": "IsA",
+        "correct_feat": "named after the Latin word quārtō",
+        "options": "1. a repeater\n2. named after the Latin word quārtō\n3. a work of moral education",
+        "correct_num": 2,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is [MASK].\n\nOptions:\n1. a repeater\n2. named after the Latin word quārtō\n3. a work of moral education"
+    },
+    {
+        "test_id": 47,
+        "relation": "IsA",
+        "correct_feat": "named after the ablative form of quārtus",
+        "options": "1. one of the longest murals in the world\n2. a small Italo-Byzantine replica of an Eleusa (Virgin of Tenderness) icon\n3. named after the ablative form of quārtus",
+        "correct_num": 3,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is [MASK].\n\nOptions:\n1. one of the longest murals in the world\n2. a small Italo-Byzantine replica of an Eleusa (Virgin of Tenderness) icon\n3. named after the ablative form of quārtus"
+    },
+    {
+        "test_id": 48,
+        "relation": "IsA",
+        "correct_feat": "named after the word fourth",
+        "options": "1. named after the word fourth\n2. a painting\n3. the county's business hub",
+        "correct_num": 1,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is [MASK].\n\nOptions:\n1. named after the word fourth\n2. a painting\n3. the county's business hub"
+    },
+    {
+        "test_id": 49,
+        "relation": "IsA",
+        "correct_feat": "part of the Gutenberg Bible",
+        "options": "1. a demonstration of the artist's skill for potential new clients\n2. part of the Gutenberg Bible\n3. a work of Emmanuel Tzanes",
+        "correct_num": 2,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is [MASK].\n\nOptions:\n1. a demonstration of the artist's skill for potential new clients\n2. part of the Gutenberg Bible\n3. a work of Emmanuel Tzanes"
+    },
+    {
+        "test_id": 50,
+        "relation": "IsA",
+        "correct_feat": "part of collected editions of Shakespeare's plays",
+        "options": "1. a hackney, or hackney carriage\n2. a square pyramid floating on a raft\n3. part of collected editions of Shakespeare's plays",
+        "correct_num": 3,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is [MASK].\n\nOptions:\n1. a hackney, or hackney carriage\n2. a square pyramid floating on a raft\n3. part of collected editions of Shakespeare's plays"
+    },
+    {
+        "test_id": 51,
+        "relation": "IsA",
+        "correct_feat": "part of comedia suelta",
+        "options": "1. part of comedia suelta\n2. a technological march towards an increasingly perfectly realistic reproduction\n3. a Passover meal",
+        "correct_num": 1,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is [MASK].\n\nOptions:\n1. part of comedia suelta\n2. a technological march towards an increasingly perfectly realistic reproduction\n3. a Passover meal"
+    },
+    {
+        "test_id": 52,
+        "relation": "IsA",
+        "correct_feat": "used as a general description of size",
+        "options": "1. a pastel on monotype\n2. used as a general description of size\n3. a type of rail transport",
+        "correct_num": 2,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is [MASK].\n\nOptions:\n1. a pastel on monotype\n2. used as a general description of size\n3. a type of rail transport"
+    },
+    {
+        "test_id": 53,
+        "relation": "IsA",
+        "correct_feat": "used as \"sermon paper\"",
+        "options": "1. a 1978 mural\n2. an icon\n3. used as \"sermon paper\"",
+        "correct_num": 3,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is [MASK].\n\nOptions:\n1. a 1978 mural\n2. an icon\n3. used as \"sermon paper\""
+    },
+    {
+        "test_id": 54,
+        "relation": "IsA",
+        "correct_feat": "used as Q1, Q2, etc. by bibliographers",
+        "options": "1. used as Q1, Q2, etc. by bibliographers\n2. a public test of the artist's skill\n3. a scene often used to represent the Nativity",
+        "correct_num": 1,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is [MASK].\n\nOptions:\n1. used as Q1, Q2, etc. by bibliographers\n2. a public test of the artist's skill\n3. a scene often used to represent the Nativity"
+    },
+    {
+        "test_id": 55,
+        "relation": "IsA",
+        "correct_feat": "used for printing books",
+        "options": "1. album cover art\n2. used for printing books\n3. a pastel on monotype",
+        "correct_num": 2,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is [MASK].\n\nOptions:\n1. album cover art\n2. used for printing books\n3. a pastel on monotype"
+    },
+    {
+        "test_id": 56,
+        "relation": "IsA",
+        "correct_feat": "used for printing pamphlets",
+        "options": "1. a public test of the artist's skill\n2. a group portrait of the Timurid dynasty\n3. used for printing pamphlets",
+        "correct_num": 3,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is [MASK].\n\nOptions:\n1. a public test of the artist's skill\n2. a group portrait of the Timurid dynasty\n3. used for printing pamphlets"
+    },
+    {
+        "test_id": 57,
+        "relation": "IsA",
+        "correct_feat": "used for printing plays",
+        "options": "1. used for printing plays\n2. a diving platform\n3. a form of transport",
+        "correct_num": 1,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is [MASK].\n\nOptions:\n1. used for printing plays\n2. a diving platform\n3. a form of transport"
+    },
+    {
+        "test_id": 58,
+        "relation": "IsA",
+        "correct_feat": "used for printing poems",
+        "options": "1. a departure from Byzantine tradition\n2. used for printing poems\n3. a communications tower",
+        "correct_num": 2,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is [MASK].\n\nOptions:\n1. a departure from Byzantine tradition\n2. used for printing poems\n3. a communications tower"
+    },
+    {
+        "test_id": 59,
+        "relation": "IsA",
+        "correct_feat": "used for writing paper",
+        "options": "1. a feast of the Presentation of Our Lord\n2. a chapel\n3. used for writing paper",
+        "correct_num": 3,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is [MASK].\n\nOptions:\n1. a feast of the Presentation of Our Lord\n2. a chapel\n3. used for writing paper"
+    },
+    {
+        "test_id": 60,
+        "relation": "IsA",
+        "correct_feat": "used in bookbinding",
+        "options": "1. used in bookbinding\n2. a feast of the Purification of the Virgin\n3. a companion mural",
+        "correct_num": 1,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is [MASK].\n\nOptions:\n1. used in bookbinding\n2. a feast of the Purification of the Virgin\n3. a companion mural"
+    },
+    {
+        "test_id": 61,
+        "relation": "IsA",
+        "correct_feat": "used in the incunabula period",
+        "options": "1. primarily very green and hilly\n2. used in the incunabula period\n3. the first pictorial representation of a scene of prehistoric life based on evidence from fossil reconstructions",
+        "correct_num": 2,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is [MASK].\n\nOptions:\n1. primarily very green and hilly\n2. used in the incunabula period\n3. the first pictorial representation of a scene of prehistoric life based on evidence from fossil reconstructions"
+    },
+    {
+        "test_id": 62,
+        "relation": "IsA",
+        "correct_feat": "used in the Elizabethan era",
+        "options": "1. a Minor Basilica\n2. a frieze\n3. used in the Elizabethan era",
+        "correct_num": 3,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is [MASK].\n\nOptions:\n1. a Minor Basilica\n2. a frieze\n3. used in the Elizabethan era"
+    },
+    {
+        "test_id": 63,
+        "relation": "IsA",
+        "correct_feat": "used in the mid-seventeenth century",
+        "options": "1. used in the mid-seventeenth century\n2. a full-sized theatre\n3. a painting",
+        "correct_num": 1,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is [MASK].\n\nOptions:\n1. used in the mid-seventeenth century\n2. a full-sized theatre\n3. a painting"
+    },
+    {
+        "test_id": 64,
+        "relation": "IsA",
+        "correct_feat": "used in Spanish culture",
+        "options": "1. a means of transportation\n2. used in Spanish culture\n3. a Black Virgin",
+        "correct_num": 2,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is [MASK].\n\nOptions:\n1. a means of transportation\n2. used in Spanish culture\n3. a Black Virgin"
+    },
+    {
+        "test_id": 65,
+        "relation": "IsA",
+        "correct_feat": "used in British usage",
+        "options": "1. a demonstration of the artist's skill for potential new clients\n2. a feast of the Lord\n3. used in British usage",
+        "correct_num": 3,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is [MASK].\n\nOptions:\n1. a demonstration of the artist's skill for potential new clients\n2. a feast of the Lord\n3. used in British usage"
+    },
+    {
+        "test_id": 66,
+        "relation": "IsA",
+        "correct_feat": "used to produce four leaves",
+        "options": "1. used to produce four leaves\n2. art\n3. a drop tube",
+        "correct_num": 1,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is [MASK].\n\nOptions:\n1. used to produce four leaves\n2. art\n3. a drop tube"
+    },
+    {
+        "test_id": 67,
+        "relation": "IsA",
+        "correct_feat": "used to produce eight book pages",
+        "options": "1. a depiction of the history of the U.S.-Mexico border and the culture of migration across it\n2. used to produce eight book pages\n3. the boat in the Genesis flood narrative",
+        "correct_num": 2,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is [MASK].\n\nOptions:\n1. a depiction of the history of the U.S.-Mexico border and the culture of migration across it\n2. used to produce eight book pages\n3. the boat in the Genesis flood narrative"
+    },
+    {
+        "test_id": 68,
+        "relation": "IsA",
+        "correct_feat": "used to form a book",
+        "options": "1. a common subject in Christian art from the High Middle Ages to the Baroque\n2. a spectacular mural\n3. used to form a book",
+        "correct_num": 3,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is [MASK].\n\nOptions:\n1. a common subject in Christian art from the High Middle Ages to the Baroque\n2. a spectacular mural\n3. used to form a book"
+    },
+    {
+        "test_id": 69,
+        "relation": "IsA",
+        "correct_feat": "used to attach gatherings",
+        "options": "1. used to attach gatherings\n2. a civil function\n3. an element of its setting, the Mississippi Gulf Coast",
+        "correct_num": 1,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is [MASK].\n\nOptions:\n1. used to attach gatherings\n2. a civil function\n3. an element of its setting, the Mississippi Gulf Coast"
+    },
+    {
+        "test_id": 70,
+        "relation": "IsA",
+        "correct_feat": "used to insert additional leaves",
+        "options": "1. an emblem of the evolution of the Cretan School\n2. used to insert additional leaves\n3. an early form of movie making",
+        "correct_num": 2,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is [MASK].\n\nOptions:\n1. an emblem of the evolution of the Cretan School\n2. used to insert additional leaves\n3. an early form of movie making"
+    },
+    {
+        "test_id": 71,
+        "relation": "OccurredDuring",
+        "correct_feat": "the incunabula period",
+        "options": "1. the time they departed from Jericho\n2. the holiday of Sukkot\n3. the incunabula period",
+        "correct_num": 3,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> occurred during [MASK].\n\nOptions:\n1. the time they departed from Jericho\n2. the holiday of Sukkot\n3. the incunabula period"
+    },
+    {
+        "test_id": 72,
+        "relation": "OccurredDuring",
+        "correct_feat": "the Elizabethan era",
+        "options": "1. the Elizabethan era\n2. the summer of 1977\n3. the summer of 1608",
+        "correct_num": 1,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> occurred during [MASK].\n\nOptions:\n1. the Elizabethan era\n2. the summer of 1977\n3. the summer of 1608"
+    },
+    {
+        "test_id": 73,
+        "relation": "OccurredDuring",
+        "correct_feat": "the mid-seventeenth century",
+        "options": "1. the time they departed from Jericho\n2. the mid-seventeenth century\n3. World War I",
+        "correct_num": 2,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> occurred during [MASK].\n\nOptions:\n1. the time they departed from Jericho\n2. the mid-seventeenth century\n3. World War I"
+    },
+    {
+        "test_id": 74,
+        "relation": "OccurredIn",
+        "correct_feat": "Europe",
+        "options": "1. the womb of the Virgin\n2. the second session of GGIE\n3. Europe",
+        "correct_num": 3,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> occurred in [MASK].\n\nOptions:\n1. the womb of the Virgin\n2. the second session of GGIE\n3. Europe"
+    },
+    {
+        "test_id": 75,
+        "relation": "OccurredIn",
+        "correct_feat": "the incunabula period",
+        "options": "1. the incunabula period\n2. Sicily\n3. the plaza containing the columns",
+        "correct_num": 1,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> occurred in [MASK].\n\nOptions:\n1. the incunabula period\n2. Sicily\n3. the plaza containing the columns"
+    },
+    {
+        "test_id": 76,
+        "relation": "OccurredIn",
+        "correct_feat": "the Elizabethan era",
+        "options": "1. 1532\n2. the Elizabethan era\n3. the sanctuary of an Orthodox church",
+        "correct_num": 2,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> occurred in [MASK].\n\nOptions:\n1. 1532\n2. the Elizabethan era\n3. the sanctuary of an Orthodox church"
+    },
+    {
+        "test_id": 77,
+        "relation": "OccurredIn",
+        "correct_feat": "the mid-seventeenth century",
+        "options": "1. 1877\n2. the Yuan dynasty\n3. the mid-seventeenth century",
+        "correct_num": 3,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> occurred in [MASK].\n\nOptions:\n1. 1877\n2. the Yuan dynasty\n3. the mid-seventeenth century"
+    },
+    {
+        "test_id": 78,
+        "relation": "OccurredIn",
+        "correct_feat": "Spanish culture",
+        "options": "1. Spanish culture\n2. January 1507\n3. Ireland",
+        "correct_num": 1,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> occurred in [MASK].\n\nOptions:\n1. Spanish culture\n2. January 1507\n3. Ireland"
+    },
+    {
+        "test_id": 79,
+        "relation": "OccurredIn",
+        "correct_feat": "British usage",
+        "options": "1. Mark\n2. British usage\n3. Lasithi, Crete",
+        "correct_num": 2,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> occurred in [MASK].\n\nOptions:\n1. Mark\n2. British usage\n3. Lasithi, Crete"
+    },
+    {
+        "test_id": 80,
+        "relation": "OriginatedIn",
+        "correct_feat": "Europe",
+        "options": "1. Brighton, England\n2. Greek mythology\n3. Europe",
+        "correct_num": 3,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> originated in [MASK].\n\nOptions:\n1. Brighton, England\n2. Greek mythology\n3. Europe"
+    },
+    {
+        "test_id": 81,
+        "relation": "ProducedBy",
+        "correct_feat": "Johannes Gutenberg",
+        "options": "1. Johannes Gutenberg\n2. Diego Rivera\n3. a pupil",
+        "correct_num": 1,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> was produced by [MASK].\n\nOptions:\n1. Johannes Gutenberg\n2. Diego Rivera\n3. a pupil"
+    },
+    {
+        "test_id": 82,
+        "relation": "ProducedBy",
+        "correct_feat": "actors",
+        "options": "1. successive manufacturers\n2. actors\n3. sculptors",
+        "correct_num": 2,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> was produced by [MASK].\n\nOptions:\n1. successive manufacturers\n2. actors\n3. sculptors"
+    },
+    {
+        "test_id": 83,
+        "relation": "PublishedAs",
+        "correct_feat": "a quarto",
+        "options": "1. part of the Gospel of Matthew\n2. a painting\n3. a quarto",
+        "correct_num": 3,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> was published as [MASK].\n\nOptions:\n1. part of the Gospel of Matthew\n2. a painting\n3. a quarto"
+    },
+    {
+        "test_id": 84,
+        "relation": "PublishedAs",
+        "correct_feat": "a \"bad quarto\"",
+        "options": "1. a \"bad quarto\"\n2. the \"Kursk-Root\" icon\n3. the work of a great icon painter of the 16th century",
+        "correct_num": 1,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> was published as [MASK].\n\nOptions:\n1. a \"bad quarto\"\n2. the \"Kursk-Root\" icon\n3. the work of a great icon painter of the 16th century"
+    },
+    {
+        "test_id": 85,
+        "relation": "PublishedIn",
+        "correct_feat": "1598",
+        "options": "1. the sanctuary of an Orthodox church\n2. 1598\n3. the Gospel of Matthew",
+        "correct_num": 2,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> was published in [MASK].\n\nOptions:\n1. the sanctuary of an Orthodox church\n2. 1598\n3. the Gospel of Matthew"
+    },
+    {
+        "test_id": 86,
+        "relation": "PublishedIn",
+        "correct_feat": "1599",
+        "options": "1. the places adjacent\n2. a French illustrated dictionary of natural history\n3. 1599",
+        "correct_num": 3,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> was published in [MASK].\n\nOptions:\n1. the places adjacent\n2. a French illustrated dictionary of natural history\n3. 1599"
+    },
+    {
+        "test_id": 87,
+        "relation": "PublishedIn",
+        "correct_feat": "1593",
+        "options": "1. 1593\n2. Northern Europe\n3. the Italian Renaissance",
+        "correct_num": 1,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> was published in [MASK].\n\nOptions:\n1. 1593\n2. Northern Europe\n3. the Italian Renaissance"
+    },
+    {
+        "test_id": 88,
+        "relation": "PublishedIn",
+        "correct_feat": "1594",
+        "options": "1. St. Petersburg\n2. 1594\n3. icons",
+        "correct_num": 2,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> was published in [MASK].\n\nOptions:\n1. St. Petersburg\n2. 1594\n3. icons"
+    },
+    {
+        "test_id": 89,
+        "relation": "PublishedIn",
+        "correct_feat": "1604",
+        "options": "1. Venice\n2. 2004\n3. 1604",
+        "correct_num": 3,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> was published in [MASK].\n\nOptions:\n1. Venice\n2. 2004\n3. 1604"
+    },
+    {
+        "test_id": 90,
+        "relation": "PublishedIn",
+        "correct_feat": "1609",
+        "options": "1. 1609\n2. frescoes\n3. the 6th century",
+        "correct_num": 1,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> was published in [MASK].\n\nOptions:\n1. 1609\n2. frescoes\n3. the 6th century"
+    },
+    {
+        "test_id": 91,
+        "relation": "WrittenIn",
+        "correct_feat": "Latin",
+        "options": "1. the Gospel of Luke\n2. Latin\n3. Greek mythology",
+        "correct_num": 2,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> was written in [MASK].\n\nOptions:\n1. the Gospel of Luke\n2. Latin\n3. Greek mythology"
+    }
+]

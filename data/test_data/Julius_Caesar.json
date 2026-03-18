@@ -1,0 +1,578 @@
+[
+    {
+        "test_id": 0,
+        "relation": "About",
+        "correct_feat": "the Roman Republic and the emergence of the Roman Empire",
+        "options": "1. the Roman Republic and the emergence of the Roman Empire\n2. the representation of the Nativity and its importance in cycles of the Life of the Virgin and Life of Christ\n3. Mary seated in a landscape with the Christ child",
+        "correct_num": 1,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is about [MASK].\n\nOptions:\n1. the Roman Republic and the emergence of the Roman Empire\n2. the representation of the Nativity and its importance in cycles of the Life of the Virgin and Life of Christ\n3. Mary seated in a landscape with the Christ child"
+    },
+    {
+        "test_id": 1,
+        "relation": "Affects",
+        "correct_feat": "the political conditions that led to the collapse of the Roman Republic",
+        "options": "1. the framework of the narrative of Jesus' life\n2. the political conditions that led to the collapse of the Roman Republic\n3. the events of the Passion of Jesus",
+        "correct_num": 2,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> affects [MASK].\n\nOptions:\n1. the framework of the narrative of Jesus' life\n2. the political conditions that led to the collapse of the Roman Republic\n3. the events of the Passion of Jesus"
+    },
+    {
+        "test_id": 2,
+        "relation": "AssociatedWith",
+        "correct_feat": "the First Triumvirate, an informal political alliance",
+        "options": "1. Fátima, Portugal\n2. the Virgin of the Passion in Eastern Orthodoxy\n3. the First Triumvirate, an informal political alliance",
+        "correct_num": 3,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is associated with [MASK].\n\nOptions:\n1. Fátima, Portugal\n2. the Virgin of the Passion in Eastern Orthodoxy\n3. the First Triumvirate, an informal political alliance"
+    },
+    {
+        "test_id": 3,
+        "relation": "BelongsTo",
+        "correct_feat": "the gens Julia, a patrician family",
+        "options": "1. the gens Julia, a patrician family\n2. the amusement section of the 1900 Paris Exposition\n3. the Lutheran Church",
+        "correct_num": 1,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> belongs to [MASK].\n\nOptions:\n1. the gens Julia, a patrician family\n2. the amusement section of the 1900 Paris Exposition\n3. the Lutheran Church"
+    },
+    {
+        "test_id": 4,
+        "relation": "BuiltIn",
+        "correct_feat": "across the river Rhine",
+        "options": "1. on the site of the German Moravian Brethren's mission station Gnadenhütten founded in 1746\n2. across the river Rhine\n3. in the third century BCE",
+        "correct_num": 2,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> was built [MASK].\n\nOptions:\n1. on the site of the German Moravian Brethren's mission station Gnadenhütten founded in 1746\n2. across the river Rhine\n3. in the third century BCE"
+    },
+    {
+        "test_id": 5,
+        "relation": "CreatedBy",
+        "correct_feat": "Caesar",
+        "options": "1. environmentalists\n2. religious specialists known as 'alchuklash\n3. Caesar",
+        "correct_num": 3,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> was created by [MASK].\n\nOptions:\n1. environmentalists\n2. religious specialists known as 'alchuklash\n3. Caesar"
+    },
+    {
+        "test_id": 6,
+        "relation": "CreatedFor",
+        "correct_feat": "Caesar",
+        "options": "1. Caesar\n2. the Italian Renaissance\n3. private media",
+        "correct_num": 1,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> was created for [MASK].\n\nOptions:\n1. Caesar\n2. the Italian Renaissance\n3. private media"
+    },
+    {
+        "test_id": 7,
+        "relation": "CreatedIn",
+        "correct_feat": "44 BC",
+        "options": "1. the Old Babylonian Empire period\n2. 44 BC\n3. Lithuania",
+        "correct_num": 2,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> was created in [MASK].\n\nOptions:\n1. the Old Babylonian Empire period\n2. 44 BC\n3. Lithuania"
+    },
+    {
+        "test_id": 8,
+        "relation": "CreatedTo",
+        "correct_feat": "replace the republican lunisolar calendar",
+        "options": "1. be venerated\n2. take advantage of the temperature gradient inherent in a height differential\n3. replace the republican lunisolar calendar",
+        "correct_num": 3,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> was created to [MASK].\n\nOptions:\n1. be venerated\n2. take advantage of the temperature gradient inherent in a height differential\n3. replace the republican lunisolar calendar"
+    },
+    {
+        "test_id": 9,
+        "relation": "HasA",
+        "correct_feat": "a lifetime seat in the Senate",
+        "options": "1. a lifetime seat in the Senate\n2. a feast day celebrated on November 27 O.S./December 10 N.S\n3. angels representing souls descending to and ascending from bodies",
+        "correct_num": 1,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> has [MASK].\n\nOptions:\n1. a lifetime seat in the Senate\n2. a feast day celebrated on November 27 O.S./December 10 N.S\n3. angels representing souls descending to and ascending from bodies"
+    },
+    {
+        "test_id": 10,
+        "relation": "HasFeatureOf",
+        "correct_feat": "military victories in the Gallic Wars",
+        "options": "1. its walls\n2. military victories in the Gallic Wars\n3. the view in a convex mirror",
+        "correct_num": 2,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is characterized by [MASK].\n\nOptions:\n1. its walls\n2. military victories in the Gallic Wars\n3. the view in a convex mirror"
+    },
+    {
+        "test_id": 11,
+        "relation": "Influenced",
+        "correct_feat": "the emergence of the Roman Empire",
+        "options": "1. a wide number of paintings from the following century\n2. the iconography of the Nativity scene\n3. the emergence of the Roman Empire",
+        "correct_num": 3,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> influenced [MASK].\n\nOptions:\n1. a wide number of paintings from the following century\n2. the iconography of the Nativity scene\n3. the emergence of the Roman Empire"
+    },
+    {
+        "test_id": 12,
+        "relation": "InfluencedBy",
+        "correct_feat": "the political fortunes of the family",
+        "options": "1. the political fortunes of the family\n2. the Third Rome doctrine\n3. Tusci",
+        "correct_num": 1,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> was influenced by [MASK].\n\nOptions:\n1. the political fortunes of the family\n2. the Third Rome doctrine\n3. Tusci"
+    },
+    {
+        "test_id": 13,
+        "relation": "IsA",
+        "correct_feat": "a Roman general and statesman",
+        "options": "1. a copy\n2. a Roman general and statesman\n3. a demonstration of the artist's skill for potential new clients",
+        "correct_num": 2,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is [MASK].\n\nOptions:\n1. a copy\n2. a Roman general and statesman\n3. a demonstration of the artist's skill for potential new clients"
+    },
+    {
+        "test_id": 14,
+        "relation": "IsA",
+        "correct_feat": "a dictator of the Roman Republic",
+        "options": "1. an element of Diocletian's Palace\n2. a controversial work\n3. a dictator of the Roman Republic",
+        "correct_num": 3,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is [MASK].\n\nOptions:\n1. an element of Diocletian's Palace\n2. a controversial work\n3. a dictator of the Roman Republic"
+    },
+    {
+        "test_id": 15,
+        "relation": "IsA",
+        "correct_feat": "a member of the First Triumvirate",
+        "options": "1. a member of the First Triumvirate\n2. a painting\n3. an urban legend",
+        "correct_num": 1,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is [MASK].\n\nOptions:\n1. a member of the First Triumvirate\n2. a painting\n3. an urban legend"
+    },
+    {
+        "test_id": 16,
+        "relation": "IsA",
+        "correct_feat": "a political alliance",
+        "options": "1. an element of its setting, the Mississippi Gulf Coast\n2. a political alliance\n3. the supreme manifestation of God’s justice",
+        "correct_num": 2,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is [MASK].\n\nOptions:\n1. an element of its setting, the Mississippi Gulf Coast\n2. a political alliance\n3. the supreme manifestation of God’s justice"
+    },
+    {
+        "test_id": 17,
+        "relation": "IsA",
+        "correct_feat": "a historical figure",
+        "options": "1. an early form of movie making\n2. a wheelchair-adapted taxi\n3. a historical figure",
+        "correct_num": 3,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is [MASK].\n\nOptions:\n1. an early form of movie making\n2. a wheelchair-adapted taxi\n3. a historical figure"
+    },
+    {
+        "test_id": 18,
+        "relation": "IsA",
+        "correct_feat": "a Roman territory",
+        "options": "1. a Roman territory\n2. a painting\n3. a hymn to the light and beauty of a day on the Coast",
+        "correct_num": 1,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is [MASK].\n\nOptions:\n1. a Roman territory\n2. a painting\n3. a hymn to the light and beauty of a day on the Coast"
+    },
+    {
+        "test_id": 19,
+        "relation": "IsA",
+        "correct_feat": "a military commander",
+        "options": "1. a surprisingly modern conceit\n2. a military commander\n3. a petrol-powered taxi",
+        "correct_num": 2,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is [MASK].\n\nOptions:\n1. a surprisingly modern conceit\n2. a military commander\n3. a petrol-powered taxi"
+    },
+    {
+        "test_id": 20,
+        "relation": "IsA",
+        "correct_feat": "an author and historian",
+        "options": "1. a version of the Madonna of the Yarnwinder\n2. a depiction of artists and activists among the Chicano community\n3. an author and historian",
+        "correct_num": 3,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is [MASK].\n\nOptions:\n1. a version of the Madonna of the Yarnwinder\n2. a depiction of artists and activists among the Chicano community\n3. an author and historian"
+    },
+    {
+        "test_id": 21,
+        "relation": "IsA",
+        "correct_feat": "a praetor",
+        "options": "1. a praetor\n2. a work of moral education\n3. a painting",
+        "correct_num": 1,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is [MASK].\n\nOptions:\n1. a praetor\n2. a work of moral education\n3. a painting"
+    },
+    {
+        "test_id": 22,
+        "relation": "IsA",
+        "correct_feat": "a priest of Jupiter",
+        "options": "1. a miraculous icon\n2. a priest of Jupiter\n3. a rock painting tradition",
+        "correct_num": 2,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is [MASK].\n\nOptions:\n1. a miraculous icon\n2. a priest of Jupiter\n3. a rock painting tradition"
+    },
+    {
+        "test_id": 23,
+        "relation": "IsA",
+        "correct_feat": "a military tribune",
+        "options": "1. a type of icon\n2. a chapel\n3. a military tribune",
+        "correct_num": 3,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is [MASK].\n\nOptions:\n1. a type of icon\n2. a chapel\n3. a military tribune"
+    },
+    {
+        "test_id": 24,
+        "relation": "IsA",
+        "correct_feat": "known as dictator perpetuo",
+        "options": "1. known as dictator perpetuo\n2. a theme\n3. a painted icon",
+        "correct_num": 1,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is [MASK].\n\nOptions:\n1. known as dictator perpetuo\n2. a theme\n3. a painted icon"
+    },
+    {
+        "test_id": 25,
+        "relation": "IsA",
+        "correct_feat": "known for consolidating power",
+        "options": "1. a transmitter\n2. known for consolidating power\n3. a counterprocession",
+        "correct_num": 2,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is [MASK].\n\nOptions:\n1. a transmitter\n2. known for consolidating power\n3. a counterprocession"
+    },
+    {
+        "test_id": 26,
+        "relation": "IsA",
+        "correct_feat": "known for proclaiming himself dictator for life",
+        "options": "1. a related subject\n2. a gift from Norway to the United Nations\n3. known for proclaiming himself dictator for life",
+        "correct_num": 3,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is [MASK].\n\nOptions:\n1. a related subject\n2. a gift from Norway to the United Nations\n3. known for proclaiming himself dictator for life"
+    },
+    {
+        "test_id": 27,
+        "relation": "IsA",
+        "correct_feat": "known for leading Roman armies through the Gallic Wars",
+        "options": "1. known for leading Roman armies through the Gallic Wars\n2. a celebration of Latino and Chicano culture and influence\n3. a three-dimensional diorama",
+        "correct_num": 1,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is [MASK].\n\nOptions:\n1. known for leading Roman armies through the Gallic Wars\n2. a celebration of Latino and Chicano culture and influence\n3. a three-dimensional diorama"
+    },
+    {
+        "test_id": 28,
+        "relation": "IsA",
+        "correct_feat": "known for defeating his political rival Pompey",
+        "options": "1. a creature\n2. known for defeating his political rival Pompey\n3. a civil function",
+        "correct_num": 2,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is [MASK].\n\nOptions:\n1. a creature\n2. known for defeating his political rival Pompey\n3. a civil function"
+    },
+    {
+        "test_id": 29,
+        "relation": "IsA",
+        "correct_feat": "known for invading Britain",
+        "options": "1. a venerated icon\n2. a Black Virgin\n3. known for invading Britain",
+        "correct_num": 3,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is [MASK].\n\nOptions:\n1. a venerated icon\n2. a Black Virgin\n3. known for invading Britain"
+    },
+    {
+        "test_id": 30,
+        "relation": "IsA",
+        "correct_feat": "known for building a bridge across the river Rhine",
+        "options": "1. known for building a bridge across the river Rhine\n2. a subject that conflates with the Adoration of the Shepherds\n3. a 16th-century copy of the icon",
+        "correct_num": 1,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is [MASK].\n\nOptions:\n1. known for building a bridge across the river Rhine\n2. a subject that conflates with the Adoration of the Shepherds\n3. a 16th-century copy of the icon"
+    },
+    {
+        "test_id": 31,
+        "relation": "IsA",
+        "correct_feat": "known for assuming control of government",
+        "options": "1. a general or Last Judgment\n2. known for assuming control of government\n3. a miraculous icon",
+        "correct_num": 2,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is [MASK].\n\nOptions:\n1. a general or Last Judgment\n2. known for assuming control of government\n3. a miraculous icon"
+    },
+    {
+        "test_id": 32,
+        "relation": "IsA",
+        "correct_feat": "known for a vigorous reform and building programme",
+        "options": "1. a sonnet\n2. an early example of Mughal political imagery\n3. known for a vigorous reform and building programme",
+        "correct_num": 3,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is [MASK].\n\nOptions:\n1. a sonnet\n2. an early example of Mughal political imagery\n3. known for a vigorous reform and building programme"
+    },
+    {
+        "test_id": 33,
+        "relation": "IsA",
+        "correct_feat": "known for creating the Julian calendar",
+        "options": "1. known for creating the Julian calendar\n2. a sensory journey both in time and space\n3. a powerful demonic entity",
+        "correct_num": 1,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is [MASK].\n\nOptions:\n1. known for creating the Julian calendar\n2. a sensory journey both in time and space\n3. a powerful demonic entity"
+    },
+    {
+        "test_id": 34,
+        "relation": "IsA",
+        "correct_feat": "known for extending citizenship to communities in Spain and northern Italy",
+        "options": "1. a celebration of Latino and Chicano culture and influence\n2. known for extending citizenship to communities in Spain and northern Italy\n3. a holy tile",
+        "correct_num": 2,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is [MASK].\n\nOptions:\n1. a celebration of Latino and Chicano culture and influence\n2. known for extending citizenship to communities in Spain and northern Italy\n3. a holy tile"
+    },
+    {
+        "test_id": 35,
+        "relation": "IsA",
+        "correct_feat": "a member of the First Triumvirate",
+        "options": "1. a cartoon\n2. a work of moral education\n3. a member of the First Triumvirate",
+        "correct_num": 3,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is [MASK].\n\nOptions:\n1. a cartoon\n2. a work of moral education\n3. a member of the First Triumvirate"
+    },
+    {
+        "test_id": 36,
+        "relation": "IsA",
+        "correct_feat": "a member of the aristocracy",
+        "options": "1. a member of the aristocracy\n2. a painting\n3. an integrated element of the Great Wall of China",
+        "correct_num": 1,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is [MASK].\n\nOptions:\n1. a member of the aristocracy\n2. a painting\n3. an integrated element of the Great Wall of China"
+    },
+    {
+        "test_id": 37,
+        "relation": "IsA",
+        "correct_feat": "part of the Roman Republic",
+        "options": "1. a funeral procession\n2. part of the Roman Republic\n3. a patron icon",
+        "correct_num": 2,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is [MASK].\n\nOptions:\n1. a funeral procession\n2. part of the Roman Republic\n3. a patron icon"
+    },
+    {
+        "test_id": 38,
+        "relation": "IsA",
+        "correct_feat": "part of the Roman Empire",
+        "options": "1. a Catholic title of the Blessed Virgin Mary\n2. the only extant surviving piece by Zhao Gan\n3. part of the Roman Empire",
+        "correct_num": 3,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is [MASK].\n\nOptions:\n1. a Catholic title of the Blessed Virgin Mary\n2. the only extant surviving piece by Zhao Gan\n3. part of the Roman Empire"
+    },
+    {
+        "test_id": 39,
+        "relation": "IsA",
+        "correct_feat": "used as a synonym for emperor",
+        "options": "1. used as a synonym for emperor\n2. one of the most venerated icons in the Upper Volga region\n3. a talking point",
+        "correct_num": 1,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is [MASK].\n\nOptions:\n1. used as a synonym for emperor\n2. one of the most venerated icons in the Upper Volga region\n3. a talking point"
+    },
+    {
+        "test_id": 40,
+        "relation": "IsA",
+        "correct_feat": "used for political alliance",
+        "options": "1. a copy painted in the \"academic\" style\n2. used for political alliance\n3. a statue",
+        "correct_num": 2,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is [MASK].\n\nOptions:\n1. a copy painted in the \"academic\" style\n2. used for political alliance\n3. a statue"
+    },
+    {
+        "test_id": 41,
+        "relation": "IsA",
+        "correct_feat": "used for military campaigns",
+        "options": "1. a particular judgment in Catholicism and Eastern Orthodoxy\n2. a depiction of Saint Onuphrius\n3. used for military campaigns",
+        "correct_num": 3,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is [MASK].\n\nOptions:\n1. a particular judgment in Catholicism and Eastern Orthodoxy\n2. a depiction of Saint Onuphrius\n3. used for military campaigns"
+    },
+    {
+        "test_id": 42,
+        "relation": "IsA",
+        "correct_feat": "used for prosecution",
+        "options": "1. used for prosecution\n2. an interpretation of the original in a contemporary Netherlandish style\n3. a Blessed Virgin depiction",
+        "correct_num": 1,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is [MASK].\n\nOptions:\n1. used for prosecution\n2. an interpretation of the original in a contemporary Netherlandish style\n3. a Blessed Virgin depiction"
+    },
+    {
+        "test_id": 43,
+        "relation": "IsA",
+        "correct_feat": "used in the Roman Empire",
+        "options": "1. an image of the Child Jesus\n2. used in the Roman Empire\n3. a funeral procession",
+        "correct_num": 2,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is [MASK].\n\nOptions:\n1. an image of the Child Jesus\n2. used in the Roman Empire\n3. a funeral procession"
+    },
+    {
+        "test_id": 44,
+        "relation": "IsA",
+        "correct_feat": "used in battle",
+        "options": "1. an Eastern Orthodox icon of the Virgin of the Passion called Amolyntos\n2. a pilgrim feast\n3. used in battle",
+        "correct_num": 3,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is [MASK].\n\nOptions:\n1. an Eastern Orthodox icon of the Virgin of the Passion called Amolyntos\n2. a pilgrim feast\n3. used in battle"
+    },
+    {
+        "test_id": 45,
+        "relation": "IsA",
+        "correct_feat": "used to collect naval reinforcements",
+        "options": "1. used to collect naval reinforcements\n2. a painted icon\n3. an outdoor art",
+        "correct_num": 1,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is [MASK].\n\nOptions:\n1. used to collect naval reinforcements\n2. a painted icon\n3. an outdoor art"
+    },
+    {
+        "test_id": 46,
+        "relation": "IsA",
+        "correct_feat": "used to collect troops",
+        "options": "1. a Catholic title of the Blessed Virgin Mary\n2. used to collect troops\n3. a repeater",
+        "correct_num": 2,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is [MASK].\n\nOptions:\n1. a Catholic title of the Blessed Virgin Mary\n2. used to collect troops\n3. a repeater"
+    },
+    {
+        "test_id": 47,
+        "relation": "IsA",
+        "correct_feat": "used to extend citizenship",
+        "options": "1. a work of moral education\n2. one of the longest murals in the world\n3. used to extend citizenship",
+        "correct_num": 3,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is [MASK].\n\nOptions:\n1. a work of moral education\n2. one of the longest murals in the world\n3. used to extend citizenship"
+    },
+    {
+        "test_id": 48,
+        "relation": "IsA",
+        "correct_feat": "used to reduce the size of the grain dole",
+        "options": "1. used to reduce the size of the grain dole\n2. a small Italo-Byzantine replica of an Eleusa (Virgin of Tenderness) icon\n3. a painting",
+        "correct_num": 1,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is [MASK].\n\nOptions:\n1. used to reduce the size of the grain dole\n2. a small Italo-Byzantine replica of an Eleusa (Virgin of Tenderness) icon\n3. a painting"
+    },
+    {
+        "test_id": 49,
+        "relation": "IsA",
+        "correct_feat": "used to settle veterans in new overseas colonies",
+        "options": "1. the county's business hub\n2. used to settle veterans in new overseas colonies\n3. a demonstration of the artist's skill for potential new clients",
+        "correct_num": 2,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is [MASK].\n\nOptions:\n1. the county's business hub\n2. used to settle veterans in new overseas colonies\n3. a demonstration of the artist's skill for potential new clients"
+    },
+    {
+        "test_id": 50,
+        "relation": "IsA",
+        "correct_feat": "used to increase the size of the Senate",
+        "options": "1. a work of Emmanuel Tzanes\n2. a hackney, or hackney carriage\n3. used to increase the size of the Senate",
+        "correct_num": 3,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is [MASK].\n\nOptions:\n1. a work of Emmanuel Tzanes\n2. a hackney, or hackney carriage\n3. used to increase the size of the Senate"
+    },
+    {
+        "test_id": 51,
+        "relation": "OccurredAt",
+        "correct_feat": "Mytilene",
+        "options": "1. Mytilene\n2. Agincourt\n3. the moment of his conception in the womb of the Virgin",
+        "correct_num": 1,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> occurred at [MASK].\n\nOptions:\n1. Mytilene\n2. Agincourt\n3. the moment of his conception in the womb of the Virgin"
+    },
+    {
+        "test_id": 52,
+        "relation": "OccurredAt",
+        "correct_feat": "Rhodes",
+        "options": "1. the Capitol\n2. Rhodes\n3. the Hellenic-American Cultural Center and Museum",
+        "correct_num": 2,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> occurred at [MASK].\n\nOptions:\n1. the Capitol\n2. Rhodes\n3. the Hellenic-American Cultural Center and Museum"
+    },
+    {
+        "test_id": 53,
+        "relation": "OccurredBetween",
+        "correct_feat": "92 and 85 BC",
+        "options": "1. 1970 and 1993\n2. 1948 and 1952\n3. 92 and 85 BC",
+        "correct_num": 3,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> occurred between [MASK].\n\nOptions:\n1. 1970 and 1993\n2. 1948 and 1952\n3. 92 and 85 BC"
+    },
+    {
+        "test_id": 54,
+        "relation": "OccurredDuring",
+        "correct_feat": "the Second Punic War",
+        "options": "1. the Second Punic War\n2. the conception in the womb of the Virgin\n3. the 17th century",
+        "correct_num": 1,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> occurred during [MASK].\n\nOptions:\n1. the Second Punic War\n2. the conception in the womb of the Virgin\n3. the 17th century"
+    },
+    {
+        "test_id": 55,
+        "relation": "OccurredDuring",
+        "correct_feat": "the Third Mithridatic War",
+        "options": "1. the Great Depression\n2. the Third Mithridatic War\n3. the Russian Revolution of 1917",
+        "correct_num": 2,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> occurred during [MASK].\n\nOptions:\n1. the Great Depression\n2. the Third Mithridatic War\n3. the Russian Revolution of 1917"
+    },
+    {
+        "test_id": 56,
+        "relation": "OccurredIn",
+        "correct_feat": "60 BC",
+        "options": "1. the later 19th and 20th centuries\n2. the 1920s\n3. 60 BC",
+        "correct_num": 3,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> occurred in [MASK].\n\nOptions:\n1. the later 19th and 20th centuries\n2. the 1920s\n3. 60 BC"
+    },
+    {
+        "test_id": 57,
+        "relation": "OccurredIn",
+        "correct_feat": "51 BC",
+        "options": "1. 51 BC\n2. the Holy Roman Empire\n3. the San Rafael Mountains",
+        "correct_num": 1,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> occurred in [MASK].\n\nOptions:\n1. 51 BC\n2. the Holy Roman Empire\n3. the San Rafael Mountains"
+    },
+    {
+        "test_id": 58,
+        "relation": "OccurredIn",
+        "correct_feat": "50 BC",
+        "options": "1. the 1920s\n2. 50 BC\n3. 2004",
+        "correct_num": 2,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> occurred in [MASK].\n\nOptions:\n1. the 1920s\n2. 50 BC\n3. 2004"
+    },
+    {
+        "test_id": 59,
+        "relation": "OccurredIn",
+        "correct_feat": "49 BC",
+        "options": "1. Sumerian architecture\n2. 2020\n3. 49 BC",
+        "correct_num": 3,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> occurred in [MASK].\n\nOptions:\n1. Sumerian architecture\n2. 2020\n3. 49 BC"
+    },
+    {
+        "test_id": 60,
+        "relation": "OccurredIn",
+        "correct_feat": "45 BC",
+        "options": "1. 45 BC\n2. Rome\n3. Tuscany",
+        "correct_num": 1,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> occurred in [MASK].\n\nOptions:\n1. 45 BC\n2. Rome\n3. Tuscany"
+    },
+    {
+        "test_id": 61,
+        "relation": "OccurredIn",
+        "correct_feat": "44 BC",
+        "options": "1. Anderson's cottage\n2. 44 BC\n3. 1940",
+        "correct_num": 2,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> occurred in [MASK].\n\nOptions:\n1. Anderson's cottage\n2. 44 BC\n3. 1940"
+    },
+    {
+        "test_id": 62,
+        "relation": "OccurredIn",
+        "correct_feat": "73 BC",
+        "options": "1. Tuscany\n2. the apse of the sanctuary of an Orthodox church\n3. 73 BC",
+        "correct_num": 3,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> occurred in [MASK].\n\nOptions:\n1. Tuscany\n2. the apse of the sanctuary of an Orthodox church\n3. 73 BC"
+    },
+    {
+        "test_id": 63,
+        "relation": "OccurredIn",
+        "correct_feat": "71 BC",
+        "options": "1. 71 BC\n2. 1440\n3. the reign of Shah Jahan",
+        "correct_num": 1,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> occurred in [MASK].\n\nOptions:\n1. 71 BC\n2. 1440\n3. the reign of Shah Jahan"
+    },
+    {
+        "test_id": 64,
+        "relation": "OccurredIn",
+        "correct_feat": "70 BC",
+        "options": "1. antiquity\n2. 70 BC\n3. the reign of Jahangir",
+        "correct_num": 2,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> occurred in [MASK].\n\nOptions:\n1. antiquity\n2. 70 BC\n3. the reign of Jahangir"
+    },
+    {
+        "test_id": 65,
+        "relation": "OccurredIn",
+        "correct_feat": "69 BC",
+        "options": "1. northern Scotland\n2. Asia\n3. 69 BC",
+        "correct_num": 3,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> occurred in [MASK].\n\nOptions:\n1. northern Scotland\n2. Asia\n3. 69 BC"
+    },
+    {
+        "test_id": 66,
+        "relation": "OccurredOn",
+        "correct_feat": "the Ides of March",
+        "options": "1. the Ides of March\n2. 1459\n3. 21 July",
+        "correct_num": 1,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> occurred on [MASK].\n\nOptions:\n1. the Ides of March\n2. 1459\n3. 21 July"
+    },
+    {
+        "test_id": 67,
+        "relation": "PerformedBy",
+        "correct_feat": "Caesar",
+        "options": "1. Christ\n2. Caesar\n3. nuns",
+        "correct_num": 2,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> was performed by [MASK].\n\nOptions:\n1. Christ\n2. Caesar\n3. nuns"
+    },
+    {
+        "test_id": 68,
+        "relation": "PublishedAs",
+        "correct_feat": "dictator perpetuo",
+        "options": "1. a fresco\n2. a relic\n3. dictator perpetuo",
+        "correct_num": 3,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> was published as [MASK].\n\nOptions:\n1. a fresco\n2. a relic\n3. dictator perpetuo"
+    },
+    {
+        "test_id": 69,
+        "relation": "WonBy",
+        "correct_feat": "Caesar",
+        "options": "1. Caesar\n2. the Florentines\n3. the League army",
+        "correct_num": 1,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> was won by [MASK].\n\nOptions:\n1. Caesar\n2. the Florentines\n3. the League army"
+    },
+    {
+        "test_id": 70,
+        "relation": "WrittenBy",
+        "correct_feat": "Caesar",
+        "options": "1. Procopius\n2. Caesar\n3. Saint Luke",
+        "correct_num": 2,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> was written by [MASK].\n\nOptions:\n1. Procopius\n2. Caesar\n3. Saint Luke"
+    },
+    {
+        "test_id": 71,
+        "relation": "WrittenIn",
+        "correct_feat": "44 BC",
+        "options": "1. France\n2. Latin\n3. 44 BC",
+        "correct_num": 3,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> was written in [MASK].\n\nOptions:\n1. France\n2. Latin\n3. 44 BC"
+    }
+]

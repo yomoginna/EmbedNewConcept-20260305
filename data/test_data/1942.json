@@ -1,0 +1,866 @@
+[
+    {
+        "test_id": 0,
+        "relation": "About",
+        "correct_feat": "the Gregorian calendar",
+        "options": "1. the Gregorian calendar\n2. the representation of the Nativity and its importance in cycles of the Life of the Virgin and Life of Christ\n3. Mary seated in a landscape with the Christ child",
+        "correct_num": 1,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is about [MASK].\n\nOptions:\n1. the Gregorian calendar\n2. the representation of the Nativity and its importance in cycles of the Life of the Virgin and Life of Christ\n3. Mary seated in a landscape with the Christ child"
+    },
+    {
+        "test_id": 1,
+        "relation": "Affects",
+        "correct_feat": "the Common Era and Anno Domini designations",
+        "options": "1. the framework of the narrative of Jesus' life\n2. the Common Era and Anno Domini designations\n3. the events of the Passion of Jesus",
+        "correct_num": 2,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> affects [MASK].\n\nOptions:\n1. the framework of the narrative of Jesus' life\n2. the Common Era and Anno Domini designations\n3. the events of the Passion of Jesus"
+    },
+    {
+        "test_id": 2,
+        "relation": "AssociatedWith",
+        "correct_feat": "the 2nd millennium",
+        "options": "1. Fátima, Portugal\n2. the Virgin of the Passion in Eastern Orthodoxy\n3. the 2nd millennium",
+        "correct_num": 3,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is associated with [MASK].\n\nOptions:\n1. Fátima, Portugal\n2. the Virgin of the Passion in Eastern Orthodoxy\n3. the 2nd millennium"
+    },
+    {
+        "test_id": 3,
+        "relation": "AssociatedWith",
+        "correct_feat": "the 20th century",
+        "options": "1. the 20th century\n2. the Chicano Movement of the 1970s\n3. Bonne of Artois",
+        "correct_num": 1,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is associated with [MASK].\n\nOptions:\n1. the 20th century\n2. the Chicano Movement of the 1970s\n3. Bonne of Artois"
+    },
+    {
+        "test_id": 4,
+        "relation": "AssociatedWith",
+        "correct_feat": "the 1940s decade",
+        "options": "1. a Persian Gulf flood\n2. the 1940s decade\n3. Byzantine art styles",
+        "correct_num": 2,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is associated with [MASK].\n\nOptions:\n1. a Persian Gulf flood\n2. the 1940s decade\n3. Byzantine art styles"
+    },
+    {
+        "test_id": 5,
+        "relation": "BelongsTo",
+        "correct_feat": "the 1940s decade",
+        "options": "1. the Roman Rite\n2. the Late Cretan School\n3. the 1940s decade",
+        "correct_num": 3,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> belongs to [MASK].\n\nOptions:\n1. the Roman Rite\n2. the Late Cretan School\n3. the 1940s decade"
+    },
+    {
+        "test_id": 6,
+        "relation": "HasA",
+        "correct_feat": "a death toll estimate of 4.62 million in terms of conflict deaths",
+        "options": "1. a death toll estimate of 4.62 million in terms of conflict deaths\n2. a parallel drawn between Jacob's vision and Muhammad's event of the Miʿrāj\n3. angels representing the continually changing affairs of humankind",
+        "correct_num": 1,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> has [MASK].\n\nOptions:\n1. a death toll estimate of 4.62 million in terms of conflict deaths\n2. a parallel drawn between Jacob's vision and Muhammad's event of the Miʿrāj\n3. angels representing the continually changing affairs of humankind"
+    },
+    {
+        "test_id": 7,
+        "relation": "HasA",
+        "correct_feat": "a death toll estimate ranging from 2.28 to 7.71 million",
+        "options": "1. hands folded in prayer\n2. a death toll estimate ranging from 2.28 to 7.71 million\n3. the words \"is mightier than the sword\" upside down",
+        "correct_num": 2,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> has [MASK].\n\nOptions:\n1. hands folded in prayer\n2. a death toll estimate ranging from 2.28 to 7.71 million\n3. the words \"is mightier than the sword\" upside down"
+    },
+    {
+        "test_id": 8,
+        "relation": "HasFeatureOf",
+        "correct_feat": "being the deadliest year in human history in terms of conflict deaths according to the Uppsala Conflict Data Program project",
+        "options": "1. its veneration as one of the most venerated relics of Georgian Christianity\n2. being taller than it is wide\n3. being the deadliest year in human history in terms of conflict deaths according to the Uppsala Conflict Data Program project",
+        "correct_num": 3,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is characterized by [MASK].\n\nOptions:\n1. its veneration as one of the most venerated relics of Georgian Christianity\n2. being taller than it is wide\n3. being the deadliest year in human history in terms of conflict deaths according to the Uppsala Conflict Data Program project"
+    },
+    {
+        "test_id": 9,
+        "relation": "HeldIn",
+        "correct_feat": "Germany",
+        "options": "1. Germany\n2. the Abou Adal Icon Collection\n3. John 1:51",
+        "correct_num": 1,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> was held in [MASK].\n\nOptions:\n1. Germany\n2. the Abou Adal Icon Collection\n3. John 1:51"
+    },
+    {
+        "test_id": 10,
+        "relation": "HeldIn",
+        "correct_feat": "the United States",
+        "options": "1. the future\n2. the United States\n3. the Benaki Museum in Athens Greece",
+        "correct_num": 2,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> was held in [MASK].\n\nOptions:\n1. the future\n2. the United States\n3. the Benaki Museum in Athens Greece"
+    },
+    {
+        "test_id": 11,
+        "relation": "HeldIn",
+        "correct_feat": "Singapore",
+        "options": "1. the Museum of Fine Arts, Ghent\n2. the Musée des Beaux-Arts, Strasbourg\n3. Singapore",
+        "correct_num": 3,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> was held in [MASK].\n\nOptions:\n1. the Museum of Fine Arts, Ghent\n2. the Musée des Beaux-Arts, Strasbourg\n3. Singapore"
+    },
+    {
+        "test_id": 12,
+        "relation": "HeldIn",
+        "correct_feat": "Northern Ireland",
+        "options": "1. Northern Ireland\n2. Tuscany\n3. Moscow's main church, the Dormition Cathedral",
+        "correct_num": 1,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> was held in [MASK].\n\nOptions:\n1. Northern Ireland\n2. Tuscany\n3. Moscow's main church, the Dormition Cathedral"
+    },
+    {
+        "test_id": 13,
+        "relation": "HeldIn",
+        "correct_feat": "Australia",
+        "options": "1. the Byzantine Museum of Ioannina\n2. Australia\n3. Painted Rock",
+        "correct_num": 2,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> was held in [MASK].\n\nOptions:\n1. the Byzantine Museum of Ioannina\n2. Australia\n3. Painted Rock"
+    },
+    {
+        "test_id": 14,
+        "relation": "HeldIn",
+        "correct_feat": "New Britain",
+        "options": "1. a storage yard at Northwest 14th Avenue and Savier Street\n2. the Kazan Convent of the Theotokos\n3. New Britain",
+        "correct_num": 3,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> was held in [MASK].\n\nOptions:\n1. a storage yard at Northwest 14th Avenue and Savier Street\n2. the Kazan Convent of the Theotokos\n3. New Britain"
+    },
+    {
+        "test_id": 15,
+        "relation": "HeldOn",
+        "correct_feat": "Thursday",
+        "options": "1. Thursday\n2. April 25\n3. September 24",
+        "correct_num": 1,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> was held on [MASK].\n\nOptions:\n1. Thursday\n2. April 25\n3. September 24"
+    },
+    {
+        "test_id": 16,
+        "relation": "HeldOn",
+        "correct_feat": "January 1",
+        "options": "1. March 8\n2. January 1\n3. August 16, 1239",
+        "correct_num": 2,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> was held on [MASK].\n\nOptions:\n1. March 8\n2. January 1\n3. August 16, 1239"
+    },
+    {
+        "test_id": 17,
+        "relation": "HeldOn",
+        "correct_feat": "January 5",
+        "options": "1. Palm Sunday\n2. September 24\n3. January 5",
+        "correct_num": 3,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> was held on [MASK].\n\nOptions:\n1. Palm Sunday\n2. September 24\n3. January 5"
+    },
+    {
+        "test_id": 18,
+        "relation": "HeldOn",
+        "correct_feat": "January 7",
+        "options": "1. January 7\n2. 29 June 1440\n3. Sunday, December 1",
+        "correct_num": 1,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> was held on [MASK].\n\nOptions:\n1. January 7\n2. 29 June 1440\n3. Sunday, December 1"
+    },
+    {
+        "test_id": 19,
+        "relation": "HeldOn",
+        "correct_feat": "January 11",
+        "options": "1. St Mark's day\n2. January 11\n3. 29 June 1440",
+        "correct_num": 2,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> was held on [MASK].\n\nOptions:\n1. St Mark's day\n2. January 11\n3. 29 June 1440"
+    },
+    {
+        "test_id": 20,
+        "relation": "HeldOn",
+        "correct_feat": "January 12",
+        "options": "1. November 9\n2. the last day\n3. January 12",
+        "correct_num": 3,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> was held on [MASK].\n\nOptions:\n1. November 9\n2. the last day\n3. January 12"
+    },
+    {
+        "test_id": 21,
+        "relation": "HeldOn",
+        "correct_feat": "January 13",
+        "options": "1. January 13\n2. the last day\n3. March 8",
+        "correct_num": 1,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> was held on [MASK].\n\nOptions:\n1. January 13\n2. the last day\n3. March 8"
+    },
+    {
+        "test_id": 22,
+        "relation": "HeldOn",
+        "correct_feat": "January 14",
+        "options": "1. 8 September\n2. January 14\n3. the three days preceding Ascension Day",
+        "correct_num": 2,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> was held on [MASK].\n\nOptions:\n1. 8 September\n2. January 14\n3. the three days preceding Ascension Day"
+    },
+    {
+        "test_id": 23,
+        "relation": "HeldOn",
+        "correct_feat": "January 16",
+        "options": "1. the eve of the Feast of the Assumption\n2. 29 June 1440\n3. January 16",
+        "correct_num": 3,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> was held on [MASK].\n\nOptions:\n1. the eve of the Feast of the Assumption\n2. 29 June 1440\n3. January 16"
+    },
+    {
+        "test_id": 24,
+        "relation": "HeldOn",
+        "correct_feat": "January 17",
+        "options": "1. January 17\n2. St Mark's day\n3. Sunday, December 1",
+        "correct_num": 1,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> was held on [MASK].\n\nOptions:\n1. January 17\n2. St Mark's day\n3. Sunday, December 1"
+    },
+    {
+        "test_id": 25,
+        "relation": "IsA",
+        "correct_feat": "a common year",
+        "options": "1. a three-dimensional diorama\n2. a common year\n3. a creature",
+        "correct_num": 2,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is [MASK].\n\nOptions:\n1. a three-dimensional diorama\n2. a common year\n3. a creature"
+    },
+    {
+        "test_id": 26,
+        "relation": "IsA",
+        "correct_feat": "the 1942nd year of the Common Era",
+        "options": "1. a civil function\n2. a venerated icon\n3. the 1942nd year of the Common Era",
+        "correct_num": 3,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is [MASK].\n\nOptions:\n1. a civil function\n2. a venerated icon\n3. the 1942nd year of the Common Era"
+    },
+    {
+        "test_id": 27,
+        "relation": "IsA",
+        "correct_feat": "the 1942nd year of Anno Domini",
+        "options": "1. the 1942nd year of Anno Domini\n2. a Black Virgin\n3. a subject that conflates with the Adoration of the Shepherds",
+        "correct_num": 1,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is [MASK].\n\nOptions:\n1. the 1942nd year of Anno Domini\n2. a Black Virgin\n3. a subject that conflates with the Adoration of the Shepherds"
+    },
+    {
+        "test_id": 28,
+        "relation": "IsA",
+        "correct_feat": "the 942nd year of the 2nd millennium",
+        "options": "1. a 16th-century copy of the icon\n2. the 942nd year of the 2nd millennium\n3. a general or Last Judgment",
+        "correct_num": 2,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is [MASK].\n\nOptions:\n1. a 16th-century copy of the icon\n2. the 942nd year of the 2nd millennium\n3. a general or Last Judgment"
+    },
+    {
+        "test_id": 29,
+        "relation": "IsA",
+        "correct_feat": "the 42nd year of the 20th century",
+        "options": "1. a miraculous icon\n2. a sonnet\n3. the 42nd year of the 20th century",
+        "correct_num": 3,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is [MASK].\n\nOptions:\n1. a miraculous icon\n2. a sonnet\n3. the 42nd year of the 20th century"
+    },
+    {
+        "test_id": 30,
+        "relation": "IsA",
+        "correct_feat": "the 3rd year of the 1940s decade",
+        "options": "1. the 3rd year of the 1940s decade\n2. an early example of Mughal political imagery\n3. a sensory journey both in time and space",
+        "correct_num": 1,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is [MASK].\n\nOptions:\n1. the 3rd year of the 1940s decade\n2. an early example of Mughal political imagery\n3. a sensory journey both in time and space"
+    },
+    {
+        "test_id": 31,
+        "relation": "IsA",
+        "correct_feat": "known as MCMXLII",
+        "options": "1. a powerful demonic entity\n2. known as MCMXLII\n3. a celebration of Latino and Chicano culture and influence",
+        "correct_num": 2,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is [MASK].\n\nOptions:\n1. a powerful demonic entity\n2. known as MCMXLII\n3. a celebration of Latino and Chicano culture and influence"
+    },
+    {
+        "test_id": 32,
+        "relation": "IsA",
+        "correct_feat": "known for being the deadliest year in human history in terms of conflict deaths",
+        "options": "1. a holy tile\n2. a cartoon\n3. known for being the deadliest year in human history in terms of conflict deaths",
+        "correct_num": 3,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is [MASK].\n\nOptions:\n1. a holy tile\n2. a cartoon\n3. known for being the deadliest year in human history in terms of conflict deaths"
+    },
+    {
+        "test_id": 33,
+        "relation": "IsA",
+        "correct_feat": "part of the 1940s decade",
+        "options": "1. part of the 1940s decade\n2. a work of moral education\n3. a painting",
+        "correct_num": 1,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is [MASK].\n\nOptions:\n1. part of the 1940s decade\n2. a work of moral education\n3. a painting"
+    },
+    {
+        "test_id": 34,
+        "relation": "IsA",
+        "correct_feat": "used as a troopship",
+        "options": "1. an integrated element of the Great Wall of China\n2. used as a troopship\n3. a funeral procession",
+        "correct_num": 2,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is [MASK].\n\nOptions:\n1. an integrated element of the Great Wall of China\n2. used as a troopship\n3. a funeral procession"
+    },
+    {
+        "test_id": 35,
+        "relation": "IsA",
+        "correct_feat": "used for promoting the sale of war bonds",
+        "options": "1. a patron icon\n2. a Catholic title of the Blessed Virgin Mary\n3. used for promoting the sale of war bonds",
+        "correct_num": 3,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is [MASK].\n\nOptions:\n1. a patron icon\n2. a Catholic title of the Blessed Virgin Mary\n3. used for promoting the sale of war bonds"
+    },
+    {
+        "test_id": 36,
+        "relation": "IsA",
+        "correct_feat": "used for U-boat traffic",
+        "options": "1. used for U-boat traffic\n2. the only extant surviving piece by Zhao Gan\n3. one of the most venerated icons in the Upper Volga region",
+        "correct_num": 1,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is [MASK].\n\nOptions:\n1. used for U-boat traffic\n2. the only extant surviving piece by Zhao Gan\n3. one of the most venerated icons in the Upper Volga region"
+    },
+    {
+        "test_id": 37,
+        "relation": "IsA",
+        "correct_feat": "used for air operations against Java",
+        "options": "1. a talking point\n2. used for air operations against Java\n3. a copy painted in the \"academic\" style",
+        "correct_num": 2,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is [MASK].\n\nOptions:\n1. a talking point\n2. used for air operations against Java\n3. a copy painted in the \"academic\" style"
+    },
+    {
+        "test_id": 38,
+        "relation": "IsA",
+        "correct_feat": "used in the Battle of the Atlantic",
+        "options": "1. a statue\n2. a particular judgment in Catholicism and Eastern Orthodoxy\n3. used in the Battle of the Atlantic",
+        "correct_num": 3,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is [MASK].\n\nOptions:\n1. a statue\n2. a particular judgment in Catholicism and Eastern Orthodoxy\n3. used in the Battle of the Atlantic"
+    },
+    {
+        "test_id": 39,
+        "relation": "IsA",
+        "correct_feat": "used in the Malayan Campaign",
+        "options": "1. used in the Malayan Campaign\n2. a depiction of Saint Onuphrius\n3. an interpretation of the original in a contemporary Netherlandish style",
+        "correct_num": 1,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is [MASK].\n\nOptions:\n1. used in the Malayan Campaign\n2. a depiction of Saint Onuphrius\n3. an interpretation of the original in a contemporary Netherlandish style"
+    },
+    {
+        "test_id": 40,
+        "relation": "IsA",
+        "correct_feat": "used in the Dutch East Indies campaign",
+        "options": "1. a Blessed Virgin depiction\n2. used in the Dutch East Indies campaign\n3. an image of the Child Jesus",
+        "correct_num": 2,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is [MASK].\n\nOptions:\n1. a Blessed Virgin depiction\n2. used in the Dutch East Indies campaign\n3. an image of the Child Jesus"
+    },
+    {
+        "test_id": 41,
+        "relation": "IsA",
+        "correct_feat": "used in the New Guinea campaign",
+        "options": "1. a funeral procession\n2. an Eastern Orthodox icon of the Virgin of the Passion called Amolyntos\n3. used in the New Guinea campaign",
+        "correct_num": 3,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is [MASK].\n\nOptions:\n1. a funeral procession\n2. an Eastern Orthodox icon of the Virgin of the Passion called Amolyntos\n3. used in the New Guinea campaign"
+    },
+    {
+        "test_id": 42,
+        "relation": "IsA",
+        "correct_feat": "used in the Battle of Rabaul",
+        "options": "1. used in the Battle of Rabaul\n2. a pilgrim feast\n3. a painted icon",
+        "correct_num": 1,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is [MASK].\n\nOptions:\n1. used in the Battle of Rabaul\n2. a pilgrim feast\n3. a painted icon"
+    },
+    {
+        "test_id": 43,
+        "relation": "IsA",
+        "correct_feat": "used in the Battle of Singapore",
+        "options": "1. an outdoor art\n2. used in the Battle of Singapore\n3. a Catholic title of the Blessed Virgin Mary",
+        "correct_num": 2,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is [MASK].\n\nOptions:\n1. an outdoor art\n2. used in the Battle of Singapore\n3. a Catholic title of the Blessed Virgin Mary"
+    },
+    {
+        "test_id": 44,
+        "relation": "IsA",
+        "correct_feat": "used in the Battle of Bilin River",
+        "options": "1. a repeater\n2. a work of moral education\n3. used in the Battle of Bilin River",
+        "correct_num": 3,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is [MASK].\n\nOptions:\n1. a repeater\n2. a work of moral education\n3. used in the Battle of Bilin River"
+    },
+    {
+        "test_id": 45,
+        "relation": "IsA",
+        "correct_feat": "used in the Battle of Palembang",
+        "options": "1. used in the Battle of Palembang\n2. one of the longest murals in the world\n3. a small Italo-Byzantine replica of an Eleusa (Virgin of Tenderness) icon",
+        "correct_num": 1,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is [MASK].\n\nOptions:\n1. used in the Battle of Palembang\n2. one of the longest murals in the world\n3. a small Italo-Byzantine replica of an Eleusa (Virgin of Tenderness) icon"
+    },
+    {
+        "test_id": 46,
+        "relation": "IsA",
+        "correct_feat": "used in the Fall of Singapore",
+        "options": "1. a painting\n2. used in the Fall of Singapore\n3. the county's business hub",
+        "correct_num": 2,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is [MASK].\n\nOptions:\n1. a painting\n2. used in the Fall of Singapore\n3. the county's business hub"
+    },
+    {
+        "test_id": 47,
+        "relation": "IsA",
+        "correct_feat": "used in the Bangka Island Massacre",
+        "options": "1. a demonstration of the artist's skill for potential new clients\n2. a work of Emmanuel Tzanes\n3. used in the Bangka Island Massacre",
+        "correct_num": 3,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is [MASK].\n\nOptions:\n1. a demonstration of the artist's skill for potential new clients\n2. a work of Emmanuel Tzanes\n3. used in the Bangka Island Massacre"
+    },
+    {
+        "test_id": 48,
+        "relation": "IsA",
+        "correct_feat": "used to escape from Colditz Castle",
+        "options": "1. used to escape from Colditz Castle\n2. a hackney, or hackney carriage\n3. a square pyramid floating on a raft",
+        "correct_num": 1,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is [MASK].\n\nOptions:\n1. used to escape from Colditz Castle\n2. a hackney, or hackney carriage\n3. a square pyramid floating on a raft"
+    },
+    {
+        "test_id": 49,
+        "relation": "IsA",
+        "correct_feat": "used to take Moscow",
+        "options": "1. a technological march towards an increasingly perfectly realistic reproduction\n2. used to take Moscow\n3. a Passover meal",
+        "correct_num": 2,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is [MASK].\n\nOptions:\n1. a technological march towards an increasingly perfectly realistic reproduction\n2. used to take Moscow\n3. a Passover meal"
+    },
+    {
+        "test_id": 50,
+        "relation": "IsA",
+        "correct_feat": "used to invade Borneo",
+        "options": "1. a pastel on monotype\n2. a type of rail transport\n3. used to invade Borneo",
+        "correct_num": 3,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is [MASK].\n\nOptions:\n1. a pastel on monotype\n2. a type of rail transport\n3. used to invade Borneo"
+    },
+    {
+        "test_id": 51,
+        "relation": "IsA",
+        "correct_feat": "used to invade Celebes",
+        "options": "1. used to invade Celebes\n2. a 1978 mural\n3. an icon",
+        "correct_num": 1,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is [MASK].\n\nOptions:\n1. used to invade Celebes\n2. a 1978 mural\n3. an icon"
+    },
+    {
+        "test_id": 52,
+        "relation": "IsA",
+        "correct_feat": "used to capture Kuala Lumpur",
+        "options": "1. a public test of the artist's skill\n2. used to capture Kuala Lumpur\n3. a scene often used to represent the Nativity",
+        "correct_num": 2,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is [MASK].\n\nOptions:\n1. a public test of the artist's skill\n2. used to capture Kuala Lumpur\n3. a scene often used to represent the Nativity"
+    },
+    {
+        "test_id": 53,
+        "relation": "IsA",
+        "correct_feat": "used to attack Allied shipping",
+        "options": "1. album cover art\n2. a pastel on monotype\n3. used to attack Allied shipping",
+        "correct_num": 3,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is [MASK].\n\nOptions:\n1. album cover art\n2. a pastel on monotype\n3. used to attack Allied shipping"
+    },
+    {
+        "test_id": 54,
+        "relation": "IsA",
+        "correct_feat": "used to conquer the Halfaya Pass",
+        "options": "1. used to conquer the Halfaya Pass\n2. a public test of the artist's skill\n3. a group portrait of the Timurid dynasty",
+        "correct_num": 1,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is [MASK].\n\nOptions:\n1. used to conquer the Halfaya Pass\n2. a public test of the artist's skill\n3. a group portrait of the Timurid dynasty"
+    },
+    {
+        "test_id": 55,
+        "relation": "IsA",
+        "correct_feat": "used to invade Burma",
+        "options": "1. a diving platform\n2. used to invade Burma\n3. a form of transport",
+        "correct_num": 2,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is [MASK].\n\nOptions:\n1. a diving platform\n2. used to invade Burma\n3. a form of transport"
+    },
+    {
+        "test_id": 56,
+        "relation": "IsA",
+        "correct_feat": "used to bombard Taroa",
+        "options": "1. a departure from Byzantine tradition\n2. a communications tower\n3. used to bombard Taroa",
+        "correct_num": 3,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is [MASK].\n\nOptions:\n1. a departure from Byzantine tradition\n2. a communications tower\n3. used to bombard Taroa"
+    },
+    {
+        "test_id": 57,
+        "relation": "IsA",
+        "correct_feat": "used to bombard Wotje",
+        "options": "1. used to bombard Wotje\n2. a feast of the Presentation of Our Lord\n3. a chapel",
+        "correct_num": 1,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is [MASK].\n\nOptions:\n1. used to bombard Wotje\n2. a feast of the Presentation of Our Lord\n3. a chapel"
+    },
+    {
+        "test_id": 58,
+        "relation": "OccurredAt",
+        "correct_feat": "Colditz Castle",
+        "options": "1. the city of Luz\n2. Colditz Castle\n3. Fátima, Portugal",
+        "correct_num": 2,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> occurred at [MASK].\n\nOptions:\n1. the city of Luz\n2. Colditz Castle\n3. Fátima, Portugal"
+    },
+    {
+        "test_id": 59,
+        "relation": "OccurredAt",
+        "correct_feat": "Potosi Mountain",
+        "options": "1. the moment of the conception in the womb of the Virgin\n2. the Himalayas\n3. Potosi Mountain",
+        "correct_num": 3,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> occurred at [MASK].\n\nOptions:\n1. the moment of the conception in the womb of the Virgin\n2. the Himalayas\n3. Potosi Mountain"
+    },
+    {
+        "test_id": 60,
+        "relation": "OccurredAt",
+        "correct_feat": "Long Island",
+        "options": "1. Long Island\n2. Pisa, Italy\n3. the Annunciation Cathedral of the Kazan Kremlin",
+        "correct_num": 1,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> occurred at [MASK].\n\nOptions:\n1. Long Island\n2. Pisa, Italy\n3. the Annunciation Cathedral of the Kazan Kremlin"
+    },
+    {
+        "test_id": 61,
+        "relation": "OccurredAt",
+        "correct_feat": "Sandy Hook",
+        "options": "1. the moment of the conception in the womb of the Virgin\n2. Sandy Hook\n3. The Prince Albert pub in Brighton",
+        "correct_num": 2,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> occurred at [MASK].\n\nOptions:\n1. the moment of the conception in the womb of the Virgin\n2. Sandy Hook\n3. The Prince Albert pub in Brighton"
+    },
+    {
+        "test_id": 62,
+        "relation": "OccurredAt",
+        "correct_feat": "New York Harbor",
+        "options": "1. Swordfish cave\n2. The Prince Albert pub in Brighton\n3. New York Harbor",
+        "correct_num": 3,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> occurred at [MASK].\n\nOptions:\n1. Swordfish cave\n2. The Prince Albert pub in Brighton\n3. New York Harbor"
+    },
+    {
+        "test_id": 63,
+        "relation": "OccurredAt",
+        "correct_feat": "Kwajalein",
+        "options": "1. Kwajalein\n2. Sansepolcro\n3. the site where the church had stood",
+        "correct_num": 1,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> occurred at [MASK].\n\nOptions:\n1. Kwajalein\n2. Sansepolcro\n3. the site where the church had stood"
+    },
+    {
+        "test_id": 64,
+        "relation": "OccurredAt",
+        "correct_feat": "Taroa",
+        "options": "1. Kazan\n2. Taroa\n3. the city of Luz",
+        "correct_num": 2,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> occurred at [MASK].\n\nOptions:\n1. Kazan\n2. Taroa\n3. the city of Luz"
+    },
+    {
+        "test_id": 65,
+        "relation": "OccurredAt",
+        "correct_feat": "Wotje",
+        "options": "1. the Servian Walls\n2. Morocco\n3. Wotje",
+        "correct_num": 3,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> occurred at [MASK].\n\nOptions:\n1. the Servian Walls\n2. Morocco\n3. Wotje"
+    },
+    {
+        "test_id": 66,
+        "relation": "OccurredAt",
+        "correct_feat": "Jaluit",
+        "options": "1. Jaluit\n2. Haran\n3. the moment of saying, \"May it be done to me according to your word.\"(Luke 1:38)",
+        "correct_num": 1,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> occurred at [MASK].\n\nOptions:\n1. Jaluit\n2. Haran\n3. the moment of saying, \"May it be done to me according to your word.\"(Luke 1:38)"
+    },
+    {
+        "test_id": 67,
+        "relation": "OccurredAt",
+        "correct_feat": "Mili",
+        "options": "1. the Elizabeth Lofts\n2. Mili\n3. the end of human history",
+        "correct_num": 2,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> occurred at [MASK].\n\nOptions:\n1. the Elizabeth Lofts\n2. Mili\n3. the end of human history"
+    },
+    {
+        "test_id": 68,
+        "relation": "OccurredDuring",
+        "correct_feat": "World War II",
+        "options": "1. the minority of Louis XV\n2. the Old Babylonian period\n3. World War II",
+        "correct_num": 3,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> occurred during [MASK].\n\nOptions:\n1. the minority of Louis XV\n2. the Old Babylonian period\n3. World War II"
+    },
+    {
+        "test_id": 69,
+        "relation": "OccurredDuring",
+        "correct_feat": "the Battle of the Atlantic",
+        "options": "1. the Battle of the Atlantic\n2. the French and Indian Wars\n3. the end of the Third Dynasty of Ur",
+        "correct_num": 1,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> occurred during [MASK].\n\nOptions:\n1. the Battle of the Atlantic\n2. the French and Indian Wars\n3. the end of the Third Dynasty of Ur"
+    },
+    {
+        "test_id": 70,
+        "relation": "OccurredDuring",
+        "correct_feat": "the Malayan Campaign",
+        "options": "1. the conception\n2. the Malayan Campaign\n3. the later Middle Ages, when non-canonical sources were used",
+        "correct_num": 2,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> occurred during [MASK].\n\nOptions:\n1. the conception\n2. the Malayan Campaign\n3. the later Middle Ages, when non-canonical sources were used"
+    },
+    {
+        "test_id": 71,
+        "relation": "OccurredDuring",
+        "correct_feat": "the New Guinea campaign",
+        "options": "1. the second session of GGIE\n2. the time they departed from Jericho\n3. the New Guinea campaign",
+        "correct_num": 3,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> occurred during [MASK].\n\nOptions:\n1. the second session of GGIE\n2. the time they departed from Jericho\n3. the New Guinea campaign"
+    },
+    {
+        "test_id": 72,
+        "relation": "OccurredDuring",
+        "correct_feat": "the Yan'an Rectification Movement",
+        "options": "1. the Yan'an Rectification Movement\n2. the holiday of Sukkot\n3. the summer of 1977",
+        "correct_num": 1,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> occurred during [MASK].\n\nOptions:\n1. the Yan'an Rectification Movement\n2. the holiday of Sukkot\n3. the summer of 1977"
+    },
+    {
+        "test_id": 73,
+        "relation": "OccurredDuring",
+        "correct_feat": "Operation Cerberus",
+        "options": "1. the summer of 1608\n2. Operation Cerberus\n3. the time they departed from Jericho",
+        "correct_num": 2,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> occurred during [MASK].\n\nOptions:\n1. the summer of 1608\n2. Operation Cerberus\n3. the time they departed from Jericho"
+    },
+    {
+        "test_id": 74,
+        "relation": "OccurredDuring",
+        "correct_feat": "the Battle of Bilin River",
+        "options": "1. World War I\n2. the tercentenary of the Romanov dynasty in 1913\n3. the Battle of Bilin River",
+        "correct_num": 3,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> occurred during [MASK].\n\nOptions:\n1. World War I\n2. the tercentenary of the Romanov dynasty in 1913\n3. the Battle of Bilin River"
+    },
+    {
+        "test_id": 75,
+        "relation": "OccurredDuring",
+        "correct_feat": "the Battle of Palembang",
+        "options": "1. the Battle of Palembang\n2. Napoleon's invasion of 1812\n3. the Qin dynasty",
+        "correct_num": 1,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> occurred during [MASK].\n\nOptions:\n1. the Battle of Palembang\n2. Napoleon's invasion of 1812\n3. the Qin dynasty"
+    },
+    {
+        "test_id": 76,
+        "relation": "OccurredDuring",
+        "correct_feat": "the Fall of Singapore",
+        "options": "1. the time of Constantine I\n2. the Fall of Singapore\n3. 1933",
+        "correct_num": 2,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> occurred during [MASK].\n\nOptions:\n1. the time of Constantine I\n2. the Fall of Singapore\n3. 1933"
+    },
+    {
+        "test_id": 77,
+        "relation": "OccurredDuring",
+        "correct_feat": "the Bangka Island Massacre",
+        "options": "1. the restoration project\n2. the later Middle Ages, when non-canonical sources were used\n3. the Bangka Island Massacre",
+        "correct_num": 3,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> occurred during [MASK].\n\nOptions:\n1. the restoration project\n2. the later Middle Ages, when non-canonical sources were used\n3. the Bangka Island Massacre"
+    },
+    {
+        "test_id": 78,
+        "relation": "OccurredIn",
+        "correct_feat": "Germany",
+        "options": "1. Germany\n2. 1532\n3. the sanctuary of an Orthodox church",
+        "correct_num": 1,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> occurred in [MASK].\n\nOptions:\n1. Germany\n2. 1532\n3. the sanctuary of an Orthodox church"
+    },
+    {
+        "test_id": 79,
+        "relation": "OccurredIn",
+        "correct_feat": "the Netherlands",
+        "options": "1. 1877\n2. the Netherlands\n3. the Yuan dynasty",
+        "correct_num": 2,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> occurred in [MASK].\n\nOptions:\n1. 1877\n2. the Netherlands\n3. the Yuan dynasty"
+    },
+    {
+        "test_id": 80,
+        "relation": "OccurredIn",
+        "correct_feat": "Borneo",
+        "options": "1. January 1507\n2. Ireland\n3. Borneo",
+        "correct_num": 3,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> occurred in [MASK].\n\nOptions:\n1. January 1507\n2. Ireland\n3. Borneo"
+    },
+    {
+        "test_id": 81,
+        "relation": "OccurredIn",
+        "correct_feat": "Celebes",
+        "options": "1. Celebes\n2. Mark\n3. Lasithi, Crete",
+        "correct_num": 1,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> occurred in [MASK].\n\nOptions:\n1. Celebes\n2. Mark\n3. Lasithi, Crete"
+    },
+    {
+        "test_id": 82,
+        "relation": "OccurredIn",
+        "correct_feat": "the Federated Malay States",
+        "options": "1. 2007\n2. the Federated Malay States\n3. the Pearl District",
+        "correct_num": 2,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> occurred in [MASK].\n\nOptions:\n1. 2007\n2. the Federated Malay States\n3. the Pearl District"
+    },
+    {
+        "test_id": 83,
+        "relation": "OccurredIn",
+        "correct_feat": "Singapore",
+        "options": "1. 1440\n2. 2013\n3. Singapore",
+        "correct_num": 3,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> occurred in [MASK].\n\nOptions:\n1. 1440\n2. 2013\n3. Singapore"
+    },
+    {
+        "test_id": 84,
+        "relation": "OccurredIn",
+        "correct_feat": "the United States",
+        "options": "1. the United States\n2. Leningrad\n3. the 6th century",
+        "correct_num": 1,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> occurred in [MASK].\n\nOptions:\n1. the United States\n2. Leningrad\n3. the 6th century"
+    },
+    {
+        "test_id": 85,
+        "relation": "OccurredIn",
+        "correct_feat": "Burma",
+        "options": "1. Paris\n2. Burma\n3. Saint Petersburg, Russia",
+        "correct_num": 2,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> occurred in [MASK].\n\nOptions:\n1. Paris\n2. Burma\n3. Saint Petersburg, Russia"
+    },
+    {
+        "test_id": 86,
+        "relation": "OccurredIn",
+        "correct_feat": "Virginia",
+        "options": "1. France\n2. the 6th century\n3. Virginia",
+        "correct_num": 3,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> occurred in [MASK].\n\nOptions:\n1. France\n2. the 6th century\n3. Virginia"
+    },
+    {
+        "test_id": 87,
+        "relation": "OccurredIn",
+        "correct_feat": "Michigan",
+        "options": "1. Michigan\n2. Italy\n3. Nuremberg",
+        "correct_num": 1,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> occurred in [MASK].\n\nOptions:\n1. Michigan\n2. Italy\n3. Nuremberg"
+    },
+    {
+        "test_id": 88,
+        "relation": "OccurredOn",
+        "correct_feat": "January 1",
+        "options": "1. 1433\n2. January 1\n3. 1802",
+        "correct_num": 2,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> occurred on [MASK].\n\nOptions:\n1. 1433\n2. January 1\n3. 1802"
+    },
+    {
+        "test_id": 89,
+        "relation": "OccurredOn",
+        "correct_feat": "January 5",
+        "options": "1. 1611–12\n2. dedicated rights of way\n3. January 5",
+        "correct_num": 3,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> occurred on [MASK].\n\nOptions:\n1. 1611–12\n2. dedicated rights of way\n3. January 5"
+    },
+    {
+        "test_id": 90,
+        "relation": "OccurredOn",
+        "correct_feat": "January 7",
+        "options": "1. January 7\n2. April 4, 1952\n3. November 2004",
+        "correct_num": 1,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> occurred on [MASK].\n\nOptions:\n1. January 7\n2. April 4, 1952\n3. November 2004"
+    },
+    {
+        "test_id": 91,
+        "relation": "OccurredOn",
+        "correct_feat": "January 11",
+        "options": "1. 10 November 2004\n2. January 11\n3. 1636",
+        "correct_num": 2,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> occurred on [MASK].\n\nOptions:\n1. 10 November 2004\n2. January 11\n3. 1636"
+    },
+    {
+        "test_id": 92,
+        "relation": "OccurredOn",
+        "correct_feat": "January 12",
+        "options": "1. August 29\n2. August 29, 1970\n3. January 12",
+        "correct_num": 3,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> occurred on [MASK].\n\nOptions:\n1. August 29\n2. August 29, 1970\n3. January 12"
+    },
+    {
+        "test_id": 93,
+        "relation": "OccurredOn",
+        "correct_feat": "January 13",
+        "options": "1. January 13\n2. 8 July 1579\n3. 1770",
+        "correct_num": 1,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> occurred on [MASK].\n\nOptions:\n1. January 13\n2. 8 July 1579\n3. 1770"
+    },
+    {
+        "test_id": 94,
+        "relation": "OccurredOn",
+        "correct_feat": "January 14",
+        "options": "1. 29 June 1440\n2. January 14\n3. 6 May 1988",
+        "correct_num": 2,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> occurred on [MASK].\n\nOptions:\n1. 29 June 1440\n2. January 14\n3. 6 May 1988"
+    },
+    {
+        "test_id": 95,
+        "relation": "OccurredOn",
+        "correct_feat": "January 16",
+        "options": "1. 1579\n2. 6 May 1988\n3. January 16",
+        "correct_num": 3,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> occurred on [MASK].\n\nOptions:\n1. 1579\n2. 6 May 1988\n3. January 16"
+    },
+    {
+        "test_id": 96,
+        "relation": "OccurredOn",
+        "correct_feat": "January 17",
+        "options": "1. January 17\n2. the Great Sabbath\n3. 11 December 1865",
+        "correct_num": 1,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> occurred on [MASK].\n\nOptions:\n1. January 17\n2. the Great Sabbath\n3. 11 December 1865"
+    },
+    {
+        "test_id": 97,
+        "relation": "OccurredOn",
+        "correct_feat": "January 19",
+        "options": "1. 11 December 1865\n2. January 19\n3. August 29",
+        "correct_num": 2,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> occurred on [MASK].\n\nOptions:\n1. 11 December 1865\n2. January 19\n3. August 29"
+    },
+    {
+        "test_id": 98,
+        "relation": "PerformedBy",
+        "correct_feat": "China",
+        "options": "1. the Roman Empress Theodora\n2. the Virgin Mary\n3. China",
+        "correct_num": 3,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> was performed by [MASK].\n\nOptions:\n1. the Roman Empress Theodora\n2. the Virgin Mary\n3. China"
+    },
+    {
+        "test_id": 99,
+        "relation": "PerformedBy",
+        "correct_feat": "the United Kingdom",
+        "options": "1. the United Kingdom\n2. the Virgin Mary\n3. the consul",
+        "correct_num": 1,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> was performed by [MASK].\n\nOptions:\n1. the United Kingdom\n2. the Virgin Mary\n3. the consul"
+    },
+    {
+        "test_id": 100,
+        "relation": "PerformedBy",
+        "correct_feat": "the United States",
+        "options": "1. Cardinal Ludovico Trevisan\n2. the United States\n3. Transport for London",
+        "correct_num": 2,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> was performed by [MASK].\n\nOptions:\n1. Cardinal Ludovico Trevisan\n2. the United States\n3. Transport for London"
+    },
+    {
+        "test_id": 101,
+        "relation": "PerformedBy",
+        "correct_feat": "the Soviet Union",
+        "options": "1. divine providence\n2. monks\n3. the Soviet Union",
+        "correct_num": 3,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> was performed by [MASK].\n\nOptions:\n1. divine providence\n2. monks\n3. the Soviet Union"
+    },
+    {
+        "test_id": 102,
+        "relation": "PerformedBy",
+        "correct_feat": "22 other nations",
+        "options": "1. 22 other nations\n2. singers\n3. Francesco Piccinino",
+        "correct_num": 1,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> was performed by [MASK].\n\nOptions:\n1. 22 other nations\n2. singers\n3. Francesco Piccinino"
+    },
+    {
+        "test_id": 103,
+        "relation": "PerformedBy",
+        "correct_feat": "Japanese forces",
+        "options": "1. House staff\n2. Japanese forces\n3. Gian-Carlo Menotti in his opera Amahl and the Night Visitors",
+        "correct_num": 2,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> was performed by [MASK].\n\nOptions:\n1. House staff\n2. Japanese forces\n3. Gian-Carlo Menotti in his opera Amahl and the Night Visitors"
+    },
+    {
+        "test_id": 104,
+        "relation": "PerformedBy",
+        "correct_feat": "British forces",
+        "options": "1. the three Magi\n2. matrons\n3. British forces",
+        "correct_num": 3,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> was performed by [MASK].\n\nOptions:\n1. the three Magi\n2. matrons\n3. British forces"
+    },
+    {
+        "test_id": 105,
+        "relation": "PerformedBy",
+        "correct_feat": "Dutch forces",
+        "options": "1. Dutch forces\n2. Allah\n3. the poor",
+        "correct_num": 1,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> was performed by [MASK].\n\nOptions:\n1. Dutch forces\n2. Allah\n3. the poor"
+    },
+    {
+        "test_id": 106,
+        "relation": "PerformedBy",
+        "correct_feat": "Indian forces",
+        "options": "1. Anna\n2. Indian forces\n3. the Stamp Office",
+        "correct_num": 2,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> was performed by [MASK].\n\nOptions:\n1. Anna\n2. Indian forces\n3. the Stamp Office"
+    },
+    {
+        "test_id": 107,
+        "relation": "PerformedBy",
+        "correct_feat": "Commonwealth forces",
+        "options": "1. the Master of the Horse\n2. the Roman Empress Theodora\n3. Commonwealth forces",
+        "correct_num": 3,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> was performed by [MASK].\n\nOptions:\n1. the Master of the Horse\n2. the Roman Empress Theodora\n3. Commonwealth forces"
+    }
+]

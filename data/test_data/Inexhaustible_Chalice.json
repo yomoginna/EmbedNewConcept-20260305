@@ -1,0 +1,514 @@
+[
+    {
+        "test_id": 0,
+        "relation": "About",
+        "correct_feat": "the Mother of God",
+        "options": "1. the Mother of God\n2. the return to the South following the Battle of Gettysburg\n3. the meeting of the United States and Soviet Armies near the end of World War II",
+        "correct_num": 1,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is about [MASK].\n\nOptions:\n1. the Mother of God\n2. the return to the South following the Battle of Gettysburg\n3. the meeting of the United States and Soviet Armies near the end of World War II"
+    },
+    {
+        "test_id": 1,
+        "relation": "Affects",
+        "correct_feat": "those who suffer from alcoholism",
+        "options": "1. a vaccinated individual\n2. those who suffer from alcoholism\n3. the York-Hanover-Gettysburg, PA Combined Statistical Area",
+        "correct_num": 2,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> affects [MASK].\n\nOptions:\n1. a vaccinated individual\n2. those who suffer from alcoholism\n3. the York-Hanover-Gettysburg, PA Combined Statistical Area"
+    },
+    {
+        "test_id": 2,
+        "relation": "Affects",
+        "correct_feat": "those who suffer from drug abuse",
+        "options": "1. players who AFK\n2. the political conditions that led to the collapse of the Roman Republic\n3. those who suffer from drug abuse",
+        "correct_num": 3,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> affects [MASK].\n\nOptions:\n1. players who AFK\n2. the political conditions that led to the collapse of the Roman Republic\n3. those who suffer from drug abuse"
+    },
+    {
+        "test_id": 3,
+        "relation": "Affects",
+        "correct_feat": "those who suffer from other forms of addiction",
+        "options": "1. those who suffer from other forms of addiction\n2. the classification of combatants under the Geneva Conventions\n3. a fall",
+        "correct_num": 1,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> affects [MASK].\n\nOptions:\n1. those who suffer from other forms of addiction\n2. the classification of combatants under the Geneva Conventions\n3. a fall"
+    },
+    {
+        "test_id": 4,
+        "relation": "AssociatedWith",
+        "correct_feat": "the Russian Orthodox Church",
+        "options": "1. Norway, Sweden, Denmark, Iceland, Britain, Ireland, and Sápmi\n2. the Russian Orthodox Church\n3. the Albertine line of the Wettin dynasty",
+        "correct_num": 2,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is associated with [MASK].\n\nOptions:\n1. Norway, Sweden, Denmark, Iceland, Britain, Ireland, and Sápmi\n2. the Russian Orthodox Church\n3. the Albertine line of the Wettin dynasty"
+    },
+    {
+        "test_id": 5,
+        "relation": "BelongsTo",
+        "correct_feat": "the Vladychny Convent in Serpukhov",
+        "options": "1. the Confederate States of America\n2. book formats\n3. the Vladychny Convent in Serpukhov",
+        "correct_num": 3,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> belongs to [MASK].\n\nOptions:\n1. the Confederate States of America\n2. book formats\n3. the Vladychny Convent in Serpukhov"
+    },
+    {
+        "test_id": 6,
+        "relation": "ComposedBy",
+        "correct_feat": "Russian and English writers",
+        "options": "1. Russian and English writers\n2. Iced Earth\n3. Richard Wright",
+        "correct_num": 1,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> was composed by [MASK].\n\nOptions:\n1. Russian and English writers\n2. Iced Earth\n3. Richard Wright"
+    },
+    {
+        "test_id": 7,
+        "relation": "ConsistsOf",
+        "correct_feat": "the Theotokos with hands raised in the orans position",
+        "options": "1. potential pieces with special powers\n2. the Theotokos with hands raised in the orans position\n3. a workshop in Munich-Giesing",
+        "correct_num": 2,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> consists of [MASK].\n\nOptions:\n1. potential pieces with special powers\n2. the Theotokos with hands raised in the orans position\n3. a workshop in Munich-Giesing"
+    },
+    {
+        "test_id": 8,
+        "relation": "ConsistsOf",
+        "correct_feat": "the Christ Child standing in a chalice with both hands raised in blessing",
+        "options": "1. two straight rows of six pits called houses\n2. an oware board\n3. the Christ Child standing in a chalice with both hands raised in blessing",
+        "correct_num": 3,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> consists of [MASK].\n\nOptions:\n1. two straight rows of six pits called houses\n2. an oware board\n3. the Christ Child standing in a chalice with both hands raised in blessing"
+    },
+    {
+        "test_id": 9,
+        "relation": "CreatedBy",
+        "correct_feat": "a peasant of the Tula province",
+        "options": "1. a peasant of the Tula province\n2. Twice\n3. Rhiannon Lassiter",
+        "correct_num": 1,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> was created by [MASK].\n\nOptions:\n1. a peasant of the Tula province\n2. Twice\n3. Rhiannon Lassiter"
+    },
+    {
+        "test_id": 10,
+        "relation": "CreatedIn",
+        "correct_feat": "Serpukhov, Russia",
+        "options": "1. 44 BC\n2. Serpukhov, Russia\n3. 1987",
+        "correct_num": 2,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> was created in [MASK].\n\nOptions:\n1. 44 BC\n2. Serpukhov, Russia\n3. 1987"
+    },
+    {
+        "test_id": 11,
+        "relation": "CreatedTo",
+        "correct_feat": "heal those who suffer from alcoholism",
+        "options": "1. defend the port of Valparaiso against attack\n2. hold liquids for drinking\n3. heal those who suffer from alcoholism",
+        "correct_num": 3,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> was created to [MASK].\n\nOptions:\n1. defend the port of Valparaiso against attack\n2. hold liquids for drinking\n3. heal those who suffer from alcoholism"
+    },
+    {
+        "test_id": 12,
+        "relation": "CreatedTo",
+        "correct_feat": "heal those who suffer from drug abuse",
+        "options": "1. heal those who suffer from drug abuse\n2. approach enemy ships undetected\n3. recreate the adrenaline rush and tension experienced during the final minutes of a live escape room within a card game format",
+        "correct_num": 1,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> was created to [MASK].\n\nOptions:\n1. heal those who suffer from drug abuse\n2. approach enemy ships undetected\n3. recreate the adrenaline rush and tension experienced during the final minutes of a live escape room within a card game format"
+    },
+    {
+        "test_id": 13,
+        "relation": "CreatedTo",
+        "correct_feat": "heal those who suffer from other forms of addiction",
+        "options": "1. run blockades\n2. heal those who suffer from other forms of addiction\n3. attack enemy surface ships",
+        "correct_num": 2,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> was created to [MASK].\n\nOptions:\n1. run blockades\n2. heal those who suffer from other forms of addiction\n3. attack enemy surface ships"
+    },
+    {
+        "test_id": 14,
+        "relation": "DiscoveredAt",
+        "correct_feat": "the Vladychny Convent in Serpukhov",
+        "options": "1. the Gorringe Ridge\n2. Eastleigh Aerodrome\n3. the Vladychny Convent in Serpukhov",
+        "correct_num": 3,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> was discovered at [MASK].\n\nOptions:\n1. the Gorringe Ridge\n2. Eastleigh Aerodrome\n3. the Vladychny Convent in Serpukhov"
+    },
+    {
+        "test_id": 15,
+        "relation": "DiscoveredBy",
+        "correct_feat": "a peasant of the Tula province",
+        "options": "1. a peasant of the Tula province\n2. Squadron Leader Anderson\n3. George Pickering",
+        "correct_num": 1,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> was discovered by [MASK].\n\nOptions:\n1. a peasant of the Tula province\n2. Squadron Leader Anderson\n3. George Pickering"
+    },
+    {
+        "test_id": 16,
+        "relation": "DiscoveredIn",
+        "correct_feat": "1878",
+        "options": "1. Britain\n2. 1878\n3. the Atlantic Ocean",
+        "correct_num": 2,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> was discovered in [MASK].\n\nOptions:\n1. Britain\n2. 1878\n3. the Atlantic Ocean"
+    },
+    {
+        "test_id": 17,
+        "relation": "HasA",
+        "correct_feat": "a commemoration entered into the official liturgical calendar of the Russian Orthodox Church",
+        "options": "1. Event cards that happen immediately\n2. a temporary replacement pontoon bridge\n3. a commemoration entered into the official liturgical calendar of the Russian Orthodox Church",
+        "correct_num": 3,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> has [MASK].\n\nOptions:\n1. Event cards that happen immediately\n2. a temporary replacement pontoon bridge\n3. a commemoration entered into the official liturgical calendar of the Russian Orthodox Church"
+    },
+    {
+        "test_id": 18,
+        "relation": "HasA",
+        "correct_feat": "a feast day listed as May 5 O.S./May 18 N.S",
+        "options": "1. a feast day listed as May 5 O.S./May 18 N.S\n2. a two-player format\n3. been analyzed mathematically",
+        "correct_num": 1,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> has [MASK].\n\nOptions:\n1. a feast day listed as May 5 O.S./May 18 N.S\n2. a two-player format\n3. been analyzed mathematically"
+    },
+    {
+        "test_id": 19,
+        "relation": "HasA",
+        "correct_feat": "a feast day celebrated on November 27 O.S./December 10 N.S",
+        "options": "1. a fine-pitch propeller\n2. a feast day celebrated on November 27 O.S./December 10 N.S\n3. common color tokens in an extended two versus two players variant",
+        "correct_num": 2,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> has [MASK].\n\nOptions:\n1. a fine-pitch propeller\n2. a feast day celebrated on November 27 O.S./December 10 N.S\n3. common color tokens in an extended two versus two players variant"
+    },
+    {
+        "test_id": 20,
+        "relation": "HasA",
+        "correct_feat": "an akathist composed in Russian and English",
+        "options": "1. a rectangular grid map of the town\n2. a multimedia group\n3. an akathist composed in Russian and English",
+        "correct_num": 3,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> has [MASK].\n\nOptions:\n1. a rectangular grid map of the town\n2. a multimedia group\n3. an akathist composed in Russian and English"
+    },
+    {
+        "test_id": 21,
+        "relation": "HasA",
+        "correct_feat": "a molieben composed in Russian and English",
+        "options": "1. a molieben composed in Russian and English\n2. a board shaped like a symmetrical cross\n3. a sword and sorcery comics series",
+        "correct_num": 1,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> has [MASK].\n\nOptions:\n1. a molieben composed in Russian and English\n2. a board shaped like a symmetrical cross\n3. a sword and sorcery comics series"
+    },
+    {
+        "test_id": 22,
+        "relation": "HasFeatureOf",
+        "correct_feat": "healing those who suffer from alcoholism",
+        "options": "1. the migration of humans out of Africa\n2. healing those who suffer from alcoholism\n3. randomness of the rebellions",
+        "correct_num": 2,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is characterized by [MASK].\n\nOptions:\n1. the migration of humans out of Africa\n2. healing those who suffer from alcoholism\n3. randomness of the rebellions"
+    },
+    {
+        "test_id": 23,
+        "relation": "HasFeatureOf",
+        "correct_feat": "healing those who suffer from drug abuse",
+        "options": "1. its visual style\n2. high performance\n3. healing those who suffer from drug abuse",
+        "correct_num": 3,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is characterized by [MASK].\n\nOptions:\n1. its visual style\n2. high performance\n3. healing those who suffer from drug abuse"
+    },
+    {
+        "test_id": 24,
+        "relation": "HasFeatureOf",
+        "correct_feat": "healing those who suffer from other forms of addiction",
+        "options": "1. healing those who suffer from other forms of addiction\n2. having land and sea power be almost equally significant\n3. multiplayer board games",
+        "correct_num": 1,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is characterized by [MASK].\n\nOptions:\n1. healing those who suffer from other forms of addiction\n2. having land and sea power be almost equally significant\n3. multiplayer board games"
+    },
+    {
+        "test_id": 25,
+        "relation": "HeldIn",
+        "correct_feat": "St. Nicholas Cathedral",
+        "options": "1. 2004 for the Teacher's Choice Award\n2. St. Nicholas Cathedral\n3. Norway, Sweden, Denmark, Iceland, Britain, Ireland, and Sápmi",
+        "correct_num": 2,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> was held in [MASK].\n\nOptions:\n1. 2004 for the Teacher's Choice Award\n2. St. Nicholas Cathedral\n3. Norway, Sweden, Denmark, Iceland, Britain, Ireland, and Sápmi"
+    },
+    {
+        "test_id": 26,
+        "relation": "IsA",
+        "correct_feat": "now venerated in the Vysotsky Monastery",
+        "options": "1. the fourth episode of the 1965 Doctor Who serial The Crusade\n2. not a state\n3. now venerated in the Vysotsky Monastery",
+        "correct_num": 3,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is [MASK].\n\nOptions:\n1. the fourth episode of the 1965 Doctor Who serial The Crusade\n2. not a state\n3. now venerated in the Vysotsky Monastery"
+    },
+    {
+        "test_id": 27,
+        "relation": "IsA",
+        "correct_feat": "enshrined in the Vladychny Convent",
+        "options": "1. enshrined in the Vladychny Convent\n2. a town that fell to the Ernestine line after the Treaty of Leipzig\n3. a submersible",
+        "correct_num": 1,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is [MASK].\n\nOptions:\n1. enshrined in the Vladychny Convent\n2. a town that fell to the Ernestine line after the Treaty of Leipzig\n3. a submersible"
+    },
+    {
+        "test_id": 28,
+        "relation": "IsA",
+        "correct_feat": "a wonderworking icon of the Mother of God",
+        "options": "1. a Roman territory\n2. a wonderworking icon of the Mother of God\n3. a game with rules for setup and play sequence",
+        "correct_num": 2,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is [MASK].\n\nOptions:\n1. a Roman territory\n2. a wonderworking icon of the Mother of God\n3. a game with rules for setup and play sequence"
+    },
+    {
+        "test_id": 29,
+        "relation": "IsA",
+        "correct_feat": "a variant of the icon of Our Lady of Nicea",
+        "options": "1. a game played with cowrie shells, pebbles, or tamarind seeds\n2. a trainer aircraft\n3. a variant of the icon of Our Lady of Nicea",
+        "correct_num": 3,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is [MASK].\n\nOptions:\n1. a game played with cowrie shells, pebbles, or tamarind seeds\n2. a trainer aircraft\n3. a variant of the icon of Our Lady of Nicea"
+    },
+    {
+        "test_id": 30,
+        "relation": "IsA",
+        "correct_feat": "a copy painted in the Byzantine style",
+        "options": "1. a copy painted in the Byzantine style\n2. a series of games played on a hexagonal board\n3. a board game",
+        "correct_num": 1,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is [MASK].\n\nOptions:\n1. a copy painted in the Byzantine style\n2. a series of games played on a hexagonal board\n3. a board game"
+    },
+    {
+        "test_id": 31,
+        "relation": "IsA",
+        "correct_feat": "a copy painted in the \"academic\" style",
+        "options": "1. a tafl variant\n2. a copy painted in the \"academic\" style\n3. a town on the banks of the Elbe in northwestern Saxony, Germany",
+        "correct_num": 2,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is [MASK].\n\nOptions:\n1. a tafl variant\n2. a copy painted in the \"academic\" style\n3. a town on the banks of the Elbe in northwestern Saxony, Germany"
+    },
+    {
+        "test_id": 32,
+        "relation": "IsA",
+        "correct_feat": "a miraculous icon",
+        "options": "1. a solved game\n2. a place\n3. a miraculous icon",
+        "correct_num": 3,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is [MASK].\n\nOptions:\n1. a solved game\n2. a place\n3. a miraculous icon"
+    },
+    {
+        "test_id": 33,
+        "relation": "IsA",
+        "correct_feat": "a skete dedicated to the Inexhaustible Chalice",
+        "options": "1. a skete dedicated to the Inexhaustible Chalice\n2. a kids version\n3. a Chinese cross-and-circle board game",
+        "correct_num": 1,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is [MASK].\n\nOptions:\n1. a skete dedicated to the Inexhaustible Chalice\n2. a kids version\n3. a Chinese cross-and-circle board game"
+    },
+    {
+        "test_id": 34,
+        "relation": "IsA",
+        "correct_feat": "known as Inexhaustible Cup",
+        "options": "1. a political alliance\n2. known as Inexhaustible Cup\n3. a town that fell to the Ernestine line after the Treaty of Leipzig",
+        "correct_num": 2,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is [MASK].\n\nOptions:\n1. a political alliance\n2. known as Inexhaustible Cup\n3. a town that fell to the Ernestine line after the Treaty of Leipzig"
+    },
+    {
+        "test_id": 35,
+        "relation": "IsA",
+        "correct_feat": "known as Non-intoxicating Chalice",
+        "options": "1. an outsider to the conflict\n2. high-energy X-rays\n3. known as Non-intoxicating Chalice",
+        "correct_num": 3,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is [MASK].\n\nOptions:\n1. an outsider to the conflict\n2. high-energy X-rays\n3. known as Non-intoxicating Chalice"
+    },
+    {
+        "test_id": 36,
+        "relation": "IsA",
+        "correct_feat": "known as The Inexhaustible Cup",
+        "options": "1. known as The Inexhaustible Cup\n2. a board wargame\n3. a game that can be played with pencil and paper",
+        "correct_num": 1,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is [MASK].\n\nOptions:\n1. known as The Inexhaustible Cup\n2. a board wargame\n3. a game that can be played with pencil and paper"
+    },
+    {
+        "test_id": 37,
+        "relation": "IsA",
+        "correct_feat": "known as The Inexhaustible Chalice",
+        "options": "1. a permanent link across the Lower Rhine\n2. known as The Inexhaustible Chalice\n3. a game that is a variant of Halma",
+        "correct_num": 2,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is [MASK].\n\nOptions:\n1. a permanent link across the Lower Rhine\n2. known as The Inexhaustible Chalice\n3. a game that is a variant of Halma"
+    },
+    {
+        "test_id": 38,
+        "relation": "IsA",
+        "correct_feat": "known for healing those who suffer from alcoholism",
+        "options": "1. an aircraft carrier-based adaptation\n2. a 2005 novel\n3. known for healing those who suffer from alcoholism",
+        "correct_num": 3,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is [MASK].\n\nOptions:\n1. an aircraft carrier-based adaptation\n2. a 2005 novel\n3. known for healing those who suffer from alcoholism"
+    },
+    {
+        "test_id": 39,
+        "relation": "IsA",
+        "correct_feat": "known for healing those who suffer from drug abuse",
+        "options": "1. known for healing those who suffer from drug abuse\n2. an island organized as an unincorporated territory of the United States\n3. a British single-seat fighter aircraft",
+        "correct_num": 1,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is [MASK].\n\nOptions:\n1. known for healing those who suffer from drug abuse\n2. an island organized as an unincorporated territory of the United States\n3. a British single-seat fighter aircraft"
+    },
+    {
+        "test_id": 40,
+        "relation": "IsA",
+        "correct_feat": "known for healing those who suffer from other forms of addiction",
+        "options": "1. a two-player combat-oriented game\n2. known for healing those who suffer from other forms of addiction\n3. a museum",
+        "correct_num": 2,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is [MASK].\n\nOptions:\n1. a two-player combat-oriented game\n2. known for healing those who suffer from other forms of addiction\n3. a museum"
+    },
+    {
+        "test_id": 41,
+        "relation": "IsA",
+        "correct_feat": "located in Serpukhov, Russia",
+        "options": "1. an abstract strategy board game\n2. a tafl variant\n3. located in Serpukhov, Russia",
+        "correct_num": 3,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is [MASK].\n\nOptions:\n1. an abstract strategy board game\n2. a tafl variant\n3. located in Serpukhov, Russia"
+    },
+    {
+        "test_id": 42,
+        "relation": "IsA",
+        "correct_feat": "located in the Vysotsky Monastery",
+        "options": "1. located in the Vysotsky Monastery\n2. a military air arm\n3. a fictional work loosely based on the true story of Johann Schwerdfeger",
+        "correct_num": 1,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is [MASK].\n\nOptions:\n1. located in the Vysotsky Monastery\n2. a military air arm\n3. a fictional work loosely based on the true story of Johann Schwerdfeger"
+    },
+    {
+        "test_id": 43,
+        "relation": "IsA",
+        "correct_feat": "located in the Vladychny Convent",
+        "options": "1. the capital of the district Nordsachsen\n2. located in the Vladychny Convent\n3. a hole game",
+        "correct_num": 2,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is [MASK].\n\nOptions:\n1. the capital of the district Nordsachsen\n2. located in the Vladychny Convent\n3. a hole game"
+    },
+    {
+        "test_id": 44,
+        "relation": "IsA",
+        "correct_feat": "a member of the Fellowship of the Inexhaustible Cup",
+        "options": "1. a game that is a variant of Halma\n2. a 2016 novel\n3. a member of the Fellowship of the Inexhaustible Cup",
+        "correct_num": 3,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is [MASK].\n\nOptions:\n1. a game that is a variant of Halma\n2. a 2016 novel\n3. a member of the Fellowship of the Inexhaustible Cup"
+    },
+    {
+        "test_id": 45,
+        "relation": "IsA",
+        "correct_feat": "part of the Russian Orthodox Church",
+        "options": "1. part of the Russian Orthodox Church\n2. a spin-off of Empire Builder\n3. a foolscap quarto writing paper",
+        "correct_num": 1,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is [MASK].\n\nOptions:\n1. part of the Russian Orthodox Church\n2. a spin-off of Empire Builder\n3. a foolscap quarto writing paper"
+    },
+    {
+        "test_id": 46,
+        "relation": "IsA",
+        "correct_feat": "part of the Alexander Nevsky Cathedral in Serpakhov",
+        "options": "1. a strategy board game\n2. part of the Alexander Nevsky Cathedral in Serpakhov\n3. a 2005 novel",
+        "correct_num": 2,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is [MASK].\n\nOptions:\n1. a strategy board game\n2. part of the Alexander Nevsky Cathedral in Serpakhov\n3. a 2005 novel"
+    },
+    {
+        "test_id": 47,
+        "relation": "IsA",
+        "correct_feat": "part of the Pokrov-Tervenichesky convent",
+        "options": "1. a new Rijnbrug\n2. a board wargame\n3. part of the Pokrov-Tervenichesky convent",
+        "correct_num": 3,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is [MASK].\n\nOptions:\n1. a new Rijnbrug\n2. a board wargame\n3. part of the Pokrov-Tervenichesky convent"
+    },
+    {
+        "test_id": 48,
+        "relation": "IsA",
+        "correct_feat": "used as a shrine",
+        "options": "1. used as a shrine\n2. similar in concept to traditional tic-tac-toe\n3. a game that is mentioned in Upton Sinclair's Dragon's Teeth",
+        "correct_num": 1,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is [MASK].\n\nOptions:\n1. used as a shrine\n2. similar in concept to traditional tic-tac-toe\n3. a game that is mentioned in Upton Sinclair's Dragon's Teeth"
+    },
+    {
+        "test_id": 49,
+        "relation": "IsA",
+        "correct_feat": "used as a recovery program",
+        "options": "1. a pit and pebble game\n2. used as a recovery program\n3. a medium-sized vessel",
+        "correct_num": 2,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is [MASK].\n\nOptions:\n1. a pit and pebble game\n2. used as a recovery program\n3. a medium-sized vessel"
+    },
+    {
+        "test_id": 50,
+        "relation": "IsA",
+        "correct_feat": "used for healing from addiction",
+        "options": "1. a Polish-language version\n2. an abstract strategy game\n3. used for healing from addiction",
+        "correct_num": 3,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is [MASK].\n\nOptions:\n1. a Polish-language version\n2. an abstract strategy game\n3. used for healing from addiction"
+    },
+    {
+        "test_id": 51,
+        "relation": "IsA",
+        "correct_feat": "used for intercessory prayer",
+        "options": "1. used for intercessory prayer\n2. a German word\n3. a title",
+        "correct_num": 1,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is [MASK].\n\nOptions:\n1. used for intercessory prayer\n2. a German word\n3. a title"
+    },
+    {
+        "test_id": 52,
+        "relation": "IsA",
+        "correct_feat": "used for support among members to combat destructive forces of addictions",
+        "options": "1. an Indian game similar to Pachisi\n2. used for support among members to combat destructive forces of addictions\n3. a Canadian documentary film",
+        "correct_num": 2,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is [MASK].\n\nOptions:\n1. an Indian game similar to Pachisi\n2. used for support among members to combat destructive forces of addictions\n3. a Canadian documentary film"
+    },
+    {
+        "test_id": 53,
+        "relation": "IsA",
+        "correct_feat": "used in recovery programs",
+        "options": "1. a young kids version\n2. an abstract strategy game\n3. used in recovery programs",
+        "correct_num": 3,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is [MASK].\n\nOptions:\n1. a young kids version\n2. an abstract strategy game\n3. used in recovery programs"
+    },
+    {
+        "test_id": 54,
+        "relation": "IsA",
+        "correct_feat": "used in the Fellowship of the Inexhaustible Cup",
+        "options": "1. used in the Fellowship of the Inexhaustible Cup\n2. an official mode in Counter-Strike: Global Offensive\n3. known as Congkak or Congklakin in Indonesia",
+        "correct_num": 1,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is [MASK].\n\nOptions:\n1. used in the Fellowship of the Inexhaustible Cup\n2. an official mode in Counter-Strike: Global Offensive\n3. known as Congkak or Congklakin in Indonesia"
+    },
+    {
+        "test_id": 55,
+        "relation": "IsA",
+        "correct_feat": "used to combat the many destructive forces of addictions",
+        "options": "1. generally for two players\n2. used to combat the many destructive forces of addictions\n3. a Russian drama film",
+        "correct_num": 2,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is [MASK].\n\nOptions:\n1. generally for two players\n2. used to combat the many destructive forces of addictions\n3. a Russian drama film"
+    },
+    {
+        "test_id": 56,
+        "relation": "OccurredAt",
+        "correct_feat": "the Vladychny Convent in Serpukhov",
+        "options": "1. Egypt\n2. concentration camps for aircraft production\n3. the Vladychny Convent in Serpukhov",
+        "correct_num": 3,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> occurred at [MASK].\n\nOptions:\n1. Egypt\n2. concentration camps for aircraft production\n3. the Vladychny Convent in Serpukhov"
+    },
+    {
+        "test_id": 57,
+        "relation": "OccurredIn",
+        "correct_feat": "1878",
+        "options": "1. 1878\n2. Poland and Lithuania\n3. the 16th century",
+        "correct_num": 1,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> occurred in [MASK].\n\nOptions:\n1. 1878\n2. Poland and Lithuania\n3. the 16th century"
+    },
+    {
+        "test_id": 58,
+        "relation": "OccurredIn",
+        "correct_feat": "the early 1990s",
+        "options": "1. 70 BC\n2. the early 1990s\n3. the Eastern Region",
+        "correct_num": 2,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> occurred in [MASK].\n\nOptions:\n1. 70 BC\n2. the early 1990s\n3. the Eastern Region"
+    },
+    {
+        "test_id": 59,
+        "relation": "OriginatedIn",
+        "correct_feat": "Serpukhov, Russia",
+        "options": "1. Graham County, Kansas\n2. a sequel to The Hobbit\n3. Serpukhov, Russia",
+        "correct_num": 3,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> originated in [MASK].\n\nOptions:\n1. Graham County, Kansas\n2. a sequel to The Hobbit\n3. Serpukhov, Russia"
+    },
+    {
+        "test_id": 60,
+        "relation": "PerformedBy",
+        "correct_feat": "nuns",
+        "options": "1. nuns\n2. Abraham Lincoln\n3. Caesar",
+        "correct_num": 1,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> was performed by [MASK].\n\nOptions:\n1. nuns\n2. Abraham Lincoln\n3. Caesar"
+    },
+    {
+        "test_id": 61,
+        "relation": "WrittenBy",
+        "correct_feat": "Jacob Ivanovich Brilliantov",
+        "options": "1. Ted Bell\n2. Jacob Ivanovich Brilliantov\n3. Allen Steele",
+        "correct_num": 2,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> was written by [MASK].\n\nOptions:\n1. Ted Bell\n2. Jacob Ivanovich Brilliantov\n3. Allen Steele"
+    },
+    {
+        "test_id": 62,
+        "relation": "WrittenIn",
+        "correct_feat": "Russian",
+        "options": "1. four pages of rules\n2. Old Norse\n3. Russian",
+        "correct_num": 3,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> was written in [MASK].\n\nOptions:\n1. four pages of rules\n2. Old Norse\n3. Russian"
+    },
+    {
+        "test_id": 63,
+        "relation": "WrittenIn",
+        "correct_feat": "English",
+        "options": "1. English\n2. English\n3. his spare time",
+        "correct_num": 1,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> was written in [MASK].\n\nOptions:\n1. English\n2. English\n3. his spare time"
+    }
+]

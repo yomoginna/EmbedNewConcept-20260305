@@ -1,0 +1,618 @@
+[
+    {
+        "test_id": 0,
+        "relation": "About",
+        "correct_feat": "a Gulf Coast day",
+        "options": "1. a Gulf Coast day\n2. the return to the South following the Battle of Gettysburg\n3. the meeting of the United States and Soviet Armies near the end of World War II",
+        "correct_num": 1,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is about [MASK].\n\nOptions:\n1. a Gulf Coast day\n2. the return to the South following the Battle of Gettysburg\n3. the meeting of the United States and Soviet Armies near the end of World War II"
+    },
+    {
+        "test_id": 1,
+        "relation": "About",
+        "correct_feat": "the transition from day to night",
+        "options": "1. a board game\n2. the transition from day to night\n3. actions of squad sized units in World War II",
+        "correct_num": 2,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is about [MASK].\n\nOptions:\n1. a board game\n2. the transition from day to night\n3. actions of squad sized units in World War II"
+    },
+    {
+        "test_id": 2,
+        "relation": "About",
+        "correct_feat": "life and time on Horn Island",
+        "options": "1. foreign national servicemen serving in another country's armed forces\n2. the definition and legal status of individuals participating in armed conflicts for payment\n3. life and time on Horn Island",
+        "correct_num": 3,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is about [MASK].\n\nOptions:\n1. foreign national servicemen serving in another country's armed forces\n2. the definition and legal status of individuals participating in armed conflicts for payment\n3. life and time on Horn Island"
+    },
+    {
+        "test_id": 3,
+        "relation": "About",
+        "correct_feat": "the beauty of a day on the Coast",
+        "options": "1. the beauty of a day on the Coast\n2. individuals who are outsiders to a conflict and not members of any official military\n3. a barn decoration originating in Pennsylvania Dutch regions of the United States",
+        "correct_num": 1,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is about [MASK].\n\nOptions:\n1. the beauty of a day on the Coast\n2. individuals who are outsiders to a conflict and not members of any official military\n3. a barn decoration originating in Pennsylvania Dutch regions of the United States"
+    },
+    {
+        "test_id": 4,
+        "relation": "About",
+        "correct_feat": "the environment of the Mississippi Gulf Coast",
+        "options": "1. actions of squad sized units in World War II\n2. the environment of the Mississippi Gulf Coast\n3. a political youth organization in Transnistria",
+        "correct_num": 2,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is about [MASK].\n\nOptions:\n1. actions of squad sized units in World War II\n2. the environment of the Mississippi Gulf Coast\n3. a political youth organization in Transnistria"
+    },
+    {
+        "test_id": 5,
+        "relation": "AssociatedWith",
+        "correct_feat": "Walter Anderson",
+        "options": "1. the Spanish Civil War\n2. the Viking Age\n3. Walter Anderson",
+        "correct_num": 3,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is associated with [MASK].\n\nOptions:\n1. the Spanish Civil War\n2. the Viking Age\n3. Walter Anderson"
+    },
+    {
+        "test_id": 6,
+        "relation": "AssociatedWith",
+        "correct_feat": "Horn Island",
+        "options": "1. Horn Island\n2. polyominoes\n3. the Electorate of Saxony",
+        "correct_num": 1,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is associated with [MASK].\n\nOptions:\n1. Horn Island\n2. polyominoes\n3. the Electorate of Saxony"
+    },
+    {
+        "test_id": 7,
+        "relation": "AssociatedWith",
+        "correct_feat": "Psalm 104",
+        "options": "1. the Wehrmacht\n2. Psalm 104\n3. Ludo, Aggravation or Sorry!",
+        "correct_num": 2,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is associated with [MASK].\n\nOptions:\n1. the Wehrmacht\n2. Psalm 104\n3. Ludo, Aggravation or Sorry!"
+    },
+    {
+        "test_id": 8,
+        "relation": "AssociatedWith",
+        "correct_feat": "the Mississippi Gulf Coast",
+        "options": "1. John Agar\n2. teaching arithmetic to African children\n3. the Mississippi Gulf Coast",
+        "correct_num": 3,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is associated with [MASK].\n\nOptions:\n1. John Agar\n2. teaching arithmetic to African children\n3. the Mississippi Gulf Coast"
+    },
+    {
+        "test_id": 9,
+        "relation": "BuiltIn",
+        "correct_feat": "in an extension on the south side of the home after 1939",
+        "options": "1. in an extension on the south side of the home after 1939\n2. across the river Rhine\n3. in Counter-Strike 2",
+        "correct_num": 1,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> was built [MASK].\n\nOptions:\n1. in an extension on the south side of the home after 1939\n2. across the river Rhine\n3. in Counter-Strike 2"
+    },
+    {
+        "test_id": 10,
+        "relation": "ConsistsOf",
+        "correct_feat": "floor-to-ceiling murals",
+        "options": "1. a Rolls-Royce Merlin engine\n2. floor-to-ceiling murals\n3. players being given European Currency Units (ECU), Demand cards, and one freight Loco card",
+        "correct_num": 2,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> consists of [MASK].\n\nOptions:\n1. a Rolls-Royce Merlin engine\n2. floor-to-ceiling murals\n3. players being given European Currency Units (ECU), Demand cards, and one freight Loco card"
+    },
+    {
+        "test_id": 11,
+        "relation": "ConsistsOf",
+        "correct_feat": "painted wooden walls",
+        "options": "1. carved wooden elongated boat-shaped boards with cup-shaped holes\n2. an oware board\n3. painted wooden walls",
+        "correct_num": 3,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> consists of [MASK].\n\nOptions:\n1. carved wooden elongated boat-shaped boards with cup-shaped holes\n2. an oware board\n3. painted wooden walls"
+    },
+    {
+        "test_id": 12,
+        "relation": "ConsistsOf",
+        "correct_feat": "oil paints, house paint, and tempura",
+        "options": "1. oil paints, house paint, and tempura\n2. building across an ocean inlet or lake costing an additional ECU $3 million\n3. small and symmetrical arenas",
+        "correct_num": 1,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> consists of [MASK].\n\nOptions:\n1. oil paints, house paint, and tempura\n2. building across an ocean inlet or lake costing an additional ECU $3 million\n3. small and symmetrical arenas"
+    },
+    {
+        "test_id": 13,
+        "relation": "ConsistsOf",
+        "correct_feat": "representations of different times of day on each wall",
+        "options": "1. a paratrooper force known as the Fallschirmjäger\n2. representations of different times of day on each wall\n3. pieces that may be small checkers or counters, or wooden or plastic cones or men resembling small chess pawns",
+        "correct_num": 2,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> consists of [MASK].\n\nOptions:\n1. a paratrooper force known as the Fallschirmjäger\n2. representations of different times of day on each wall\n3. pieces that may be small checkers or counters, or wooden or plastic cones or men resembling small chess pawns"
+    },
+    {
+        "test_id": 14,
+        "relation": "ConsistsOf",
+        "correct_feat": "a zinnia on the ceiling",
+        "options": "1. a painting\n2. costs varying depending on terrain and city\n3. a zinnia on the ceiling",
+        "correct_num": 3,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> consists of [MASK].\n\nOptions:\n1. a painting\n2. costs varying depending on terrain and city\n3. a zinnia on the ceiling"
+    },
+    {
+        "test_id": 15,
+        "relation": "CreatedAround",
+        "correct_feat": "sometime after 1951",
+        "options": "1. sometime after 1951\n2. 2,000 to 4,000 years ago\n3. March 1936",
+        "correct_num": 1,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> was created around [MASK].\n\nOptions:\n1. sometime after 1951\n2. 2,000 to 4,000 years ago\n3. March 1936"
+    },
+    {
+        "test_id": 16,
+        "relation": "CreatedBy",
+        "correct_feat": "Walter Anderson",
+        "options": "1. Joseph Smith\n2. Walter Anderson\n3. Karl Flach",
+        "correct_num": 2,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> was created by [MASK].\n\nOptions:\n1. Joseph Smith\n2. Walter Anderson\n3. Karl Flach"
+    },
+    {
+        "test_id": 17,
+        "relation": "CreatedFor",
+        "correct_feat": "illustrating a Gulf Coast day",
+        "options": "1. the role of a modern fighter\n2. the Gorringe Ridge\n3. illustrating a Gulf Coast day",
+        "correct_num": 3,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> was created for [MASK].\n\nOptions:\n1. the role of a modern fighter\n2. the Gorringe Ridge\n3. illustrating a Gulf Coast day"
+    },
+    {
+        "test_id": 18,
+        "relation": "CreatedFor",
+        "correct_feat": "portraying life and time on Horn Island",
+        "options": "1. portraying life and time on Horn Island\n2. the Gettysburg Championship\n3. drinking while sitting down at the table",
+        "correct_num": 1,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> was created for [MASK].\n\nOptions:\n1. portraying life and time on Horn Island\n2. the Gettysburg Championship\n3. drinking while sitting down at the table"
+    },
+    {
+        "test_id": 19,
+        "relation": "CreatedFor",
+        "correct_feat": "a private expression of an artist",
+        "options": "1. the Gettysburg Area School District\n2. a private expression of an artist\n3. the Gorringe Ridge",
+        "correct_num": 2,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> was created for [MASK].\n\nOptions:\n1. the Gettysburg Area School District\n2. a private expression of an artist\n3. the Gorringe Ridge"
+    },
+    {
+        "test_id": 20,
+        "relation": "CreatedIn",
+        "correct_feat": "Anderson's cottage",
+        "options": "1. 2005\n2. New Jersey\n3. Anderson's cottage",
+        "correct_num": 3,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> was created in [MASK].\n\nOptions:\n1. 2005\n2. New Jersey\n3. Anderson's cottage"
+    },
+    {
+        "test_id": 21,
+        "relation": "CreatedIn",
+        "correct_feat": "Ocean Springs, Mississippi",
+        "options": "1. Ocean Springs, Mississippi\n2. Arnhem\n3. Dark Souls",
+        "correct_num": 1,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> was created in [MASK].\n\nOptions:\n1. Ocean Springs, Mississippi\n2. Arnhem\n3. Dark Souls"
+    },
+    {
+        "test_id": 22,
+        "relation": "CreatedTo",
+        "correct_feat": "illustrate a Gulf Coast day",
+        "options": "1. interrupt a phone conversation of another caller\n2. illustrate a Gulf Coast day\n3. recreate the adrenaline rush and tension experienced during the final minutes of a live escape room within a card game format",
+        "correct_num": 2,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> was created to [MASK].\n\nOptions:\n1. interrupt a phone conversation of another caller\n2. illustrate a Gulf Coast day\n3. recreate the adrenaline rush and tension experienced during the final minutes of a live escape room within a card game format"
+    },
+    {
+        "test_id": 23,
+        "relation": "CreatedTo",
+        "correct_feat": "show the transition from day to night",
+        "options": "1. house a railway museum\n2. increase the appeal of games\n3. show the transition from day to night",
+        "correct_num": 3,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> was created to [MASK].\n\nOptions:\n1. house a railway museum\n2. increase the appeal of games\n3. show the transition from day to night"
+    },
+    {
+        "test_id": 24,
+        "relation": "CreatedTo",
+        "correct_feat": "mentally transport himself to Horn Island",
+        "options": "1. mentally transport himself to Horn Island\n2. prevent seizures\n3. hold offerings or supplies for the afterlife",
+        "correct_num": 1,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> was created to [MASK].\n\nOptions:\n1. mentally transport himself to Horn Island\n2. prevent seizures\n3. hold offerings or supplies for the afterlife"
+    },
+    {
+        "test_id": 25,
+        "relation": "CreatedTo",
+        "correct_feat": "portray life and time on the island",
+        "options": "1. have a flying speed of 250 mph\n2. portray life and time on the island\n3. prevent seizures",
+        "correct_num": 2,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> was created to [MASK].\n\nOptions:\n1. have a flying speed of 250 mph\n2. portray life and time on the island\n3. prevent seizures"
+    },
+    {
+        "test_id": 26,
+        "relation": "CreatedTo",
+        "correct_feat": "chronicle the transition from night to day",
+        "options": "1. replace the Gloster Gauntlet biplane\n2. aid Nationalist forces in the Spanish Civil War\n3. chronicle the transition from night to day",
+        "correct_num": 3,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> was created to [MASK].\n\nOptions:\n1. replace the Gloster Gauntlet biplane\n2. aid Nationalist forces in the Spanish Civil War\n3. chronicle the transition from night to day"
+    },
+    {
+        "test_id": 27,
+        "relation": "CreatedTo",
+        "correct_feat": "be a hymn to the light and beauty of a day on the Coast",
+        "options": "1. be a hymn to the light and beauty of a day on the Coast\n2. replace the Gloster Gauntlet biplane\n3. defend the port of Valparaiso against attack",
+        "correct_num": 1,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> was created to [MASK].\n\nOptions:\n1. be a hymn to the light and beauty of a day on the Coast\n2. replace the Gloster Gauntlet biplane\n3. defend the port of Valparaiso against attack"
+    },
+    {
+        "test_id": 28,
+        "relation": "HasA",
+        "correct_feat": "bright colors",
+        "options": "1. rules of capture that depend on the variant of the game played\n2. bright colors\n3. a score house at each end",
+        "correct_num": 2,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> has [MASK].\n\nOptions:\n1. rules of capture that depend on the variant of the game played\n2. bright colors\n3. a score house at each end"
+    },
+    {
+        "test_id": 29,
+        "relation": "HasA",
+        "correct_feat": "vibrant images",
+        "options": "1. computer opponents\n2. Captain Stransky\n3. vibrant images",
+        "correct_num": 3,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> has [MASK].\n\nOptions:\n1. computer opponents\n2. Captain Stransky\n3. vibrant images"
+    },
+    {
+        "test_id": 30,
+        "relation": "HasA",
+        "correct_feat": "floor-to-ceiling murals",
+        "options": "1. floor-to-ceiling murals\n2. been associated with private military companies\n3. inspired many derivative works",
+        "correct_num": 1,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> has [MASK].\n\nOptions:\n1. floor-to-ceiling murals\n2. been associated with private military companies\n3. inspired many derivative works"
+    },
+    {
+        "test_id": 31,
+        "relation": "HasA",
+        "correct_feat": "a double window facing south",
+        "options": "1. a base-16 number system\n2. a double window facing south\n3. a high school",
+        "correct_num": 2,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> has [MASK].\n\nOptions:\n1. a base-16 number system\n2. a double window facing south\n3. a high school"
+    },
+    {
+        "test_id": 32,
+        "relation": "HasA",
+        "correct_feat": "single windows on the east and west walls",
+        "options": "1. an interesting situation\n2. a brand new counter mix for the German, Russian and Finnish armies\n3. single windows on the east and west walls",
+        "correct_num": 3,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> has [MASK].\n\nOptions:\n1. an interesting situation\n2. a brand new counter mix for the German, Russian and Finnish armies\n3. single windows on the east and west walls"
+    },
+    {
+        "test_id": 33,
+        "relation": "HasA",
+        "correct_feat": "a north wall dominated by the back of the fireplace and chimney",
+        "options": "1. a north wall dominated by the back of the fireplace and chimney\n2. solitary play also possible\n3. a rule for exiting the player's base requiring a six",
+        "correct_num": 1,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> has [MASK].\n\nOptions:\n1. a north wall dominated by the back of the fireplace and chimney\n2. solitary play also possible\n3. a rule for exiting the player's base requiring a six"
+    },
+    {
+        "test_id": 34,
+        "relation": "HasA",
+        "correct_feat": "a door that led into the main cottage",
+        "options": "1. optionally one large score house at each end\n2. a door that led into the main cottage\n3. a strong maritime collection",
+        "correct_num": 2,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> has [MASK].\n\nOptions:\n1. optionally one large score house at each end\n2. a door that led into the main cottage\n3. a strong maritime collection"
+    },
+    {
+        "test_id": 35,
+        "relation": "HasA",
+        "correct_feat": "a wooden chest containing Anderson’s transcription of Psalm 104",
+        "options": "1. a Franciscan monastery\n2. four seeds in each of the twelve smaller houses at the start\n3. a wooden chest containing Anderson’s transcription of Psalm 104",
+        "correct_num": 3,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> has [MASK].\n\nOptions:\n1. a Franciscan monastery\n2. four seeds in each of the twelve smaller houses at the start\n3. a wooden chest containing Anderson’s transcription of Psalm 104"
+    },
+    {
+        "test_id": 36,
+        "relation": "HasA",
+        "correct_feat": "a crowing rooster perched atop the east window frame",
+        "options": "1. a crowing rooster perched atop the east window frame\n2. private companies\n3. a governor, a senate, and a house of representatives",
+        "correct_num": 1,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> has [MASK].\n\nOptions:\n1. a crowing rooster perched atop the east window frame\n2. private companies\n3. a governor, a senate, and a house of representatives"
+    },
+    {
+        "test_id": 37,
+        "relation": "HasA",
+        "correct_feat": "a hillside with goats to the left of the east window",
+        "options": "1. a game variant based on Polish unrest\n2. a hillside with goats to the left of the east window\n3. a base-16 number system",
+        "correct_num": 2,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> has [MASK].\n\nOptions:\n1. a game variant based on Polish unrest\n2. a hillside with goats to the left of the east window\n3. a base-16 number system"
+    },
+    {
+        "test_id": 38,
+        "relation": "HasFeatureOf",
+        "correct_feat": "the transition from day to night",
+        "options": "1. its adoption by the Nazis to legitimize their government\n2. a musical group\n3. the transition from day to night",
+        "correct_num": 3,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is characterized by [MASK].\n\nOptions:\n1. its adoption by the Nazis to legitimize their government\n2. a musical group\n3. the transition from day to night"
+    },
+    {
+        "test_id": 39,
+        "relation": "HasFeatureOf",
+        "correct_feat": "representations of different times of day on each wall",
+        "options": "1. representations of different times of day on each wall\n2. a wager\n3. its official languages being Spanish and English",
+        "correct_num": 1,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is characterized by [MASK].\n\nOptions:\n1. representations of different times of day on each wall\n2. a wager\n3. its official languages being Spanish and English"
+    },
+    {
+        "test_id": 40,
+        "relation": "HasFeatureOf",
+        "correct_feat": "symbolism inspired by Psalm 104",
+        "options": "1. the circle being collapsed onto the cross\n2. symbolism inspired by Psalm 104\n3. operating a paratrooper force known as the Fallschirmjäger",
+        "correct_num": 2,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is characterized by [MASK].\n\nOptions:\n1. the circle being collapsed onto the cross\n2. symbolism inspired by Psalm 104\n3. operating a paratrooper force known as the Fallschirmjäger"
+    },
+    {
+        "test_id": 41,
+        "relation": "HasFeatureOf",
+        "correct_feat": "the use of light as an organizing principle",
+        "options": "1. the advent of transformative philosophical and religious ideas\n2. pieces being captured by jumping over them\n3. the use of light as an organizing principle",
+        "correct_num": 3,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is characterized by [MASK].\n\nOptions:\n1. the advent of transformative philosophical and religious ideas\n2. pieces being captured by jumping over them\n3. the use of light as an organizing principle"
+    },
+    {
+        "test_id": 42,
+        "relation": "HeldIn",
+        "correct_feat": "the Walter Anderson Museum of Art",
+        "options": "1. the Walter Anderson Museum of Art\n2. the Royal Canadian Navy\n3. the Royal Marines",
+        "correct_num": 1,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> was held in [MASK].\n\nOptions:\n1. the Walter Anderson Museum of Art\n2. the Royal Canadian Navy\n3. the Royal Marines"
+    },
+    {
+        "test_id": 43,
+        "relation": "InfluencedBy",
+        "correct_feat": "Psalm 104",
+        "options": "1. the political fortunes of the family\n2. Psalm 104\n3. the diving bell",
+        "correct_num": 2,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> was influenced by [MASK].\n\nOptions:\n1. the political fortunes of the family\n2. Psalm 104\n3. the diving bell"
+    },
+    {
+        "test_id": 44,
+        "relation": "InfluencedBy",
+        "correct_feat": "the environment in which it was created",
+        "options": "1. the movement to create an ethnically German Empire\n2. Burm's childhood experiences of playing \"race\" cars with his brother\n3. the environment in which it was created",
+        "correct_num": 3,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> was influenced by [MASK].\n\nOptions:\n1. the movement to create an ethnically German Empire\n2. Burm's childhood experiences of playing \"race\" cars with his brother\n3. the environment in which it was created"
+    },
+    {
+        "test_id": 45,
+        "relation": "IsA",
+        "correct_feat": "painted on the wooden walls of Anderson’s cottage",
+        "options": "1. painted on the wooden walls of Anderson’s cottage\n2. a military air arm\n3. a fictional work loosely based on the true story of Johann Schwerdfeger",
+        "correct_num": 1,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is [MASK].\n\nOptions:\n1. painted on the wooden walls of Anderson’s cottage\n2. a military air arm\n3. a fictional work loosely based on the true story of Johann Schwerdfeger"
+    },
+    {
+        "test_id": 46,
+        "relation": "IsA",
+        "correct_feat": "a floor-to-ceiling mural",
+        "options": "1. the capital of the district Nordsachsen\n2. a floor-to-ceiling mural\n3. a hole game",
+        "correct_num": 2,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is [MASK].\n\nOptions:\n1. the capital of the district Nordsachsen\n2. a floor-to-ceiling mural\n3. a hole game"
+    },
+    {
+        "test_id": 47,
+        "relation": "IsA",
+        "correct_feat": "referred to as “Little Room",
+        "options": "1. a game that is a variant of Halma\n2. a 2016 novel\n3. referred to as “Little Room",
+        "correct_num": 3,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is [MASK].\n\nOptions:\n1. a game that is a variant of Halma\n2. a 2016 novel\n3. referred to as “Little Room"
+    },
+    {
+        "test_id": 48,
+        "relation": "IsA",
+        "correct_feat": "referred to as “Creation at Sunrise",
+        "options": "1. referred to as “Creation at Sunrise\n2. a spin-off of Empire Builder\n3. a foolscap quarto writing paper",
+        "correct_num": 1,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is [MASK].\n\nOptions:\n1. referred to as “Creation at Sunrise\n2. a spin-off of Empire Builder\n3. a foolscap quarto writing paper"
+    },
+    {
+        "test_id": 49,
+        "relation": "IsA",
+        "correct_feat": "a spectacular mural",
+        "options": "1. a strategy board game\n2. a spectacular mural\n3. a 2005 novel",
+        "correct_num": 2,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is [MASK].\n\nOptions:\n1. a strategy board game\n2. a spectacular mural\n3. a 2005 novel"
+    },
+    {
+        "test_id": 50,
+        "relation": "IsA",
+        "correct_feat": "a hymn to the light and beauty of a day on the Coast",
+        "options": "1. a new Rijnbrug\n2. a board wargame\n3. a hymn to the light and beauty of a day on the Coast",
+        "correct_num": 3,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is [MASK].\n\nOptions:\n1. a new Rijnbrug\n2. a board wargame\n3. a hymn to the light and beauty of a day on the Coast"
+    },
+    {
+        "test_id": 51,
+        "relation": "IsA",
+        "correct_feat": "a monumental zinnia on the ceiling",
+        "options": "1. a monumental zinnia on the ceiling\n2. similar in concept to traditional tic-tac-toe\n3. a game that is mentioned in Upton Sinclair's Dragon's Teeth",
+        "correct_num": 1,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is [MASK].\n\nOptions:\n1. a monumental zinnia on the ceiling\n2. similar in concept to traditional tic-tac-toe\n3. a game that is mentioned in Upton Sinclair's Dragon's Teeth"
+    },
+    {
+        "test_id": 52,
+        "relation": "IsA",
+        "correct_feat": "an element of its setting, the Mississippi Gulf Coast",
+        "options": "1. a pit and pebble game\n2. an element of its setting, the Mississippi Gulf Coast\n3. a medium-sized vessel",
+        "correct_num": 2,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is [MASK].\n\nOptions:\n1. a pit and pebble game\n2. an element of its setting, the Mississippi Gulf Coast\n3. a medium-sized vessel"
+    },
+    {
+        "test_id": 53,
+        "relation": "IsA",
+        "correct_feat": "an intensely private expression of an artist",
+        "options": "1. a Polish-language version\n2. an abstract strategy game\n3. an intensely private expression of an artist",
+        "correct_num": 3,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is [MASK].\n\nOptions:\n1. a Polish-language version\n2. an abstract strategy game\n3. an intensely private expression of an artist"
+    },
+    {
+        "test_id": 54,
+        "relation": "IsA",
+        "correct_feat": "known as “Little Room",
+        "options": "1. known as “Little Room\n2. a German word\n3. a title",
+        "correct_num": 1,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is [MASK].\n\nOptions:\n1. known as “Little Room\n2. a German word\n3. a title"
+    },
+    {
+        "test_id": 55,
+        "relation": "IsA",
+        "correct_feat": "known as “Creation at Sunrise",
+        "options": "1. an Indian game similar to Pachisi\n2. known as “Creation at Sunrise\n3. a Canadian documentary film",
+        "correct_num": 2,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is [MASK].\n\nOptions:\n1. an Indian game similar to Pachisi\n2. known as “Creation at Sunrise\n3. a Canadian documentary film"
+    },
+    {
+        "test_id": 56,
+        "relation": "IsA",
+        "correct_feat": "known for illustrating a Gulf Coast day",
+        "options": "1. a young kids version\n2. an abstract strategy game\n3. known for illustrating a Gulf Coast day",
+        "correct_num": 3,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is [MASK].\n\nOptions:\n1. a young kids version\n2. an abstract strategy game\n3. known for illustrating a Gulf Coast day"
+    },
+    {
+        "test_id": 57,
+        "relation": "IsA",
+        "correct_feat": "known for its vibrant images",
+        "options": "1. known for its vibrant images\n2. an official mode in Counter-Strike: Global Offensive\n3. known as Congkak or Congklakin in Indonesia",
+        "correct_num": 1,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is [MASK].\n\nOptions:\n1. known for its vibrant images\n2. an official mode in Counter-Strike: Global Offensive\n3. known as Congkak or Congklakin in Indonesia"
+    },
+    {
+        "test_id": 58,
+        "relation": "IsA",
+        "correct_feat": "known for its symbolism inspired by Psalm 104",
+        "options": "1. generally for two players\n2. known for its symbolism inspired by Psalm 104\n3. a Russian drama film",
+        "correct_num": 2,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is [MASK].\n\nOptions:\n1. generally for two players\n2. known for its symbolism inspired by Psalm 104\n3. a Russian drama film"
+    },
+    {
+        "test_id": 59,
+        "relation": "IsA",
+        "correct_feat": "located in Ocean Springs, Mississippi",
+        "options": "1. a microgame\n2. a military vessel\n3. located in Ocean Springs, Mississippi",
+        "correct_num": 3,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is [MASK].\n\nOptions:\n1. a microgame\n2. a military vessel\n3. located in Ocean Springs, Mississippi"
+    },
+    {
+        "test_id": 60,
+        "relation": "IsA",
+        "correct_feat": "located in the Walter Anderson Museum of Art",
+        "options": "1. located in the Walter Anderson Museum of Art\n2. a general description of size of books\n3. an official mode in Counter-Strike: Global Offensive",
+        "correct_num": 1,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is [MASK].\n\nOptions:\n1. located in the Walter Anderson Museum of Art\n2. a general description of size of books\n3. an official mode in Counter-Strike: Global Offensive"
+    },
+    {
+        "test_id": 61,
+        "relation": "IsA",
+        "correct_feat": "part of the Walter Anderson Museum of Art",
+        "options": "1. a microgame\n2. part of the Walter Anderson Museum of Art\n3. a series of American Civil War military engagements",
+        "correct_num": 2,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is [MASK].\n\nOptions:\n1. a microgame\n2. part of the Walter Anderson Museum of Art\n3. a series of American Civil War military engagements"
+    },
+    {
+        "test_id": 62,
+        "relation": "IsA",
+        "correct_feat": "used for illustrating a Gulf Coast day",
+        "options": "1. Britain's best-loved novel of all time\n2. encouraged for kids to learn to count\n3. used for illustrating a Gulf Coast day",
+        "correct_num": 3,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is [MASK].\n\nOptions:\n1. Britain's best-loved novel of all time\n2. encouraged for kids to learn to count\n3. used for illustrating a Gulf Coast day"
+    },
+    {
+        "test_id": 63,
+        "relation": "IsA",
+        "correct_feat": "used for showing the transition from day to night",
+        "options": "1. used for showing the transition from day to night\n2. an international co-production between British and West German financiers\n3. a pontoon bridge",
+        "correct_num": 1,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is [MASK].\n\nOptions:\n1. used for showing the transition from day to night\n2. an international co-production between British and West German financiers\n3. a pontoon bridge"
+    },
+    {
+        "test_id": 64,
+        "relation": "IsA",
+        "correct_feat": "used for mentally transporting himself to Horn Island",
+        "options": "1. a 1979 novel\n2. used for mentally transporting himself to Horn Island\n3. 3D tic-tac-toe",
+        "correct_num": 2,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is [MASK].\n\nOptions:\n1. a 1979 novel\n2. used for mentally transporting himself to Horn Island\n3. 3D tic-tac-toe"
+    },
+    {
+        "test_id": 65,
+        "relation": "IsA",
+        "correct_feat": "used for portraying life and time on the island",
+        "options": "1. a Hong Kong manhua\n2. a form of checkers\n3. used for portraying life and time on the island",
+        "correct_num": 3,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is [MASK].\n\nOptions:\n1. a Hong Kong manhua\n2. a form of checkers\n3. used for portraying life and time on the island"
+    },
+    {
+        "test_id": 66,
+        "relation": "IsA",
+        "correct_feat": "used for chronicling the transition from night to day",
+        "options": "1. used for chronicling the transition from night to day\n2. a Java-based application\n3. a midget submarine",
+        "correct_num": 1,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is [MASK].\n\nOptions:\n1. used for chronicling the transition from night to day\n2. a Java-based application\n3. a midget submarine"
+    },
+    {
+        "test_id": 67,
+        "relation": "IsA",
+        "correct_feat": "used for a hymn to the light and beauty of a day on the Coast",
+        "options": "1. a game where players connect cities by building and extending train lines through Europe to deliver cargo and earn money\n2. used for a hymn to the light and beauty of a day on the Coast\n3. a game where both players can guarantee a draw with perfect play",
+        "correct_num": 2,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is [MASK].\n\nOptions:\n1. a game where players connect cities by building and extending train lines through Europe to deliver cargo and earn money\n2. used for a hymn to the light and beauty of a day on the Coast\n3. a game where both players can guarantee a draw with perfect play"
+    },
+    {
+        "test_id": 68,
+        "relation": "IsA",
+        "correct_feat": "used in the Walter Anderson Museum of Art",
+        "options": "1. a documentary television series\n2. a series of games that can be played free online\n3. used in the Walter Anderson Museum of Art",
+        "correct_num": 3,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is [MASK].\n\nOptions:\n1. a documentary television series\n2. a series of games that can be played free online\n3. used in the Walter Anderson Museum of Art"
+    },
+    {
+        "test_id": 69,
+        "relation": "IsA",
+        "correct_feat": "used to illustrate a Gulf Coast day",
+        "options": "1. used to illustrate a Gulf Coast day\n2. a work by Jules Verne\n3. a series of games that introduce potential pieces",
+        "correct_num": 1,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is [MASK].\n\nOptions:\n1. used to illustrate a Gulf Coast day\n2. a work by Jules Verne\n3. a series of games that introduce potential pieces"
+    },
+    {
+        "test_id": 70,
+        "relation": "IsA",
+        "correct_feat": "used to show the transition from day to night",
+        "options": "1. played in Sri Lanka, Trinidad, Guyana and Singapore\n2. used to show the transition from day to night\n3. a trainer aircraft",
+        "correct_num": 2,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is [MASK].\n\nOptions:\n1. played in Sri Lanka, Trinidad, Guyana and Singapore\n2. used to show the transition from day to night\n3. a trainer aircraft"
+    },
+    {
+        "test_id": 71,
+        "relation": "IsA",
+        "correct_feat": "used to mentally transport himself to Horn Island",
+        "options": "1. a Polish-language version\n2. a comic\n3. used to mentally transport himself to Horn Island",
+        "correct_num": 3,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is [MASK].\n\nOptions:\n1. a Polish-language version\n2. a comic\n3. used to mentally transport himself to Horn Island"
+    },
+    {
+        "test_id": 72,
+        "relation": "IsA",
+        "correct_feat": "used to portray life and time on the island",
+        "options": "1. used to portray life and time on the island\n2. a game identified from the Iron Age\n3. an epic high fantasy novel",
+        "correct_num": 1,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is [MASK].\n\nOptions:\n1. used to portray life and time on the island\n2. a game identified from the Iron Age\n3. an epic high fantasy novel"
+    },
+    {
+        "test_id": 73,
+        "relation": "IsA",
+        "correct_feat": "used to chronicle the transition from night to day",
+        "options": "1. a base-16 number system\n2. used to chronicle the transition from night to day\n3. a medley",
+        "correct_num": 2,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is [MASK].\n\nOptions:\n1. a base-16 number system\n2. used to chronicle the transition from night to day\n3. a medley"
+    },
+    {
+        "test_id": 74,
+        "relation": "IsA",
+        "correct_feat": "used to be a hymn to the light and beauty of a day on the Coast",
+        "options": "1. a social two-player abstract\n2. a 1965 American film\n3. used to be a hymn to the light and beauty of a day on the Coast",
+        "correct_num": 3,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is [MASK].\n\nOptions:\n1. a social two-player abstract\n2. a 1965 American film\n3. used to be a hymn to the light and beauty of a day on the Coast"
+    },
+    {
+        "test_id": 75,
+        "relation": "OccurredIn",
+        "correct_feat": "Anderson's cottage",
+        "options": "1. Anderson's cottage\n2. France\n3. Yugoslavia",
+        "correct_num": 1,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> occurred in [MASK].\n\nOptions:\n1. Anderson's cottage\n2. France\n3. Yugoslavia"
+    },
+    {
+        "test_id": 76,
+        "relation": "OccurredIn",
+        "correct_feat": "Ocean Springs, Mississippi",
+        "options": "1. tournaments\n2. Ocean Springs, Mississippi\n3. the Elizabethan era",
+        "correct_num": 2,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> occurred in [MASK].\n\nOptions:\n1. tournaments\n2. Ocean Springs, Mississippi\n3. the Elizabethan era"
+    }
+]

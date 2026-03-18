@@ -1,0 +1,27 @@
+{
+    "responseMimeType": "application/json",
+    "responseSchema": {
+        "type": "object",
+        "properties": {
+            "identifiable": {
+                "type": "boolean"
+            },
+            "proper_noun": {
+                "anyOf": [
+                    { "type": "string" },
+                    { "type": "null" }
+                ]
+            },
+            "confidence": {
+                "type": "number",
+                "minimum": 0,
+                "maximum": 1
+            }
+        },
+        "required": [
+            "identifiable",
+            "proper_noun",
+            "confidence"
+        ]
+    }
+}
