@@ -8,3 +8,13 @@ wheels/
 
 # Virtual environments
 .venv
+.env
+
+# log
+*.log
+*.out
+memvec_training_history/
+memvec_wandb_logs/
+
+# big data files
+memvec_models/

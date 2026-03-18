@@ -41,11 +41,60 @@ uv run python src/listup_properNouns.py
 [WIP] ①-3を改良し(2026/03/05)、subclassを、class直下だけでなくその子も再帰的に取るように修正したため、subclassに属す固有名詞同士が重複する可能性がある。
     その場合は、初期化用平均vec計算には重複した固有名詞を利用し、新規概念の元になる固有名詞としては使わないことにする。
 
-## 
+
+--- ここまでは生成済み ---
+
+## ③ Wikipediaから、カテゴリに属する固有名詞の特徴文を生成する
+### ③-1. wikiから特徴文を生成する
+
+特定のカテゴリに対して生成する場合:
+```sh
+nohup uv run python src/gen_features_from_wiki.py --target_categories "board game" "Painting"  > output.log 2>&1 & # "Painting"
+```
+2865016
+
+全カテゴリに対して生成する場合:
+```sh
+uv run python src/gen_features_from_wiki.py
+```
+生成されるファイル：
+- data/generated_facts_in_wiki/*.json : 各固有名詞の特徴文と、その時の生成情報が全て、各concept名をファイル名としたjson形式で保存される.
+
+現状:
+- Painting カテゴリのみ、以下の条件で生成済み.
+    model = "gemini-2.5-flash-lite"
+    max_retries = 1
+    feat_num_threshold = 60 # 1概念あたりで、生成された特徴の数がこの数以上であれば生成成功とみなす
+    wiki_word_num_threshold = 500 # 十分な情報量のあるwikipageに対してのみ生成を行うための、wikipageの本文の単語数の閾値
+    propnoun_num_for_new_concept = 50
+    propnoun_num_for_init_vec = 100
+    temperature = 0.2
+    topP = 0.8
 
 
 
+## ④ 特徴文ペアから、固有名詞を推定する→推定がうまくいかないのでskip (言い換えや、類似語句が予測されてしまい、推定に有用な特徴も多く不正解になってしまうため)
+### ④-1. 特徴文ペアから、固有名詞を推定する
+```sh
+uv run python src/gen_guess_proper_noun_from_sentence_pair.py > output.log 2>&1
+```
+### ④-1. 十分に情報量のある特徴文を抽出する
+n(=2)回以上正解した特徴文を選出
+select_useful_features_based_on_genai_guess_concept_results.py を実行したいが、まだ修正していない
 
 
+## ⑤ 特徴文をもとに、学習/評価用のデータセットを作成する
+### ⑤-1. 学習用のデータセットを作成する
+trainMemVec_fromXvec_gemma_wholeRun.py内で、ここで作成したファイルを元に、main_text or summaryと、factsから複数サンプルの学習データを構築することになる。
+
+train data作成対象となるconceptを指定する場合:
+```sh
+uv run python src/construct_traindata.py --target_concepts "Adoration of the Kings" "Unlock!" "BattleFleet Mars"
+```
+
+wikiから抽出された特徴が一定以上存在するconceptすべてをtrain data作成対象とする場合:
+```sh
+uv run python src/construct_traindata.py
+```
 
 
