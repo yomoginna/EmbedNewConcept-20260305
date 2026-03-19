@@ -22,15 +22,17 @@ NUM_OPTIONS=3
 # 利用メモリ: 24415MiB
 MODEL_SIZE=12
 LR=0.01
-TARGET_CONCEPTS_FILENAME="target_concepts.json"
+TARGET_CONCEPTS_FILENAME="target_concepts_mini.json"
 PROCESS_NUM=2
 SEED_NUM=1
 NUM_OPTIONS=3
-INIT_VEC_TYPES=("other_category_centroid_by_hidden_state_mean" "norm_rand_vocab") "other_category_centroid_by_hidden_state_mean" "norm_rand_vocab")
-LAYER_INDICES=(0 1 8 12 24 36 40 -1) # -1は最終層、0以上の整数はその層の隠れ状態を使用.(0層は埋め込み層の出力) 12B: 48層 
+INIT_VEC_TYPES=("category_centroid_by_hidden_state_mean")  "other_category_centroid_by_hidden_state_mean" "norm_rand_vocab")
+LAYER_INDICES=(9 10) 11 12 13 14 15 16 17 18 19 20) 
+# -1は最終層、0以上の整数はその層の隠れ状態を使用.(0層は埋め込み層の出力) 12B: 48層
+# 全体の層を大まかに調べる: (0 1 8 12 24 36 40 -1)
 
 THREAD_ID=0
-CUDA_VISIBLE_DEVICES=1
+CUDA_VISIBLE_DEVICES=0
 
 THREAD_ID=1
 CUDA_VISIBLE_DEVICES=1
@@ -54,8 +56,8 @@ nohup uv --no-progress run python src/test1_gemma_wholeRun.py \
         --layer_indices ${LAYER_INDICES[@]} \
         > log_Test1_gemma-${MODEL_SIZE}B_lr${LR}_wholeRun${THREAD_ID}.log 2>&1 &
 
-# thread0: 3939869, 4epoch以降: -
-# thread1: 3941029, 4epoch以降: -(まだ)
+# thread0: 4153265, 4epoch以降: -
+# thread1: 4152202, 4epoch以降: -(まだ)
 # thread2: -
 # thread3: -
 

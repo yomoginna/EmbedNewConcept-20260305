@@ -399,8 +399,7 @@ def initVecWithMeanVecOfTermHiddenStates(
         if term.strip() == "":
             continue
         valid_init_term_count += 1
-        # inputs = tokenizer(term, return_tensors="pt").to(model.device)
-        inputs = tokenizer(term, return_tensors="pt", add_special_tokens=False).to(model.device)    # term内には<unused>が含まれないのでadd_special_tokens=FalseでOK. Trueの場合、last_token_idxで<EOS>の位置を取得してしまう
+        inputs = tokenizer(term, return_tensors="pt").to(model.device)
 
         # ** モデルに入力して、語句中の最終tokenを入れた後の、モデルの最後の隠れ状態をその語句のベクトルとする **
         with torch.no_grad():
@@ -420,35 +419,7 @@ def initVecWithMeanVecOfTermHiddenStates(
         raise ValueError(f"All terms resulted in zero vectors. Cannot initialize with zero vector.")
     init_src = sum_vec / valid_init_term_count
 
-
-    # 3. 微小ノイズを加える
-    # n = len(init_target_ids)
-    d = init_src.shape[0]
-
-    # 微小ノイズを作る
-    noise = torch.randn(d, device=E.device, dtype=E.dtype)
-
-    # 各行をL2正規化して「方向だけランダム」にする
-    eps = 1e-12
-    noise = noise / noise.norm(p=2, dim=0, keepdim=True).clamp_min(eps)
-
-    # ノイズの大きさを、重心ノルムのごく一部にする
-    noise_scale = 2e-3   # まずは 1e-3 あたりから試す 1e-3だと少ししか改善しなかった, 1e-2だとother_category_COGの方がaccが高くなった 3e-3はいいかんじ。 2e-3はまだ試していないが後で試す
-    init_norm = init_src.norm(p=2).clamp_min(eps)
-    noise = noise * (init_norm * noise_scale)
-
-    # 重心 + 微小ノイズ
-    init_src = init_src + noise
-
-
-    # 4. ノルムを語彙平均に合わせる [memo] hidde stateのノルムは埋め込み層のノルムと大きく異なる可能性があるため、ノルムを合わせる
-    target_norm = E.norm(dim=1).median().item()  # 埋め込み行のノルムの中央値をターゲットノルムとする
-    init_src_norm = init_src.norm().item()
-    if init_src_norm > 0:
-        init_src = init_src / init_src_norm * target_norm  # ターゲットノルムに合わせてスケーリング
-
-
-    # 5. 埋め込み層のinit_target_idsが指定した<unusedx>を、まとめてinit_srcで初期化.
+    # 3. 埋め込み層のinit_target_idsが指定した<unusedx>を、まとめてinit_srcで初期化.
     with torch.no_grad():
         init_target_ids = torch.as_tensor(init_target_ids, device=E.device, dtype=torch.long)
         src = init_src.unsqueeze(0).expand(len(init_target_ids), -1)   # (n, d) # 全トークンをカテゴリ重心で埋める
@@ -784,85 +755,11 @@ def evaluateModel(model, tokenizer, evalInputs, evalOutputTexts, verbose=False):
 
 # ********************* train **********************
 
-def constructTrainSamples(concept_to_train_data_source, train_sample_format, conceptForFict2token_map, n_feat_in_a_sample=3, print_flag=False):
-    train_samples = []
-    for target_concept, train_data_list in concept_to_train_data_source.items():
-
-        # 対応する空token名を取得. <unused0>など
-        unused_token = conceptForFict2token_map[target_concept]
-        
-        for train_data in train_data_list:
-            wiki_text_with_token = train_data['wiki_text_with_token']
-            facts_with_token = train_data['facts_with_token']
-
-            # factsの順番をランダムに入れ替える
-            facts_with_token = random.sample(facts_with_token, len(facts_with_token))
-
-            # *** featuresをn個ずつに分割して、1sampleあたり、summary1つ+特徴文n個の形式にする。最後の余りはそのまま1sampleにする。***
-            train_sample_template = train_sample_format['train_sample']
-            train_fact_sentence_template = train_sample_format['train_fact_sentence']
-
-            for i in range(0, len(facts_with_token), n_feat_in_a_sample):
-                fact_sentences = facts_with_token[i:i+n_feat_in_a_sample]
-                fact_sentences_str = "\n".join([train_fact_sentence_template.format(fact_sentence=fs) for fs in fact_sentences])
-                train_sample = train_sample_template.format(
-                    unused_token=unused_token,
-                    summary=wiki_text_with_token, 
-                    fact_sentences=fact_sentences_str
-                )
-                train_samples.append(train_sample)
-                if print_flag:
-                    print(train_sample)
-                    print("**********")
-            
-        # 各(架空)概念毎に1sample表示する
-        print(f"Example train 1 sample for concept '{target_concept}':")
-        print(train_samples[-1])
-        print("**********")
-
-    print(f"Total {len(train_samples)} train samples created.")
-    return train_samples
-
-
-def encodeTrainSamplesWithTokenizer(train_samples, tokenizer, padTokenId, device):
-    maxLength = 0
-    trainingData = []
-    evalInputs = []
-    evalOutputTexts = []
-    temp_i = 0
-    for sample in train_samples:
-        # tokenized = tokenizer(sample)
-        inputIds = tokenizer.encode(sample, add_special_tokens=True)
-
-        if maxLength < len(inputIds):
-            maxLength = len(inputIds)
-
-        trainingData.append(inputIds) # 次token予測タスクのデータ
-        evalInputs.append(inputIds[:-2]) # rel毎にルールベースで文にしているため，relの後の単語も同一になる文が多い. そのため, 最後の2tokenのみ(<word> + '.')の予測で可否を評価することにする
-        evalOutputTexts.append(sample)
-
-        if temp_i < 5:
-            print(f"inputIds: {inputIds}")
-            print(f"decoded inputIds: {tokenizer.decode(inputIds)}")
-            print(f"evalInputIds: {evalInputs[-1]}") # 最後に追加したevalInputIdsを表示
-            print(f"decoded evalInputIds: {tokenizer.decode(evalInputs[-1])}")
-            print()
-            temp_i += 1
-
-    # ** padding ** 
-    # : [[132, 45, 67], [23, 78]] -> [[132, 45, 67, [PAD], [PAD]], [23, 78, [PAD], [PAD], [PAD]]]
-    trainingData = [t_ids + [padTokenId] * (maxLength - len(t_ids)) for t_ids in trainingData]
-    trainingData = torch.LongTensor(trainingData).to(device)
-    
-    indices = list(range(len(trainingData)))
-    return trainingData, evalInputs, evalOutputTexts, indices
-
-
 def train(model_size, 
           model, 
           tokenizer, 
           criteria, 
-          concept_to_train_data_source, train_sample_format, conceptForFict2token_map,  # train_samples, 
+          train_samples, 
           memTokenIds, 
           padTokenId, 
           save_mem_dir, 
@@ -918,7 +815,7 @@ def train(model_size,
         cooldown=100 # 500
 
     elif int(model_size) == 12:
-        BATCH_SIZE = 8 #4 # 16 # 64
+        BATCH_SIZE = 4 # 16 # 64
         factor=0.95 #0.5
         min_lr=5e-08  #1e-06
         patience=30 # 100
@@ -955,15 +852,44 @@ def train(model_size,
         eps=0, # 1e-05,         # lrの変化が微小すぎるときの更新抑制. old_lr - new_lr <= eps なら更新しない
     )
 
+
+    maxLength = 0
+    trainingData = []
+    evalInputs = []
+    evalOutputTexts = []
+    temp_i = 0
+    for sample in random.sample(train_samples, len(train_samples)):
+        # tokenized = tokenizer(sample)
+        inputIds = tokenizer.encode(sample, add_special_tokens=True)
+
+        if maxLength < len(inputIds):
+            maxLength = len(inputIds)
+
+        trainingData.append(inputIds) # 次token予測タスクのデータ
+        evalInputs.append(inputIds[:-2]) # rel毎にルールベースで文にしているため，relの後の単語も同一になる文が多い. そのため, 最後の2tokenのみ(<word> + '.')の予測で可否を評価することにする
+        evalOutputTexts.append(sample)
+
+        if temp_i < 5:
+            print(f"inputIds: {inputIds}")
+            print(f"decoded inputIds: {tokenizer.decode(inputIds)}")
+            print(f"evalInputIds: {evalInputs[-1]}") # 最後に追加したevalInputIdsを表示
+            print(f"decoded evalInputIds: {tokenizer.decode(evalInputs[-1])}")
+            print()
+            temp_i += 1
+
+    # ** padding ** 
+    # : [[132, 45, 67], [23, 78]] -> [[132, 45, 67, [PAD], [PAD]], [23, 78, [PAD], [PAD], [PAD]]]
+    trainingData = [t_ids + [padTokenId] * (maxLength - len(t_ids)) for t_ids in trainingData]
+    trainingData = torch.LongTensor(trainingData).to(model.device)
+    
+    indices = list(range(len(trainingData)))
+
+
     accLog = {}
     print("Start training...")
 
     for epoch in tqdm(range(maxEpochs)):
         print('Epoch %d/%d'%(epoch+1, maxEpochs))
-
-        # *** epoch毎にfact_sentencesの組み合わせをシャッフルしてデータを構成し直す ***
-        train_samples = constructTrainSamples(concept_to_train_data_source, train_sample_format, conceptForFict2token_map, n_feat_in_a_sample)
-        trainingData, evalInputs, evalOutputTexts, indices = encodeTrainSamplesWithTokenizer(train_samples, tokenizer, padTokenId, model.device)
 
         # このepochの学習
         model.train()
@@ -971,13 +897,16 @@ def train(model_size,
         totalLoss = 0.0
 
         # epoch毎にshuffleしたindicesの順番を記録. 後からどのtextが最後に学習されたかを確認するため.
-        # id_to_text = {id: train_samples[id] for id in indices} # train_samplesをshuffle
-        # save_shuffled_samples_path = os.path.join(save_mem_dir, f"shuffled_samples_epoch{epoch+1}.json")
-        # with open(save_shuffled_samples_path, 'w') as f:
-        #     json.dump(id_to_text, f, indent=4, ensure_ascii=False)
+        id_to_text = {id: train_samples[id] for id in indices} # train_samplesをshuffle
+        save_shuffled_samples_path = os.path.join(save_mem_dir, f"shuffled_samples_epoch{epoch+1}.json")
+        with open(save_shuffled_samples_path, 'w') as f:
+            json.dump(id_to_text, f, indent=4, ensure_ascii=False)
 
         for step, i in enumerate(range(0, len(indices), BATCH_SIZE)):
             batchIds = indices[i:i+BATCH_SIZE]
+            # xs = trainingData[batchIds, :-1] # input_ids
+            # ys = trainingData[batchIds, 1:]  # labels
+            # [:-1], [1:] のように次token予測のためにずらす必要はないらしい。Hugging Face の causal LM では大抵、モデル内部で自動的に処理されるから。
             input_ids = trainingData[batchIds]
             attention_mask = (input_ids != padTokenId).long() # e.g. [[1, 1, 1, 0, 0], [1, 1, 0, 0, 0]] のような形で、padTokenIdの位置が0になるマスクを作成
             token_type_ids = torch.zeros_like(input_ids)    # 2つのシーケンスを識別するバイナリマスク. e.g. [[0, 0, 0, 0, 0], [0, 0, 0, 0, 0]] のような形 (全て0でOK)
@@ -993,6 +922,8 @@ def train(model_size,
                 token_type_ids=token_type_ids,
                 labels=labels
             )
+            # output = output.logits.view(-1, output.logits.shape[2])
+            # loss = criteria(output, labels.flatten())
             loss = output.loss
             loss.backward()
             opt.step()
@@ -1091,15 +1022,7 @@ def main(args):
         model_version = 3
     else:
         pass
-
-    # # target_concepts_filename が、target_concepts + '_long' などのsuffixを持つ場合に、model_name_for_dirnameにもそのsuffixを反映させるための処理
-    # if 'target_concepts_' in target_concepts_filename:
-    #     suffix = '-' + target_concepts_filename.replace('target_concepts_', '').replace('.json', '')
-    # else:
-    #     suffix = ''
-
     model_name = f"google/gemma-{model_version}-{model_size}b-it" # [memo] 'gemma-'部分は変えないこと!! -を消すとモデルがloadできない．さらにそのエラーメッセージは，"huggingface-cli login"をして，という関係ないmessageになるので注意!
-    # model_name_for_dirname = f"gemma-{model_version}-{model_size}B-lr{lr}{suffix}-{trained_date}"
     model_name_for_dirname = f"gemma-{model_version}-{model_size}B-lr{lr}-{trained_date}"
     if layer_idx is not None and init_vec_type in ['category_centroid_by_hidden_state_mean', 'other_category_centroid_by_hidden_state_mean']:
         model_name_for_dirname += f"-hidden_layer{layer_idx}"
@@ -1252,13 +1175,8 @@ def main(args):
 
 
     # ****** tripletを読み込み学習データを構築 ******
-    concept_to_train_data_source = {}
+    train_samples = []
     for target_concept in target_concept_list:
-        concept_to_train_data_source[target_concept] = []
-
-        # 対応する空token名を取得. <unused0>など
-        unused_token = conceptForFict2token_map[target_concept]
-
         # load data
         filename = target_concept.replace(' ', '_') + '.json'
         with open(os.path.join(train_data_dir, filename), 'r') as f:
@@ -1266,14 +1184,39 @@ def main(args):
         wiki_text = data['summary'] # data['text']も選べるが、fact sentencesに比べて大き過ぎるのでsummaryを使用している
         facts = data['facts']
 
+        # 対応する空token名を取得. <unused0>など
+        unused_token = conceptForFict2token_map[target_concept]
+
         # concept名/"It" を割り当てられた空tokenに置換 (大小区別なし)
         wiki_text_with_token = re.sub(re.escape(target_concept), unused_token, wiki_text, flags=re.IGNORECASE)
         facts_with_token = [fact.replace('It', unused_token) for fact in facts]
+        facts_with_token = random.sample(facts_with_token, len(facts_with_token)) # factsの順番をランダムに入れ替える。これも、学習データの多様性を高めるための工夫。
 
-        concept_to_train_data_source[target_concept].append({'wiki_text_with_token': wiki_text_with_token, 'facts_with_token': facts_with_token})
+        # featuresをn個ずつに分割して、1sampleあたり、summary1つ+特徴文n個の形式にする。最後の余りはそのまま1sampleにする。
+        with open(os.path.join(project_root, 'data', 'templates', 'train_sample_format.json'), "r") as f:
+            train_sample_format = json.load(f)
+        train_sample_template = train_sample_format['train_sample']
+        train_fact_sentence_template = train_sample_format['train_fact_sentence']
 
-    with open(os.path.join(project_root, 'data', 'templates', 'train_sample_format.json'), "r") as f:
-        train_sample_format = json.load(f)
+        for i in range(0, len(facts_with_token), n_feat_in_a_sample):
+            fact_sentences = facts_with_token[i:i+n_feat_in_a_sample]
+            fact_sentences_str = "\n".join([train_fact_sentence_template.format(fact_sentence=fs) for fs in fact_sentences])
+            train_sample = train_sample_template.format(
+                target_concept=target_concept,
+                summary=wiki_text_with_token, 
+                fact_sentences=fact_sentences_str
+            )
+            train_samples.append(train_sample)
+            if print_flag:
+                print(train_sample)
+                print("**********")
+        
+        # 各(架空)概念毎に1sample表示する
+        print(f"Example train 1 sample for concept '{target_concept}':")
+        print(train_samples[-1])
+        print("**********")
+
+    print(f"Total {len(train_samples)} train samples created.")
 
 
     # # Wandb設定
@@ -1305,7 +1248,7 @@ def main(args):
         model,
         tokenizer,
         criteria, 
-        concept_to_train_data_source, train_sample_format, conceptForFict2token_map, # train_samples,
+        train_samples,
         memTokenIds,
         padTokenId, 
         save_mem_dir,

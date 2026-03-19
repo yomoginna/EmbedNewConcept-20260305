@@ -152,21 +152,38 @@ def main(args):
     init_vec_type = args.init_vec_type
     trained_date = args.trained_date
     num_options = args.num_options
+    layer_idx = args.layer_idx
 
-    if int(model_size) in [4, 12]:
-        model_type = '3'
-    elif int (model_size) in [9]:
-        model_type = '2'
+    
+    global model_name_for_dirname
+    if model_size in ['2', '9']:
+        model_version = 2
+    elif model_size in ['1', '4', '12']:
+        model_version = 3
     else:
         raise ValueError(f"Invalid model_size: {model_size}")
 
 
+    # # [WIP] 'it'と'pt'のどちらが良いかは未検証. とりあえず'it'で統一.
+    # model_name = f"google/gemma-{model_version}-{model_size}b-it" # [memo] 'gemma-'部分は変えないこと!! -を消すとモデルがloadできない．さらにそのエラーメッセージは，"huggingface-cli login"をして，という関係ないmessageになるので注意!
+    # model_name_for_dirname = f"gemma-{model_version}-{model_size}B-lr{lr}-{trained_date}"
+    # if layer_idx is not None and init_vec_type in ['category_centroid_by_hidden_state_mean', 'other_category_centroid_by_hidden_state_mean']:
+    #     model_name_for_dirname += f"-hidden_layer{layer_idx}"
+    # model_name_for_dirname += f"-seed{seed}"
 
-    global model_name_for_dirname
 
-    # [WIP] 'it'と'pt'のどちらが良いかは未検証. とりあえず'it'で統一.
-    model_name = f"google/gemma-{model_type}-{model_size}b-it"
-    model_name_for_dirname = f"gemma-{model_type}-{model_size}B-lr{lr}-{trained_date}_seed{seed}"
+    # # target_concepts_filename が、target_concepts + '_long' などのsuffixを持つ場合に、model_name_for_dirnameにもそのsuffixを反映させるための処理
+    # if 'target_concepts_' in target_concepts_filename:
+    #     suffix = '-' + target_concepts_filename.replace('target_concepts_', '').replace('.json', '')
+    # else:
+    #     suffix = ''
+
+    model_name = f"google/gemma-{model_version}-{model_size}b-it" # [memo] 'gemma-'部分は変えないこと!! -を消すとモデルがloadできない．さらにそのエラーメッセージは，"huggingface-cli login"をして，という関係ないmessageになるので注意!
+    # model_name_for_dirname = f"gemma-{model_version}-{model_size}B-lr{lr}{suffix}-{trained_date}"
+    model_name_for_dirname = f"gemma-{model_version}-{model_size}B-lr{lr}-{trained_date}"
+    if layer_idx is not None and init_vec_type in ['category_centroid_by_hidden_state_mean', 'other_category_centroid_by_hidden_state_mean']:
+        model_name_for_dirname += f"-hidden_layer{layer_idx}"
+    model_name_for_dirname += f"-seed{seed}"
 
 
     # ********* tokenizerとmodelの準備 *********
@@ -190,6 +207,7 @@ def main(args):
     config_specified_concept_list = sum(class_to_target_concept_config.values(), [])
     result_dir = os.path.join(project_root, "results", f"{model_name_for_dirname}_{target_concepts_filename.replace('.json', '')}_initvecwith{init_vec_type.replace(' ', '_')}")
     mem_dir = os.path.join(project_root, "memvec_models", f"{model_name_for_dirname}_{target_concepts_filename.replace('.json', '')}_initvecwith{init_vec_type.replace(' ', '_')}")
+
 
     # if init_vec_type in ['category_COG', 'other_category_COG']:
     #     mem_dir = os.path.join(project_root, "memvec_models", f"{model_name_for_dirname}_{target_concepts_filename.replace('.json', '')}_initvecwith{init_vec_type.replace(' ', '_')}") + '_4'
@@ -418,8 +436,8 @@ if __name__ == "__main__":
     # parser.add_argument("--trained_date", default="20251221")
     parser.add_argument('--lr', type=float, default=0.01, help='学習率')
     parser.add_argument('--cuda_visible_devices', type=str, default=None, help='CUDA_VISIBLE_DEVICESの設定. ただし数字は1つだけ指定すること. 例: "2"')
-    # parser.add_argument('--init_vec_type', type=str, default='zero', help='memory vectorの初期化方法。zeroまたはuniform, または語句. zero->0vec, uniform->一様分布, 語句->指定の語句の埋め込みベクトルで初期化, 数字->各conceptに対するその数字の類似度の語句ベクトルで初期化')
-    # parser.add_argument('--seed', type=int, nargs='?', default=42, help='乱数シード値')
+    parser.add_argument('--init_vec_types', type=str, nargs='+', default=['zero', 'uniform', 'norm_rand'], help='memory vectorの初期化方法のリスト. ')
+    parser.add_argument('--layer_indices', type=int, nargs='*', default=None, help='隠れ状態を取得する層のインデックス。-1なら最終層、0以上の整数ならその層の隠れ状態を使用する。init_vec_typeが \'category_centroid_by_hidden_state_mean\' の場合に使用')
     parser.add_argument('--thread_id', type=int, nargs='?', default=0, help='2process同時に実行する場合のthread id (0 or 1). これにより,実行する設定(seed, init_vec_typeの組)が被らないように調整する')
     parser.add_argument('--process_num', type=int, nargs='?', default=2, help='同時に実行するprocess数')
     parser.add_argument('--seed_num', type=int, nargs='?', default=10, help='シードの数. 例えば10に設定した場合、seed0からseed9までの10個のシードで学習を実行することになる。')
@@ -436,17 +454,11 @@ if __name__ == "__main__":
     for seed in range(args.seed_num):
         args.seed = seed
 
-
         # 通常:
-        # init_vec_type_lst = ['category_COG', 'other_category_COG', 'zero', 'uniform', 'norm_rand', 'norm_rand_vocab']
-        init_vec_type_lst = ['category_centroid_plus_random', 'other_category_COG', 'norm_rand_vocab', 'uniform',]
-        # init_vec_type_lst = ['norm_rand_vocab']
-
-        # 一部の条件をskipする場合:
-        # if seed == 1 and args.model_size=='12':
-        #     # もう途中まで実行済みなので，残りを実行
-        #     init_vec_type_lst = ['zero', 'uniform', 0.0, 0.1, 0.2, 0.3, 0.4, 0.5, 0.6, 0.7, 0.8, 0.9]
-
+        # init_vec_type_lst = ['category_centroid_plus_random', 'other_category_COG', 'norm_rand_vocab', 'zero', 'uniform', 'norm_rand', 'category_COG', ]
+        init_vec_type_lst = args.init_vec_types
+        layer_indices = args.layer_indices
+        
 
         # trained_date はseed毎に違う（seed内でも異なるものは手動で調整してある）
         if args.model_size=='4':
@@ -463,9 +475,9 @@ if __name__ == "__main__":
         elif args.model_size=='12':
             # * seed前半
             if seed == 0:
-                args.trained_date = "20260317" 
+                args.trained_date = "20260319" 
             elif seed == 1:
-                args.trained_date = "20260317" 
+                args.trained_date = "20260319" 
             # elif seed == 2:
             #     args.trained_date = "20260313"
             # elif seed == 3:
@@ -492,22 +504,36 @@ if __name__ == "__main__":
         
 
         for init_vec_type in init_vec_type_lst:
-            print(f"\n\n=== Training with init_vec_type: {init_vec_type}, seed: {seed} ===")
-            args.init_vec_type = str(init_vec_type)
 
-            task_id += 1
-            
-            if task_id % processNum != args.thread_id:
-                # 複数process同時に実行する場合, thread_idに応じてtask_idが偶数or奇数の設定のみを実行する
-                print(f"Skipping task_id {task_id} for thread_id {args.thread_id}")
-                continue
+            print(f"init_vec_type: {init_vec_type}, layer_indices: {layer_indices}")
+            layer_indices = args.layer_indices
+        
 
-            fix_seed(seed)
-            main(args)
+            if len(layer_indices) < 1 or \
+                init_vec_type not in ['category_centroid_by_hidden_state_mean', 'other_category_centroid_by_hidden_state_mean']:
+                # layer_idxが不要の初期化方法の場合は、layer_indicesを[None]にして、1回だけループするようにする
+                layer_indices = [None]
 
-            # GPUメモリ解放
-            torch.cuda.empty_cache()
-            # 3秒待機
-            time.sleep(3)
+                
+            for layer_idx in layer_indices:
+                args.layer_idx = layer_idx
+                
+                print(f"\n\n=== Training with seed: {seed}, init_vec_type: {init_vec_type}, layer_idx: {layer_idx} ===")
+                args.init_vec_type = str(init_vec_type)
+
+                task_id += 1
+                
+                if task_id % processNum != args.thread_id:
+                    # 複数process同時に実行する場合, thread_idに応じてtask_idが偶数or奇数の設定のみを実行する
+                    print(f"Skipping task_id {task_id} for thread_id {args.thread_id}")
+                    continue
+
+                fix_seed(seed)
+                main(args)
+
+                # GPUメモリ解放
+                torch.cuda.empty_cache()
+                # 3秒待機
+                time.sleep(3)
 
 
