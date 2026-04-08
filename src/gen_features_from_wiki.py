@@ -37,7 +37,7 @@ propnoun_num_for_init_vec = 100
 temperature = 0.2
 topP = 0.8
 RANDOM_SEED = 42
-delay = 0.3
+delay = 0.5 # 0.3
 print_results = True  # get_concept_list_with_complete_cos_similar_termsの結果を表示するかどうか
 
 gen_result_savedir = os.path.join(project_root, "data", "generated_facts_in_wiki")

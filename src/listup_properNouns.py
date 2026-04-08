@@ -27,6 +27,7 @@ sys.path.insert(0, os.path.abspath(project_root))
 
 
 ENDPOINT = "https://query.wikidata.org/sparql"
+DBPEDIA_SPARQL = "https://dbpedia.org/sparql"
 PROPNOUNS_THRESHOLD = 200 # 各カテゴリ（クラス）に属してほしい固有名詞の最低数。これを下回る場合は、1-hopだけでなくMulti-hopクエリも試す。
 RE_GET_QIDs = True # 🔵 クラスのQIDをDBpediaから(再)取得するかどうか。!!! Mid_classを増やした場合はここをTrueにする!!!! 既にQID_mapのファイルがあり、その中に必要なクラスのQIDが全て入っているなら、Falseにしてこの部分をスキップ可
 SKIP_EXISTING_CSV = True # 🟡 既にCSVがある場合に、単純にそのクラスの処理を丸ごとスキップするかどうか。CSVがあれば既に十分な固有名詞が取れているとみなしてスキップする。CSVがない場合は、QID_mapにQIDがあってもなくてもクエリを実行して固有名詞を取る
@@ -47,7 +48,6 @@ QID_map_path = os.path.join(project_root, "data", "dbpedia", "Mid_class_QID_map.
 
 
 
-DBPEDIA_SPARQL = "https://dbpedia.org/sparql"
 
 
 query_base = """PREFIX owl: <http://www.w3.org/2002/07/owl#>

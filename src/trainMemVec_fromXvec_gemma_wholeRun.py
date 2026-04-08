@@ -33,12 +33,24 @@ print("Project root:", project_root)
 
 from utils.gemma_train_and_test_utils import fix_seed
 from utils.handle_data_from_dbpedia_utils import loadProperNounData
+from utils.initialize_embedding_layer_utils import EmbedInitializer
 
 
 # os.environ["CUDA_VISIBLE_DEVICES"] = "2" # [memo] genkaiを使う時はコメントアウト!! -> 今はargsで指定している。argsを指定しなければ、CUDAについては何も指定しない。
 n_feat_in_a_sample = 3  # 学習データの1サンプル = summary(wiki中の本文 or summary, 今回はsummaryを使用) + n_feat_in_a_sample個の特徴文
 propnoun_num_for_init_vec=100   #  初期化vecの作成に使う固有名詞の最低数. 例えば100に設定した場合、各カテゴリで最低100個の固有名詞を使用して初期化vecを作成することになる。(実際には、新規概念用にならなかった固有名詞全て使用する)
 propnoun_num_for_new_concept = 50 # 新規概念の元にする概念の作成に使う固有名詞の数. 例えば50に設定した場合、各カテゴリで50個の固有名詞を使用して新規概念の元にする概念の作成に使用することになる。
+
+initMethods_with_HS = [
+    'category_centroid_by_hidden_state_mean', 'other_category_centroid_by_hidden_state_mean',
+    'categoryCentroid_by_DebiasedHiddenState', 'otherCategoryCentroid_by_DebiasedHiddenState',
+    'categoryCentroid_by_DebiasedHSMixed', 'otherCategoryCentroid_by_DebiasedHSMixed',
+    'CatCentroid_by_OthCatDebiasedHSMixed', 'otherCatCentroid_by_OthCatDebiasedHSMixed',
+    'CatCent_by_GlbPrimDebiasedHSMixed', 'otherCatCent_by_GlbPrimDebiasedHSMixed',
+    'CatCent_by_GlbPrimDebiasedHS', 'otherCatCent_by_GlbPrimDebiasedHS',
+    'CatCent_by_WikiSummaryHS', 'otherCatCent_by_WikiSummaryHS',
+    'CatCent_by_WikiSummaryHSMixed', 'otherCatCent_by_WikiSummaryHSMixed',
+]
 
 global BATCH_SIZE
 
@@ -127,524 +139,6 @@ def save_mem_vec(model, memTokenIds, mem_save_path):
 
 # *************************** func ***************************
 
-def initializeEmbed(
-        model, 
-        tokenizer,
-        train_token2tokenid, 
-        init_vec_type, 
-        category_to_concepts_for_vec, 
-        category2initoken_ids,
-        layer_idx=None,
-        print_flag=False
-    ):
-    """言語モデルが持つ「語彙 → ベクトル」への変換をids指定のもののみ初期化する
-    行数 = 語彙サイズ、列数 = 埋め込み次元。
-    trainTokenIds で指定された行（＝特定のトークンに対応するベクトル）だけを操作する．
-    * どのモデルでも共通のはず
-
-    Args:
-        model: HuggingFaceのモデルオブジェクト
-        tokenizer: HuggingFaceのトークナイザオブジェクトtrain_token2tokenid: 学習対象とする特殊トークンとそのtoken_idのmap
-        init_vec_type: memory vectorの初期化方法。zeroまたはuniform, または語句. zero->0vec, uniform->一様分布, 語句->指定の語句の埋め込みベクトルで初期化, 数字->指定のコサイン類似度で近い語句のベクトルで初期化
-        category_to_concepts_for_vec: カテゴリごとのvec初期化に使用する概念のリスト。init_vec_typeが 'category_COG' の場合に使用
-        category2initoken_ids: カテゴリごとの初期化トークンIDのリスト。init_vec_typeが 'category_COG' の場合に使用
-        layer_idx: 隠れ状態を取得する層のインデックス。-1なら最終層、0以上の整数ならその層の隠れ状態を使用する。init_vec_typeが 'category_centroid_by_hidden_state_mean' の場合に使用
-        print_flag: 初期化の各ステップでベクトルの長さや値を表示するかどうか
-    """    
-    # もしinit_vec_typeを数字に変換できる場合は変換する
-    try:
-        init_vec_type = float(init_vec_type)
-    except:
-        pass
-
-    # ①
-    if init_vec_type == 'uniform':
-        # ** 一様分布で初期化 **
-        trainTokenIds = list(train_token2tokenid.values())
-        try:
-            W = model.model.embed_tokens.weight
-        except:
-            W = model.model.language_model.embed_tokens.weight
-        with torch.no_grad():
-            idx = torch.as_tensor(trainTokenIds, device=W.device, dtype=torch.long)
-            src = torch.empty((len(trainTokenIds), W.shape[1]), device=W.device, dtype=W.dtype)
-            src.uniform_(-0.1, 0.1)
-            W.index_copy_(0, idx, src)
-        
-        return model
-    
-
-    elif init_vec_type == 'norm_rand':
-        # ** ノルム固定の正規化ランダムで初期化 **
-        # 各トークン埋め込みベクトルの「方向」はランダム、L2ノルムは一定（例: 0.1）に揃える
-        target_norm = 0.1
-        eps = 1e-12
-
-        trainTokenIds = list(train_token2tokenid.values())
-
-        # 埋め込み重みへの参照（モデル差異に対応）
-        try:
-            W = model.model.embed_tokens.weight
-        except:
-            W = model.model.language_model.embed_tokens.weight
-
-        dim = W.shape[1]
-        device = W.device
-        dtype = W.dtype
-
-        # ランダム方向（正規分布）
-        rand = torch.randn((len(trainTokenIds), dim), device=device, dtype=dtype)
-
-        # L2正規化（各行のノルムを1に）
-        rand = rand / (rand.norm(p=2, dim=1, keepdim=True).clamp_min(eps))
-
-        # ノルムを target_norm に拡張して揃える
-        rand = rand * target_norm
-
-        # 指定トークン行だけ書き換え
-        with torch.no_grad():
-            W[trainTokenIds].copy_(rand)
-
-        return model
-
-
-    elif init_vec_type == 'norm_rand_vocab':
-        # ** 正規化ランダムで初期化（N(μ,σ2)のμとσは語彙集合から計算） **
-        trainTokenIds = list(train_token2tokenid.values())
-        # 埋め込み重み（V x d）への参照（モデル差異に対応）
-        try:
-            W = model.model.embed_tokens.weight
-        except:
-            W = model.model.language_model.embed_tokens.weight
-        
-        # 全要素をまとめて（スカラー1つの平均・標準偏差）
-        mu = W.mean().item()
-        sigma = W.std(unbiased=False).item()  # ddof=0（母標準偏差）
-        print(f"Vocabulary embedding mean: {mu:.4f}, std: {sigma:.4f}")
-        rand = torch.normal(mean=mu, std=sigma, size=(len(trainTokenIds), W.shape[1]), device=W.device, dtype=W.dtype)  # (V, d)
-        
-        with torch.no_grad():
-            W[trainTokenIds].copy_(rand)
-        return model
-
-    elif init_vec_type == 'zero':
-        # ** 0vecで初期化 **
-        trainTokenIds = list(train_token2tokenid.values())
-        try:
-            W = model.model.embed_tokens.weight
-        except:
-            W = model.model.language_model.embed_tokens.weight
-        with torch.no_grad():
-            trainTokenIds = torch.as_tensor(trainTokenIds, device=W.device, dtype=torch.long)
-            W.index_fill_(0, trainTokenIds, 0.0)
-        return model
-    
-    # ============================================================================================
-
-    elif init_vec_type == 'category_centroid_plus_random':
-        # *** (Type1) カテゴリ内の90(propnoun_num_for_init_vec-10)固有名詞(固定)を平均化したvec + カテゴリ内の10固有名詞をランダムに選んで平均化したvec を足し合わせたvecで初期化 ***
-        # Type1: 各prop noun内のtokenベクトルを平均したvecをその固有名詞ベクトルとする方法。
-        # category_COGではカテゴリ内の初期化vec同士に差がなく、性能が上がらなかったため、
-        # 中心vecはカテゴリ内で共通させつつ、そこにカテゴリ内の固有名詞の中からランダムに選んだ10個のvecの平均を足し合わせることで、カテゴリ内の初期化vec同士に差をつけてみる方法
-
-        for category, init_token_ids in category2initoken_ids.items():
-            # *** このカテゴリに対応する初期化vec作成用の固有名詞リストで初期化vecを作成し、
-            # このカテゴリに属す固有名詞(新規概念用)に割り当てたtokenのtoken idsの行を、その初期化vecで初期化する ***
-            init_terms_candidate = category_to_concepts_for_vec[category]
-            init_terms_for_centroid = random.sample(init_terms_candidate, min(len(init_terms_candidate), propnoun_num_for_init_vec-10))  # カテゴリ内の固有名詞からランダムに90個選んで中心vecを作成
-
-            # centroid vec作成用と、random vec作成用の固有名詞の重複を防ぐため、カテゴリの概念リストから centroid vec作成用の固有名詞を削除
-            init_terms_candidate = list(set(init_terms_candidate) - set(init_terms_for_centroid))
-
-            # 初期化対象の追加token毎に、10件をランダム選出してmodel
-            for init_token_id in init_token_ids:
-                init_terms_for_random = random.sample(init_terms_candidate, min(len(init_terms_candidate), 10)) # カテゴリ内の固有名詞からランダムに10個選んでランダムvecを作成
-                init_terms = init_terms_for_centroid + init_terms_for_random # 中心vec用の固有名詞とランダムvec用の固有名詞を合わせたリストを初期化vec作成に使用
-                    
-                # 埋め込み層のinit_token_idsに該当する行を、init_termsのtokenベクトルの平均で初期化する
-                model = initVecWithTokenVec(model, tokenizer, init_terms, [init_token_id], print_flag=print_flag)
-                print(f"Initialized category '{category}' (new token {tokenizer.decode(init_token_id)}, token_id: {init_token_id}) with {len(init_terms)} concepts: ... ({init_terms[-15:]}).")
-
-        return model
-    
-    elif init_vec_type == 'other_category_centroid_plus_random':
-        # [WIP] *** (Type1) category_centroid_plus_random の対。他のカテゴリの中心vec + 他のカテゴリのランダムvecで初期化. 新概念 apple の初期化にvehicleカテゴリの代表ベクトルを利用するなど ***
-        pass
-    
-    # ============================================================================================ 
-
-    elif init_vec_type == 'category_centroid_by_hidden_state_mean':
-        # *** (Type2) 各概念のベクトルを、同一カテゴリ内の固有名詞のベクトルの平均(カテゴリの重心と考える)で初期化する方法. ***
-        # Type2: 各prop nounをモデルに入力し、語句内の最終token位置における指定層の隠れ状態をその固有名詞のベクトルとする方法。
-        # vec_propnoun = h_last_token_in_propnoun -> 各カテゴリの初期化vec = mean(vec_propnoun_in_concept)
-
-        for category, init_token_ids in category2initoken_ids.items():
-            # カテゴリ固有のcentroid vec作成用固有名詞リスト(propnoun_num_for_init_vec-10 個)を作成
-            init_terms_candidate = category_to_concepts_for_vec[category]
-            init_terms_for_centroid = random.sample(init_terms_candidate, min(len(init_terms_candidate), propnoun_num_for_init_vec-10)) 
-            
-            # centroid vec作成用と、random vec作成用の固有名詞の重複を防ぐため、カテゴリの概念リストから centroid vec作成用の固有名詞を削除
-            init_terms_candidate = list(set(init_terms_candidate) - set(init_terms_for_centroid))
-
-            for init_token_id in init_token_ids:
-                # noise として、init_token毎にrandomな10個の固有名詞を選ぶ。これにより、同一カテゴリ内の初期化vec同士に差が生まれる。
-                init_terms_for_random = random.sample(init_terms_candidate, min(len(init_terms_candidate), 10)) 
-                init_terms = init_terms_for_centroid + init_terms_for_random # 中心vec用の固有名詞とランダムvec用の固有名詞を合わせたリストを初期化vec作成に使用
-
-                # 埋め込み層のinit_token_id行を、init_termsの指定層における隠れ状態の平均で初期化する
-                model = initVecWithMeanVecOfTermHiddenStates(model, tokenizer, init_terms, [init_token_id], layer_idx=layer_idx, print_flag=print_flag)
-                print(f"Initialized new token {tokenizer.decode(init_token_id)} in category '{category}' with layer {layer_idx}'s hidden state of {len(init_terms)} concepts: ... ({init_terms[-15:]}).") 
-        return model
-
-
-    elif init_vec_type == 'other_category_centroid_by_hidden_state_mean':
-        # *** (Type2) 他のカテゴリのCOGで初期化. category_centroid_by_hidden_state_mean の対。例えば、動物カテゴリの新規概念を、場所カテゴリの固有名詞のベクトルの平均で初期化するなど. ***
-        # * カテゴリ毎のcentroid vec作成用の固有名詞リスト(propnoun_num_for_init_vec-10 個)を作成
-        category_to_centroid_terms = {}
-        for category, init_token_ids in category2initoken_ids.items():
-            init_terms_candidate = category_to_concepts_for_vec[category]
-            init_terms_for_centroid = random.sample(init_terms_candidate, min(len(init_terms_candidate), propnoun_num_for_init_vec-10)) 
-            category_to_centroid_terms[category] = init_terms_for_centroid
-
-        for category, init_token_ids in category2initoken_ids.items():
-            other_categories = [c for c in category_to_concepts_for_vec.keys() if c != category]
-            print(f"Category '{category}' will be initialized with centroid of other categories: {other_categories[:5]}.")
-
-            for init_token_id in init_token_ids:
-                # 他のカテゴリをランダムに選ぶ
-                other_category = random.choice(other_categories)
-                terms_in_other_category = category_to_concepts_for_vec[other_category]
-                init_terms_for_centroid = category_to_centroid_terms.get(other_category, [])    # configでother_categoryに属す固有名詞リストを含めていない場合はcategory_to_centroid_termsにother_categoryが存在しない可能性があるため、getで取得する
-
-                # centroid vec作成用と、random vec作成用の固有名詞の重複を防ぐため、他カテゴリのリストから centroid vec作成用の固有名詞を削除
-                init_terms_candidate = list(set(terms_in_other_category) - set(init_terms_for_centroid))
-                
-                # noise として、init_token毎にrandomな10個の固有名詞を選び、複数のinit_token_idにおいて他カテゴリとして同じカテゴリを選んだとしても、初期化vecにinit_token_id間で差が生まれる。
-                init_terms_for_random = random.sample(init_terms_candidate, min(len(init_terms_candidate), 10)) 
-                init_terms = init_terms_for_centroid + init_terms_for_random # 中心vec用の固有名詞とランダムvec用の固有名詞を合わせたリストを初期化vec作成に使用
-
-                model = initVecWithMeanVecOfTermHiddenStates(model, tokenizer, init_terms, [init_token_id], layer_idx=layer_idx, print_flag=print_flag)
-                print(f"Initialized new token {tokenizer.decode(init_token_id)} in category '{category}' with layer {layer_idx}'s hidden state of {len(init_terms)} concepts: ... ({init_terms[-15:]}), from other category '{other_category}'.")
-        return model
-    
-    # ============================================================================================
-
-    elif init_vec_type == 'category_COG_by_simple_mean':       
-        # COG: Center Of Gravity. 
-        # *** 各概念のベクトルを、同一カテゴリ内の固有名詞のベクトルの平均(カテゴリの重心と考える)で初期化する方法. ***
-        # vec_propnoun = mean(token_vecs_in_propnoun) -> 各カテゴリの初期化vec = mean(vec_propnoun_in_category)
-        for category, init_token_ids in category2initoken_ids.items():
-            # *** このカテゴリに対応する初期化vec作成用の固有名詞リストで初期化vecを作成し、
-            # このカテゴリに属す固有名詞(新規概念用)に割り当てたtokenのtoken idsの行を、その初期化vecで初期化する ***
-            init_terms = category_to_concepts_for_vec[category]
-            # 埋め込み層のinit_token_idsに該当する行を、init_termsのtokenベクトルの平均で初期化する
-            model = initVecWithTokenVec_with_noise(model, tokenizer, init_terms, init_token_ids, print_flag=print_flag)
-            print(f"Initialized category '{category}' ({len(init_token_ids)} new tokens) with {len(init_terms)} concepts ({init_terms[:5]}...) for token {[tokenizer.decode(tid) for tid in init_token_ids[:5]]}... .")
-
-        return model
-
-    elif init_vec_type == 'other_category_COG_by_simple_mean':
-        # *** 他のカテゴリのCOGで初期化. 例えば、動物カテゴリの新規概念を、場所カテゴリの固有名詞のベクトルの平均で初期化するなど. category_COGに対する比較用 ***
-        # どのカテゴリのCOGで初期化するかは、初期化対象token毎に毎回ランダムに選ぶ 
-        # (category_COGでは同一カテゴリを同じCOGで初期化していたのに対し、こちらは毎回ランダムに選ぶため、同一カテゴリ内でもtoken毎に異なるCOGで初期化されることになる)
-        # (なるべく色々なカテゴリのCOGで初期化するため、ランダムに選ぶ方式にしている)
-        for category, init_token_ids in category2initoken_ids.items():
-            other_categories = [c for c in category_to_concepts_for_vec.keys() if c != category]
-            print(f"Category '{category}' will be initialized with COG of other categories: {other_categories[:5]}.")
-            for init_token_id in init_token_ids:
-                # それぞれのtoken_idを、毎回ランダムに選んだ他のカテゴリのCOGで初期化する
-                other_category = random.choice(other_categories) # 他のカテゴリをランダムに選ぶ
-                init_terms = category_to_concepts_for_vec[other_category] # 他のカテゴリの概念リストを初期化vec作成に使用
-                model = initVecWithTokenVec_with_noise(model, tokenizer, init_terms, [init_token_id], print_flag=print_flag)
-                # if print_flag:
-                print(f"Initialized category '{category}' (new token {init_token_id}) with {len(init_terms)} concepts ({init_terms[:5]}...) from other category '{other_category}' for token {[tokenizer.decode(tid) for tid in init_token_ids[:5]]}... .")
-        return model
-
-    # ============================================================================================
-    else: 
-        # ** 指定の語句で初期化 (句の場合は単純にmean poolingする) **
-        init_terms = [init_vec_type]  # 'a chair' など
-        model = initVecWithTokenVec(model, tokenizer, init_terms, trainTokenIds, print_flag=print_flag)
-        return model
-
-
-
-def initVecWithMeanVecOfTermHiddenStates(
-        model, 
-        tokenizer, 
-        init_terms, 
-        init_target_ids, 
-        layer_idx,
-        print_flag=False
-    ):
-    """語句をモデルに入力し、語句中の最終tokenを入れた後の、モデル内の指定層における隠れ状態をその語句のベクトルとし、
-    埋め込み層の特定の行を、指定した語句の集合のベクトルの平均で初期化する関数.
-    Args:
-    - model: HuggingFaceのモデルオブジェクト
-    - tokenizer: HuggingFaceのトークナイザオブジェクト
-    - init_terms: 初期化に使用する語句のリスト (例: ['a chair', 'a table']など). 句の場合は単純にmean poolingする.
-    - init_target_ids: 初期化したいtoken_idのリスト (例: [1000, 1001]など)
-    - layer_idx: 隠れ状態を取得する層のインデックス。-1なら最終層、0以上の整数ならその層の隠れ状態を使用する。
-    - print_flag: 初期化の各ステップでベクトルの長さや値を表示するかどうか
-    """
-    try:
-        E = model.model.embed_tokens.weight
-    except:
-        E = model.model.language_model.embed_tokens.weight
-
-    # 1. term毎に、語句をモデルに入力して、語句中の最終tokenを入れた後の、モデルの最後の隠れ状態をその語句のベクトルとし、そのベクトルを加算
-    valid_init_term_count = 0   # ""でない有効なtermの数をカウント
-    sum_vec = torch.zeros_like(E[0])  # (d,) ... E[0]と同じshapeとdtypeのゼロベクトルを作成
-    for term in init_terms:
-        if term.strip() == "":
-            continue
-        valid_init_term_count += 1
-        # inputs = tokenizer(term, return_tensors="pt").to(model.device)
-        inputs = tokenizer(term, return_tensors="pt", add_special_tokens=False).to(model.device)    # term内には<unused>が含まれないのでadd_special_tokens=FalseでOK. Trueの場合、last_token_idxで<EOS>の位置を取得してしまう
-
-        # ** モデルに入力して、語句中の最終tokenを入れた後の、モデルの最後の隠れ状態をその語句のベクトルとする **
-        with torch.no_grad():
-            out = model(**inputs, output_hidden_states=True)
-        try:
-            hs = out.hidden_states[layer_idx]   # 指定層の出力 [1, seq_len, d]
-        except IndexError:
-            raise ValueError(f"Layer index {layer_idx} is out of range for the model's hidden states. The model has {len(out.hidden_states)} layers of hidden states.")
-        
-        last_token_idx = inputs["attention_mask"].sum(dim=1) - 1    # 入力語句の最後のtokenのindex ({attention_maskの1の数}-1で計算)
-        h_last_token = hs[0, last_token_idx.item()]        # [1, seq_len, d] -> [d]
-        sum_vec += h_last_token
-
-
-    # 2. term間の平均vecを計算
-    if sum_vec.norm().item() == 0.0 or valid_init_term_count == 0:
-        raise ValueError(f"All terms resulted in zero vectors. Cannot initialize with zero vector.")
-    init_src = sum_vec / valid_init_term_count
-
-
-    # 3. 微小ノイズを加える
-    # n = len(init_target_ids)
-    d = init_src.shape[0]
-
-    # 微小ノイズを作る
-    noise = torch.randn(d, device=E.device, dtype=E.dtype)
-
-    # 各行をL2正規化して「方向だけランダム」にする
-    eps = 1e-12
-    noise = noise / noise.norm(p=2, dim=0, keepdim=True).clamp_min(eps)
-
-    # ノイズの大きさを、重心ノルムのごく一部にする
-    noise_scale = 2e-3   # まずは 1e-3 あたりから試す 1e-3だと少ししか改善しなかった, 1e-2だとother_category_COGの方がaccが高くなった 3e-3はいいかんじ。 2e-3はまだ試していないが後で試す
-    init_norm = init_src.norm(p=2).clamp_min(eps)
-    noise = noise * (init_norm * noise_scale)
-
-    # 重心 + 微小ノイズ
-    init_src = init_src + noise
-
-
-    # 4. ノルムを語彙平均に合わせる [memo] hidde stateのノルムは埋め込み層のノルムと大きく異なる可能性があるため、ノルムを合わせる
-    target_norm = E.norm(dim=1).median().item()  # 埋め込み行のノルムの中央値をターゲットノルムとする
-    init_src_norm = init_src.norm().item()
-    if init_src_norm > 0:
-        init_src = init_src / init_src_norm * target_norm  # ターゲットノルムに合わせてスケーリング
-
-
-    # 5. 埋め込み層のinit_target_idsが指定した<unusedx>を、まとめてinit_srcで初期化.
-    with torch.no_grad():
-        init_target_ids = torch.as_tensor(init_target_ids, device=E.device, dtype=torch.long)
-        src = init_src.unsqueeze(0).expand(len(init_target_ids), -1)   # (n, d) # 全トークンをカテゴリ重心で埋める
-        E.index_copy_(dim=0, index=init_target_ids, source=src)
-    
-    return model
-    
-    
-
-
-
-def initVecWithTokenVec(model, tokenizer, init_terms, init_target_ids, print_flag=False):
-    """
-    埋め込み層の特定の行を、指定の語句のベクトルで初期化する関数.
-    Args:
-    - model: HuggingFaceのモデルオブジェクト
-    - tokenizer: HuggingFaceのトークナイザオブジェクト
-    - init_terms: 初期化に使用する語句のリスト (例: ['a chair', 'a table']など). 句の場合は単純にmean poolingする.
-    - init_target_ids: 初期化したいtoken_idのリスト (例: [1000, 1001]など)
-    - print_flag: 初期化の各ステップでベクトルの長さや値を表示するかどうか
-
-    Returns:
-    - model: 対象の行が初期化されたモデルオブジェクト
-
-    memo:
-    - 全てのtermのtokenを集めて、全tokenの平均を一括で計算すると、token 数が多い句ほど重みが大きくなり、カテゴリの重心が計算できなくなる（test結果も悪かった）
-        → term毎にtokenの平均を計算してから、termの平均を取る方法に変更する
-    """
-    # ** 指定の語句で初期化 (句の場合は単純にその句をtokenizeした結果をmean poolingしてterm平均vecとする) **
-    try:
-        E = model.model.embed_tokens.weight  # (vocab, d)
-    except:
-        E = model.model.language_model.embed_tokens.weight  # (vocab, d)
-
-
-    # 1. term毎に平均vecを計算してから加算
-    sum_vec = torch.zeros_like(E[0])  # (d,) ... E[0]と同じshapeとdtypeのゼロベクトルを作成
-    for term in init_terms:
-        if term.strip() == "":
-            # もしstopword除去後にtermが空になってしまった場合は、このtermは初期化vecの計算に使用せずスキップする
-            # [memo] これがなかった時に、あるtermでtoken_ids=[]になり、E[token_ids] が shape (0, d) となった。これにより、その .mean(dim=0) は NaN になり、sum_vec += term_avg_vec で sum_vec 全体が NaN に汚染され、lossがずっとNaNになってしまった。
-            print(f"Term '{term}' is empty after stopword removal. Skipping this term for initialization.")
-            continue
-        token_ids = tokenizer.encode(term, add_special_tokens=False)    # term内のidを取得 (自分でspace区切りする必要はない)
-        if token_ids is None:
-            raise ValueError(f"Token '{term}' not found in tokenizer vocabulary.")
-        term_avg_vec = E[token_ids].mean(dim=0)  # term内のtokenのベクトルの平均を取る
-        sum_vec += term_avg_vec
-    if sum_vec.norm().item() == 0.0:
-        # もし全てのtermがstopwordのみで構成されていて、stopword除去後に全てのtermが空になってしまい、sum_vecが0ベクトルのままになってしまった場合は、初期化vecの計算に使用するtermがないことになるため、エラーを出す
-        raise ValueError(f"All terms resulted in zero vectors after stopword removal. Cannot initialize with zero vector.")
-
-    # 2. term間の平均vecを計算
-    init_src = sum_vec / len(init_terms)  # term間の平均を取る
-    # [確認用] 平均pool後の init のノルムを計算
-    if print_flag:
-        norm = init_src.norm(p=2).item()
-        print(f"Initial vector norm after mean pool: {norm:.4f}, value(~10): {init_src[:10]}")
-
-    # 3. ノルムを語彙平均に合わせる [memo] ノルムを合わせる必要は無さそうなので削除済み
-    # 4. 埋め込み層のinit_target_idsが指定した<unusedx>を、まとめてinit_srcで初期化.
-    with torch.no_grad():
-        init_target_ids = torch.as_tensor(init_target_ids, device=E.device, dtype=torch.long)
-        n = len(init_target_ids)
-        src = init_src.unsqueeze(0).repeat(n, 1)   # (n, d) # 全トークンをカテゴリ重心で埋める
-        E.index_copy_(dim=0, index=init_target_ids, source=src)
-    
-    # [確認用] model内のembedが書き換わっているかを確認:
-    if print_flag:
-        try:
-            E = model.model.embed_tokens.weight  # (vocab, d)
-        except:
-            E = model.model.language_model.embed_tokens.weight  # (vocab, d)
-        for v in E[init_target_ids]:
-            print(f"\t『{init_target_ids}』 id vecs are updated with {init_src[:5]}... -> after: {v[:5]}...\n")
-    return model
-
-
-def initVecWithTokenVec_with_noise(model, tokenizer, init_terms, init_target_ids, print_flag=False):
-    """
-    埋め込み層の特定の行を、指定の語句のベクトルで初期化する関数.
-    Args:
-    - model: HuggingFaceのモデルオブジェクト
-    - tokenizer: HuggingFaceのトークナイザオブジェクト
-    - init_terms: 初期化に使用する語句のリスト (例: ['a chair', 'a table']など). 句の場合は単純にmean poolingする.
-    - init_target_ids: 初期化したいtoken_idのリスト (例: [1000, 1001]など)
-    - print_flag: 初期化の各ステップでベクトルの長さや値を表示するかどうか
-
-    Returns:
-    - model: 対象の行が初期化されたモデルオブジェクト
-
-    memo:
-    - 全てのtermのtokenを集めて、全tokenの平均を一括で計算すると、token 数が多い句ほど重みが大きくなり、カテゴリの重心が計算できなくなる（test結果も悪かった）
-        → term毎にtokenの平均を計算してから、termの平均を取る方法に変更する
-    """
-    # ** 指定の語句で初期化 (句の場合は単純にmean poolingする) **
-
-    try:
-        E = model.model.embed_tokens.weight  # (vocab, d)
-    except:
-        E = model.model.language_model.embed_tokens.weight  # (vocab, d)
-
-    STOPWORDS = {
-        "a", "an", "the", "of", "in", "on", "at", "for", "to", "and", "or", "with"
-    }
-    def remove_stopwords_from_text(text):
-        words = re.findall(r"\w+|[^\w\s]", text.lower())
-        filtered = [w for w in words if w not in STOPWORDS]
-        return " ".join(filtered)
-    # term = "a chair in the room"
-    # print(remove_stopwords_from_text(term))  # chair room
-
-
-    # 1. term毎に平均vecを計算してから加算
-    sum_vec = torch.zeros_like(E[0])  # (d,) ... E[0]と同じshapeとdtypeのゼロベクトルを作成
-    for term in init_terms:
-        term = remove_stopwords_from_text(term)                         # aやtheなどの重要度の低い単語をtermから除去
-        if term.strip() == "":
-            # もしstopword除去後にtermが空になってしまった場合は、このtermは初期化vecの計算に使用せずスキップする
-            # [memo] これがなかった時に、あるtermでtoken_ids=[]になり、E[token_ids] が shape (0, d) となった。これにより、その .mean(dim=0) は NaN になり、sum_vec += term_avg_vec で sum_vec 全体が NaN に汚染され、lossがずっとNaNになってしまった。
-            print(f"Term '{term}' is empty after stopword removal. Skipping this term for initialization.")
-            continue
-        token_ids = tokenizer.encode(term, add_special_tokens=False)    # term内のidを取得 (自分でspace区切りする必要はない)
-        if token_ids is None:
-            raise ValueError(f"Token '{term}' not found in tokenizer vocabulary.")
-        term_avg_vec = E[token_ids].mean(dim=0)  # term内のtokenのベクトルの平均を取る
-        sum_vec += term_avg_vec
-    if sum_vec.norm().item() == 0.0:
-        # もし全てのtermがstopwordのみで構成されていて、stopword除去後に全てのtermが空になってしまい、sum_vecが0ベクトルのままになってしまった場合は、初期化vecの計算に使用するtermがないことになるため、エラーを出す
-        raise ValueError(f"All terms resulted in zero vectors after stopword removal. Cannot initialize with zero vector.")
-
-    # 2. term間の平均vecを計算
-    init_src = sum_vec / len(init_terms)  # term間の平均を取る
-    # [確認用] 平均pool後の init のノルムを計算
-    # if print_flag:
-    norm = init_src.norm(p=2).item()
-    print(f"Initial vector norm after mean pool: {norm:.4f}, value(~10): {init_src[:10]}")
-
-    # # 3. ノルムを語彙平均に合わせる [memo] ノルムを合わせる必要は無さそうなのでコメントアウトした
-    # target_norm = E.norm(dim=1).mean() # 目標のノルム: 語彙全体のベクトルのノルムの平均
-    # src_norm = init_src.norm(p=2)   # 現在の init_src のノルム
-    # eps = 1e-12 # 0除算防止用
-
-    # # ノルムを target_norm に合わせて vec内の各値をrescale
-    # init_src = init_src * (target_norm / (src_norm + eps))
-
-    # # [確認用] 平均pool+語彙平均normに揃えた init のノルムを計算
-    # if print_flag:
-    #     norm = init_src.norm(p=2).item()
-    #     print(f"Initial vector norm after norm adjustment: {norm:.4f}, target norm: {target_norm:.4f}, value(~10): {init_src[:10]}")
-
-
-    # 4. 埋め込み層のinit_target_idsが指定した<unusedx>を、まとめてinit_srcで初期化. 
-    # with torch.no_grad():
-    #     init_target_ids = torch.as_tensor(init_target_ids, device=E.device, dtype=torch.long)#.view(-1)     # torch long型に変換
-    #     src = init_src.expand(len(init_target_ids), -1)           # init_target_idsの形に合わせてinit_src行を増幅した(ように見えるviewを)作成
-    #     E.index_copy_(dim=0, index=init_target_ids, source=src)   # Eのinit_target_ids行(複数)をsrcで上書き
-
-    # 4'. (1tokenだけの学習時はcategory_COGだけ正解率80%まで行ったのに、複数tokensを一気に訓練するとほとんどaccが上がらなかった。カテゴリ内のtoken全てを同じ重心ベクトルで初期化していることが原因かもしれないのでノイズを加えて少しCOGvecをずらしてみる)
-    with torch.no_grad():
-        init_target_ids = torch.as_tensor(init_target_ids, device=E.device, dtype=torch.long)
-
-        n = len(init_target_ids)
-        d = init_src.shape[0]
-
-        # まず全トークンをカテゴリ重心で埋める
-        src = init_src.unsqueeze(0).repeat(n, 1)   # (n, d)
-
-        # 微小ノイズを作る
-        noise = torch.randn((n, d), device=E.device, dtype=E.dtype)
-
-        # 各行をL2正規化して「方向だけランダム」にする
-        eps = 1e-12
-        noise = noise / noise.norm(p=2, dim=1, keepdim=True).clamp_min(eps)
-
-        # ノイズの大きさを、重心ノルムのごく一部にする
-        noise_scale = 3e-3   # まずは 1e-3 あたりから試す 1e-3だと少ししか改善しなかった, 1e-2だとother_category_COGの方がaccが高くなった 3e-3はいいかんじ。 2e-3はまだ試していないが後で試す
-        init_norm = init_src.norm(p=2).clamp_min(eps)
-        noise = noise * (init_norm * noise_scale)
-
-        # 重心 + 微小ノイズ
-        src = src + noise
-
-        E.index_copy_(dim=0, index=init_target_ids, source=src)
-    
-    # [確認用] model内のembedが書き換わっているかを確認:
-    if print_flag:
-        try:
-            E = model.model.embed_tokens.weight  # (vocab, d)
-        except:
-            E = model.model.language_model.embed_tokens.weight  # (vocab, d)
-        for v in E[init_target_ids]:
-            print(f"\t『{init_target_ids}』 id vecs are updated with {init_src[:5]}... -> after: {v[:5]}...\n")
-    return model
-
-
 class GradZeroHook:
     """ 特定の行(=tokenのidx)の勾配を0にするフック
     学習対象外のembedding行の勾配は全て0にするために用いる
@@ -661,12 +155,15 @@ class GradZeroHook:
 
 
 def prepareGemmaModel(
+        model_name,
+        save_mem_dir,
         model, 
         tokenizer,
         train_token2tokenid, 
         init_vec_type, 
         category_to_concepts_for_vec, 
         category2initoken_ids,
+        seed,
         layer_idx=False,
         print_flag=False
     ):
@@ -729,7 +226,21 @@ def prepareGemmaModel(
 
 
     # *** 訓練対象tokenの埋め込みを初期化 ***
-    model = initializeEmbed(
+    train_target_category_lst = sorted(category2initoken_ids.keys()) # target_category_lst をアルファベット順にsort
+    print(f"train_target_category_lst: {train_target_category_lst}")
+
+    embed_initializer = EmbedInitializer(
+        model_name,
+        save_mem_dir,
+        init_vec_type, 
+        train_target_category_lst,
+        propnoun_num_for_init_vec, 
+        model, 
+        tokenizer, 
+        seed,
+        term_vec_type='single_last', # 'single_last',
+    )
+    model = embed_initializer.initializeEmbed(
         model, 
         tokenizer, 
         train_token2tokenid, 
@@ -918,7 +429,7 @@ def train(model_size,
         cooldown=100 # 500
 
     elif int(model_size) == 12:
-        BATCH_SIZE = 8 #4 # 16 # 64
+        BATCH_SIZE = 4 #8 #4 # 16 # 64
         factor=0.95 #0.5
         min_lr=5e-08  #1e-06
         patience=30 # 100
@@ -1101,7 +612,7 @@ def main(args):
     model_name = f"google/gemma-{model_version}-{model_size}b-it" # [memo] 'gemma-'部分は変えないこと!! -を消すとモデルがloadできない．さらにそのエラーメッセージは，"huggingface-cli login"をして，という関係ないmessageになるので注意!
     # model_name_for_dirname = f"gemma-{model_version}-{model_size}B-lr{lr}{suffix}-{trained_date}"
     model_name_for_dirname = f"gemma-{model_version}-{model_size}B-lr{lr}-{trained_date}"
-    if layer_idx is not None and init_vec_type in ['category_centroid_by_hidden_state_mean', 'other_category_centroid_by_hidden_state_mean']:
+    if layer_idx is not None and init_vec_type in initMethods_with_HS:
         model_name_for_dirname += f"-hidden_layer{layer_idx}"
     model_name_for_dirname += f"-seed{seed}"
 
@@ -1239,7 +750,7 @@ def main(args):
     # *** categoryごとに、割り当てた空きtoken idをリストにまとめる. ***
     # これは、'category_COG' 系の初期化の場合、categoryごとのvec初期化の際に、同じカテゴリの概念に割り当てたtokenのidをまとめて初期化するために使用する. 
     # (カテゴリ毎に重心vecを作成するため、同じカテゴリ内の概念に該当する空きtokenは同じ重心vecで初期化するから。)
-    category2initoken_ids = defaultdict(list)
+    category2initoken_ids = defaultdict(list)   # category -> [unused_token_id1, unused_token_id2, ...]
     for conceptForFict in conceptForFict2token_map.keys():
         category = conceptForFict2category_map.get(conceptForFict)
         if category is None:
@@ -1247,7 +758,6 @@ def main(args):
         tk = conceptForFict2token_map[conceptForFict]
         tk_id = train_token2tokenid[tk]
         category2initoken_ids[category].append(tk_id)
-
 
 
 
@@ -1284,12 +794,15 @@ def main(args):
 
     # ********* model等の準備: 予約済み特殊トークンの埋め込みの初期化など *********
     model, criteria = prepareGemmaModel(
+        model_name,
+        save_mem_dir,
         model, 
         tokenizer,
         train_token2tokenid, 
         init_vec_type, 
         category_to_concepts_for_vec,
         category2initoken_ids,
+        seed,
         layer_idx,
         print_flag=print_flag
     )
@@ -1385,7 +898,7 @@ if __name__ == "__main__":
             layer_indices = args.layer_indices # ここでinit_vec_typeループ毎に読み込まないと、layer_indices = [None] が代入されたループの次のループでも[None]のままになってしまう
 
             if len(layer_indices) < 1 or \
-                init_vec_type not in ['category_centroid_by_hidden_state_mean', 'other_category_centroid_by_hidden_state_mean']:
+                init_vec_type not in initMethods_with_HS:
                 # layer_idxが不要の初期化方法の場合は、layer_indicesを[None]にして、1回だけループするようにする
                 print(f"init_vec_type: {init_vec_type}, layer_indices: {layer_indices}")
                 layer_indices = [None]
@@ -1400,7 +913,7 @@ if __name__ == "__main__":
 
                 task_id += 1
 
-                # if task_id == 0 & layer_idx == 0:
+                # if layer_idx in [9, 10, 11, 12] and init_vec_type == 'categoryCentroid_by_DebiasedHiddenState': # if task_id == 0 & layer_idx == 0:
                 #     continue # もう途中まで実行済みなので，残りを実行
                 
                 if task_id % processNum != args.thread_id:

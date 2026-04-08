@@ -30,6 +30,17 @@ sys.path.append(project_root)
 
 from utils.gemma_train_and_test_utils import fix_seed
 
+initMethods_with_HS = [
+    'category_centroid_by_hidden_state_mean', 'other_category_centroid_by_hidden_state_mean',
+    'categoryCentroid_by_DebiasedHiddenState', 'otherCategoryCentroid_by_DebiasedHiddenState',
+    'categoryCentroid_by_DebiasedHSMixed', 'otherCategoryCentroid_by_DebiasedHSMixed',
+    'CatCentroid_by_OthCatDebiasedHSMixed', 'otherCatCentroid_by_OthCatDebiasedHSMixed',
+    'CatCent_by_GlbPrimDebiasedHSMixed', 'otherCatCent_by_GlbPrimDebiasedHSMixed',
+    'CatCent_by_GlbPrimDebiasedHS', 'otherCatCent_by_GlbPrimDebiasedHS',
+    'CatCent_by_WikiSummaryHS', 'otherCatCent_by_WikiSummaryHS',
+    'CatCent_by_WikiSummaryHSMixed', 'otherCatCent_by_WikiSummaryHSMixed',
+]
+
 
 print_flag = False  # プロンプト表示フラグ
 
@@ -181,7 +192,7 @@ def main(args):
     model_name = f"google/gemma-{model_version}-{model_size}b-it" # [memo] 'gemma-'部分は変えないこと!! -を消すとモデルがloadできない．さらにそのエラーメッセージは，"huggingface-cli login"をして，という関係ないmessageになるので注意!
     # model_name_for_dirname = f"gemma-{model_version}-{model_size}B-lr{lr}{suffix}-{trained_date}"
     model_name_for_dirname = f"gemma-{model_version}-{model_size}B-lr{lr}-{trained_date}"
-    if layer_idx is not None and init_vec_type in ['category_centroid_by_hidden_state_mean', 'other_category_centroid_by_hidden_state_mean']:
+    if layer_idx is not None and init_vec_type in initMethods_with_HS:
         model_name_for_dirname += f"-hidden_layer{layer_idx}"
     model_name_for_dirname += f"-seed{seed}"
 
@@ -458,7 +469,8 @@ if __name__ == "__main__":
         # init_vec_type_lst = ['category_centroid_plus_random', 'other_category_COG', 'norm_rand_vocab', 'zero', 'uniform', 'norm_rand', 'category_COG', ]
         init_vec_type_lst = args.init_vec_types
         layer_indices = args.layer_indices
-        
+
+
 
         # trained_date はseed毎に違う（seed内でも異なるものは手動で調整してある）
         if args.model_size=='4':
@@ -471,13 +483,13 @@ if __name__ == "__main__":
             else:
                 raise ValueError(f"Invalid seed: {seed}")
 
-
+        # [memo] 新しく隠れ層を参照する初期化手法を追加した場合は、initMethods_with_HS に追加
         elif args.model_size=='12':
             # * seed前半
             if seed == 0:
-                args.trained_date = "20260319" 
+                args.trained_date = "20260406" 
             elif seed == 1:
-                args.trained_date = "20260319" 
+                args.trained_date = "20260406" 
             # elif seed == 2:
             #     args.trained_date = "20260313"
             # elif seed == 3:
@@ -510,7 +522,7 @@ if __name__ == "__main__":
         
 
             if len(layer_indices) < 1 or \
-                init_vec_type not in ['category_centroid_by_hidden_state_mean', 'other_category_centroid_by_hidden_state_mean']:
+                init_vec_type not in initMethods_with_HS:
                 # layer_idxが不要の初期化方法の場合は、layer_indicesを[None]にして、1回だけループするようにする
                 layer_indices = [None]
 
@@ -523,7 +535,7 @@ if __name__ == "__main__":
 
                 task_id += 1
                 
-                if task_id % processNum != args.thread_id:
+                if int(task_id % processNum) != int(args.thread_id):
                     # 複数process同時に実行する場合, thread_idに応じてtask_idが偶数or奇数の設定のみを実行する
                     print(f"Skipping task_id {task_id} for thread_id {args.thread_id}")
                     continue
