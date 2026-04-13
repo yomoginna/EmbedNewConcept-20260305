@@ -1,0 +1,562 @@
+[
+    {
+        "test_id": 0,
+        "relation": "About",
+        "correct_feat": "a mysterious drowning death that became a tabloid story",
+        "options": "1. a mysterious drowning death that became a tabloid story\n2. a light, non-motorised, fixed-wing heavier-than-air aircraft called a hang glider\n3. an English and Welsh dynasty that held the throne of England from 1485 to 1603",
+        "correct_num": 1,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is about [MASK].\n\nOptions:\n1. a mysterious drowning death that became a tabloid story\n2. a light, non-motorised, fixed-wing heavier-than-air aircraft called a hang glider\n3. an English and Welsh dynasty that held the throne of England from 1485 to 1603"
+    },
+    {
+        "test_id": 1,
+        "relation": "Affects",
+        "correct_feat": "the public perception of prominent politicians",
+        "options": "1. the anime series Hand Shakers\n2. the public perception of prominent politicians\n3. the development of sports programs for youth and women",
+        "correct_num": 2,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> affects [MASK].\n\nOptions:\n1. the anime series Hand Shakers\n2. the public perception of prominent politicians\n3. the development of sports programs for youth and women"
+    },
+    {
+        "test_id": 2,
+        "relation": "AssociatedWith",
+        "correct_feat": "the Walter Thornton Modeling Agency",
+        "options": "1. Winning Moves Games USA\n2. cycles of the Life of the Virgin\n3. the Walter Thornton Modeling Agency",
+        "correct_num": 3,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is associated with [MASK].\n\nOptions:\n1. Winning Moves Games USA\n2. cycles of the Life of the Virgin\n3. the Walter Thornton Modeling Agency"
+    },
+    {
+        "test_id": 3,
+        "relation": "AssociatedWith",
+        "correct_feat": "Andrew James Peters, a politician and former mayor of Boston",
+        "options": "1. Andrew James Peters, a politician and former mayor of Boston\n2. the Feast of the Pheasant\n3. Leopold von Buch",
+        "correct_num": 1,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is associated with [MASK].\n\nOptions:\n1. Andrew James Peters, a politician and former mayor of Boston\n2. the Feast of the Pheasant\n3. Leopold von Buch"
+    },
+    {
+        "test_id": 4,
+        "relation": "AssociatedWith",
+        "correct_feat": "the flapper lifestyle",
+        "options": "1. the Tudors of Penmynydd\n2. the flapper lifestyle\n3. the Pahlavi script",
+        "correct_num": 2,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is associated with [MASK].\n\nOptions:\n1. the Tudors of Penmynydd\n2. the flapper lifestyle\n3. the Pahlavi script"
+    },
+    {
+        "test_id": 5,
+        "relation": "AssociatedWith",
+        "correct_feat": "John O'Hara's novel BUtterfield 8",
+        "options": "1. the opposition of misogynist men to women's rights\n2. ClariS\n3. John O'Hara's novel BUtterfield 8",
+        "correct_num": 3,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is associated with [MASK].\n\nOptions:\n1. the opposition of misogynist men to women's rights\n2. ClariS\n3. John O'Hara's novel BUtterfield 8"
+    },
+    {
+        "test_id": 6,
+        "relation": "AssociatedWith",
+        "correct_feat": "Jonathan Goodman's true crime book The Passing of Starr Faithfull",
+        "options": "1. Jonathan Goodman's true crime book The Passing of Starr Faithfull\n2. Pony Canyon\n3. the Franks",
+        "correct_num": 1,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is associated with [MASK].\n\nOptions:\n1. Jonathan Goodman's true crime book The Passing of Starr Faithfull\n2. Pony Canyon\n3. the Franks"
+    },
+    {
+        "test_id": 7,
+        "relation": "BelongsTo",
+        "correct_feat": "the category of unsolved mysteries",
+        "options": "1. Christian art\n2. the category of unsolved mysteries\n3. fortified buildings",
+        "correct_num": 2,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> belongs to [MASK].\n\nOptions:\n1. Christian art\n2. the category of unsolved mysteries\n3. fortified buildings"
+    },
+    {
+        "test_id": 8,
+        "relation": "CausedBy",
+        "correct_feat": "drowning",
+        "options": "1. concerns about concussions and CTE in American football\n2. a road traffic accident\n3. drowning",
+        "correct_num": 3,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is caused by [MASK].\n\nOptions:\n1. concerns about concussions and CTE in American football\n2. a road traffic accident\n3. drowning"
+    },
+    {
+        "test_id": 9,
+        "relation": "CausedBy",
+        "correct_feat": "allegations of child sexual abuse",
+        "options": "1. allegations of child sexual abuse\n2. the development of foilboards\n3. the decentralization of an empire",
+        "correct_num": 1,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is caused by [MASK].\n\nOptions:\n1. allegations of child sexual abuse\n2. the development of foilboards\n3. the decentralization of an empire"
+    },
+    {
+        "test_id": 10,
+        "relation": "CausedBy",
+        "correct_feat": "a large dose of a sedative in the system",
+        "options": "1. the bull trying to buck off the rider\n2. a large dose of a sedative in the system\n3. the claim that cultural achievements perceived as Greek origin are actually ethnic Macedonian achievements",
+        "correct_num": 2,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is caused by [MASK].\n\nOptions:\n1. the bull trying to buck off the rider\n2. a large dose of a sedative in the system\n3. the claim that cultural achievements perceived as Greek origin are actually ethnic Macedonian achievements"
+    },
+    {
+        "test_id": 11,
+        "relation": "ConsistsOf",
+        "correct_feat": "allegations of sexual abuse",
+        "options": "1. a sleeping woman on the far right\n2. players attempting to kill random opponents\n3. allegations of sexual abuse",
+        "correct_num": 3,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> consists of [MASK].\n\nOptions:\n1. a sleeping woman on the far right\n2. players attempting to kill random opponents\n3. allegations of sexual abuse"
+    },
+    {
+        "test_id": 12,
+        "relation": "ConsistsOf",
+        "correct_feat": "a mysterious drowning",
+        "options": "1. a mysterious drowning\n2. four related conflicts\n3. the presentation of Jesus at the Temple in Jerusalem",
+        "correct_num": 1,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> consists of [MASK].\n\nOptions:\n1. a mysterious drowning\n2. four related conflicts\n3. the presentation of Jesus at the Temple in Jerusalem"
+    },
+    {
+        "test_id": 13,
+        "relation": "ConsistsOf",
+        "correct_feat": "bruises and a sedative in the system",
+        "options": "1. a catcher in some leagues\n2. bruises and a sedative in the system\n3. a steering blade",
+        "correct_num": 2,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> consists of [MASK].\n\nOptions:\n1. a catcher in some leagues\n2. bruises and a sedative in the system\n3. a steering blade"
+    },
+    {
+        "test_id": 14,
+        "relation": "DiscoveredAt",
+        "correct_feat": "Long Beach, New York",
+        "options": "1. the Tres Islas Hotel on the island of Fuerteventura\n2. the seashore of Cañacao Bay\n3. Long Beach, New York",
+        "correct_num": 3,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> was discovered at [MASK].\n\nOptions:\n1. the Tres Islas Hotel on the island of Fuerteventura\n2. the seashore of Cañacao Bay\n3. Long Beach, New York"
+    },
+    {
+        "test_id": 15,
+        "relation": "DiscoveredAt",
+        "correct_feat": "the south shore of Long Island",
+        "options": "1. the south shore of Long Island\n2. the Gorringe Ridge\n3. the gates of the monastery",
+        "correct_num": 1,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> was discovered at [MASK].\n\nOptions:\n1. the south shore of Long Island\n2. the Gorringe Ridge\n3. the gates of the monastery"
+    },
+    {
+        "test_id": 16,
+        "relation": "DiscoveredIn",
+        "correct_feat": "1931",
+        "options": "1. 1774\n2. 1931\n3. 1742",
+        "correct_num": 2,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> was discovered in [MASK].\n\nOptions:\n1. 1774\n2. 1931\n3. 1742"
+    },
+    {
+        "test_id": 17,
+        "relation": "HasA",
+        "correct_feat": "allegations of sexual abuse",
+        "options": "1. a molieben composed in Russian and English\n2. an apron featuring a small pinafore\n3. allegations of sexual abuse",
+        "correct_num": 3,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> has [MASK].\n\nOptions:\n1. a molieben composed in Russian and English\n2. an apron featuring a small pinafore\n3. allegations of sexual abuse"
+    },
+    {
+        "test_id": 18,
+        "relation": "HasA",
+        "correct_feat": "bruises",
+        "options": "1. bruises\n2. lionfish\n3. popularity in the eastern lands of the Abbasid caliphate",
+        "correct_num": 1,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> has [MASK].\n\nOptions:\n1. bruises\n2. lionfish\n3. popularity in the eastern lands of the Abbasid caliphate"
+    },
+    {
+        "test_id": 19,
+        "relation": "HasA",
+        "correct_feat": "a large dose of a sedative",
+        "options": "1. a second EP titled Gone\n2. a large dose of a sedative\n3. rules for sieges and attrition",
+        "correct_num": 2,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> has [MASK].\n\nOptions:\n1. a second EP titled Gone\n2. a large dose of a sedative\n3. rules for sieges and attrition"
+    },
+    {
+        "test_id": 20,
+        "relation": "HasA",
+        "correct_feat": "a mysterious drowning",
+        "options": "1. a story that was prefixed to the Jewish story\n2. a court chapel constructed in 1543-44\n3. a mysterious drowning",
+        "correct_num": 3,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> has [MASK].\n\nOptions:\n1. a story that was prefixed to the Jewish story\n2. a court chapel constructed in 1543-44\n3. a mysterious drowning"
+    },
+    {
+        "test_id": 21,
+        "relation": "HasA",
+        "correct_feat": "an unsolved conclusion",
+        "options": "1. an unsolved conclusion\n2. some issues with the maps\n3. an inclined ramp",
+        "correct_num": 1,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> has [MASK].\n\nOptions:\n1. an unsolved conclusion\n2. some issues with the maps\n3. an inclined ramp"
+    },
+    {
+        "test_id": 22,
+        "relation": "HasFeatureOf",
+        "correct_feat": "sensational aspects",
+        "options": "1. the typical position of Christ's body changing from being flat on the ground or slab, usually seen in profile across the centre of the work, to the upper torso being raised by Mary or others, and finally being held in a near-vertical position, seen frontally, or across Mary's lap\n2. sensational aspects\n3. embittered rants about modern working life",
+        "correct_num": 2,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is characterized by [MASK].\n\nOptions:\n1. the typical position of Christ's body changing from being flat on the ground or slab, usually seen in profile across the centre of the work, to the upper torso being raised by Mary or others, and finally being held in a near-vertical position, seen frontally, or across Mary's lap\n2. sensational aspects\n3. embittered rants about modern working life"
+    },
+    {
+        "test_id": 23,
+        "relation": "HasFeatureOf",
+        "correct_feat": "youth and beauty",
+        "options": "1. low friction\n2. a map board almost 3 meters long\n3. youth and beauty",
+        "correct_num": 3,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is characterized by [MASK].\n\nOptions:\n1. low friction\n2. a map board almost 3 meters long\n3. youth and beauty"
+    },
+    {
+        "test_id": 24,
+        "relation": "HasFeatureOf",
+        "correct_feat": "promiscuity and a flapper lifestyle",
+        "options": "1. promiscuity and a flapper lifestyle\n2. support for the monarchy\n3. its depiction of women in diverse and empowered roles",
+        "correct_num": 1,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is characterized by [MASK].\n\nOptions:\n1. promiscuity and a flapper lifestyle\n2. support for the monarchy\n3. its depiction of women in diverse and empowered roles"
+    },
+    {
+        "test_id": 25,
+        "relation": "HasFeatureOf",
+        "correct_feat": "allegations about a prominent politician",
+        "options": "1. the 3×3×3 version being easily won by the second player if the first player is prevented from taking the center cell on his first step\n2. allegations about a prominent politician\n3. being popular, influential, and enduring",
+        "correct_num": 2,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is characterized by [MASK].\n\nOptions:\n1. the 3×3×3 version being easily won by the second player if the first player is prevented from taking the center cell on his first step\n2. allegations about a prominent politician\n3. being popular, influential, and enduring"
+    },
+    {
+        "test_id": 26,
+        "relation": "HasFeatureOf",
+        "correct_feat": "a diary with explicit descriptions of sexual liaisons",
+        "options": "1. an effort to develop conscious growth through education\n2. operational simulation\n3. a diary with explicit descriptions of sexual liaisons",
+        "correct_num": 3,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is characterized by [MASK].\n\nOptions:\n1. an effort to develop conscious growth through education\n2. operational simulation\n3. a diary with explicit descriptions of sexual liaisons"
+    },
+    {
+        "test_id": 27,
+        "relation": "HasFeatureOf",
+        "correct_feat": "being a \"sexy death mystery\"",
+        "options": "1. being a \"sexy death mystery\"\n2. scratch matches played throughout the Michaelmas and Lent halves\n3. a rejection of its roots in the French Revolution by some historians' interpretations",
+        "correct_num": 1,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is characterized by [MASK].\n\nOptions:\n1. being a \"sexy death mystery\"\n2. scratch matches played throughout the Michaelmas and Lent halves\n3. a rejection of its roots in the French Revolution by some historians' interpretations"
+    },
+    {
+        "test_id": 28,
+        "relation": "HeldIn",
+        "correct_feat": "a grand jury",
+        "options": "1. the Ahafo Region of Ghana\n2. a grand jury\n3. Waltham Marshes",
+        "correct_num": 2,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> was held in [MASK].\n\nOptions:\n1. the Ahafo Region of Ghana\n2. a grand jury\n3. Waltham Marshes"
+    },
+    {
+        "test_id": 29,
+        "relation": "HeldOn",
+        "correct_feat": "the morning of June 8, 1931",
+        "options": "1. October 18, 2020\n2. May 9\n3. the morning of June 8, 1931",
+        "correct_num": 3,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> was held on [MASK].\n\nOptions:\n1. October 18, 2020\n2. May 9\n3. the morning of June 8, 1931"
+    },
+    {
+        "test_id": 30,
+        "relation": "Influenced",
+        "correct_feat": "several fictional works",
+        "options": "1. several fictional works\n2. the cultural identity of Toulouse\n3. the film Dhadak",
+        "correct_num": 1,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> influenced [MASK].\n\nOptions:\n1. several fictional works\n2. the cultural identity of Toulouse\n3. the film Dhadak"
+    },
+    {
+        "test_id": 31,
+        "relation": "Influenced",
+        "correct_feat": "John O'Hara's 1935 novel BUtterfield 8",
+        "options": "1. the direct actions of groups such as Earth First!\n2. John O'Hara's 1935 novel BUtterfield 8\n3. John Phillips's woodcut of a prehistoric scene",
+        "correct_num": 2,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> influenced [MASK].\n\nOptions:\n1. the direct actions of groups such as Earth First!\n2. John O'Hara's 1935 novel BUtterfield 8\n3. John Phillips's woodcut of a prehistoric scene"
+    },
+    {
+        "test_id": 32,
+        "relation": "Influenced",
+        "correct_feat": "numerous non-fiction books",
+        "options": "1. the passage of the Cruelty to Animals Act 1835\n2. the Church Fathers' use of the theme of a ladder to Heaven\n3. numerous non-fiction books",
+        "correct_num": 3,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> influenced [MASK].\n\nOptions:\n1. the passage of the Cruelty to Animals Act 1835\n2. the Church Fathers' use of the theme of a ladder to Heaven\n3. numerous non-fiction books"
+    },
+    {
+        "test_id": 33,
+        "relation": "Influenced",
+        "correct_feat": "Jonathan Goodman's 1990 true crime book The Passing of Starr Faithfull",
+        "options": "1. Jonathan Goodman's 1990 true crime book The Passing of Starr Faithfull\n2. the United Kingdom music charts\n3. the belief that the disappearance of the icon was a sign of tragedies to plague Russia",
+        "correct_num": 1,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> influenced [MASK].\n\nOptions:\n1. Jonathan Goodman's 1990 true crime book The Passing of Starr Faithfull\n2. the United Kingdom music charts\n3. the belief that the disappearance of the icon was a sign of tragedies to plague Russia"
+    },
+    {
+        "test_id": 34,
+        "relation": "InfluencedBy",
+        "correct_feat": "the victim's youth, beauty, promiscuity, and flapper lifestyle",
+        "options": "1. The Anarchy civil war in England\n2. the victim's youth, beauty, promiscuity, and flapper lifestyle\n3. Joseph de Maistre",
+        "correct_num": 2,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> was influenced by [MASK].\n\nOptions:\n1. The Anarchy civil war in England\n2. the victim's youth, beauty, promiscuity, and flapper lifestyle\n3. Joseph de Maistre"
+    },
+    {
+        "test_id": 35,
+        "relation": "InfluencedBy",
+        "correct_feat": "allegations about Andrew James Peters",
+        "options": "1. Burm's childhood experiences of playing \"race\" cars with his brother\n2. religious texts\n3. allegations about Andrew James Peters",
+        "correct_num": 3,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> was influenced by [MASK].\n\nOptions:\n1. Burm's childhood experiences of playing \"race\" cars with his brother\n2. religious texts\n3. allegations about Andrew James Peters"
+    },
+    {
+        "test_id": 36,
+        "relation": "InfluencedBy",
+        "correct_feat": "the victim's diary containing explicit descriptions of sexual liaisons",
+        "options": "1. the victim's diary containing explicit descriptions of sexual liaisons\n2. the mid-century Young Ottomans\n3. the Qumran text",
+        "correct_num": 1,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> was influenced by [MASK].\n\nOptions:\n1. the victim's diary containing explicit descriptions of sexual liaisons\n2. the mid-century Young Ottomans\n3. the Qumran text"
+    },
+    {
+        "test_id": 37,
+        "relation": "InfluencedBy",
+        "correct_feat": "the case being called a \"sexy death mystery\"",
+        "options": "1. the Home Rule Crisis\n2. the case being called a \"sexy death mystery\"\n3. missionaries and Indian agents enforcing standards of monogamy, modesty, and domesticity",
+        "correct_num": 2,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> was influenced by [MASK].\n\nOptions:\n1. the Home Rule Crisis\n2. the case being called a \"sexy death mystery\"\n3. missionaries and Indian agents enforcing standards of monogamy, modesty, and domesticity"
+    },
+    {
+        "test_id": 38,
+        "relation": "IsA",
+        "correct_feat": "a mysterious drowning death",
+        "options": "1. an excellent thing\n2. a conflict that effectively set England and Scotland on course towards a parliamentary monarchy form of government\n3. a mysterious drowning death",
+        "correct_num": 3,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is [MASK].\n\nOptions:\n1. an excellent thing\n2. a conflict that effectively set England and Scotland on course towards a parliamentary monarchy form of government\n3. a mysterious drowning death"
+    },
+    {
+        "test_id": 39,
+        "relation": "IsA",
+        "correct_feat": "a much-covered tabloid story",
+        "options": "1. a much-covered tabloid story\n2. a 12-inch record\n3. a formalised activity",
+        "correct_num": 1,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is [MASK].\n\nOptions:\n1. a much-covered tabloid story\n2. a 12-inch record\n3. a formalised activity"
+    },
+    {
+        "test_id": 40,
+        "relation": "IsA",
+        "correct_feat": "an unsolved case",
+        "options": "1. a meteorological measurement tower\n2. an unsolved case\n3. a political ideology",
+        "correct_num": 2,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is [MASK].\n\nOptions:\n1. a meteorological measurement tower\n2. an unsolved case\n3. a political ideology"
+    },
+    {
+        "test_id": 41,
+        "relation": "IsA",
+        "correct_feat": "a homicide or suicide theory",
+        "options": "1. a two-player game of arctic warfare\n2. a national treasure\n3. a homicide or suicide theory",
+        "correct_num": 3,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is [MASK].\n\nOptions:\n1. a two-player game of arctic warfare\n2. a national treasure\n3. a homicide or suicide theory"
+    },
+    {
+        "test_id": 42,
+        "relation": "IsA",
+        "correct_feat": "a sensational news story",
+        "options": "1. a sensational news story\n2. a popular patriotic nationalism\n3. a VHS video tape",
+        "correct_num": 1,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is [MASK].\n\nOptions:\n1. a sensational news story\n2. a popular patriotic nationalism\n3. a VHS video tape"
+    },
+    {
+        "test_id": 43,
+        "relation": "IsA",
+        "correct_feat": "a true crime case",
+        "options": "1. a history lesson\n2. a true crime case\n3. a game played in school playgrounds",
+        "correct_num": 2,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is [MASK].\n\nOptions:\n1. a history lesson\n2. a true crime case\n3. a game played in school playgrounds"
+    },
+    {
+        "test_id": 44,
+        "relation": "IsA",
+        "correct_feat": "a \"sexy death mystery\"",
+        "options": "1. a ladder or staircase leading to Heaven\n2. a combination of various customs and systems\n3. a \"sexy death mystery\"",
+        "correct_num": 3,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is [MASK].\n\nOptions:\n1. a ladder or staircase leading to Heaven\n2. a combination of various customs and systems\n3. a \"sexy death mystery\""
+    },
+    {
+        "test_id": 45,
+        "relation": "KnownAs",
+        "correct_feat": "the \"sexy death mystery\"",
+        "options": "1. the \"sexy death mystery\"\n2. a sport of jumping from fixed objects\n3. Gänsereiten in Germany",
+        "correct_num": 1,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is known as [MASK].\n\nOptions:\n1. the \"sexy death mystery\"\n2. a sport of jumping from fixed objects\n3. Gänsereiten in Germany"
+    },
+    {
+        "test_id": 46,
+        "relation": "KnownFor",
+        "correct_feat": "its mysterious drowning",
+        "options": "1. winning the \"Original Song of the Year\" award at the Victoires de la Musique\n2. its mysterious drowning\n3. the possibility of a high monopoly price well above the seller's marginal cost",
+        "correct_num": 2,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is known for [MASK].\n\nOptions:\n1. winning the \"Original Song of the Year\" award at the Victoires de la Musique\n2. its mysterious drowning\n3. the possibility of a high monopoly price well above the seller's marginal cost"
+    },
+    {
+        "test_id": 47,
+        "relation": "KnownFor",
+        "correct_feat": "allegations of child sexual abuse",
+        "options": "1. a fusion of rock music, soul music, and rhythm and blues\n2. drawing upon many concepts found in Marxism\n3. allegations of child sexual abuse",
+        "correct_num": 3,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is known for [MASK].\n\nOptions:\n1. a fusion of rock music, soul music, and rhythm and blues\n2. drawing upon many concepts found in Marxism\n3. allegations of child sexual abuse"
+    },
+    {
+        "test_id": 48,
+        "relation": "KnownFor",
+        "correct_feat": "the involvement of a prominent politician",
+        "options": "1. the involvement of a prominent politician\n2. its development by John Zerzan\n3. its military uses",
+        "correct_num": 1,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is known for [MASK].\n\nOptions:\n1. the involvement of a prominent politician\n2. its development by John Zerzan\n3. its military uses"
+    },
+    {
+        "test_id": 49,
+        "relation": "KnownFor",
+        "correct_feat": "remaining unsolved",
+        "options": "1. being a photo agency founded in 1935\n2. remaining unsolved\n3. the first English draughts computer program written by Christopher Strachey",
+        "correct_num": 2,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is known for [MASK].\n\nOptions:\n1. being a photo agency founded in 1935\n2. remaining unsolved\n3. the first English draughts computer program written by Christopher Strachey"
+    },
+    {
+        "test_id": 50,
+        "relation": "LocatedIn",
+        "correct_feat": "on the beach at Long Beach, New York",
+        "options": "1. on Calvert Street near the eastern end of the Duke Ellington Bridge\n2. in the Huntington Library\n3. on the beach at Long Beach, New York",
+        "correct_num": 3,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is located [MASK].\n\nOptions:\n1. on Calvert Street near the eastern end of the Duke Ellington Bridge\n2. in the Huntington Library\n3. on the beach at Long Beach, New York"
+    },
+    {
+        "test_id": 51,
+        "relation": "LocatedIn",
+        "correct_feat": "on the south shore of Long Island",
+        "options": "1. on the south shore of Long Island\n2. in New Orleans\n3. off the northeast coast of Australia",
+        "correct_num": 1,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is located [MASK].\n\nOptions:\n1. on the south shore of Long Island\n2. in New Orleans\n3. off the northeast coast of Australia"
+    },
+    {
+        "test_id": 52,
+        "relation": "OccurredAround",
+        "correct_feat": "June 6, 1931",
+        "options": "1. 2013\n2. June 6, 1931\n3. 1679",
+        "correct_num": 2,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> occurred around [MASK].\n\nOptions:\n1. 2013\n2. June 6, 1931\n3. 1679"
+    },
+    {
+        "test_id": 53,
+        "relation": "PartOf",
+        "correct_feat": "the victim's life story",
+        "options": "1. the Great Wall of China\n2. the Seleucid Empire\n3. the victim's life story",
+        "correct_num": 3,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is part of [MASK].\n\nOptions:\n1. the Great Wall of China\n2. the Seleucid Empire\n3. the victim's life story"
+    },
+    {
+        "test_id": 54,
+        "relation": "PartOf",
+        "correct_feat": "a true crime investigation",
+        "options": "1. a true crime investigation\n2. the Christian procession\n3. charreada",
+        "correct_num": 1,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is part of [MASK].\n\nOptions:\n1. a true crime investigation\n2. the Christian procession\n3. charreada"
+    },
+    {
+        "test_id": 55,
+        "relation": "PartOf",
+        "correct_feat": "tabloid history",
+        "options": "1. the counterculture of the 1960s\n2. tabloid history\n3. the rhetoric of New England patriot clergy",
+        "correct_num": 2,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is part of [MASK].\n\nOptions:\n1. the counterculture of the 1960s\n2. tabloid history\n3. the rhetoric of New England patriot clergy"
+    },
+    {
+        "test_id": 56,
+        "relation": "PublishedAs",
+        "correct_feat": "a \"sexy death mystery\"",
+        "options": "1. the single \"Marry song\"\n2. the Third Reich\n3. a \"sexy death mystery\"",
+        "correct_num": 3,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> was published as [MASK].\n\nOptions:\n1. the single \"Marry song\"\n2. the Third Reich\n3. a \"sexy death mystery\""
+    },
+    {
+        "test_id": 57,
+        "relation": "PublishedIn",
+        "correct_feat": "newspapers",
+        "options": "1. newspapers\n2. Opusculum Taisnieri\n3. Issue 60 of Strategy & Tactics",
+        "correct_num": 1,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> was published in [MASK].\n\nOptions:\n1. newspapers\n2. Opusculum Taisnieri\n3. Issue 60 of Strategy & Tactics"
+    },
+    {
+        "test_id": 58,
+        "relation": "PublishedIn",
+        "correct_feat": "Time magazine",
+        "options": "1. 1987\n2. Time magazine\n3. 1993",
+        "correct_num": 2,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> was published in [MASK].\n\nOptions:\n1. 1987\n2. Time magazine\n3. 1993"
+    },
+    {
+        "test_id": 59,
+        "relation": "UsedIn",
+        "correct_feat": "John O'Hara's novel BUtterfield 8",
+        "options": "1. the film \"Dragostea ce mișcă sori și stele\n2. the game of Hearts\n3. John O'Hara's novel BUtterfield 8",
+        "correct_num": 3,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is used in [MASK].\n\nOptions:\n1. the film \"Dragostea ce mișcă sori și stele\n2. the game of Hearts\n3. John O'Hara's novel BUtterfield 8"
+    },
+    {
+        "test_id": 60,
+        "relation": "UsedIn",
+        "correct_feat": "Jonathan Goodman's true crime book The Passing of Starr Faithfull",
+        "options": "1. Jonathan Goodman's true crime book The Passing of Starr Faithfull\n2. a campaign game\n3. the Danish single chart",
+        "correct_num": 1,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is used in [MASK].\n\nOptions:\n1. Jonathan Goodman's true crime book The Passing of Starr Faithfull\n2. a campaign game\n3. the Danish single chart"
+    },
+    {
+        "test_id": 61,
+        "relation": "WonBy",
+        "correct_feat": "Jonathan Goodman's true crime book The Passing of Starr Faithfull",
+        "options": "1. Bigflo and Oli, making them the youngest French rappers to receive a platinum award\n2. Jonathan Goodman's true crime book The Passing of Starr Faithfull\n3. the 2018 Berlin Music Video Awards",
+        "correct_num": 2,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> was won by [MASK].\n\nOptions:\n1. Bigflo and Oli, making them the youngest French rappers to receive a platinum award\n2. Jonathan Goodman's true crime book The Passing of Starr Faithfull\n3. the 2018 Berlin Music Video Awards"
+    },
+    {
+        "test_id": 62,
+        "relation": "WrittenBy",
+        "correct_feat": "Starr Faithfull in letters suggesting suicide",
+        "options": "1. Myke Gray\n2. Klein\n3. Starr Faithfull in letters suggesting suicide",
+        "correct_num": 3,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> was written by [MASK].\n\nOptions:\n1. Myke Gray\n2. Klein\n3. Starr Faithfull in letters suggesting suicide"
+    },
+    {
+        "test_id": 63,
+        "relation": "WrittenBy",
+        "correct_feat": "Starr Faithfull in her diary",
+        "options": "1. Starr Faithfull in her diary\n2. Queen\n3. Agnes Carlsson",
+        "correct_num": 1,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> was written by [MASK].\n\nOptions:\n1. Starr Faithfull in her diary\n2. Queen\n3. Agnes Carlsson"
+    },
+    {
+        "test_id": 64,
+        "relation": "WrittenBy",
+        "correct_feat": "John O'Hara in the novel BUtterfield 8",
+        "options": "1. John W. Fuseler\n2. John O'Hara in the novel BUtterfield 8\n3. Julien Jovis",
+        "correct_num": 2,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> was written by [MASK].\n\nOptions:\n1. John W. Fuseler\n2. John O'Hara in the novel BUtterfield 8\n3. Julien Jovis"
+    },
+    {
+        "test_id": 65,
+        "relation": "WrittenBy",
+        "correct_feat": "Jonathan Goodman in the true crime book The Passing of Starr Faithfull",
+        "options": "1. Jules Verne\n2. Oswald Spengler\n3. Jonathan Goodman in the true crime book The Passing of Starr Faithfull",
+        "correct_num": 3,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> was written by [MASK].\n\nOptions:\n1. Jules Verne\n2. Oswald Spengler\n3. Jonathan Goodman in the true crime book The Passing of Starr Faithfull"
+    },
+    {
+        "test_id": 66,
+        "relation": "WrittenIn",
+        "correct_feat": "letters shortly before her death",
+        "options": "1. letters shortly before her death\n2. Russia\n3. Dutch",
+        "correct_num": 1,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> was written in [MASK].\n\nOptions:\n1. letters shortly before her death\n2. Russia\n3. Dutch"
+    },
+    {
+        "test_id": 67,
+        "relation": "WrittenIn",
+        "correct_feat": "her diary",
+        "options": "1. 1984\n2. her diary\n3. 1792",
+        "correct_num": 2,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> was written in [MASK].\n\nOptions:\n1. 1984\n2. her diary\n3. 1792"
+    },
+    {
+        "test_id": 68,
+        "relation": "WrittenIn",
+        "correct_feat": "John O'Hara's 1935 novel BUtterfield 8",
+        "options": "1. 1862\n2. New York City\n3. John O'Hara's 1935 novel BUtterfield 8",
+        "correct_num": 3,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> was written in [MASK].\n\nOptions:\n1. 1862\n2. New York City\n3. John O'Hara's 1935 novel BUtterfield 8"
+    },
+    {
+        "test_id": 69,
+        "relation": "WrittenIn",
+        "correct_feat": "Jonathan Goodman's 1990 true crime book The Passing of Starr Faithfull",
+        "options": "1. Jonathan Goodman's 1990 true crime book The Passing of Starr Faithfull\n2. 1792\n3. 1987",
+        "correct_num": 1,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> was written in [MASK].\n\nOptions:\n1. Jonathan Goodman's 1990 true crime book The Passing of Starr Faithfull\n2. 1792\n3. 1987"
+    }
+]

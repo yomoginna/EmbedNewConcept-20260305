@@ -1,0 +1,362 @@
+[
+    {
+        "test_id": 0,
+        "relation": "About",
+        "correct_feat": "a non-contact competitive ball game played using one's hands or head to hit the ball against a wall",
+        "options": "1. a non-contact competitive ball game played using one's hands or head to hit the ball against a wall\n2. a nationalist phrase and concept of a racially defined national body united with a settlement area\n3. the Bancroft Treaties and their eventual abandonment",
+        "correct_num": 1,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is about [MASK].\n\nOptions:\n1. a non-contact competitive ball game played using one's hands or head to hit the ball against a wall\n2. a nationalist phrase and concept of a racially defined national body united with a settlement area\n3. the Bancroft Treaties and their eventual abandonment"
+    },
+    {
+        "test_id": 2,
+        "relation": "AssociatedWith",
+        "correct_feat": "school playgrounds during break-time",
+        "options": "1. Rob Turner\n2. the Sultanate of Rum\n3. school playgrounds during break-time",
+        "correct_num": 3,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is associated with [MASK].\n\nOptions:\n1. Rob Turner\n2. the Sultanate of Rum\n3. school playgrounds during break-time"
+    },
+    {
+        "test_id": 3,
+        "relation": "AssociatedWith",
+        "correct_feat": "wallball",
+        "options": "1. wallball\n2. the Abbasid caliphate\n3. Trevor Horn",
+        "correct_num": 1,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is associated with [MASK].\n\nOptions:\n1. wallball\n2. the Abbasid caliphate\n3. Trevor Horn"
+    },
+    {
+        "test_id": 4,
+        "relation": "AssociatedWith",
+        "correct_feat": "squash",
+        "options": "1. ORGA\n2. squash\n3. Peter D\u00fcring on drums",
+        "correct_num": 2,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is associated with [MASK].\n\nOptions:\n1. ORGA\n2. squash\n3. Peter D\u00fcring on drums"
+    },
+    {
+        "test_id": 5,
+        "relation": "BelongsTo",
+        "correct_feat": "non-contact competitive ball games",
+        "options": "1. the future formation of the European Union\n2. a political philosophy\n3. non-contact competitive ball games",
+        "correct_num": 3,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> belongs to [MASK].\n\nOptions:\n1. the future formation of the European Union\n2. a political philosophy\n3. non-contact competitive ball games"
+    },
+    {
+        "test_id": 8,
+        "relation": "ConsistsOf",
+        "correct_feat": "players hitting a ball against a wall",
+        "options": "1. six or more states of consciousness\n2. nationally determined contributions (NDCs)\n3. players hitting a ball against a wall",
+        "correct_num": 3,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> consists of [MASK].\n\nOptions:\n1. six or more states of consciousness\n2. nationally determined contributions (NDCs)\n3. players hitting a ball against a wall"
+    },
+    {
+        "test_id": 9,
+        "relation": "CreatedFor",
+        "correct_feat": "school playgrounds",
+        "options": "1. school playgrounds\n2. listeners who enjoy collaborations\n3. achieving mainstream recognition",
+        "correct_num": 1,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> was created for [MASK].\n\nOptions:\n1. school playgrounds\n2. listeners who enjoy collaborations\n3. achieving mainstream recognition"
+    },
+    {
+        "test_id": 14,
+        "relation": "HasA",
+        "correct_feat": "a tennis ball",
+        "options": "1. reception details\n2. a basis for analyses that characterise European politics, economics, and society as reflecting a shared identity\n3. a tennis ball",
+        "correct_num": 3,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> has [MASK].\n\nOptions:\n1. reception details\n2. a basis for analyses that characterise European politics, economics, and society as reflecting a shared identity\n3. a tennis ball"
+    },
+    {
+        "test_id": 18,
+        "relation": "HasA",
+        "correct_feat": "rules",
+        "options": "1. rules\n2. a large portion of Christ's hair on his left side with damage\n3. tuned mass dampers",
+        "correct_num": 1,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> has [MASK].\n\nOptions:\n1. rules\n2. a large portion of Christ's hair on his left side with damage\n3. tuned mass dampers"
+    },
+    {
+        "test_id": 20,
+        "relation": "HasFeatureOf",
+        "correct_feat": "the objective to get the succeeding player out",
+        "options": "1. the practice of torture widely documented as a distinctive trait of the Egyptian police\n2. five men, one of whom was a \"Bran\u00e1n\" or chief\n3. the objective to get the succeeding player out",
+        "correct_num": 3,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is characterized by [MASK].\n\nOptions:\n1. the practice of torture widely documented as a distinctive trait of the Egyptian police\n2. five men, one of whom was a \"Bran\u00e1n\" or chief\n3. the objective to get the succeeding player out"
+    },
+    {
+        "test_id": 21,
+        "relation": "HasFeatureOf",
+        "correct_feat": "the use of hands or head to hit the ball against a wall",
+        "options": "1. the use of hands or head to hit the ball against a wall\n2. a per curiam decision\n3. four maps in four colors",
+        "correct_num": 1,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is characterized by [MASK].\n\nOptions:\n1. the use of hands or head to hit the ball against a wall\n2. a per curiam decision\n3. four maps in four colors"
+    },
+    {
+        "test_id": 23,
+        "relation": "HasFeatureOf",
+        "correct_feat": "the objective of hitting the ball so it bounces on the ground before rebounding off the wall",
+        "options": "1. its perspectiveless style\n2. embittered rants about modern working life\n3. the objective of hitting the ball so it bounces on the ground before rebounding off the wall",
+        "correct_num": 3,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is characterized by [MASK].\n\nOptions:\n1. its perspectiveless style\n2. embittered rants about modern working life\n3. the objective of hitting the ball so it bounces on the ground before rebounding off the wall"
+    },
+    {
+        "test_id": 24,
+        "relation": "HasFeatureOf",
+        "correct_feat": "the use of the hand to 'pat' the ball at the wall or opponent",
+        "options": "1. the use of the hand to 'pat' the ball at the wall or opponent\n2. the Peace of Nicias\n3. the use of conspiracy theories",
+        "correct_num": 1,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is characterized by [MASK].\n\nOptions:\n1. the use of the hand to 'pat' the ball at the wall or opponent\n2. the Peace of Nicias\n3. the use of conspiracy theories"
+    },
+    {
+        "test_id": 30,
+        "relation": "HeldIn",
+        "correct_feat": "school playgrounds",
+        "options": "1. school playgrounds\n2. the Dionysios Loverdos Collection\n3. the United Kingdom",
+        "correct_num": 1,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> was held in [MASK].\n\nOptions:\n1. school playgrounds\n2. the Dionysios Loverdos Collection\n3. the United Kingdom"
+    },
+    {
+        "test_id": 33,
+        "relation": "IsA",
+        "correct_feat": "a non-contact competitive ball game",
+        "options": "1. a non-contact competitive ball game\n2. a conflict that led to the establishment of the Commonwealth of England\n3. an English rock band",
+        "correct_num": 1,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is [MASK].\n\nOptions:\n1. a non-contact competitive ball game\n2. a conflict that led to the establishment of the Commonwealth of England\n3. an English rock band"
+    },
+    {
+        "test_id": 35,
+        "relation": "IsA",
+        "correct_feat": "a game similar to wallball",
+        "options": "1. a series of games based on elements\n2. the first game in the series\n3. a game similar to wallball",
+        "correct_num": 3,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is [MASK].\n\nOptions:\n1. a series of games based on elements\n2. the first game in the series\n3. a game similar to wallball"
+    },
+    {
+        "test_id": 36,
+        "relation": "IsA",
+        "correct_feat": "a game similar to squash",
+        "options": "1. a game similar to squash\n2. an ideology which aims to promote political violence\n3. a Japanese film",
+        "correct_num": 1,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is [MASK].\n\nOptions:\n1. a game similar to squash\n2. an ideology which aims to promote political violence\n3. a Japanese film"
+    },
+    {
+        "test_id": 38,
+        "relation": "IsA",
+        "correct_feat": "a game played with multiple players",
+        "options": "1. a solved game\n2. a portrait artists make of themselves\n3. a game played with multiple players",
+        "correct_num": 3,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is [MASK].\n\nOptions:\n1. a solved game\n2. a portrait artists make of themselves\n3. a game played with multiple players"
+    },
+    {
+        "test_id": 39,
+        "relation": "IsA",
+        "correct_feat": "a game played with a hollow rubber ball",
+        "options": "1. a game played with a hollow rubber ball\n2. moderately suited for solitaire play\n3. a 12-inch record",
+        "correct_num": 1,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is [MASK].\n\nOptions:\n1. a game played with a hollow rubber ball\n2. moderately suited for solitaire play\n3. a 12-inch record"
+    },
+    {
+        "test_id": 40,
+        "relation": "IsA",
+        "correct_feat": "a game played with a point scoring system",
+        "options": "1. a pictural representation of the final judgment\n2. a game played with a point scoring system\n3. a revisionist political ideology in Turkey",
+        "correct_num": 2,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is [MASK].\n\nOptions:\n1. a pictural representation of the final judgment\n2. a game played with a point scoring system\n3. a revisionist political ideology in Turkey"
+    },
+    {
+        "test_id": 41,
+        "relation": "KnownAs",
+        "correct_feat": "'footies'",
+        "options": "1. the Iviron Theotokos\n2. \"The Chorus\"\n3. 'footies'",
+        "correct_num": 3,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is known as [MASK].\n\nOptions:\n1. the Iviron Theotokos\n2. \"The Chorus\"\n3. 'footies'"
+    },
+    {
+        "test_id": 42,
+        "relation": "KnownAs",
+        "correct_feat": "'Devils' touch'",
+        "options": "1. 'Devils' touch'\n2. \u057f\u0561\u0574\u0561\n3. Viking chess",
+        "correct_num": 1,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is known as [MASK].\n\nOptions:\n1. 'Devils' touch'\n2. \u057f\u0561\u0574\u0561\n3. Viking chess"
+    },
+    {
+        "test_id": 45,
+        "relation": "KnownAs",
+        "correct_feat": "'Single Dingles'",
+        "options": "1. 'Single Dingles'\n2. \"China's Mona Lisa\n3. \"Europeanism\" by McCormick (2010)",
+        "correct_num": 1,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is known as [MASK].\n\nOptions:\n1. 'Single Dingles'\n2. \"China's Mona Lisa\n3. \"Europeanism\" by McCormick (2010)"
+    },
+    {
+        "test_id": 46,
+        "relation": "KnownFor",
+        "correct_feat": "its popularity in school playgrounds",
+        "options": "1. the hundreds of replicas and copies made by later artists\n2. its popularity in school playgrounds\n3. constructing the European Union",
+        "correct_num": 2,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is known for [MASK].\n\nOptions:\n1. the hundreds of replicas and copies made by later artists\n2. its popularity in school playgrounds\n3. constructing the European Union"
+    },
+    {
+        "test_id": 47,
+        "relation": "KnownFor",
+        "correct_feat": "its variations",
+        "options": "1. a pro-Catholic theocracy movement in Mexico\n2. Czech nationalism\n3. its variations",
+        "correct_num": 3,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is known for [MASK].\n\nOptions:\n1. a pro-Catholic theocracy movement in Mexico\n2. Czech nationalism\n3. its variations"
+    },
+    {
+        "test_id": 52,
+        "relation": "PartOf",
+        "correct_feat": "school playgrounds",
+        "options": "1. the music industry\n2. school playgrounds\n3. cycles of the Life of the Virgin",
+        "correct_num": 2,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is part of [MASK].\n\nOptions:\n1. the music industry\n2. school playgrounds\n3. cycles of the Life of the Virgin"
+    },
+    {
+        "test_id": 53,
+        "relation": "PartOf",
+        "correct_feat": "London public schools",
+        "options": "1. the constitution of the United States\n2. the events leading to his crucifixion and resurrection\n3. London public schools",
+        "correct_num": 3,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is part of [MASK].\n\nOptions:\n1. the constitution of the United States\n2. the events leading to his crucifixion and resurrection\n3. London public schools"
+    },
+    {
+        "test_id": 55,
+        "relation": "PerformedBy",
+        "correct_feat": "players",
+        "options": "1. Luftwaffe Field Divisions\n2. players\n3. Jesus Christ",
+        "correct_num": 2,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> was performed by [MASK].\n\nOptions:\n1. Luftwaffe Field Divisions\n2. players\n3. Jesus Christ"
+    },
+    {
+        "test_id": 56,
+        "relation": "UsedAs",
+        "correct_feat": "a competitive ball game",
+        "options": "1. a term to describe emigration advocates\n2. an example of government-granted monopolies\n3. a competitive ball game",
+        "correct_num": 3,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is used as [MASK].\n\nOptions:\n1. a term to describe emigration advocates\n2. an example of government-granted monopolies\n3. a competitive ball game"
+    },
+    {
+        "test_id": 57,
+        "relation": "UsedAs",
+        "correct_feat": "a variation called 'footies'",
+        "options": "1. a variation called 'footies'\n2. the official language of the government in Persia\n3. a support for bridges",
+        "correct_num": 1,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is used as [MASK].\n\nOptions:\n1. a variation called 'footies'\n2. the official language of the government in Persia\n3. a support for bridges"
+    },
+    {
+        "test_id": 58,
+        "relation": "UsedAs",
+        "correct_feat": "a variation called 'Devils' touch'",
+        "options": "1. a name for the family\n2. a variation called 'Devils' touch'\n3. an element of the Aurelian Walls",
+        "correct_num": 2,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is used as [MASK].\n\nOptions:\n1. a name for the family\n2. a variation called 'Devils' touch'\n3. an element of the Aurelian Walls"
+    },
+    {
+        "test_id": 60,
+        "relation": "UsedAs",
+        "correct_feat": "a variation called 'Kingpin'",
+        "options": "1. a variation called 'Kingpin'\n2. a radio mast\n3. a descriptor for individuals fighting for payment",
+        "correct_num": 1,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is used as [MASK].\n\nOptions:\n1. a variation called 'Kingpin'\n2. a radio mast\n3. a descriptor for individuals fighting for payment"
+    },
+    {
+        "test_id": 61,
+        "relation": "UsedAs",
+        "correct_feat": "a variation called 'Single Dingles'",
+        "options": "1. a form of checkers\n2. a variation called 'Single Dingles'\n3. a subject of national legislation",
+        "correct_num": 2,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is used as [MASK].\n\nOptions:\n1. a form of checkers\n2. a variation called 'Single Dingles'\n3. a subject of national legislation"
+    },
+    {
+        "test_id": 63,
+        "relation": "UsedFor",
+        "correct_feat": "playing in school playgrounds during break-time",
+        "options": "1. playing in school playgrounds during break-time\n2. practicing a religion\n3. retributive purposes",
+        "correct_num": 1,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is used for [MASK].\n\nOptions:\n1. playing in school playgrounds during break-time\n2. practicing a religion\n3. retributive purposes"
+    },
+    {
+        "test_id": 65,
+        "relation": "UsedFor",
+        "correct_feat": "playing with a tennis ball",
+        "options": "1. a digital avatar concert tour\n2. replacing private ownership with collective ownership of the means of production\n3. playing with a tennis ball",
+        "correct_num": 3,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is used for [MASK].\n\nOptions:\n1. a digital avatar concert tour\n2. replacing private ownership with collective ownership of the means of production\n3. playing with a tennis ball"
+    },
+    {
+        "test_id": 68,
+        "relation": "UsedFor",
+        "correct_feat": "hitting the ball so it bounces on the ground before rebounding off the wall",
+        "options": "1. referring to cousins who held the crown of Jerusalem\n2. advocating coexistence of Islam and democracy\n3. hitting the ball so it bounces on the ground before rebounding off the wall",
+        "correct_num": 3,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is used for [MASK].\n\nOptions:\n1. referring to cousins who held the crown of Jerusalem\n2. advocating coexistence of Islam and democracy\n3. hitting the ball so it bounces on the ground before rebounding off the wall"
+    },
+    {
+        "test_id": 70,
+        "relation": "UsedFor",
+        "correct_feat": "variations including the use of the foot",
+        "options": "1. a reality series\n2. variations including the use of the foot\n3. withholding income",
+        "correct_num": 2,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is used for [MASK].\n\nOptions:\n1. a reality series\n2. variations including the use of the foot\n3. withholding income"
+    },
+    {
+        "test_id": 71,
+        "relation": "UsedFor",
+        "correct_feat": "playing with multiple players at once",
+        "options": "1. leveling up weapons in a mod\n2. creating the intellectual climate needed to fight a civil war\n3. playing with multiple players at once",
+        "correct_num": 3,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is used for [MASK].\n\nOptions:\n1. leveling up weapons in a mod\n2. creating the intellectual climate needed to fight a civil war\n3. playing with multiple players at once"
+    },
+    {
+        "test_id": 72,
+        "relation": "UsedIn",
+        "correct_feat": "school playgrounds",
+        "options": "1. school playgrounds\n2. Anglo-Saxon England\n3. many navies",
+        "correct_num": 1,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is used in [MASK].\n\nOptions:\n1. school playgrounds\n2. Anglo-Saxon England\n3. many navies"
+    },
+    {
+        "test_id": 73,
+        "relation": "UsedIn",
+        "correct_feat": "London public schools",
+        "options": "1. a book\n2. London public schools\n3. the Hunt Phase",
+        "correct_num": 2,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is used in [MASK].\n\nOptions:\n1. a book\n2. London public schools\n3. the Hunt Phase"
+    },
+    {
+        "test_id": 75,
+        "relation": "UsedIn",
+        "correct_feat": "variations like 'Aces'",
+        "options": "1. variations like 'Aces'\n2. public law and policy\n3. Nuns on the Run",
+        "correct_num": 1,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is used in [MASK].\n\nOptions:\n1. variations like 'Aces'\n2. public law and policy\n3. Nuns on the Run"
+    },
+    {
+        "test_id": 76,
+        "relation": "UsedIn",
+        "correct_feat": "variations like 'Kingpin'",
+        "options": "1. the Civic Democratic Party (ODS)\n2. variations like 'Kingpin'\n3. Syria",
+        "correct_num": 2,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is used in [MASK].\n\nOptions:\n1. the Civic Democratic Party (ODS)\n2. variations like 'Kingpin'\n3. Syria"
+    },
+    {
+        "test_id": 78,
+        "relation": "UsedTo",
+        "correct_feat": "get the succeeding player out",
+        "options": "1. get the succeeding player out\n2. move men home\n3. halt harmful conduct",
+        "correct_num": 1,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is used to [MASK].\n\nOptions:\n1. get the succeeding player out\n2. move men home\n3. halt harmful conduct"
+    },
+    {
+        "test_id": 79,
+        "relation": "UsedTo",
+        "correct_feat": "hit the ball against a wall",
+        "options": "1. illustrate the United Nation's commitment to future peace and individual freedom\n2. hit the ball against a wall\n3. move another man as a bonus point",
+        "correct_num": 2,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is used to [MASK].\n\nOptions:\n1. illustrate the United Nation's commitment to future peace and individual freedom\n2. hit the ball against a wall\n3. move another man as a bonus point"
+    },
+    {
+        "test_id": 81,
+        "relation": "UsedTo",
+        "correct_feat": "play variations with the foot",
+        "options": "1. play variations with the foot\n2. perform small roles\n3. support families",
+        "correct_num": 1,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is used to [MASK].\n\nOptions:\n1. play variations with the foot\n2. perform small roles\n3. support families"
+    }
+]

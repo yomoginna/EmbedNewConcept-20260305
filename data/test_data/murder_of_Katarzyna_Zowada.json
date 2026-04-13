@@ -1,0 +1,354 @@
+[
+    {
+        "test_id": 0,
+        "relation": "About",
+        "correct_feat": "the torture and killing of a student",
+        "options": "1. the torture and killing of a student\n2. a light, non-motorised, fixed-wing heavier-than-air aircraft called a hang glider\n3. an English and Welsh dynasty that held the throne of England from 1485 to 1603",
+        "correct_num": 1,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is about [MASK].\n\nOptions:\n1. the torture and killing of a student\n2. a light, non-motorised, fixed-wing heavier-than-air aircraft called a hang glider\n3. an English and Welsh dynasty that held the throne of England from 1485 to 1603"
+    },
+    {
+        "test_id": 1,
+        "relation": "Affects",
+        "correct_feat": "the investigation into a murder case",
+        "options": "1. the anime series Hand Shakers\n2. the investigation into a murder case\n3. the development of sports programs for youth and women",
+        "correct_num": 2,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> affects [MASK].\n\nOptions:\n1. the anime series Hand Shakers\n2. the investigation into a murder case\n3. the development of sports programs for youth and women"
+    },
+    {
+        "test_id": 2,
+        "relation": "AssociatedWith",
+        "correct_feat": "Jagiellonian University",
+        "options": "1. Winning Moves Games USA\n2. cycles of the Life of the Virgin\n3. Jagiellonian University",
+        "correct_num": 3,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is associated with [MASK].\n\nOptions:\n1. Winning Moves Games USA\n2. cycles of the Life of the Virgin\n3. Jagiellonian University"
+    },
+    {
+        "test_id": 3,
+        "relation": "AssociatedWith",
+        "correct_feat": "the Vistula river",
+        "options": "1. the Vistula river\n2. the Feast of the Pheasant\n3. Leopold von Buch",
+        "correct_num": 1,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is associated with [MASK].\n\nOptions:\n1. the Vistula river\n2. the Feast of the Pheasant\n3. Leopold von Buch"
+    },
+    {
+        "test_id": 4,
+        "relation": "AssociatedWith",
+        "correct_feat": "Robert Janczewski",
+        "options": "1. the Tudors of Penmynydd\n2. Robert Janczewski\n3. the Pahlavi script",
+        "correct_num": 2,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is associated with [MASK].\n\nOptions:\n1. the Tudors of Penmynydd\n2. Robert Janczewski\n3. the Pahlavi script"
+    },
+    {
+        "test_id": 5,
+        "relation": "BelongsTo",
+        "correct_feat": "the category of cold cases",
+        "options": "1. Arab nationalist ideology\n2. the Northern Virginia region\n3. the category of cold cases",
+        "correct_num": 3,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> belongs to [MASK].\n\nOptions:\n1. Arab nationalist ideology\n2. the Northern Virginia region\n3. the category of cold cases"
+    },
+    {
+        "test_id": 6,
+        "relation": "CausedBy",
+        "correct_feat": "the murder of a student",
+        "options": "1. the murder of a student\n2. the Russian invasion of Ukraine\n3. the dissolution of their first band, Graduate",
+        "correct_num": 1,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is caused by [MASK].\n\nOptions:\n1. the murder of a student\n2. the Russian invasion of Ukraine\n3. the dissolution of their first band, Graduate"
+    },
+    {
+        "test_id": 7,
+        "relation": "ConsistsOf",
+        "correct_feat": "taped footage, interviews, and filmed re-enactments",
+        "options": "1. seven individual paintings\n2. taped footage, interviews, and filmed re-enactments\n3. depictions of workers and activists",
+        "correct_num": 2,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> consists of [MASK].\n\nOptions:\n1. seven individual paintings\n2. taped footage, interviews, and filmed re-enactments\n3. depictions of workers and activists"
+    },
+    {
+        "test_id": 8,
+        "relation": "CreatedBy",
+        "correct_feat": "HBO Max",
+        "options": "1. historical accounts and depictions\n2. Gordon Brown\n3. HBO Max",
+        "correct_num": 3,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> was created by [MASK].\n\nOptions:\n1. historical accounts and depictions\n2. Gordon Brown\n3. HBO Max"
+    },
+    {
+        "test_id": 9,
+        "relation": "CreatedFor",
+        "correct_feat": "exploring a murder case",
+        "options": "1. exploring a murder case\n2. the Gettysburg Championship\n3. David Guetta",
+        "correct_num": 1,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> was created for [MASK].\n\nOptions:\n1. exploring a murder case\n2. the Gettysburg Championship\n3. David Guetta"
+    },
+    {
+        "test_id": 10,
+        "relation": "CreatedIn",
+        "correct_feat": "February 2026",
+        "options": "1. Brazil\n2. February 2026\n3. Anderson's cottage",
+        "correct_num": 2,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> was created in [MASK].\n\nOptions:\n1. Brazil\n2. February 2026\n3. Anderson's cottage"
+    },
+    {
+        "test_id": 11,
+        "relation": "CreatedTo",
+        "correct_feat": "retrace the events of a murder",
+        "options": "1. get the succeeding player out\n2. be played at tennis grand slams\n3. retrace the events of a murder",
+        "correct_num": 3,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> was created to [MASK].\n\nOptions:\n1. get the succeeding player out\n2. be played at tennis grand slams\n3. retrace the events of a murder"
+    },
+    {
+        "test_id": 12,
+        "relation": "DiscoveredAt",
+        "correct_feat": "the Dąbie barrage on the Vistula river",
+        "options": "1. the Dąbie barrage on the Vistula river\n2. the Jackanarai and Eluthu Paarai archaeological sites\n3. the gates of the monastery",
+        "correct_num": 1,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> was discovered at [MASK].\n\nOptions:\n1. the Dąbie barrage on the Vistula river\n2. the Jackanarai and Eluthu Paarai archaeological sites\n3. the gates of the monastery"
+    },
+    {
+        "test_id": 13,
+        "relation": "DiscoveredBy",
+        "correct_feat": "the crew of the tugboat Elk",
+        "options": "1. Ivan Shapovalov and Aleksandr Voytinskiy\n2. the crew of the tugboat Elk\n3. Prince Vasily of Kostroma",
+        "correct_num": 2,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> was discovered by [MASK].\n\nOptions:\n1. Ivan Shapovalov and Aleksandr Voytinskiy\n2. the crew of the tugboat Elk\n3. Prince Vasily of Kostroma"
+    },
+    {
+        "test_id": 14,
+        "relation": "DiscoveredIn",
+        "correct_feat": "late 1998 or early 1999",
+        "options": "1. the Nilgiris district\n2. the Atlantic Ocean\n3. late 1998 or early 1999",
+        "correct_num": 3,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> was discovered in [MASK].\n\nOptions:\n1. the Nilgiris district\n2. the Atlantic Ocean\n3. late 1998 or early 1999"
+    },
+    {
+        "test_id": 15,
+        "relation": "HasA",
+        "correct_feat": "a pilot episode set in January 1999",
+        "options": "1. a pilot episode set in January 1999\n2. four UK number-ones\n3. a split level view showing action above and below the surface of the water",
+        "correct_num": 1,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> has [MASK].\n\nOptions:\n1. a pilot episode set in January 1999\n2. four UK number-ones\n3. a split level view showing action above and below the surface of the water"
+    },
+    {
+        "test_id": 16,
+        "relation": "HasA",
+        "correct_feat": "additional episodes scheduled for future release",
+        "options": "1. a bull's nose\n2. additional episodes scheduled for future release\n3. a VHS video tape",
+        "correct_num": 2,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> has [MASK].\n\nOptions:\n1. a bull's nose\n2. additional episodes scheduled for future release\n3. a VHS video tape"
+    },
+    {
+        "test_id": 17,
+        "relation": "HasFeatureOf",
+        "correct_feat": "the dismemberment and skinning of a corpse",
+        "options": "1. being largely replaced by high-strength bolts in structural steel construction\n2. satellite searches of the ice to the north of the oilfield\n3. the dismemberment and skinning of a corpse",
+        "correct_num": 3,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is characterized by [MASK].\n\nOptions:\n1. being largely replaced by high-strength bolts in structural steel construction\n2. satellite searches of the ice to the north of the oilfield\n3. the dismemberment and skinning of a corpse"
+    },
+    {
+        "test_id": 18,
+        "relation": "HasFeatureOf",
+        "correct_feat": "the discovery of human skin on a boat's propeller",
+        "options": "1. the discovery of human skin on a boat's propeller\n2. the letters ΜΡ ΘΥ on the upper left and right of the head of the Virgin Mary\n3. being an open-air gallery",
+        "correct_num": 1,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is characterized by [MASK].\n\nOptions:\n1. the discovery of human skin on a boat's propeller\n2. the letters ΜΡ ΘΥ on the upper left and right of the head of the Virgin Mary\n3. being an open-air gallery"
+    },
+    {
+        "test_id": 19,
+        "relation": "HasFeatureOf",
+        "correct_feat": "the recovery of a right leg from a river",
+        "options": "1. opportunity actions\n2. the recovery of a right leg from a river\n3. ruling in Pomerania",
+        "correct_num": 2,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is characterized by [MASK].\n\nOptions:\n1. opportunity actions\n2. the recovery of a right leg from a river\n3. ruling in Pomerania"
+    },
+    {
+        "test_id": 20,
+        "relation": "HasFeatureOf",
+        "correct_feat": "the perpetrator having knowledge of dissection and preservation of skin",
+        "options": "1. its prominent rulers ascending the imperial throne\n2. nausea\n3. the perpetrator having knowledge of dissection and preservation of skin",
+        "correct_num": 3,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is characterized by [MASK].\n\nOptions:\n1. its prominent rulers ascending the imperial throne\n2. nausea\n3. the perpetrator having knowledge of dissection and preservation of skin"
+    },
+    {
+        "test_id": 21,
+        "relation": "HasFeatureOf",
+        "correct_feat": "the perpetrator having training in martial arts",
+        "options": "1. the perpetrator having training in martial arts\n2. the adoption of the French spelling Stuart\n3. the transition from edged weapons to firearms in the 16th and 17th centuries",
+        "correct_num": 1,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is characterized by [MASK].\n\nOptions:\n1. the perpetrator having training in martial arts\n2. the adoption of the French spelling Stuart\n3. the transition from edged weapons to firearms in the 16th and 17th centuries"
+    },
+    {
+        "test_id": 22,
+        "relation": "HasFeatureOf",
+        "correct_feat": "the perpetrator having a history of harassing women",
+        "options": "1. no priority given to capturing with a king rather than a man\n2. the perpetrator having a history of harassing women\n3. realistic expectations about technological progress",
+        "correct_num": 2,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is characterized by [MASK].\n\nOptions:\n1. no priority given to capturing with a king rather than a man\n2. the perpetrator having a history of harassing women\n3. realistic expectations about technological progress"
+    },
+    {
+        "test_id": 23,
+        "relation": "HasFeatureOf",
+        "correct_feat": "an incriminating letter from a friend",
+        "options": "1. the typical position of Christ's body changing from being flat on the ground or slab, usually seen in profile across the centre of the work, to the upper torso being raised by Mary or others, and finally being held in a near-vertical position, seen frontally, or across Mary's lap\n2. embittered rants about modern working life\n3. an incriminating letter from a friend",
+        "correct_num": 3,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is characterized by [MASK].\n\nOptions:\n1. the typical position of Christ's body changing from being flat on the ground or slab, usually seen in profile across the centre of the work, to the upper torso being raised by Mary or others, and finally being held in a near-vertical position, seen frontally, or across Mary's lap\n2. embittered rants about modern working life\n3. an incriminating letter from a friend"
+    },
+    {
+        "test_id": 24,
+        "relation": "HasFeatureOf",
+        "correct_feat": "blood found during a search",
+        "options": "1. blood found during a search\n2. low friction\n3. a map board almost 3 meters long",
+        "correct_num": 1,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is characterized by [MASK].\n\nOptions:\n1. blood found during a search\n2. low friction\n3. a map board almost 3 meters long"
+    },
+    {
+        "test_id": 25,
+        "relation": "HasFeatureOf",
+        "correct_feat": "a charge of aggravated murder with particular cruelty",
+        "options": "1. support for the monarchy\n2. a charge of aggravated murder with particular cruelty\n3. its depiction of women in diverse and empowered roles",
+        "correct_num": 2,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is characterized by [MASK].\n\nOptions:\n1. support for the monarchy\n2. a charge of aggravated murder with particular cruelty\n3. its depiction of women in diverse and empowered roles"
+    },
+    {
+        "test_id": 26,
+        "relation": "HasFeatureOf",
+        "correct_feat": "a finding of innocence by the principle of in dubio pro reo",
+        "options": "1. the 3×3×3 version being easily won by the second player if the first player is prevented from taking the center cell on his first step\n2. being popular, influential, and enduring\n3. a finding of innocence by the principle of in dubio pro reo",
+        "correct_num": 3,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is characterized by [MASK].\n\nOptions:\n1. the 3×3×3 version being easily won by the second player if the first player is prevented from taking the center cell on his first step\n2. being popular, influential, and enduring\n3. a finding of innocence by the principle of in dubio pro reo"
+    },
+    {
+        "test_id": 27,
+        "relation": "HeldIn",
+        "correct_feat": "Kraków",
+        "options": "1. Kraków\n2. Macau\n3. Bağcılar",
+        "correct_num": 1,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> was held in [MASK].\n\nOptions:\n1. Kraków\n2. Macau\n3. Bağcılar"
+    },
+    {
+        "test_id": 28,
+        "relation": "IsA",
+        "correct_feat": "a murder case",
+        "options": "1. a recreation\n2. a murder case\n3. a remotely operated vehicle",
+        "correct_num": 2,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is [MASK].\n\nOptions:\n1. a recreation\n2. a murder case\n3. a remotely operated vehicle"
+    },
+    {
+        "test_id": 29,
+        "relation": "IsA",
+        "correct_feat": "a cold case",
+        "options": "1. a team sport\n2. a symbol for the people themselves\n3. a cold case",
+        "correct_num": 3,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is [MASK].\n\nOptions:\n1. a team sport\n2. a symbol for the people themselves\n3. a cold case"
+    },
+    {
+        "test_id": 30,
+        "relation": "IsA",
+        "correct_feat": "a docuseries",
+        "options": "1. a docuseries\n2. a brand of cider\n3. a YouTube channel",
+        "correct_num": 1,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is [MASK].\n\nOptions:\n1. a docuseries\n2. a brand of cider\n3. a YouTube channel"
+    },
+    {
+        "test_id": 31,
+        "relation": "KnownAs",
+        "correct_feat": "one of Poland's most notorious cold cases",
+        "options": "1. \"the European idea\" in France\n2. one of Poland's most notorious cold cases\n3. Hypapante",
+        "correct_num": 2,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is known as [MASK].\n\nOptions:\n1. \"the European idea\" in France\n2. one of Poland's most notorious cold cases\n3. Hypapante"
+    },
+    {
+        "test_id": 32,
+        "relation": "LocatedIn",
+        "correct_feat": "in Kraków, Poland",
+        "options": "1. in the Prof. César Leyton Caravagno Pharmacy Museum\n2. in present-day Tunisia\n3. in Kraków, Poland",
+        "correct_num": 3,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is located [MASK].\n\nOptions:\n1. in the Prof. César Leyton Caravagno Pharmacy Museum\n2. in present-day Tunisia\n3. in Kraków, Poland"
+    },
+    {
+        "test_id": 33,
+        "relation": "OccurredAround",
+        "correct_feat": "late 1998 or early 1999",
+        "options": "1. late 1998 or early 1999\n2. 1530\n3. 1190",
+        "correct_num": 1,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> occurred around [MASK].\n\nOptions:\n1. late 1998 or early 1999\n2. 1530\n3. 1190"
+    },
+    {
+        "test_id": 34,
+        "relation": "PartOf",
+        "correct_feat": "a docuseries",
+        "options": "1. the Mission San Francisco de Asís\n2. a docuseries\n3. the Passion of Jesus",
+        "correct_num": 2,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is part of [MASK].\n\nOptions:\n1. the Mission San Francisco de Asís\n2. a docuseries\n3. the Passion of Jesus"
+    },
+    {
+        "test_id": 35,
+        "relation": "PerformedBy",
+        "correct_feat": "the perpetrator using a sharp instrument",
+        "options": "1. Andreas Dilschneider\n2. purebred dogs with ILP numbers\n3. the perpetrator using a sharp instrument",
+        "correct_num": 3,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> was performed by [MASK].\n\nOptions:\n1. Andreas Dilschneider\n2. purebred dogs with ILP numbers\n3. the perpetrator using a sharp instrument"
+    },
+    {
+        "test_id": 36,
+        "relation": "ProducedBy",
+        "correct_feat": "HBO Max",
+        "options": "1. HBO Max\n2. Nicky Romero\n3. Avril Lavigne",
+        "correct_num": 1,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> was produced by [MASK].\n\nOptions:\n1. HBO Max\n2. Nicky Romero\n3. Avril Lavigne"
+    },
+    {
+        "test_id": 37,
+        "relation": "PublishedAs",
+        "correct_feat": "a docuseries",
+        "options": "1. a CD maxi single in December 2000\n2. a docuseries\n3. an album titled The Main Ingredient",
+        "correct_num": 2,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> was published as [MASK].\n\nOptions:\n1. a CD maxi single in December 2000\n2. a docuseries\n3. an album titled The Main Ingredient"
+    },
+    {
+        "test_id": 38,
+        "relation": "PublishedBy",
+        "correct_feat": "HBO Max",
+        "options": "1. Decision Games\n2. Epic Records\n3. HBO Max",
+        "correct_num": 3,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> was published by [MASK].\n\nOptions:\n1. Decision Games\n2. Epic Records\n3. HBO Max"
+    },
+    {
+        "test_id": 39,
+        "relation": "PublishedIn",
+        "correct_feat": "February 2026",
+        "options": "1. February 2026\n2. the West End\n3. 2008",
+        "correct_num": 1,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> was published in [MASK].\n\nOptions:\n1. February 2026\n2. the West End\n3. 2008"
+    },
+    {
+        "test_id": 40,
+        "relation": "UsedAs",
+        "correct_feat": "an example of a notorious cold case",
+        "options": "1. a basis for political viewpoints\n2. an example of a notorious cold case\n3. a communications tower",
+        "correct_num": 2,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is used as [MASK].\n\nOptions:\n1. a basis for political viewpoints\n2. an example of a notorious cold case\n3. a communications tower"
+    },
+    {
+        "test_id": 41,
+        "relation": "UsedFor",
+        "correct_feat": "exploring a murder case",
+        "options": "1. establishing an empire\n2. repairing spacecraft\n3. exploring a murder case",
+        "correct_num": 3,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is used for [MASK].\n\nOptions:\n1. establishing an empire\n2. repairing spacecraft\n3. exploring a murder case"
+    },
+    {
+        "test_id": 42,
+        "relation": "UsedIn",
+        "correct_feat": "a docuseries",
+        "options": "1. a docuseries\n2. Oregon\n3. Jenisch Has, Hamburg",
+        "correct_num": 1,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is used in [MASK].\n\nOptions:\n1. a docuseries\n2. Oregon\n3. Jenisch Has, Hamburg"
+    },
+    {
+        "test_id": 43,
+        "relation": "UsedTo",
+        "correct_feat": "retrace the events through taped footage, interviews, and filmed re-enactments",
+        "options": "1. depict a coherent continuity of history and descendancy\n2. retrace the events through taped footage, interviews, and filmed re-enactments\n3. propose a confederal model",
+        "correct_num": 2,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is used to [MASK].\n\nOptions:\n1. depict a coherent continuity of history and descendancy\n2. retrace the events through taped footage, interviews, and filmed re-enactments\n3. propose a confederal model"
+    }
+]

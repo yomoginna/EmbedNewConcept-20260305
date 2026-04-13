@@ -28,11 +28,7 @@ def fetch_wikipedia_page(title: str, lang: str = "en") -> dict:
     )
     page = wiki.page(title)
 
-    try:
-        if not page.exists():
-            return {"exists": False, "title": title, "lang": lang}
-    except Exception as e:
-        print(f"Error occurred while fetching Wikipedia page: {e}")
+    if not page.exists():
         return {"exists": False, "title": title, "lang": lang}
 
     return {

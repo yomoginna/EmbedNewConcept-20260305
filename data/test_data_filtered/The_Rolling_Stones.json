@@ -1,0 +1,850 @@
+[
+    {
+        "test_id": 0,
+        "relation": "About",
+        "correct_feat": "the rock era",
+        "options": "1. the rock era\n2. a rodeo sport involving a rider on a bucking bull\n3. life and time on Horn Island",
+        "correct_num": 1,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is about [MASK].\n\nOptions:\n1. the rock era\n2. a rodeo sport involving a rider on a bucking bull\n3. life and time on Horn Island"
+    },
+    {
+        "test_id": 1,
+        "relation": "Affects",
+        "correct_feat": "the rock era",
+        "options": "1. dual citizenship\n2. the rock era\n3. the way the game is played",
+        "correct_num": 2,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> affects [MASK].\n\nOptions:\n1. dual citizenship\n2. the rock era\n3. the way the game is played"
+    },
+    {
+        "test_id": 2,
+        "relation": "AssociatedWith",
+        "correct_feat": "the British Invasion",
+        "options": "1. Richard Wagner's interpretation of Beethoven's Ninth symphony\n2. drop tubes\n3. the British Invasion",
+        "correct_num": 3,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is associated with [MASK].\n\nOptions:\n1. Richard Wagner's interpretation of Beethoven's Ninth symphony\n2. drop tubes\n3. the British Invasion"
+    },
+    {
+        "test_id": 3,
+        "relation": "AssociatedWith",
+        "correct_feat": "the youthful counterculture of the 1960s",
+        "options": "1. the youthful counterculture of the 1960s\n2. skyscrapers\n3. Mozart's Don Giovanni",
+        "correct_num": 1,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is associated with [MASK].\n\nOptions:\n1. the youthful counterculture of the 1960s\n2. skyscrapers\n3. Mozart's Don Giovanni"
+    },
+    {
+        "test_id": 4,
+        "relation": "BelongsTo",
+        "correct_feat": "the rock era",
+        "options": "1. the history of Western art\n2. the rock era\n3. conservatism",
+        "correct_num": 2,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> belongs to [MASK].\n\nOptions:\n1. the history of Western art\n2. the rock era\n3. conservatism"
+    },
+    {
+        "test_id": 5,
+        "relation": "ComposedBy",
+        "correct_feat": "Mick Jagger and Keith Richards",
+        "options": "1. a coalition of the Lamtuna, Gudala, and Massufa\n2. Iced Earth\n3. Mick Jagger and Keith Richards",
+        "correct_num": 3,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> was composed by [MASK].\n\nOptions:\n1. a coalition of the Lamtuna, Gudala, and Massufa\n2. Iced Earth\n3. Mick Jagger and Keith Richards"
+    },
+    {
+        "test_id": 6,
+        "relation": "ConsistsOf",
+        "correct_feat": "vocalist Mick Jagger, guitarist Keith Richards, multi-instrumentalist Brian Jones, bassist Bill Wyman, and drummer Charlie Watts",
+        "options": "1. vocalist Mick Jagger, guitarist Keith Richards, multi-instrumentalist Brian Jones, bassist Bill Wyman, and drummer Charlie Watts\n2. a deformed end called the shop head or buck-tail after installation\n3. mass hysteria",
+        "correct_num": 1,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> consists of [MASK].\n\nOptions:\n1. vocalist Mick Jagger, guitarist Keith Richards, multi-instrumentalist Brian Jones, bassist Bill Wyman, and drummer Charlie Watts\n2. a deformed end called the shop head or buck-tail after installation\n3. mass hysteria"
+    },
+    {
+        "test_id": 7,
+        "relation": "CreatedAround",
+        "correct_feat": "1962",
+        "options": "1. 1615\n2. 1962\n3. 1647",
+        "correct_num": 2,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> was created around [MASK].\n\nOptions:\n1. 1615\n2. 1962\n3. 1647"
+    },
+    {
+        "test_id": 8,
+        "relation": "CreatedBy",
+        "correct_feat": "Mick Jagger and Keith Richards",
+        "options": "1. Zhang Zeduan\n2. Jean-Baptiste Olive\n3. Mick Jagger and Keith Richards",
+        "correct_num": 3,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> was created by [MASK].\n\nOptions:\n1. Zhang Zeduan\n2. Jean-Baptiste Olive\n3. Mick Jagger and Keith Richards"
+    },
+    {
+        "test_id": 9,
+        "relation": "CreatedIn",
+        "correct_feat": "London",
+        "options": "1. London\n2. Takamatsu\n3. Penza",
+        "correct_num": 1,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> was created in [MASK].\n\nOptions:\n1. London\n2. Takamatsu\n3. Penza"
+    },
+    {
+        "test_id": 10,
+        "relation": "CreatedIn",
+        "correct_feat": "1962",
+        "options": "1. 1613\n2. 1962\n3. 1887",
+        "correct_num": 2,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> was created in [MASK].\n\nOptions:\n1. 1613\n2. 1962\n3. 1887"
+    },
+    {
+        "test_id": 11,
+        "relation": "FoundedBy",
+        "correct_feat": "Mick Jagger, Keith Richards, Brian Jones, Bill Wyman, and Charlie Watts",
+        "options": "1. Ali ibn Buya\n2. Debra Markwardt\n3. Mick Jagger, Keith Richards, Brian Jones, Bill Wyman, and Charlie Watts",
+        "correct_num": 3,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> was founded by [MASK].\n\nOptions:\n1. Ali ibn Buya\n2. Debra Markwardt\n3. Mick Jagger, Keith Richards, Brian Jones, Bill Wyman, and Charlie Watts"
+    },
+    {
+        "test_id": 12,
+        "relation": "FoundedIn",
+        "correct_feat": "London",
+        "options": "1. London\n2. Nashik\n3. Tampa",
+        "correct_num": 1,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> was founded in [MASK].\n\nOptions:\n1. London\n2. Nashik\n3. Tampa"
+    },
+    {
+        "test_id": 13,
+        "relation": "FoundedIn",
+        "correct_feat": "1962",
+        "options": "1. 1814\n2. 1962\n3. 1712",
+        "correct_num": 2,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> was founded in [MASK].\n\nOptions:\n1. 1814\n2. 1962\n3. 1712"
+    },
+    {
+        "test_id": 14,
+        "relation": "HasA",
+        "correct_feat": "a tongue and lips logo",
+        "options": "1. been labelled as open attacks on secularism by rivals\n2. origins in the Old Beverlie pub\n3. a tongue and lips logo",
+        "correct_num": 3,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> has [MASK].\n\nOptions:\n1. been labelled as open attacks on secularism by rivals\n2. origins in the Old Beverlie pub\n3. a tongue and lips logo"
+    },
+    {
+        "test_id": 15,
+        "relation": "HasA",
+        "correct_feat": "an estimated album sales of more than 250 million",
+        "options": "1. an estimated album sales of more than 250 million\n2. complex rules\n3. led to the abandonment of the Bancroft Treaties",
+        "correct_num": 1,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> has [MASK].\n\nOptions:\n1. an estimated album sales of more than 250 million\n2. complex rules\n3. led to the abandonment of the Bancroft Treaties"
+    },
+    {
+        "test_id": 16,
+        "relation": "HasA",
+        "correct_feat": "four Grammy Awards",
+        "options": "1. mosaics and stained glass by Albinas Elskus\n2. four Grammy Awards\n3. a tendency to accumulate immense masses of half-assimilated materials",
+        "correct_num": 2,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> has [MASK].\n\nOptions:\n1. mosaics and stained glass by Albinas Elskus\n2. four Grammy Awards\n3. a tendency to accumulate immense masses of half-assimilated materials"
+    },
+    {
+        "test_id": 17,
+        "relation": "HasA",
+        "correct_feat": "a Grammy Lifetime Achievement Award",
+        "options": "1. a tributary of the Elands River\n2. hundreds of counters\n3. a Grammy Lifetime Achievement Award",
+        "correct_num": 3,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> has [MASK].\n\nOptions:\n1. a tributary of the Elands River\n2. hundreds of counters\n3. a Grammy Lifetime Achievement Award"
+    },
+    {
+        "test_id": 18,
+        "relation": "HasA",
+        "correct_feat": "a regular bassist Darryl Jones",
+        "options": "1. a regular bassist Darryl Jones\n2. landscapes bedecked with homespun aphorisms\n3. thirty-one types of terrain",
+        "correct_num": 1,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> has [MASK].\n\nOptions:\n1. a regular bassist Darryl Jones\n2. landscapes bedecked with homespun aphorisms\n3. thirty-one types of terrain"
+    },
+    {
+        "test_id": 19,
+        "relation": "HasA",
+        "correct_feat": "a regular drummer Steve Jordan",
+        "options": "1. rules that track stragglers, the accumulation of soldier fatigue, ammunition, changing regimental assignments and strength of individual units\n2. a regular drummer Steve Jordan\n3. a statue of Edwin Wilkins Field",
+        "correct_num": 2,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> has [MASK].\n\nOptions:\n1. rules that track stragglers, the accumulation of soldier fatigue, ammunition, changing regimental assignments and strength of individual units\n2. a regular drummer Steve Jordan\n3. a statue of Edwin Wilkins Field"
+    },
+    {
+        "test_id": 20,
+        "relation": "HasFeatureOf",
+        "correct_feat": "a gritty, rhythmically driven sound",
+        "options": "1. the traditional deesis form\n2. a performance reprised by David Prowse, James Earl Jones, and director of photography Gilbert Taylor\n3. a gritty, rhythmically driven sound",
+        "correct_num": 3,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is characterized by [MASK].\n\nOptions:\n1. the traditional deesis form\n2. a performance reprised by David Prowse, James Earl Jones, and director of photography Gilbert Taylor\n3. a gritty, rhythmically driven sound"
+    },
+    {
+        "test_id": 21,
+        "relation": "HasFeatureOf",
+        "correct_feat": "being popular, influential, and enduring",
+        "options": "1. being popular, influential, and enduring\n2. the use of optical illusions\n3. the \"conning tower\" in earlier designs",
+        "correct_num": 1,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is characterized by [MASK].\n\nOptions:\n1. being popular, influential, and enduring\n2. the use of optical illusions\n3. the \"conning tower\" in earlier designs"
+    },
+    {
+        "test_id": 22,
+        "relation": "HasFeatureOf",
+        "correct_feat": "being a huge concert attraction",
+        "options": "1. a fast-moving game system\n2. being a huge concert attraction\n3. the International Cherry Pit-Spitting Championship being founded in 1974",
+        "correct_num": 2,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is characterized by [MASK].\n\nOptions:\n1. a fast-moving game system\n2. being a huge concert attraction\n3. the International Cherry Pit-Spitting Championship being founded in 1974"
+    },
+    {
+        "test_id": 23,
+        "relation": "HasFeatureOf",
+        "correct_feat": "its tongue and lips logo",
+        "options": "1. a scandalous depiction of the revels of Venus's court\n2. its descendant of a royal Khazar chief Tuqaq\n3. its tongue and lips logo",
+        "correct_num": 3,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is characterized by [MASK].\n\nOptions:\n1. a scandalous depiction of the revels of Venus's court\n2. its descendant of a royal Khazar chief Tuqaq\n3. its tongue and lips logo"
+    },
+    {
+        "test_id": 24,
+        "relation": "HeldIn",
+        "correct_feat": "London",
+        "options": "1. London\n2. Ajegunle\n3. Haikou",
+        "correct_num": 1,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> was held in [MASK].\n\nOptions:\n1. London\n2. Ajegunle\n3. Haikou"
+    },
+    {
+        "test_id": 25,
+        "relation": "HeldIn",
+        "correct_feat": "Dartford",
+        "options": "1. the collection of the Hellenic Institute of Venice in Italy\n2. Dartford\n3. Yemen",
+        "correct_num": 2,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> was held in [MASK].\n\nOptions:\n1. the collection of the Hellenic Institute of Venice in Italy\n2. Dartford\n3. Yemen"
+    },
+    {
+        "test_id": 26,
+        "relation": "HeldOn",
+        "correct_feat": "17 October 1961",
+        "options": "1. the three days preceding Ascension Day\n2. Saint Martin's Day, November 11th in Switzerland\n3. 17 October 1961",
+        "correct_num": 3,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> was held on [MASK].\n\nOptions:\n1. the three days preceding Ascension Day\n2. Saint Martin's Day, November 11th in Switzerland\n3. 17 October 1961"
+    },
+    {
+        "test_id": 27,
+        "relation": "HeldOn",
+        "correct_feat": "7 April",
+        "options": "1. 7 April\n2. a lamppost\n3. Saint Stephen's Day",
+        "correct_num": 1,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> was held on [MASK].\n\nOptions:\n1. 7 April\n2. a lamppost\n3. Saint Stephen's Day"
+    },
+    {
+        "test_id": 28,
+        "relation": "HeldOn",
+        "correct_feat": "12 July 1962",
+        "options": "1. Wednesday\n2. 12 July 1962\n3. January 18, 1838",
+        "correct_num": 2,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> was held on [MASK].\n\nOptions:\n1. Wednesday\n2. 12 July 1962\n3. January 18, 1838"
+    },
+    {
+        "test_id": 29,
+        "relation": "HeldOn",
+        "correct_feat": "7 December 1962",
+        "options": "1. October 15, 2022\n2. January 11\n3. 7 December 1962",
+        "correct_num": 3,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> was held on [MASK].\n\nOptions:\n1. October 15, 2022\n2. January 11\n3. 7 December 1962"
+    },
+    {
+        "test_id": 30,
+        "relation": "HeldOn",
+        "correct_feat": "Saturday, 12 January 1963",
+        "options": "1. Saturday, 12 January 1963\n2. November 9\n3. October 2\u20137",
+        "correct_num": 1,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> was held on [MASK].\n\nOptions:\n1. Saturday, 12 January 1963\n2. November 9\n3. October 2\u20137"
+    },
+    {
+        "test_id": 32,
+        "relation": "Influenced",
+        "correct_feat": "hard rock",
+        "options": "1. the modern-day Korean identity\n2. Early Netherlandish artists from the 1420s\n3. hard rock",
+        "correct_num": 3,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> influenced [MASK].\n\nOptions:\n1. the modern-day Korean identity\n2. Early Netherlandish artists from the 1420s\n3. hard rock"
+    },
+    {
+        "test_id": 33,
+        "relation": "Influenced",
+        "correct_feat": "the British Invasion",
+        "options": "1. the British Invasion\n2. the reorientation of Polish territorial priorities to the east\n3. the National Party's politics",
+        "correct_num": 1,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> influenced [MASK].\n\nOptions:\n1. the British Invasion\n2. the reorientation of Polish territorial priorities to the east\n3. the National Party's politics"
+    },
+    {
+        "test_id": 34,
+        "relation": "Influenced",
+        "correct_feat": "the youthful counterculture of the 1960s",
+        "options": "1. sculpture\n2. the youthful counterculture of the 1960s\n3. the economic systems of Scandinavia and the Benelux",
+        "correct_num": 2,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> influenced [MASK].\n\nOptions:\n1. sculpture\n2. the youthful counterculture of the 1960s\n3. the economic systems of Scandinavia and the Benelux"
+    },
+    {
+        "test_id": 35,
+        "relation": "InfluencedBy",
+        "correct_feat": "blues and early rock and roll",
+        "options": "1. West Germany's squatter scene\n2. John Carroll's hopes to site the columns at the Elizabeth Lofts\n3. blues and early rock and roll",
+        "correct_num": 3,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> was influenced by [MASK].\n\nOptions:\n1. West Germany's squatter scene\n2. John Carroll's hopes to site the columns at the Elizabeth Lofts\n3. blues and early rock and roll"
+    },
+    {
+        "test_id": 36,
+        "relation": "IsA",
+        "correct_feat": "an English rock band",
+        "options": "1. an English rock band\n2. a political movement in Galicia, Spain\n3. a form of market simulated planning",
+        "correct_num": 1,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is [MASK].\n\nOptions:\n1. an English rock band\n2. a political movement in Galicia, Spain\n3. a form of market simulated planning"
+    },
+    {
+        "test_id": 37,
+        "relation": "IsA",
+        "correct_feat": "a popular band",
+        "options": "1. a science fiction board wargame\n2. a popular band\n3. a town located on the important trade route, the Via Regia Lusatiae inferioris",
+        "correct_num": 2,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is [MASK].\n\nOptions:\n1. a science fiction board wargame\n2. a popular band\n3. a town located on the important trade route, the Via Regia Lusatiae inferioris"
+    },
+    {
+        "test_id": 38,
+        "relation": "IsA",
+        "correct_feat": "an influential band",
+        "options": "1. a skete dedicated to the Inexhaustible Chalice\n2. a work meant to be divine and spiritual\n3. an influential band",
+        "correct_num": 3,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is [MASK].\n\nOptions:\n1. a skete dedicated to the Inexhaustible Chalice\n2. a work meant to be divine and spiritual\n3. an influential band"
+    },
+    {
+        "test_id": 39,
+        "relation": "IsA",
+        "correct_feat": "an enduring band",
+        "options": "1. an enduring band\n2. an international motorsport event\n3. a kids version",
+        "correct_num": 1,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is [MASK].\n\nOptions:\n1. an enduring band\n2. an international motorsport event\n3. a kids version"
+    },
+    {
+        "test_id": 40,
+        "relation": "IsA",
+        "correct_feat": "a hard rock band",
+        "options": "1. a presentation miniature\n2. a hard rock band\n3. a political neologism",
+        "correct_num": 2,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is [MASK].\n\nOptions:\n1. a presentation miniature\n2. a hard rock band\n3. a political neologism"
+    },
+    {
+        "test_id": 41,
+        "relation": "IsA",
+        "correct_feat": "a rock and roll band",
+        "options": "1. a fringe party\n2. a free desktop version\n3. a rock and roll band",
+        "correct_num": 3,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is [MASK].\n\nOptions:\n1. a fringe party\n2. a free desktop version\n3. a rock and roll band"
+    },
+    {
+        "test_id": 42,
+        "relation": "IsA",
+        "correct_feat": "a live act",
+        "options": "1. a live act\n2. a blood sport\n3. a game where enemy pieces are captured by jumping over them",
+        "correct_num": 1,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is [MASK].\n\nOptions:\n1. a live act\n2. a blood sport\n3. a game where enemy pieces are captured by jumping over them"
+    },
+    {
+        "test_id": 43,
+        "relation": "IsA",
+        "correct_feat": "an artist",
+        "options": "1. a general description of size of books\n2. an artist\n3. the centerpiece of the Art In Action exhibit",
+        "correct_num": 2,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is [MASK].\n\nOptions:\n1. a general description of size of books\n2. an artist\n3. the centerpiece of the Art In Action exhibit"
+    },
+    {
+        "test_id": 44,
+        "relation": "KnownAs",
+        "correct_feat": "the greatest rock and roll band in the world",
+        "options": "1. \"Homage to Medicine: Natural Medicine\n2. Jagiellon dynasty\n3. the greatest rock and roll band in the world",
+        "correct_num": 3,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is known as [MASK].\n\nOptions:\n1. \"Homage to Medicine: Natural Medicine\n2. Jagiellon dynasty\n3. the greatest rock and roll band in the world"
+    },
+    {
+        "test_id": 45,
+        "relation": "KnownFor",
+        "correct_feat": "its popularity",
+        "options": "1. its popularity\n2. being played by football announcer Al Michaels\n3. simulating actions of squad sized units in World War II",
+        "correct_num": 1,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is known for [MASK].\n\nOptions:\n1. its popularity\n2. being played by football announcer Al Michaels\n3. simulating actions of squad sized units in World War II"
+    },
+    {
+        "test_id": 46,
+        "relation": "KnownFor",
+        "correct_feat": "its influence",
+        "options": "1. its 100th anniversary being celebrated with a special stamp\n2. its influence\n3. its airplane pieces",
+        "correct_num": 2,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is known for [MASK].\n\nOptions:\n1. its 100th anniversary being celebrated with a special stamp\n2. its influence\n3. its airplane pieces"
+    },
+    {
+        "test_id": 47,
+        "relation": "KnownFor",
+        "correct_feat": "its endurance",
+        "options": "1. espousing Iranian nationalism rooted in the pre-Islamic era\n2. being a replica of an Eleusa icon\n3. its endurance",
+        "correct_num": 3,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is known for [MASK].\n\nOptions:\n1. espousing Iranian nationalism rooted in the pre-Islamic era\n2. being a replica of an Eleusa icon\n3. its endurance"
+    },
+    {
+        "test_id": 48,
+        "relation": "KnownFor",
+        "correct_feat": "its gritty, rhythmically driven sound",
+        "options": "1. its gritty, rhythmically driven sound\n2. its presence among racist skinheads\n3. being played standing",
+        "correct_num": 1,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is known for [MASK].\n\nOptions:\n1. its gritty, rhythmically driven sound\n2. its presence among racist skinheads\n3. being played standing"
+    },
+    {
+        "test_id": 49,
+        "relation": "KnownFor",
+        "correct_feat": "its compositions",
+        "options": "1. being played on a strip of ground next to a brick wall\n2. its compositions\n3. introducing the concept of \"limited intelligence\"",
+        "correct_num": 2,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is known for [MASK].\n\nOptions:\n1. being played on a strip of ground next to a brick wall\n2. its compositions\n3. introducing the concept of \"limited intelligence\""
+    },
+    {
+        "test_id": 50,
+        "relation": "KnownFor",
+        "correct_feat": "its stadium and arena tours",
+        "options": "1. bestowing miracles\n2. arguing that in the post-feminist era, men are in a worse position because of the emphasis on women's rights\n3. its stadium and arena tours",
+        "correct_num": 3,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is known for [MASK].\n\nOptions:\n1. bestowing miracles\n2. arguing that in the post-feminist era, men are in a worse position because of the emphasis on women's rights\n3. its stadium and arena tours"
+    },
+    {
+        "test_id": 51,
+        "relation": "KnownFor",
+        "correct_feat": "its concert tours",
+        "options": "1. its concert tours\n2. its inherent intersectionality\n3. its deep involvement in Nazi war crimes",
+        "correct_num": 1,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is known for [MASK].\n\nOptions:\n1. its concert tours\n2. its inherent intersectionality\n3. its deep involvement in Nazi war crimes"
+    },
+    {
+        "test_id": 52,
+        "relation": "KnownFor",
+        "correct_feat": "its album sales",
+        "options": "1. its identity\n2. its album sales\n3. being an adventure novel",
+        "correct_num": 2,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is known for [MASK].\n\nOptions:\n1. its identity\n2. its album sales\n3. being an adventure novel"
+    },
+    {
+        "test_id": 53,
+        "relation": "KnownFor",
+        "correct_feat": "its Grammy Awards",
+        "options": "1. being the origin of the return of a victorious army\n2. simulating the Battle of Leipzig\n3. its Grammy Awards",
+        "correct_num": 3,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is known for [MASK].\n\nOptions:\n1. being the origin of the return of a victorious army\n2. simulating the Battle of Leipzig\n3. its Grammy Awards"
+    },
+    {
+        "test_id": 54,
+        "relation": "KnownFor",
+        "correct_feat": "its induction into the Rock and Roll Hall of Fame",
+        "options": "1. its induction into the Rock and Roll Hall of Fame\n2. being an aspect of celebrations and ceremonies since ancient times\n3. its increasing devotional emphasis",
+        "correct_num": 1,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is known for [MASK].\n\nOptions:\n1. its induction into the Rock and Roll Hall of Fame\n2. being an aspect of celebrations and ceremonies since ancient times\n3. its increasing devotional emphasis"
+    },
+    {
+        "test_id": 55,
+        "relation": "KnownFor",
+        "correct_feat": "its induction into the UK Music Hall of Fame",
+        "options": "1. limited contact between players\n2. its induction into the UK Music Hall of Fame\n3. its role in the establishment of the State of Israel",
+        "correct_num": 2,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is known for [MASK].\n\nOptions:\n1. limited contact between players\n2. its induction into the UK Music Hall of Fame\n3. its role in the establishment of the State of Israel"
+    },
+    {
+        "test_id": 56,
+        "relation": "LocatedIn",
+        "correct_feat": "in London",
+        "options": "1. in Montana\n2. in Croatia\n3. in London",
+        "correct_num": 3,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is located [MASK].\n\nOptions:\n1. in Montana\n2. in Croatia\n3. in London"
+    },
+    {
+        "test_id": 57,
+        "relation": "LocatedIn",
+        "correct_feat": "in Dartford",
+        "options": "1. in Dartford\n2. in the public space\n3. in the borough",
+        "correct_num": 1,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is located [MASK].\n\nOptions:\n1. in Dartford\n2. in the public space\n3. in the borough"
+    },
+    {
+        "test_id": 58,
+        "relation": "LocatedIn",
+        "correct_feat": "in Wilmington",
+        "options": "1. in the Scottish National Gallery in Edinburgh\n2. in Wilmington\n3. in El Carpio de Tajo",
+        "correct_num": 2,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is located [MASK].\n\nOptions:\n1. in the Scottish National Gallery in Edinburgh\n2. in Wilmington\n3. in El Carpio de Tajo"
+    },
+    {
+        "test_id": 59,
+        "relation": "MemberOf",
+        "correct_feat": "the rock era",
+        "options": "1. various organizations\n2. the Dutch Reformed Church\n3. the rock era",
+        "correct_num": 3,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is a member of [MASK].\n\nOptions:\n1. various organizations\n2. the Dutch Reformed Church\n3. the rock era"
+    },
+    {
+        "test_id": 60,
+        "relation": "NamedAfter",
+        "correct_feat": "a Muddy Waters LP track called \"Rollin' Stone\"",
+        "options": "1. a Muddy Waters LP track called \"Rollin' Stone\"\n2. the \"Quick to Hear\" icon\n3. Ptolemy I's father, Lagus",
+        "correct_num": 1,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is named after [MASK].\n\nOptions:\n1. a Muddy Waters LP track called \"Rollin' Stone\"\n2. the \"Quick to Hear\" icon\n3. Ptolemy I's father, Lagus"
+    },
+    {
+        "test_id": 61,
+        "relation": "OccurredBetween",
+        "correct_feat": "1962 and 1964",
+        "options": "1. the 13th\u201314th centuries\n2. 1962 and 1964\n3. 92 and 85 BC",
+        "correct_num": 2,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> occurred between [MASK].\n\nOptions:\n1. the 13th\u201314th centuries\n2. 1962 and 1964\n3. 92 and 85 BC"
+    },
+    {
+        "test_id": 62,
+        "relation": "OccurredBetween",
+        "correct_feat": "1971 and 1972",
+        "options": "1. 22 June 1941 and 30 April 1942\n2. 66 and 63 BC\n3. 1971 and 1972",
+        "correct_num": 3,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> occurred between [MASK].\n\nOptions:\n1. 22 June 1941 and 30 April 1942\n2. 66 and 63 BC\n3. 1971 and 1972"
+    },
+    {
+        "test_id": 63,
+        "relation": "OccurredBetween",
+        "correct_feat": "1972 and 1973",
+        "options": "1. 1972 and 1973\n2. 1213 and 1214\n3. 41\u201344 AD",
+        "correct_num": 1,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> occurred between [MASK].\n\nOptions:\n1. 1972 and 1973\n2. 1213 and 1214\n3. 41\u201344 AD"
+    },
+    {
+        "test_id": 64,
+        "relation": "OccurredBetween",
+        "correct_feat": "1978 and 1981",
+        "options": "1. 1198 and 1208\n2. 1978 and 1981\n3. the 6th century and the present",
+        "correct_num": 2,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> occurred between [MASK].\n\nOptions:\n1. 1198 and 1208\n2. 1978 and 1981\n3. the 6th century and the present"
+    },
+    {
+        "test_id": 65,
+        "relation": "OccurredBetween",
+        "correct_feat": "1989 and 1994",
+        "options": "1. 1770 BCE and 1155 BC\n2. periods of 20 minutes each in Kyrgyzstan\n3. 1989 and 1994",
+        "correct_num": 3,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> occurred between [MASK].\n\nOptions:\n1. 1770 BCE and 1155 BC\n2. periods of 20 minutes each in Kyrgyzstan\n3. 1989 and 1994"
+    },
+    {
+        "test_id": 66,
+        "relation": "OccurredAround",
+        "correct_feat": "1962",
+        "options": "1. 1962\n2. 1816\n3. 1905",
+        "correct_num": 1,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> occurred around [MASK].\n\nOptions:\n1. 1962\n2. 1816\n3. 1905"
+    },
+    {
+        "test_id": 67,
+        "relation": "OccurredAround",
+        "correct_feat": "the mid-1950s",
+        "options": "1. the 9th century\n2. the mid-1950s\n3. 1804",
+        "correct_num": 2,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> occurred around [MASK].\n\nOptions:\n1. the 9th century\n2. the mid-1950s\n3. 1804"
+    },
+    {
+        "test_id": 68,
+        "relation": "OccurredAround",
+        "correct_feat": "1961",
+        "options": "1. 1795\n2. 1905\n3. 1961",
+        "correct_num": 3,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> occurred around [MASK].\n\nOptions:\n1. 1795\n2. 1905\n3. 1961"
+    },
+    {
+        "test_id": 69,
+        "relation": "OccurredAround",
+        "correct_feat": "1963",
+        "options": "1. 1963\n2. 1839\n3. 1870",
+        "correct_num": 1,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> occurred around [MASK].\n\nOptions:\n1. 1963\n2. 1839\n3. 1870"
+    },
+    {
+        "test_id": 70,
+        "relation": "OccurredAround",
+        "correct_feat": "1964",
+        "options": "1. 1728\n2. 1964\n3. 1883",
+        "correct_num": 2,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> occurred around [MASK].\n\nOptions:\n1. 1728\n2. 1964\n3. 1883"
+    },
+    {
+        "test_id": 71,
+        "relation": "OccurredAround",
+        "correct_feat": "1965",
+        "options": "1. 1605\n2. 1948\n3. 1965",
+        "correct_num": 3,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> occurred around [MASK].\n\nOptions:\n1. 1605\n2. 1948\n3. 1965"
+    },
+    {
+        "test_id": 72,
+        "relation": "OccurredAround",
+        "correct_feat": "1966",
+        "options": "1. 1966\n2. 1969\n3. 1658",
+        "correct_num": 1,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> occurred around [MASK].\n\nOptions:\n1. 1966\n2. 1969\n3. 1658"
+    },
+    {
+        "test_id": 73,
+        "relation": "OccurredAround",
+        "correct_feat": "1967",
+        "options": "1. 1949\n2. 1967\n3. 1874",
+        "correct_num": 2,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> occurred around [MASK].\n\nOptions:\n1. 1949\n2. 1967\n3. 1874"
+    },
+    {
+        "test_id": 74,
+        "relation": "OccurredAround",
+        "correct_feat": "1968",
+        "options": "1. 1984\n2. 1736\n3. 1968",
+        "correct_num": 3,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> occurred around [MASK].\n\nOptions:\n1. 1984\n2. 1736\n3. 1968"
+    },
+    {
+        "test_id": 75,
+        "relation": "OccurredAround",
+        "correct_feat": "1969",
+        "options": "1. 1969\n2. 1993\n3. 1928",
+        "correct_num": 1,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> occurred around [MASK].\n\nOptions:\n1. 1969\n2. 1993\n3. 1928"
+    },
+    {
+        "test_id": 76,
+        "relation": "OriginatedIn",
+        "correct_feat": "London",
+        "options": "1. Sham Shui Po\n2. London\n3. Khartoum North",
+        "correct_num": 2,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> originated in [MASK].\n\nOptions:\n1. Sham Shui Po\n2. London\n3. Khartoum North"
+    },
+    {
+        "test_id": 77,
+        "relation": "OriginatedIn",
+        "correct_feat": "England",
+        "options": "1. the Soviet Union\n2. the International Workingmen's Association\n3. England",
+        "correct_num": 3,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> originated in [MASK].\n\nOptions:\n1. the Soviet Union\n2. the International Workingmen's Association\n3. England"
+    },
+    {
+        "test_id": 78,
+        "relation": "PartOf",
+        "correct_feat": "the rock era",
+        "options": "1. the rock era\n2. the stairs that connect Kitchener and Lorne Street and lead to Auckland Art Gallery\n3. the larger Pink Tide in Latin America",
+        "correct_num": 1,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is part of [MASK].\n\nOptions:\n1. the rock era\n2. the stairs that connect Kitchener and Lorne Street and lead to Auckland Art Gallery\n3. the larger Pink Tide in Latin America"
+    },
+    {
+        "test_id": 79,
+        "relation": "PerformedBy",
+        "correct_feat": "the Blues Boys",
+        "options": "1. hospital casualty workers\n2. the Blues Boys\n3. persons with physical disabilities",
+        "correct_num": 2,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> was performed by [MASK].\n\nOptions:\n1. hospital casualty workers\n2. the Blues Boys\n3. persons with physical disabilities"
+    },
+    {
+        "test_id": 80,
+        "relation": "PerformedBy",
+        "correct_feat": "Blues Incorporated",
+        "options": "1. Harvard and Yale students\n2. Brian Alldis\n3. Blues Incorporated",
+        "correct_num": 3,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> was performed by [MASK].\n\nOptions:\n1. Harvard and Yale students\n2. Brian Alldis\n3. Blues Incorporated"
+    },
+    {
+        "test_id": 81,
+        "relation": "PerformedBy",
+        "correct_feat": "the band",
+        "options": "1. the band\n2. horsemen\n3. British forces",
+        "correct_num": 1,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> was performed by [MASK].\n\nOptions:\n1. the band\n2. horsemen\n3. British forces"
+    },
+    {
+        "test_id": 82,
+        "relation": "ProducedBy",
+        "correct_feat": "Andrew Loog Oldham",
+        "options": "1. FlowRider, Inc\n2. Andrew Loog Oldham\n3. Game Research/Design (GRD)",
+        "correct_num": 2,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> was produced by [MASK].\n\nOptions:\n1. FlowRider, Inc\n2. Andrew Loog Oldham\n3. Game Research/Design (GRD)"
+    },
+    {
+        "test_id": 84,
+        "relation": "PublishedAs",
+        "correct_feat": "a number-one hit",
+        "options": "1. a number-one hit\n2. the album cover of rock band Kansas' 1974 debut record\n3. a microgame",
+        "correct_num": 1,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> was published as [MASK].\n\nOptions:\n1. a number-one hit\n2. the album cover of rock band Kansas' 1974 debut record\n3. a microgame"
+    },
+    {
+        "test_id": 85,
+        "relation": "PublishedAs",
+        "correct_feat": "an album",
+        "options": "1. the first set of rules in 1937 by the Amateur Softball Association\n2. an album\n3. a drawing in the 12th-century manuscript 122 of Corpus Christi College, Oxford",
+        "correct_num": 2,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> was published as [MASK].\n\nOptions:\n1. the first set of rules in 1937 by the Amateur Softball Association\n2. an album\n3. a drawing in the 12th-century manuscript 122 of Corpus Christi College, Oxford"
+    },
+    {
+        "test_id": 86,
+        "relation": "PublishedBy",
+        "correct_feat": "Decca Records",
+        "options": "1. SPI\n2. Decision Games\n3. Decca Records",
+        "correct_num": 3,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> was published by [MASK].\n\nOptions:\n1. SPI\n2. Decision Games\n3. Decca Records"
+    },
+    {
+        "test_id": 87,
+        "relation": "PublishedIn",
+        "correct_feat": "1965",
+        "options": "1. 1965\n2. 1990\n3. 1682",
+        "correct_num": 1,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> was published in [MASK].\n\nOptions:\n1. 1965\n2. 1990\n3. 1682"
+    },
+    {
+        "test_id": 89,
+        "relation": "UsedAs",
+        "correct_feat": "a regular drummer",
+        "options": "1. an example of a notorious cold case\n2. a tool for Arabization of ethnic minorities\n3. a regular drummer",
+        "correct_num": 3,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is used as [MASK].\n\nOptions:\n1. an example of a notorious cold case\n2. a tool for Arabization of ethnic minorities\n3. a regular drummer"
+    },
+    {
+        "test_id": 92,
+        "relation": "UsedFor",
+        "correct_feat": "live performances",
+        "options": "1. simulating the conflict between Germany and the Soviet Union during World War II\n2. competition\n3. live performances",
+        "correct_num": 3,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is used for [MASK].\n\nOptions:\n1. simulating the conflict between Germany and the Soviet Union during World War II\n2. competition\n3. live performances"
+    },
+    {
+        "test_id": 93,
+        "relation": "UsedFor",
+        "correct_feat": "stadium and arena tours",
+        "options": "1. stadium and arena tours\n2. a different kind of Napoleonic warfare\n3. sport fishing",
+        "correct_num": 1,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is used for [MASK].\n\nOptions:\n1. stadium and arena tours\n2. a different kind of Napoleonic warfare\n3. sport fishing"
+    },
+    {
+        "test_id": 94,
+        "relation": "UsedFor",
+        "correct_feat": "concert tours",
+        "options": "1. the study of Eastern Orthodox Christianity\n2. concert tours\n3. simulating diplomacy",
+        "correct_num": 2,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is used for [MASK].\n\nOptions:\n1. the study of Eastern Orthodox Christianity\n2. concert tours\n3. simulating diplomacy"
+    },
+    {
+        "test_id": 95,
+        "relation": "UsedIn",
+        "correct_feat": "the rock era",
+        "options": "1. Latin America\n2. artistic films\n3. the rock era",
+        "correct_num": 3,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is used in [MASK].\n\nOptions:\n1. Latin America\n2. artistic films\n3. the rock era"
+    },
+    {
+        "test_id": 96,
+        "relation": "UsedIn",
+        "correct_feat": "the UK",
+        "options": "1. the UK\n2. Tanzania, United Republic of\n3. Saint Barth\u00e9lemy",
+        "correct_num": 1,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is used in [MASK].\n\nOptions:\n1. the UK\n2. Tanzania, United Republic of\n3. Saint Barth\u00e9lemy"
+    },
+    {
+        "test_id": 97,
+        "relation": "UsedIn",
+        "correct_feat": "the US",
+        "options": "1. Iraq\n2. the US\n3. Cambodia",
+        "correct_num": 2,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is used in [MASK].\n\nOptions:\n1. Iraq\n2. the US\n3. Cambodia"
+    },
+    {
+        "test_id": 98,
+        "relation": "UsedTo",
+        "correct_feat": "define hard rock",
+        "options": "1. represent 6 Mediterranean cities\n2. create a broad fighting sport\n3. define hard rock",
+        "correct_num": 3,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is used to [MASK].\n\nOptions:\n1. represent 6 Mediterranean cities\n2. create a broad fighting sport\n3. define hard rock"
+    },
+    {
+        "test_id": 99,
+        "relation": "UsedTo",
+        "correct_feat": "play cover versions",
+        "options": "1. play cover versions\n2. describe groups or individuals who are located to the right of those who hold mainstream conservative views\n3. defend slavery as a consequence of human sinfulness",
+        "correct_num": 1,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is used to [MASK].\n\nOptions:\n1. play cover versions\n2. describe groups or individuals who are located to the right of those who hold mainstream conservative views\n3. defend slavery as a consequence of human sinfulness"
+    },
+    {
+        "test_id": 100,
+        "relation": "UsedTo",
+        "correct_feat": "write their own songs",
+        "options": "1. hang criminals\n2. write their own songs\n3. divide human history by a variety of periodizations",
+        "correct_num": 2,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is used to [MASK].\n\nOptions:\n1. hang criminals\n2. write their own songs\n3. divide human history by a variety of periodizations"
+    },
+    {
+        "test_id": 101,
+        "relation": "UsedTo",
+        "correct_feat": "find greater success",
+        "options": "1. assert that Kurds are a nation\n2. unite anarchists of different tendencies behind common principles and goals\n3. find greater success",
+        "correct_num": 3,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is used to [MASK].\n\nOptions:\n1. assert that Kurds are a nation\n2. unite anarchists of different tendencies behind common principles and goals\n3. find greater success"
+    },
+    {
+        "test_id": 102,
+        "relation": "UsedTo",
+        "correct_feat": "experiment with psychedelic rock",
+        "options": "1. experiment with psychedelic rock\n2. improve the lives of the people\n3. reveal the secrets of all hearts",
+        "correct_num": 1,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is used to [MASK].\n\nOptions:\n1. experiment with psychedelic rock\n2. improve the lives of the people\n3. reveal the secrets of all hearts"
+    },
+    {
+        "test_id": 104,
+        "relation": "UsedTo",
+        "correct_feat": "break records",
+        "options": "1. trigger the release pad\n2. participate in the program\n3. break records",
+        "correct_num": 3,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is used to [MASK].\n\nOptions:\n1. trigger the release pad\n2. participate in the program\n3. break records"
+    },
+    {
+        "test_id": 105,
+        "relation": "UsedTo",
+        "correct_feat": "earn money",
+        "options": "1. earn money\n2. transport large numbers of people in and around cities\n3. introduce dogs to den work and quarry",
+        "correct_num": 1,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is used to [MASK].\n\nOptions:\n1. earn money\n2. transport large numbers of people in and around cities\n3. introduce dogs to den work and quarry"
+    },
+    {
+        "test_id": 106,
+        "relation": "UsedTo",
+        "correct_feat": "continue as a four-piece core",
+        "options": "1. move pieces to the home position\n2. continue as a four-piece core\n3. insert additional leaves",
+        "correct_num": 2,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is used to [MASK].\n\nOptions:\n1. move pieces to the home position\n2. continue as a four-piece core\n3. insert additional leaves"
+    },
+    {
+        "test_id": 107,
+        "relation": "UsedTo",
+        "correct_feat": "continue as a three-piece core",
+        "options": "1. flatten into a disc-shape\n2. update classification rules annually\n3. continue as a three-piece core",
+        "correct_num": 3,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is used to [MASK].\n\nOptions:\n1. flatten into a disc-shape\n2. update classification rules annually\n3. continue as a three-piece core"
+    },
+    {
+        "test_id": 108,
+        "relation": "WonBy",
+        "correct_feat": "the band",
+        "options": "1. the band\n2. resignation\n3. Kenyan Micah Kogo",
+        "correct_num": 1,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> was won by [MASK].\n\nOptions:\n1. the band\n2. resignation\n3. Kenyan Micah Kogo"
+    },
+    {
+        "test_id": 109,
+        "relation": "WrittenBy",
+        "correct_feat": "Mick Jagger and Keith Richards",
+        "options": "1. J. B. M. Hertzog\n2. Mick Jagger and Keith Richards\n3. R. J. Mitchell",
+        "correct_num": 2,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> was written by [MASK].\n\nOptions:\n1. J. B. M. Hertzog\n2. Mick Jagger and Keith Richards\n3. R. J. Mitchell"
+    },
+    {
+        "test_id": 110,
+        "relation": "WrittenIn",
+        "correct_feat": "the UK",
+        "options": "1. Djibouti\n2. Tuvalu\n3. the UK",
+        "correct_num": 3,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> was written in [MASK].\n\nOptions:\n1. Djibouti\n2. Tuvalu\n3. the UK"
+    },
+    {
+        "test_id": 111,
+        "relation": "WrittenIn",
+        "correct_feat": "the US",
+        "options": "1. the US\n2. China\n3. Wallis and Futuna",
+        "correct_num": 1,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> was written in [MASK].\n\nOptions:\n1. the US\n2. China\n3. Wallis and Futuna"
+    }
+]

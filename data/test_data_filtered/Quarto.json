@@ -1,0 +1,538 @@
+[
+    {
+        "test_id": 0,
+        "relation": "About",
+        "correct_feat": "the format of a book or pamphlet",
+        "options": "1. the format of a book or pamphlet\n2. the Bancroft Treaties and their eventual abandonment\n3. folk rock",
+        "correct_num": 1,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is about [MASK].\n\nOptions:\n1. the format of a book or pamphlet\n2. the Bancroft Treaties and their eventual abandonment\n3. folk rock"
+    },
+    {
+        "test_id": 2,
+        "relation": "Affects",
+        "correct_feat": "the size of books",
+        "options": "1. the legality of a unilateral secession of Quebec from Canada\n2. the Supreme Court of the United States\n3. the size of books",
+        "correct_num": 3,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> affects [MASK].\n\nOptions:\n1. the legality of a unilateral secession of Quebec from Canada\n2. the Supreme Court of the United States\n3. the size of books"
+    },
+    {
+        "test_id": 3,
+        "relation": "AssociatedWith",
+        "correct_feat": "book sizes",
+        "options": "1. book sizes\n2. the Republic of Texas\n3. Peter D\u00fcring on drums",
+        "correct_num": 1,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is associated with [MASK].\n\nOptions:\n1. book sizes\n2. the Republic of Texas\n3. Peter D\u00fcring on drums"
+    },
+    {
+        "test_id": 4,
+        "relation": "BelongsTo",
+        "correct_feat": "book formats",
+        "options": "1. conservatism\n2. book formats\n3. the cultural output of the 2010s in France",
+        "correct_num": 2,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> belongs to [MASK].\n\nOptions:\n1. conservatism\n2. book formats\n3. the cultural output of the 2010s in France"
+    },
+    {
+        "test_id": 5,
+        "relation": "ConsistsOf",
+        "correct_feat": "one or more full sheets of paper",
+        "options": "1. balls\n2. Afrikaner Calvinism\n3. one or more full sheets of paper",
+        "correct_num": 3,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> consists of [MASK].\n\nOptions:\n1. balls\n2. Afrikaner Calvinism\n3. one or more full sheets of paper"
+    },
+    {
+        "test_id": 6,
+        "relation": "ConsistsOf",
+        "correct_feat": "four leaves",
+        "options": "1. four leaves\n2. sisters Chloe and Halle Bailey\n3. six or more states of consciousness",
+        "correct_num": 1,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> consists of [MASK].\n\nOptions:\n1. four leaves\n2. sisters Chloe and Halle Bailey\n3. six or more states of consciousness"
+    },
+    {
+        "test_id": 7,
+        "relation": "ConsistsOf",
+        "correct_feat": "eight pages of text",
+        "options": "1. nationally determined contributions (NDCs)\n2. eight pages of text\n3. an ancient Byzantine icon of the Mother of God \"Nikopea\" from the 6th century",
+        "correct_num": 2,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> consists of [MASK].\n\nOptions:\n1. nationally determined contributions (NDCs)\n2. eight pages of text\n3. an ancient Byzantine icon of the Mother of God \"Nikopea\" from the 6th century"
+    },
+    {
+        "test_id": 8,
+        "relation": "CreatedAround",
+        "correct_feat": "the mid-nineteenth century",
+        "options": "1. 8000 BC\n2. the 1980s\n3. the mid-nineteenth century",
+        "correct_num": 3,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> was created around [MASK].\n\nOptions:\n1. 8000 BC\n2. the 1980s\n3. the mid-nineteenth century"
+    },
+    {
+        "test_id": 9,
+        "relation": "CreatedIn",
+        "correct_feat": "the incunabula period",
+        "options": "1. the incunabula period\n2. Lake Charles, Louisiana\n3. the United States",
+        "correct_num": 1,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> was created in [MASK].\n\nOptions:\n1. the incunabula period\n2. Lake Charles, Louisiana\n3. the United States"
+    },
+    {
+        "test_id": 10,
+        "relation": "CreatedIn",
+        "correct_feat": "the Elizabethan era",
+        "options": "1. Tel Aviv, Israel\n2. the Elizabethan era\n3. 1947",
+        "correct_num": 2,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> was created in [MASK].\n\nOptions:\n1. Tel Aviv, Israel\n2. the Elizabethan era\n3. 1947"
+    },
+    {
+        "test_id": 11,
+        "relation": "CreatedIn",
+        "correct_feat": "the mid-seventeenth century",
+        "options": "1. Nicaragua\n2. England\n3. the mid-seventeenth century",
+        "correct_num": 3,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> was created in [MASK].\n\nOptions:\n1. Nicaragua\n2. England\n3. the mid-seventeenth century"
+    },
+    {
+        "test_id": 12,
+        "relation": "HasA",
+        "correct_feat": "squarish proportions",
+        "options": "1. squarish proportions\n2. a biplane hang glider\n3. a niche-like throne",
+        "correct_num": 1,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> has [MASK].\n\nOptions:\n1. squarish proportions\n2. a biplane hang glider\n3. a niche-like throne"
+    },
+    {
+        "test_id": 15,
+        "relation": "HasA",
+        "correct_feat": "eight pages of text printed on full sheets",
+        "options": "1. eight pages of text printed on full sheets\n2. a niche\n3. a large portion of Christ's hair on his left side with damage",
+        "correct_num": 1,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> has [MASK].\n\nOptions:\n1. eight pages of text printed on full sheets\n2. a niche\n3. a large portion of Christ's hair on his left side with damage"
+    },
+    {
+        "test_id": 16,
+        "relation": "HasA",
+        "correct_feat": "four leaves produced by folding",
+        "options": "1. tuned mass dampers\n2. four leaves produced by folding\n3. dissident factions like Brit Shalom and Ihud",
+        "correct_num": 2,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> has [MASK].\n\nOptions:\n1. tuned mass dampers\n2. four leaves produced by folding\n3. dissident factions like Brit Shalom and Ihud"
+    },
+    {
+        "test_id": 17,
+        "relation": "HasFeatureOf",
+        "correct_feat": "folding sheets twice",
+        "options": "1. its ruling that New York's law was unconstitutional\n2. the practice of torture widely documented as a distinctive trait of the Egyptian police\n3. folding sheets twice",
+        "correct_num": 3,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is characterized by [MASK].\n\nOptions:\n1. its ruling that New York's law was unconstitutional\n2. the practice of torture widely documented as a distinctive trait of the Egyptian police\n3. folding sheets twice"
+    },
+    {
+        "test_id": 18,
+        "relation": "HasFeatureOf",
+        "correct_feat": "printing eight pages of text on a full sheet",
+        "options": "1. printing eight pages of text on a full sheet\n2. the Roman Catholic Church taking an active role in the reformation of society\n3. a per curiam decision",
+        "correct_num": 1,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is characterized by [MASK].\n\nOptions:\n1. printing eight pages of text on a full sheet\n2. the Roman Catholic Church taking an active role in the reformation of society\n3. a per curiam decision"
+    },
+    {
+        "test_id": 19,
+        "relation": "HasFeatureOf",
+        "correct_feat": "leaves trimmed along the folds",
+        "options": "1. opposing state atheism\n2. leaves trimmed along the folds\n3. opposition to the civil rights movement",
+        "correct_num": 2,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is characterized by [MASK].\n\nOptions:\n1. opposing state atheism\n2. leaves trimmed along the folds\n3. opposition to the civil rights movement"
+    },
+    {
+        "test_id": 20,
+        "relation": "HasFeatureOf",
+        "correct_feat": "squarish proportions",
+        "options": "1. its perspectiveless style\n2. embittered rants about modern working life\n3. squarish proportions",
+        "correct_num": 3,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is characterized by [MASK].\n\nOptions:\n1. its perspectiveless style\n2. embittered rants about modern working life\n3. squarish proportions"
+    },
+    {
+        "test_id": 21,
+        "relation": "HasFeatureOf",
+        "correct_feat": "being about 12 inches tall",
+        "options": "1. being about 12 inches tall\n2. allowing re-dos for irregular bounces or interference\n3. the rivalry between players",
+        "correct_num": 1,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is characterized by [MASK].\n\nOptions:\n1. being about 12 inches tall\n2. allowing re-dos for irregular bounces or interference\n3. the rivalry between players"
+    },
+    {
+        "test_id": 22,
+        "relation": "HasFeatureOf",
+        "correct_feat": "being approximately 10 inches tall by 8 inches wide",
+        "options": "1. its founder, Seljuk Beg\n2. being approximately 10 inches tall by 8 inches wide\n3. taking practice as the sole criterion for testing truth",
+        "correct_num": 2,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is characterized by [MASK].\n\nOptions:\n1. its founder, Seljuk Beg\n2. being approximately 10 inches tall by 8 inches wide\n3. taking practice as the sole criterion for testing truth"
+    },
+    {
+        "test_id": 23,
+        "relation": "IsA",
+        "correct_feat": "a format of a book or pamphlet",
+        "options": "1. an American hip hop duo\n2. a totalitarian ideology\n3. a format of a book or pamphlet",
+        "correct_num": 3,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is [MASK].\n\nOptions:\n1. an American hip hop duo\n2. a totalitarian ideology\n3. a format of a book or pamphlet"
+    },
+    {
+        "test_id": 25,
+        "relation": "IsA",
+        "correct_feat": "a book or pamphlet",
+        "options": "1. a commentary on, a critique of the work of others in his field\n2. a book or pamphlet\n3. a secular nationalist movement",
+        "correct_num": 2,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is [MASK].\n\nOptions:\n1. a commentary on, a critique of the work of others in his field\n2. a book or pamphlet\n3. a secular nationalist movement"
+    },
+    {
+        "test_id": 26,
+        "relation": "IsA",
+        "correct_feat": "a demy quarto",
+        "options": "1. played with a ball 16 inches in circumference\n2. an effective way to burn off dogs' energy\n3. a demy quarto",
+        "correct_num": 3,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is [MASK].\n\nOptions:\n1. played with a ball 16 inches in circumference\n2. an effective way to burn off dogs' energy\n3. a demy quarto"
+    },
+    {
+        "test_id": 28,
+        "relation": "IsA",
+        "correct_feat": "a royal quarto",
+        "options": "1. a ruling that invalidated death sentences\n2. a royal quarto\n3. neo-Ba'athism in Syria",
+        "correct_num": 2,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is [MASK].\n\nOptions:\n1. a ruling that invalidated death sentences\n2. a royal quarto\n3. neo-Ba'athism in Syria"
+    },
+    {
+        "test_id": 29,
+        "relation": "IsA",
+        "correct_feat": "a small quarto",
+        "options": "1. a recipient of four Filmfare Awards Marathi\n2. a group\n3. a small quarto",
+        "correct_num": 3,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is [MASK].\n\nOptions:\n1. a recipient of four Filmfare Awards Marathi\n2. a group\n3. a small quarto"
+    },
+    {
+        "test_id": 30,
+        "relation": "IsA",
+        "correct_feat": "a foolscap quarto writing paper",
+        "options": "1. a foolscap quarto writing paper\n2. a phenomenon\n3. a Frankish noble family",
+        "correct_num": 1,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is [MASK].\n\nOptions:\n1. a foolscap quarto writing paper\n2. a phenomenon\n3. a Frankish noble family"
+    },
+    {
+        "test_id": 32,
+        "relation": "KnownAs",
+        "correct_feat": "Qto",
+        "options": "1. T\u00e2heriy\u00e2n\n2. Feszty Cyclorama\n3. Qto",
+        "correct_num": 3,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is known as [MASK].\n\nOptions:\n1. T\u00e2heriy\u00e2n\n2. Feszty Cyclorama\n3. Qto"
+    },
+    {
+        "test_id": 33,
+        "relation": "KnownAs",
+        "correct_feat": "4to",
+        "options": "1. 4to\n2. the Karolinger\n3. 'white nationalism'",
+        "correct_num": 1,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is known as [MASK].\n\nOptions:\n1. 4to\n2. the Karolinger\n3. 'white nationalism'"
+    },
+    {
+        "test_id": 34,
+        "relation": "KnownAs",
+        "correct_feat": "4\u00ba",
+        "options": "1. Our Lady of Perpetual Help\n2. 4\u00ba\n3. masculinism",
+        "correct_num": 2,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is known as [MASK].\n\nOptions:\n1. Our Lady of Perpetual Help\n2. 4\u00ba\n3. masculinism"
+    },
+    {
+        "test_id": 35,
+        "relation": "KnownAs",
+        "correct_feat": "\"quarto in 8s\"",
+        "options": "1. Adaptive Standing Tennis\n2. Kirchnerism\n3. \"quarto in 8s\"",
+        "correct_num": 3,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is known as [MASK].\n\nOptions:\n1. Adaptive Standing Tennis\n2. Kirchnerism\n3. \"quarto in 8s\""
+    },
+    {
+        "test_id": 36,
+        "relation": "KnownAs",
+        "correct_feat": "\"demy quarto\"",
+        "options": "1. \"demy quarto\"\n2. \"Avenida Paulista on Inauguration Day, December 8, 1891\"\n3. anarcha-feminism",
+        "correct_num": 1,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is known as [MASK].\n\nOptions:\n1. \"demy quarto\"\n2. \"Avenida Paulista on Inauguration Day, December 8, 1891\"\n3. anarcha-feminism"
+    },
+    {
+        "test_id": 37,
+        "relation": "KnownAs",
+        "correct_feat": "\"medium quarto\"",
+        "options": "1. Atat\u00fcrkism\n2. \"medium quarto\"\n3. the Law Courts",
+        "correct_num": 2,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is known as [MASK].\n\nOptions:\n1. Atat\u00fcrkism\n2. \"medium quarto\"\n3. the Law Courts"
+    },
+    {
+        "test_id": 38,
+        "relation": "KnownAs",
+        "correct_feat": "\"royal quarto\"",
+        "options": "1. Madonna of St. Alexis\n2. Bruen\n3. \"royal quarto\"",
+        "correct_num": 3,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is known as [MASK].\n\nOptions:\n1. Madonna of St. Alexis\n2. Bruen\n3. \"royal quarto\""
+    },
+    {
+        "test_id": 39,
+        "relation": "KnownAs",
+        "correct_feat": "\"small quarto\"",
+        "options": "1. \"small quarto\"\n2. 3-Gun\n3. Adaptive Standing Tennis",
+        "correct_num": 1,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is known as [MASK].\n\nOptions:\n1. \"small quarto\"\n2. 3-Gun\n3. Adaptive Standing Tennis"
+    },
+    {
+        "test_id": 40,
+        "relation": "KnownAs",
+        "correct_feat": "\"sermon paper\"",
+        "options": "1. \u201cCreation at Sunrise\n2. \"sermon paper\"\n3. splash balls",
+        "correct_num": 2,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is known as [MASK].\n\nOptions:\n1. \u201cCreation at Sunrise\n2. \"sermon paper\"\n3. splash balls"
+    },
+    {
+        "test_id": 41,
+        "relation": "KnownAs",
+        "correct_feat": "comedia suelta in Spanish culture",
+        "options": "1. the Iviron Theotokos\n2. \"The Chorus\"\n3. comedia suelta in Spanish culture",
+        "correct_num": 3,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is known as [MASK].\n\nOptions:\n1. the Iviron Theotokos\n2. \"The Chorus\"\n3. comedia suelta in Spanish culture"
+    },
+    {
+        "test_id": 42,
+        "relation": "KnownFor",
+        "correct_feat": "being the format of the earliest known European printed book",
+        "options": "1. being the format of the earliest known European printed book\n2. exacerbating social conflict\n3. its veneration in Yaroslavl",
+        "correct_num": 1,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is known for [MASK].\n\nOptions:\n1. being the format of the earliest known European printed book\n2. exacerbating social conflict\n3. its veneration in Yaroslavl"
+    },
+    {
+        "test_id": 44,
+        "relation": "KnownFor",
+        "correct_feat": "plays and poems being commonly printed as separate works in this format during the Elizabethan era",
+        "options": "1. H. David Werder sitting on a pole for 439 days from November 1982 to January 1984\n2. its alleged installation of fascist regimes\n3. plays and poems being commonly printed as separate works in this format during the Elizabethan era",
+        "correct_num": 3,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is known for [MASK].\n\nOptions:\n1. H. David Werder sitting on a pole for 439 days from November 1982 to January 1984\n2. its alleged installation of fascist regimes\n3. plays and poems being commonly printed as separate works in this format during the Elizabethan era"
+    },
+    {
+        "test_id": 45,
+        "relation": "KnownFor",
+        "correct_feat": "Shakespeare's plays being previously separately printed in this format",
+        "options": "1. Shakespeare's plays being previously separately printed in this format\n2. the Polish \"Golden Age\"\n3. the skill of its players, called chapandaz",
+        "correct_num": 1,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is known for [MASK].\n\nOptions:\n1. Shakespeare's plays being previously separately printed in this format\n2. the Polish \"Golden Age\"\n3. the skill of its players, called chapandaz"
+    },
+    {
+        "test_id": 46,
+        "relation": "NamedAfter",
+        "correct_feat": "the Latin word qu\u0101rt\u014d",
+        "options": "1. Merovech\n2. the Latin word qu\u0101rt\u014d\n3. the company's first invention",
+        "correct_num": 2,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is named after [MASK].\n\nOptions:\n1. Merovech\n2. the Latin word qu\u0101rt\u014d\n3. the company's first invention"
+    },
+    {
+        "test_id": 47,
+        "relation": "NamedAfter",
+        "correct_feat": "the ablative form of qu\u0101rtus",
+        "options": "1. Camilo Torres Restrepo\n2. Alyson Michalka\n3. the ablative form of qu\u0101rtus",
+        "correct_num": 3,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is named after [MASK].\n\nOptions:\n1. Camilo Torres Restrepo\n2. Alyson Michalka\n3. the ablative form of qu\u0101rtus"
+    },
+    {
+        "test_id": 48,
+        "relation": "NamedAfter",
+        "correct_feat": "the word fourth",
+        "options": "1. the word fourth\n2. Jack Johnson and Jack Gilinsky\n3. Irish writer James Joyce",
+        "correct_num": 1,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is named after [MASK].\n\nOptions:\n1. the word fourth\n2. Jack Johnson and Jack Gilinsky\n3. Irish writer James Joyce"
+    },
+    {
+        "test_id": 50,
+        "relation": "PartOf",
+        "correct_feat": "the Gutenberg Bible",
+        "options": "1. the history of Rockefeller Center\n2. the \"Kursk-Root\" icon\n3. the Gutenberg Bible",
+        "correct_num": 3,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is part of [MASK].\n\nOptions:\n1. the history of Rockefeller Center\n2. the \"Kursk-Root\" icon\n3. the Gutenberg Bible"
+    },
+    {
+        "test_id": 51,
+        "relation": "PartOf",
+        "correct_feat": "collected editions of Shakespeare's plays",
+        "options": "1. collected editions of Shakespeare's plays\n2. the music industry\n3. cycles of the Life of the Virgin",
+        "correct_num": 1,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is part of [MASK].\n\nOptions:\n1. collected editions of Shakespeare's plays\n2. the music industry\n3. cycles of the Life of the Virgin"
+    },
+    {
+        "test_id": 53,
+        "relation": "ProducedBy",
+        "correct_feat": "Johannes Gutenberg",
+        "options": "1. El-P\n2. the Renaissance\n3. Johannes Gutenberg",
+        "correct_num": 3,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> was produced by [MASK].\n\nOptions:\n1. El-P\n2. the Renaissance\n3. Johannes Gutenberg"
+    },
+    {
+        "test_id": 55,
+        "relation": "PublishedAs",
+        "correct_feat": "a quarto",
+        "options": "1. virism\n2. a quarto\n3. Nuevo D\u00eda",
+        "correct_num": 2,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> was published as [MASK].\n\nOptions:\n1. virism\n2. a quarto\n3. Nuevo D\u00eda"
+    },
+    {
+        "test_id": 56,
+        "relation": "PublishedAs",
+        "correct_feat": "a \"bad quarto\"",
+        "options": "1. \"Somewhere in Paradise\"\n2. the single \"Jan Jan\"\n3. a \"bad quarto\"",
+        "correct_num": 3,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> was published as [MASK].\n\nOptions:\n1. \"Somewhere in Paradise\"\n2. the single \"Jan Jan\"\n3. a \"bad quarto\""
+    },
+    {
+        "test_id": 57,
+        "relation": "PublishedIn",
+        "correct_feat": "1593",
+        "options": "1. 1593\n2. 1671\n3. 1726",
+        "correct_num": 1,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> was published in [MASK].\n\nOptions:\n1. 1593\n2. 1671\n3. 1726"
+    },
+    {
+        "test_id": 58,
+        "relation": "UsedAs",
+        "correct_feat": "a general description of size",
+        "options": "1. a social and accessible alternative to conventional American handball\n2. a general description of size\n3. a strategy for achieving a socialist society",
+        "correct_num": 2,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is used as [MASK].\n\nOptions:\n1. a social and accessible alternative to conventional American handball\n2. a general description of size\n3. a strategy for achieving a socialist society"
+    },
+    {
+        "test_id": 59,
+        "relation": "UsedAs",
+        "correct_feat": "\"sermon paper\"",
+        "options": "1. a radio mast\n2. a way to bring communities together\n3. \"sermon paper\"",
+        "correct_num": 3,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is used as [MASK].\n\nOptions:\n1. a radio mast\n2. a way to bring communities together\n3. \"sermon paper\""
+    },
+    {
+        "test_id": 60,
+        "relation": "UsedAs",
+        "correct_feat": "Q1, Q2, etc. by bibliographers",
+        "options": "1. Q1, Q2, etc. by bibliographers\n2. a term by both scholars and the advocates of the concept\n3. a way to test the strength and endurance of horses",
+        "correct_num": 1,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is used as [MASK].\n\nOptions:\n1. Q1, Q2, etc. by bibliographers\n2. a term by both scholars and the advocates of the concept\n3. a way to test the strength and endurance of horses"
+    },
+    {
+        "test_id": 61,
+        "relation": "UsedFor",
+        "correct_feat": "printing books",
+        "options": "1. the implementation of ILO-standards in national law\n2. printing books\n3. the purpose of assassination",
+        "correct_num": 2,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is used for [MASK].\n\nOptions:\n1. the implementation of ILO-standards in national law\n2. printing books\n3. the purpose of assassination"
+    },
+    {
+        "test_id": 62,
+        "relation": "UsedFor",
+        "correct_feat": "printing pamphlets",
+        "options": "1. practicing a religion\n2. retributive purposes\n3. printing pamphlets",
+        "correct_num": 3,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is used for [MASK].\n\nOptions:\n1. practicing a religion\n2. retributive purposes\n3. printing pamphlets"
+    },
+    {
+        "test_id": 63,
+        "relation": "UsedFor",
+        "correct_feat": "printing plays",
+        "options": "1. printing plays\n2. the autonomy of municipalities and regions\n3. the protection of national cultural identity",
+        "correct_num": 1,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is used for [MASK].\n\nOptions:\n1. printing plays\n2. the autonomy of municipalities and regions\n3. the protection of national cultural identity"
+    },
+    {
+        "test_id": 64,
+        "relation": "UsedFor",
+        "correct_feat": "printing poems",
+        "options": "1. a digital avatar concert tour\n2. printing poems\n3. explaining Bolshevik ideology",
+        "correct_num": 2,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is used for [MASK].\n\nOptions:\n1. a digital avatar concert tour\n2. printing poems\n3. explaining Bolshevik ideology"
+    },
+    {
+        "test_id": 65,
+        "relation": "UsedFor",
+        "correct_feat": "writing paper",
+        "options": "1. promoting skin-cancer awareness\n2. achieving its \"true national unification\"\n3. writing paper",
+        "correct_num": 3,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is used for [MASK].\n\nOptions:\n1. promoting skin-cancer awareness\n2. achieving its \"true national unification\"\n3. writing paper"
+    },
+    {
+        "test_id": 66,
+        "relation": "UsedIn",
+        "correct_feat": "bookbinding",
+        "options": "1. bookbinding\n2. games organized by VOC Cricket club in Rotterdam\n3. the Torah",
+        "correct_num": 1,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is used in [MASK].\n\nOptions:\n1. bookbinding\n2. games organized by VOC Cricket club in Rotterdam\n3. the Torah"
+    },
+    {
+        "test_id": 67,
+        "relation": "UsedIn",
+        "correct_feat": "the incunabula period",
+        "options": "1. the Scala, King's Cross\n2. the incunabula period\n3. the Gettysburg Address",
+        "correct_num": 2,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is used in [MASK].\n\nOptions:\n1. the Scala, King's Cross\n2. the incunabula period\n3. the Gettysburg Address"
+    },
+    {
+        "test_id": 68,
+        "relation": "UsedIn",
+        "correct_feat": "the Elizabethan era",
+        "options": "1. Pakistan\n2. season 4 of Aly's TV series iZombie\n3. the Elizabethan era",
+        "correct_num": 3,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is used in [MASK].\n\nOptions:\n1. Pakistan\n2. season 4 of Aly's TV series iZombie\n3. the Elizabethan era"
+    },
+    {
+        "test_id": 69,
+        "relation": "UsedIn",
+        "correct_feat": "the mid-seventeenth century",
+        "options": "1. the mid-seventeenth century\n2. Jewish tradition\n3. Brighton's cultural identity",
+        "correct_num": 1,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is used in [MASK].\n\nOptions:\n1. the mid-seventeenth century\n2. Jewish tradition\n3. Brighton's cultural identity"
+    },
+    {
+        "test_id": 71,
+        "relation": "UsedIn",
+        "correct_feat": "British usage",
+        "options": "1. the Constitution of 1978\n2. a book\n3. British usage",
+        "correct_num": 3,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is used in [MASK].\n\nOptions:\n1. the Constitution of 1978\n2. a book\n3. British usage"
+    },
+    {
+        "test_id": 72,
+        "relation": "UsedTo",
+        "correct_feat": "produce four leaves",
+        "options": "1. produce four leaves\n2. attempt a goal\n3. release new artists",
+        "correct_num": 1,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is used to [MASK].\n\nOptions:\n1. produce four leaves\n2. attempt a goal\n3. release new artists"
+    },
+    {
+        "test_id": 73,
+        "relation": "UsedTo",
+        "correct_feat": "produce eight book pages",
+        "options": "1. reverse play\n2. produce eight book pages\n3. mimic the movements of other board sports",
+        "correct_num": 2,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is used to [MASK].\n\nOptions:\n1. reverse play\n2. produce eight book pages\n3. mimic the movements of other board sports"
+    },
+    {
+        "test_id": 74,
+        "relation": "UsedTo",
+        "correct_feat": "form a book",
+        "options": "1. ensure consistency in the application of the death penalty\n2. hit the ball across the court\n3. form a book",
+        "correct_num": 3,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is used to [MASK].\n\nOptions:\n1. ensure consistency in the application of the death penalty\n2. hit the ball across the court\n3. form a book"
+    },
+    {
+        "test_id": 75,
+        "relation": "UsedTo",
+        "correct_feat": "attach gatherings",
+        "options": "1. attach gatherings\n2. spread through Europe and the Americas\n3. prophesy to Mary",
+        "correct_num": 1,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is used to [MASK].\n\nOptions:\n1. attach gatherings\n2. spread through Europe and the Americas\n3. prophesy to Mary"
+    },
+    {
+        "test_id": 76,
+        "relation": "UsedTo",
+        "correct_feat": "insert additional leaves",
+        "options": "1. stream attempts live on Twitch\n2. insert additional leaves\n3. broaden radical feminism's theory",
+        "correct_num": 2,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is used to [MASK].\n\nOptions:\n1. stream attempts live on Twitch\n2. insert additional leaves\n3. broaden radical feminism's theory"
+    },
+    {
+        "test_id": 77,
+        "relation": "WrittenIn",
+        "correct_feat": "Latin",
+        "options": "1. Hebrew\n2. Bashkir\n3. Latin",
+        "correct_num": 3,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> was written in [MASK].\n\nOptions:\n1. Hebrew\n2. Bashkir\n3. Latin"
+    }
+]

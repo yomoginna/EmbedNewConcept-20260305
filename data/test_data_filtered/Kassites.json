@@ -1,0 +1,754 @@
+[
+    {
+        "test_id": 0,
+        "relation": "About",
+        "correct_feat": "a people of the ancient Near East",
+        "options": "1. a people of the ancient Near East\n2. a left-wing set of political philosophies that supports political democracy and some form of a socially owned economy\n3. the Bancroft Treaties and their eventual abandonment",
+        "correct_num": 1,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is about [MASK].\n\nOptions:\n1. a people of the ancient Near East\n2. a left-wing set of political philosophies that supports political democracy and some form of a socially owned economy\n3. the Bancroft Treaties and their eventual abandonment"
+    },
+    {
+        "test_id": 1,
+        "relation": "Affects",
+        "correct_feat": "the ancient Near East",
+        "options": "1. the anime series Hand Shakers\n2. the ancient Near East\n3. the political organization of the Spanish nation",
+        "correct_num": 2,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> affects [MASK].\n\nOptions:\n1. the anime series Hand Shakers\n2. the ancient Near East\n3. the political organization of the Spanish nation"
+    },
+    {
+        "test_id": 2,
+        "relation": "AssociatedWith",
+        "correct_feat": "the Zagros Mountains",
+        "options": "1. the 9th to 15th centuries\n2. the Russian Uniate Church \u2013 today Ukrainian Greek Catholic Church\n3. the Zagros Mountains",
+        "correct_num": 3,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is associated with [MASK].\n\nOptions:\n1. the 9th to 15th centuries\n2. the Russian Uniate Church \u2013 today Ukrainian Greek Catholic Church\n3. the Zagros Mountains"
+    },
+    {
+        "test_id": 3,
+        "relation": "BelongsTo",
+        "correct_feat": "the ancient Near East",
+        "options": "1. the ancient Near East\n2. the mausoleum of St Agnes in Rome\n3. the context of torture, deaths in prison, and forced disappearances",
+        "correct_num": 1,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> belongs to [MASK].\n\nOptions:\n1. the ancient Near East\n2. the mausoleum of St Agnes in Rome\n3. the context of torture, deaths in prison, and forced disappearances"
+    },
+    {
+        "test_id": 4,
+        "relation": "BuiltIn",
+        "correct_feat": "in Babylonia",
+        "options": "1. in the Netherlands\n2. in Babylonia\n3. in eight years",
+        "correct_num": 2,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> was built [MASK].\n\nOptions:\n1. in the Netherlands\n2. in Babylonia\n3. in eight years"
+    },
+    {
+        "test_id": 5,
+        "relation": "ConsistsOf",
+        "correct_feat": "people originating from the Zagros Mountains",
+        "options": "1. an analysis of economic exploitation of all\n2. Arab socialism, republicanism, secularism, nationalism, anti-imperialism, developing world solidarity, Pan-Arabism, and international non-alignment\n3. people originating from the Zagros Mountains",
+        "correct_num": 3,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> consists of [MASK].\n\nOptions:\n1. an analysis of economic exploitation of all\n2. Arab socialism, republicanism, secularism, nationalism, anti-imperialism, developing world solidarity, Pan-Arabism, and international non-alignment\n3. people originating from the Zagros Mountains"
+    },
+    {
+        "test_id": 6,
+        "relation": "CreatedAround",
+        "correct_feat": "1531 BC",
+        "options": "1. 1531 BC\n2. the 1940s\n3. the 15th century when the Magi were often made to represent the three known parts of the world",
+        "correct_num": 1,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> was created around [MASK].\n\nOptions:\n1. 1531 BC\n2. the 1940s\n3. the 15th century when the Magi were often made to represent the three known parts of the world"
+    },
+    {
+        "test_id": 7,
+        "relation": "CreatedIn",
+        "correct_feat": "the ancient Near East",
+        "options": "1. 1873-1874\n2. the ancient Near East\n3. 2004",
+        "correct_num": 2,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> was created in [MASK].\n\nOptions:\n1. 1873-1874\n2. the ancient Near East\n3. 2004"
+    },
+    {
+        "test_id": 8,
+        "relation": "DevelopedIn",
+        "correct_feat": "Babylonia",
+        "options": "1. Sweden\n2. the context of the music industry\n3. Babylonia",
+        "correct_num": 3,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> was developed in [MASK].\n\nOptions:\n1. Sweden\n2. the context of the music industry\n3. Babylonia"
+    },
+    {
+        "test_id": 9,
+        "relation": "FoundedIn",
+        "correct_feat": "the Zagros Mountains",
+        "options": "1. the Zagros Mountains\n2. 2013\n3. 1746",
+        "correct_num": 1,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> was founded in [MASK].\n\nOptions:\n1. the Zagros Mountains\n2. 2013\n3. 1746"
+    },
+    {
+        "test_id": 10,
+        "relation": "HasA",
+        "correct_feat": "a language of uncertain origin and classification",
+        "options": "1. a rock under the chapel altar\n2. a language of uncertain origin and classification\n3. the distribution of resources from each according to his ability, to each according to his needs",
+        "correct_num": 2,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> has [MASK].\n\nOptions:\n1. a rock under the chapel altar\n2. a language of uncertain origin and classification\n3. the distribution of resources from each according to his ability, to each according to his needs"
+    },
+    {
+        "test_id": 12,
+        "relation": "HasA",
+        "correct_feat": "chief gods named Shuqamuna and Shumaliya",
+        "options": "1. chief gods named Shuqamuna and Shumaliya\n2. individual and local empowerment\n3. monks gardening in the middle ground",
+        "correct_num": 1,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> has [MASK].\n\nOptions:\n1. chief gods named Shuqamuna and Shumaliya\n2. individual and local empowerment\n3. monks gardening in the middle ground"
+    },
+    {
+        "test_id": 13,
+        "relation": "HasA",
+        "correct_feat": "a dynasty that controlled Babylonia",
+        "options": "1. a tiller or wheel stern controlling the steering runner\n2. a dynasty that controlled Babylonia\n3. a time limit",
+        "correct_num": 2,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> has [MASK].\n\nOptions:\n1. a tiller or wheel stern controlling the steering runner\n2. a dynasty that controlled Babylonia\n3. a time limit"
+    },
+    {
+        "test_id": 14,
+        "relation": "HasFeatureOf",
+        "correct_feat": "controlling Babylonia",
+        "options": "1. the abandonment of exclusive teaching of Catholicism in schools\n2. extensive book-keeping requirements\n3. controlling Babylonia",
+        "correct_num": 3,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is characterized by [MASK].\n\nOptions:\n1. the abandonment of exclusive teaching of Catholicism in schools\n2. extensive book-keeping requirements\n3. controlling Babylonia"
+    },
+    {
+        "test_id": 15,
+        "relation": "HasFeatureOf",
+        "correct_feat": "establishing a dynasty",
+        "options": "1. establishing a dynasty\n2. the loss of horses and accoutrements\n3. combat-oriented gameplay",
+        "correct_num": 1,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is characterized by [MASK].\n\nOptions:\n1. establishing a dynasty\n2. the loss of horses and accoutrements\n3. combat-oriented gameplay"
+    },
+    {
+        "test_id": 16,
+        "relation": "HasFeatureOf",
+        "correct_feat": "interactions with Babylon",
+        "options": "1. the ethos of the early gender-egalitarian men's movement\n2. interactions with Babylon\n3. the American player bringing on reinforcements at a certain point in the game",
+        "correct_num": 2,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is characterized by [MASK].\n\nOptions:\n1. the ethos of the early gender-egalitarian men's movement\n2. interactions with Babylon\n3. the American player bringing on reinforcements at a certain point in the game"
+    },
+    {
+        "test_id": 17,
+        "relation": "HasFeatureOf",
+        "correct_feat": "being known as Kossaioi in Hellenistic times",
+        "options": "1. its Apprentice Program for Technicians\n2. having exhibition events\n3. being known as Kossaioi in Hellenistic times",
+        "correct_num": 3,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is characterized by [MASK].\n\nOptions:\n1. its Apprentice Program for Technicians\n2. having exhibition events\n3. being known as Kossaioi in Hellenistic times"
+    },
+    {
+        "test_id": 18,
+        "relation": "HasFeatureOf",
+        "correct_feat": "a language isolate",
+        "options": "1. a language isolate\n2. the boredom of the academic art of that era\n3. chokeholds",
+        "correct_num": 1,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is characterized by [MASK].\n\nOptions:\n1. a language isolate\n2. the boredom of the academic art of that era\n3. chokeholds"
+    },
+    {
+        "test_id": 19,
+        "relation": "HasFeatureOf",
+        "correct_feat": "a religion with distinct deities",
+        "options": "1. a base-16 number system\n2. a religion with distinct deities\n3. being more capable of supporting shear loads than tension loads",
+        "correct_num": 2,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is characterized by [MASK].\n\nOptions:\n1. a base-16 number system\n2. a religion with distinct deities\n3. being more capable of supporting shear loads than tension loads"
+    },
+    {
+        "test_id": 20,
+        "relation": "HasFeatureOf",
+        "correct_feat": "the absorption of Marduk into its pantheon",
+        "options": "1. terrain that can be converted from one type to another as a result of combat\n2. the image of the Child Jesus depicted within a round aureole upon her breast\n3. the absorption of Marduk into its pantheon",
+        "correct_num": 3,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is characterized by [MASK].\n\nOptions:\n1. terrain that can be converted from one type to another as a result of combat\n2. the image of the Child Jesus depicted within a round aureole upon her breast\n3. the absorption of Marduk into its pantheon"
+    },
+    {
+        "test_id": 21,
+        "relation": "HasFeatureOf",
+        "correct_feat": "a reputation for brigandage",
+        "options": "1. a reputation for brigandage\n2. its critical tone towards the government\n3. simplified rules compared to some other wargames",
+        "correct_num": 1,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is characterized by [MASK].\n\nOptions:\n1. a reputation for brigandage\n2. its critical tone towards the government\n3. simplified rules compared to some other wargames"
+    },
+    {
+        "test_id": 22,
+        "relation": "HasFeatureOf",
+        "correct_feat": "military employment",
+        "options": "1. its ruling that New York's law was unconstitutional\n2. military employment\n3. the practice of torture widely documented as a distinctive trait of the Egyptian police",
+        "correct_num": 2,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is characterized by [MASK].\n\nOptions:\n1. its ruling that New York's law was unconstitutional\n2. military employment\n3. the practice of torture widely documented as a distinctive trait of the Egyptian police"
+    },
+    {
+        "test_id": 23,
+        "relation": "HasFeatureOf",
+        "correct_feat": "trade",
+        "options": "1. the 3\u00d73\u00d73 version being played out to a draw by including a 3rd player\n2. a per curiam decision\n3. trade",
+        "correct_num": 3,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is characterized by [MASK].\n\nOptions:\n1. the 3\u00d73\u00d73 version being played out to a draw by including a 3rd player\n2. a per curiam decision\n3. trade"
+    },
+    {
+        "test_id": 24,
+        "relation": "HeldIn",
+        "correct_feat": "Dur-Kurigalzu",
+        "options": "1. Dur-Kurigalzu\n2. Ireland\n3. the Western Region of Ghana",
+        "correct_num": 1,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> was held in [MASK].\n\nOptions:\n1. Dur-Kurigalzu\n2. Ireland\n3. the Western Region of Ghana"
+    },
+    {
+        "test_id": 25,
+        "relation": "HeldIn",
+        "correct_feat": "Kish",
+        "options": "1. the Czech Republic in 2008\n2. Kish\n3. the Dormition Cathedral, Moscow",
+        "correct_num": 2,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> was held in [MASK].\n\nOptions:\n1. the Czech Republic in 2008\n2. Kish\n3. the Dormition Cathedral, Moscow"
+    },
+    {
+        "test_id": 26,
+        "relation": "HeldIn",
+        "correct_feat": "Qal'at al-Bahrain",
+        "options": "1. Los Angeles\n2. London\n3. Qal'at al-Bahrain",
+        "correct_num": 3,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> was held in [MASK].\n\nOptions:\n1. Los Angeles\n2. London\n3. Qal'at al-Bahrain"
+    },
+    {
+        "test_id": 27,
+        "relation": "HeldIn",
+        "correct_feat": "Larsa",
+        "options": "1. Larsa\n2. schoolyards\n3. a body of water",
+        "correct_num": 1,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> was held in [MASK].\n\nOptions:\n1. Larsa\n2. schoolyards\n3. a body of water"
+    },
+    {
+        "test_id": 28,
+        "relation": "HeldIn",
+        "correct_feat": "Sippar",
+        "options": "1. the Mus\u00e9e des Beaux-Arts, Strasbourg\n2. Sippar\n3. 2006 for the Major Fun Award",
+        "correct_num": 2,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> was held in [MASK].\n\nOptions:\n1. the Mus\u00e9e des Beaux-Arts, Strasbourg\n2. Sippar\n3. 2006 for the Major Fun Award"
+    },
+    {
+        "test_id": 29,
+        "relation": "HeldIn",
+        "correct_feat": "Susa",
+        "options": "1. Austin\n2. China\n3. Susa",
+        "correct_num": 3,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> was held in [MASK].\n\nOptions:\n1. Austin\n2. China\n3. Susa"
+    },
+    {
+        "test_id": 30,
+        "relation": "HeldIn",
+        "correct_feat": "Ur",
+        "options": "1. Ur\n2. the Church of Saint Mary in Posterula\n3. 1868",
+        "correct_num": 1,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> was held in [MASK].\n\nOptions:\n1. Ur\n2. the Church of Saint Mary in Posterula\n3. 1868"
+    },
+    {
+        "test_id": 31,
+        "relation": "HeldIn",
+        "correct_feat": "Isin",
+        "options": "1. Australia\n2. Isin\n3. the borough",
+        "correct_num": 2,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> was held in [MASK].\n\nOptions:\n1. Australia\n2. Isin\n3. the borough"
+    },
+    {
+        "test_id": 32,
+        "relation": "HeldIn",
+        "correct_feat": "the Zagros Mountains",
+        "options": "1. Iowa City\n2. Vienne\n3. the Zagros Mountains",
+        "correct_num": 3,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> was held in [MASK].\n\nOptions:\n1. Iowa City\n2. Vienne\n3. the Zagros Mountains"
+    },
+    {
+        "test_id": 33,
+        "relation": "Influenced",
+        "correct_feat": "the region of Babylonia",
+        "options": "1. the region of Babylonia\n2. popular culture\n3. the cultural identity of Toulouse",
+        "correct_num": 1,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> influenced [MASK].\n\nOptions:\n1. the region of Babylonia\n2. popular culture\n3. the cultural identity of Toulouse"
+    },
+    {
+        "test_id": 34,
+        "relation": "Influenced",
+        "correct_feat": "Mesopotamia",
+        "options": "1. the film Dhadak\n2. Mesopotamia\n3. most left communists, both politically and theoretically",
+        "correct_num": 2,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> influenced [MASK].\n\nOptions:\n1. the film Dhadak\n2. Mesopotamia\n3. most left communists, both politically and theoretically"
+    },
+    {
+        "test_id": 35,
+        "relation": "InfluencedBy",
+        "correct_feat": "the Hittites",
+        "options": "1. the Hellenistic Jewish philosopher Philo\n2. the arrival of Christopher Columbus in 1493\n3. the Hittites",
+        "correct_num": 3,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> was influenced by [MASK].\n\nOptions:\n1. the Hellenistic Jewish philosopher Philo\n2. the arrival of Christopher Columbus in 1493\n3. the Hittites"
+    },
+    {
+        "test_id": 36,
+        "relation": "InfluencedBy",
+        "correct_feat": "the Elamites",
+        "options": "1. the Elamites\n2. the grammaire g\u00e9n\u00e9rale\n3. contemporary social and scientific culture",
+        "correct_num": 1,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> was influenced by [MASK].\n\nOptions:\n1. the Elamites\n2. the grammaire g\u00e9n\u00e9rale\n3. contemporary social and scientific culture"
+    },
+    {
+        "test_id": 37,
+        "relation": "InfluencedBy",
+        "correct_feat": "the Assyrians",
+        "options": "1. the Eighth and Fourteenth Amendments\n2. the Assyrians\n3. the Troubles",
+        "correct_num": 2,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> was influenced by [MASK].\n\nOptions:\n1. the Eighth and Fourteenth Amendments\n2. the Assyrians\n3. the Troubles"
+    },
+    {
+        "test_id": 38,
+        "relation": "InfluencedBy",
+        "correct_feat": "Egypt",
+        "options": "1. the Comoros\n2. Uzbekistan\n3. Egypt",
+        "correct_num": 3,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> was influenced by [MASK].\n\nOptions:\n1. the Comoros\n2. Uzbekistan\n3. Egypt"
+    },
+    {
+        "test_id": 39,
+        "relation": "IsA",
+        "correct_feat": "a people of the ancient Near East",
+        "options": "1. a people of the ancient Near East\n2. a variant of checkers\n3. a three-dimensional space",
+        "correct_num": 1,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is [MASK].\n\nOptions:\n1. a people of the ancient Near East\n2. a variant of checkers\n3. a three-dimensional space"
+    },
+    {
+        "test_id": 40,
+        "relation": "IsA",
+        "correct_feat": "a dynasty that controlled Babylonia",
+        "options": "1. a tragedy written by William Shakespeare\n2. a dynasty that controlled Babylonia\n3. a series of abstract games",
+        "correct_num": 2,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is [MASK].\n\nOptions:\n1. a tragedy written by William Shakespeare\n2. a dynasty that controlled Babylonia\n3. a series of abstract games"
+    },
+    {
+        "test_id": 41,
+        "relation": "IsA",
+        "correct_feat": "a language isolate",
+        "options": "1. a work by Leonardo\n2. a conflict that resulted in Ireland and Scotland being incorporated into the Commonwealth\n3. a language isolate",
+        "correct_num": 3,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is [MASK].\n\nOptions:\n1. a work by Leonardo\n2. a conflict that resulted in Ireland and Scotland being incorporated into the Commonwealth\n3. a language isolate"
+    },
+    {
+        "test_id": 42,
+        "relation": "IsA",
+        "correct_feat": "a group that originated from the Zagros Mountains",
+        "options": "1. a group that originated from the Zagros Mountains\n2. a 12-inch record\n3. a cruel and unnecessary activity according to opponents",
+        "correct_num": 1,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is [MASK].\n\nOptions:\n1. a group that originated from the Zagros Mountains\n2. a 12-inch record\n3. a cruel and unnecessary activity according to opponents"
+    },
+    {
+        "test_id": 43,
+        "relation": "KnownAs",
+        "correct_feat": "Kossaioi in Hellenistic times",
+        "options": "1. Nazionalismo italiano\n2. Kossaioi in Hellenistic times\n3. the \"hall of lost steps\"",
+        "correct_num": 2,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is known as [MASK].\n\nOptions:\n1. Nazionalismo italiano\n2. Kossaioi in Hellenistic times\n3. the \"hall of lost steps\""
+    },
+    {
+        "test_id": 44,
+        "relation": "KnownFor",
+        "correct_feat": "controlling Babylonia",
+        "options": "1. Hartenfels Castle, the largest completely preserved castle of the early Renaissance in Germany\n2. the Christ child gazing at a niddy-noddy\n3. controlling Babylonia",
+        "correct_num": 3,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is known for [MASK].\n\nOptions:\n1. Hartenfels Castle, the largest completely preserved castle of the early Renaissance in Germany\n2. the Christ child gazing at a niddy-noddy\n3. controlling Babylonia"
+    },
+    {
+        "test_id": 45,
+        "relation": "KnownFor",
+        "correct_feat": "establishing a dynasty",
+        "options": "1. establishing a dynasty\n2. the \"No Hammer Challenge\" category\n3. white supremacist adoption of jihadist culture",
+        "correct_num": 1,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is known for [MASK].\n\nOptions:\n1. establishing a dynasty\n2. the \"No Hammer Challenge\" category\n3. white supremacist adoption of jihadist culture"
+    },
+    {
+        "test_id": 46,
+        "relation": "KnownFor",
+        "correct_feat": "its interactions with Babylon",
+        "options": "1. driving fasteners\n2. its interactions with Babylon\n3. its \"I Go, You Go\" system of alternating player turns",
+        "correct_num": 2,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is known for [MASK].\n\nOptions:\n1. driving fasteners\n2. its interactions with Babylon\n3. its \"I Go, You Go\" system of alternating player turns"
+    },
+    {
+        "test_id": 47,
+        "relation": "KnownFor",
+        "correct_feat": "its language isolate",
+        "options": "1. opposing a united Ireland independent of the UK\n2. winning the \"Original Song of the Year\" award at the Victoires de la Musique\n3. its language isolate",
+        "correct_num": 3,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is known for [MASK].\n\nOptions:\n1. opposing a united Ireland independent of the UK\n2. winning the \"Original Song of the Year\" award at the Victoires de la Musique\n3. its language isolate"
+    },
+    {
+        "test_id": 48,
+        "relation": "KnownFor",
+        "correct_feat": "its distinct deities",
+        "options": "1. its distinct deities\n2. being largely replaced by high-strength bolts in structural steel construction\n3. a fusion of rock music, soul music, and rhythm and blues",
+        "correct_num": 1,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is known for [MASK].\n\nOptions:\n1. its distinct deities\n2. being largely replaced by high-strength bolts in structural steel construction\n3. a fusion of rock music, soul music, and rhythm and blues"
+    },
+    {
+        "test_id": 49,
+        "relation": "KnownFor",
+        "correct_feat": "its reputation for brigandage",
+        "options": "1. exacerbating social conflict\n2. its reputation for brigandage\n3. its association with political values derived from the Age of Enlightenment and the republicanism growing out of the French Revolution and the Revolutions of 1848",
+        "correct_num": 2,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is known for [MASK].\n\nOptions:\n1. exacerbating social conflict\n2. its reputation for brigandage\n3. its association with political values derived from the Age of Enlightenment and the republicanism growing out of the French Revolution and the Revolutions of 1848"
+    },
+    {
+        "test_id": 50,
+        "relation": "LocatedIn",
+        "correct_feat": "in the Zagros Mountains",
+        "options": "1. in Tbilisi\n2. in Atlanta\n3. in the Zagros Mountains",
+        "correct_num": 3,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is located [MASK].\n\nOptions:\n1. in Tbilisi\n2. in Atlanta\n3. in the Zagros Mountains"
+    },
+    {
+        "test_id": 51,
+        "relation": "LocatedIn",
+        "correct_feat": "in Babylonia",
+        "options": "1. in Babylonia\n2. in France\n3. in St. Paul, Minnesota",
+        "correct_num": 1,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is located [MASK].\n\nOptions:\n1. in Babylonia\n2. in France\n3. in St. Paul, Minnesota"
+    },
+    {
+        "test_id": 52,
+        "relation": "LocatedIn",
+        "correct_feat": "in Mesopotamia",
+        "options": "1. in Northern Europe\n2. in Mesopotamia\n3. in Greater Manchester",
+        "correct_num": 2,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is located [MASK].\n\nOptions:\n1. in Northern Europe\n2. in Mesopotamia\n3. in Greater Manchester"
+    },
+    {
+        "test_id": 53,
+        "relation": "LocatedIn",
+        "correct_feat": "in the Diyala River region",
+        "options": "1. in the West\n2. in Utah, US\n3. in the Diyala River region",
+        "correct_num": 3,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is located [MASK].\n\nOptions:\n1. in the West\n2. in Utah, US\n3. in the Diyala River region"
+    },
+    {
+        "test_id": 54,
+        "relation": "MemberOf",
+        "correct_feat": "the ancient Near East",
+        "options": "1. the ancient Near East\n2. the Polydor label\n3. French Impressionist heritage",
+        "correct_num": 1,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is a member of [MASK].\n\nOptions:\n1. the ancient Near East\n2. the Polydor label\n3. French Impressionist heritage"
+    },
+    {
+        "test_id": 55,
+        "relation": "OccurredBetween",
+        "correct_feat": "1770 BCE and 1155 BC",
+        "options": "1. 1972 and 1973\n2. 1770 BCE and 1155 BC\n3. 1948 and 1952",
+        "correct_num": 2,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> occurred between [MASK].\n\nOptions:\n1. 1972 and 1973\n2. 1770 BCE and 1155 BC\n3. 1948 and 1952"
+    },
+    {
+        "test_id": 56,
+        "relation": "OccurredBetween",
+        "correct_feat": "1686 to 1648 BC",
+        "options": "1. the 1860s and 1871\n2. 1807 and 1833\n3. 1686 to 1648 BC",
+        "correct_num": 3,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> occurred between [MASK].\n\nOptions:\n1. the 1860s and 1871\n2. 1807 and 1833\n3. 1686 to 1648 BC"
+    },
+    {
+        "test_id": 57,
+        "relation": "OccurredBetween",
+        "correct_feat": "2000\u20131500 BC",
+        "options": "1. 2000\u20131500 BC\n2. 1927 and 1999\n3. the late 19th and early 20th century",
+        "correct_num": 1,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> occurred between [MASK].\n\nOptions:\n1. 2000\u20131500 BC\n2. 1927 and 1999\n3. the late 19th and early 20th century"
+    },
+    {
+        "test_id": 58,
+        "relation": "OccurredBetween",
+        "correct_feat": "2112\u20132004 BC",
+        "options": "1. 1974-2008\n2. 2112\u20132004 BC\n3. the late 19th and early 20th century",
+        "correct_num": 2,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> occurred between [MASK].\n\nOptions:\n1. 1974-2008\n2. 2112\u20132004 BC\n3. the late 19th and early 20th century"
+    },
+    {
+        "test_id": 59,
+        "relation": "OccurredBetween",
+        "correct_feat": "14th and 12th centuries BC",
+        "options": "1. 40,000 years ago and the present\n2. 2 million and 400,000 years ago\n3. 14th and 12th centuries BC",
+        "correct_num": 3,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> occurred between [MASK].\n\nOptions:\n1. 40,000 years ago and the present\n2. 2 million and 400,000 years ago\n3. 14th and 12th centuries BC"
+    },
+    {
+        "test_id": 60,
+        "relation": "OccurredAround",
+        "correct_feat": "1531 BC",
+        "options": "1. 1531 BC\n2. the first millennium BC\n3. the early 20th century",
+        "correct_num": 1,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> occurred around [MASK].\n\nOptions:\n1. 1531 BC\n2. the first millennium BC\n3. the early 20th century"
+    },
+    {
+        "test_id": 62,
+        "relation": "OccurredAround",
+        "correct_feat": "1460 BC",
+        "options": "1. 1963\n2. 1904\n3. 1460 BC",
+        "correct_num": 3,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> occurred around [MASK].\n\nOptions:\n1. 1963\n2. 1904\n3. 1460 BC"
+    },
+    {
+        "test_id": 63,
+        "relation": "OccurredAround",
+        "correct_feat": "the early 14th century BC",
+        "options": "1. the early 14th century BC\n2. 1999\n3. 1801",
+        "correct_num": 1,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> occurred around [MASK].\n\nOptions:\n1. the early 14th century BC\n2. 1999\n3. 1801"
+    },
+    {
+        "test_id": 64,
+        "relation": "OccurredAround",
+        "correct_feat": "the mid 14th century BC",
+        "options": "1. 1968\n2. the mid 14th century BC\n3. 1904",
+        "correct_num": 2,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> occurred around [MASK].\n\nOptions:\n1. 1968\n2. the mid 14th century BC\n3. 1904"
+    },
+    {
+        "test_id": 65,
+        "relation": "OccurredAround",
+        "correct_feat": "1259 BC",
+        "options": "1. 1807\n2. the time of the Revolution of 1905\n3. 1259 BC",
+        "correct_num": 3,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> occurred around [MASK].\n\nOptions:\n1. 1807\n2. the time of the Revolution of 1905\n3. 1259 BC"
+    },
+    {
+        "test_id": 66,
+        "relation": "OccurredAround",
+        "correct_feat": "1410 BC",
+        "options": "1. 1410 BC\n2. 2018\n3. the same time that Tassoni was inspired to write the Filippiche",
+        "correct_num": 1,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> occurred around [MASK].\n\nOptions:\n1. 1410 BC\n2. 2018\n3. the same time that Tassoni was inspired to write the Filippiche"
+    },
+    {
+        "test_id": 68,
+        "relation": "OccurredAround",
+        "correct_feat": "331 B. C",
+        "options": "1. 2017\n2. 1829\n3. 331 B. C",
+        "correct_num": 3,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> occurred around [MASK].\n\nOptions:\n1. 2017\n2. 1829\n3. 331 B. C"
+    },
+    {
+        "test_id": 69,
+        "relation": "OccurredAround",
+        "correct_feat": "324-3",
+        "options": "1. 324-3\n2. 1825\n3. October 1932",
+        "correct_num": 1,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> occurred around [MASK].\n\nOptions:\n1. 324-3\n2. 1825\n3. October 1932"
+    },
+    {
+        "test_id": 70,
+        "relation": "OriginatedIn",
+        "correct_feat": "the Zagros Mountains",
+        "options": "1. the Jura Federation\n2. the Zagros Mountains\n3. Iran",
+        "correct_num": 2,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> originated in [MASK].\n\nOptions:\n1. the Jura Federation\n2. the Zagros Mountains\n3. Iran"
+    },
+    {
+        "test_id": 71,
+        "relation": "PartOf",
+        "correct_feat": "the ancient Near East",
+        "options": "1. the Loverdos Collection\n2. Peronism\n3. the ancient Near East",
+        "correct_num": 3,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is part of [MASK].\n\nOptions:\n1. the Loverdos Collection\n2. Peronism\n3. the ancient Near East"
+    },
+    {
+        "test_id": 72,
+        "relation": "PartOf",
+        "correct_feat": "the history of Babylonia",
+        "options": "1. the history of Babylonia\n2. Bring Me the Horizon\n3. the legacy of bygone eras",
+        "correct_num": 1,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is part of [MASK].\n\nOptions:\n1. the history of Babylonia\n2. Bring Me the Horizon\n3. the legacy of bygone eras"
+    },
+    {
+        "test_id": 73,
+        "relation": "UsedAs",
+        "correct_feat": "a gentilic adjective",
+        "options": "1. a form of entertainment\n2. a gentilic adjective\n3. a tool to confront the climate crisis",
+        "correct_num": 2,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is used as [MASK].\n\nOptions:\n1. a form of entertainment\n2. a gentilic adjective\n3. a tool to confront the climate crisis"
+    },
+    {
+        "test_id": 74,
+        "relation": "UsedAs",
+        "correct_feat": "a proper noun",
+        "options": "1. a pejorative term\n2. a temporary replacement for a higher Bailey bridge\n3. a proper noun",
+        "correct_num": 3,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is used as [MASK].\n\nOptions:\n1. a pejorative term\n2. a temporary replacement for a higher Bailey bridge\n3. a proper noun"
+    },
+    {
+        "test_id": 75,
+        "relation": "UsedFor",
+        "correct_feat": "controlling Babylonia",
+        "options": "1. controlling Babylonia\n2. boxing and wrestling techniques\n3. illustrating movement from World War II towards harmony and sharing",
+        "correct_num": 1,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is used for [MASK].\n\nOptions:\n1. controlling Babylonia\n2. boxing and wrestling techniques\n3. illustrating movement from World War II towards harmony and sharing"
+    },
+    {
+        "test_id": 76,
+        "relation": "UsedFor",
+        "correct_feat": "establishing a dynasty",
+        "options": "1. promoting its rich cultural heritage as attractions for a viable sustainable tourism destination\n2. establishing a dynasty\n3. shifting American right-wing politics away from the neoconservative movement",
+        "correct_num": 2,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is used for [MASK].\n\nOptions:\n1. promoting its rich cultural heritage as attractions for a viable sustainable tourism destination\n2. establishing a dynasty\n3. shifting American right-wing politics away from the neoconservative movement"
+    },
+    {
+        "test_id": 77,
+        "relation": "UsedFor",
+        "correct_feat": "military employment",
+        "options": "1. teaching arithmetic\n2. promoting safe driving\n3. military employment",
+        "correct_num": 3,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is used for [MASK].\n\nOptions:\n1. teaching arithmetic\n2. promoting safe driving\n3. military employment"
+    },
+    {
+        "test_id": 78,
+        "relation": "UsedFor",
+        "correct_feat": "trade",
+        "options": "1. trade\n2. granting eternal life to the righteous\n3. the Tsardom of Russia",
+        "correct_num": 1,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is used for [MASK].\n\nOptions:\n1. trade\n2. granting eternal life to the righteous\n3. the Tsardom of Russia"
+    },
+    {
+        "test_id": 79,
+        "relation": "UsedFor",
+        "correct_feat": "land grants",
+        "options": "1. portraying life and time on the island\n2. land grants\n3. offering games that have won awards",
+        "correct_num": 2,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is used for [MASK].\n\nOptions:\n1. portraying life and time on the island\n2. land grants\n3. offering games that have won awards"
+    },
+    {
+        "test_id": 80,
+        "relation": "UsedFor",
+        "correct_feat": "building efforts",
+        "options": "1. providing instruction in stage properties\n2. creating a utopia of an ideal Italian republic\n3. building efforts",
+        "correct_num": 3,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is used for [MASK].\n\nOptions:\n1. providing instruction in stage properties\n2. creating a utopia of an ideal Italian republic\n3. building efforts"
+    },
+    {
+        "test_id": 81,
+        "relation": "UsedFor",
+        "correct_feat": "political conflict",
+        "options": "1. political conflict\n2. hitting the ball\n3. unification of Italy",
+        "correct_num": 1,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is used for [MASK].\n\nOptions:\n1. political conflict\n2. hitting the ball\n3. unification of Italy"
+    },
+    {
+        "test_id": 83,
+        "relation": "UsedFor",
+        "correct_feat": "resettlement",
+        "options": "1. bouncing fast, far, and high in the lake or ocean\n2. advertising something\n3. resettlement",
+        "correct_num": 3,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is used for [MASK].\n\nOptions:\n1. bouncing fast, far, and high in the lake or ocean\n2. advertising something\n3. resettlement"
+    },
+    {
+        "test_id": 84,
+        "relation": "UsedFor",
+        "correct_feat": "exacting tribute",
+        "options": "1. exacting tribute\n2. supporting someone\n3. entertainment",
+        "correct_num": 1,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is used for [MASK].\n\nOptions:\n1. exacting tribute\n2. supporting someone\n3. entertainment"
+    },
+    {
+        "test_id": 85,
+        "relation": "UsedIn",
+        "correct_feat": "economic documents",
+        "options": "1. lightweight fabrics when printed\n2. economic documents\n3. separate matches for .22 LR rimfire handguns and rifles",
+        "correct_num": 2,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is used in [MASK].\n\nOptions:\n1. lightweight fabrics when printed\n2. economic documents\n3. separate matches for .22 LR rimfire handguns and rifles"
+    },
+    {
+        "test_id": 86,
+        "relation": "UsedIn",
+        "correct_feat": "administrative texts",
+        "options": "1. Scotland\n2. Van Sant's film Drugstore Cowboy\n3. administrative texts",
+        "correct_num": 3,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is used in [MASK].\n\nOptions:\n1. Scotland\n2. Van Sant's film Drugstore Cowboy\n3. administrative texts"
+    },
+    {
+        "test_id": 87,
+        "relation": "UsedIn",
+        "correct_feat": "legal texts",
+        "options": "1. legal texts\n2. official national and international lure coursing trials\n3. Italy",
+        "correct_num": 1,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is used in [MASK].\n\nOptions:\n1. legal texts\n2. official national and international lure coursing trials\n3. Italy"
+    },
+    {
+        "test_id": 89,
+        "relation": "UsedIn",
+        "correct_feat": "seal inscriptions",
+        "options": "1. the Philippines\n2. Manuela\n3. seal inscriptions",
+        "correct_num": 3,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is used in [MASK].\n\nOptions:\n1. the Philippines\n2. Manuela\n3. seal inscriptions"
+    },
+    {
+        "test_id": 90,
+        "relation": "UsedIn",
+        "correct_feat": "private votive inscriptions",
+        "options": "1. private votive inscriptions\n2. longline fisheries for tuna, billfish, and dolphinfish\n3. the C\u00e9ret Cherry Festival",
+        "correct_num": 1,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is used in [MASK].\n\nOptions:\n1. private votive inscriptions\n2. longline fisheries for tuna, billfish, and dolphinfish\n3. the C\u00e9ret Cherry Festival"
+    },
+    {
+        "test_id": 91,
+        "relation": "UsedIn",
+        "correct_feat": "literary texts",
+        "options": "1. poetry\n2. literary texts\n3. Malaysia",
+        "correct_num": 2,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is used in [MASK].\n\nOptions:\n1. poetry\n2. literary texts\n3. Malaysia"
+    },
+    {
+        "test_id": 92,
+        "relation": "UsedIn",
+        "correct_feat": "building inscriptions",
+        "options": "1. public lands\n2. a ziplock bag\n3. building inscriptions",
+        "correct_num": 3,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is used in [MASK].\n\nOptions:\n1. public lands\n2. a ziplock bag\n3. building inscriptions"
+    },
+    {
+        "test_id": 93,
+        "relation": "UsedIn",
+        "correct_feat": "Kudurrus",
+        "options": "1. Kudurrus\n2. ads for Hyundai\n3. the anti-war, anti-capitalist and anti-globalisation movements",
+        "correct_num": 1,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is used in [MASK].\n\nOptions:\n1. Kudurrus\n2. ads for Hyundai\n3. the anti-war, anti-capitalist and anti-globalisation movements"
+    },
+    {
+        "test_id": 94,
+        "relation": "UsedIn",
+        "correct_feat": "historical epics",
+        "options": "1. Judaism\n2. historical epics\n3. West Germany",
+        "correct_num": 2,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is used in [MASK].\n\nOptions:\n1. Judaism\n2. historical epics\n3. West Germany"
+    },
+    {
+        "test_id": 95,
+        "relation": "UsedTo",
+        "correct_feat": "record land grants",
+        "options": "1. release songs online\n2. provide assurances of non-repetition\n3. record land grants",
+        "correct_num": 3,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is used to [MASK].\n\nOptions:\n1. release songs online\n2. provide assurances of non-repetition\n3. record land grants"
+    },
+    {
+        "test_id": 96,
+        "relation": "UsedTo",
+        "correct_feat": "provide information about Kassite history",
+        "options": "1. provide information about Kassite history\n2. invade Borneo\n3. improve meat tenderness",
+        "correct_num": 1,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is used to [MASK].\n\nOptions:\n1. provide information about Kassite history\n2. invade Borneo\n3. improve meat tenderness"
+    },
+    {
+        "test_id": 97,
+        "relation": "WrittenIn",
+        "correct_feat": "Sumerian",
+        "options": "1. non-canonical sources like the Golden Legend\n2. Sumerian\n3. English",
+        "correct_num": 2,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> was written in [MASK].\n\nOptions:\n1. non-canonical sources like the Golden Legend\n2. Sumerian\n3. English"
+    },
+    {
+        "test_id": 98,
+        "relation": "WrittenIn",
+        "correct_feat": "Akkadian",
+        "options": "1. 1969\n2. English\n3. Akkadian",
+        "correct_num": 3,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> was written in [MASK].\n\nOptions:\n1. 1969\n2. English\n3. Akkadian"
+    }
+]

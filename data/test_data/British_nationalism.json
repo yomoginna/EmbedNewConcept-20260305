@@ -1,0 +1,530 @@
+[
+    {
+        "test_id": 0,
+        "relation": "About",
+        "correct_feat": "the cultural unity of Britons",
+        "options": "1. the cultural unity of Britons\n2. the Bancroft Treaties and their eventual abandonment\n3. folk rock",
+        "correct_num": 1,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is about [MASK].\n\nOptions:\n1. the cultural unity of Britons\n2. the Bancroft Treaties and their eventual abandonment\n3. folk rock"
+    },
+    {
+        "test_id": 1,
+        "relation": "About",
+        "correct_feat": "the definition of Britishness that may include people of English, Scottish, Welsh, and Northern Irish descent",
+        "options": "1. the problem of lust gone astray\n2. the definition of Britishness that may include people of English, Scottish, Welsh, and Northern Irish descent\n3. celebrating Latino and, more specifically, Chicano culture and influence at The University of Southern California and in Los Angeles",
+        "correct_num": 2,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is about [MASK].\n\nOptions:\n1. the problem of lust gone astray\n2. the definition of Britishness that may include people of English, Scottish, Welsh, and Northern Irish descent\n3. celebrating Latino and, more specifically, Chicano culture and influence at The University of Southern California and in Los Angeles"
+    },
+    {
+        "test_id": 2,
+        "relation": "Affects",
+        "correct_feat": "the political union that is the United Kingdom",
+        "options": "1. the legality of a unilateral secession of Quebec from Canada\n2. the Supreme Court of the United States\n3. the political union that is the United Kingdom",
+        "correct_num": 3,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> affects [MASK].\n\nOptions:\n1. the legality of a unilateral secession of Quebec from Canada\n2. the Supreme Court of the United States\n3. the political union that is the United Kingdom"
+    },
+    {
+        "test_id": 3,
+        "relation": "AssociatedWith",
+        "correct_feat": "British unionism",
+        "options": "1. British unionism\n2. Kevin Bartz\n3. Peter Düring on drums",
+        "correct_num": 1,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is associated with [MASK].\n\nOptions:\n1. British unionism\n2. Kevin Bartz\n3. Peter Düring on drums"
+    },
+    {
+        "test_id": 4,
+        "relation": "AssociatedWith",
+        "correct_feat": "the Ulster Unionist Party",
+        "options": "1. the Orange and Alexandria Railroad\n2. the Ulster Unionist Party\n3. The Wall Street Journal",
+        "correct_num": 2,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is associated with [MASK].\n\nOptions:\n1. the Orange and Alexandria Railroad\n2. the Ulster Unionist Party\n3. The Wall Street Journal"
+    },
+    {
+        "test_id": 5,
+        "relation": "AssociatedWith",
+        "correct_feat": "the Democratic Unionist Party",
+        "options": "1. the village of Zarudchi in the Lyubeshiv district\n2. Big Death\n3. the Democratic Unionist Party",
+        "correct_num": 3,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is associated with [MASK].\n\nOptions:\n1. the village of Zarudchi in the Lyubeshiv district\n2. Big Death\n3. the Democratic Unionist Party"
+    },
+    {
+        "test_id": 6,
+        "relation": "AssociatedWith",
+        "correct_feat": "the Scottish Unionist Party",
+        "options": "1. the Scottish Unionist Party\n2. escape rooms\n3. water power from the Lehigh River",
+        "correct_num": 1,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is associated with [MASK].\n\nOptions:\n1. the Scottish Unionist Party\n2. escape rooms\n3. water power from the Lehigh River"
+    },
+    {
+        "test_id": 7,
+        "relation": "AssociatedWith",
+        "correct_feat": "the Conservative Party",
+        "options": "1. Fredrik Olsson\n2. the Conservative Party\n3. Sinéad O'Connor",
+        "correct_num": 2,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is associated with [MASK].\n\nOptions:\n1. Fredrik Olsson\n2. the Conservative Party\n3. Sinéad O'Connor"
+    },
+    {
+        "test_id": 8,
+        "relation": "AssociatedWith",
+        "correct_feat": "the Labour Party",
+        "options": "1. Gang Starr\n2. the Banu Marin tribe\n3. the Labour Party",
+        "correct_num": 3,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is associated with [MASK].\n\nOptions:\n1. Gang Starr\n2. the Banu Marin tribe\n3. the Labour Party"
+    },
+    {
+        "test_id": 9,
+        "relation": "AssociatedWith",
+        "correct_feat": "the Liberal Democrat Party",
+        "options": "1. the Liberal Democrat Party\n2. the Union of Krewo\n3. the UN Security Council chamber's east wall",
+        "correct_num": 1,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is associated with [MASK].\n\nOptions:\n1. the Liberal Democrat Party\n2. the Union of Krewo\n3. the UN Security Council chamber's east wall"
+    },
+    {
+        "test_id": 10,
+        "relation": "AssociatedWith",
+        "correct_feat": "the Reform UK party",
+        "options": "1. the Consecration of the National Cemetery\n2. the Reform UK party\n3. Claud",
+        "correct_num": 2,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is associated with [MASK].\n\nOptions:\n1. the Consecration of the National Cemetery\n2. the Reform UK party\n3. Claud"
+    },
+    {
+        "test_id": 11,
+        "relation": "AssociatedWith",
+        "correct_feat": "the British National Party",
+        "options": "1. the Stuart Restoration in 1660\n2. Thurgood Marshall\n3. the British National Party",
+        "correct_num": 3,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is associated with [MASK].\n\nOptions:\n1. the Stuart Restoration in 1660\n2. Thurgood Marshall\n3. the British National Party"
+    },
+    {
+        "test_id": 12,
+        "relation": "AssociatedWith",
+        "correct_feat": "other nativist nationalist movements",
+        "options": "1. other nativist nationalist movements\n2. carnival midways\n3. the German invasion of Greece",
+        "correct_num": 1,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is associated with [MASK].\n\nOptions:\n1. other nativist nationalist movements\n2. carnival midways\n3. the German invasion of Greece"
+    },
+    {
+        "test_id": 13,
+        "relation": "BelongsTo",
+        "correct_feat": "British politics",
+        "options": "1. extreme sports\n2. British politics\n3. board wargames",
+        "correct_num": 2,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> belongs to [MASK].\n\nOptions:\n1. extreme sports\n2. British politics\n3. board wargames"
+    },
+    {
+        "test_id": 14,
+        "relation": "HasA",
+        "correct_feat": "a unifying identity",
+        "options": "1. a width of 15.9 in. 40.3 cm\n2. reception details\n3. a unifying identity",
+        "correct_num": 3,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> has [MASK].\n\nOptions:\n1. a width of 15.9 in. 40.3 cm\n2. reception details\n3. a unifying identity"
+    },
+    {
+        "test_id": 15,
+        "relation": "HasA",
+        "correct_feat": "been a civic nationalism in its moderate form",
+        "options": "1. been a civic nationalism in its moderate form\n2. an objective to score more goals than the opposing team\n3. a niche-like throne",
+        "correct_num": 1,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> has [MASK].\n\nOptions:\n1. been a civic nationalism in its moderate form\n2. an objective to score more goals than the opposing team\n3. a niche-like throne"
+    },
+    {
+        "test_id": 16,
+        "relation": "HasA",
+        "correct_feat": "confidence",
+        "options": "1. four UK number-ones\n2. confidence\n3. a size of 22 ft × 74 ft",
+        "correct_num": 2,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> has [MASK].\n\nOptions:\n1. four UK number-ones\n2. confidence\n3. a size of 22 ft × 74 ft"
+    },
+    {
+        "test_id": 17,
+        "relation": "HasA",
+        "correct_feat": "a sense of dignity",
+        "options": "1. a government-debt crisis\n2. \"limited intelligence\" gameplay\n3. a sense of dignity",
+        "correct_num": 3,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> has [MASK].\n\nOptions:\n1. a government-debt crisis\n2. \"limited intelligence\" gameplay\n3. a sense of dignity"
+    },
+    {
+        "test_id": 18,
+        "relation": "HasA",
+        "correct_feat": "some arrogance",
+        "options": "1. some arrogance\n2. a niche\n3. a large portion of Christ's hair on his left side with damage",
+        "correct_num": 1,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> has [MASK].\n\nOptions:\n1. some arrogance\n2. a niche\n3. a large portion of Christ's hair on his left side with damage"
+    },
+    {
+        "test_id": 19,
+        "relation": "HasA",
+        "correct_feat": "been described as xenophobic at times",
+        "options": "1. tuned mass dampers\n2. been described as xenophobic at times\n3. an east-west axis of Poland to Belgium",
+        "correct_num": 2,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> has [MASK].\n\nOptions:\n1. tuned mass dampers\n2. been described as xenophobic at times\n3. an east-west axis of Poland to Belgium"
+    },
+    {
+        "test_id": 20,
+        "relation": "IsA",
+        "correct_feat": "characterized as a powerful but ambivalent force in British politics",
+        "options": "1. a criminal case\n2. a legal proceeding\n3. characterized as a powerful but ambivalent force in British politics",
+        "correct_num": 3,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is [MASK].\n\nOptions:\n1. a criminal case\n2. a legal proceeding\n3. characterized as a powerful but ambivalent force in British politics"
+    },
+    {
+        "test_id": 21,
+        "relation": "IsA",
+        "correct_feat": "a civic nationalism in its moderate form",
+        "options": "1. a civic nationalism in its moderate form\n2. a series of games based on elements\n3. a legal precedent",
+        "correct_num": 1,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is [MASK].\n\nOptions:\n1. a civic nationalism in its moderate form\n2. a series of games based on elements\n3. a legal precedent"
+    },
+    {
+        "test_id": 22,
+        "relation": "IsA",
+        "correct_feat": "a nativist nationalism",
+        "options": "1. a game for which a first-player-win strategy was developed and published\n2. a nativist nationalism\n3. a speech",
+        "correct_num": 2,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is [MASK].\n\nOptions:\n1. a game for which a first-player-win strategy was developed and published\n2. a nativist nationalism\n3. a speech"
+    },
+    {
+        "test_id": 23,
+        "relation": "IsA",
+        "correct_feat": "an anti-immigrant nativist nationalism",
+        "options": "1. a game that is a variant of Halma\n2. a musical performance\n3. an anti-immigrant nativist nationalism",
+        "correct_num": 3,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is [MASK].\n\nOptions:\n1. a game that is a variant of Halma\n2. a musical performance\n3. an anti-immigrant nativist nationalism"
+    },
+    {
+        "test_id": 24,
+        "relation": "IsA",
+        "correct_feat": "a progressive cause",
+        "options": "1. a progressive cause\n2. a high-performance water bag\n3. a former imperial and royal European dynasty",
+        "correct_num": 1,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is [MASK].\n\nOptions:\n1. a progressive cause\n2. a high-performance water bag\n3. a former imperial and royal European dynasty"
+    },
+    {
+        "test_id": 25,
+        "relation": "IsA",
+        "correct_feat": "a popular patriotic nationalism",
+        "options": "1. a series of strategy games\n2. a popular patriotic nationalism\n3. a couple",
+        "correct_num": 2,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is [MASK].\n\nOptions:\n1. a series of strategy games\n2. a popular patriotic nationalism\n3. a couple"
+    },
+    {
+        "test_id": 26,
+        "relation": "IsA",
+        "correct_feat": "a unionist movement",
+        "options": "1. a history lesson\n2. a cervicogenic headache\n3. a unionist movement",
+        "correct_num": 3,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is [MASK].\n\nOptions:\n1. a history lesson\n2. a cervicogenic headache\n3. a unionist movement"
+    },
+    {
+        "test_id": 27,
+        "relation": "IsA",
+        "correct_feat": "a civic nationalist movement",
+        "options": "1. a civic nationalist movement\n2. a communications tower\n3. a brand of cider",
+        "correct_num": 1,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is [MASK].\n\nOptions:\n1. a civic nationalist movement\n2. a communications tower\n3. a brand of cider"
+    },
+    {
+        "test_id": 28,
+        "relation": "IsA",
+        "correct_feat": "a right-wing association",
+        "options": "1. a YouTube channel\n2. a right-wing association\n3. a mural",
+        "correct_num": 2,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is [MASK].\n\nOptions:\n1. a YouTube channel\n2. a right-wing association\n3. a mural"
+    },
+    {
+        "test_id": 29,
+        "relation": "HasFeatureOf",
+        "correct_feat": "emphasis on both cohesion and diversity of the people of the United Kingdom, its dependencies, and its former colonies in its moderate form",
+        "options": "1. locomotives\n2. innocence and lack of embarrassment about nakedness\n3. emphasis on both cohesion and diversity of the people of the United Kingdom, its dependencies, and its former colonies in its moderate form",
+        "correct_num": 3,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is characterized by [MASK].\n\nOptions:\n1. locomotives\n2. innocence and lack of embarrassment about nakedness\n3. emphasis on both cohesion and diversity of the people of the United Kingdom, its dependencies, and its former colonies in its moderate form"
+    },
+    {
+        "test_id": 30,
+        "relation": "HasFeatureOf",
+        "correct_feat": "concerns relating to immigration in its nativist form",
+        "options": "1. concerns relating to immigration in its nativist form\n2. the humanization of figures and attention to human anatomy\n3. the arrest of Bruce Boynton for trespassing",
+        "correct_num": 1,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is characterized by [MASK].\n\nOptions:\n1. concerns relating to immigration in its nativist form\n2. the humanization of figures and attention to human anatomy\n3. the arrest of Bruce Boynton for trespassing"
+    },
+    {
+        "test_id": 31,
+        "relation": "HasFeatureOf",
+        "correct_feat": "overt aggression in other nationalist movements",
+        "options": "1. five men, one of whom was a \"Branán\" or chief\n2. overt aggression in other nationalist movements\n3. a coiled dragon holding a sword in its mouth",
+        "correct_num": 2,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is characterized by [MASK].\n\nOptions:\n1. five men, one of whom was a \"Branán\" or chief\n2. overt aggression in other nationalist movements\n3. a coiled dragon holding a sword in its mouth"
+    },
+    {
+        "test_id": 32,
+        "relation": "HasFeatureOf",
+        "correct_feat": "support for the monarchy",
+        "options": "1. frequent rains\n2. riders attempting to balance on artificial waves\n3. support for the monarchy",
+        "correct_num": 3,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is characterized by [MASK].\n\nOptions:\n1. frequent rains\n2. riders attempting to balance on artificial waves\n3. support for the monarchy"
+    },
+    {
+        "test_id": 33,
+        "relation": "HasFeatureOf",
+        "correct_feat": "support for the houses of parliament",
+        "options": "1. support for the houses of parliament\n2. a game for two, three, or four players\n3. its large size",
+        "correct_num": 1,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is characterized by [MASK].\n\nOptions:\n1. support for the houses of parliament\n2. a game for two, three, or four players\n3. its large size"
+    },
+    {
+        "test_id": 34,
+        "relation": "HasFeatureOf",
+        "correct_feat": "support for the judiciary",
+        "options": "1. requiring skilled workers for installation in structural steel applications\n2. support for the judiciary\n3. a large number of units",
+        "correct_num": 2,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is characterized by [MASK].\n\nOptions:\n1. requiring skilled workers for installation in structural steel applications\n2. support for the judiciary\n3. a large number of units"
+    },
+    {
+        "test_id": 35,
+        "relation": "HasFeatureOf",
+        "correct_feat": "support for other elements of the institutional status quo",
+        "options": "1. its defensive positions\n2. the Christ child twisting his body away from his mother's embrace\n3. support for other elements of the institutional status quo",
+        "correct_num": 3,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is characterized by [MASK].\n\nOptions:\n1. its defensive positions\n2. the Christ child twisting his body away from his mother's embrace\n3. support for other elements of the institutional status quo"
+    },
+    {
+        "test_id": 36,
+        "relation": "InfluencedBy",
+        "correct_feat": "Anglo-Irish calls for unity with Britain",
+        "options": "1. Anglo-Irish calls for unity with Britain\n2. Protocol Additional to the Geneva Conventions\n3. philology",
+        "correct_num": 1,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> was influenced by [MASK].\n\nOptions:\n1. Anglo-Irish calls for unity with Britain\n2. Protocol Additional to the Geneva Conventions\n3. philology"
+    },
+    {
+        "test_id": 37,
+        "relation": "KnownFor",
+        "correct_feat": "promoting the cultural unity of Britons",
+        "options": "1. being open to all dog breeds\n2. promoting the cultural unity of Britons\n3. its performances at the White House",
+        "correct_num": 2,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is known for [MASK].\n\nOptions:\n1. being open to all dog breeds\n2. promoting the cultural unity of Britons\n3. its performances at the White House"
+    },
+    {
+        "test_id": 38,
+        "relation": "KnownFor",
+        "correct_feat": "seeking to uphold the political union that is the United Kingdom",
+        "options": "1. being the most common format of books printed in the incunabula period\n2. being one of SPI's most popular games\n3. seeking to uphold the political union that is the United Kingdom",
+        "correct_num": 3,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is known for [MASK].\n\nOptions:\n1. being the most common format of books printed in the incunabula period\n2. being one of SPI's most popular games\n3. seeking to uphold the political union that is the United Kingdom"
+    },
+    {
+        "test_id": 39,
+        "relation": "KnownFor",
+        "correct_feat": "strengthening the links between the countries of the United Kingdom",
+        "options": "1. strengthening the links between the countries of the United Kingdom\n2. deciding that women were eligible to sit in the Senate of Canada\n3. its application to analogous social structures in other regions",
+        "correct_num": 1,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is known for [MASK].\n\nOptions:\n1. strengthening the links between the countries of the United Kingdom\n2. deciding that women were eligible to sit in the Senate of Canada\n3. its application to analogous social structures in other regions"
+    },
+    {
+        "test_id": 40,
+        "relation": "KnownFor",
+        "correct_feat": "its unifying identity descending from the ancient Britons",
+        "options": "1. controversies surrounding Billy Mitchell's scores\n2. its unifying identity descending from the ancient Britons\n3. being tolerant of the Sunni population",
+        "correct_num": 2,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is known for [MASK].\n\nOptions:\n1. controversies surrounding Billy Mitchell's scores\n2. its unifying identity descending from the ancient Britons\n3. being tolerant of the Sunni population"
+    },
+    {
+        "test_id": 41,
+        "relation": "KnownFor",
+        "correct_feat": "emphasizing both cohesion and diversity of the people of the United Kingdom, its dependencies, and its former colonies",
+        "options": "1. its stadium and arena tours\n2. the abapa variation\n3. emphasizing both cohesion and diversity of the people of the United Kingdom, its dependencies, and its former colonies",
+        "correct_num": 3,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is known for [MASK].\n\nOptions:\n1. its stadium and arena tours\n2. the abapa variation\n3. emphasizing both cohesion and diversity of the people of the United Kingdom, its dependencies, and its former colonies"
+    },
+    {
+        "test_id": 42,
+        "relation": "KnownFor",
+        "correct_feat": "arising based on concerns relating to immigration",
+        "options": "1. arising based on concerns relating to immigration\n2. its veneration in Yaroslavl\n3. Marian apparitions reported in 1667",
+        "correct_num": 1,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is known for [MASK].\n\nOptions:\n1. arising based on concerns relating to immigration\n2. its veneration in Yaroslavl\n3. Marian apparitions reported in 1667"
+    },
+    {
+        "test_id": 43,
+        "relation": "KnownFor",
+        "correct_feat": "lacking the overt aggression seen in other nationalist movements",
+        "options": "1. having cup-shaped holes\n2. lacking the overt aggression seen in other nationalist movements\n3. the Western Regional Cherry Pit Spit",
+        "correct_num": 2,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is known for [MASK].\n\nOptions:\n1. having cup-shaped holes\n2. lacking the overt aggression seen in other nationalist movements\n3. the Western Regional Cherry Pit Spit"
+    },
+    {
+        "test_id": 44,
+        "relation": "KnownFor",
+        "correct_feat": "being marked by confidence, a sense of dignity, and some arrogance",
+        "options": "1. its historical continuity\n2. the Polish \"Golden Age\"\n3. being marked by confidence, a sense of dignity, and some arrogance",
+        "correct_num": 3,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is known for [MASK].\n\nOptions:\n1. its historical continuity\n2. the Polish \"Golden Age\"\n3. being marked by confidence, a sense of dignity, and some arrogance"
+    },
+    {
+        "test_id": 45,
+        "relation": "KnownFor",
+        "correct_feat": "focusing less on a perceived inherent difference and more on the historic superiority of its liberal traditions",
+        "options": "1. focusing less on a perceived inherent difference and more on the historic superiority of its liberal traditions\n2. its gameplay involving a ball and a pile of seven stones\n3. the hundreds of replicas and copies made by later artists",
+        "correct_num": 1,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is known for [MASK].\n\nOptions:\n1. focusing less on a perceived inherent difference and more on the historic superiority of its liberal traditions\n2. its gameplay involving a ball and a pile of seven stones\n3. the hundreds of replicas and copies made by later artists"
+    },
+    {
+        "test_id": 46,
+        "relation": "KnownFor",
+        "correct_feat": "its perceived capacity for international leadership",
+        "options": "1. the bond between handler and dog\n2. its perceived capacity for international leadership\n3. its decline in popularity due to newer sports and economic factors",
+        "correct_num": 2,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is known for [MASK].\n\nOptions:\n1. the bond between handler and dog\n2. its perceived capacity for international leadership\n3. its decline in popularity due to newer sports and economic factors"
+    },
+    {
+        "test_id": 47,
+        "relation": "OriginatedIn",
+        "correct_feat": "the ancient Britons",
+        "options": "1. France\n2. the idea fleshed out by Baca in 1976\n3. the ancient Britons",
+        "correct_num": 3,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> originated in [MASK].\n\nOptions:\n1. France\n2. the idea fleshed out by Baca in 1976\n3. the ancient Britons"
+    },
+    {
+        "test_id": 48,
+        "relation": "OriginatedIn",
+        "correct_feat": "the island of Great Britain",
+        "options": "1. the island of Great Britain\n2. America\n3. Counter-Strike mods",
+        "correct_num": 1,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> originated in [MASK].\n\nOptions:\n1. the island of Great Britain\n2. America\n3. Counter-Strike mods"
+    },
+    {
+        "test_id": 49,
+        "relation": "PartOf",
+        "correct_feat": "British politics",
+        "options": "1. the history of Rockefeller Center\n2. British politics\n3. the \"Kursk-Root\" icon",
+        "correct_num": 2,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is part of [MASK].\n\nOptions:\n1. the history of Rockefeller Center\n2. British politics\n3. the \"Kursk-Root\" icon"
+    },
+    {
+        "test_id": 50,
+        "relation": "PartOf",
+        "correct_feat": "the United Kingdom",
+        "options": "1. Zambia\n2. Papua New Guinea\n3. the United Kingdom",
+        "correct_num": 3,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is part of [MASK].\n\nOptions:\n1. Zambia\n2. Papua New Guinea\n3. the United Kingdom"
+    },
+    {
+        "test_id": 51,
+        "relation": "PartOf",
+        "correct_feat": "the institutional status quo",
+        "options": "1. the institutional status quo\n2. the athletic competitions of the ancient Greek world\n3. the events leading to his crucifixion and resurrection",
+        "correct_num": 1,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is part of [MASK].\n\nOptions:\n1. the institutional status quo\n2. the athletic competitions of the ancient Greek world\n3. the events leading to his crucifixion and resurrection"
+    },
+    {
+        "test_id": 52,
+        "relation": "UsedFor",
+        "correct_feat": "promoting the cultural unity of Britons",
+        "options": "1. symbolizing divine glory\n2. promoting the cultural unity of Britons\n3. setting world records",
+        "correct_num": 2,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is used for [MASK].\n\nOptions:\n1. symbolizing divine glory\n2. promoting the cultural unity of Britons\n3. setting world records"
+    },
+    {
+        "test_id": 53,
+        "relation": "UsedFor",
+        "correct_feat": "upholding the political union that is the United Kingdom",
+        "options": "1. aircraft carrier protection\n2. playing the included scenarios\n3. upholding the political union that is the United Kingdom",
+        "correct_num": 3,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is used for [MASK].\n\nOptions:\n1. aircraft carrier protection\n2. playing the included scenarios\n3. upholding the political union that is the United Kingdom"
+    },
+    {
+        "test_id": 54,
+        "relation": "UsedFor",
+        "correct_feat": "strengthening the links between the countries of the United Kingdom",
+        "options": "1. strengthening the links between the countries of the United Kingdom\n2. training of coaching staff\n3. achieving four markers in a row",
+        "correct_num": 1,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is used for [MASK].\n\nOptions:\n1. strengthening the links between the countries of the United Kingdom\n2. training of coaching staff\n3. achieving four markers in a row"
+    },
+    {
+        "test_id": 55,
+        "relation": "UsedFor",
+        "correct_feat": "promoting British nationalism as a progressive cause",
+        "options": "1. regaining autonomy\n2. promoting British nationalism as a progressive cause\n3. marketing",
+        "correct_num": 2,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is used for [MASK].\n\nOptions:\n1. regaining autonomy\n2. promoting British nationalism as a progressive cause\n3. marketing"
+    },
+    {
+        "test_id": 56,
+        "relation": "UsedIn",
+        "correct_feat": "British politics",
+        "options": "1. the US\n2. recovery programs\n3. British politics",
+        "correct_num": 3,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is used in [MASK].\n\nOptions:\n1. the US\n2. recovery programs\n3. British politics"
+    },
+    {
+        "test_id": 57,
+        "relation": "UsedIn",
+        "correct_feat": "the United Kingdom",
+        "options": "1. the United Kingdom\n2. Qatar\n3. Switzerland",
+        "correct_num": 1,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is used in [MASK].\n\nOptions:\n1. the United Kingdom\n2. Qatar\n3. Switzerland"
+    },
+    {
+        "test_id": 58,
+        "relation": "UsedIn",
+        "correct_feat": "the Devolved Nations",
+        "options": "1. Dedham, Massachusetts\n2. the Devolved Nations\n3. the summer",
+        "correct_num": 2,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is used in [MASK].\n\nOptions:\n1. Dedham, Massachusetts\n2. the Devolved Nations\n3. the summer"
+    },
+    {
+        "test_id": 59,
+        "relation": "UsedIn",
+        "correct_feat": "Scotland",
+        "options": "1. the UN Security Council chamber\n2. the Kingdom of Naples\n3. Scotland",
+        "correct_num": 3,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is used in [MASK].\n\nOptions:\n1. the UN Security Council chamber\n2. the Kingdom of Naples\n3. Scotland"
+    },
+    {
+        "test_id": 60,
+        "relation": "UsedIn",
+        "correct_feat": "Wales",
+        "options": "1. Wales\n2. the film \"Dragostea ce mișcă sori și stele\n3. Pursue & Destroy Vol. 3, #2",
+        "correct_num": 1,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is used in [MASK].\n\nOptions:\n1. Wales\n2. the film \"Dragostea ce mișcă sori și stele\n3. Pursue & Destroy Vol. 3, #2"
+    },
+    {
+        "test_id": 61,
+        "relation": "UsedIn",
+        "correct_feat": "Northern Ireland",
+        "options": "1. the Western Region\n2. Northern Ireland\n3. the Danish single chart",
+        "correct_num": 2,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is used in [MASK].\n\nOptions:\n1. the Western Region\n2. Northern Ireland\n3. the Danish single chart"
+    },
+    {
+        "test_id": 62,
+        "relation": "UsedTo",
+        "correct_feat": "promote the cultural unity of Britons",
+        "options": "1. audition for the X Factor\n2. protect the environment from anthropogenic greenhouse gas emissions\n3. promote the cultural unity of Britons",
+        "correct_num": 3,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is used to [MASK].\n\nOptions:\n1. audition for the X Factor\n2. protect the environment from anthropogenic greenhouse gas emissions\n3. promote the cultural unity of Britons"
+    },
+    {
+        "test_id": 63,
+        "relation": "UsedTo",
+        "correct_feat": "uphold the political union that is the United Kingdom",
+        "options": "1. uphold the political union that is the United Kingdom\n2. identify the Houses of Lancaster and York\n3. retrieve game to hand",
+        "correct_num": 1,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is used to [MASK].\n\nOptions:\n1. uphold the political union that is the United Kingdom\n2. identify the Houses of Lancaster and York\n3. retrieve game to hand"
+    },
+    {
+        "test_id": 64,
+        "relation": "UsedTo",
+        "correct_feat": "strengthen the links between the countries of the United Kingdom",
+        "options": "1. refer to the Svevi\n2. strengthen the links between the countries of the United Kingdom\n3. benefit emergency workers and victims of the September 11, 2001 attacks at the World Trade Center",
+        "correct_num": 2,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is used to [MASK].\n\nOptions:\n1. refer to the Svevi\n2. strengthen the links between the countries of the United Kingdom\n3. benefit emergency workers and victims of the September 11, 2001 attacks at the World Trade Center"
+    },
+    {
+        "test_id": 65,
+        "relation": "UsedTo",
+        "correct_feat": "promote British nationalism as a progressive cause",
+        "options": "1. describe non-Western societies\n2. hurl a pumpkin by mechanical means for distance\n3. promote British nationalism as a progressive cause",
+        "correct_num": 3,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is used to [MASK].\n\nOptions:\n1. describe non-Western societies\n2. hurl a pumpkin by mechanical means for distance\n3. promote British nationalism as a progressive cause"
+    }
+]

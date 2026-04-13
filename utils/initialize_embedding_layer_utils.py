@@ -23,12 +23,13 @@ sys.path.append(project_root)
 print("Project root:", project_root)
 
 from utils.wikipedia_api_utils import extract_wiki_main_text, fetch_wikipedia_page
-
+from utils.handle_text_utils import get_first_few_sentences, repeat_text
 
 N_COMPONENTS = 2
 NOISE_SCALE = 5e-3   # まずは 1e-3 あたりから試す 1e-3だと少ししか改善しなかった, 1e-2だとother_category_COGの方がaccが高くなった 3e-3はいいかんじ。 2e-3はまだ試していないが後で試す
 LAMBDA_ = 0.0   # global_vecを引くときの重み. 0.1あたりから試す. 0.1だと少し改善するが、0.2だとさらに改善する。 0.3はまだ試していないが後で試す
-LAST_TOKEN_IS_EOS = True  # termの最後のtokenが<EOS>であるかどうか。Trueなら、<eos>トークン位置を最終トークン位置とする。Falseなら、term内の最後のtokenを最終トークン位置とする。
+# LAST_TOKEN_IS_EOS = True  # termの最後のtokenが<EOS>であるかどうか。Trueなら、<eos>トークン位置を最終トークン位置とする。Falseなら、term内の最後のtokenを最終トークン位置とする。
+BATCH_SIZE = 16 #8
 
 # *************************** func ***************************
 
@@ -71,7 +72,7 @@ def save_pca_components(save_path, mean_vec, pcs, explained_ratio, meta=None):
         pcs: [k, d]
         explained_ratio: [k]
         meta: 追加情報を入れたいときのdict
-              例: {"layer_idx": 10, "term_vec_type": "mean", "mix_layers": True}
+              例: {"layer_idx": 10, "pool_hs_type": "mean", "mix_layers": True}
     """
     os.makedirs(os.path.dirname(save_path), exist_ok=True)
 
@@ -111,14 +112,14 @@ def load_pca_components(load_path, map_location="cpu"):
 
 
 class EmbedInitializer:
-    def __init__(self, model_name, save_mem_dir, init_vec_type, train_target_category_lst, propnoun_num_for_init_vec, model, tokenizer, seed, term_vec_type):
+    def __init__(self, model_name, save_mem_dir, init_vec_type, train_target_category_lst, propnoun_num_for_init_vec, model, tokenizer, seed, pool_hs_type):
 
         self.model_name = model_name.split("/")[-1]  # "gemma-3-12b-it"のようなモデル名だけを取り出す
         self.save_mem_dir = save_mem_dir             # パラメータを保存したい。2026/04/06に追加
         self.init_vec_type = init_vec_type
         self.train_target_category_lst = train_target_category_lst
         self.propnoun_num_for_init_vec = propnoun_num_for_init_vec
-        self.term_vec_type = term_vec_type    # single_last or mean,  inputsに対する隠れ状態を、term中の全subtokenに対して平均するか、term中の最後のtokenに対応する隠れ状態を使うか
+        self.pool_hs_type = pool_hs_type    # single_last/eos/mean,  inputsに対する隠れ状態を、term中の全subtokenに対して平均するか、term中の最後のtokenに対応する隠れ状態を使うか
         self.layer_to_globalHSMeanVec = {}
         self.category_to_layer_to_otherHSMeanVec = defaultdict(dict)  # category_to_layer_to_otherHSMeanVec[category][layer_idx] = other_hidden_mean_vec for that category and layer
         # self.global_primary_vec_by_mixed_layer = {} # layer代表vecはその前後との平均の主成分
@@ -126,8 +127,16 @@ class EmbedInitializer:
         self.num_propNouns_in_cat_for_globalHSMean = 100
 
         self.propnoun_to_wikisummary = {}   # これが必要な関数を実行する際に、中身が空なら読み込む。少し時間とメモリを食うので不要なら読み込まない。
+        self.repeat_prompt = False   # promptを2回繰り返すプロンプトを使うかどうかのフラグ。
 
+        self.category_to_other_category = {} # other系の初期化の場合、学習対象のカテゴリ毎に、どの他カテゴリを初期化に使うかを固定するための辞書。新規概念毎に異なるカテゴリを使って初期化すると、初期vec間の多様性が同カテゴリ初期化時に比べて大きくなり、不公平になるため。
+        self.other_init_use_the_same_other_category = True # Trueなら、全カテゴリのother系初期化に同じカテゴリを使う。Falseなら、カテゴリ毎にother系初期化に使うカテゴリを変える。
+        
+        # self.category_to_concepts_for_other = {} # 他カテゴリで初期化する場合は、学習データがないカテゴリも参照したい。
         random.seed(seed)
+
+
+        # ***** global vector の作成が必要なinit_vec_typeの場合はここで作成 *****
         # ** debiaseあり
         # * global_hidden_meanを、自カテゴリ含む全部のカテゴリの固有名詞のベクトルの平均で計算する方法
         if init_vec_type in [
@@ -147,41 +156,37 @@ class EmbedInitializer:
             self.calculateGlobalHSMean_by_GlbPrimDebiasedHSMixed(model, tokenizer, n_components=N_COMPONENTS, mix_layers=False)   # global_hidden_meanを、全カテゴリの主成分で計算する方法. mix_layers=Trueは、指定層の前後3層の隠れ状態を平均してterm_vecを作る方法. mix_layers=Falseは、指定層の隠れ状態のみでterm_vecを作る方法. どちらも試す
     
         # ** debias なし
-        # * wikiのsummary入力時の隠れ状態で初期化vecを作成する方法. 固有名詞を構成する単語がカテゴリ特有の単語ではないことから、カテゴリ代表vec作成には固有名詞ではなく文脈から生まれる意味が必要なのではないか、という発想から。
-        # elif init_vec_type in [
-        #     # wikiのsummary入力時の隠れ状態で初期化vecを作成する方法は、global_hidden_meanを計算する必要がないため、ここでは何もしない
-        #     'CatCent_by_WikiSummaryHS', 'otherCatCent_by_WikiSummaryHS',
-        #     'CatCent_by_WikiSummaryHSMixed', 'otherCatCent_by_WikiSummaryHSMixed',
-        #     # WIP memo
-        #     'category_centroid_by_hidden_state_mean', 'other_category_centroid_by_hidden_state_mean',
-        #     # WIP memo
-        #     'category_COG', 'other_category_COG',
-        #     ]:
-        #     pass
-        # else:
-        #     raise ValueError(f"Unknown init_vec_type: {init_vec_type}")
+        if init_vec_type in ["CatCent_by_WikiSummaryRepeatHSMixed", "otherCatCent_by_WikiSummaryRepeatHSMixed"]:
+            self.repeat_prompt = True
+        
         else:
             print(f"init_vec_type: {init_vec_type} does not require global hidden mean calculation. Skipping that step.")
 
-        # self.save_mem_dir にこの訓練のパラメータを辞書保存
-        path = os.path.join(self.save_mem_dir, "embed_initializer_params.json")
-        params_to_save = {
-            "model_name": self.model_name,
-            "init_vec_type": self.init_vec_type,
-            "train_target_category_lst": self.train_target_category_lst,
-            "propnoun_num_for_init_vec": self.propnoun_num_for_init_vec,
-            "seed": seed,
-            "term_vec_type": self.term_vec_type,
 
-            "train_date_time":  datetime.now().strftime("%Y%m%d%H%M%S"),
-            "num_of_global_vec_primary_components": N_COMPONENTS,
-            "noise_scale": NOISE_SCALE,
-            "lamda_": LAMBDA_,
-            "last_token_is_eos": LAST_TOKEN_IS_EOS,
-        }
+        if model is not None:
+            # dataの状態だけprintするために、model=Noneとすることがある。その場合はmodel関連の処理はskipする。
+            # ***** self.save_mem_dir にこの訓練のパラメータを辞書保存 *****
+            path = os.path.join(self.save_mem_dir, "embed_initializer_params.json")
+            params_to_save = {
+                "model_name": self.model_name,
+                "init_vec_type": self.init_vec_type,
+                "train_target_category_lst": self.train_target_category_lst,
+                "propnoun_num_for_init_vec": self.propnoun_num_for_init_vec,
+                "seed": seed,
+                "pool_hs_type": self.pool_hs_type,
 
-        with open(path, "w") as f:
-            json.dump(params_to_save, f)
+                "train_date_time":  datetime.now().strftime("%Y%m%d%H%M%S"),
+                "num_of_global_vec_primary_components": N_COMPONENTS,
+                "noise_scale": NOISE_SCALE,
+                "lamda_": LAMBDA_,
+                # "last_token_is_eos": self.last_token_is_eos # LAST_TOKEN_IS_EOS,
+
+                "other_init_use_the_same_other_category": self.other_init_use_the_same_other_category,
+
+            }
+
+            with open(path, "w") as f:
+                json.dump(params_to_save, f)
 
 
     # ================================ 埋め込みベクトルの初期化関数(handler) ================================
@@ -261,8 +266,7 @@ class EmbedInitializer:
                 category2initoken_ids, 
                 initvec_func=self.make_initvec_by_terms_with_hidden_state, 
                 layer_idx=layer_idx,
-                mix_layers=False, 
-                term_vec_type=self.term_vec_type,
+                mix_layers=False,
                 print_flag=True
             ),
 
@@ -276,7 +280,6 @@ class EmbedInitializer:
                 initvec_func=self.make_initvec_by_terms_with_hidden_state, 
                 layer_idx=layer_idx,
                 mix_layers=False, 
-                term_vec_type=self.term_vec_type,
                 print_flag=True
             ),
 
@@ -295,7 +298,6 @@ class EmbedInitializer:
                 initvec_func=self.make_initvec_by_terms_with_debiased_hidden_state_by_global_vec, 
                 layer_idx=layer_idx,
                 mix_layers=True, 
-                term_vec_type=self.term_vec_type,
                 print_flag=True
             ),
             # *** (Type3) 他のカテゴリのCOGで初期化. category_centroid_by_debiased_hidden_state の対。***
@@ -307,7 +309,6 @@ class EmbedInitializer:
                 initvec_func=self.make_initvec_by_terms_with_debiased_hidden_state_by_global_vec, 
                 layer_idx=layer_idx,
                 mix_layers=True, 
-                term_vec_type=self.term_vec_type,
                 print_flag=True
             ),
 
@@ -330,7 +331,6 @@ class EmbedInitializer:
                 initvec_func=self.make_initvec_by_terms_with_debiased_hidden_state_by_global_vec, 
                 layer_idx=layer_idx,
                 mix_layers=True, 
-                term_vec_type=self.term_vec_type,
                 print_flag=True
             ),
             # *** (Type4) 他のカテゴリのCOGで初期化. category_centroid_by_debiased_hidden_state の対。***
@@ -342,7 +342,6 @@ class EmbedInitializer:
                 initvec_func=self.make_initvec_by_terms_with_debiased_hidden_state_by_global_vec, 
                 layer_idx=layer_idx,
                 mix_layers=True, 
-                term_vec_type=self.term_vec_type,
                 print_flag=True
             ),
 
@@ -361,7 +360,6 @@ class EmbedInitializer:
                 initvec_func=self.make_initvec_by_terms_with_debiased_hidden_state_by_global_vec, 
                 layer_idx=layer_idx,
                 mix_layers=True, 
-                term_vec_type=self.term_vec_type,
                 print_flag=True
             ),
             # *** Type5の対 ***
@@ -373,7 +371,6 @@ class EmbedInitializer:
                 initvec_func=self.make_initvec_by_terms_with_debiased_hidden_state_by_global_vec, 
                 layer_idx=layer_idx,
                 mix_layers=True, 
-                term_vec_type=self.term_vec_type,
                 print_flag=True
             ),
 
@@ -390,8 +387,7 @@ class EmbedInitializer:
                 category2initoken_ids, 
                 initvec_func=self.make_initvec_by_terms_with_debiased_hidden_state_by_global_vec, 
                 layer_idx=layer_idx,
-                mix_layers=True, 
-                term_vec_type=self.term_vec_type,
+                mix_layers=True,
                 print_flag=True
             ),
             "otherCatCent_by_GlbPrimDebiasedHSMixed": lambda: self.initialize_embeds_by_other_category_centroid_by_function( # self.initvec_by_other_category_centroid_by_global_vec_debiased_and_mixed_hidden_state(, initVecWithGlobalVecDebiasedTermHS
@@ -401,8 +397,7 @@ class EmbedInitializer:
                 category2initoken_ids, 
                 initvec_func=self.make_initvec_by_terms_with_debiased_hidden_state_by_global_vec, 
                 layer_idx=layer_idx,
-                mix_layers=True, 
-                term_vec_type=self.term_vec_type,
+                mix_layers=True,
                 print_flag=True
             ),
 
@@ -414,8 +409,7 @@ class EmbedInitializer:
                 category2initoken_ids, 
                 initvec_func=self.make_initvec_by_terms_with_debiased_hidden_state_by_global_vec, 
                 layer_idx=layer_idx,
-                mix_layers=False, 
-                term_vec_type=self.term_vec_type,
+                mix_layers=False,
                 print_flag=True
             ),
             "otherCatCent_by_GlbPrimDebiasedHS": lambda: self.initialize_embeds_by_other_category_centroid_by_function( # self.initvec_by_other_category_centroid_by_global_vec_debiased_hidden_state(, initVecWithGlobalVecDebiasedTermHS
@@ -425,8 +419,7 @@ class EmbedInitializer:
                 category2initoken_ids, 
                 initvec_func=self.make_initvec_by_terms_with_debiased_hidden_state_by_global_vec, 
                 layer_idx=layer_idx,
-                mix_layers=False, 
-                term_vec_type=self.term_vec_type,
+                mix_layers=False,
                 print_flag=True
             ),
 
@@ -437,46 +430,44 @@ class EmbedInitializer:
             
             # * 単層の隠れ状態を使う
             "CatCent_by_WikiSummaryHS": lambda: self.initialize_embeds_by_category_centroid_by_function(
-                model, 
-                tokenizer, 
-                category_to_concepts_for_vec, 
-                category2initoken_ids, 
-                initvec_func=self.make_initvec_by_wiki_summary_and_hidden_state, 
+                model, tokenizer, category_to_concepts_for_vec, category2initoken_ids, initvec_func=self.make_initvec_by_wiki_summary_and_hidden_state, 
                 layer_idx=layer_idx,
-                mix_layers=False, 
-                term_vec_type=self.term_vec_type,
+                mix_layers=False,
                 print_flag=True
             ),
             "otherCatCent_by_WikiSummaryHS": lambda: self.initialize_embeds_by_other_category_centroid_by_function(
-                model, 
-                tokenizer, 
-                category_to_concepts_for_vec, 
-                category2initoken_ids, 
-                initvec_func=self.make_initvec_by_wiki_summary_and_hidden_state, 
+                model, tokenizer, category_to_concepts_for_vec, category2initoken_ids, initvec_func=self.make_initvec_by_wiki_summary_and_hidden_state, 
                 layer_idx=layer_idx,
-                mix_layers=False, 
-                term_vec_type=self.term_vec_type,
+                mix_layers=False,
                 print_flag=True
             ),
             #  * 前後3層の隠れ状態を平均する
             "CatCent_by_WikiSummaryHSMixed": lambda: self.initialize_embeds_by_category_centroid_by_function(
-                model, 
-                tokenizer, 
-                category_to_concepts_for_vec, 
-                category2initoken_ids, 
-                initvec_func=self.make_initvec_by_wiki_summary_and_hidden_state, 
+                model, tokenizer, category_to_concepts_for_vec, category2initoken_ids, initvec_func=self.make_initvec_by_wiki_summary_and_hidden_state, 
                 layer_idx=layer_idx,
-                mix_layers=True, 
-                term_vec_type=self.term_vec_type,
+                mix_layers=True,
                 print_flag=True
             ),
             "otherCatCent_by_WikiSummaryHSMixed": lambda: self.initialize_embeds_by_other_category_centroid_by_function(
-                model, tokenizer, 
-                category_to_concepts_for_vec, category2initoken_ids, 
-                initvec_func=self.make_initvec_by_wiki_summary_and_hidden_state, 
+                model, tokenizer, category_to_concepts_for_vec, category2initoken_ids, initvec_func=self.make_initvec_by_wiki_summary_and_hidden_state, 
                 layer_idx=layer_idx,
-                mix_layers=True, 
-                term_vec_type=self.term_vec_type,
+                mix_layers=True,
+                print_flag=True
+            ),
+
+            # ============================================================================================
+            # 2026/04/09
+            # wiki summaryを2回繰り返してプロンプトとし、2文目の隠れ状態から初期化vecを作成する方法: https://openreview.net/forum?id=Ahlrf2HGJR の手法. src_visualize/plot_gemma_hidden_states_3d.py でカテゴリ同士が他の手法よりも分離できていたため.
+            "CatCent_by_WikiSummaryRepeatHSMixed": lambda: self.initialize_embeds_by_category_centroid_by_function(
+                model, tokenizer, category_to_concepts_for_vec, category2initoken_ids, initvec_func=self.make_initvec_by_wiki_summary_and_hidden_state, 
+                layer_idx=layer_idx,
+                mix_layers=True,
+                print_flag=True
+            ),
+            "otherCatCent_by_WikiSummaryRepeatHSMixed": lambda: self.initialize_embeds_by_other_category_centroid_by_function(
+                model, tokenizer, category_to_concepts_for_vec, category2initoken_ids, initvec_func=self.make_initvec_by_wiki_summary_and_hidden_state, 
+                layer_idx=layer_idx,
+                mix_layers=True,
                 print_flag=True
             ),
 
@@ -508,9 +499,9 @@ class EmbedInitializer:
         # ****** (Type3) global_hidden_meanを、全カテゴリの主成分で計算する (各隠れ層の代表vecは、その前後の層との平均) ******
         print("Calculating global hidden state mean for debiasing by global primary components...")
         if mix_layers:
-            save_globalPrimComp_dir = os.path.join(project_root, "data", "dbpedia", f"global_primary_components_mixedlayers_{self.model_name}_{self.term_vec_type}", "n_components_10") # os.path.join(project_root, "data", "dbpedia", "global_primary_components", f"n_components_{n_components}")
+            save_globalPrimComp_dir = os.path.join(project_root, "data", "dbpedia", f"global_primary_components_mixedlayers_{self.model_name}_{self.pool_hs_type}", "n_components_10") # os.path.join(project_root, "data", "dbpedia", "global_primary_components", f"n_components_{n_components}")
         else:
-            save_globalPrimComp_dir = os.path.join(project_root, "data", "dbpedia", f"global_primary_components_singledlayer_{self.model_name}_{self.term_vec_type}", "n_components_10") # os.path.join(project_root, "data", "dbpedia", "global_primary_components_singledlayer", f"n_components_{n_components}")
+            save_globalPrimComp_dir = os.path.join(project_root, "data", "dbpedia", f"global_primary_components_singledlayer_{self.model_name}_{self.pool_hs_type}", "n_components_10") # os.path.join(project_root, "data", "dbpedia", "global_primary_components_singledlayer", f"n_components_{n_components}")
 
         # dbpediaから収集した全ての固有名詞を収集
         # [memo] この処理は_load_prop_nouns()に置き換えた
@@ -544,7 +535,11 @@ class EmbedInitializer:
             if term.strip() == "":
                 continue
             valid_init_term_count += 1
-            inputs = tokenizer(term, return_tensors="pt", add_special_tokens=LAST_TOKEN_IS_EOS).to(model.device)    # term内には<unused>が含まれないのでadd_special_tokens=FalseでOK. Trueの場合、last_token_idxで<EOS>の位置を取得する
+            inputs = tokenizer(
+                term, 
+                return_tensors="pt", 
+                # add_special_tokens=self.last_token_is_eos
+            ).to(model.device)    # term内には<unused>が含まれないのでadd_special_tokens=FalseでOK. Trueの場合、last_token_idxで<EOS>の位置を取得する
 
             # ** モデルに入力して、各層の隠れ状態を語句のベクトルとして取得する **
             with torch.no_grad():
@@ -562,14 +557,12 @@ class EmbedInitializer:
                 if layer_idx not in layer_to_hsVecs.keys():
                     layer_to_hsVecs[layer_idx] = []
                 
-                # [memo] この処理は_extract_term_vec()に置き換えた
                 term_vec = self._extract_term_vec(
                     inputs=inputs,
                     layer_idx=layer_idx,
                     num_hidden_layers=num_hidden_layers,
                     all_hs=hs,
                     layer_hs=layer_hs,
-                    term_vec_type=self.term_vec_type,
                     mix_layers=mix_layers
                 )
                         
@@ -595,7 +588,7 @@ class EmbedInitializer:
                 explained_ratio=explained_ratio,
                 meta={
                     "layer_idx": layer_idx,
-                    "term_vec_type": self.term_vec_type,
+                    "pool_hs_type": self.pool_hs_type,
                     "mix_layers": mix_layers,
                     "num_samples": X.shape[0],
                     "hidden_dim": X.shape[1],
@@ -642,7 +635,11 @@ class EmbedInitializer:
                 if term.strip() == "":
                     continue
                 valid_init_term_count += 1
-                inputs = tokenizer(term, return_tensors="pt", add_special_tokens=LAST_TOKEN_IS_EOS).to(model.device)    # term内には<unused>が含まれないのでadd_special_tokens=FalseでOK. Trueの場合、last_token_idxで<EOS>の位置を取得してしまう
+                inputs = tokenizer(
+                    term, 
+                    return_tensors="pt", 
+                    # add_special_tokens=self.last_token_is_eos     # term内には<unused>が含まれないのでadd_special_tokens=FalseでOK. Trueの場合、last_token_idxで<EOS>の位置を取得してしまう
+                ).to(model.device)
 
                 # ** モデルに入力して、語句中の最終tokenを入れた後の、モデルの最後の隠れ状態をその語句のベクトルとする **
                 with torch.no_grad():
@@ -654,14 +651,12 @@ class EmbedInitializer:
                     if layer_idx not in layer_to_hsSumVec.keys():
                         layer_to_hsSumVec[layer_idx] = torch.zeros_like(E[0])  # (d,) ... E[0]と同じshapeとdtypeのゼロベクトルを作成
 
-                    # [memo] この処理は_extract_term_vec()に置き換えた
                     term_vec = self._extract_term_vec(
                         inputs=inputs,
                         layer_idx=layer_idx,
                         num_hidden_layers=num_hidden_layers,
                         all_hs=hs,
                         layer_hs=layer_hs,
-                        term_vec_type=self.term_vec_type,
                         mix_layers=mix_layers
                     )
                             
@@ -718,11 +713,11 @@ class EmbedInitializer:
                 if layer_idx not in layer_to_hsSumVec.keys():
                     layer_to_hsSumVec[layer_idx] = torch.zeros_like(E[0])  # (d,) ... E[0]と同じshapeとdtypeのゼロベクトルを作成
                 
-                if self.term_vec_type == "single_last":
+                if self.pool_hs_type == "single_last":
                     # ** term中の最後のtokenのみでterm_vecを作る場合:
                     last_token_idx = inputs["attention_mask"].sum(dim=1).item() - 1    # 入力語句の最後のtokenのindex ({attention_maskの1の数}-1で計算)
                     term_vec = layer_hs[0, last_token_idx, :]      # [1, seq_len, d] -> [d]
-                elif self.term_vec_type == "mean":
+                elif self.pool_hs_type == "mean":
                     # ** term中の全てのsubtokenにおける状態の平均をterm_vecとする場合:
                     seq_len = inputs["attention_mask"].sum().item()
                     term_vec = layer_hs[0, :seq_len, :].mean(dim=0)   # [d]
@@ -1060,7 +1055,6 @@ class EmbedInitializer:
         initvec_func, 
         layer_idx=None,
         mix_layers=False, 
-        term_vec_type=None,
         print_flag=False
         ):
         # *** 初期vec作成用の固有名詞リストをカテゴリ毎に用意し、任意の関数で初期vecを作成する方法. ***
@@ -1090,8 +1084,7 @@ class EmbedInitializer:
                     # init_target_ids, 
                     layer_idx=layer_idx, 
                     lambda_=LAMBDA_, 
-                    mix_layers=mix_layers, 
-                    term_vec_type=term_vec_type,
+                    mix_layers=mix_layers,
                     print_flag=print_flag
                 )
 
@@ -1106,7 +1099,6 @@ class EmbedInitializer:
         return model
 
 
-    
 
     def initialize_embeds_by_other_category_centroid_by_function(
         self, 
@@ -1116,14 +1108,15 @@ class EmbedInitializer:
         category2initoken_ids, 
         initvec_func, 
         layer_idx=None,
-        mix_layers=False, 
-        term_vec_type=None,
+        mix_layers=False,
         print_flag=False
         ):
-        
+        # [WIP]
         # 準備: 各カテゴリのcentroid vec作成用の固有名詞リスト(propnoun_num_for_init_vec-10 個)を作成しておく
         category_to_centroid_terms = {}
-        for category, init_token_ids in category2initoken_ids.items():
+
+        # 他のカテゴリのCOGで初期化する場合、category2initoken_ids外（今回新規概念として埋め込むtokenのあるカテゴリ以外）からも候補のカテゴリを選んで良い。そのためcategory_to_concepts_for_vecから直接取得する’
+        for category, init_token_ids in category_to_concepts_for_vec.items():
             init_terms_candidate = category_to_concepts_for_vec[category]
             init_terms_for_centroid = random.sample(init_terms_candidate, min(len(init_terms_candidate), self.propnoun_num_for_init_vec-10)) 
             category_to_centroid_terms[category] = init_terms_for_centroid
@@ -1131,11 +1124,21 @@ class EmbedInitializer:
         # main: 初期化対象token毎に毎回ランダムに選んだ他のカテゴリのCOGで初期化する
         for own_category, init_token_ids in category2initoken_ids.items():
             other_categories = [c for c in category_to_concepts_for_vec.keys() if c != own_category]
-            print(f"Category '{own_category}' will be initialized with centroid of other categories: {other_categories[:5]}.")
+            if print_flag:
+                print(f"Category '{own_category}' will be initialized with centroid of other {len(other_categories)} categories: {other_categories[:20]}...")
 
             for init_token_id in init_token_ids:
-                # 他のカテゴリをランダムに選ぶ
-                other_category = random.choice(other_categories)
+                if self.other_init_use_the_same_other_category:
+                    # ** 学習対象のカテゴリ毎に、どの他カテゴリを初期化に使うかを固定する場合
+                    if own_category not in self.category_to_other_category:
+                        # 未固定の場合ここでランダムに選び固定する
+                        self.category_to_other_category[own_category] = random.choice(other_categories) # 学習対象のカテゴリ毎に、どの他カテゴリを初期化に使うかをランダムに選んで固定する
+                    other_category = self.category_to_other_category[own_category]
+                    print(f"\tNew token {tokenizer.decode(init_token_id)} is initialized with other category '{other_category}' (fixed for category '{own_category}').")
+                else:
+                    # ** 他のカテゴリをランダムに選ぶ
+                    other_category = random.choice(other_categories)
+                    print(f"\tNew token {tokenizer.decode(init_token_id)} is initialized with other category '{other_category}'.")
                 terms_in_other_category = category_to_concepts_for_vec[other_category]
                 init_terms_for_centroid = category_to_centroid_terms.get(other_category, [])    # configでother_categoryに属す固有名詞リストを含めていない場合はcategory_to_centroid_termsにother_categoryが存在しない可能性があるため、getで取得する
 
@@ -1146,29 +1149,28 @@ class EmbedInitializer:
                 init_terms_for_random = random.sample(init_terms_candidate, min(len(init_terms_candidate), 10)) 
                 init_terms = init_terms_for_centroid + init_terms_for_random # 中心vec用の固有名詞とランダムvec用の固有名詞を合わせたリストを初期化vec作成に使用
 
+                if model is not None:
+                    # dataの状態を確認するために modelをNoneで呼び出すこともあるため、modelがNoneでない場合にのみ初期化処理を行う
+                    init_target_ids = [init_token_id]
+                    init_src = initvec_func(
+                        model, 
+                        tokenizer, 
+                        own_category, 
+                        init_terms,
+                        layer_idx=layer_idx, 
+                        lambda_=LAMBDA_, 
+                        mix_layers=mix_layers, 
+                        print_flag=print_flag
+                    )
 
-                init_target_ids = [init_token_id]
-                # model = initvec_func(
-                init_src = initvec_func(
-                    model, 
-                    tokenizer, 
-                    own_category, 
-                    init_terms, 
-                    # init_target_ids, 
-                    layer_idx=layer_idx, 
-                    lambda_=LAMBDA_, 
-                    mix_layers=mix_layers, 
-                    print_flag=print_flag
-                )
-
-                # 埋め込み層のinit_token_ids (<unusedx>) に該当する行を、まとめてinit_srcで初期化.
-                E = self._get_model_info(model)[0]
-                with torch.no_grad():
-                    init_target_ids = torch.as_tensor(init_target_ids, device=E.device, dtype=torch.long)
-                    src = init_src.unsqueeze(0).expand(len(init_target_ids), -1)   # (n, d) # 全トークンをカテゴリ重心で埋める
-                    E.index_copy_(dim=0, index=init_target_ids, source=src)
-                
-                print(f"Initialized new token {tokenizer.decode(init_token_id)} in category '{own_category}' with layer {layer_idx}'s hidden state of {len(init_terms)} concepts: ... ({init_terms[-15:]}), from other category '{other_category}'.")
+                    # 埋め込み層のinit_token_ids (<unusedx>) に該当する行を、まとめてinit_srcで初期化.
+                    E = self._get_model_info(model)[0]
+                    with torch.no_grad():
+                        init_target_ids = torch.as_tensor(init_target_ids, device=E.device, dtype=torch.long)
+                        src = init_src.unsqueeze(0).expand(len(init_target_ids), -1)   # (n, d) # 全トークンをカテゴリ重心で埋める
+                        E.index_copy_(dim=0, index=init_target_ids, source=src)
+                    
+                print(f"===\n\tNew token {tokenizer.decode(init_token_id)} in category '{own_category}' is initialized with layer {layer_idx}'s hidden state of {len(init_terms)} concepts: ... ({init_terms[-15:]}), from other category '{other_category}'.")
         return model
 
 
@@ -1178,7 +1180,6 @@ class EmbedInitializer:
 
 
     # ========================== initvec_func として入力する任意の関数一覧の実装 ==========================
-
     def make_initvec_by_wiki_summary_and_hidden_state(
         self,
         model, 
@@ -1187,66 +1188,65 @@ class EmbedInitializer:
         init_terms,
         layer_idx=None, 
         lambda_=None,   # global vecを使わないので不要
-        mix_layers=False, 
-        term_vec_type=None,
+        mix_layers=False,
         print_flag=False
         ):
-        # *** 初期vecを、カテゴリの固有名詞ではなく、wikiのsummary文を入力した時の最終tokenの隠れ状態から作る。***
-        # 固有名詞を構成する単語は、別の意味を持っていることが多いのではないかという懸念から。例えば、board_gameカテゴリの'Unlock!'というゲーム名は、単語だけ見れば鍵を開けるという意味だが、ここではゲームを代表するベクトルを作りたいため、単語の意味と欲しい意味が異なる。そのためwiki説明文の利用を試す。
+        # *** 初期vecを、固有名詞毎のwikiのsummary文入力時の隠れ状態から作る。 ***
 
         E, num_hidden_layers = self._get_model_info(model)
         if print_flag:
             print(f"⭐️num_hidden_layers: {num_hidden_layers}")
 
-        if mix_layers:
-            # hsを前後3層分取って平均する場合、存在する層の範囲内で、layer_idxの前後3層分の層番号を取得する
-            mix_layers = self._get_mix_layers(layer_idx, num_hidden_layers)
-            
-
-        # 1. term毎に、語句をモデルに入力して、語句中の最終tokenを入れた後の、モデルの最後の隠れ状態をその語句のベクトルとし、そのベクトルを加算
-        valid_init_term_count = 0   # ""でない有効なtermの数をカウント
-        sum_vec = torch.zeros_like(E[0])  # (d,) ... E[0]と同じshapeとdtypeのゼロベクトルを作成
+        # 1. term毎にpromptを用意
+        prompt_lst = []
         for term in init_terms:
             if term.strip() == "":
                 continue
-            # term(prop noun)の該当wiki pageのsummaryを取得する
+            # ** このterm(prop noun)を説明する wiki page の summary を取得し、前処理を行う **
+            # 辞書にまだ保存されていなければ、data dir もしくは wiki apiから取得して、self.propnoun_to_wikisummaryに格納する
             if term not in self.propnoun_to_wikisummary:
-                # 辞書にまだ保存されていなければ、data dir もしくは wiki apiから取得して、self.propnoun_to_wikisummaryに格納する
                 self._load_wikisummary(term)
             summary = self.propnoun_to_wikisummary.get(term)
-            if summary is None:
+
+            # 短すぎor長すぎるsummaryがあるため、最初の数文だけをsummaryとして使用する. (30~300単語に収まるように調整) 30単語未満のsummaryは、十分な情報が得られない可能性があるため、初期化vecの計算に使用しない. 
+            min_words, max_words = 30, 200
+            truncated_summary = get_first_few_sentences(summary, min_words, max_words)
+            if truncated_summary is None:
+                print(f"'{term}' のWikipedia summaryは、{min_words} ~ {max_words}単語の範囲内に収まらないため、スキップします。") # 最初の100文字だけ表示
                 continue
+            target_summary = truncated_summary
 
-            valid_init_term_count += 1
-            inputs = tokenizer(summary, return_tensors="pt", add_special_tokens=LAST_TOKEN_IS_EOS).to(model.device)    # term内には<unused>が含まれないのでadd_special_tokens=FalseでOK. Trueの場合、last_token_idxで<EOS>の位置を取得してしまう
-
-            # ** モデルに入力して、語句中の最終tokenを入れた後の、モデルの最後のtoken位置における隠れ状態をその語句のベクトルとする **
-            with torch.no_grad():
-                out = model(**inputs, output_hidden_states=True)
-                hs = out.hidden_states  # tuple of (batch_size, seq_len, hidden_size)のリスト. 長さはnum_hidden_layers+1 (embedding層の出力も含むため)
-                layer_hs = hs[layer_idx]
-            
-            # [memo] この処理は_extract_term_vec()に置き換えた
-            term_vec = self._extract_term_vec(
-                inputs=inputs,
-                layer_idx=layer_idx,
-                num_hidden_layers=num_hidden_layers,
-                all_hs=hs,
-                layer_hs=layer_hs,
-                term_vec_type=self.term_vec_type,
-                mix_layers=mix_layers
-            )
+            if self.repeat_prompt:
+                # *** 初期vecを、固有名詞毎のwikiのsummary文を2回入力して、2回目の文内token位置の隠れ状態から作る場合: https://openreview.net/forum?id=Ahlrf2HGJR の手法 ***
+                target_summary = repeat_text(target_summary, 2)
+            prompt_lst.append(target_summary)
         
-            sum_vec += term_vec
+        if len(prompt_lst) == 0:
+            raise ValueError(f"No valid summaries found for the given terms. Cannot create initialization vector.")
+        print(f"Created prompt list for terms: {prompt_lst[:5]}... (total {len(prompt_lst)})")
 
-        # 2. term vec間の平均vecを計算
-        if sum_vec.norm().item() == 0.0 or valid_init_term_count == 0:
+
+        # 2. 各語句ベクトルを作成する. wiki summary をモデルに入力し、pool_hs_type に応じてsummary中の全token/最終token/eos位置の隠れ状態をその語句のベクトルとする
+        term_vecs = self._extract_hidden_states(
+            model, 
+            tokenizer, 
+            prompt_lst, 
+            batch_size=BATCH_SIZE, 
+            layer_index=layer_idx, 
+            mix_layers=True, 
+            print_flag=False
+        )
+        
+
+        # 3. term vec間の平均vecを計算
+        sum_vec = term_vecs.sum(dim=0)  # バッチ内のterm_vecを合計して、sum_vecとする
+        if sum_vec.norm().item() == 0.0 or len(prompt_lst) == 0:
             raise ValueError(f"All terms resulted in zero vectors. Cannot initialize with zero vector.")
-        init_src = sum_vec / valid_init_term_count
+        init_src = sum_vec / len(prompt_lst)
 
-        # 3. 微小ノイズを加える
+        # 4. 微小ノイズを加える
         d = init_src.shape[0]
-        noise = torch.randn(d, device=E.device, dtype=E.dtype)
+        noise = torch.randn(d, device=init_src.device, dtype=init_src.dtype)    # torch.randn(d, device=E.device, dtype=E.dtype)
 
         # 各行をL2正規化して「方向だけランダム」にする
         eps = 1e-12
@@ -1260,21 +1260,14 @@ class EmbedInitializer:
         # 重心 + 微小ノイズ
         init_src = init_src + noise
 
-        # 4. ノルムを語彙中央値に合わせる [memo] hidde stateのノルムは埋め込み層のノルムと大きく異なる可能性があるため、ノルムを合わせる
+        # 5. ノルムを語彙中央値に合わせる [memo] hidde stateのノルムは埋め込み層のノルムと大きく異なる可能性があるため、ノルムを合わせる
         target_norm = E.norm(dim=1).median().item()  # 埋め込み行のノルムの中央値をターゲットノルムとする
         init_src_norm = init_src.norm().item()
         if init_src_norm > 0:
             init_src = init_src / init_src_norm * target_norm  # ターゲットノルムに合わせてスケーリング
         
-        return init_src
+        return init_src.to(E.device)
 
-        # # 5. 埋め込み層のinit_target_idsが指定した<unusedx>を、まとめてinit_srcで初期化.
-        # with torch.no_grad():
-        #     init_target_ids = torch.as_tensor(init_target_ids, device=E.device, dtype=torch.long)
-        #     src = init_src.unsqueeze(0).expand(len(init_target_ids), -1)   # (n, d) # 全トークンをカテゴリ重心で埋める
-        #     E.index_copy_(dim=0, index=init_target_ids, source=src)
-        
-        # return model
 
 
     # initVecWithGlobalVecDebiasedTermHS, initVecWithMeanVecOfDebiasedTermHiddenStates
@@ -1288,7 +1281,6 @@ class EmbedInitializer:
         layer_idx=None, 
         lambda_=None, 
         mix_layers=False, 
-        term_vec_type=None,
         print_flag=False
         ):
         """語句をモデルに入力し、語句中の最終tokenを入れた後の、モデル内の指定層における、中心化した隠れ状態をその語句のベクトルとし、
@@ -1313,10 +1305,6 @@ class EmbedInitializer:
         if print_flag:
             print(f"⭐️num_hidden_layers: {num_hidden_layers}")
 
-        if mix_layers:
-            mix_layers = self._get_mix_layers(layer_idx, num_hidden_layers)
-            
-
         # 1. term毎に、語句をモデルに入力して、語句中の最終tokenを入れた後の、モデルの最後の隠れ状態をその語句のベクトルとし、そのベクトルを加算
         valid_init_term_count = 0   # ""でない有効なtermの数をカウント
         sum_vec = torch.zeros_like(E[0])  # (d,) ... E[0]と同じshapeとdtypeのゼロベクトルを作成
@@ -1325,7 +1313,11 @@ class EmbedInitializer:
             if term.strip() == "":
                 continue
             valid_init_term_count += 1
-            inputs = tokenizer(term, return_tensors="pt", add_special_tokens=LAST_TOKEN_IS_EOS).to(model.device)    # term内には<unused>が含まれないのでadd_special_tokens=FalseでOK. Trueの場合、last_token_idxで<EOS>の位置を取得してしまう
+            inputs = tokenizer(
+                term, 
+                return_tensors="pt", 
+                # add_special_tokens=self.last_token_is_eos     # term内には<unused>が含まれないのでadd_special_tokens=FalseでOK. Trueの場合、last_token_idxで<EOS>の位置を取得してしまう
+            ).to(model.device)
 
             # ** モデルに入力して、語句中の最終tokenを入れた後の、モデルの最後の隠れ状態をその語句のベクトルとする **
             with torch.no_grad():
@@ -1333,15 +1325,12 @@ class EmbedInitializer:
                 hs = out.hidden_states  # tuple of (batch_size, seq_len, hidden_size)のリスト. 長さはnum_hidden_layers+1 (embedding層の出力も含むため)
                 layer_hs = hs[layer_idx]
 
-
-            # [memo] この処理は_extract_term_vec()に置き換えた
             term_vec = self._extract_term_vec(
                 inputs=inputs,
                 layer_idx=layer_idx,
                 num_hidden_layers=num_hidden_layers,
                 all_hs=hs,
                 layer_hs=layer_hs,
-                term_vec_type=term_vec_type,
                 mix_layers=mix_layers
             )
         
@@ -1414,8 +1403,7 @@ class EmbedInitializer:
         init_terms,
         layer_idx=None, 
         lambda_=None, 
-        mix_layers=False, 
-        term_vec_type=None,
+        mix_layers=False,
         print_flag=False
         ):
         """語句をモデルに入力し、語句中の最終tokenを入れた後の、モデル内の指定層における隠れ状態をその語句のベクトルとし、
@@ -1430,9 +1418,6 @@ class EmbedInitializer:
         E, num_hidden_layers = self._get_model_info(model)
         if print_flag:
             print(f"⭐️num_hidden_layers: {num_hidden_layers}")
-        if mix_layers:
-            mix_layers = self._get_mix_layers(layer_idx, num_hidden_layers)
-            
 
         # 1. term毎に、語句をモデルに入力して、語句中の最終tokenを入れた後の、モデルの最後の隠れ状態をその語句のベクトルとし、そのベクトルを加算
         valid_init_term_count = 0   # ""でない有効なtermの数をカウント
@@ -1441,9 +1426,12 @@ class EmbedInitializer:
             if term.strip() == "":
                 continue
             valid_init_term_count += 1
-            # inputs = tokenizer(term, return_tensors="pt").to(model.device)
-            inputs = tokenizer(term, return_tensors="pt", add_special_tokens=LAST_TOKEN_IS_EOS).to(model.device)    # term内には<unused>が含まれないのでadd_special_tokens=FalseでOK. Trueの場合、last_token_idxで<EOS>の位置を取得してしまう
-
+            inputs = tokenizer(
+                term, 
+                return_tensors="pt", 
+                # add_special_tokens=self.last_token_is_eos     # term内には<unused>が含まれないのでadd_special_tokens=FalseでOK. Trueの場合、last_token_idxで<EOS>の位置を取得してしまう
+            ).to(model.device)
+            
             # ** モデルに入力して、語句中の最終tokenを入れた後の、モデルの最後の隠れ状態をその語句のベクトルとする **
             with torch.no_grad():
                 out = model(**inputs, output_hidden_states=True)
@@ -1451,14 +1439,12 @@ class EmbedInitializer:
                 layer_hs = hs[layer_idx]
 
 
-            # [memo] この処理は_extract_term_vec()に置き換えた
             term_vec = self._extract_term_vec(
                 inputs=inputs,
                 layer_idx=layer_idx,
                 num_hidden_layers=num_hidden_layers,
                 all_hs=hs,
                 layer_hs=layer_hs,
-                term_vec_type=term_vec_type,
                 mix_layers=mix_layers
             )
             sum_vec += term_vec
@@ -1540,40 +1526,21 @@ class EmbedInitializer:
 
     def _get_mix_layers(self, layer_idx, num_hidden_layers):
         if layer_idx == -1 or layer_idx == num_hidden_layers:
-            mix_layers = [-1, -2, -3]                           # 最終層とその前の2層を平均する
+            mixed_layers = [-1, -2, -3]                           # 最終層とその前の2層を平均する
         elif layer_idx == 0:
-            mix_layers = [0, 1, 2]                              # 最初の層とその後の2層を平均する
+            mixed_layers = [0, 1, 2]                              # 最初の層とその後の2層を平均する
         else:
-            mix_layers = [layer_idx-1, layer_idx, layer_idx+1]  # 指定層の前後3層を平均する
+            mixed_layers = [layer_idx-1, layer_idx, layer_idx+1]  # 指定層の前後3層を平均する
         # else:
         #     raise ValueError(f"Invalid layer_idx: {layer_idx}. Must be -1, 0, or a positive integer less than num_hidden_layers.")
-        return mix_layers
+        return mixed_layers
 
-
-    # def _load_wikisummaries(self):
-    #     """dbpediaから収集した固有名詞のwikipedia summaryを読み込んで、propnoun_to_wikisummaryに保存する。
-    #     """
-    #     print("Loading Wikipedia summaries for prop nouns...")
-    #     propNoun_dir = os.path.join(project_root, "data", "dbpedia", "wikidata_Things_childs_LIMIT1000")
-    #     wiki_pages_dir = os.path.join(project_root, "data", "wiki_pages")
-    #     for category_file in os.listdir(propNoun_dir):
-    #         if not category_file.endswith(".csv"):
-    #             continue
-    #         category = category_file.removesuffix(".csv").replace("_", " ")
-    #         df = pd.read_csv(os.path.join(propNoun_dir, category_file))
-    #         for _, row in df.iterrows():
-    #             label = row["label"]
-    #             summary = row["summary"]
-    #             if pd.isna(label) or pd.isna(summary):
-    #                 continue
-    #             self.propnoun_to_wikisummary[label] = summary
-    #     print(f"Loaded Wikipedia summaries for {len(self.propnoun_to_wikisummary)} prop nouns.")
 
     def _load_wikisummary(self, propnoun):
         """dbpediaから収集した固有名詞のwikipedia summaryを読み込んで、propnoun_to_wikisummaryに保存する。
         data/wiki_pages に未保存であれば、data dir もしくは wiki apiから取得して、self.propnoun_to_wikisummaryに保存する
         """
-        print("Loading Wikipedia summaries for prop nouns...")
+        # print("Loading Wikipedia summaries for prop nouns...")
         wiki_pages_dir = os.path.join(project_root, "data", "wiki_pages")
 
         filename = self._change_propnoun_to_filename(propnoun) + ".json"  # ファイル名に使用できない文字を置換
@@ -1599,8 +1566,8 @@ class EmbedInitializer:
             summary = wiki_page.get("summary")
             if summary:
                 self.propnoun_to_wikisummary[propnoun] = summary
-                print(f"Loaded Wikipedia summary for '{propnoun}' from wiki_pages.")
-                return 
+                # print(f"Loaded Wikipedia summary for '{propnoun}' from wiki_pages.")
+                return summary
             else:
                 print(f"No summary found in wiki page for '{propnoun}' in wiki_pages.")
                 return None
@@ -1614,16 +1581,15 @@ class EmbedInitializer:
         return filename
 
 
-    def _extract_term_vec(self, inputs, layer_idx, num_hidden_layers, all_hs=None, layer_hs=None, term_vec_type=None, mix_layers=False):
+    def _extract_term_vec(self, inputs, layer_idx, num_hidden_layers, all_hs=None, layer_hs=None, mix_layers=False):
         """
-        各場合に応じてterm_vecを抽出する関数. term_vec_type と mix_layers の組み合わせに応じて、term_vecの抽出方法が変わる.
+        各場合に応じてterm_vecを抽出する関数. pool_hs_type と mix_layers の組み合わせに応じて、term_vecの抽出方法が変わる.
         Args:
         * all_hs: 全層の隠れ状態のリスト. 各要素は [batch, seq_len, d].  前後３層mix用。
         * layer_hs: 指定層の隠れ状態. [batch, seq_len, d].  単一層用の引数。
         * inputs: モデルへの入力. attention_maskを使って語句中のtoken数を計算するために必要.
         * layer_idx: 現在処理している層のindex
         * num_hidden_layers: モデルの隠れ層の総数. mix_layers=Trueの場合に、前後の層を計算するために必要.
-        * term_vec_type: term_vecの抽出方法. "single_last" または "mean"。
         * mix_layers: Trueなら前後3層の隠れ状態を平均してterm_vecとする。Falseなら単一層の隠れ状態をterm_vecとする。
 
         Return:
@@ -1641,24 +1607,137 @@ class EmbedInitializer:
                 dim=0
             )  # 指定層の出力 [3, 1, seq_len, d]
 
-            if term_vec_type == "single_last":
+            if self.pool_hs_type in ["last_token", "eos"]:
                 # ** term中の最後のtokenのみでterm_vecを作る場合:
                 term_vec = layer_hs_mix[:, 0, last_token_idx, :].mean(dim=0)   # [1, seq_len, d] -> [d] 前後3層の最後のtokenの隠れ状態を平均する.
-            if term_vec_type == "mean":
+            if self.pool_hs_type == "mean_pool":
                 # ** term中の全てのsubtokenにおける状態の平均をterm_vecとする場合:
                 term_vec = layer_hs_mix[:, 0, :seq_len, :].mean(dim=1).mean(dim=0)    # [3, 1, seq_len, d] -> [seq_len, d] -> [d]
 
             # else:
-                # raise ValueError(f"Unknown term_vec_type: {term_vec_type}")
+                # raise ValueError(f"Unknown pool_hs_type: {pool_hs_type}")
         
         # ***** 単一層でterm_vecを作る場合 *****
         else:            
-            if term_vec_type == "single_last":
+            if self.pool_hs_type in ["last_token", "eos"]:
                 # ** term中の最後のtokenのみでterm_vecを作る場合:
                 term_vec = layer_hs[0, last_token_idx, :]      # [1, seq_len, d] -> [d]
-            elif term_vec_type == "mean":
+            elif self.pool_hs_type == "mean_pool":
                 # ** term中の全てのsubtokenにおける状態の平均をterm_vecとする場合:
                 term_vec = layer_hs[0, :seq_len, :].mean(dim=0)   # [d]
             # else:
-                # raise ValueError(f"Unknown term_vec_type: {term_vec_type}")
+                # raise ValueError(f"Unknown pool_hs_type: {pool_hs_type}")
         return term_vec
+
+
+
+    @torch.no_grad()
+    def _extract_hidden_states(self, model, tokenizer, text_list, batch_size=8, layer_index=-1, mix_layers=True, print_flag=False):
+        """
+        各テキストの末尾にEOSを明示的に追加し、
+        EOSトークン位置の hidden state を返す。
+
+        Returns:
+            np.ndarray of shape (N, hidden_dim)
+        """
+
+        E, num_hidden_layers = self._get_model_info(model)
+
+
+        all_vecs = []
+        for i in range(0, len(text_list), batch_size):
+            batch_texts = text_list[i:i + batch_size]
+            if print_flag:
+                print(f"Processing batch {i // batch_size + 1}/{(len(text_list) + batch_size - 1) // batch_size} for hidden state extraction...")
+
+            if self.pool_hs_type == "eos":
+                # EOS を明示的に末尾へ追加
+                batch_texts = [text + tokenizer.eos_token for text in batch_texts]
+            
+            inputs = tokenizer(
+                batch_texts,
+                return_tensors="pt",
+                padding=True,
+                truncation=True,
+                add_special_tokens=False #last_token_is_eos#LAST_TOKEN_IS_EOS, -> pool_hs_type == "eos"の場合は明示的にeosを追加済みなので、ここをTrueにするとeosが重複して2つ付く可能性がある。そのためここはFalseで良い。
+            ).to(model.device) 
+
+            input_ids = inputs["input_ids"]
+            attention_mask = inputs["attention_mask"]
+
+            with torch.no_grad():
+                outputs = model(**inputs, output_hidden_states=True)
+                # hidden_states は tuple:
+                # 0: embedding出力, 1..L: 各層出力
+                all_hs = outputs.hidden_states
+
+            if mix_layers:
+                # ** 前後3層mixでterm_vecを作る場合 **
+                target_layer_hs = torch.stack(
+                    [all_hs[lid] for lid in self._get_mix_layers(layer_index, num_hidden_layers)],
+                    dim=0
+                )  # 指定層の出力 [3, batch_size, seq_len, d]
+            else:
+                # ** 単一層でterm_vecを作る場合 **
+                target_layer_hs = all_hs[layer_index].unsqueeze(0)      # (1, batch_size, seq_len, d)
+
+            
+            
+            # *** pool_hs_type に応じて、vectorを抽出する位置を決定 ***
+            if self.pool_hs_type == "eos":
+                # 各系列について EOS token の最後の出現位置を取る
+                eos_mask = (input_ids == tokenizer.eos_token_id)
+
+            for t_idx in range(input_ids.size(0)):
+
+                # ** 1 が立っている位置を取得 **
+                # e.g.  [0, 0, 0, 0, 0, 0, 1, 1, 1, 1, 1, 1] -> valid_pos = [6, 7, 8, 9, 10, 11] 
+                valid_pos = torch.nonzero(attention_mask[t_idx], as_tuple=False).squeeze(-1)
+                # print(f"valid_pos for batch {t_idx}: {valid_pos}")
+                if valid_pos.numel() == 0:
+                    # 全部 padding の場合
+                    pos_begin = 0
+                    pos_end = 0
+                else:
+                    pos_begin = valid_pos[0].item()
+                    pos_end = valid_pos[-1].item() + 1   # slice用に end は exclusive
+
+                    
+                if self.pool_hs_type == "eos":
+                    eos_positions = torch.where(eos_mask[t_idx])[0]
+                    if len(eos_positions) == 0:
+                        raise ValueError(f"EOS token が見つかりません: {batch_texts[t_idx]}")
+                    eos_pos = eos_positions[-1].item()
+                    pos_begin = eos_pos
+                    pos_end = eos_pos + 1
+
+                elif self.pool_hs_type == "last_token":
+                    pos_begin = pos_end - 1
+
+                elif self.pool_hs_type == "mean_pool":
+                    if self.repeat_prompt:
+                        # *** 初期vecを、固有名詞毎のwikiのsummary文を2回入力して、2回目の文内token位置の隠れ状態から作る場合: https://openreview.net/forum?id=Ahlrf2HGJR の手法 ***
+                        # wiki summaryを繰り返してプロンプトとする場合は、2回目の文のみの隠れ状態を平均する
+                        pos_begin_second_sent = (pos_begin + pos_end) // 2 # == pos_begin + (pos_end - pos_begin) / 2
+                        pos_begin = pos_begin_second_sent
+                    else:
+                        pass # デフォルトは、入力文全体の隠れ状態の平均を取る
+    
+                else:
+                    raise ValueError(f"Unknown pool_hs_type: {self.pool_hs_type}")
+
+                # ** vectorを抽出 **
+                # vec = layer_hs[t_idx, pos_begin:pos_end, :].mean(dim=0)  # (H,)
+                term_vec = target_layer_hs[:, t_idx, pos_begin:pos_end, :].mean(dim=0).mean(dim=0)  # (mix層数, batch_size, seq_len, d) -> batch内のt_idxに該当する層&平均対象のtoken位置を指定: (mix層数, meanpool対象token数, d) -> 前後3層を平均した隠れ状態のうち、valid_tokenの部分を平均する: (meanpool対象token数, d) -> meanpool対象tokenを平均する: (d)
+                all_vecs.append(term_vec.detach().cpu())
+
+                if print_flag:
+                    # どの位置のtokenの隠れ状態が使われるのかを確認するためのprint文
+                    print(f"target_layer_hs shape: {target_layer_hs.shape} -> term_vec: {term_vec.shape}")  # (mix層数, batch_size, seq_len, d)
+                    print(f"pos_begin: {pos_begin}, pos_end: {pos_end}")
+                    print(f"\tattention_mask: {attention_mask[t_idx]},\n\t valid_pos: {valid_pos}, \n\t valid part in batch_text: {input_ids[t_idx][pos_begin:pos_end]}")
+
+        return torch.stack(all_vecs, dim=0) # np.stack(all_vecs, axis=0)
+
+        
+

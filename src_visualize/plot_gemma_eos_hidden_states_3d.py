@@ -13,7 +13,8 @@
 
 実行例:
 nohup uv run python3 src_visualize/plot_gemma_eos_hidden_states_3d.py \
-    --data_type wiki_summary \
+    --data_type wiki_summary_repeat \
+    --pool_hs_type mean_pool \
     --threshold_num_nouns_per_category 30 \
     --num_categories 10 \
     --cuda_device 1 \
@@ -35,6 +36,8 @@ nohup uv run python3 src_visualize/plot_gemma_eos_hidden_states_3d.py \
     --cuda_device 1 \
     > plot3d_wiki_main_text.log 2>&1 &
 4182009
+
+
 
 
 
@@ -95,7 +98,7 @@ nohup uv run python3 src_visualize/plot_gemma_eos_hidden_states_3d.py \
 
 """
 
-word_num_threshold = 64
+word_num_threshold = 128
 # num_char_threshold = 400
 
 import argparse
@@ -135,7 +138,7 @@ seed = 42
 
 model_version = "3"
 model_size = "12"
-LAST_TOKEN_IS_EOS = True  # 固有名詞の最後にEOSトークンを追加して、その位置のhidden stateを取るかどうか。Falseの場合は最終トークン位置の隠れ状態を取得する
+# LAST_TOKEN_IS_EOS = True  # 固有名詞の最後にEOSトークンを追加して、その位置のhidden stateを取るかどうか。Falseの場合は最終トークン位置の隠れ状態を取得する -> pool_hs_type で指定するように変更したため、今はこの変数は使用していないが、後で削除予定
 LAYER_INDEX = 9     # どの層の hidden state を使うか
 BATCH_SIZE = 1 # 8
 
@@ -158,6 +161,7 @@ def main(args):
 
 
     data_type = args.data_type
+    pool_hs_type = args.pool_hs_type
     threshold_num_nouns_per_category = args.threshold_num_nouns_per_category
     num_categories = args.num_categories
     cuda_device = args.cuda_device
@@ -167,14 +171,13 @@ def main(args):
     else:
         config_filename = f"concepts_{num_categories}"
 
-
     
-    output_path = os.path.join(output_dir, f"{MODEL_NAME.replace('/', '_')}_layer{LAYER_INDEX}_{config_filename}_datatype_{data_type}_pca_3d.html")
+    output_path = os.path.join(output_dir, f"{MODEL_NAME.replace('/', '_')}_layer{LAYER_INDEX}_{config_filename}_datatype_{data_type}_poolHStype_{pool_hs_type}_pca_3d.html")
     os.environ["CUDA_VISIBLE_DEVICES"] = cuda_device
 
     fix_seed(seed)
 
-    
+    # ************ data preparation ************
 
     # 可視化したい固有名詞リスト
     # category_to_proper_nouns = {
@@ -194,12 +197,17 @@ def main(args):
         if len(nouns) <= threshold_num_nouns_per_category:
             category_to_proper_nouns[category] = nouns
         else:
-            category_to_proper_nouns[category] = random.sample(nouns, threshold_num_nouns_per_category)
+            # category_to_proper_nouns[category] = random.sample(nouns, threshold_num_nouns_per_category)
+            # 最初のn個を使用する
+            category_to_proper_nouns[category] = nouns[:threshold_num_nouns_per_category]
 
 
     if data_type == "proper_nouns":
+        # 固有名詞をpromptとする場合
         category_to_plot_data = category_to_proper_nouns
-    elif data_type == "wiki_summary":
+
+    elif data_type in ["wiki_summary", "wiki_summary_repeat"]:
+        # 固有名詞をタイトルとするwikiページのsummaryをpromptとする場合
         category_to_plot_data = defaultdict(list)
         for category, nouns in tqdm(category_to_proper_nouns.items(), desc="Processing wiki summaries"):
             for noun in nouns:
@@ -210,64 +218,26 @@ def main(args):
                     # print(f"'{noun}' のWikipedia summaryが見つかりませんでした。スキップします。")
                     continue
 
-                # # * 長すぎるsummaryがあるため、最初の5文だけをsummaryとして使用する
-                # # truncated_summary = " ".join(summary_sentences[:5])
-                # # 文末記号を保持して分割
-                # parts = re.split(r'(?<=[。．!?！？])\s*', summary)
-                # sentences = []
-                # delimiters = []
-                # for i in range(0, len(parts) - 1, 2):
-                #     sentence = parts[i].strip()
-                #     # delimiter = parts[i + 1]
-                #     delimiters.append(parts[i + 1].strip() if i + 1 < len(parts) else "")
-                #     if sentence:
-                #         sentences.append(sentence)
-                
-                # word_count = 0
-                # truncated_summary = ""
-                # for i, sentence in enumerate(sentences):
-                #     word_count += len(sentence)
-                #     truncated_summary += sentence + delimiters[i]  # 文末記号を保持して連結
-                #     if word_count > word_threshold:  # 300単語を超えないようにする
-                #         break
-
+                # 長すぎるsummaryがあるため、最初の数文だけをsummaryとして使用する
                 truncated_summary = get_first_few_sentences(summary, word_num_threshold)
                 if truncated_summary is None:
                     print(f"'{noun}' のWikipedia summaryは、最初の文だけで既に{word_num_threshold}単語を超えているため、スキップします。")
                     continue
-                category_to_plot_data[category].append(truncated_summary)
+                target_summary = truncated_summary
+
+                if data_type == "wiki_summary_repeat":
+                    # summaryを2回繰り返してプロンプトとする場合: https://openreview.net/forum?id=Ahlrf2HGJR の手法
+                    repeated_summary = (target_summary + " ") * 2
+                    target_summary = repeated_summary.strip()
+                
+                category_to_plot_data[category].append(target_summary)
 
     elif data_type == "wiki_main_text":
-        category_to_plot_data = defaultdict(list)
-        for category, nouns in tqdm(category_to_proper_nouns.items(), desc="Processing wiki main texts"):
-            for noun in nouns:
-                # 該当wiki pageのsummaryを取得する
-                # 辞書にまだ保存されていなければ、data dir もしくは wiki apiから取得して、self.propnoun_to_wikisummaryに格納する
-                main_text = load_wiki_text(noun, text_type="main_text")
-                if main_text is None:
-                    # print(f"'{noun}' のWikipedia main textが見つかりませんでした。スキップします。")
-                    continue
-
-                # 長すぎるmain textがあるため、最初の2文だけをmain textとして使用する. (summaryよりも本文の方が1文が長いようなので、summaryよりも少ない文数にする)
-                # main_text_sentences = re.split(r'(?<=[。．!?！？])\s*', main_text)
-                # truncated_main_text = " ".join(main_text_sentences[:2])
-                # 300tokenを超えないように、最初の数文を使用する
-                # truncated_main_text = ""
-                # for sentence in main_text_sentences:
-                #     if len(tokenizer(truncated_main_text + sentence)["input_ids"]) > 300:
-                #         break
-                #     truncated_main_text += sentence
-
-
-                truncated_main_text = get_first_few_sentences(main_text, word_num_threshold)
-                if truncated_main_text is None:
-                    print(f"'{noun}' のWikipedia main textは、最初の文だけで既に{word_num_threshold}単語を超えているため、スキップします。")
-                    continue
-
-                category_to_plot_data[category].append(truncated_main_text)
-
-
-
+        # 固有名詞をタイトルとするwikiページのmain textをpromptとする場合
+        # [WIP] この方法はうまくいっていない。単語数と文字数の計算が一部のページでうまくいかないよう。多分数式が書かれているファイルでおかしくなっており、cuda ort of memoryが治らない。
+        # -> そのため、plot_gemma_eos_hidden_states_3d_20260408.py の方には該当コードがあるが、ここでは削除した。
+        print("You can't use wiki main text for now because of some issues with long texts. Please fix and use plot_gemma_eos_hidden_states_3d_20260408.py instead, which has some fixes for handling long texts.")
+        return 0
 
 
     # =========================
@@ -307,12 +277,14 @@ def main(args):
     # =========================
     # 特徴抽出
     # =========================
-    features = extract_eos_hidden_states(
+    features = extract_hidden_states(
         model,
         tokenizer,
         input_texts,
+        pool_hs_type=pool_hs_type,
+        data_type=data_type,
         batch_size=BATCH_SIZE,
-        layer_index=LAYER_INDEX
+        layer_index=LAYER_INDEX,
     )
 
 
@@ -363,7 +335,7 @@ def main(args):
         color="category",
         hover_name="label",
         hover_data={"category": True, "PC1": ':.3f', "PC2": ':.3f', "PC3": ':.3f'},
-        title=f"3D PCA of EOS hidden states ({MODEL_NAME}, layer={LAYER_INDEX}, LAST_TOKEN_IS_EOS={LAST_TOKEN_IS_EOS})",
+        title=f"3D PCA of EOS hidden states ({MODEL_NAME}, layer={LAYER_INDEX}, pool_hs_type={pool_hs_type})",
     )
     fig.update_traces(marker=dict(size=6))
 
@@ -428,10 +400,10 @@ def load_wiki_text(propnoun, text_type="summary"):
 
 
 # =========================
-# EOS位置の hidden state を取る関数
+# pool_hs_type に応じた hidden state を取りvecを作成する関数
 # =========================
 @torch.no_grad()
-def extract_eos_hidden_states(model, tokenizer, text_list, batch_size=8, layer_index=-1):
+def extract_hidden_states(model, tokenizer, text_list, pool_hs_type, data_type, batch_size=8, layer_index=-1):
     """
     各テキストの末尾にEOSを明示的に追加し、
     EOSトークン位置の hidden state を返す。
@@ -444,15 +416,16 @@ def extract_eos_hidden_states(model, tokenizer, text_list, batch_size=8, layer_i
     for i in range(0, len(text_list), batch_size):
         batch_texts = text_list[i:i + batch_size]
 
-        # EOS を明示的に末尾へ追加
-        batch_texts_with_eos = [text + tokenizer.eos_token for text in batch_texts]
-
+        if pool_hs_type == "eos":
+            # EOS を明示的に末尾へ追加
+            batch_texts = [text + tokenizer.eos_token for text in batch_texts]
+        
         inputs = tokenizer(
-            batch_texts_with_eos,
+            batch_texts,
             return_tensors="pt",
             padding=True,
             truncation=True,
-            add_special_tokens=LAST_TOKEN_IS_EOS,
+            add_special_tokens=False #last_token_is_eos#LAST_TOKEN_IS_EOS, -> pool_hs_type == "eos"の場合は明示的にeosを追加済みなので、ここをTrueにするとeosが重複して2つ付く可能性がある。そのためここはFalseで良い。
         ).to(model.device) 
 
         input_ids = inputs["input_ids"]
@@ -465,21 +438,33 @@ def extract_eos_hidden_states(model, tokenizer, text_list, batch_size=8, layer_i
             hs = outputs.hidden_states
             layer_hs = hs[layer_index]      # (B, T, H)
         
-        
-        # 各系列について EOS token の最後の出現位置を取る
-        eos_mask = (input_ids == tokenizer.eos_token_id)
+        # *** pool_hs_type に応じて、vectorを抽出 ***
+        if pool_hs_type == "eos":
+            # 各系列について EOS token の最後の出現位置を取る
+            eos_mask = (input_ids == tokenizer.eos_token_id)
 
         for b in range(input_ids.size(0)):
-            if LAST_TOKEN_IS_EOS:
+            if pool_hs_type == "eos":
                 eos_positions = torch.where(eos_mask[b])[0]
                 if len(eos_positions) == 0:
                     raise ValueError(f"EOS token が見つかりません: {batch_texts[b]}")
                 eos_pos = eos_positions[-1].item()
-
                 vec = layer_hs[b, eos_pos, :]   # (H,)
-            else:
+
+            elif pool_hs_type == "last_token":
                 seq_len = attention_mask[b].sum().item()
                 vec = layer_hs[b, seq_len - 1, :]  # (H,)
+
+            elif pool_hs_type == "mean_pool":
+                seq_len = attention_mask[b].sum().item()
+                if data_type == "wiki_summary_repeat":
+                    # wiki summaryを繰り返してプロンプトとする場合は、2回目の文のみの隠れ状態を平均する
+                    seq_first_half_len = seq_len // 2   # 1文が5tokens → id:0,1,2,3,4 が1文目、id:5,6,7,8,9 が2文目の場合、seq_len=10, seq_first_half_len=5 となる
+                    vec = layer_hs[b, seq_first_half_len:seq_len, :].mean(dim=0)  # (H,)
+                else:
+                    vec = layer_hs[b, :seq_len, :].mean(dim=0)  # (H,)
+            else:
+                raise ValueError(f"Unknown pool_hs_type: {pool_hs_type}")
 
             all_vecs.append(vec.detach().float().cpu().numpy())
 
@@ -522,7 +507,8 @@ def get_first_few_sentences(text, word_threshold):
 
 if __name__ == "__main__":
     parser = argparse.ArgumentParser()
-    parser.add_argument("--data_type", type=str, default="proper_nouns", choices=["proper_nouns", "wiki_summary", "wiki_main_text"], help="プロットに使用するデータの種類。固有名詞を使用するか、wiki summaryを使用するか")
+    parser.add_argument("--data_type", type=str, default="proper_nouns", choices=["proper_nouns", "wiki_summary", "wiki_summary_repeat","wiki_main_text"], help="プロットに使用するデータの種類。固有名詞を使用するか、wiki summaryを使用するか")
+    parser.add_argument("--pool_hs_type", type=str, default="eos", choices=["eos", "last_token", "mean_pool"], help="隠れ状態のプーリング方法。今はEOSトークン位置の隠れ状態のみ対応")
     parser.add_argument("--threshold_num_nouns_per_category", type=int, default=30, help="各カテゴリからプロットに使用する固有名詞の最大数。あまりに多いとプロットが見づらくなるため。Noneの場合は全て使用する。")
     parser.add_argument("--num_categories", type=int, default=10, help="プロットに使用するカテゴリの数。最初のnカテゴリを使用する。Noneの場合は全てのカテゴリを使用する。")
     parser.add_argument("--cuda_device", type=str, default="1", help="使用するCUDAデバイスのID (例: '0', '1', '2', ...)")
@@ -532,7 +518,8 @@ if __name__ == "__main__":
 
 """
 nohup uv run python3 src_visualize/plot_gemma_eos_hidden_states_3d.py \
-    --data_type wiki_summary \
+    --data_type wiki_summary_repeat \
+    --pool_hs_type mean_pool \
     --threshold_num_nouns_per_category 30 \
     --num_categories 10 \
     --cuda_device 1 \

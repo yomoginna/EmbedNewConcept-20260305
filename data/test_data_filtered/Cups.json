@@ -1,0 +1,738 @@
+[
+    {
+        "test_id": 0,
+        "relation": "About",
+        "correct_feat": "a small container used to hold liquids for drinking",
+        "options": "1. a small container used to hold liquids for drinking\n2. the Bancroft Treaties and their eventual abandonment\n3. folk rock",
+        "correct_num": 1,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is about [MASK].\n\nOptions:\n1. a small container used to hold liquids for drinking\n2. the Bancroft Treaties and their eventual abandonment\n3. folk rock"
+    },
+    {
+        "test_id": 1,
+        "relation": "AssociatedWith",
+        "correct_feat": "drinking",
+        "options": "1. the historical kibbutz movement in Palestine\n2. drinking\n3. Rob Turner",
+        "correct_num": 2,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is associated with [MASK].\n\nOptions:\n1. the historical kibbutz movement in Palestine\n2. drinking\n3. Rob Turner"
+    },
+    {
+        "test_id": 2,
+        "relation": "ConsistsOf",
+        "correct_feat": "pottery, glass, metal, wood, stone, polystyrene, plastic, lacquerware, or other materials",
+        "options": "1. Pentecost\n2. the Archangel Michael holding a sword and scale\n3. pottery, glass, metal, wood, stone, polystyrene, plastic, lacquerware, or other materials",
+        "correct_num": 3,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> consists of [MASK].\n\nOptions:\n1. Pentecost\n2. the Archangel Michael holding a sword and scale\n3. pottery, glass, metal, wood, stone, polystyrene, plastic, lacquerware, or other materials"
+    },
+    {
+        "test_id": 3,
+        "relation": "CreatedAround",
+        "correct_feat": "2800 BC",
+        "options": "1. 2800 BC\n2. 1843 for the first figural stained glass window made in the United States\n3. 1789",
+        "correct_num": 1,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> was created around [MASK].\n\nOptions:\n1. 2800 BC\n2. 1843 for the first figural stained glass window made in the United States\n3. 1789"
+    },
+    {
+        "test_id": 6,
+        "relation": "CreatedIn",
+        "correct_feat": "the Bronze Age",
+        "options": "1. the Bronze Age\n2. 1998\n3. 2007",
+        "correct_num": 1,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> was created in [MASK].\n\nOptions:\n1. the Bronze Age\n2. 1998\n3. 2007"
+    },
+    {
+        "test_id": 7,
+        "relation": "CreatedIn",
+        "correct_feat": "the Iron Age",
+        "options": "1. 2008\n2. the Iron Age\n3. the vibrant music scene of Toulouse",
+        "correct_num": 2,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> was created in [MASK].\n\nOptions:\n1. 2008\n2. the Iron Age\n3. the vibrant music scene of Toulouse"
+    },
+    {
+        "test_id": 9,
+        "relation": "CreatedIn",
+        "correct_feat": "the European Middle Ages",
+        "options": "1. the European Middle Ages\n2. school playgrounds\n3. Lake Charles, Louisiana",
+        "correct_num": 1,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> was created in [MASK].\n\nOptions:\n1. the European Middle Ages\n2. school playgrounds\n3. Lake Charles, Louisiana"
+    },
+    {
+        "test_id": 10,
+        "relation": "CreatedIn",
+        "correct_feat": "ancient Greece",
+        "options": "1. the United States\n2. ancient Greece\n3. Tel Aviv, Israel",
+        "correct_num": 2,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> was created in [MASK].\n\nOptions:\n1. the United States\n2. ancient Greece\n3. Tel Aviv, Israel"
+    },
+    {
+        "test_id": 11,
+        "relation": "CreatedIn",
+        "correct_feat": "ancient Persia",
+        "options": "1. 1947\n2. Nicaragua\n3. ancient Persia",
+        "correct_num": 3,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> was created in [MASK].\n\nOptions:\n1. 1947\n2. Nicaragua\n3. ancient Persia"
+    },
+    {
+        "test_id": 12,
+        "relation": "CreatedIn",
+        "correct_feat": "the Roman Empire",
+        "options": "1. the Roman Empire\n2. England\n3. Siberia",
+        "correct_num": 1,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> was created in [MASK].\n\nOptions:\n1. the Roman Empire\n2. England\n3. Siberia"
+    },
+    {
+        "test_id": 13,
+        "relation": "CreatedIn",
+        "correct_feat": "ancient China",
+        "options": "1. the 17th century\n2. ancient China\n3. London",
+        "correct_num": 2,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> was created in [MASK].\n\nOptions:\n1. the 17th century\n2. ancient China\n3. London"
+    },
+    {
+        "test_id": 15,
+        "relation": "CreatedTo",
+        "correct_feat": "hold liquids for drinking",
+        "options": "1. hold liquids for drinking\n2. fulfill the idea that mural art is available for the public and for the masses\n3. bring some color to the university",
+        "correct_num": 1,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> was created to [MASK].\n\nOptions:\n1. hold liquids for drinking\n2. fulfill the idea that mural art is available for the public and for the masses\n3. bring some color to the university"
+    },
+    {
+        "test_id": 18,
+        "relation": "HasA",
+        "correct_feat": "a flattened hemispherical shape",
+        "options": "1. a flattened hemispherical shape\n2. a second EP titled Gone\n3. historical roots traced to the ideals of racial separation shared between George Lincoln Rockwell and Malcolm X",
+        "correct_num": 1,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> has [MASK].\n\nOptions:\n1. a flattened hemispherical shape\n2. a second EP titled Gone\n3. historical roots traced to the ideals of racial separation shared between George Lincoln Rockwell and Malcolm X"
+    },
+    {
+        "test_id": 19,
+        "relation": "HasA",
+        "correct_feat": "an open mouth",
+        "options": "1. a story that was prefixed to the Jewish story\n2. an open mouth\n3. nationalism and sovereign independence as key motivators",
+        "correct_num": 2,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> has [MASK].\n\nOptions:\n1. a story that was prefixed to the Jewish story\n2. an open mouth\n3. nationalism and sovereign independence as key motivators"
+    },
+    {
+        "test_id": 20,
+        "relation": "HasA",
+        "correct_feat": "handles, though many do not",
+        "options": "1. a doctrine supported by the Brazilian Integralist Action\n2. a tilted head towards her son\n3. handles, though many do not",
+        "correct_num": 3,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> has [MASK].\n\nOptions:\n1. a doctrine supported by the Brazilian Integralist Action\n2. a tilted head towards her son\n3. handles, though many do not"
+    },
+    {
+        "test_id": 21,
+        "relation": "HasA",
+        "correct_feat": "a base, stem and usually a cover",
+        "options": "1. a base, stem and usually a cover\n2. compositions that often feature live instruments\n3. a record distance of 28.51 metres",
+        "correct_num": 1,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> has [MASK].\n\nOptions:\n1. a base, stem and usually a cover\n2. compositions that often feature live instruments\n3. a record distance of 28.51 metres"
+    },
+    {
+        "test_id": 22,
+        "relation": "HasA",
+        "correct_feat": "a saucer",
+        "options": "1. almost no setup\n2. a saucer\n3. a history of economic prosperity",
+        "correct_num": 2,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> has [MASK].\n\nOptions:\n1. almost no setup\n2. a saucer\n3. a history of economic prosperity"
+    },
+    {
+        "test_id": 23,
+        "relation": "HasA",
+        "correct_feat": "thicker walls",
+        "options": "1. state-framed actions\n2. a song \"Rabbit\" performed in 2016 on Strictly Come Dancing\n3. thicker walls",
+        "correct_num": 3,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> has [MASK].\n\nOptions:\n1. state-framed actions\n2. a song \"Rabbit\" performed in 2016 on Strictly Come Dancing\n3. thicker walls"
+    },
+    {
+        "test_id": 24,
+        "relation": "HasA",
+        "correct_feat": "a short stem",
+        "options": "1. a short stem\n2. a thin sheet of water shooting up a curved surface\n3. hands folded in prayer",
+        "correct_num": 1,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> has [MASK].\n\nOptions:\n1. a short stem\n2. a thin sheet of water shooting up a curved surface\n3. hands folded in prayer"
+    },
+    {
+        "test_id": 25,
+        "relation": "HasA",
+        "correct_feat": "two handles",
+        "options": "1. a strong position of the president\n2. two handles\n3. an empty casket at the foot of the bed",
+        "correct_num": 2,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> has [MASK].\n\nOptions:\n1. a strong position of the president\n2. two handles\n3. an empty casket at the foot of the bed"
+    },
+    {
+        "test_id": 27,
+        "relation": "HasA",
+        "correct_feat": "a single thick spike as a handle",
+        "options": "1. a single thick spike as a handle\n2. a crowd shouting 'Hosanna!'\n3. a section painted blue for the next President in front of the reflecting pool",
+        "correct_num": 1,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> has [MASK].\n\nOptions:\n1. a single thick spike as a handle\n2. a crowd shouting 'Hosanna!'\n3. a section painted blue for the next President in front of the reflecting pool"
+    },
+    {
+        "test_id": 28,
+        "relation": "HasFeatureOf",
+        "correct_feat": "a capacity of about 6\u201316 US fluid ounces (177\u2013473 ml)",
+        "options": "1. innocence and lack of embarrassment about nakedness\n2. a capacity of about 6\u201316 US fluid ounces (177\u2013473 ml)\n3. the humanization of figures and attention to human anatomy",
+        "correct_num": 2,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is characterized by [MASK].\n\nOptions:\n1. innocence and lack of embarrassment about nakedness\n2. a capacity of about 6\u201316 US fluid ounces (177\u2013473 ml)\n3. the humanization of figures and attention to human anatomy"
+    },
+    {
+        "test_id": 29,
+        "relation": "HasFeatureOf",
+        "correct_feat": "being brought in contact with the mouth for drinking",
+        "options": "1. the arrest of Bruce Boynton for trespassing\n2. the Roman Catholic Church taking an active role in the reformation of society\n3. being brought in contact with the mouth for drinking",
+        "correct_num": 3,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is characterized by [MASK].\n\nOptions:\n1. the arrest of Bruce Boynton for trespassing\n2. the Roman Catholic Church taking an active role in the reformation of society\n3. being brought in contact with the mouth for drinking"
+    },
+    {
+        "test_id": 30,
+        "relation": "HasFeatureOf",
+        "correct_feat": "many specific terms for different types in different cultures",
+        "options": "1. many specific terms for different types in different cultures\n2. a coiled dragon holding a sword in its mouth\n3. a rejection of ideology in general",
+        "correct_num": 1,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is characterized by [MASK].\n\nOptions:\n1. many specific terms for different types in different cultures\n2. a coiled dragon holding a sword in its mouth\n3. a rejection of ideology in general"
+    },
+    {
+        "test_id": 31,
+        "relation": "HasFeatureOf",
+        "correct_feat": "different styles for different liquids or foodstuffs",
+        "options": "1. colonization in Palestine\n2. different styles for different liquids or foodstuffs\n3. its large size",
+        "correct_num": 2,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is characterized by [MASK].\n\nOptions:\n1. colonization in Palestine\n2. different styles for different liquids or foodstuffs\n3. its large size"
+    },
+    {
+        "test_id": 32,
+        "relation": "HasFeatureOf",
+        "correct_feat": "being important status symbols since at least the Bronze Age",
+        "options": "1. a lack of internal consistency\n2. the anti-capitalism of classical anarchism remaining prominent\n3. being important status symbols since at least the Bronze Age",
+        "correct_num": 3,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is characterized by [MASK].\n\nOptions:\n1. a lack of internal consistency\n2. the anti-capitalism of classical anarchism remaining prominent\n3. being important status symbols since at least the Bronze Age"
+    },
+    {
+        "test_id": 33,
+        "relation": "HasFeatureOf",
+        "correct_feat": "lacking a stem in modern household shapes",
+        "options": "1. lacking a stem in modern household shapes\n2. its defensive positions\n3. the Christ child twisting his body away from his mother's embrace",
+        "correct_num": 1,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is characterized by [MASK].\n\nOptions:\n1. lacking a stem in modern household shapes\n2. its defensive positions\n3. the Christ child twisting his body away from his mother's embrace"
+    },
+    {
+        "test_id": 35,
+        "relation": "HasFeatureOf",
+        "correct_feat": "being used as a \"welcome cup\" or for toasts",
+        "options": "1. chokeholds\n2. its message concerned with Venezuela's social present\n3. being used as a \"welcome cup\" or for toasts",
+        "correct_num": 3,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is characterized by [MASK].\n\nOptions:\n1. chokeholds\n2. its message concerned with Venezuela's social present\n3. being used as a \"welcome cup\" or for toasts"
+    },
+    {
+        "test_id": 36,
+        "relation": "HasFeatureOf",
+        "correct_feat": "surviving in modern sporting trophies and church liturgy chalices",
+        "options": "1. surviving in modern sporting trophies and church liturgy chalices\n2. being the first depiction of the Paulista Avenue\n3. a modern adaptation of freighting",
+        "correct_num": 1,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is characterized by [MASK].\n\nOptions:\n1. surviving in modern sporting trophies and church liturgy chalices\n2. being the first depiction of the Paulista Avenue\n3. a modern adaptation of freighting"
+    },
+    {
+        "test_id": 42,
+        "relation": "InfluencedBy",
+        "correct_feat": "the need to reduce the chance of being broken",
+        "options": "1. the need to reduce the chance of being broken\n2. the invention of the steam locomotive\n3. the success of \"Ain't No Pleasing You\"",
+        "correct_num": 1,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> was influenced by [MASK].\n\nOptions:\n1. the need to reduce the chance of being broken\n2. the invention of the steam locomotive\n3. the success of \"Ain't No Pleasing You\""
+    },
+    {
+        "test_id": 45,
+        "relation": "InfluencedBy",
+        "correct_feat": "the Latin name for the ancient Greek wine-cup kylix",
+        "options": "1. the Latin name for the ancient Greek wine-cup kylix\n2. Vladimir Lenin's \"Left-Wing\" Communism: An Infantile Disorder\n3. the thoughts of Jos\u00e9 Antonio Primo de Rivera",
+        "correct_num": 1,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> was influenced by [MASK].\n\nOptions:\n1. the Latin name for the ancient Greek wine-cup kylix\n2. Vladimir Lenin's \"Left-Wing\" Communism: An Infantile Disorder\n3. the thoughts of Jos\u00e9 Antonio Primo de Rivera"
+    },
+    {
+        "test_id": 46,
+        "relation": "IsA",
+        "correct_feat": "a small container used to hold liquids for drinking",
+        "options": "1. played with a larger ball that gradually becomes softer the more the ball is hit\n2. a small container used to hold liquids for drinking\n3. a contest",
+        "correct_num": 2,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is [MASK].\n\nOptions:\n1. played with a larger ball that gradually becomes softer the more the ball is hit\n2. a small container used to hold liquids for drinking\n3. a contest"
+    },
+    {
+        "test_id": 47,
+        "relation": "IsA",
+        "correct_feat": "a status symbol",
+        "options": "1. a social revolution\n2. a patriotic icon\n3. a status symbol",
+        "correct_num": 3,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is [MASK].\n\nOptions:\n1. a social revolution\n2. a patriotic icon\n3. a status symbol"
+    },
+    {
+        "test_id": 48,
+        "relation": "IsA",
+        "correct_feat": "a prestige piece",
+        "options": "1. a prestige piece\n2. a 12-inch record\n3. a subject in the Nativity of Jesus in art",
+        "correct_num": 1,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is [MASK].\n\nOptions:\n1. a prestige piece\n2. a 12-inch record\n3. a subject in the Nativity of Jesus in art"
+    },
+    {
+        "test_id": 49,
+        "relation": "IsA",
+        "correct_feat": "a drinking vessel",
+        "options": "1. a perfume\n2. a drinking vessel\n3. a non-aristocratic Iranian soldier of Mazanderani origin",
+        "correct_num": 2,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is [MASK].\n\nOptions:\n1. a perfume\n2. a drinking vessel\n3. a non-aristocratic Iranian soldier of Mazanderani origin"
+    },
+    {
+        "test_id": 50,
+        "relation": "IsA",
+        "correct_feat": "a near-synonym for mugs and glasses",
+        "options": "1. a hybrid territorial model\n2. a philosophical movement\n3. a near-synonym for mugs and glasses",
+        "correct_num": 3,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is [MASK].\n\nOptions:\n1. a hybrid territorial model\n2. a philosophical movement\n3. a near-synonym for mugs and glasses"
+    },
+    {
+        "test_id": 52,
+        "relation": "IsA",
+        "correct_feat": "a type of beaker",
+        "options": "1. an anarchist critique of civilization\n2. a type of beaker\n3. an ethnic nationalism of Ulster Protestants",
+        "correct_num": 2,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is [MASK].\n\nOptions:\n1. an anarchist critique of civilization\n2. a type of beaker\n3. an ethnic nationalism of Ulster Protestants"
+    },
+    {
+        "test_id": 53,
+        "relation": "IsA",
+        "correct_feat": "a type of goblet",
+        "options": "1. a large work standing at 2.15 m high with a width of 34.14 m\n2. an international motorsport event\n3. a type of goblet",
+        "correct_num": 3,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is [MASK].\n\nOptions:\n1. a large work standing at 2.15 m high with a width of 34.14 m\n2. an international motorsport event\n3. a type of goblet"
+    },
+    {
+        "test_id": 54,
+        "relation": "IsA",
+        "correct_feat": "a type of chalice",
+        "options": "1. a type of chalice\n2. a method of employing political despotism\n3. a long mural",
+        "correct_num": 1,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is [MASK].\n\nOptions:\n1. a type of chalice\n2. a method of employing political despotism\n3. a long mural"
+    },
+    {
+        "test_id": 55,
+        "relation": "KnownAs",
+        "correct_feat": "a \"glass\" when made of glass",
+        "options": "1. \"reactionary\"\n2. a \"glass\" when made of glass\n3. \"China's Mona Lisa",
+        "correct_num": 2,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is known as [MASK].\n\nOptions:\n1. \"reactionary\"\n2. a \"glass\" when made of glass\n3. \"China's Mona Lisa"
+    },
+    {
+        "test_id": 56,
+        "relation": "KnownAs",
+        "correct_feat": "\"eared cups\"",
+        "options": "1. a subject that includes gifts of gold, frankincense, and myrrh\n2. flag football today\n3. \"eared cups\"",
+        "correct_num": 3,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is known as [MASK].\n\nOptions:\n1. a subject that includes gifts of gold, frankincense, and myrrh\n2. flag football today\n3. \"eared cups\""
+    },
+    {
+        "test_id": 57,
+        "relation": "KnownAs",
+        "correct_feat": "\"winged goblets\"",
+        "options": "1. \"winged goblets\"\n2. kokpar in Uzbekistan and Kazakhstan\n3. Jogailai\u010diai",
+        "correct_num": 1,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is known as [MASK].\n\nOptions:\n1. \"winged goblets\"\n2. kokpar in Uzbekistan and Kazakhstan\n3. Jogailai\u010diai"
+    },
+    {
+        "test_id": 60,
+        "relation": "KnownFor",
+        "correct_feat": "its handle",
+        "options": "1. its handle\n2. being the first exponent of flamenco music aimed at a non-exclusively flamenco audience\n3. its association with festivals",
+        "correct_num": 1,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is known for [MASK].\n\nOptions:\n1. its handle\n2. being the first exponent of flamenco music aimed at a non-exclusively flamenco audience\n3. its association with festivals"
+    },
+    {
+        "test_id": 61,
+        "relation": "KnownFor",
+        "correct_feat": "its stem",
+        "options": "1. being the most favored sport of Afghanistan\n2. its stem\n3. being stolen and returned many times",
+        "correct_num": 2,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is known for [MASK].\n\nOptions:\n1. being the most favored sport of Afghanistan\n2. its stem\n3. being stolen and returned many times"
+    },
+    {
+        "test_id": 64,
+        "relation": "KnownFor",
+        "correct_feat": "its saucer",
+        "options": "1. advocating the renaissance of Arab culture, values and society\n2. its saucer\n3. prioritizing issues faced by Indigenous women",
+        "correct_num": 2,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is known for [MASK].\n\nOptions:\n1. advocating the renaissance of Arab culture, values and society\n2. its saucer\n3. prioritizing issues faced by Indigenous women"
+    },
+    {
+        "test_id": 65,
+        "relation": "KnownFor",
+        "correct_feat": "its tapered shape",
+        "options": "1. vague or unfalsifiable theories\n2. founding the city of Marrakesh\n3. its tapered shape",
+        "correct_num": 3,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is known for [MASK].\n\nOptions:\n1. vague or unfalsifiable theories\n2. founding the city of Marrakesh\n3. its tapered shape"
+    },
+    {
+        "test_id": 66,
+        "relation": "KnownFor",
+        "correct_feat": "its cylindrical design",
+        "options": "1. its cylindrical design\n2. its anti-imperialist rhetoric\n3. \"Opportunities (Let's Make Lots of Money)\"",
+        "correct_num": 1,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is known for [MASK].\n\nOptions:\n1. its cylindrical design\n2. its anti-imperialist rhetoric\n3. \"Opportunities (Let's Make Lots of Money)\""
+    },
+    {
+        "test_id": 67,
+        "relation": "KnownFor",
+        "correct_feat": "its larger handle",
+        "options": "1. being the most favored sport of Afghanistan\n2. its larger handle\n3. the American Pit Bull Terrier being a unique breed due to its absence of threat displays when fighting",
+        "correct_num": 2,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is known for [MASK].\n\nOptions:\n1. being the most favored sport of Afghanistan\n2. its larger handle\n3. the American Pit Bull Terrier being a unique breed due to its absence of threat displays when fighting"
+    },
+    {
+        "test_id": 69,
+        "relation": "KnownFor",
+        "correct_feat": "its elegant appearance",
+        "options": "1. its elegant appearance\n2. its interpretation of human history\n3. employing punches",
+        "correct_num": 1,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is known for [MASK].\n\nOptions:\n1. its elegant appearance\n2. its interpretation of human history\n3. employing punches"
+    },
+    {
+        "test_id": 70,
+        "relation": "OccurredAround",
+        "correct_feat": "2800 BC",
+        "options": "1. 324-3\n2. 2800 BC\n3. 1908",
+        "correct_num": 2,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> occurred around [MASK].\n\nOptions:\n1. 324-3\n2. 2800 BC\n3. 1908"
+    },
+    {
+        "test_id": 72,
+        "relation": "OriginatedIn",
+        "correct_feat": "prehistory",
+        "options": "1. prehistory\n2. Persia\n3. Greece",
+        "correct_num": 1,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> originated in [MASK].\n\nOptions:\n1. prehistory\n2. Persia\n3. Greece"
+    },
+    {
+        "test_id": 73,
+        "relation": "OriginatedIn",
+        "correct_feat": "the Bell Beaker culture",
+        "options": "1. the Skopje 2014 project\n2. the Bell Beaker culture\n3. the Breisgau",
+        "correct_num": 2,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> originated in [MASK].\n\nOptions:\n1. the Skopje 2014 project\n2. the Bell Beaker culture\n3. the Breisgau"
+    },
+    {
+        "test_id": 74,
+        "relation": "OriginatedIn",
+        "correct_feat": "ancient Greece",
+        "options": "1. the German v\u00f6lkisch movement\n2. Irvine, California\n3. ancient Greece",
+        "correct_num": 3,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> originated in [MASK].\n\nOptions:\n1. the German v\u00f6lkisch movement\n2. Irvine, California\n3. ancient Greece"
+    },
+    {
+        "test_id": 75,
+        "relation": "OriginatedIn",
+        "correct_feat": "ancient Persia",
+        "options": "1. ancient Persia\n2. the Georgian monastery of Ancha\n3. Eton College",
+        "correct_num": 1,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> originated in [MASK].\n\nOptions:\n1. ancient Persia\n2. the Georgian monastery of Ancha\n3. Eton College"
+    },
+    {
+        "test_id": 77,
+        "relation": "OriginatedIn",
+        "correct_feat": "China",
+        "options": "1. the US\n2. Anguilla\n3. China",
+        "correct_num": 3,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> originated in [MASK].\n\nOptions:\n1. the US\n2. Anguilla\n3. China"
+    },
+    {
+        "test_id": 80,
+        "relation": "OriginatedIn",
+        "correct_feat": "Andean civilizations",
+        "options": "1. the Pacte Synarchique\n2. Saharan Sanhaja nomadic tribes\n3. Andean civilizations",
+        "correct_num": 3,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> originated in [MASK].\n\nOptions:\n1. the Pacte Synarchique\n2. Saharan Sanhaja nomadic tribes\n3. Andean civilizations"
+    },
+    {
+        "test_id": 81,
+        "relation": "OriginatedIn",
+        "correct_feat": "the south-eastern US",
+        "options": "1. the south-eastern US\n2. England\n3. the International Cherry Pit-Spitting Championship",
+        "correct_num": 1,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> originated in [MASK].\n\nOptions:\n1. the south-eastern US\n2. England\n3. the International Cherry Pit-Spitting Championship"
+    },
+    {
+        "test_id": 82,
+        "relation": "PartOf",
+        "correct_feat": "drinkware",
+        "options": "1. a husband-and-wife duo\n2. drinkware\n3. the redemption game genre",
+        "correct_num": 2,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is part of [MASK].\n\nOptions:\n1. a husband-and-wife duo\n2. drinkware\n3. the redemption game genre"
+    },
+    {
+        "test_id": 83,
+        "relation": "PartOf",
+        "correct_feat": "tableware",
+        "options": "1. the Tujunga Wash Greenbelt Project\n2. general criticism\n3. tableware",
+        "correct_num": 3,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is part of [MASK].\n\nOptions:\n1. the Tujunga Wash Greenbelt Project\n2. general criticism\n3. tableware"
+    },
+    {
+        "test_id": 84,
+        "relation": "PartOf",
+        "correct_feat": "tea sets",
+        "options": "1. tea sets\n2. Loaded Records\n3. Soul Eater media",
+        "correct_num": 1,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is part of [MASK].\n\nOptions:\n1. tea sets\n2. Loaded Records\n3. Soul Eater media"
+    },
+    {
+        "test_id": 85,
+        "relation": "PartOf",
+        "correct_feat": "coffee services",
+        "options": "1. the Kansas State Capitol building\n2. coffee services\n3. cable-stayed bridges",
+        "correct_num": 2,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is part of [MASK].\n\nOptions:\n1. the Kansas State Capitol building\n2. coffee services\n3. cable-stayed bridges"
+    },
+    {
+        "test_id": 86,
+        "relation": "PartOf",
+        "correct_feat": "church liturgy",
+        "options": "1. the shanshui genre\n2. the music industry\n3. church liturgy",
+        "correct_num": 3,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is part of [MASK].\n\nOptions:\n1. the shanshui genre\n2. the music industry\n3. church liturgy"
+    },
+    {
+        "test_id": 87,
+        "relation": "PartOf",
+        "correct_feat": "sporting trophies",
+        "options": "1. sporting trophies\n2. the collections of Chinese imperial families\n3. the history of African nationalism",
+        "correct_num": 1,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is part of [MASK].\n\nOptions:\n1. sporting trophies\n2. the collections of Chinese imperial families\n3. the history of African nationalism"
+    },
+    {
+        "test_id": 88,
+        "relation": "PartOf",
+        "correct_feat": "the calligrapher's desk",
+        "options": "1. the progressive rock group Wishbone Ash\n2. the calligrapher's desk\n3. the French hip hop genre",
+        "correct_num": 2,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is part of [MASK].\n\nOptions:\n1. the progressive rock group Wishbone Ash\n2. the calligrapher's desk\n3. the French hip hop genre"
+    },
+    {
+        "test_id": 90,
+        "relation": "UsedAs",
+        "correct_feat": "a \"welcome cup\"",
+        "options": "1. a \"welcome cup\"\n2. a way of defying the United States\n3. a patrimony",
+        "correct_num": 1,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is used as [MASK].\n\nOptions:\n1. a \"welcome cup\"\n2. a way of defying the United States\n3. a patrimony"
+    },
+    {
+        "test_id": 91,
+        "relation": "UsedAs",
+        "correct_feat": "a brush-washer",
+        "options": "1. a retrospective name for all of Geoffrey's male-line descendants\n2. a brush-washer\n3. a dummy goose",
+        "correct_num": 2,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is used as [MASK].\n\nOptions:\n1. a retrospective name for all of Geoffrey's male-line descendants\n2. a brush-washer\n3. a dummy goose"
+    },
+    {
+        "test_id": 92,
+        "relation": "UsedAs",
+        "correct_feat": "a drinking cup",
+        "options": "1. a conceptual framework for describing the often-opposing forces of historical evolution\n2. a basis for the Federal Constitution of the Spanish Nation\n3. a drinking cup",
+        "correct_num": 3,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is used as [MASK].\n\nOptions:\n1. a conceptual framework for describing the often-opposing forces of historical evolution\n2. a basis for the Federal Constitution of the Spanish Nation\n3. a drinking cup"
+    },
+    {
+        "test_id": 93,
+        "relation": "UsedFor",
+        "correct_feat": "toasts",
+        "options": "1. toasts\n2. establishing a dynasty\n3. marketing",
+        "correct_num": 1,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is used for [MASK].\n\nOptions:\n1. toasts\n2. establishing a dynasty\n3. marketing"
+    },
+    {
+        "test_id": 94,
+        "relation": "UsedFor",
+        "correct_feat": "drinking",
+        "options": "1. achieving workers' self-management\n2. drinking\n3. war",
+        "correct_num": 2,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is used for [MASK].\n\nOptions:\n1. achieving workers' self-management\n2. drinking\n3. war"
+    },
+    {
+        "test_id": 95,
+        "relation": "UsedFor",
+        "correct_feat": "holding liquids",
+        "options": "1. raising public awareness of the issue\n2. the Annunciation\n3. holding liquids",
+        "correct_num": 3,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is used for [MASK].\n\nOptions:\n1. raising public awareness of the issue\n2. the Annunciation\n3. holding liquids"
+    },
+    {
+        "test_id": 96,
+        "relation": "UsedFor",
+        "correct_feat": "different types of liquids or other foodstuffs",
+        "options": "1. different types of liquids or other foodstuffs\n2. promoting national unity\n3. representing a region in the World Flowboarding Championships",
+        "correct_num": 1,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is used for [MASK].\n\nOptions:\n1. different types of liquids or other foodstuffs\n2. promoting national unity\n3. representing a region in the World Flowboarding Championships"
+    },
+    {
+        "test_id": 97,
+        "relation": "UsedFor",
+        "correct_feat": "ceremonies and rituals",
+        "options": "1. hitting the ball\n2. ceremonies and rituals\n3. educational purposes",
+        "correct_num": 2,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is used for [MASK].\n\nOptions:\n1. hitting the ball\n2. ceremonies and rituals\n3. educational purposes"
+    },
+    {
+        "test_id": 99,
+        "relation": "UsedFor",
+        "correct_feat": "toasts",
+        "options": "1. toasts\n2. the implementation of ILO-standards in national law\n3. descending to the ground",
+        "correct_num": 1,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is used for [MASK].\n\nOptions:\n1. toasts\n2. the implementation of ILO-standards in national law\n3. descending to the ground"
+    },
+    {
+        "test_id": 100,
+        "relation": "UsedFor",
+        "correct_feat": "offerings or supplies for the afterlife",
+        "options": "1. tournaments\n2. offerings or supplies for the afterlife\n3. advancing specific causes in terms of current residents' lives such as freedom of assembly, labor rights, the right to health care, and the right to travel",
+        "correct_num": 2,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is used for [MASK].\n\nOptions:\n1. tournaments\n2. offerings or supplies for the afterlife\n3. advancing specific causes in terms of current residents' lives such as freedom of assembly, labor rights, the right to health care, and the right to travel"
+    },
+    {
+        "test_id": 101,
+        "relation": "UsedFor",
+        "correct_feat": "drinking from",
+        "options": "1. seeking recognition of women as equal citizens\n2. constructing the European Union\n3. drinking from",
+        "correct_num": 3,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is used for [MASK].\n\nOptions:\n1. seeking recognition of women as equal citizens\n2. constructing the European Union\n3. drinking from"
+    },
+    {
+        "test_id": 102,
+        "relation": "UsedFor",
+        "correct_feat": "Yaupon tea containing caffeine",
+        "options": "1. Yaupon tea containing caffeine\n2. uniting libertarians and paleoconservatives\n3. writing songs",
+        "correct_num": 1,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is used for [MASK].\n\nOptions:\n1. Yaupon tea containing caffeine\n2. uniting libertarians and paleoconservatives\n3. writing songs"
+    },
+    {
+        "test_id": 103,
+        "relation": "UsedFor",
+        "correct_feat": "drinking horns",
+        "options": "1. automatic-press works\n2. drinking horns\n3. representing the native, religious and nurturing characteristics of Latino and Chicano culture",
+        "correct_num": 2,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is used for [MASK].\n\nOptions:\n1. automatic-press works\n2. drinking horns\n3. representing the native, religious and nurturing characteristics of Latino and Chicano culture"
+    },
+    {
+        "test_id": 105,
+        "relation": "UsedIn",
+        "correct_feat": "rituals",
+        "options": "1. rituals\n2. the 2019 documentary film The Rise of the Synths\n3. school playgrounds",
+        "correct_num": 1,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is used in [MASK].\n\nOptions:\n1. rituals\n2. the 2019 documentary film The Rise of the Synths\n3. school playgrounds"
+    },
+    {
+        "test_id": 107,
+        "relation": "UsedIn",
+        "correct_feat": "medieval houses",
+        "options": "1. London public schools\n2. the Church of San Francesco in San Miniato\n3. medieval houses",
+        "correct_num": 3,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is used in [MASK].\n\nOptions:\n1. London public schools\n2. the Church of San Francesco in San Miniato\n3. medieval houses"
+    },
+    {
+        "test_id": 108,
+        "relation": "UsedIn",
+        "correct_feat": "church liturgy",
+        "options": "1. church liturgy\n2. the 2012 Summer Olympics opening ceremony\n3. rock music",
+        "correct_num": 1,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is used in [MASK].\n\nOptions:\n1. church liturgy\n2. the 2012 Summer Olympics opening ceremony\n3. rock music"
+    },
+    {
+        "test_id": 111,
+        "relation": "UsedIn",
+        "correct_feat": "ancient Greece",
+        "options": "1. ancient Greece\n2. television\n3. iTunes",
+        "correct_num": 1,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is used in [MASK].\n\nOptions:\n1. ancient Greece\n2. television\n3. iTunes"
+    },
+    {
+        "test_id": 113,
+        "relation": "UsedIn",
+        "correct_feat": "the Roman Empire",
+        "options": "1. the Davis Mountains Resort\n2. Baroque Roccoco Ionian art\n3. the Roman Empire",
+        "correct_num": 3,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is used in [MASK].\n\nOptions:\n1. the Davis Mountains Resort\n2. Baroque Roccoco Ionian art\n3. the Roman Empire"
+    },
+    {
+        "test_id": 114,
+        "relation": "UsedTo",
+        "correct_feat": "hold liquids for drinking",
+        "options": "1. hold liquids for drinking\n2. represent Mary's domesticity\n3. elude the grasp of riders",
+        "correct_num": 1,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is used to [MASK].\n\nOptions:\n1. hold liquids for drinking\n2. represent Mary's domesticity\n3. elude the grasp of riders"
+    },
+    {
+        "test_id": 115,
+        "relation": "UsedTo",
+        "correct_feat": "drink from",
+        "options": "1. describe the presentation of visions and outlines for imaginary or futuristic ideal and socialist societies\n2. drink from\n3. celebrate Latino and Chicano culture and influence at The University of Southern California and in Los Angeles",
+        "correct_num": 2,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is used to [MASK].\n\nOptions:\n1. describe the presentation of visions and outlines for imaginary or futuristic ideal and socialist societies\n2. drink from\n3. celebrate Latino and Chicano culture and influence at The University of Southern California and in Los Angeles"
+    },
+    {
+        "test_id": 116,
+        "relation": "UsedTo",
+        "correct_feat": "protect the table surface",
+        "options": "1. capture more reliable activist voters\n2. pardon victims\n3. protect the table surface",
+        "correct_num": 3,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is used to [MASK].\n\nOptions:\n1. capture more reliable activist voters\n2. pardon victims\n3. protect the table surface"
+    },
+    {
+        "test_id": 117,
+        "relation": "UsedTo",
+        "correct_feat": "accommodate the saucer",
+        "options": "1. accommodate the saucer\n2. minimize the impact on the environment\n3. make another water-ski kite glider",
+        "correct_num": 1,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is used to [MASK].\n\nOptions:\n1. accommodate the saucer\n2. minimize the impact on the environment\n3. make another water-ski kite glider"
+    },
+    {
+        "test_id": 118,
+        "relation": "UsedTo",
+        "correct_feat": "carry the mug around",
+        "options": "1. prevent criticism of their ideology\n2. carry the mug around\n3. show the history of California",
+        "correct_num": 2,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is used to [MASK].\n\nOptions:\n1. prevent criticism of their ideology\n2. carry the mug around\n3. show the history of California"
+    },
+    {
+        "test_id": 119,
+        "relation": "UsedTo",
+        "correct_feat": "reduce the chance of the mug being broken",
+        "options": "1. prevent criticism of their ideology\n2. reassert this approach to an understanding of the forces of history\n3. reduce the chance of the mug being broken",
+        "correct_num": 3,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is used to [MASK].\n\nOptions:\n1. prevent criticism of their ideology\n2. reassert this approach to an understanding of the forces of history\n3. reduce the chance of the mug being broken"
+    },
+    {
+        "test_id": 120,
+        "relation": "UsedTo",
+        "correct_feat": "keep the temperature of the liquid",
+        "options": "1. keep the temperature of the liquid\n2. predict betrayal by one of the apostles\n3. create symphonic versions of Manuel de Falla's works",
+        "correct_num": 1,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is used to [MASK].\n\nOptions:\n1. keep the temperature of the liquid\n2. predict betrayal by one of the apostles\n3. create symphonic versions of Manuel de Falla's works"
+    },
+    {
+        "test_id": 121,
+        "relation": "UsedTo",
+        "correct_feat": "rest on a flat surface",
+        "options": "1. experiment with psychedelic rock\n2. rest on a flat surface\n3. glide over long horizontal distances",
+        "correct_num": 2,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is used to [MASK].\n\nOptions:\n1. experiment with psychedelic rock\n2. rest on a flat surface\n3. glide over long horizontal distances"
+    },
+    {
+        "test_id": 122,
+        "relation": "UsedTo",
+        "correct_feat": "drink Yaupon tea containing caffeine",
+        "options": "1. describe a shadow government or deep state\n2. dismantle settler colonial states\n3. drink Yaupon tea containing caffeine",
+        "correct_num": 3,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is used to [MASK].\n\nOptions:\n1. describe a shadow government or deep state\n2. dismantle settler colonial states\n3. drink Yaupon tea containing caffeine"
+    },
+    {
+        "test_id": 123,
+        "relation": "UsedTo",
+        "correct_feat": "pass around or drink from once",
+        "options": "1. pass around or drink from once\n2. summarize contents into three main ideas\n3. advocate the harnessing of individual interest",
+        "correct_num": 1,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is used to [MASK].\n\nOptions:\n1. pass around or drink from once\n2. summarize contents into three main ideas\n3. advocate the harnessing of individual interest"
+    }
+]

@@ -55,26 +55,23 @@ THREAD_ID=3: -
 # PROCESS_NUM=2
 # SEED_NUM=2 # 10
 
-MODEL_SIZE=12
 MAX_EPOCHS=4
 TARGET_CONCEPTS_FILENAME="target_concepts_mini.json"
+MODEL_SIZE=12
 LR=0.01
 PROCESS_NUM=2
 SEED_NUM=1 
-INIT_VEC_TYPES=("other_category_centroid_by_hidden_state_mean" "norm_rand_vocab")
-INIT_VEC_TYPES=("category_centroid_by_hidden_state_mean" "other_category_centroid_by_hidden_state_mean" "norm_rand_vocab")
+INIT_VEC_TYPES=("category_centroid_by_hidden_state_mean")  "other_category_centroid_by_hidden_state_mean" "norm_rand_vocab")
 LAYER_INDICES=(9 10 11 12 13 14 15 16 17 18 19 20) 
-LAYER_INDICES=(0 1 8 15 16 17 18 19 20 24 36 40 -1) 
-LAYER_INDICES=(0 1 8 10 12 24 36 38 40 -1)
 # -1は最終層、0以上の整数はその層の隠れ状態を使用.(0層は埋め込み層の出力) 12B: 48層
 # 全体の層を大まかに調べる: (0 1 8 12 24 36 40 -1)
 
 
 THREAD_ID=0
-CUDA_VISIBLE_DEVICES=3
+CUDA_VISIBLE_DEVICES=0
 
 THREAD_ID=1
-CUDA_VISIBLE_DEVICES=4
+CUDA_VISIBLE_DEVICES=1
 
 # THREAD_ID=2
 # CUDA_VISIBLE_DEVICES=4
@@ -96,8 +93,8 @@ nohup uv --no-progress run python src/trainMemVec_fromXvec_gemma_wholeRun.py \
         --seed_num ${SEED_NUM} \
         > log_TrainMemVec_gemma-${MODEL_SIZE}B_lr${LR}_wholeRun${THREAD_ID}.log 2>&1 &
 
-THREAD_ID=0: 1111839
-THREAD_ID=1: 1112821
+THREAD_ID=0: 4123709
+THREAD_ID=1: 4126028
 THREAD_ID=2: -
 THREAD_ID=3: -
 

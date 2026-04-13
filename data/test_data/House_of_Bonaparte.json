@@ -1,0 +1,642 @@
+[
+    {
+        "test_id": 0,
+        "relation": "About",
+        "correct_feat": "a former imperial and royal European dynasty of Corsican origin",
+        "options": "1. a former imperial and royal European dynasty of Corsican origin\n2. a left-wing set of political philosophies that supports political democracy and some form of a socially owned economy\n3. the Bancroft Treaties and their eventual abandonment",
+        "correct_num": 1,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is about [MASK].\n\nOptions:\n1. a former imperial and royal European dynasty of Corsican origin\n2. a left-wing set of political philosophies that supports political democracy and some form of a socially owned economy\n3. the Bancroft Treaties and their eventual abandonment"
+    },
+    {
+        "test_id": 1,
+        "relation": "Affects",
+        "correct_feat": "the French First Republic",
+        "options": "1. the anime series Hand Shakers\n2. the French First Republic\n3. the political organization of the Spanish nation",
+        "correct_num": 2,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> affects [MASK].\n\nOptions:\n1. the anime series Hand Shakers\n2. the French First Republic\n3. the political organization of the Spanish nation"
+    },
+    {
+        "test_id": 2,
+        "relation": "AssociatedWith",
+        "correct_feat": "Napoleon I",
+        "options": "1. the 9th to 15th centuries\n2. the Russian Uniate Church – today Ukrainian Greek Catholic Church\n3. Napoleon I",
+        "correct_num": 3,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is associated with [MASK].\n\nOptions:\n1. the 9th to 15th centuries\n2. the Russian Uniate Church – today Ukrainian Greek Catholic Church\n3. Napoleon I"
+    },
+    {
+        "test_id": 3,
+        "relation": "AssociatedWith",
+        "correct_feat": "Napoleon III",
+        "options": "1. Napoleon III\n2. the Virgin of the Passion in Eastern Orthodoxy\n3. the High Priestly Prayer",
+        "correct_num": 1,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is associated with [MASK].\n\nOptions:\n1. Napoleon III\n2. the Virgin of the Passion in Eastern Orthodoxy\n3. the High Priestly Prayer"
+    },
+    {
+        "test_id": 4,
+        "relation": "AssociatedWith",
+        "correct_feat": "the French Revolution",
+        "options": "1. \"may-issue\" systems\n2. the French Revolution\n3. the civil rights movement",
+        "correct_num": 2,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is associated with [MASK].\n\nOptions:\n1. \"may-issue\" systems\n2. the French Revolution\n3. the civil rights movement"
+    },
+    {
+        "test_id": 5,
+        "relation": "AssociatedWith",
+        "correct_feat": "the Napoleonic Wars",
+        "options": "1. the Controlled Substance Act (United States)\n2. ClariS\n3. the Napoleonic Wars",
+        "correct_num": 3,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is associated with [MASK].\n\nOptions:\n1. the Controlled Substance Act (United States)\n2. ClariS\n3. the Napoleonic Wars"
+    },
+    {
+        "test_id": 6,
+        "relation": "AssociatedWith",
+        "correct_feat": "the French Empire",
+        "options": "1. the French Empire\n2. Pony Canyon\n3. the United Nations",
+        "correct_num": 1,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is associated with [MASK].\n\nOptions:\n1. the French Empire\n2. Pony Canyon\n3. the United Nations"
+    },
+    {
+        "test_id": 7,
+        "relation": "AssociatedWith",
+        "correct_feat": "the First Consul of France",
+        "options": "1. the theme of the prayer of Intercession\n2. the First Consul of France\n3. the Dormition Cathedral",
+        "correct_num": 2,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is associated with [MASK].\n\nOptions:\n1. the theme of the prayer of Intercession\n2. the First Consul of France\n3. the Dormition Cathedral"
+    },
+    {
+        "test_id": 8,
+        "relation": "AssociatedWith",
+        "correct_feat": "the Second French Empire",
+        "options": "1. golf\n2. One\n3. the Second French Empire",
+        "correct_num": 3,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is associated with [MASK].\n\nOptions:\n1. golf\n2. One\n3. the Second French Empire"
+    },
+    {
+        "test_id": 9,
+        "relation": "AssociatedWith",
+        "correct_feat": "the Franco-Prussian War",
+        "options": "1. the Franco-Prussian War\n2. Pia F. Cuneo\n3. men who opposed women's suffrage",
+        "correct_num": 1,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is associated with [MASK].\n\nOptions:\n1. the Franco-Prussian War\n2. Pia F. Cuneo\n3. men who opposed women's suffrage"
+    },
+    {
+        "test_id": 10,
+        "relation": "AssociatedWith",
+        "correct_feat": "the Congress of Vienna",
+        "options": "1. the Fall of Constantinople\n2. the Congress of Vienna\n3. the Adams–Onís Treaty",
+        "correct_num": 2,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is associated with [MASK].\n\nOptions:\n1. the Fall of Constantinople\n2. the Congress of Vienna\n3. the Adams–Onís Treaty"
+    },
+    {
+        "test_id": 11,
+        "relation": "BelongsTo",
+        "correct_feat": "Corsican origin",
+        "options": "1. the background of the nineteenth and early twentieth century\n2. the Lutheran Church–Missouri Synod\n3. Corsican origin",
+        "correct_num": 3,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> belongs to [MASK].\n\nOptions:\n1. the background of the nineteenth and early twentieth century\n2. the Lutheran Church–Missouri Synod\n3. Corsican origin"
+    },
+    {
+        "test_id": 12,
+        "relation": "ConsistsOf",
+        "correct_feat": "the Emperor's immediate relations – his wife, son, siblings, and some other close relatives",
+        "options": "1. the Emperor's immediate relations – his wife, son, siblings, and some other close relatives\n2. a game played on a field about the size of a football field\n3. various scoring systems",
+        "correct_num": 1,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> consists of [MASK].\n\nOptions:\n1. the Emperor's immediate relations – his wife, son, siblings, and some other close relatives\n2. a game played on a field about the size of a football field\n3. various scoring systems"
+    },
+    {
+        "test_id": 13,
+        "relation": "CreatedBy",
+        "correct_feat": "Napoleon I",
+        "options": "1. Andrew Hung and Benjamin John Power\n2. Napoleon I\n3. a peasant of the Tula province",
+        "correct_num": 2,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> was created by [MASK].\n\nOptions:\n1. Andrew Hung and Benjamin John Power\n2. Napoleon I\n3. a peasant of the Tula province"
+    },
+    {
+        "test_id": 14,
+        "relation": "CreatedFor",
+        "correct_feat": "expanding the power of the dynasty",
+        "options": "1. the Air Ministry\n2. communication\n3. expanding the power of the dynasty",
+        "correct_num": 3,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> was created for [MASK].\n\nOptions:\n1. the Air Ministry\n2. communication\n3. expanding the power of the dynasty"
+    },
+    {
+        "test_id": 15,
+        "relation": "CreatedIn",
+        "correct_feat": "1804",
+        "options": "1. 1804\n2. 1774\n3. 1742",
+        "correct_num": 1,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> was created in [MASK].\n\nOptions:\n1. 1804\n2. 1774\n3. 1742"
+    },
+    {
+        "test_id": 16,
+        "relation": "CreatedTo",
+        "correct_feat": "transform the French First Republic into the First French Empire",
+        "options": "1. illustrate a Gulf Coast day\n2. transform the French First Republic into the First French Empire\n3. give visibility to help direct aviation traffic",
+        "correct_num": 2,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> was created to [MASK].\n\nOptions:\n1. illustrate a Gulf Coast day\n2. transform the French First Republic into the First French Empire\n3. give visibility to help direct aviation traffic"
+    },
+    {
+        "test_id": 17,
+        "relation": "FoundedBy",
+        "correct_feat": "Napoleon I",
+        "options": "1. William McGregor\n2. Steve Newberg\n3. Napoleon I",
+        "correct_num": 3,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> was founded by [MASK].\n\nOptions:\n1. William McGregor\n2. Steve Newberg\n3. Napoleon I"
+    },
+    {
+        "test_id": 18,
+        "relation": "FoundedIn",
+        "correct_feat": "1804",
+        "options": "1. 1804\n2. 1652\n3. 1647",
+        "correct_num": 1,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> was founded in [MASK].\n\nOptions:\n1. 1804\n2. 1652\n3. 1647"
+    },
+    {
+        "test_id": 19,
+        "relation": "HasA",
+        "correct_feat": "the title of Emperor of the French",
+        "options": "1. rules for various rebellions\n2. the title of Emperor of the French\n3. a story that was prefixed to the Jewish story",
+        "correct_num": 2,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> has [MASK].\n\nOptions:\n1. rules for various rebellions\n2. the title of Emperor of the French\n3. a story that was prefixed to the Jewish story"
+    },
+    {
+        "test_id": 20,
+        "relation": "HasA",
+        "correct_feat": "the Kingdom of Italy",
+        "options": "1. a Franciscan monastery\n2. no differentiation between towns and villages on the maps\n3. the Kingdom of Italy",
+        "correct_num": 3,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> has [MASK].\n\nOptions:\n1. a Franciscan monastery\n2. no differentiation between towns and villages on the maps\n3. the Kingdom of Italy"
+    },
+    {
+        "test_id": 21,
+        "relation": "HasA",
+        "correct_feat": "the Kingdom of the Spain and the Indies",
+        "options": "1. the Kingdom of the Spain and the Indies\n2. holes of varying point values\n3. a mosaic of the United States Flag on either side of the painting",
+        "correct_num": 1,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> has [MASK].\n\nOptions:\n1. the Kingdom of the Spain and the Indies\n2. holes of varying point values\n3. a mosaic of the United States Flag on either side of the painting"
+    },
+    {
+        "test_id": 22,
+        "relation": "HasA",
+        "correct_feat": "the Kingdom of Westphalia",
+        "options": "1. compositions that often feature live instruments\n2. the Kingdom of Westphalia\n3. a duty on the part of the rich to the poor and to the needy",
+        "correct_num": 2,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> has [MASK].\n\nOptions:\n1. compositions that often feature live instruments\n2. the Kingdom of Westphalia\n3. a duty on the part of the rich to the poor and to the needy"
+    },
+    {
+        "test_id": 23,
+        "relation": "HasA",
+        "correct_feat": "the Kingdom of Holland",
+        "options": "1. claims about ethnic Macedonian achievements\n2. an empty background\n3. the Kingdom of Holland",
+        "correct_num": 3,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> has [MASK].\n\nOptions:\n1. claims about ethnic Macedonian achievements\n2. an empty background\n3. the Kingdom of Holland"
+    },
+    {
+        "test_id": 24,
+        "relation": "HasA",
+        "correct_feat": "the Kingdom of Naples",
+        "options": "1. the Kingdom of Naples\n2. missiles\n3. a song \"Rabbit\" performed in 2016 on Strictly Come Dancing",
+        "correct_num": 1,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> has [MASK].\n\nOptions:\n1. the Kingdom of Naples\n2. missiles\n3. a song \"Rabbit\" performed in 2016 on Strictly Come Dancing"
+    },
+    {
+        "test_id": 25,
+        "relation": "HasA",
+        "correct_feat": "the title of Emperor of the French",
+        "options": "1. opponents who argue that it would increase the number of drug users\n2. the title of Emperor of the French\n3. a point purchase system for \"buying\" opposing forces",
+        "correct_num": 2,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> has [MASK].\n\nOptions:\n1. opponents who argue that it would increase the number of drug users\n2. the title of Emperor of the French\n3. a point purchase system for \"buying\" opposing forces"
+    },
+    {
+        "test_id": 26,
+        "relation": "HasA",
+        "correct_feat": "the title of Co-Prince of Andorra",
+        "options": "1. 29,000 activators\n2. a cherry stone spitting competition\n3. the title of Co-Prince of Andorra",
+        "correct_num": 3,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> has [MASK].\n\nOptions:\n1. 29,000 activators\n2. a cherry stone spitting competition\n3. the title of Co-Prince of Andorra"
+    },
+    {
+        "test_id": 27,
+        "relation": "HasA",
+        "correct_feat": "the title of King of Holland",
+        "options": "1. the title of King of Holland\n2. a smaller board size of 14x14 in the Travel version\n3. commitments to expanding the welfare state",
+        "correct_num": 1,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> has [MASK].\n\nOptions:\n1. the title of King of Holland\n2. a smaller board size of 14x14 in the Travel version\n3. commitments to expanding the welfare state"
+    },
+    {
+        "test_id": 28,
+        "relation": "HasA",
+        "correct_feat": "the title of Grand Duke of Berg",
+        "options": "1. imitations of pillars done in painted plaster\n2. the title of Grand Duke of Berg\n3. counter-maneuvers",
+        "correct_num": 2,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> has [MASK].\n\nOptions:\n1. imitations of pillars done in painted plaster\n2. the title of Grand Duke of Berg\n3. counter-maneuvers"
+    },
+    {
+        "test_id": 29,
+        "relation": "HasFeatureOf",
+        "correct_feat": "being a former imperial and royal European dynasty",
+        "options": "1. songs carrying profound patriotic themes\n2. a single \"Livet i plastik\" with lyrics referencing Aqua's hit \"Barbie girl\"\n3. being a former imperial and royal European dynasty",
+        "correct_num": 3,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is characterized by [MASK].\n\nOptions:\n1. songs carrying profound patriotic themes\n2. a single \"Livet i plastik\" with lyrics referencing Aqua's hit \"Barbie girl\"\n3. being a former imperial and royal European dynasty"
+    },
+    {
+        "test_id": 30,
+        "relation": "HeldIn",
+        "correct_feat": "France",
+        "options": "1. France\n2. China\n3. Seychelles",
+        "correct_num": 1,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> was held in [MASK].\n\nOptions:\n1. France\n2. China\n3. Seychelles"
+    },
+    {
+        "test_id": 31,
+        "relation": "HeldIn",
+        "correct_feat": "Italy",
+        "options": "1. Austria\n2. Italy\n3. Ukraine",
+        "correct_num": 2,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> was held in [MASK].\n\nOptions:\n1. Austria\n2. Italy\n3. Ukraine"
+    },
+    {
+        "test_id": 32,
+        "relation": "HeldIn",
+        "correct_feat": "Spain",
+        "options": "1. Nigeria\n2. the Central African Republic\n3. Spain",
+        "correct_num": 3,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> was held in [MASK].\n\nOptions:\n1. Nigeria\n2. the Central African Republic\n3. Spain"
+    },
+    {
+        "test_id": 33,
+        "relation": "HeldIn",
+        "correct_feat": "Holland",
+        "options": "1. Holland\n2. the Chapel of the Most Holy Sacrament on the right side of the south transept of the basilica\n3. the First Spanish Republic",
+        "correct_num": 1,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> was held in [MASK].\n\nOptions:\n1. Holland\n2. the Chapel of the Most Holy Sacrament on the right side of the south transept of the basilica\n3. the First Spanish Republic"
+    },
+    {
+        "test_id": 34,
+        "relation": "HeldIn",
+        "correct_feat": "Westphalia",
+        "options": "1. Denver\n2. Westphalia\n3. the Atlantic Ocean",
+        "correct_num": 2,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> was held in [MASK].\n\nOptions:\n1. Denver\n2. Westphalia\n3. the Atlantic Ocean"
+    },
+    {
+        "test_id": 35,
+        "relation": "HeldIn",
+        "correct_feat": "Naples",
+        "options": "1. Amsterdam\n2. Rosario\n3. Naples",
+        "correct_num": 3,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> was held in [MASK].\n\nOptions:\n1. Amsterdam\n2. Rosario\n3. Naples"
+    },
+    {
+        "test_id": 36,
+        "relation": "HeldIn",
+        "correct_feat": "Tuscany",
+        "options": "1. Tuscany\n2. New Britain\n3. the Ronald Tutor Campus Center",
+        "correct_num": 1,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> was held in [MASK].\n\nOptions:\n1. Tuscany\n2. New Britain\n3. the Ronald Tutor Campus Center"
+    },
+    {
+        "test_id": 37,
+        "relation": "HeldIn",
+        "correct_feat": "Lucca and Piombino",
+        "options": "1. Olympic Stadium\n2. Lucca and Piombino\n3. the Temple in Jerusalem",
+        "correct_num": 2,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> was held in [MASK].\n\nOptions:\n1. Olympic Stadium\n2. Lucca and Piombino\n3. the Temple in Jerusalem"
+    },
+    {
+        "test_id": 38,
+        "relation": "HeldIn",
+        "correct_feat": "Guastalla",
+        "options": "1. various countries\n2. Salem\n3. Guastalla",
+        "correct_num": 3,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> was held in [MASK].\n\nOptions:\n1. various countries\n2. Salem\n3. Guastalla"
+    },
+    {
+        "test_id": 39,
+        "relation": "HeldIn",
+        "correct_feat": "Elba",
+        "options": "1. Elba\n2. Bedfordshire\n3. London",
+        "correct_num": 1,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> was held in [MASK].\n\nOptions:\n1. Elba\n2. Bedfordshire\n3. London"
+    },
+    {
+        "test_id": 40,
+        "relation": "Influenced",
+        "correct_feat": "the Kingdom of Italy",
+        "options": "1. the Life and Labor Commune in Russia\n2. the Kingdom of Italy\n3. the Earth Liberation Front (ELF)",
+        "correct_num": 2,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> influenced [MASK].\n\nOptions:\n1. the Life and Labor Commune in Russia\n2. the Kingdom of Italy\n3. the Earth Liberation Front (ELF)"
+    },
+    {
+        "test_id": 41,
+        "relation": "Influenced",
+        "correct_feat": "the Kingdom of the Spain and the Indies",
+        "options": "1. the Interstate Commerce Commission to issue regulations\n2. the Party of Free Citizens (Svobodní)\n3. the Kingdom of the Spain and the Indies",
+        "correct_num": 3,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> influenced [MASK].\n\nOptions:\n1. the Interstate Commerce Commission to issue regulations\n2. the Party of Free Citizens (Svobodní)\n3. the Kingdom of the Spain and the Indies"
+    },
+    {
+        "test_id": 42,
+        "relation": "Influenced",
+        "correct_feat": "the Kingdom of Westphalia",
+        "options": "1. the Kingdom of Westphalia\n2. the experimentation with wings, foils and kites\n3. the rise of the Pearl District",
+        "correct_num": 1,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> influenced [MASK].\n\nOptions:\n1. the Kingdom of Westphalia\n2. the experimentation with wings, foils and kites\n3. the rise of the Pearl District"
+    },
+    {
+        "test_id": 43,
+        "relation": "Influenced",
+        "correct_feat": "the Kingdom of Holland",
+        "options": "1. the development of death penalty statutes\n2. the Kingdom of Holland\n3. the economic policy of Argentina",
+        "correct_num": 2,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> influenced [MASK].\n\nOptions:\n1. the development of death penalty statutes\n2. the Kingdom of Holland\n3. the economic policy of Argentina"
+    },
+    {
+        "test_id": 44,
+        "relation": "Influenced",
+        "correct_feat": "the Kingdom of Naples",
+        "options": "1. the legal status of individuals in armed conflicts\n2. John Chrysostom's interpretation of gradual ascent by means of virtue\n3. the Kingdom of Naples",
+        "correct_num": 3,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> influenced [MASK].\n\nOptions:\n1. the legal status of individuals in armed conflicts\n2. John Chrysostom's interpretation of gradual ascent by means of virtue\n3. the Kingdom of Naples"
+    },
+    {
+        "test_id": 45,
+        "relation": "InfluencedBy",
+        "correct_feat": "the French Revolution",
+        "options": "1. the French Revolution\n2. pan-Africanist ideas\n3. Byzantine tradition",
+        "correct_num": 1,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> was influenced by [MASK].\n\nOptions:\n1. the French Revolution\n2. pan-Africanist ideas\n3. Byzantine tradition"
+    },
+    {
+        "test_id": 46,
+        "relation": "InfluencedBy",
+        "correct_feat": "the Bourbon dynasty",
+        "options": "1. the linking of the Indian railways across the sub-continent\n2. the Bourbon dynasty\n3. Manambuchaavadi Venkatasubbayyar",
+        "correct_num": 2,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> was influenced by [MASK].\n\nOptions:\n1. the linking of the Indian railways across the sub-continent\n2. the Bourbon dynasty\n3. Manambuchaavadi Venkatasubbayyar"
+    },
+    {
+        "test_id": 47,
+        "relation": "IsA",
+        "correct_feat": "a former imperial and royal European dynasty",
+        "options": "1. a rack railway\n2. a shortened name for the Department for Agitation and Propaganda\n3. a former imperial and royal European dynasty",
+        "correct_num": 3,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is [MASK].\n\nOptions:\n1. a rack railway\n2. a shortened name for the Department for Agitation and Propaganda\n3. a former imperial and royal European dynasty"
+    },
+    {
+        "test_id": 48,
+        "relation": "IsA",
+        "correct_feat": "a former imperial dynasty",
+        "options": "1. a former imperial dynasty\n2. a non-historical skirmish scenario\n3. a story serialization",
+        "correct_num": 1,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is [MASK].\n\nOptions:\n1. a former imperial dynasty\n2. a non-historical skirmish scenario\n3. a story serialization"
+    },
+    {
+        "test_id": 49,
+        "relation": "IsA",
+        "correct_feat": "a former royal dynasty",
+        "options": "1. a board wargame for two players\n2. a former royal dynasty\n3. a children's musical group",
+        "correct_num": 2,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is [MASK].\n\nOptions:\n1. a board wargame for two players\n2. a former royal dynasty\n3. a children's musical group"
+    },
+    {
+        "test_id": 50,
+        "relation": "IsA",
+        "correct_feat": "a dynasty of Corsican origin",
+        "options": "1. one of the most venerated icons in the Upper Volga region\n2. a water absorbing game bag\n3. a dynasty of Corsican origin",
+        "correct_num": 3,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is [MASK].\n\nOptions:\n1. one of the most venerated icons in the Upper Volga region\n2. a water absorbing game bag\n3. a dynasty of Corsican origin"
+    },
+    {
+        "test_id": 51,
+        "relation": "IsA",
+        "correct_feat": "the Imperial House of France",
+        "options": "1. the Imperial House of France\n2. a board wargame\n3. a small Italo-Byzantine replica of an Eleusa (Virgin of Tenderness) icon",
+        "correct_num": 1,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is [MASK].\n\nOptions:\n1. the Imperial House of France\n2. a board wargame\n3. a small Italo-Byzantine replica of an Eleusa (Virgin of Tenderness) icon"
+    },
+    {
+        "test_id": 52,
+        "relation": "IsA",
+        "correct_feat": "a political movement for Corsican independence",
+        "options": "1. a federal system\n2. a political movement for Corsican independence\n3. a microgame",
+        "correct_num": 2,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is [MASK].\n\nOptions:\n1. a federal system\n2. a political movement for Corsican independence\n3. a microgame"
+    },
+    {
+        "test_id": 53,
+        "relation": "KnownAs",
+        "correct_feat": "Buonaparte",
+        "options": "1. Foot-ball in an 1832 article\n2. \"Ludo player\" when a player plays without spirit\n3. Buonaparte",
+        "correct_num": 3,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is known as [MASK].\n\nOptions:\n1. Foot-ball in an 1832 article\n2. \"Ludo player\" when a player plays without spirit\n3. Buonaparte"
+    },
+    {
+        "test_id": 54,
+        "relation": "KnownFor",
+        "correct_feat": "Napoleon I",
+        "options": "1. Napoleon I\n2. its height\n3. the absence of dice and other game elements that produce random effects",
+        "correct_num": 1,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is known for [MASK].\n\nOptions:\n1. Napoleon I\n2. its height\n3. the absence of dice and other game elements that produce random effects"
+    },
+    {
+        "test_id": 55,
+        "relation": "KnownFor",
+        "correct_feat": "Napoleon III",
+        "options": "1. being the most renowned work among all Chinese paintings\n2. Napoleon III\n3. being the world's oldest toy store, Carl Loebner Torgau",
+        "correct_num": 2,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is known for [MASK].\n\nOptions:\n1. being the most renowned work among all Chinese paintings\n2. Napoleon III\n3. being the world's oldest toy store, Carl Loebner Torgau"
+    },
+    {
+        "test_id": 56,
+        "relation": "MemberOf",
+        "correct_feat": "the Ajaccio town council",
+        "options": "1. Eton-only codes of football\n2. the Broederbond\n3. the Ajaccio town council",
+        "correct_num": 3,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is a member of [MASK].\n\nOptions:\n1. Eton-only codes of football\n2. the Broederbond\n3. the Ajaccio town council"
+    },
+    {
+        "test_id": 57,
+        "relation": "MemberOf",
+        "correct_feat": "the Council of Five Hundred",
+        "options": "1. the Council of Five Hundred\n2. Stephen Pearl Andrews\n3. French Impressionist heritage",
+        "correct_num": 1,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is a member of [MASK].\n\nOptions:\n1. the Council of Five Hundred\n2. Stephen Pearl Andrews\n3. French Impressionist heritage"
+    },
+    {
+        "test_id": 58,
+        "relation": "OriginatedIn",
+        "correct_feat": "Corsica",
+        "options": "1. the colony of Victoria, Australia\n2. Corsica\n3. the Ottoman Empire",
+        "correct_num": 2,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> originated in [MASK].\n\nOptions:\n1. the colony of Victoria, Australia\n2. Corsica\n3. the Ottoman Empire"
+    },
+    {
+        "test_id": 59,
+        "relation": "OriginatedIn",
+        "correct_feat": "Sarzana",
+        "options": "1. the Australian gold rush that began in 1851\n2. the youth group EZRA\n3. Sarzana",
+        "correct_num": 3,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> originated in [MASK].\n\nOptions:\n1. the Australian gold rush that began in 1851\n2. the youth group EZRA\n3. Sarzana"
+    },
+    {
+        "test_id": 60,
+        "relation": "OriginatedIn",
+        "correct_feat": "San Miniato",
+        "options": "1. San Miniato\n2. Korea's Three Kingdom Period\n3. biblical apocalyptic literature",
+        "correct_num": 1,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> originated in [MASK].\n\nOptions:\n1. San Miniato\n2. Korea's Three Kingdom Period\n3. biblical apocalyptic literature"
+    },
+    {
+        "test_id": 61,
+        "relation": "OriginatedIn",
+        "correct_feat": "Florence",
+        "options": "1. the 6th century\n2. Florence\n3. ancient philosophers",
+        "correct_num": 2,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> originated in [MASK].\n\nOptions:\n1. the 6th century\n2. Florence\n3. ancient philosophers"
+    },
+    {
+        "test_id": 62,
+        "relation": "PartOf",
+        "correct_feat": "the Italian towns of Sarzana, San Miniato, and Florence",
+        "options": "1. the Netflix animated series Skylanders Academy\n2. the evolution of music distribution through platforms like YouTube\n3. the Italian towns of Sarzana, San Miniato, and Florence",
+        "correct_num": 3,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is part of [MASK].\n\nOptions:\n1. the Netflix animated series Skylanders Academy\n2. the evolution of music distribution through platforms like YouTube\n3. the Italian towns of Sarzana, San Miniato, and Florence"
+    },
+    {
+        "test_id": 63,
+        "relation": "PartOf",
+        "correct_feat": "the Ajaccio town council",
+        "options": "1. the Ajaccio town council\n2. a dockside festival\n3. the American heavy metal music scene",
+        "correct_num": 1,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is part of [MASK].\n\nOptions:\n1. the Ajaccio town council\n2. a dockside festival\n3. the American heavy metal music scene"
+    },
+    {
+        "test_id": 64,
+        "relation": "PartOf",
+        "correct_feat": "the Lunigiana",
+        "options": "1. Kick the Habit Productions\n2. the Lunigiana\n3. the history of the United States Supreme Court",
+        "correct_num": 2,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is part of [MASK].\n\nOptions:\n1. Kick the Habit Productions\n2. the Lunigiana\n3. the history of the United States Supreme Court"
+    },
+    {
+        "test_id": 65,
+        "relation": "UsedAs",
+        "correct_feat": "a dynasty",
+        "options": "1. a basis for political activity\n2. the scriptural basis for the Eucharist\n3. a dynasty",
+        "correct_num": 3,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is used as [MASK].\n\nOptions:\n1. a basis for political activity\n2. the scriptural basis for the Eucharist\n3. a dynasty"
+    },
+    {
+        "test_id": 66,
+        "relation": "UsedAs",
+        "correct_feat": "the Imperial House of France",
+        "options": "1. the Imperial House of France\n2. a test\n3. a slogan in domestic ads for tourism",
+        "correct_num": 1,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is used as [MASK].\n\nOptions:\n1. the Imperial House of France\n2. a test\n3. a slogan in domestic ads for tourism"
+    },
+    {
+        "test_id": 67,
+        "relation": "UsedAs",
+        "correct_feat": "a political movement for Corsican independence",
+        "options": "1. an example of government-granted monopolies\n2. a political movement for Corsican independence\n3. a description for an artistic movement",
+        "correct_num": 2,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is used as [MASK].\n\nOptions:\n1. an example of government-granted monopolies\n2. a political movement for Corsican independence\n3. a description for an artistic movement"
+    },
+    {
+        "test_id": 68,
+        "relation": "UsedFor",
+        "correct_feat": "expanding the power of the dynasty",
+        "options": "1. a reality series\n2. decoration\n3. expanding the power of the dynasty",
+        "correct_num": 3,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is used for [MASK].\n\nOptions:\n1. a reality series\n2. decoration\n3. expanding the power of the dynasty"
+    },
+    {
+        "test_id": 69,
+        "relation": "UsedIn",
+        "correct_feat": "the Italian towns of Sarzana, San Miniato, and Florence",
+        "options": "1. the Italian towns of Sarzana, San Miniato, and Florence\n2. South India\n3. the squatter movement",
+        "correct_num": 1,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is used in [MASK].\n\nOptions:\n1. the Italian towns of Sarzana, San Miniato, and Florence\n2. South India\n3. the squatter movement"
+    },
+    {
+        "test_id": 70,
+        "relation": "UsedIn",
+        "correct_feat": "the city of Ajaccio, Corsica",
+        "options": "1. The Comprehensive Guide to Board Wargaming\n2. the city of Ajaccio, Corsica\n3. the operations of private military companies",
+        "correct_num": 2,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is used in [MASK].\n\nOptions:\n1. The Comprehensive Guide to Board Wargaming\n2. the city of Ajaccio, Corsica\n3. the operations of private military companies"
+    },
+    {
+        "test_id": 71,
+        "relation": "UsedIn",
+        "correct_feat": "the Kingdom of Italy",
+        "options": "1. harbors\n2. the United States\n3. the Kingdom of Italy",
+        "correct_num": 3,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is used in [MASK].\n\nOptions:\n1. harbors\n2. the United States\n3. the Kingdom of Italy"
+    },
+    {
+        "test_id": 72,
+        "relation": "UsedIn",
+        "correct_feat": "the Kingdom of the Spain and the Indies",
+        "options": "1. the Kingdom of the Spain and the Indies\n2. practical shooting events\n3. Finland",
+        "correct_num": 1,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is used in [MASK].\n\nOptions:\n1. the Kingdom of the Spain and the Indies\n2. practical shooting events\n3. Finland"
+    },
+    {
+        "test_id": 73,
+        "relation": "UsedIn",
+        "correct_feat": "the Kingdom of Westphalia",
+        "options": "1. the anarchist movement\n2. the Kingdom of Westphalia\n3. Tajikistan",
+        "correct_num": 2,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is used in [MASK].\n\nOptions:\n1. the anarchist movement\n2. the Kingdom of Westphalia\n3. Tajikistan"
+    },
+    {
+        "test_id": 74,
+        "relation": "UsedIn",
+        "correct_feat": "the Kingdom of Holland",
+        "options": "1. Nuns on the Run\n2. the community's traditions\n3. the Kingdom of Holland",
+        "correct_num": 3,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is used in [MASK].\n\nOptions:\n1. Nuns on the Run\n2. the community's traditions\n3. the Kingdom of Holland"
+    },
+    {
+        "test_id": 75,
+        "relation": "UsedIn",
+        "correct_feat": "the Kingdom of Naples",
+        "options": "1. the Kingdom of Naples\n2. Europe\n3. stores",
+        "correct_num": 1,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is used in [MASK].\n\nOptions:\n1. the Kingdom of Naples\n2. Europe\n3. stores"
+    },
+    {
+        "test_id": 76,
+        "relation": "UsedIn",
+        "correct_feat": "the Second French Empire",
+        "options": "1. various parts of Asia\n2. the Second French Empire\n3. a cycle of \"eminent men\"",
+        "correct_num": 2,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is used in [MASK].\n\nOptions:\n1. various parts of Asia\n2. the Second French Empire\n3. a cycle of \"eminent men\""
+    },
+    {
+        "test_id": 77,
+        "relation": "UsedIn",
+        "correct_feat": "the Church of San Francesco in San Miniato",
+        "options": "1. basements\n2. the United States\n3. the Church of San Francesco in San Miniato",
+        "correct_num": 3,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is used in [MASK].\n\nOptions:\n1. basements\n2. the United States\n3. the Church of San Francesco in San Miniato"
+    },
+    {
+        "test_id": 78,
+        "relation": "UsedIn",
+        "correct_feat": "the Chapelle Impériale in Ajaccio",
+        "options": "1. the Chapelle Impériale in Ajaccio\n2. cycles of the Life of the Virgin\n3. the discography of Polydor",
+        "correct_num": 1,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is used in [MASK].\n\nOptions:\n1. the Chapelle Impériale in Ajaccio\n2. cycles of the Life of the Virgin\n3. the discography of Polydor"
+    },
+    {
+        "test_id": 79,
+        "relation": "UsedTo",
+        "correct_feat": "install members of his family on the thrones of client states",
+        "options": "1. take a piece out of the hangar onto the corresponding adjacent launch area\n2. install members of his family on the thrones of client states\n3. bring a piece into the game",
+        "correct_num": 2,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is used to [MASK].\n\nOptions:\n1. take a piece out of the hangar onto the corresponding adjacent launch area\n2. install members of his family on the thrones of client states\n3. bring a piece into the game"
+    }
+]

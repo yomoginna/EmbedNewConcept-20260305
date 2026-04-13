@@ -1,0 +1,426 @@
+[
+    {
+        "test_id": 0,
+        "relation": "About",
+        "correct_feat": "the mindset or philosophy created by the emerging significance of big data",
+        "options": "1. the mindset or philosophy created by the emerging significance of big data\n2. the Bancroft Treaties and their eventual abandonment\n3. folk rock",
+        "correct_num": 1,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is about [MASK].\n\nOptions:\n1. the mindset or philosophy created by the emerging significance of big data\n2. the Bancroft Treaties and their eventual abandonment\n3. folk rock"
+    },
+    {
+        "test_id": 1,
+        "relation": "Affects",
+        "correct_feat": "the way society is transforming",
+        "options": "1. the western Maghreb and al-Andalus\n2. the way society is transforming\n3. the Duchy of Swabia from 1079",
+        "correct_num": 2,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> affects [MASK].\n\nOptions:\n1. the western Maghreb and al-Andalus\n2. the way society is transforming\n3. the Duchy of Swabia from 1079"
+    },
+    {
+        "test_id": 2,
+        "relation": "AssociatedWith",
+        "correct_feat": "big data",
+        "options": "1. the Abbasid caliphate\n2. Trevor Horn\n3. big data",
+        "correct_num": 3,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is associated with [MASK].\n\nOptions:\n1. the Abbasid caliphate\n2. Trevor Horn\n3. big data"
+    },
+    {
+        "test_id": 3,
+        "relation": "AssociatedWith",
+        "correct_feat": "the Big Data revolution",
+        "options": "1. the Big Data revolution\n2. Kevin Bartz\n3. Peter D\u00fcring on drums",
+        "correct_num": 1,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is associated with [MASK].\n\nOptions:\n1. the Big Data revolution\n2. Kevin Bartz\n3. Peter D\u00fcring on drums"
+    },
+    {
+        "test_id": 4,
+        "relation": "AssociatedWith",
+        "correct_feat": "data processing systems",
+        "options": "1. the Orange and Alexandria Railroad\n2. data processing systems\n3. The Wall Street Journal",
+        "correct_num": 2,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is associated with [MASK].\n\nOptions:\n1. the Orange and Alexandria Railroad\n2. data processing systems\n3. The Wall Street Journal"
+    },
+    {
+        "test_id": 5,
+        "relation": "AssociatedWith",
+        "correct_feat": "Aaron Swartz",
+        "options": "1. the village of Zarudchi in the Lyubeshiv district\n2. Big Death\n3. Aaron Swartz",
+        "correct_num": 3,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is associated with [MASK].\n\nOptions:\n1. the village of Zarudchi in the Lyubeshiv district\n2. Big Death\n3. Aaron Swartz"
+    },
+    {
+        "test_id": 6,
+        "relation": "AssociatedWith",
+        "correct_feat": "the Facebook\u2013Cambridge Analytica data scandal",
+        "options": "1. the Facebook\u2013Cambridge Analytica data scandal\n2. escape rooms\n3. water power from the Lehigh River",
+        "correct_num": 1,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is associated with [MASK].\n\nOptions:\n1. the Facebook\u2013Cambridge Analytica data scandal\n2. escape rooms\n3. water power from the Lehigh River"
+    },
+    {
+        "test_id": 7,
+        "relation": "BelongsTo",
+        "correct_feat": "an emerging ideology",
+        "options": "1. TamStar Records\n2. an emerging ideology\n3. Victor Entertainment",
+        "correct_num": 2,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> belongs to [MASK].\n\nOptions:\n1. TamStar Records\n2. an emerging ideology\n3. Victor Entertainment"
+    },
+    {
+        "test_id": 8,
+        "relation": "BelongsTo",
+        "correct_feat": "a new form of religion",
+        "options": "1. the category of youngest award-winning rappers\n2. the history of Morocco\n3. a new form of religion",
+        "correct_num": 3,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> belongs to [MASK].\n\nOptions:\n1. the category of youngest award-winning rappers\n2. the history of Morocco\n3. a new form of religion"
+    },
+    {
+        "test_id": 9,
+        "relation": "CreatedBy",
+        "correct_feat": "David Brooks",
+        "options": "1. David Brooks\n2. Ptolemy I, a general and bodyguard companion of Alexander the Great\n3. the Chumash people",
+        "correct_num": 1,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> was created by [MASK].\n\nOptions:\n1. David Brooks\n2. Ptolemy I, a general and bodyguard companion of Alexander the Great\n3. the Chumash people"
+    },
+    {
+        "test_id": 10,
+        "relation": "HasA",
+        "correct_feat": "information flow as its supreme value",
+        "options": "1. a growing number of organizers\n2. information flow as its supreme value\n3. a debut studio album titled The Cold Vein",
+        "correct_num": 2,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> has [MASK].\n\nOptions:\n1. a growing number of organizers\n2. information flow as its supreme value\n3. a debut studio album titled The Cold Vein"
+    },
+    {
+        "test_id": 11,
+        "relation": "HasA",
+        "correct_feat": "the potential to illuminate patterns of behavior",
+        "options": "1. the ROC Nations' Cup\n2. three winged putti flying away\n3. the potential to illuminate patterns of behavior",
+        "correct_num": 3,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> has [MASK].\n\nOptions:\n1. the ROC Nations' Cup\n2. three winged putti flying away\n3. the potential to illuminate patterns of behavior"
+    },
+    {
+        "test_id": 12,
+        "relation": "HasA",
+        "correct_feat": "the implication that all data is public, even personal data",
+        "options": "1. the implication that all data is public, even personal data\n2. a backbone and wire guy-ropes\n3. a game of sacrifice",
+        "correct_num": 1,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> has [MASK].\n\nOptions:\n1. the implication that all data is public, even personal data\n2. a backbone and wire guy-ropes\n3. a game of sacrifice"
+    },
+    {
+        "test_id": 13,
+        "relation": "HasFeatureOf",
+        "correct_feat": "the belief that the universe consists of data flows",
+        "options": "1. its gases\n2. the belief that the universe consists of data flows\n3. pieces being captured by jumping over them",
+        "correct_num": 2,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is characterized by [MASK].\n\nOptions:\n1. its gases\n2. the belief that the universe consists of data flows\n3. pieces being captured by jumping over them"
+    },
+    {
+        "test_id": 14,
+        "relation": "HasFeatureOf",
+        "correct_feat": "the belief that the value of any phenomenon or entity is determined by its contribution to data processing",
+        "options": "1. changing places after all members of the first batting team are out\n2. humans climbing towards a brighter field\n3. the belief that the value of any phenomenon or entity is determined by its contribution to data processing",
+        "correct_num": 3,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is characterized by [MASK].\n\nOptions:\n1. changing places after all members of the first batting team are out\n2. humans climbing towards a brighter field\n3. the belief that the value of any phenomenon or entity is determined by its contribution to data processing"
+    },
+    {
+        "test_id": 15,
+        "relation": "HasFeatureOf",
+        "correct_feat": "the belief that individual humans serve as chips in a single data processing system",
+        "options": "1. the belief that individual humans serve as chips in a single data processing system\n2. its Apprentice Program for Technicians\n3. its painting set in gold and silver accoutrements of precious gemstones donated as ex votos from devotees",
+        "correct_num": 1,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is characterized by [MASK].\n\nOptions:\n1. the belief that individual humans serve as chips in a single data processing system\n2. its Apprentice Program for Technicians\n3. its painting set in gold and silver accoutrements of precious gemstones donated as ex votos from devotees"
+    },
+    {
+        "test_id": 16,
+        "relation": "HasFeatureOf",
+        "correct_feat": "the advocacy for maximizing dataflow by connecting to more and more media",
+        "options": "1. its unique feature for a sea port\n2. the advocacy for maximizing dataflow by connecting to more and more media\n3. crowned pieces that can move and capture backward and forward",
+        "correct_num": 2,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is characterized by [MASK].\n\nOptions:\n1. its unique feature for a sea port\n2. the advocacy for maximizing dataflow by connecting to more and more media\n3. crowned pieces that can move and capture backward and forward"
+    },
+    {
+        "test_id": 17,
+        "relation": "HasFeatureOf",
+        "correct_feat": "the prediction that algorithms will eventually be given authority to make important life decisions",
+        "options": "1. a coiled dragon holding a sword in its mouth\n2. the traditional maniera greca\n3. the prediction that algorithms will eventually be given authority to make important life decisions",
+        "correct_num": 3,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is characterized by [MASK].\n\nOptions:\n1. a coiled dragon holding a sword in its mouth\n2. the traditional maniera greca\n3. the prediction that algorithms will eventually be given authority to make important life decisions"
+    },
+    {
+        "test_id": 18,
+        "relation": "HasFeatureOf",
+        "correct_feat": "the view that data is the central means of understanding nature, society, technology, and human essence",
+        "options": "1. the view that data is the central means of understanding nature, society, technology, and human essence\n2. its distances\n3. \"untried\" Soviet units in its second edition",
+        "correct_num": 1,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is characterized by [MASK].\n\nOptions:\n1. the view that data is the central means of understanding nature, society, technology, and human essence\n2. its distances\n3. \"untried\" Soviet units in its second edition"
+    },
+    {
+        "test_id": 19,
+        "relation": "HasFeatureOf",
+        "correct_feat": "the necessity for art to integrate with data to stay relevant",
+        "options": "1. its ruling that New York's law was unconstitutional\n2. the necessity for art to integrate with data to stay relevant\n3. the practice of torture widely documented as a distinctive trait of the Egyptian police",
+        "correct_num": 2,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is characterized by [MASK].\n\nOptions:\n1. its ruling that New York's law was unconstitutional\n2. the necessity for art to integrate with data to stay relevant\n3. the practice of torture widely documented as a distinctive trait of the Egyptian police"
+    },
+    {
+        "test_id": 20,
+        "relation": "HasFeatureOf",
+        "correct_feat": "the response to the intricacy and interconnectedness of modern realms",
+        "options": "1. five men, one of whom was a \"Bran\u00e1n\" or chief\n2. a per curiam decision\n3. the response to the intricacy and interconnectedness of modern realms",
+        "correct_num": 3,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is characterized by [MASK].\n\nOptions:\n1. five men, one of whom was a \"Bran\u00e1n\" or chief\n2. a per curiam decision\n3. the response to the intricacy and interconnectedness of modern realms"
+    },
+    {
+        "test_id": 21,
+        "relation": "HasFeatureOf",
+        "correct_feat": "the advocacy for the use of methodologies from various fields in art",
+        "options": "1. the advocacy for the use of methodologies from various fields in art\n2. four maps in four colors\n3. being an abstract strategy game",
+        "correct_num": 1,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is characterized by [MASK].\n\nOptions:\n1. the advocacy for the use of methodologies from various fields in art\n2. four maps in four colors\n3. being an abstract strategy game"
+    },
+    {
+        "test_id": 23,
+        "relation": "Influenced",
+        "correct_feat": "the way art is created",
+        "options": "1. the film Manasu Mallige\n2. the establishment of Sparta as the leading power of Greece\n3. the way art is created",
+        "correct_num": 3,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> influenced [MASK].\n\nOptions:\n1. the film Manasu Mallige\n2. the establishment of Sparta as the leading power of Greece\n3. the way art is created"
+    },
+    {
+        "test_id": 24,
+        "relation": "Influenced",
+        "correct_feat": "the interpretation of the entire human species as a data processing system",
+        "options": "1. the interpretation of the entire human species as a data processing system\n2. a documentary made in 2008\n3. the stock market",
+        "correct_num": 1,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> influenced [MASK].\n\nOptions:\n1. the interpretation of the entire human species as a data processing system\n2. a documentary made in 2008\n3. the stock market"
+    },
+    {
+        "test_id": 25,
+        "relation": "InfluencedBy",
+        "correct_feat": "the emerging significance of big data",
+        "options": "1. Andra Day\n2. the emerging significance of big data\n3. rock art in the region",
+        "correct_num": 2,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> was influenced by [MASK].\n\nOptions:\n1. Andra Day\n2. the emerging significance of big data\n3. rock art in the region"
+    },
+    {
+        "test_id": 26,
+        "relation": "InfluencedBy",
+        "correct_feat": "David Brooks",
+        "options": "1. the Testament of Boles\u0142aw III Wrymouth\n2. chuk-guk\n3. David Brooks",
+        "correct_num": 3,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> was influenced by [MASK].\n\nOptions:\n1. the Testament of Boles\u0142aw III Wrymouth\n2. chuk-guk\n3. David Brooks"
+    },
+    {
+        "test_id": 27,
+        "relation": "InfluencedBy",
+        "correct_feat": "Yuval Noah Harari",
+        "options": "1. Yuval Noah Harari\n2. the advent of national feeling\n3. the Battle of M\u00fchlberg",
+        "correct_num": 1,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> was influenced by [MASK].\n\nOptions:\n1. Yuval Noah Harari\n2. the advent of national feeling\n3. the Battle of M\u00fchlberg"
+    },
+    {
+        "test_id": 28,
+        "relation": "InfluencedBy",
+        "correct_feat": "Albert-Laszlo Barabasi",
+        "options": "1. the Virgin Mary's appearance in a dream\n2. Albert-Laszlo Barabasi\n3. player feedback gathered by SPI's house magazine Strategy & Tactics",
+        "correct_num": 2,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> was influenced by [MASK].\n\nOptions:\n1. the Virgin Mary's appearance in a dream\n2. Albert-Laszlo Barabasi\n3. player feedback gathered by SPI's house magazine Strategy & Tactics"
+    },
+    {
+        "test_id": 29,
+        "relation": "InfluencedBy",
+        "correct_feat": "the Facebook\u2013Cambridge Analytica data scandal",
+        "options": "1. the United Nations Framework Convention on Climate Change\n2. the Anti-Pinkerton Act in the United States\n3. the Facebook\u2013Cambridge Analytica data scandal",
+        "correct_num": 3,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> was influenced by [MASK].\n\nOptions:\n1. the United Nations Framework Convention on Climate Change\n2. the Anti-Pinkerton Act in the United States\n3. the Facebook\u2013Cambridge Analytica data scandal"
+    },
+    {
+        "test_id": 30,
+        "relation": "IsA",
+        "correct_feat": "a term used to describe a mindset or philosophy",
+        "options": "1. a term used to describe a mindset or philosophy\n2. a brand of cider\n3. a YouTube channel",
+        "correct_num": 1,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is [MASK].\n\nOptions:\n1. a term used to describe a mindset or philosophy\n2. a brand of cider\n3. a YouTube channel"
+    },
+    {
+        "test_id": 31,
+        "relation": "IsA",
+        "correct_feat": "an emerging ideology",
+        "options": "1. a mural\n2. an emerging ideology\n3. a conflict that led to the establishment of the Commonwealth of England",
+        "correct_num": 2,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is [MASK].\n\nOptions:\n1. a mural\n2. an emerging ideology\n3. a conflict that led to the establishment of the Commonwealth of England"
+    },
+    {
+        "test_id": 32,
+        "relation": "IsA",
+        "correct_feat": "a new form of religion",
+        "options": "1. an English rock band\n2. an excellent thing\n3. a new form of religion",
+        "correct_num": 3,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is [MASK].\n\nOptions:\n1. an English rock band\n2. an excellent thing\n3. a new form of religion"
+    },
+    {
+        "test_id": 34,
+        "relation": "IsA",
+        "correct_feat": "a dystopian threat to humanity",
+        "options": "1. the first game in the series\n2. a dystopian threat to humanity\n3. an introduction for children",
+        "correct_num": 2,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is [MASK].\n\nOptions:\n1. the first game in the series\n2. a dystopian threat to humanity\n3. an introduction for children"
+    },
+    {
+        "test_id": 35,
+        "relation": "KnownAs",
+        "correct_feat": "Data-ism",
+        "options": "1. Gansabhauet in Switzerland\n2. jeu des petits chevaux in France\n3. Data-ism",
+        "correct_num": 3,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is known as [MASK].\n\nOptions:\n1. Gansabhauet in Switzerland\n2. jeu des petits chevaux in France\n3. Data-ism"
+    },
+    {
+        "test_id": 36,
+        "relation": "KnownFor",
+        "correct_feat": "its use of data as a primary source of inspiration in art",
+        "options": "1. its use of data as a primary source of inspiration in art\n2. its compositions\n3. the apparition of the Virgin Mary",
+        "correct_num": 1,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is known for [MASK].\n\nOptions:\n1. its use of data as a primary source of inspiration in art\n2. its compositions\n3. the apparition of the Virgin Mary"
+    },
+    {
+        "test_id": 37,
+        "relation": "KnownFor",
+        "correct_feat": "its declaration that the universe consists of data flows",
+        "options": "1. its depiction in a failed attempt at a painting by Leonardo da Vinci\n2. its declaration that the universe consists of data flows\n3. its rulers taking the Greek title basileus",
+        "correct_num": 2,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is known for [MASK].\n\nOptions:\n1. its depiction in a failed attempt at a painting by Leonardo da Vinci\n2. its declaration that the universe consists of data flows\n3. its rulers taking the Greek title basileus"
+    },
+    {
+        "test_id": 38,
+        "relation": "KnownFor",
+        "correct_feat": "its interpretation of the human species as a single data processing system",
+        "options": "1. several race dramas\n2. its lavish costume\n3. its interpretation of the human species as a single data processing system",
+        "correct_num": 3,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is known for [MASK].\n\nOptions:\n1. several race dramas\n2. its lavish costume\n3. its interpretation of the human species as a single data processing system"
+    },
+    {
+        "test_id": 39,
+        "relation": "KnownFor",
+        "correct_feat": "its argument that the value of any entity is determined by its contribution to data processing",
+        "options": "1. its argument that the value of any entity is determined by its contribution to data processing\n2. its different levels of difficulty and titles\n3. the \"White House Tee Ball Initiative\"",
+        "correct_num": 1,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is known for [MASK].\n\nOptions:\n1. its argument that the value of any entity is determined by its contribution to data processing\n2. its different levels of difficulty and titles\n3. the \"White House Tee Ball Initiative\""
+    },
+    {
+        "test_id": 40,
+        "relation": "PublishedIn",
+        "correct_feat": "Homo Deus: A Brief History of Tomorrow",
+        "options": "1. Germany\n2. Homo Deus: A Brief History of Tomorrow\n3. the West End",
+        "correct_num": 2,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> was published in [MASK].\n\nOptions:\n1. Germany\n2. Homo Deus: A Brief History of Tomorrow\n3. the West End"
+    },
+    {
+        "test_id": 42,
+        "relation": "UsedAs",
+        "correct_feat": "a term to describe the Big Data revolution",
+        "options": "1. a term to describe the Big Data revolution\n2. an element of Diocletian's Palace\n3. a carriage or car for hire",
+        "correct_num": 1,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is used as [MASK].\n\nOptions:\n1. a term to describe the Big Data revolution\n2. an element of Diocletian's Palace\n3. a carriage or car for hire"
+    },
+    {
+        "test_id": 43,
+        "relation": "UsedFor",
+        "correct_feat": "understanding nature, society, technology, and human essence",
+        "options": "1. looking ahead to 12 moves\n2. understanding nature, society, technology, and human essence\n3. cycling through the game's arsenal",
+        "correct_num": 2,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is used for [MASK].\n\nOptions:\n1. looking ahead to 12 moves\n2. understanding nature, society, technology, and human essence\n3. cycling through the game's arsenal"
+    },
+    {
+        "test_id": 44,
+        "relation": "UsedIn",
+        "correct_feat": "art",
+        "options": "1. the worship of the old nature gods\n2. the C\u00e9ret Cherry Festival\n3. art",
+        "correct_num": 3,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is used in [MASK].\n\nOptions:\n1. the worship of the old nature gods\n2. the C\u00e9ret Cherry Festival\n3. art"
+    },
+    {
+        "test_id": 45,
+        "relation": "UsedIn",
+        "correct_feat": "contemporary society",
+        "options": "1. contemporary society\n2. the Sinjska alka\n3. Spanish culture",
+        "correct_num": 1,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is used in [MASK].\n\nOptions:\n1. contemporary society\n2. the Sinjska alka\n3. Spanish culture"
+    },
+    {
+        "test_id": 46,
+        "relation": "UsedTo",
+        "correct_feat": "describe the mindset or philosophy created by the emerging significance of big data",
+        "options": "1. visualize pre-modern viewers' various conceptions of a \"great age\n2. describe the mindset or philosophy created by the emerging significance of big data\n3. kill bulls",
+        "correct_num": 2,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is used to [MASK].\n\nOptions:\n1. visualize pre-modern viewers' various conceptions of a \"great age\n2. describe the mindset or philosophy created by the emerging significance of big data\n3. kill bulls"
+    },
+    {
+        "test_id": 47,
+        "relation": "UsedTo",
+        "correct_feat": "describe what historian Yuval Noah Harari calls an emerging ideology or even a new form of religion",
+        "options": "1. build train tracks\n2. showcase their musical talent\n3. describe what historian Yuval Noah Harari calls an emerging ideology or even a new form of religion",
+        "correct_num": 3,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is used to [MASK].\n\nOptions:\n1. build train tracks\n2. showcase their musical talent\n3. describe what historian Yuval Noah Harari calls an emerging ideology or even a new form of religion"
+    },
+    {
+        "test_id": 48,
+        "relation": "UsedTo",
+        "correct_feat": "refer to an artist movement that uses data as its primary source of inspiration",
+        "options": "1. refer to an artist movement that uses data as its primary source of inspiration\n2. protect from exposure\n3. tour the country",
+        "correct_num": 1,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is used to [MASK].\n\nOptions:\n1. refer to an artist movement that uses data as its primary source of inspiration\n2. protect from exposure\n3. tour the country"
+    },
+    {
+        "test_id": 49,
+        "relation": "UsedTo",
+        "correct_feat": "describe the Big Data revolution",
+        "options": "1. weigh deeds on a divine scale\n2. describe the Big Data revolution\n3. bombard Wotje",
+        "correct_num": 2,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is used to [MASK].\n\nOptions:\n1. weigh deeds on a divine scale\n2. describe the Big Data revolution\n3. bombard Wotje"
+    },
+    {
+        "test_id": 50,
+        "relation": "UsedTo",
+        "correct_feat": "describe the necessity for art to integrate with data",
+        "options": "1. speak to everyone there of his importance to redemption in Jerusalem\n2. release a self-titled album\n3. describe the necessity for art to integrate with data",
+        "correct_num": 3,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is used to [MASK].\n\nOptions:\n1. speak to everyone there of his importance to redemption in Jerusalem\n2. release a self-titled album\n3. describe the necessity for art to integrate with data"
+    },
+    {
+        "test_id": 51,
+        "relation": "WrittenBy",
+        "correct_feat": "David Brooks",
+        "options": "1. David Brooks\n2. Rivers Cuomo\n3. William Shakespeare",
+        "correct_num": 1,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> was written by [MASK].\n\nOptions:\n1. David Brooks\n2. Rivers Cuomo\n3. William Shakespeare"
+    },
+    {
+        "test_id": 52,
+        "relation": "WrittenBy",
+        "correct_feat": "Yuval Noah Harari",
+        "options": "1. Walter Kelley\n2. Yuval Noah Harari\n3. Niccol\u00f2 Machiavelli",
+        "correct_num": 2,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> was written by [MASK].\n\nOptions:\n1. Walter Kelley\n2. Yuval Noah Harari\n3. Niccol\u00f2 Machiavelli"
+    },
+    {
+        "test_id": 53,
+        "relation": "WrittenBy",
+        "correct_feat": "Steve Lohr",
+        "options": "1. Daphne du Maurier\n2. Billy Stevenson\n3. Steve Lohr",
+        "correct_num": 3,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> was written by [MASK].\n\nOptions:\n1. Daphne du Maurier\n2. Billy Stevenson\n3. Steve Lohr"
+    },
+    {
+        "test_id": 54,
+        "relation": "WrittenBy",
+        "correct_feat": "Terry Ortleib",
+        "options": "1. Terry Ortleib\n2. Ena\n3. Rivers Cuomo",
+        "correct_num": 1,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> was written by [MASK].\n\nOptions:\n1. Terry Ortleib\n2. Ena\n3. Rivers Cuomo"
+    },
+    {
+        "test_id": 56,
+        "relation": "WrittenIn",
+        "correct_feat": "Homo Deus: A Brief History of Tomorrow",
+        "options": "1. France\n2. public magazines\n3. Homo Deus: A Brief History of Tomorrow",
+        "correct_num": 3,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> was written in [MASK].\n\nOptions:\n1. France\n2. public magazines\n3. Homo Deus: A Brief History of Tomorrow"
+    }
+]

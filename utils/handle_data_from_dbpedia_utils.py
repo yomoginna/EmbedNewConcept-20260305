@@ -64,3 +64,17 @@ def loadConceptsForFictConcept():
             data = json.loads(line)
             category_to_concepts_for_fictconcept[data['category']] = data['successfully_generated_concepts']
     return category_to_concepts_for_fictconcept
+
+
+
+def filterProperNounsWithWikiPage(properNouns_list, wiki_page_save_dir):
+    """properNouns_listの中で、すでにwiki_page_save_dirに保存されているpropernounのみにフィルタリングする。
+    これは、もう新しいwikiページを読み込みたくない場合に使用する。
+    """
+    filtered_properNouns = []
+    for properNoun in properNouns_list:
+        wiki_page_path = os.path.join(wiki_page_save_dir, f"{properNoun.replace(' ', '_')}.json")
+        if os.path.exists(wiki_page_path):
+            filtered_properNouns.append(properNoun)
+    print(f"Filtered proper nouns with existing wiki pages: {len(filtered_properNouns)} / {len(properNouns_list)}")
+    return filtered_properNouns

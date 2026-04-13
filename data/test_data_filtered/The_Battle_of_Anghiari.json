@@ -1,0 +1,650 @@
+[
+    {
+        "test_id": 0,
+        "relation": "About",
+        "correct_feat": "a battle fought between the forces of Milan and the League of some Italian states led by the Republic of Florence",
+        "options": "1. a battle fought between the forces of Milan and the League of some Italian states led by the Republic of Florence\n2. the Bancroft Treaties and their eventual abandonment\n3. folk rock",
+        "correct_num": 1,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is about [MASK].\n\nOptions:\n1. a battle fought between the forces of Milan and the League of some Italian states led by the Republic of Florence\n2. the Bancroft Treaties and their eventual abandonment\n3. folk rock"
+    },
+    {
+        "test_id": 1,
+        "relation": "Affects",
+        "correct_feat": "the domination of central Italy",
+        "options": "1. the economic policies of Uganda\n2. the domination of central Italy\n3. the western Maghreb and al-Andalus",
+        "correct_num": 2,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> affects [MASK].\n\nOptions:\n1. the economic policies of Uganda\n2. the domination of central Italy\n3. the western Maghreb and al-Andalus"
+    },
+    {
+        "test_id": 2,
+        "relation": "AssociatedWith",
+        "correct_feat": "the Wars in Lombardy",
+        "options": "1. the Sultanate of Rum\n2. the Abbasid caliphate\n3. the Wars in Lombardy",
+        "correct_num": 3,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is associated with [MASK].\n\nOptions:\n1. the Sultanate of Rum\n2. the Abbasid caliphate\n3. the Wars in Lombardy"
+    },
+    {
+        "test_id": 3,
+        "relation": "AssociatedWith",
+        "correct_feat": "Leonardo da Vinci",
+        "options": "1. Leonardo da Vinci\n2. Trevor Horn\n3. the brand name Waboba",
+        "correct_num": 1,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is associated with [MASK].\n\nOptions:\n1. Leonardo da Vinci\n2. Trevor Horn\n3. the brand name Waboba"
+    },
+    {
+        "test_id": 4,
+        "relation": "AssociatedWith",
+        "correct_feat": "Niccol\u00f2 Machiavelli",
+        "options": "1. Peter D\u00fcring on drums\n2. Niccol\u00f2 Machiavelli\n3. the formation of the Ugandan state",
+        "correct_num": 2,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is associated with [MASK].\n\nOptions:\n1. Peter D\u00fcring on drums\n2. Niccol\u00f2 Machiavelli\n3. the formation of the Ugandan state"
+    },
+    {
+        "test_id": 5,
+        "relation": "AssociatedWith",
+        "correct_feat": "Leonardo Bruni",
+        "options": "1. cricket\n2. the Ottoman Empire\n3. Leonardo Bruni",
+        "correct_num": 3,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is associated with [MASK].\n\nOptions:\n1. cricket\n2. the Ottoman Empire\n3. Leonardo Bruni"
+    },
+    {
+        "test_id": 6,
+        "relation": "AssociatedWith",
+        "correct_feat": "Flavio Biondo",
+        "options": "1. Flavio Biondo\n2. Big Death\n3. white supremacist activists drawing on jihadism",
+        "correct_num": 1,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is associated with [MASK].\n\nOptions:\n1. Flavio Biondo\n2. Big Death\n3. white supremacist activists drawing on jihadism"
+    },
+    {
+        "test_id": 7,
+        "relation": "AssociatedWith",
+        "correct_feat": "Hans Delbr\u00fcck",
+        "options": "1. the concept of Atchalta De'Geulah\n2. Hans Delbr\u00fcck\n3. Fredrik Olsson",
+        "correct_num": 2,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is associated with [MASK].\n\nOptions:\n1. the concept of Atchalta De'Geulah\n2. Hans Delbr\u00fcck\n3. Fredrik Olsson"
+    },
+    {
+        "test_id": 8,
+        "relation": "AssociatedWith",
+        "correct_feat": "Frances S. Saunders",
+        "options": "1. Sin\u00e9ad O'Connor\n2. Gang Starr\n3. Frances S. Saunders",
+        "correct_num": 3,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is associated with [MASK].\n\nOptions:\n1. Sin\u00e9ad O'Connor\n2. Gang Starr\n3. Frances S. Saunders"
+    },
+    {
+        "test_id": 9,
+        "relation": "AssociatedWith",
+        "correct_feat": "Pia F. Cuneo",
+        "options": "1. Pia F. Cuneo\n2. the Banu Marin tribe\n3. the Union of Krewo",
+        "correct_num": 1,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is associated with [MASK].\n\nOptions:\n1. Pia F. Cuneo\n2. the Banu Marin tribe\n3. the Union of Krewo"
+    },
+    {
+        "test_id": 10,
+        "relation": "AssociatedWith",
+        "correct_feat": "the Anghiari Master",
+        "options": "1. social democratic governments\n2. the Anghiari Master\n3. Arab socialism",
+        "correct_num": 2,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is associated with [MASK].\n\nOptions:\n1. social democratic governments\n2. the Anghiari Master\n3. Arab socialism"
+    },
+    {
+        "test_id": 11,
+        "relation": "AssociatedWith",
+        "correct_feat": "Michelangelo",
+        "options": "1. Claud\n2. ancient philosophers\n3. Michelangelo",
+        "correct_num": 3,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is associated with [MASK].\n\nOptions:\n1. Claud\n2. ancient philosophers\n3. Michelangelo"
+    },
+    {
+        "test_id": 12,
+        "relation": "AssociatedWith",
+        "correct_feat": "Giovanni Battista Foggini",
+        "options": "1. Giovanni Battista Foggini\n2. Thurgood Marshall\n3. the International Lagori Foundation",
+        "correct_num": 1,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is associated with [MASK].\n\nOptions:\n1. Giovanni Battista Foggini\n2. Thurgood Marshall\n3. the International Lagori Foundation"
+    },
+    {
+        "test_id": 14,
+        "relation": "BelongsTo",
+        "correct_feat": "the history of Italy",
+        "options": "1. social democratic political ideology\n2. the theory of socialism with Chinese characteristics\n3. the history of Italy",
+        "correct_num": 3,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> belongs to [MASK].\n\nOptions:\n1. social democratic political ideology\n2. the theory of socialism with Chinese characteristics\n3. the history of Italy"
+    },
+    {
+        "test_id": 16,
+        "relation": "ConsistsOf",
+        "correct_feat": "Papal troops, a Florentine contingent, and men-at-arms from Venice",
+        "options": "1. movement along the intertidal zone of a rocky coastline on foot or by swimming\n2. Papal troops, a Florentine contingent, and men-at-arms from Venice\n3. two straight rows of six pits called houses",
+        "correct_num": 2,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> consists of [MASK].\n\nOptions:\n1. movement along the intertidal zone of a rocky coastline on foot or by swimming\n2. Papal troops, a Florentine contingent, and men-at-arms from Venice\n3. two straight rows of six pits called houses"
+    },
+    {
+        "test_id": 17,
+        "relation": "ConsistsOf",
+        "correct_feat": "Milanese forces led by Niccol\u00f2 Piccinino",
+        "options": "1. Royce da 5\u20329\u2033 and Eminem\n2. four starting hangars\n3. Milanese forces led by Niccol\u00f2 Piccinino",
+        "correct_num": 3,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> consists of [MASK].\n\nOptions:\n1. Royce da 5\u20329\u2033 and Eminem\n2. four starting hangars\n3. Milanese forces led by Niccol\u00f2 Piccinino"
+    },
+    {
+        "test_id": 18,
+        "relation": "ConsistsOf",
+        "correct_feat": "men from Anghiari itself",
+        "options": "1. men from Anghiari itself\n2. the FA Cup as the world's oldest football competition\n3. ideals formed by the supporters of spouses N\u00e9stor Kirchner and Cristina Fern\u00e1ndez de Kirchner",
+        "correct_num": 1,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> consists of [MASK].\n\nOptions:\n1. men from Anghiari itself\n2. the FA Cup as the world's oldest football competition\n3. ideals formed by the supporters of spouses N\u00e9stor Kirchner and Cristina Fern\u00e1ndez de Kirchner"
+    },
+    {
+        "test_id": 21,
+        "relation": "CreatedFor",
+        "correct_feat": "the purpose of historical record and artistic representation",
+        "options": "1. the purpose of historical record and artistic representation\n2. the purpose of establishing an empire\n3. Alisa Ueno",
+        "correct_num": 1,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> was created for [MASK].\n\nOptions:\n1. the purpose of historical record and artistic representation\n2. the purpose of establishing an empire\n3. Alisa Ueno"
+    },
+    {
+        "test_id": 22,
+        "relation": "CreatedIn",
+        "correct_feat": "the context of the Wars in Lombardy",
+        "options": "1. the vibrant music scene of Toulouse\n2. the context of the Wars in Lombardy\n3. the contemporary Macedonian discourse",
+        "correct_num": 2,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> was created in [MASK].\n\nOptions:\n1. the vibrant music scene of Toulouse\n2. the context of the Wars in Lombardy\n3. the contemporary Macedonian discourse"
+    },
+    {
+        "test_id": 23,
+        "relation": "CreatedTo",
+        "correct_feat": "document a significant event in Italian history",
+        "options": "1. uphold the Eighth and Fourteenth Amendments\n2. depict a coherent continuity of history and descendancy\n3. document a significant event in Italian history",
+        "correct_num": 3,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> was created to [MASK].\n\nOptions:\n1. uphold the Eighth and Fourteenth Amendments\n2. depict a coherent continuity of history and descendancy\n3. document a significant event in Italian history"
+    },
+    {
+        "test_id": 24,
+        "relation": "HasA",
+        "correct_feat": "a depiction in a failed attempt at a painting by Leonardo da Vinci",
+        "options": "1. a depiction in a failed attempt at a painting by Leonardo da Vinci\n2. a two-pronged theory\n3. a strong maritime collection",
+        "correct_num": 1,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> has [MASK].\n\nOptions:\n1. a depiction in a failed attempt at a painting by Leonardo da Vinci\n2. a two-pronged theory\n3. a strong maritime collection"
+    },
+    {
+        "test_id": 25,
+        "relation": "HasA",
+        "correct_feat": "preparatory sketches",
+        "options": "1. compositions that often feature live instruments\n2. preparatory sketches\n3. a tendency to oppose radical change",
+        "correct_num": 2,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> has [MASK].\n\nOptions:\n1. compositions that often feature live instruments\n2. preparatory sketches\n3. a tendency to oppose radical change"
+    },
+    {
+        "test_id": 26,
+        "relation": "HasA",
+        "correct_feat": "a history of being described by contemporaries",
+        "options": "1. rabbits\n2. a history of economic prosperity\n3. a history of being described by contemporaries",
+        "correct_num": 3,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> has [MASK].\n\nOptions:\n1. rabbits\n2. a history of economic prosperity\n3. a history of being described by contemporaries"
+    },
+    {
+        "test_id": 27,
+        "relation": "HasA",
+        "correct_feat": "a detailed account of strategy and tactics",
+        "options": "1. a detailed account of strategy and tactics\n2. a sense of dignity\n3. a song \"Rabbit\" performed in 2016 on Strictly Come Dancing",
+        "correct_num": 1,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> has [MASK].\n\nOptions:\n1. a detailed account of strategy and tactics\n2. a sense of dignity\n3. a song \"Rabbit\" performed in 2016 on Strictly Come Dancing"
+    },
+    {
+        "test_id": 29,
+        "relation": "HasA",
+        "correct_feat": "a relief sculpture depicting the battle",
+        "options": "1. members of several major religions finding that their beliefs about human society fit with socialist principles and ideas\n2. a bull-dog\n3. a relief sculpture depicting the battle",
+        "correct_num": 3,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> has [MASK].\n\nOptions:\n1. members of several major religions finding that their beliefs about human society fit with socialist principles and ideas\n2. a bull-dog\n3. a relief sculpture depicting the battle"
+    },
+    {
+        "test_id": 30,
+        "relation": "HasFeatureOf",
+        "correct_feat": "a victory for the Florentines",
+        "options": "1. a victory for the Florentines\n2. scenarios lasting 20 Turns once hostilities commence\n3. songs carrying profound patriotic themes",
+        "correct_num": 1,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is characterized by [MASK].\n\nOptions:\n1. a victory for the Florentines\n2. scenarios lasting 20 Turns once hostilities commence\n3. songs carrying profound patriotic themes"
+    },
+    {
+        "test_id": 31,
+        "relation": "HasFeatureOf",
+        "correct_feat": "securing the domination of central Italy",
+        "options": "1. a single \"Livet i plastik\" with lyrics referencing Aqua's hit \"Barbie girl\"\n2. securing the domination of central Italy\n3. military engagements during the 1863 Gettysburg Campaign",
+        "correct_num": 2,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is characterized by [MASK].\n\nOptions:\n1. a single \"Livet i plastik\" with lyrics referencing Aqua's hit \"Barbie girl\"\n2. securing the domination of central Italy\n3. military engagements during the 1863 Gettysburg Campaign"
+    },
+    {
+        "test_id": 32,
+        "relation": "HasFeatureOf",
+        "correct_feat": "a failed painting attempt by Leonardo da Vinci",
+        "options": "1. a Pennsylvania Dutch folk magic system\n2. innocence and lack of embarrassment about nakedness\n3. a failed painting attempt by Leonardo da Vinci",
+        "correct_num": 3,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is characterized by [MASK].\n\nOptions:\n1. a Pennsylvania Dutch folk magic system\n2. innocence and lack of embarrassment about nakedness\n3. a failed painting attempt by Leonardo da Vinci"
+    },
+    {
+        "test_id": 35,
+        "relation": "HasFeatureOf",
+        "correct_feat": "the League's army concentrating on Anghiari",
+        "options": "1. economic stagnation among lower- and middle-class whites\n2. the willingness to give up own interests for a common good\n3. the League's army concentrating on Anghiari",
+        "correct_num": 3,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is characterized by [MASK].\n\nOptions:\n1. economic stagnation among lower- and middle-class whites\n2. the willingness to give up own interests for a common good\n3. the League's army concentrating on Anghiari"
+    },
+    {
+        "test_id": 36,
+        "relation": "HasFeatureOf",
+        "correct_feat": "the Milanese force being numerically superior",
+        "options": "1. the Milanese force being numerically superior\n2. having rules that recommend ten players\n3. economic statism",
+        "correct_num": 1,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is characterized by [MASK].\n\nOptions:\n1. the Milanese force being numerically superior\n2. having rules that recommend ten players\n3. economic statism"
+    },
+    {
+        "test_id": 38,
+        "relation": "HasFeatureOf",
+        "correct_feat": "dust being lifted by the Milanese",
+        "options": "1. its symbolic representation of yin and yang\n2. producing its own beats\n3. dust being lifted by the Milanese",
+        "correct_num": 3,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is characterized by [MASK].\n\nOptions:\n1. its symbolic representation of yin and yang\n2. producing its own beats\n3. dust being lifted by the Milanese"
+    },
+    {
+        "test_id": 39,
+        "relation": "HasFeatureOf",
+        "correct_feat": "Venetian knights blocking the Milanese vanguard",
+        "options": "1. Venetian knights blocking the Milanese vanguard\n2. having a large following for adults in many communities\n3. its pelagic larvae",
+        "correct_num": 1,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is characterized by [MASK].\n\nOptions:\n1. Venetian knights blocking the Milanese vanguard\n2. having a large following for adults in many communities\n3. its pelagic larvae"
+    },
+    {
+        "test_id": 44,
+        "relation": "HasFeatureOf",
+        "correct_feat": "combatants being nearly all mounted and covered with armor",
+        "options": "1. all four scenarios and their maps being joined to form a large campaign game covering all four battles from beginning to end\n2. being used in over 40 television shows and movies\n3. combatants being nearly all mounted and covered with armor",
+        "correct_num": 3,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is characterized by [MASK].\n\nOptions:\n1. all four scenarios and their maps being joined to form a large campaign game covering all four battles from beginning to end\n2. being used in over 40 television shows and movies\n3. combatants being nearly all mounted and covered with armor"
+    },
+    {
+        "test_id": 45,
+        "relation": "HasFeatureOf",
+        "correct_feat": "combatants choosing to surrender for safety",
+        "options": "1. combatants choosing to surrender for safety\n2. a reception center\n3. lasting influence on American music and culture",
+        "correct_num": 1,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is characterized by [MASK].\n\nOptions:\n1. combatants choosing to surrender for safety\n2. a reception center\n3. lasting influence on American music and culture"
+    },
+    {
+        "test_id": 46,
+        "relation": "HasFeatureOf",
+        "correct_feat": "the loss of horses and accoutrements",
+        "options": "1. combat-oriented gameplay\n2. the loss of horses and accoutrements\n3. arguments that Marxism is a type of historical determinism",
+        "correct_num": 2,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is characterized by [MASK].\n\nOptions:\n1. combat-oriented gameplay\n2. the loss of horses and accoutrements\n3. arguments that Marxism is a type of historical determinism"
+    },
+    {
+        "test_id": 48,
+        "relation": "HasFeatureOf",
+        "correct_feat": "comrades sparing one another and shedding no blood",
+        "options": "1. comrades sparing one another and shedding no blood\n2. scenarios that are reusable by other players afterward\n3. the involvement of specific players like Billy Mitchell, Tim Sczerby, Steve Wiebe, Hank Chien, Robbie Lakeman, Wes Copeland, and Jeff Wolfe",
+        "correct_num": 1,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is characterized by [MASK].\n\nOptions:\n1. comrades sparing one another and shedding no blood\n2. scenarios that are reusable by other players afterward\n3. the involvement of specific players like Billy Mitchell, Tim Sczerby, Steve Wiebe, Hank Chien, Robbie Lakeman, Wes Copeland, and Jeff Wolfe"
+    },
+    {
+        "test_id": 53,
+        "relation": "HasFeatureOf",
+        "correct_feat": "being one of the most frequently represented battles of the era",
+        "options": "1. the 4\u00d74\u00d74 board having 16 cells lying on the body diagonals\n2. trail hounds that are sleek, hard muscled hounds with almost whippet like bodies\n3. being one of the most frequently represented battles of the era",
+        "correct_num": 3,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is characterized by [MASK].\n\nOptions:\n1. the 4\u00d74\u00d74 board having 16 cells lying on the body diagonals\n2. trail hounds that are sleek, hard muscled hounds with almost whippet like bodies\n3. being one of the most frequently represented battles of the era"
+    },
+    {
+        "test_id": 54,
+        "relation": "HasFeatureOf",
+        "correct_feat": "a cassone panel by the Anghiari Master",
+        "options": "1. a cassone panel by the Anghiari Master\n2. the simulation of a \"pileup\" situation in on-air amateur radio operating\n3. the ability to help move partners' tokens once a team member has brought all their tokens home",
+        "correct_num": 1,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is characterized by [MASK].\n\nOptions:\n1. a cassone panel by the Anghiari Master\n2. the simulation of a \"pileup\" situation in on-air amateur radio operating\n3. the ability to help move partners' tokens once a team member has brought all their tokens home"
+    },
+    {
+        "test_id": 55,
+        "relation": "HasFeatureOf",
+        "correct_feat": "a lost painting by Leonardo da Vinci",
+        "options": "1. the effective birth of the sport in 1978 with filmed jumps from El Capitan\n2. a lost painting by Leonardo da Vinci\n3. the belief that some people are natural slaves",
+        "correct_num": 2,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is characterized by [MASK].\n\nOptions:\n1. the effective birth of the sport in 1978 with filmed jumps from El Capitan\n2. a lost painting by Leonardo da Vinci\n3. the belief that some people are natural slaves"
+    },
+    {
+        "test_id": 56,
+        "relation": "HasFeatureOf",
+        "correct_feat": "a battle over a standard between knights",
+        "options": "1. being significantly more hazardous than other forms of parachuting\n2. the belief that white people are superior to those of other races\n3. a battle over a standard between knights",
+        "correct_num": 3,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is characterized by [MASK].\n\nOptions:\n1. being significantly more hazardous than other forms of parachuting\n2. the belief that white people are superior to those of other races\n3. a battle over a standard between knights"
+    },
+    {
+        "test_id": 57,
+        "relation": "HasFeatureOf",
+        "correct_feat": "a commission to occupy a wall in the council chamber of the Florentine republic",
+        "options": "1. a commission to occupy a wall in the council chamber of the Florentine republic\n2. acknowledging the devastating consequences of colonization on Indigenous peoples\n3. a relatively complex game",
+        "correct_num": 1,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is characterized by [MASK].\n\nOptions:\n1. a commission to occupy a wall in the council chamber of the Florentine republic\n2. acknowledging the devastating consequences of colonization on Indigenous peoples\n3. a relatively complex game"
+    },
+    {
+        "test_id": 58,
+        "relation": "HasFeatureOf",
+        "correct_feat": "a painting by Michelangelo on the other wall",
+        "options": "1. its empire spanning the western Maghreb and al-Andalus\n2. a painting by Michelangelo on the other wall\n3. performing aerobatics",
+        "correct_num": 2,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is characterized by [MASK].\n\nOptions:\n1. its empire spanning the western Maghreb and al-Andalus\n2. a painting by Michelangelo on the other wall\n3. performing aerobatics"
+    },
+    {
+        "test_id": 59,
+        "relation": "HasFeatureOf",
+        "correct_feat": "a relief sculpture by Giovanni Battista Foggini",
+        "options": "1. classes sorted by dog weight\n2. a diary with explicit descriptions of sexual liaisons\n3. a relief sculpture by Giovanni Battista Foggini",
+        "correct_num": 3,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is characterized by [MASK].\n\nOptions:\n1. classes sorted by dog weight\n2. a diary with explicit descriptions of sexual liaisons\n3. a relief sculpture by Giovanni Battista Foggini"
+    },
+    {
+        "test_id": 60,
+        "relation": "HeldIn",
+        "correct_feat": "Anghiari",
+        "options": "1. Anghiari\n2. Los Angeles\n3. Nuremberg",
+        "correct_num": 1,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> was held in [MASK].\n\nOptions:\n1. Anghiari\n2. Los Angeles\n3. Nuremberg"
+    },
+    {
+        "test_id": 61,
+        "relation": "HeldIn",
+        "correct_feat": "Tuscany",
+        "options": "1. Tabaristan\n2. Tuscany\n3. Barbados",
+        "correct_num": 2,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> was held in [MASK].\n\nOptions:\n1. Tabaristan\n2. Tuscany\n3. Barbados"
+    },
+    {
+        "test_id": 62,
+        "relation": "HeldOn",
+        "correct_feat": "29 June 1440",
+        "options": "1. December 11-12, 2015\n2. November 2007\n3. 29 June 1440",
+        "correct_num": 3,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> was held on [MASK].\n\nOptions:\n1. December 11-12, 2015\n2. November 2007\n3. 29 June 1440"
+    },
+    {
+        "test_id": 63,
+        "relation": "Influenced",
+        "correct_feat": "the domination of central Italy",
+        "options": "1. the domination of central Italy\n2. the political orientation of the Peronist party\n3. the direct actions of groups such as Earth First!",
+        "correct_num": 1,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> influenced [MASK].\n\nOptions:\n1. the domination of central Italy\n2. the political orientation of the Peronist party\n3. the direct actions of groups such as Earth First!"
+    },
+    {
+        "test_id": 64,
+        "relation": "InfluencedBy",
+        "correct_feat": "the Wars in Lombardy",
+        "options": "1. the success of their debut album\n2. the Wars in Lombardy\n3. nationalism",
+        "correct_num": 2,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> was influenced by [MASK].\n\nOptions:\n1. the success of their debut album\n2. the Wars in Lombardy\n3. nationalism"
+    },
+    {
+        "test_id": 65,
+        "relation": "IsA",
+        "correct_feat": "a battle",
+        "options": "1. a fascistic ideology\n2. a hobby\n3. a battle",
+        "correct_num": 3,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is [MASK].\n\nOptions:\n1. a fascistic ideology\n2. a hobby\n3. a battle"
+    },
+    {
+        "test_id": 66,
+        "relation": "IsA",
+        "correct_feat": "a victory for the Florentines",
+        "options": "1. a victory for the Florentines\n2. a board game\n3. a supergroup",
+        "correct_num": 1,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is [MASK].\n\nOptions:\n1. a victory for the Florentines\n2. a board game\n3. a supergroup"
+    },
+    {
+        "test_id": 67,
+        "relation": "IsA",
+        "correct_feat": "a historical event",
+        "options": "1. a noble family\n2. a historical event\n3. a short-range, high-performance interceptor aircraft",
+        "correct_num": 2,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is [MASK].\n\nOptions:\n1. a noble family\n2. a historical event\n3. a short-range, high-performance interceptor aircraft"
+    },
+    {
+        "test_id": 68,
+        "relation": "IsA",
+        "correct_feat": "a subject of art",
+        "options": "1. the guiding ideology of the Revolutionary Internationalist Movement\n2. a patrimony\n3. a subject of art",
+        "correct_num": 3,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is [MASK].\n\nOptions:\n1. the guiding ideology of the Revolutionary Internationalist Movement\n2. a patrimony\n3. a subject of art"
+    },
+    {
+        "test_id": 69,
+        "relation": "IsA",
+        "correct_feat": "a striking example of the wretched state of military discipline",
+        "options": "1. a striking example of the wretched state of military discipline\n2. played with one six-sided die\n3. a wrestling match",
+        "correct_num": 1,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is [MASK].\n\nOptions:\n1. a striking example of the wretched state of military discipline\n2. played with one six-sided die\n3. a wrestling match"
+    },
+    {
+        "test_id": 70,
+        "relation": "KnownFor",
+        "correct_feat": "its depiction in a failed attempt at a painting by Leonardo da Vinci",
+        "options": "1. its satirical take on Russian stereotypes\n2. its depiction in a failed attempt at a painting by Leonardo da Vinci\n3. variations in rules, such as WAFU Rules",
+        "correct_num": 2,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is known for [MASK].\n\nOptions:\n1. its satirical take on Russian stereotypes\n2. its depiction in a failed attempt at a painting by Leonardo da Vinci\n3. variations in rules, such as WAFU Rules"
+    },
+    {
+        "test_id": 71,
+        "relation": "KnownFor",
+        "correct_feat": "the fact that though the battle lasted all day, involving several thousand troops, it was said that only one soldier was killed",
+        "options": "1. \"I Am a Rock\"\n2. being banned during the first reign of the Taliban government in Afghanistan\n3. the fact that though the battle lasted all day, involving several thousand troops, it was said that only one soldier was killed",
+        "correct_num": 3,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is known for [MASK].\n\nOptions:\n1. \"I Am a Rock\"\n2. being banned during the first reign of the Taliban government in Afghanistan\n3. the fact that though the battle lasted all day, involving several thousand troops, it was said that only one soldier was killed"
+    },
+    {
+        "test_id": 72,
+        "relation": "KnownFor",
+        "correct_feat": "being one of the most frequently represented battles of the era",
+        "options": "1. being one of the most frequently represented battles of the era\n2. having a growing number of organizers\n3. the absence of weight divisions and time limits",
+        "correct_num": 1,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is known for [MASK].\n\nOptions:\n1. being one of the most frequently represented battles of the era\n2. having a growing number of organizers\n3. the absence of weight divisions and time limits"
+    },
+    {
+        "test_id": 73,
+        "relation": "LocatedIn",
+        "correct_feat": "in Tuscany",
+        "options": "1. in the Sahara\n2. in Tuscany\n3. in the United States",
+        "correct_num": 2,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is located [MASK].\n\nOptions:\n1. in the Sahara\n2. in Tuscany\n3. in the United States"
+    },
+    {
+        "test_id": 74,
+        "relation": "OccurredBetween",
+        "correct_feat": "the forces of Milan and the League of some Italian states led by the Republic of Florence",
+        "options": "1. 20 November 1945 and 1 October 1946\n2. 65,000 and 21,000 years ago\n3. the forces of Milan and the League of some Italian states led by the Republic of Florence",
+        "correct_num": 3,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> occurred between [MASK].\n\nOptions:\n1. 20 November 1945 and 1 October 1946\n2. 65,000 and 21,000 years ago\n3. the forces of Milan and the League of some Italian states led by the Republic of Florence"
+    },
+    {
+        "test_id": 75,
+        "relation": "PartOf",
+        "correct_feat": "the Wars in Lombardy",
+        "options": "1. the Wars in Lombardy\n2. Black Claw\n3. the Elands River",
+        "correct_num": 1,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is part of [MASK].\n\nOptions:\n1. the Wars in Lombardy\n2. Black Claw\n3. the Elands River"
+    },
+    {
+        "test_id": 77,
+        "relation": "PerformedBy",
+        "correct_feat": "the forces of Milan",
+        "options": "1. the United Kingdom\n2. Briards\n3. the forces of Milan",
+        "correct_num": 3,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> was performed by [MASK].\n\nOptions:\n1. the United Kingdom\n2. Briards\n3. the forces of Milan"
+    },
+    {
+        "test_id": 78,
+        "relation": "PerformedBy",
+        "correct_feat": "Cardinal Ludovico Trevisan",
+        "options": "1. Cardinal Ludovico Trevisan\n2. the S\u00e1mi people\n3. Jack Conte",
+        "correct_num": 1,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> was performed by [MASK].\n\nOptions:\n1. Cardinal Ludovico Trevisan\n2. the S\u00e1mi people\n3. Jack Conte"
+    },
+    {
+        "test_id": 79,
+        "relation": "PerformedBy",
+        "correct_feat": "Micheletto Attendolo",
+        "options": "1. fighting dogs\n2. Micheletto Attendolo\n3. bull-dogs",
+        "correct_num": 2,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> was performed by [MASK].\n\nOptions:\n1. fighting dogs\n2. Micheletto Attendolo\n3. bull-dogs"
+    },
+    {
+        "test_id": 80,
+        "relation": "PerformedBy",
+        "correct_feat": "Niccol\u00f2 Piccinino",
+        "options": "1. Dev\n2. Egypt's National Security Agency\n3. Niccol\u00f2 Piccinino",
+        "correct_num": 3,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> was performed by [MASK].\n\nOptions:\n1. Dev\n2. Egypt's National Security Agency\n3. Niccol\u00f2 Piccinino"
+    },
+    {
+        "test_id": 81,
+        "relation": "PerformedBy",
+        "correct_feat": "Duke Filippo Maria Visconti",
+        "options": "1. Duke Filippo Maria Visconti\n2. champion teams\n3. student-athletes",
+        "correct_num": 1,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> was performed by [MASK].\n\nOptions:\n1. Duke Filippo Maria Visconti\n2. champion teams\n3. student-athletes"
+    },
+    {
+        "test_id": 82,
+        "relation": "PerformedBy",
+        "correct_feat": "Francesco Piccinino",
+        "options": "1. units of the Brazilian Navy\n2. Francesco Piccinino\n3. Adam Kay",
+        "correct_num": 2,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> was performed by [MASK].\n\nOptions:\n1. units of the Brazilian Navy\n2. Francesco Piccinino\n3. Adam Kay"
+    },
+    {
+        "test_id": 83,
+        "relation": "PerformedBy",
+        "correct_feat": "Astorre II Manfredi",
+        "options": "1. the Brazilian Army\n2. DJ Shadow\n3. Astorre II Manfredi",
+        "correct_num": 3,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> was performed by [MASK].\n\nOptions:\n1. the Brazilian Army\n2. DJ Shadow\n3. Astorre II Manfredi"
+    },
+    {
+        "test_id": 84,
+        "relation": "UsedAs",
+        "correct_feat": "a subject for paintings",
+        "options": "1. a subject for paintings\n2. music\n3. a means of entertainment",
+        "correct_num": 1,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is used as [MASK].\n\nOptions:\n1. a subject for paintings\n2. music\n3. a means of entertainment"
+    },
+    {
+        "test_id": 85,
+        "relation": "UsedAs",
+        "correct_feat": "a subject for relief sculpture",
+        "options": "1. a brand identity\n2. a subject for relief sculpture\n3. a form of radiosport",
+        "correct_num": 2,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is used as [MASK].\n\nOptions:\n1. a brand identity\n2. a subject for relief sculpture\n3. a form of radiosport"
+    },
+    {
+        "test_id": 86,
+        "relation": "UsedFor",
+        "correct_feat": "historical record",
+        "options": "1. sports on the beach\n2. exploring a murder case\n3. historical record",
+        "correct_num": 3,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is used for [MASK].\n\nOptions:\n1. sports on the beach\n2. exploring a murder case\n3. historical record"
+    },
+    {
+        "test_id": 87,
+        "relation": "UsedFor",
+        "correct_feat": "artistic representation",
+        "options": "1. artistic representation\n2. clarifying legal consequences for States\n3. getting the succeeding player out",
+        "correct_num": 1,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is used for [MASK].\n\nOptions:\n1. artistic representation\n2. clarifying legal consequences for States\n3. getting the succeeding player out"
+    },
+    {
+        "test_id": 88,
+        "relation": "UsedIn",
+        "correct_feat": "the context of the Wars in Lombardy",
+        "options": "1. political discourse\n2. the context of the Wars in Lombardy\n3. the context of the revolution led by the proletariat",
+        "correct_num": 2,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is used in [MASK].\n\nOptions:\n1. political discourse\n2. the context of the Wars in Lombardy\n3. the context of the revolution led by the proletariat"
+    },
+    {
+        "test_id": 89,
+        "relation": "UsedIn",
+        "correct_feat": "the Palazzo Vecchio",
+        "options": "1. John O'Hara's novel BUtterfield 8\n2. ancient history\n3. the Palazzo Vecchio",
+        "correct_num": 3,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is used in [MASK].\n\nOptions:\n1. John O'Hara's novel BUtterfield 8\n2. ancient history\n3. the Palazzo Vecchio"
+    },
+    {
+        "test_id": 90,
+        "relation": "UsedIn",
+        "correct_feat": "Santa Maria del Carmine, Florence",
+        "options": "1. Santa Maria del Carmine, Florence\n2. early Christian thought\n3. traveling carnival midways",
+        "correct_num": 1,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is used in [MASK].\n\nOptions:\n1. Santa Maria del Carmine, Florence\n2. early Christian thought\n3. traveling carnival midways"
+    },
+    {
+        "test_id": 91,
+        "relation": "UsedTo",
+        "correct_feat": "depict a battle over a standard between knights",
+        "options": "1. banish religious interference in government affairs\n2. depict a battle over a standard between knights\n3. crown pieces when they reach the opposite end of the board",
+        "correct_num": 2,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is used to [MASK].\n\nOptions:\n1. banish religious interference in government affairs\n2. depict a battle over a standard between knights\n3. crown pieces when they reach the opposite end of the board"
+    },
+    {
+        "test_id": 92,
+        "relation": "UsedTo",
+        "correct_feat": "guide Florentine forces to victory",
+        "options": "1. rid Siberia of the Bolsheviks\n2. chase foxes\n3. guide Florentine forces to victory",
+        "correct_num": 3,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is used to [MASK].\n\nOptions:\n1. rid Siberia of the Bolsheviks\n2. chase foxes\n3. guide Florentine forces to victory"
+    },
+    {
+        "test_id": 93,
+        "relation": "WonBy",
+        "correct_feat": "the Florentines",
+        "options": "1. the Florentines\n2. Jack Grant\n3. the Charles S. Roberts Award for Best Amateur Game of 1975",
+        "correct_num": 1,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> was won by [MASK].\n\nOptions:\n1. the Florentines\n2. Jack Grant\n3. the Charles S. Roberts Award for Best Amateur Game of 1975"
+    },
+    {
+        "test_id": 94,
+        "relation": "WonBy",
+        "correct_feat": "the League army",
+        "options": "1. Thalita Rodrigues\n2. the League army\n3. the Athenian who fought best at Mycale",
+        "correct_num": 2,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> was won by [MASK].\n\nOptions:\n1. Thalita Rodrigues\n2. the League army\n3. the Athenian who fought best at Mycale"
+    },
+    {
+        "test_id": 95,
+        "relation": "WrittenBy",
+        "correct_feat": "Leonardo Bruni",
+        "options": "1. Jonas\n2. Romain Pujol\n3. Leonardo Bruni",
+        "correct_num": 3,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> was written by [MASK].\n\nOptions:\n1. Jonas\n2. Romain Pujol\n3. Leonardo Bruni"
+    },
+    {
+        "test_id": 96,
+        "relation": "WrittenBy",
+        "correct_feat": "Flavio Biondo",
+        "options": "1. Flavio Biondo\n2. Steve Kilbey and Donnette Thayer\n3. Arnold Toynbee",
+        "correct_num": 1,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> was written by [MASK].\n\nOptions:\n1. Flavio Biondo\n2. Steve Kilbey and Donnette Thayer\n3. Arnold Toynbee"
+    },
+    {
+        "test_id": 97,
+        "relation": "WrittenBy",
+        "correct_feat": "Niccol\u00f2 Machiavelli",
+        "options": "1. J. R. R. Tolkien\n2. Niccol\u00f2 Machiavelli\n3. Casey Spooner",
+        "correct_num": 2,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> was written by [MASK].\n\nOptions:\n1. J. R. R. Tolkien\n2. Niccol\u00f2 Machiavelli\n3. Casey Spooner"
+    },
+    {
+        "test_id": 98,
+        "relation": "WrittenBy",
+        "correct_feat": "Hans Delbr\u00fcck",
+        "options": "1. Mick Jagger and Keith Richards\n2. Adrian P\u0103unescu\n3. Hans Delbr\u00fcck",
+        "correct_num": 3,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> was written by [MASK].\n\nOptions:\n1. Mick Jagger and Keith Richards\n2. Adrian P\u0103unescu\n3. Hans Delbr\u00fcck"
+    }
+]

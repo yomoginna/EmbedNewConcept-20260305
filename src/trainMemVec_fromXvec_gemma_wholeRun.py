@@ -31,29 +31,20 @@ project_root = os.path.join(os.path.dirname(__file__), "..") # os.path.dirname(_
 sys.path.append(project_root)
 print("Project root:", project_root)
 
-from utils.gemma_train_and_test_utils import fix_seed
-from utils.handle_data_from_dbpedia_utils import loadProperNounData
+from utils.gemma_train_and_test_utils import fix_seed, save_mem_vec, evaluateModel
+from utils.handle_data_from_dbpedia_utils import filterProperNounsWithWikiPage, loadProperNounData #, loadConceptsForFictConcept
 from utils.initialize_embedding_layer_utils import EmbedInitializer
-
+from utils.wandb_utils import set_wandb_env
 
 # os.environ["CUDA_VISIBLE_DEVICES"] = "2" # [memo] genkaiを使う時はコメントアウト!! -> 今はargsで指定している。argsを指定しなければ、CUDAについては何も指定しない。
 n_feat_in_a_sample = 3  # 学習データの1サンプル = summary(wiki中の本文 or summary, 今回はsummaryを使用) + n_feat_in_a_sample個の特徴文
 propnoun_num_for_init_vec=100   #  初期化vecの作成に使う固有名詞の最低数. 例えば100に設定した場合、各カテゴリで最低100個の固有名詞を使用して初期化vecを作成することになる。(実際には、新規概念用にならなかった固有名詞全て使用する)
 propnoun_num_for_new_concept = 50 # 新規概念の元にする概念の作成に使う固有名詞の数. 例えば50に設定した場合、各カテゴリで50個の固有名詞を使用して新規概念の元にする概念の作成に使用することになる。
 
-initMethods_with_HS = [
-    'category_centroid_by_hidden_state_mean', 'other_category_centroid_by_hidden_state_mean',
-    'categoryCentroid_by_DebiasedHiddenState', 'otherCategoryCentroid_by_DebiasedHiddenState',
-    'categoryCentroid_by_DebiasedHSMixed', 'otherCategoryCentroid_by_DebiasedHSMixed',
-    'CatCentroid_by_OthCatDebiasedHSMixed', 'otherCatCentroid_by_OthCatDebiasedHSMixed',
-    'CatCent_by_GlbPrimDebiasedHSMixed', 'otherCatCent_by_GlbPrimDebiasedHSMixed',
-    'CatCent_by_GlbPrimDebiasedHS', 'otherCatCent_by_GlbPrimDebiasedHS',
-    'CatCent_by_WikiSummaryHS', 'otherCatCent_by_WikiSummaryHS',
-    'CatCent_by_WikiSummaryHSMixed', 'otherCatCent_by_WikiSummaryHSMixed',
-]
-
 global BATCH_SIZE
 
+wiki_page_save_dir = os.path.join(project_root, 'data', 'wiki_pages')
+dont_get_new_wiki_flag = True # もう新しいwikiページを読み込みたくない場合はTrue. すでに保存済みのwikiページがあるpropernounのみにフィルタリングする.
 
 # 環境変数読み込み
 load_dotenv(os.path.join(project_root, ".env"))
@@ -62,76 +53,6 @@ WANDB_API_KEY = os.getenv("WANDB_API_KEY")
 # from huggingface_hub import login
 # access_token = os.getenv("HUGGINGFACE_HUB_TOKEN")
 # login(access_token)
-
-
-
-# *************************** utils **************************
-# wandbの設定
-def set_wandb_env(PROJECT_NAME, wandb_dir):
-    """wandbのloginと、学習結果記録に必要な設定を行う関数.
-    これらはimport wandbの前に設定する必要がある.
-    Args:
-        - PROJECT_NAME: Wandbのプロジェクト名
-        - wandb_dir: 学習結果記録を格納するディレクトリ
-    """
-    print(f"Wandb Project name: {PROJECT_NAME}")
-    os.makedirs(wandb_dir, exist_ok=True)
-
-    tmp_root_path = os.path.join(project_root, "tmp")
-    os.makedirs(tmp_root_path, exist_ok=True)
-
-    os.environ["WANDB_MODE"] = "online"  # "disabled", "offline", "online"
-    os.environ['TMPDIR'] = tmp_root_path
-    os.environ['TEMP'] = tmp_root_path
-    os.environ['TMP'] = tmp_root_path
-    os.environ['DATA_DIR'] = tmp_root_path
-    os.environ['ARTIFACT_DIR'] = tmp_root_path
-    os.environ["WANDB_DATA_DIR"] = os.path.join(wandb_dir, ".wandb_data")
-
-    os.environ['WANDB_DIR'] = wandb_dir
-    os.environ['WANDB_CACHE_DIR'] = os.path.join(wandb_dir, ".wandb_cache")
-    os.environ['WANDB_CONFIG_DIR'] = os.path.join(wandb_dir, ".wandb_config")
-    os.environ['DATA_DIR'] = wandb_dir
-
-
-    if WANDB_API_KEY:
-        wandb.login(key=WANDB_API_KEY)
-    wandb_instance = None
-    wandb_id = wandb.util.generate_id()  # 一意のIDを作成（再利用するため）
-    run_name = f"TrainMemVec_{model_name_for_dirname}"
-    wandb_instance = wandb.init(
-        project=PROJECT_NAME,
-        name=run_name,
-        id=wandb_id,  # 一意のID
-        resume="allow",
-    )
-    wandb_url = wandb_instance.get_url()
-    print("WandB URL:", wandb_url)
-
-
-def save_mem_vec(model, memTokenIds, mem_save_path):
-    os.makedirs(os.path.dirname(mem_save_path), exist_ok=True)
-
-    # memTokenIdsの指定した要素の値(=weightのindex)の並び順のまま取り出され, 勝手にソートされることは無い
-    try:
-        vecs = (
-            model.model.embed_tokens.weight[memTokenIds]
-            .detach()
-            .to(torch.float32)
-            .cpu()
-            .numpy()
-        )
-    except AttributeError:
-        vecs = (
-            model.model.language_model.embed_tokens.weight[memTokenIds]
-            .detach()
-            .to(torch.float32)
-            .cpu()
-            .numpy()
-        )
-    np.save(mem_save_path, vecs)
-
-
 
 
 
@@ -161,6 +82,7 @@ def prepareGemmaModel(
         tokenizer,
         train_token2tokenid, 
         init_vec_type, 
+        pool_hs_type,
         category_to_concepts_for_vec, 
         category2initoken_ids,
         seed,
@@ -177,6 +99,7 @@ def prepareGemmaModel(
         model: HuggingFaceのモデルオブジェクト
         num_trainTargetTokens: 学習対象とする特殊トークンの数 (架空のobjの数) [memo] llama, qwenのコードにはこれを追加していなかった。勾配をfreezeするtoken数をなるべく多くしてメモリ使用量を抑えるために導入
         init_vec_type: memory vectorの初期化方法。zeroまたはuniform, または語句. zero->0vec, uniform->一様分布, 語句->指定の語句の埋め込みベクトルで初期化, 数字->指定のコサイン類似度で近い語句のベクトルで初期化
+        pool_hs_type: 隠れ状態をプーリングする方法。["eos", "last_token", "mean_pool"] のいずれか。init_vec_typeが 'category_centroid_by_hidden_state_mean' の場合に使用
         category_to_concepts_for_vec: カテゴリごとのvec初期化に使用する概念のリスト。init_vec_typeが 'category_COG' の場合に使用
         layer_idx: 隠れ状態を取得する層のインデックス。-1なら最終層、0以上の整数ならその層の隠れ状態を使用する。init_vec_typeが 'category_centroid_by_hidden_state_mean' の場合に使用
         category2initoken_ids: カテゴリごとの初期化トークンIDのリスト。init_vec_typeが 'category_COG' の場合に使用
@@ -187,41 +110,43 @@ def prepareGemmaModel(
     """
     print('Prepare model')
     
-    # *** embedding層以外の勾配を凍結 ***
-    for param in model.parameters():
-        param.requires_grad = False
+    if model is not None:
+        # dataの状態だけprintするために、model=Noneとすることがある。その場合はmodel関連の処理はskipする。
+        # *** embedding層以外の勾配を凍結 ***
+        for param in model.parameters():
+            param.requires_grad = False
 
-    # *** embedding層内でも，対象外のtoken(reserved_special_token以外)の勾配を凍結 ***
-    # <unused0>から順にnum_trainTargetTokens個のtokenIDを学習対象とし、この予約済み特殊token以外は勾配が0.0になるようにhookをかける. 
-    # 学習可能tokenをなるべく少なく制限する理由は、gemma3のtokenizerに6242個もunused tokenが存在しており、これら全てを学習対象にしてしまうとモデルサイズが大きくなりすぎてしまうため。
-    
+        # *** embedding層内でも，対象外のtoken(reserved_special_token以外)の勾配を凍結 ***
+        # <unused0>から順にnum_trainTargetTokens個のtokenIDを学習対象とし、この予約済み特殊token以外は勾配が0.0になるようにhookをかける. 
+        # 学習可能tokenをなるべく少なく制限する理由は、gemma3のtokenizerに6242個もunused tokenが存在しており、これら全てを学習対象にしてしまうとモデルサイズが大きくなりすぎてしまうため。
+        
 
-    # [memo] ここでembed_tokens.weightが見つからないというerror。1bでは大丈夫だったのになぜ -> gemma-3-1bは言語モデルのみだが、4b以降はvision encoderが含まれているため、(vision_tower)と(language_model)の2つの大きなモジュールがmodelの直下に存在している。そのため、embedding層にアクセスするにはmodel.model.language_model.embed_tokens.weightとなる。model.model.embed_tokens.weightが見つからなかった時にprint(model.model)を表示したことで判明。
-    # token_id ごとに True / False を直接切り替えることはできない. 勾配フック(GradZeroHook)を使って、学習したい token_id 以外の勾配を 0 にする
-    try:
-        # * 1b以下はvision_towerがないため、従来通りでOK
-        model.model.embed_tokens.weight.requires_grad = True
-    except:
-        # print(model.model)
-        # raise ValueError("モデルに embed_tokens.weight が見つかりません。Gemma3ベースのモデルを指定していることを確認してください。")
-        # * 4b以上はvision_towerがあるため、language_modelを経由してアクセスする
-        model.model.language_model.embed_tokens.weight.requires_grad = True
-    
+        # [memo] ここでembed_tokens.weightが見つからないというerror。1bでは大丈夫だったのになぜ -> gemma-3-1bは言語モデルのみだが、4b以降はvision encoderが含まれているため、(vision_tower)と(language_model)の2つの大きなモジュールがmodelの直下に存在している。そのため、embedding層にアクセスするにはmodel.model.language_model.embed_tokens.weightとなる。model.model.embed_tokens.weightが見つからなかった時にprint(model.model)を表示したことで判明。
+        # token_id ごとに True / False を直接切り替えることはできない. 勾配フック(GradZeroHook)を使って、学習したい token_id 以外の勾配を 0 にする
+        try:
+            # * 1b以下はvision_towerがないため、従来通りでOK
+            model.model.embed_tokens.weight.requires_grad = True
+        except:
+            # print(model.model)
+            # raise ValueError("モデルに embed_tokens.weight が見つかりません。Gemma3ベースのモデルを指定していることを確認してください。")
+            # * 4b以上はvision_towerがあるため、language_modelを経由してアクセスする
+            model.model.language_model.embed_tokens.weight.requires_grad = True
+        
 
-    # # *** embedding層内でも，対象外のtoken(reserved_special_token以外)の勾配を凍結 ***
-    # # <unused0>から順にnum_trainTargetTokens個のtokenIDを学習対象とし、この予約済み特殊token以外は勾配が0.0になるようにhookをかける. 
-    # # 学習可能tokenをなるべく少なく制限する理由は、gemma3のtokenizerに6242個もunused tokenが存在しており、これら全てを学習対象にしてしまうとモデルサイズが大きくなりすぎてしまうため。
-    trainTokenIds = list(train_token2tokenid.values())
-    
-    try:
-        # 上のtry-except同様の理由(vision_towerの有無)で処理を分ける.
-        embeddingsToKeep = [i for i in range(model.model.embed_tokens.weight.shape[0]) if i not in trainTokenIds]
-        gzh = GradZeroHook(embeddingsToKeep)
-        model.model.embed_tokens.weight.register_hook(gzh.setGradsToZeroHook) # 登録したフックは勾配計算直後に呼び出される．関数の返り値がNoneなら元の勾配が，返り値がテンソルならそのテンソルが新しい勾配として使われる．
-    except:
-        embeddingsToKeep = [i for i in range(model.model.language_model.embed_tokens.weight.shape[0]) if i not in trainTokenIds]
-        gzh = GradZeroHook(embeddingsToKeep)
-        model.model.language_model.embed_tokens.weight.register_hook(gzh.setGradsToZeroHook)
+        # # *** embedding層内でも，対象外のtoken(reserved_special_token以外)の勾配を凍結 ***
+        # # <unused0>から順にnum_trainTargetTokens個のtokenIDを学習対象とし、この予約済み特殊token以外は勾配が0.0になるようにhookをかける. 
+        # # 学習可能tokenをなるべく少なく制限する理由は、gemma3のtokenizerに6242個もunused tokenが存在しており、これら全てを学習対象にしてしまうとモデルサイズが大きくなりすぎてしまうため。
+        trainTokenIds = list(train_token2tokenid.values())
+        
+        try:
+            # 上のtry-except同様の理由(vision_towerの有無)で処理を分ける.
+            embeddingsToKeep = [i for i in range(model.model.embed_tokens.weight.shape[0]) if i not in trainTokenIds]
+            gzh = GradZeroHook(embeddingsToKeep)
+            model.model.embed_tokens.weight.register_hook(gzh.setGradsToZeroHook) # 登録したフックは勾配計算直後に呼び出される．関数の返り値がNoneなら元の勾配が，返り値がテンソルならそのテンソルが新しい勾配として使われる．
+        except:
+            embeddingsToKeep = [i for i in range(model.model.language_model.embed_tokens.weight.shape[0]) if i not in trainTokenIds]
+            gzh = GradZeroHook(embeddingsToKeep)
+            model.model.language_model.embed_tokens.weight.register_hook(gzh.setGradsToZeroHook)
 
 
 
@@ -238,7 +163,7 @@ def prepareGemmaModel(
         model, 
         tokenizer, 
         seed,
-        term_vec_type='single_last', # 'single_last',
+        pool_hs_type, # pool_hs_type='single_last',
     )
     model = embed_initializer.initializeEmbed(
         model, 
@@ -255,41 +180,6 @@ def prepareGemmaModel(
     model.train()
     return model, criteria
 
-
-def evaluateModel(model, tokenizer, evalInputs, evalOutputTexts, verbose=False):
-    """
-    Evaluate the model on the given inputs and outputs.
-    """
-    model.eval()
-    # total_val_loss = 0.0
-    # total_val_tokens = 0
-
-    maxNewTokens = 10
-    numCorrect = 0
-    print('Evaluating on %d samples...'%len(evalInputs))
-    with torch.no_grad():
-        for i in range(len(evalInputs)):
-            generation = model.generate(
-                                    torch.LongTensor([evalInputs[i]]).to(model.device),
-                                    max_new_tokens=maxNewTokens, 
-                                    do_sample=False,
-                                    repetition_penalty=1.05,
-                                )[0]
-            decodedGeneration = tokenizer.decode(generation)
-
-
-            if verbose and i//2==0 or i==len(evalInputs)-1: # if verbose and i==0 or i==len(evalInputs)//2 or i==len(evalInputs)-1:
-                print('--- Sample %d ---'%i)
-                # print('\tP:', decodedGeneration)
-                # print('\tT:', evalOutputTexts[i])
-                print(decodedGeneration.startswith(evalOutputTexts[i]))
-            
-            if decodedGeneration.startswith(evalOutputTexts[i]):
-                # もし生成テキストが正解テキストと一致したら
-                numCorrect += 1
-
-    acc = numCorrect / len(evalInputs)
-    return acc
 
 
 
@@ -481,12 +371,6 @@ def train(model_size,
         random.shuffle(indices)
         totalLoss = 0.0
 
-        # epoch毎にshuffleしたindicesの順番を記録. 後からどのtextが最後に学習されたかを確認するため.
-        # id_to_text = {id: train_samples[id] for id in indices} # train_samplesをshuffle
-        # save_shuffled_samples_path = os.path.join(save_mem_dir, f"shuffled_samples_epoch{epoch+1}.json")
-        # with open(save_shuffled_samples_path, 'w') as f:
-        #     json.dump(id_to_text, f, indent=4, ensure_ascii=False)
-
         for step, i in enumerate(range(0, len(indices), BATCH_SIZE)):
             batchIds = indices[i:i+BATCH_SIZE]
             input_ids = trainingData[batchIds]
@@ -585,9 +469,9 @@ def main(args):
     model_size = args.model_size
     lr = args.lr
     maxEpochs = args.max_epochs
-    # target_concept_list = [args.target_concept] # 🟠 修正前
-    target_concepts_filename = args.target_concepts_filename # 🟠 修正後
+    target_concepts_filename = args.target_concepts_filename
     init_vec_type = args.init_vec_type
+    pool_hs_type = args.pool_hs_type
     layer_idx = args.layer_idx
 
     trained_date = datetime.now().strftime("%Y%m%d")
@@ -603,16 +487,9 @@ def main(args):
     else:
         pass
 
-    # # target_concepts_filename が、target_concepts + '_long' などのsuffixを持つ場合に、model_name_for_dirnameにもそのsuffixを反映させるための処理
-    # if 'target_concepts_' in target_concepts_filename:
-    #     suffix = '-' + target_concepts_filename.replace('target_concepts_', '').replace('.json', '')
-    # else:
-    #     suffix = ''
-
     model_name = f"google/gemma-{model_version}-{model_size}b-it" # [memo] 'gemma-'部分は変えないこと!! -を消すとモデルがloadできない．さらにそのエラーメッセージは，"huggingface-cli login"をして，という関係ないmessageになるので注意!
-    # model_name_for_dirname = f"gemma-{model_version}-{model_size}B-lr{lr}{suffix}-{trained_date}"
     model_name_for_dirname = f"gemma-{model_version}-{model_size}B-lr{lr}-{trained_date}"
-    if layer_idx is not None and init_vec_type in initMethods_with_HS:
+    if layer_idx is not None:
         model_name_for_dirname += f"-hidden_layer{layer_idx}"
     model_name_for_dirname += f"-seed{seed}"
 
@@ -625,6 +502,7 @@ def main(args):
         print('Calculation for non-Gemma3 models is not implemented yet [TODO]')
         raise ValueError("The specified model does not seem Gemma3-based model.")
     
+    # model = None
     model = AutoModelForCausalLM.from_pretrained(model_name, device_map="auto")#, token=access_token)
 
     if tokenizer.pad_token_id is None:
@@ -654,15 +532,37 @@ def main(args):
         save_mem_dir = f"{original_save_mem_dir}_{counter}"
         counter += 1
     print('save_mem_dir:', save_mem_dir)
+
     os.makedirs(save_mem_dir, exist_ok=True)
+
 
 
     # ********* train data取得準備 *********
     # 全てのカテゴリ・固有名詞リスト の辞書を読み込む (重複等のfiltering済み)
-    filtered_category_properNouns_dict = loadProperNounData(
+    category_properNouns_dict = loadProperNounData(
         propnoun_num_threshold = propnoun_num_for_init_vec + propnoun_num_for_new_concept,
         print_flag=print_flag
     )
+
+    # [memo] もう新しいwikiページを読み込みたくない場合は、すでに保存済みのwikiページがあるpropernounのみにフィルタリングする
+    if dont_get_new_wiki_flag:
+        print("Filtering proper nouns to those with already saved wiki pages...")
+        filtered_category_properNouns_dict = {}
+        for category, propernouns in category_properNouns_dict.items():
+            filtered_category_properNouns_dict[category] = filterProperNounsWithWikiPage(propernouns, wiki_page_save_dir)
+        print(f"concept num: {sum(len(concepts) for concepts in category_properNouns_dict.values())} \
+              -> {sum(len(concepts) for concepts in filtered_category_properNouns_dict.values())}")
+    else:
+        filtered_category_properNouns_dict = category_properNouns_dict
+    
+    # concept数が propnoun_num_for_init_vec + propnoun_num_for_new_concept 程度 以上のカテゴリのみを残す
+    tmp = {}
+    for category, concepts in filtered_category_properNouns_dict.items():
+        if len(concepts) >= propnoun_num_for_init_vec + propnoun_num_for_new_concept - 5:
+            tmp[category] = concepts
+    filtered_category_properNouns_dict = tmp
+    print(f"After filtering categories with enough proper nouns, category num: {len(filtered_category_properNouns_dict)}, concept num: {sum(len(concepts) for concepts in filtered_category_properNouns_dict.values())}")
+
 
     # ***** target_concept_listに学習対象のconcept名を追加 *****
     # ** 学習データが存在するconcept名のみを抽出.
@@ -681,6 +581,8 @@ def main(args):
             for tconc in tconc_lst:
                 if tconc in trainable_concept_list:
                     category_to_conceptsForFict[tcat].append(tconc)
+                else:
+                    print(f"Warning: Concept '{tconc}' specified in config is not included in trainable_concept_list and will be skipped.")
     else:
         # * 学習対象conceptが個別に指定されていない場合: そのままtarget_concept_listの(学習可能な概念)全てを学習対象とする
         category_to_conceptsForFict = defaultdict(list)
@@ -688,6 +590,8 @@ def main(args):
             for concept in concepts:
                 if concept in trainable_concept_list:
                     category_to_conceptsForFict[category].append(concept)
+
+    print("Target category - concept mapping: ", category_to_conceptsForFict)
 
     target_concept_list = sum(category_to_conceptsForFict.values(), [])
     target_concept_list = sorted(target_concept_list) # target_concept_list をアルファベット順にsort
@@ -699,7 +603,8 @@ def main(args):
 
     # 架空の概念用の固有名詞から、その所属カテゴリを引けるようにするためのmap
     conceptForFict2category_map = {conceptForFict: category for category, concepts in category_to_conceptsForFict.items() for conceptForFict in concepts} 
-    print(f"categories in conceptForFict2category_map: {list(conceptForFict2category_map.values())[:5]} ...") # 先頭5カテゴリを表示
+    # print(f"categories in conceptForFict2category_map: {list(conceptForFict2category_map.values())[:5]} ...") # 先頭5カテゴリを表示
+    print(f"categories in conceptForFict2category_map: {set(conceptForFict2category_map.values())} ...")
 
     
 
@@ -709,7 +614,7 @@ def main(args):
     # 次に、各カテゴリの全固有名詞から、架空の概念用の特徴の生成に成功した固有名詞を除外し、残った固有名詞全てをvec初期化用の概念とする
     category_to_concepts_for_vec = {}
     for category in filtered_category_properNouns_dict.keys():
-        propernouns_for_init_vec = list(set(filtered_category_properNouns_dict[category]) - set(category_to_conceptsForFict[category]))
+        propernouns_for_init_vec = list(set(filtered_category_properNouns_dict[category]) - set(category_to_conceptsForFict.get(category, [])))
         if len(propernouns_for_init_vec) < 1:
             # もし、そもそも固有名詞が1つもないカテゴリがあれば、そのカテゴリはcategory_to_concepts_for_vecに含めない
             continue
@@ -789,7 +694,8 @@ def main(args):
     # # Wandb設定
     PROJECT_NAME = os.path.basename(save_mem_dir) # save_mem_dirの一番最後だけ取ってくる
     wandb_dir = os.path.join(project_root, "memvec_wandb_logs", model_name_for_dirname)
-    set_wandb_env(PROJECT_NAME, wandb_dir)
+    if model is not None:
+        set_wandb_env(PROJECT_NAME, model_name_for_dirname, wandb_dir, WANDB_API_KEY)
 
 
     # ********* model等の準備: 予約済み特殊トークンの埋め込みの初期化など *********
@@ -800,6 +706,7 @@ def main(args):
         tokenizer,
         train_token2tokenid, 
         init_vec_type, 
+        pool_hs_type,
         category_to_concepts_for_vec,
         category2initoken_ids,
         seed,
@@ -868,6 +775,7 @@ if __name__ == "__main__":
     parser.add_argument('--max_epochs', type=int, default=600, help='最大エポック数')
     parser.add_argument('--cuda_visible_devices', type=str, default=None, help='CUDA_VISIBLE_DEVICESの設定. ただし数字は1つだけ指定すること. 例: "2"')
     parser.add_argument('--init_vec_types', type=str, nargs='+', default=['zero', 'uniform', 'norm_rand'], help='memory vectorの初期化方法のリスト. ')
+    parser.add_argument("--pool_hs_type", type=str, default="eos", choices=["eos", "last_token", "mean_pool"], help="隠れ状態のプーリング方法。")
     parser.add_argument('--layer_indices', type=int, nargs='*', default=None, help='隠れ状態を取得する層のインデックス。-1なら最終層、0以上の整数ならその層の隠れ状態を使用する。init_vec_typeが \'category_centroid_by_hidden_state_mean\' の場合に使用')
     parser.add_argument('--thread_id', type=int, nargs='?', default=0, help='複数process同時に実行する場合のthread id (0 or 1). これにより,実行する設定(seed, init_vec_typeの組)が被らないように調整する')
     parser.add_argument('--process_num', type=int, nargs='?', default=2, help='同時に実行するprocess数')
@@ -884,21 +792,13 @@ if __name__ == "__main__":
     for seed in range(args.seed_num):
         args.seed = seed # mainにargsとして渡すためにargs.seedに代入している。main内でargs.seedを参照することで、現在のシード値を取得できるようになる。
         
-        # if seed == 1 and args.model_size=='12':
-        #     # もう途中まで実行済みなので，残りを実行
-        #     init_vec_type_lst = ['zero', 'uniform', 'norm_rand', 0.0]
-        # else:
-        #     # 通常
-        #     init_vec_type_lst = ['category_centroid_plus_random', 'other_category_COG', 'norm_rand_vocab', 'zero', 'uniform', 'norm_rand', 'category_COG', ]
-
         init_vec_type_lst = args.init_vec_types
 
         for init_vec_type in init_vec_type_lst:
             
             layer_indices = args.layer_indices # ここでinit_vec_typeループ毎に読み込まないと、layer_indices = [None] が代入されたループの次のループでも[None]のままになってしまう
 
-            if len(layer_indices) < 1 or \
-                init_vec_type not in initMethods_with_HS:
+            if len(layer_indices) < 1: #  or 'HS' not in init_vec_type:  
                 # layer_idxが不要の初期化方法の場合は、layer_indicesを[None]にして、1回だけループするようにする
                 print(f"init_vec_type: {init_vec_type}, layer_indices: {layer_indices}")
                 layer_indices = [None]
@@ -913,9 +813,6 @@ if __name__ == "__main__":
 
                 task_id += 1
 
-                # if layer_idx in [9, 10, 11, 12] and init_vec_type == 'categoryCentroid_by_DebiasedHiddenState': # if task_id == 0 & layer_idx == 0:
-                #     continue # もう途中まで実行済みなので，残りを実行
-                
                 if task_id % processNum != args.thread_id:
                     # 複数process同時に実行する場合, thread_idに応じてtask_idが偶数or奇数の設定のみを実行する
                     print(f"Skipping task_id {task_id} for thread_id {args.thread_id}")

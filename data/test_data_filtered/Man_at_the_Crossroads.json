@@ -1,0 +1,562 @@
+[
+    {
+        "test_id": 0,
+        "relation": "About",
+        "correct_feat": "aspects of contemporary social and scientific culture",
+        "options": "1. aspects of contemporary social and scientific culture\n2. the Bancroft Treaties and their eventual abandonment\n3. folk rock",
+        "correct_num": 1,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is about [MASK].\n\nOptions:\n1. aspects of contemporary social and scientific culture\n2. the Bancroft Treaties and their eventual abandonment\n3. folk rock"
+    },
+    {
+        "test_id": 1,
+        "relation": "About",
+        "correct_feat": "the contrast of capitalism as opposed to communism",
+        "options": "1. a coastal commune in the Seine-Maritime department, Normandy, northern France\n2. the contrast of capitalism as opposed to communism\n3. the obligations of all three estates of the realm: the nobility, the clergy, and the peasantry",
+        "correct_num": 2,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is about [MASK].\n\nOptions:\n1. a coastal commune in the Seine-Maritime department, Normandy, northern France\n2. the contrast of capitalism as opposed to communism\n3. the obligations of all three estates of the realm: the nobility, the clergy, and the peasantry"
+    },
+    {
+        "test_id": 2,
+        "relation": "About",
+        "correct_feat": "the creation and destruction of a fresco",
+        "options": "1. a small container used to hold liquids for drinking\n2. the Interstate Commerce Act\n3. the creation and destruction of a fresco",
+        "correct_num": 3,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is about [MASK].\n\nOptions:\n1. a small container used to hold liquids for drinking\n2. the Interstate Commerce Act\n3. the creation and destruction of a fresco"
+    },
+    {
+        "test_id": 3,
+        "relation": "About",
+        "correct_feat": "communist ideals contrasted with the theme of Rockefeller Center",
+        "options": "1. communist ideals contrasted with the theme of Rockefeller Center\n2. a libel case against the Church of Scientology\n3. water sports toys",
+        "correct_num": 1,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is about [MASK].\n\nOptions:\n1. communist ideals contrasted with the theme of Rockefeller Center\n2. a libel case against the Church of Scientology\n3. water sports toys"
+    },
+    {
+        "test_id": 4,
+        "relation": "Affects",
+        "correct_feat": "the perception of capitalism and communism",
+        "options": "1. the music of the generation that followed them\n2. the perception of capitalism and communism\n3. the political union that is the United Kingdom",
+        "correct_num": 2,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> affects [MASK].\n\nOptions:\n1. the music of the generation that followed them\n2. the perception of capitalism and communism\n3. the political union that is the United Kingdom"
+    },
+    {
+        "test_id": 5,
+        "relation": "AssociatedWith",
+        "correct_feat": "Mexican painter Diego Rivera",
+        "options": "1. the concept of Atchalta De'Geulah\n2. Fredrik Olsson\n3. Mexican painter Diego Rivera",
+        "correct_num": 3,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is associated with [MASK].\n\nOptions:\n1. the concept of Atchalta De'Geulah\n2. Fredrik Olsson\n3. Mexican painter Diego Rivera"
+    },
+    {
+        "test_id": 6,
+        "relation": "AssociatedWith",
+        "correct_feat": "Rockefeller Center",
+        "options": "1. Rockefeller Center\n2. Sin\u00e9ad O'Connor\n3. Gang Starr",
+        "correct_num": 1,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is associated with [MASK].\n\nOptions:\n1. Rockefeller Center\n2. Sin\u00e9ad O'Connor\n3. Gang Starr"
+    },
+    {
+        "test_id": 9,
+        "relation": "AssociatedWith",
+        "correct_feat": "Vladimir Lenin",
+        "options": "1. Vladimir Lenin\n2. Claud\n3. ancient philosophers",
+        "correct_num": 1,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is associated with [MASK].\n\nOptions:\n1. Vladimir Lenin\n2. Claud\n3. ancient philosophers"
+    },
+    {
+        "test_id": 10,
+        "relation": "AssociatedWith",
+        "correct_feat": "the New York World-Telegram",
+        "options": "1. Thurgood Marshall\n2. the New York World-Telegram\n3. the International Lagori Foundation",
+        "correct_num": 2,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is associated with [MASK].\n\nOptions:\n1. Thurgood Marshall\n2. the New York World-Telegram\n3. the International Lagori Foundation"
+    },
+    {
+        "test_id": 12,
+        "relation": "AssociatedWith",
+        "correct_feat": "John D. Rockefeller Jr",
+        "options": "1. John D. Rockefeller Jr\n2. the Ottoman Empire\n3. India",
+        "correct_num": 1,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is associated with [MASK].\n\nOptions:\n1. John D. Rockefeller Jr\n2. the Ottoman Empire\n3. India"
+    },
+    {
+        "test_id": 14,
+        "relation": "AssociatedWith",
+        "correct_feat": "Edsel Ford",
+        "options": "1. the staging of public events\n2. the Battle of Leipzig in 1813\n3. Edsel Ford",
+        "correct_num": 3,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is associated with [MASK].\n\nOptions:\n1. the staging of public events\n2. the Battle of Leipzig in 1813\n3. Edsel Ford"
+    },
+    {
+        "test_id": 15,
+        "relation": "BelongsTo",
+        "correct_feat": "the history of art",
+        "options": "1. the history of art\n2. Accord\u00e9on M\u00e9lancolique\n3. the history of the Fourteenth Amendment",
+        "correct_num": 1,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> belongs to [MASK].\n\nOptions:\n1. the history of art\n2. Accord\u00e9on M\u00e9lancolique\n3. the history of the Fourteenth Amendment"
+    },
+    {
+        "test_id": 16,
+        "relation": "BelongsTo",
+        "correct_feat": "the history of political art",
+        "options": "1. the political movements in Brazil\n2. the history of political art\n3. the microgame market",
+        "correct_num": 2,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> belongs to [MASK].\n\nOptions:\n1. the political movements in Brazil\n2. the history of political art\n3. the microgame market"
+    },
+    {
+        "test_id": 17,
+        "relation": "BuiltIn",
+        "correct_feat": "in 1933",
+        "options": "1. in South Dakota\n2. in Counter-Strike mods\n3. in 1933",
+        "correct_num": 3,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> was built [MASK].\n\nOptions:\n1. in South Dakota\n2. in Counter-Strike mods\n3. in 1933"
+    },
+    {
+        "test_id": 18,
+        "relation": "CausedBy",
+        "correct_feat": "Rivera's communist ideals contrasting with the theme of Rockefeller Center",
+        "options": "1. Rivera's communist ideals contrasting with the theme of Rockefeller Center\n2. the extinction of the Babenbergs\n3. the resulting anti-British sentiment",
+        "correct_num": 1,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is caused by [MASK].\n\nOptions:\n1. Rivera's communist ideals contrasting with the theme of Rockefeller Center\n2. the extinction of the Babenbergs\n3. the resulting anti-British sentiment"
+    },
+    {
+        "test_id": 20,
+        "relation": "CausedBy",
+        "correct_feat": "Nelson Rockefeller wanting Rivera to remove the portrait of Lenin",
+        "options": "1. the domination of the Women's Liberation Movement by heterosexual feminists\n2. anthropogenic greenhouse gas emissions\n3. Nelson Rockefeller wanting Rivera to remove the portrait of Lenin",
+        "correct_num": 3,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is caused by [MASK].\n\nOptions:\n1. the domination of the Women's Liberation Movement by heterosexual feminists\n2. anthropogenic greenhouse gas emissions\n3. Nelson Rockefeller wanting Rivera to remove the portrait of Lenin"
+    },
+    {
+        "test_id": 22,
+        "relation": "ComposedBy",
+        "correct_feat": "Diego Rivera",
+        "options": "1. Iced Earth\n2. Diego Rivera\n3. Warren Fischer",
+        "correct_num": 2,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> was composed by [MASK].\n\nOptions:\n1. Iced Earth\n2. Diego Rivera\n3. Warren Fischer"
+    },
+    {
+        "test_id": 23,
+        "relation": "ConsistsOf",
+        "correct_feat": "a central panel depicting a worker controlling machinery",
+        "options": "1. members Ryan Ross, Spencer Smith, Brendon Urie, and Brent Wilson\n2. economic liberalism, political responsibility, a small state, opposition to other ideologies, and the rule of common sense\n3. a central panel depicting a worker controlling machinery",
+        "correct_num": 3,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> consists of [MASK].\n\nOptions:\n1. members Ryan Ross, Spencer Smith, Brendon Urie, and Brent Wilson\n2. economic liberalism, political responsibility, a small state, opposition to other ideologies, and the rule of common sense\n3. a central panel depicting a worker controlling machinery"
+    },
+    {
+        "test_id": 24,
+        "relation": "ConsistsOf",
+        "correct_feat": "two other panels, The Frontier of Ethical Evolution and The Frontier of Material Development",
+        "options": "1. two other panels, The Frontier of Ethical Evolution and The Frontier of Material Development\n2. a carcass that occasionally has sand packed into it to give it extra weight\n3. an empire that stretched over the western Maghreb and al-Andalus",
+        "correct_num": 1,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> consists of [MASK].\n\nOptions:\n1. two other panels, The Frontier of Ethical Evolution and The Frontier of Material Development\n2. a carcass that occasionally has sand packed into it to give it extra weight\n3. an empire that stretched over the western Maghreb and al-Andalus"
+    },
+    {
+        "test_id": 28,
+        "relation": "ConsistsOf",
+        "correct_feat": "Lenin holding hands with a multi-racial group of workers",
+        "options": "1. individuals fighting for money or other forms of payment\n2. Lenin holding hands with a multi-racial group of workers\n3. rubber or neoprene with gel material and polyurethane and Lycra jacket",
+        "correct_num": 2,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> consists of [MASK].\n\nOptions:\n1. individuals fighting for money or other forms of payment\n2. Lenin holding hands with a multi-racial group of workers\n3. rubber or neoprene with gel material and polyurethane and Lycra jacket"
+    },
+    {
+        "test_id": 29,
+        "relation": "ConsistsOf",
+        "correct_feat": "soldiers and war machinery",
+        "options": "1. 12 pieces per side\n2. races across distances from 70 to 3,200 metres\n3. soldiers and war machinery",
+        "correct_num": 3,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> consists of [MASK].\n\nOptions:\n1. 12 pieces per side\n2. races across distances from 70 to 3,200 metres\n3. soldiers and war machinery"
+    },
+    {
+        "test_id": 31,
+        "relation": "ConsistsOf",
+        "correct_feat": "figures contemplating the central scene",
+        "options": "1. a dead goose being killed prior by a veterinarian\n2. figures contemplating the central scene\n3. two six-sided dice",
+        "correct_num": 2,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> consists of [MASK].\n\nOptions:\n1. a dead goose being killed prior by a veterinarian\n2. figures contemplating the central scene\n3. two six-sided dice"
+    },
+    {
+        "test_id": 32,
+        "relation": "ConsistsOf",
+        "correct_feat": "gigantic classical statues",
+        "options": "1. counters for missiles, fighters, bombers, tankers, engineers and damage\n2. an intradivine monologue determining the couple's expulsion\n3. gigantic classical statues",
+        "correct_num": 3,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> consists of [MASK].\n\nOptions:\n1. counters for missiles, fighters, bombers, tankers, engineers and damage\n2. an intradivine monologue determining the couple's expulsion\n3. gigantic classical statues"
+    },
+    {
+        "test_id": 33,
+        "relation": "CreatedBy",
+        "correct_feat": "Mexican painter Diego Rivera",
+        "options": "1. Mexican painter Diego Rivera\n2. Ptolemy I, a general and bodyguard companion of Alexander the Great\n3. Warren Fischer and Casey Spooner",
+        "correct_num": 1,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> was created by [MASK].\n\nOptions:\n1. Mexican painter Diego Rivera\n2. Ptolemy I, a general and bodyguard companion of Alexander the Great\n3. Warren Fischer and Casey Spooner"
+    },
+    {
+        "test_id": 34,
+        "relation": "CreatedFor",
+        "correct_feat": "the lobby of the RCA Building at Rockefeller Center in New York City",
+        "options": "1. the Adams County newspaper\n2. the lobby of the RCA Building at Rockefeller Center in New York City\n3. the clarification of legal consequences under these obligations for States",
+        "correct_num": 2,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> was created for [MASK].\n\nOptions:\n1. the Adams County newspaper\n2. the lobby of the RCA Building at Rockefeller Center in New York City\n3. the clarification of legal consequences under these obligations for States"
+    },
+    {
+        "test_id": 35,
+        "relation": "CreatedFor",
+        "correct_feat": "John D. Rockefeller Jr",
+        "options": "1. kids to improve eye\u2013hand coordination and concentration\n2. amateur radio operators\n3. John D. Rockefeller Jr",
+        "correct_num": 3,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> was created for [MASK].\n\nOptions:\n1. kids to improve eye\u2013hand coordination and concentration\n2. amateur radio operators\n3. John D. Rockefeller Jr"
+    },
+    {
+        "test_id": 36,
+        "relation": "CreatedFor",
+        "correct_feat": "Abby Aldrich Rockefeller",
+        "options": "1. Abby Aldrich Rockefeller\n2. the Gettysburg Area School District\n3. Randy Jackson's Music Club, Vol. 1",
+        "correct_num": 1,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> was created for [MASK].\n\nOptions:\n1. Abby Aldrich Rockefeller\n2. the Gettysburg Area School District\n3. Randy Jackson's Music Club, Vol. 1"
+    },
+    {
+        "test_id": 37,
+        "relation": "CreatedIn",
+        "correct_feat": "New York City",
+        "options": "1. Rosario\n2. New York City\n3. Fukuoka",
+        "correct_num": 2,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> was created in [MASK].\n\nOptions:\n1. Rosario\n2. New York City\n3. Fukuoka"
+    },
+    {
+        "test_id": 38,
+        "relation": "CreatedIn",
+        "correct_feat": "1933",
+        "options": "1. 1707\n2. 1943\n3. 1933",
+        "correct_num": 3,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> was created in [MASK].\n\nOptions:\n1. 1707\n2. 1943\n3. 1933"
+    },
+    {
+        "test_id": 39,
+        "relation": "CreatedTo",
+        "correct_feat": "show aspects of contemporary social and scientific culture",
+        "options": "1. show aspects of contemporary social and scientific culture\n2. combat Arabism-Islamism\n3. be Adam's companion",
+        "correct_num": 1,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> was created to [MASK].\n\nOptions:\n1. show aspects of contemporary social and scientific culture\n2. combat Arabism-Islamism\n3. be Adam's companion"
+    },
+    {
+        "test_id": 40,
+        "relation": "CreatedTo",
+        "correct_feat": "show the contrast of capitalism as opposed to communism",
+        "options": "1. provide aircraft carrier protection\n2. show the contrast of capitalism as opposed to communism\n3. embrace a Western lifestyle",
+        "correct_num": 2,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> was created to [MASK].\n\nOptions:\n1. provide aircraft carrier protection\n2. show the contrast of capitalism as opposed to communism\n3. embrace a Western lifestyle"
+    },
+    {
+        "test_id": 41,
+        "relation": "CreatedTo",
+        "correct_feat": "make people pause and think",
+        "options": "1. approach enemy ships undetected\n2. get the succeeding player out\n3. make people pause and think",
+        "correct_num": 3,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> was created to [MASK].\n\nOptions:\n1. approach enemy ships undetected\n2. get the succeeding player out\n3. make people pause and think"
+    },
+    {
+        "test_id": 42,
+        "relation": "HasA",
+        "correct_feat": "a central panel depicting a worker controlling machinery",
+        "options": "1. a central panel depicting a worker controlling machinery\n2. a symbol of a white disk on a royal blue background, with an uppercase sigma (\u03a3) in its center\n3. four scenario cards",
+        "correct_num": 1,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> has [MASK].\n\nOptions:\n1. a central panel depicting a worker controlling machinery\n2. a symbol of a white disk on a royal blue background, with an uppercase sigma (\u03a3) in its center\n3. four scenario cards"
+    },
+    {
+        "test_id": 43,
+        "relation": "HasA",
+        "correct_feat": "two flanking panels representing socialism and capitalism",
+        "options": "1. contestants who have 60 seconds to make as many throws as possible\n2. two flanking panels representing socialism and capitalism\n3. five men, one of whom was a \"Bran\u00e1n\" or chief",
+        "correct_num": 2,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> has [MASK].\n\nOptions:\n1. contestants who have 60 seconds to make as many throws as possible\n2. two flanking panels representing socialism and capitalism\n3. five men, one of whom was a \"Bran\u00e1n\" or chief"
+    },
+    {
+        "test_id": 44,
+        "relation": "HasA",
+        "correct_feat": "images of Vladimir Lenin and a Soviet May Day parade",
+        "options": "1. a cubilete dice cup\n2. a repertoire that includes duets and arias\n3. images of Vladimir Lenin and a Soviet May Day parade",
+        "correct_num": 3,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> has [MASK].\n\nOptions:\n1. a cubilete dice cup\n2. a repertoire that includes duets and arias\n3. images of Vladimir Lenin and a Soviet May Day parade"
+    },
+    {
+        "test_id": 45,
+        "relation": "HasA",
+        "correct_feat": "a fist holding an orb depicting the recombination of atoms and dividing cells",
+        "options": "1. a fist holding an orb depicting the recombination of atoms and dividing cells\n2. a general aviation airport\n3. a starring role as Allyson Henlen",
+        "correct_num": 1,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> has [MASK].\n\nOptions:\n1. a fist holding an orb depicting the recombination of atoms and dividing cells\n2. a general aviation airport\n3. a starring role as Allyson Henlen"
+    },
+    {
+        "test_id": 46,
+        "relation": "HasA",
+        "correct_feat": "four propeller-like shapes stretching to the corner of the composition",
+        "options": "1. a small box packaging in its Avalon Hill edition\n2. four propeller-like shapes stretching to the corner of the composition\n3. been described as a broad right-wing coalition of Islamists, reformist Islamists, conservatives, nationalists, centre-right, and pro-business groups",
+        "correct_num": 2,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> has [MASK].\n\nOptions:\n1. a small box packaging in its Avalon Hill edition\n2. four propeller-like shapes stretching to the corner of the composition\n3. been described as a broad right-wing coalition of Islamists, reformist Islamists, conservatives, nationalists, centre-right, and pro-business groups"
+    },
+    {
+        "test_id": 49,
+        "relation": "HasA",
+        "correct_feat": "Lenin holding hands with a multi-racial group of workers",
+        "options": "1. been subject to national laws in various countries, including France, Germany, South Africa, and the United Kingdom\n2. Lenin holding hands with a multi-racial group of workers\n3. rules that were initially problematic",
+        "correct_num": 2,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> has [MASK].\n\nOptions:\n1. been subject to national laws in various countries, including France, Germany, South Africa, and the United Kingdom\n2. Lenin holding hands with a multi-racial group of workers\n3. rules that were initially problematic"
+    },
+    {
+        "test_id": 51,
+        "relation": "HasA",
+        "correct_feat": "a Russian May Day rally",
+        "options": "1. a Russian May Day rally\n2. a tendency to advocate gradual change\n3. the title of Emperor of the French",
+        "correct_num": 1,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> has [MASK].\n\nOptions:\n1. a Russian May Day rally\n2. a tendency to advocate gradual change\n3. the title of Emperor of the French"
+    },
+    {
+        "test_id": 52,
+        "relation": "HasFeatureOf",
+        "correct_feat": "its depiction of contemporary social and scientific culture",
+        "options": "1. step reductions displayed at 3 o'clock, 6 o'clock, and 9 o'clock\n2. its depiction of contemporary social and scientific culture\n3. its decline after the loss of Zaragoza",
+        "correct_num": 2,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is characterized by [MASK].\n\nOptions:\n1. step reductions displayed at 3 o'clock, 6 o'clock, and 9 o'clock\n2. its depiction of contemporary social and scientific culture\n3. its decline after the loss of Zaragoza"
+    },
+    {
+        "test_id": 53,
+        "relation": "HasFeatureOf",
+        "correct_feat": "its representation of socialism and capitalism",
+        "options": "1. the 4\u00d74\u00d74 board having 16 cells lying on the body diagonals\n2. trail hounds that are sleek, hard muscled hounds with almost whippet like bodies\n3. its representation of socialism and capitalism",
+        "correct_num": 3,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is characterized by [MASK].\n\nOptions:\n1. the 4\u00d74\u00d74 board having 16 cells lying on the body diagonals\n2. trail hounds that are sleek, hard muscled hounds with almost whippet like bodies\n3. its representation of socialism and capitalism"
+    },
+    {
+        "test_id": 54,
+        "relation": "HasFeatureOf",
+        "correct_feat": "the inclusion of Vladimir Lenin",
+        "options": "1. the inclusion of Vladimir Lenin\n2. the simulation of a \"pileup\" situation in on-air amateur radio operating\n3. the ability to help move partners' tokens once a team member has brought all their tokens home",
+        "correct_num": 1,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is characterized by [MASK].\n\nOptions:\n1. the inclusion of Vladimir Lenin\n2. the simulation of a \"pileup\" situation in on-air amateur radio operating\n3. the ability to help move partners' tokens once a team member has brought all their tokens home"
+    },
+    {
+        "test_id": 55,
+        "relation": "HasFeatureOf",
+        "correct_feat": "its controversial nature",
+        "options": "1. the effective birth of the sport in 1978 with filmed jumps from El Capitan\n2. its controversial nature\n3. the belief that some people are natural slaves",
+        "correct_num": 2,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is characterized by [MASK].\n\nOptions:\n1. the effective birth of the sport in 1978 with filmed jumps from El Capitan\n2. its controversial nature\n3. the belief that some people are natural slaves"
+    },
+    {
+        "test_id": 56,
+        "relation": "HasFeatureOf",
+        "correct_feat": "its destruction before completion",
+        "options": "1. being significantly more hazardous than other forms of parachuting\n2. the belief that white people are superior to those of other races\n3. its destruction before completion",
+        "correct_num": 3,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is characterized by [MASK].\n\nOptions:\n1. being significantly more hazardous than other forms of parachuting\n2. the belief that white people are superior to those of other races\n3. its destruction before completion"
+    },
+    {
+        "test_id": 57,
+        "relation": "HeldIn",
+        "correct_feat": "the lobby of the RCA Building at Rockefeller Center in New York City",
+        "options": "1. the lobby of the RCA Building at Rockefeller Center in New York City\n2. a body of water\n3. the United States",
+        "correct_num": 1,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> was held in [MASK].\n\nOptions:\n1. the lobby of the RCA Building at Rockefeller Center in New York City\n2. a body of water\n3. the United States"
+    },
+    {
+        "test_id": 59,
+        "relation": "Influenced",
+        "correct_feat": "Archibald MacLeish's 1933 collection Frescoes for Mr. Rockefeller's City",
+        "options": "1. the Civic Democratic Party (ODS)\n2. the synth-pop bands of the 1980s\n3. Archibald MacLeish's 1933 collection Frescoes for Mr. Rockefeller's City",
+        "correct_num": 3,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> influenced [MASK].\n\nOptions:\n1. the Civic Democratic Party (ODS)\n2. the synth-pop bands of the 1980s\n3. Archibald MacLeish's 1933 collection Frescoes for Mr. Rockefeller's City"
+    },
+    {
+        "test_id": 62,
+        "relation": "InfluencedBy",
+        "correct_feat": "contemporary social and scientific culture",
+        "options": "1. Albert the Great\n2. the success of their debut album\n3. contemporary social and scientific culture",
+        "correct_num": 3,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> was influenced by [MASK].\n\nOptions:\n1. Albert the Great\n2. the success of their debut album\n3. contemporary social and scientific culture"
+    },
+    {
+        "test_id": 63,
+        "relation": "InfluencedBy",
+        "correct_feat": "socialism",
+        "options": "1. socialism\n2. nationalism\n3. jihadism",
+        "correct_num": 1,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> was influenced by [MASK].\n\nOptions:\n1. socialism\n2. nationalism\n3. jihadism"
+    },
+    {
+        "test_id": 65,
+        "relation": "IsA",
+        "correct_feat": "a fresco",
+        "options": "1. a board game\n2. a supergroup\n3. a fresco",
+        "correct_num": 3,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is [MASK].\n\nOptions:\n1. a board game\n2. a supergroup\n3. a fresco"
+    },
+    {
+        "test_id": 66,
+        "relation": "IsA",
+        "correct_feat": "a three-paneled artwork",
+        "options": "1. a three-paneled artwork\n2. a noble family\n3. a short-range, high-performance interceptor aircraft",
+        "correct_num": 1,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is [MASK].\n\nOptions:\n1. a three-paneled artwork\n2. a noble family\n3. a short-range, high-performance interceptor aircraft"
+    },
+    {
+        "test_id": 68,
+        "relation": "IsA",
+        "correct_feat": "a controversial artwork",
+        "options": "1. played with one six-sided die\n2. a wrestling match\n3. a controversial artwork",
+        "correct_num": 3,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is [MASK].\n\nOptions:\n1. played with one six-sided die\n2. a wrestling match\n3. a controversial artwork"
+    },
+    {
+        "test_id": 69,
+        "relation": "KnownAs",
+        "correct_feat": "Man at the Crossroads",
+        "options": "1. Man at the Crossroads\n2. warri\n3. the renaming of public places",
+        "correct_num": 1,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is known as [MASK].\n\nOptions:\n1. Man at the Crossroads\n2. warri\n3. the renaming of public places"
+    },
+    {
+        "test_id": 70,
+        "relation": "KnownAs",
+        "correct_feat": "Man, Controller of the Universe in its repainted version",
+        "options": "1. 'xboygeniusx' occasionally\n2. Man, Controller of the Universe in its repainted version\n3. Borinquen",
+        "correct_num": 2,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is known as [MASK].\n\nOptions:\n1. 'xboygeniusx' occasionally\n2. Man, Controller of the Universe in its repainted version\n3. Borinquen"
+    },
+    {
+        "test_id": 72,
+        "relation": "KnownFor",
+        "correct_feat": "its destruction before completion",
+        "options": "1. its destruction before completion\n2. its interpretation of the Citizenship Clause of the Fourteenth Amendment\n3. empowering Indigenous women within the context of Indigenous cultural values and priorities",
+        "correct_num": 1,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is known for [MASK].\n\nOptions:\n1. its destruction before completion\n2. its interpretation of the Citizenship Clause of the Fourteenth Amendment\n3. empowering Indigenous women within the context of Indigenous cultural values and priorities"
+    },
+    {
+        "test_id": 73,
+        "relation": "KnownFor",
+        "correct_feat": "being created by Diego Rivera",
+        "options": "1. its wrinkle-resistance\n2. being created by Diego Rivera\n3. being Australia's oldest and richest short-distance running race",
+        "correct_num": 2,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is known for [MASK].\n\nOptions:\n1. its wrinkle-resistance\n2. being created by Diego Rivera\n3. being Australia's oldest and richest short-distance running race"
+    },
+    {
+        "test_id": 74,
+        "relation": "KnownFor",
+        "correct_feat": "its depiction of contrasting social and scientific cultures",
+        "options": "1. the depiction of a coherent continuity of history and descendancy\n2. increasing the appeal of games\n3. its depiction of contrasting social and scientific cultures",
+        "correct_num": 3,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is known for [MASK].\n\nOptions:\n1. the depiction of a coherent continuity of history and descendancy\n2. increasing the appeal of games\n3. its depiction of contrasting social and scientific cultures"
+    },
+    {
+        "test_id": 75,
+        "relation": "KnownFor",
+        "correct_feat": "its association with Rockefeller Center",
+        "options": "1. its association with Rockefeller Center\n2. the use of gutta-percha balls\n3. secession movements",
+        "correct_num": 1,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is known for [MASK].\n\nOptions:\n1. its association with Rockefeller Center\n2. the use of gutta-percha balls\n3. secession movements"
+    },
+    {
+        "test_id": 77,
+        "relation": "LocatedIn",
+        "correct_feat": "in the lobby of the RCA Building at Rockefeller Center",
+        "options": "1. in Idumea\n2. in the Torah\n3. in the lobby of the RCA Building at Rockefeller Center",
+        "correct_num": 3,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is located [MASK].\n\nOptions:\n1. in Idumea\n2. in the Torah\n3. in the lobby of the RCA Building at Rockefeller Center"
+    },
+    {
+        "test_id": 79,
+        "relation": "OriginatedIn",
+        "correct_feat": "a luncheon hosted by Abby Rockefeller in January 1932",
+        "options": "1. the French Revolution\n2. a luncheon hosted by Abby Rockefeller in January 1932\n3. the Renaissance",
+        "correct_num": 2,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> originated in [MASK].\n\nOptions:\n1. the French Revolution\n2. a luncheon hosted by Abby Rockefeller in January 1932\n3. the Renaissance"
+    },
+    {
+        "test_id": 80,
+        "relation": "PartOf",
+        "correct_feat": "the history of art",
+        "options": "1. a husband-and-wife duo\n2. the operations of private military companies\n3. the history of art",
+        "correct_num": 3,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is part of [MASK].\n\nOptions:\n1. a husband-and-wife duo\n2. the operations of private military companies\n3. the history of art"
+    },
+    {
+        "test_id": 81,
+        "relation": "PartOf",
+        "correct_feat": "the history of political art",
+        "options": "1. the history of political art\n2. the culture of Afghanistan\n3. Loaded Records",
+        "correct_num": 1,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is part of [MASK].\n\nOptions:\n1. the history of political art\n2. the culture of Afghanistan\n3. Loaded Records"
+    },
+    {
+        "test_id": 82,
+        "relation": "PartOf",
+        "correct_feat": "the history of Rockefeller Center",
+        "options": "1. Soul Eater media\n2. the history of Rockefeller Center\n3. the radical right in Europe",
+        "correct_num": 2,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is part of [MASK].\n\nOptions:\n1. Soul Eater media\n2. the history of Rockefeller Center\n3. the radical right in Europe"
+    },
+    {
+        "test_id": 85,
+        "relation": "UsedAs",
+        "correct_feat": "an example of controversial art",
+        "options": "1. durable upholstery\n2. an example of controversial art\n3. a basis for clone video games",
+        "correct_num": 2,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is used as [MASK].\n\nOptions:\n1. durable upholstery\n2. an example of controversial art\n3. a basis for clone video games"
+    },
+    {
+        "test_id": 86,
+        "relation": "UsedAs",
+        "correct_feat": "a symbol of the conflict between art and political ideology",
+        "options": "1. a museum in Forest Park, Illinois\n2. a video\n3. a symbol of the conflict between art and political ideology",
+        "correct_num": 3,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is used as [MASK].\n\nOptions:\n1. a museum in Forest Park, Illinois\n2. a video\n3. a symbol of the conflict between art and political ideology"
+    },
+    {
+        "test_id": 87,
+        "relation": "UsedFor",
+        "correct_feat": "depicting aspects of contemporary social and scientific culture",
+        "options": "1. depicting aspects of contemporary social and scientific culture\n2. a documentary\n3. replicating the work of a retriever",
+        "correct_num": 1,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is used for [MASK].\n\nOptions:\n1. depicting aspects of contemporary social and scientific culture\n2. a documentary\n3. replicating the work of a retriever"
+    },
+    {
+        "test_id": 88,
+        "relation": "UsedFor",
+        "correct_feat": "representing socialism and capitalism",
+        "options": "1. self-improvement\n2. representing socialism and capitalism\n3. charity",
+        "correct_num": 2,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is used for [MASK].\n\nOptions:\n1. self-improvement\n2. representing socialism and capitalism\n3. charity"
+    },
+    {
+        "test_id": 89,
+        "relation": "UsedFor",
+        "correct_feat": "making people pause and think",
+        "options": "1. reaching a given target in the minimum number of strokes\n2. political reform\n3. making people pause and think",
+        "correct_num": 3,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is used for [MASK].\n\nOptions:\n1. reaching a given target in the minimum number of strokes\n2. political reform\n3. making people pause and think"
+    },
+    {
+        "test_id": 90,
+        "relation": "UsedIn",
+        "correct_feat": "the RCA Building lobby",
+        "options": "1. the RCA Building lobby\n2. North America\n3. Australia, New Zealand and Ireland",
+        "correct_num": 1,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is used in [MASK].\n\nOptions:\n1. the RCA Building lobby\n2. North America\n3. Australia, New Zealand and Ireland"
+    },
+    {
+        "test_id": 91,
+        "relation": "UsedIn",
+        "correct_feat": "the context of Rockefeller Center",
+        "options": "1. the United States\n2. the context of Rockefeller Center\n3. the United States",
+        "correct_num": 2,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is used in [MASK].\n\nOptions:\n1. the United States\n2. the context of Rockefeller Center\n3. the United States"
+    },
+    {
+        "test_id": 93,
+        "relation": "UsedTo",
+        "correct_feat": "represent socialism and capitalism",
+        "options": "1. represent socialism and capitalism\n2. compose records in Middle Persian, Syriac and Arabic\n3. move pieces around the board",
+        "correct_num": 1,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is used to [MASK].\n\nOptions:\n1. represent socialism and capitalism\n2. compose records in Middle Persian, Syriac and Arabic\n3. move pieces around the board"
+    }
+]

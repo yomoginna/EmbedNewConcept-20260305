@@ -1,0 +1,394 @@
+[
+    {
+        "test_id": 0,
+        "relation": "About",
+        "correct_feat": "a Moldovan-Romanian musical duo consisting of married couple Doina and Ion Aldea Teodorovici",
+        "options": "1. a Moldovan-Romanian musical duo consisting of married couple Doina and Ion Aldea Teodorovici\n2. a rodeo sport involving a rider on a bucking bull\n3. life and time on Horn Island",
+        "correct_num": 1,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is about [MASK].\n\nOptions:\n1. a Moldovan-Romanian musical duo consisting of married couple Doina and Ion Aldea Teodorovici\n2. a rodeo sport involving a rider on a bucking bull\n3. life and time on Horn Island"
+    },
+    {
+        "test_id": 1,
+        "relation": "Affects",
+        "correct_feat": "the Moldovan cultural and patriotic landscape",
+        "options": "1. dual citizenship\n2. the Moldovan cultural and patriotic landscape\n3. the way the game is played",
+        "correct_num": 2,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> affects [MASK].\n\nOptions:\n1. dual citizenship\n2. the Moldovan cultural and patriotic landscape\n3. the way the game is played"
+    },
+    {
+        "test_id": 2,
+        "relation": "AssociatedWith",
+        "correct_feat": "the national revival of Moldova",
+        "options": "1. Richard Wagner's interpretation of Beethoven's Ninth symphony\n2. drop tubes\n3. the national revival of Moldova",
+        "correct_num": 3,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is associated with [MASK].\n\nOptions:\n1. Richard Wagner's interpretation of Beethoven's Ninth symphony\n2. drop tubes\n3. the national revival of Moldova"
+    },
+    {
+        "test_id": 3,
+        "relation": "AssociatedWith",
+        "correct_feat": "the Transnistria conflict",
+        "options": "1. the Transnistria conflict\n2. skyscrapers\n3. Mozart's Don Giovanni",
+        "correct_num": 1,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is associated with [MASK].\n\nOptions:\n1. the Transnistria conflict\n2. skyscrapers\n3. Mozart's Don Giovanni"
+    },
+    {
+        "test_id": 4,
+        "relation": "BelongsTo",
+        "correct_feat": "the history of Moldovan music",
+        "options": "1. the history of Western art\n2. the history of Moldovan music\n3. conservatism",
+        "correct_num": 2,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> belongs to [MASK].\n\nOptions:\n1. the history of Western art\n2. the history of Moldovan music\n3. conservatism"
+    },
+    {
+        "test_id": 5,
+        "relation": "CausedBy",
+        "correct_feat": "a road traffic accident",
+        "options": "1. the incompatibility of the death penalty with evolving standards of decency\n2. throwing a Frisbee upside down\n3. a road traffic accident",
+        "correct_num": 3,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is caused by [MASK].\n\nOptions:\n1. the incompatibility of the death penalty with evolving standards of decency\n2. throwing a Frisbee upside down\n3. a road traffic accident"
+    },
+    {
+        "test_id": 6,
+        "relation": "ComposedBy",
+        "correct_feat": "Doina Aldea Teodorovici",
+        "options": "1. Doina Aldea Teodorovici\n2. Julio Escámez\n3. the Buyids",
+        "correct_num": 1,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> was composed by [MASK].\n\nOptions:\n1. Doina Aldea Teodorovici\n2. Julio Escámez\n3. the Buyids"
+    },
+    {
+        "test_id": 7,
+        "relation": "ComposedBy",
+        "correct_feat": "Ion Aldea Teodorovici",
+        "options": "1. Turkoman warriors\n2. Ion Aldea Teodorovici\n3. a coalition of the Lamtuna, Gudala, and Massufa",
+        "correct_num": 2,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> was composed by [MASK].\n\nOptions:\n1. Turkoman warriors\n2. Ion Aldea Teodorovici\n3. a coalition of the Lamtuna, Gudala, and Massufa"
+    },
+    {
+        "test_id": 8,
+        "relation": "ConsistsOf",
+        "correct_feat": "Doina Aldea Teodorovici and Ion Aldea Teodorovici",
+        "options": "1. large-scale copies of images from a booklet published by the New York Police Department\n2. rebar\n3. Doina Aldea Teodorovici and Ion Aldea Teodorovici",
+        "correct_num": 3,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> consists of [MASK].\n\nOptions:\n1. large-scale copies of images from a booklet published by the New York Police Department\n2. rebar\n3. Doina Aldea Teodorovici and Ion Aldea Teodorovici"
+    },
+    {
+        "test_id": 9,
+        "relation": "HasA",
+        "correct_feat": "profound patriotic themes in its songs",
+        "options": "1. profound patriotic themes in its songs\n2. defining traits such as support for a middle class\n3. a minimum number of turns",
+        "correct_num": 1,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> has [MASK].\n\nOptions:\n1. profound patriotic themes in its songs\n2. defining traits such as support for a middle class\n3. a minimum number of turns"
+    },
+    {
+        "test_id": 10,
+        "relation": "HasA",
+        "correct_feat": "a son named Cristofor Aldea-Teodorovici",
+        "options": "1. military and security commanders\n2. a son named Cristofor Aldea-Teodorovici\n3. a racket rim made of plastic, aluminum, carbon or carbon fiber",
+        "correct_num": 2,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> has [MASK].\n\nOptions:\n1. military and security commanders\n2. a son named Cristofor Aldea-Teodorovici\n3. a racket rim made of plastic, aluminum, carbon or carbon fiber"
+    },
+    {
+        "test_id": 11,
+        "relation": "HasA",
+        "correct_feat": "a legacy continued by their son Cristofor",
+        "options": "1. a time limit of only five phases\n2. dogs\n3. a legacy continued by their son Cristofor",
+        "correct_num": 3,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> has [MASK].\n\nOptions:\n1. a time limit of only five phases\n2. dogs\n3. a legacy continued by their son Cristofor"
+    },
+    {
+        "test_id": 12,
+        "relation": "HasFeatureOf",
+        "correct_feat": "songs carrying profound patriotic themes",
+        "options": "1. songs carrying profound patriotic themes\n2. the emphasis on social obligation rather than individualism\n3. the separation of the saved and the damned",
+        "correct_num": 1,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is characterized by [MASK].\n\nOptions:\n1. songs carrying profound patriotic themes\n2. the emphasis on social obligation rather than individualism\n3. the separation of the saved and the damned"
+    },
+    {
+        "test_id": 13,
+        "relation": "HasFeatureOf",
+        "correct_feat": "active participation in events marking Moldova's national revival",
+        "options": "1. being a science regarding the supposed laws behind the building of socialism and communism\n2. active participation in events marking Moldova's national revival\n3. a low lift-to-drag ratio in early designs",
+        "correct_num": 2,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is characterized by [MASK].\n\nOptions:\n1. being a science regarding the supposed laws behind the building of socialism and communism\n2. active participation in events marking Moldova's national revival\n3. a low lift-to-drag ratio in early designs"
+    },
+    {
+        "test_id": 14,
+        "relation": "HeldIn",
+        "correct_feat": "numerous cities and villages in Moldova",
+        "options": "1. Barbados\n2. the International Tribunal for the Law of the Sea\n3. numerous cities and villages in Moldova",
+        "correct_num": 3,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> was held in [MASK].\n\nOptions:\n1. Barbados\n2. the International Tribunal for the Law of the Sea\n3. numerous cities and villages in Moldova"
+    },
+    {
+        "test_id": 15,
+        "relation": "HeldIn",
+        "correct_feat": "various locations across Romania including Bucharest, Cluj-Napoca, Brașov, Suceava, Iași, Botoșani, Focșani, and Bârlad",
+        "options": "1. various locations across Romania including Bucharest, Cluj-Napoca, Brașov, Suceava, Iași, Botoșani, Focșani, and Bârlad\n2. Kenwood House, London\n3. Ballarat City Oval",
+        "correct_num": 1,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> was held in [MASK].\n\nOptions:\n1. various locations across Romania including Bucharest, Cluj-Napoca, Brașov, Suceava, Iași, Botoșani, Focșani, and Bârlad\n2. Kenwood House, London\n3. Ballarat City Oval"
+    },
+    {
+        "test_id": 16,
+        "relation": "HeldIn",
+        "correct_feat": "front of soldiers during the Transnistria conflict",
+        "options": "1. Tajikistan\n2. front of soldiers during the Transnistria conflict\n3. the Coral Sea",
+        "correct_num": 2,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> was held in [MASK].\n\nOptions:\n1. Tajikistan\n2. front of soldiers during the Transnistria conflict\n3. the Coral Sea"
+    },
+    {
+        "test_id": 17,
+        "relation": "HeldOn",
+        "correct_feat": "May 1992",
+        "options": "1. Fridays in Afghanistan\n2. August 13\n3. May 1992",
+        "correct_num": 3,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> was held on [MASK].\n\nOptions:\n1. Fridays in Afghanistan\n2. August 13\n3. May 1992"
+    },
+    {
+        "test_id": 18,
+        "relation": "Influenced",
+        "correct_feat": "the Moldovan cultural and patriotic landscape",
+        "options": "1. the Moldovan cultural and patriotic landscape\n2. the domination of central Italy\n3. the design of later fighter aircraft",
+        "correct_num": 1,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> influenced [MASK].\n\nOptions:\n1. the Moldovan cultural and patriotic landscape\n2. the domination of central Italy\n3. the design of later fighter aircraft"
+    },
+    {
+        "test_id": 19,
+        "relation": "IsA",
+        "correct_feat": "a Moldovan-Romanian musical duo",
+        "options": "1. a category 1 historic place listed by Heritage New Zealand\n2. a Moldovan-Romanian musical duo\n3. a public Christian procession",
+        "correct_num": 2,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is [MASK].\n\nOptions:\n1. a category 1 historic place listed by Heritage New Zealand\n2. a Moldovan-Romanian musical duo\n3. a public Christian procession"
+    },
+    {
+        "test_id": 20,
+        "relation": "IsA",
+        "correct_feat": "a married couple",
+        "options": "1. a faction of the Iranian principalists\n2. a mural painting\n3. a married couple",
+        "correct_num": 3,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is [MASK].\n\nOptions:\n1. a faction of the Iranian principalists\n2. a mural painting\n3. a married couple"
+    },
+    {
+        "test_id": 21,
+        "relation": "IsA",
+        "correct_feat": "a symbol of Moldova",
+        "options": "1. a symbol of Moldova\n2. a secular ideology\n3. a grand tactical monster board wargame",
+        "correct_num": 1,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is [MASK].\n\nOptions:\n1. a symbol of Moldova\n2. a secular ideology\n3. a grand tactical monster board wargame"
+    },
+    {
+        "test_id": 22,
+        "relation": "KnownAs",
+        "correct_feat": "\"DIATE\" when referring to the band",
+        "options": "1. Owenism\n2. \"DIATE\" when referring to the band\n3. the \"General or Final Judgment\" in Eastern Orthodoxy",
+        "correct_num": 2,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is known as [MASK].\n\nOptions:\n1. Owenism\n2. \"DIATE\" when referring to the band\n3. the \"General or Final Judgment\" in Eastern Orthodoxy"
+    },
+    {
+        "test_id": 23,
+        "relation": "KnownAs",
+        "correct_feat": "\"Requiem for Love\" or \"Two Twin Hearts\" in reference to a monument",
+        "options": "1. the \"Angevin Empire\" by historians\n2. hunt tests\n3. \"Requiem for Love\" or \"Two Twin Hearts\" in reference to a monument",
+        "correct_num": 3,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is known as [MASK].\n\nOptions:\n1. the \"Angevin Empire\" by historians\n2. hunt tests\n3. \"Requiem for Love\" or \"Two Twin Hearts\" in reference to a monument"
+    },
+    {
+        "test_id": 24,
+        "relation": "KnownFor",
+        "correct_feat": "songs with profound patriotic themes",
+        "options": "1. songs with profound patriotic themes\n2. its plot\n3. its nationalist and anti-Western tendencies",
+        "correct_num": 1,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is known for [MASK].\n\nOptions:\n1. songs with profound patriotic themes\n2. its plot\n3. its nationalist and anti-Western tendencies"
+    },
+    {
+        "test_id": 25,
+        "relation": "KnownFor",
+        "correct_feat": "its role in Moldova's national revival",
+        "options": "1. exhibiting Thomas Hornor's \"Panoramic view of London\", the largest painting ever created\n2. its role in Moldova's national revival\n3. being a Dutch political movement",
+        "correct_num": 2,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is known for [MASK].\n\nOptions:\n1. exhibiting Thomas Hornor's \"Panoramic view of London\", the largest painting ever created\n2. its role in Moldova's national revival\n3. being a Dutch political movement"
+    },
+    {
+        "test_id": 26,
+        "relation": "KnownFor",
+        "correct_feat": "being a symbol of Moldova",
+        "options": "1. ruling Portugal\n2. its focus on moralism\n3. being a symbol of Moldova",
+        "correct_num": 3,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is known for [MASK].\n\nOptions:\n1. ruling Portugal\n2. its focus on moralism\n3. being a symbol of Moldova"
+    },
+    {
+        "test_id": 27,
+        "relation": "MemberOf",
+        "correct_feat": "the band \"DIATE",
+        "options": "1. the band \"DIATE\n2. the U.S. and India\n3. the Carolinas Adaptive Standing Tennis Association",
+        "correct_num": 1,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is a member of [MASK].\n\nOptions:\n1. the band \"DIATE\n2. the U.S. and India\n3. the Carolinas Adaptive Standing Tennis Association"
+    },
+    {
+        "test_id": 28,
+        "relation": "OccurredBetween",
+        "correct_feat": "1989 and 1990",
+        "options": "1. the 6th century and the present\n2. 1989 and 1990\n3. the late 19th and early 20th century",
+        "correct_num": 2,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> occurred between [MASK].\n\nOptions:\n1. the 6th century and the present\n2. 1989 and 1990\n3. the late 19th and early 20th century"
+    },
+    {
+        "test_id": 29,
+        "relation": "OccurredBetween",
+        "correct_feat": "October 29-30, 1992",
+        "options": "1. Minneapolis-St. Paul and Fargo\n2. 1807 and 1833\n3. October 29-30, 1992",
+        "correct_num": 3,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> occurred between [MASK].\n\nOptions:\n1. Minneapolis-St. Paul and Fargo\n2. 1807 and 1833\n3. October 29-30, 1992"
+    },
+    {
+        "test_id": 30,
+        "relation": "OriginatedIn",
+        "correct_feat": "Moldova",
+        "options": "1. Moldova\n2. Byzantine art\n3. Stawell",
+        "correct_num": 1,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> originated in [MASK].\n\nOptions:\n1. Moldova\n2. Byzantine art\n3. Stawell"
+    },
+    {
+        "test_id": 31,
+        "relation": "PartOf",
+        "correct_feat": "the Moldovan cultural and patriotic landscape",
+        "options": "1. the history of North Africa\n2. the Moldovan cultural and patriotic landscape\n3. Korean history",
+        "correct_num": 2,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is part of [MASK].\n\nOptions:\n1. the history of North Africa\n2. the Moldovan cultural and patriotic landscape\n3. Korean history"
+    },
+    {
+        "test_id": 32,
+        "relation": "PerformedBy",
+        "correct_feat": "Doina Aldea Teodorovici",
+        "options": "1. dogs\n2. the RCA Victor Symphony Orchestra\n3. Doina Aldea Teodorovici",
+        "correct_num": 3,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> was performed by [MASK].\n\nOptions:\n1. dogs\n2. the RCA Victor Symphony Orchestra\n3. Doina Aldea Teodorovici"
+    },
+    {
+        "test_id": 33,
+        "relation": "PerformedBy",
+        "correct_feat": "Ion Aldea Teodorovici",
+        "options": "1. Ion Aldea Teodorovici\n2. Finland\n3. Lemonade Mouth",
+        "correct_num": 1,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> was performed by [MASK].\n\nOptions:\n1. Ion Aldea Teodorovici\n2. Finland\n3. Lemonade Mouth"
+    },
+    {
+        "test_id": 34,
+        "relation": "UsedAs",
+        "correct_feat": "a symbol of Moldova",
+        "options": "1. a symbol of Saint Matthew\n2. a symbol of Moldova\n3. a form of execution",
+        "correct_num": 2,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is used as [MASK].\n\nOptions:\n1. a symbol of Saint Matthew\n2. a symbol of Moldova\n3. a form of execution"
+    },
+    {
+        "test_id": 35,
+        "relation": "UsedFor",
+        "correct_feat": "promoting patriotic themes",
+        "options": "1. paying homage to the efforts of Chicano protestors\n2. play on the Internet\n3. promoting patriotic themes",
+        "correct_num": 3,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is used for [MASK].\n\nOptions:\n1. paying homage to the efforts of Chicano protestors\n2. play on the Internet\n3. promoting patriotic themes"
+    },
+    {
+        "test_id": 36,
+        "relation": "UsedFor",
+        "correct_feat": "cultural and patriotic events",
+        "options": "1. cultural and patriotic events\n2. building defenses\n3. social, economic, and political justice",
+        "correct_num": 1,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is used for [MASK].\n\nOptions:\n1. cultural and patriotic events\n2. building defenses\n3. social, economic, and political justice"
+    },
+    {
+        "test_id": 37,
+        "relation": "UsedIn",
+        "correct_feat": "the film \"Dragostea ce mișcă sori și stele",
+        "options": "1. the International Cherry Pit-Spitting Championship\n2. the film \"Dragostea ce mișcă sori și stele\n3. the Spanish Empire",
+        "correct_num": 2,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is used in [MASK].\n\nOptions:\n1. the International Cherry Pit-Spitting Championship\n2. the film \"Dragostea ce mișcă sori și stele\n3. the Spanish Empire"
+    },
+    {
+        "test_id": 38,
+        "relation": "UsedTo",
+        "correct_feat": "teach world literature",
+        "options": "1. offer prayers and praise to God for Jesus\n2. approach enemy ships undetected\n3. teach world literature",
+        "correct_num": 3,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is used to [MASK].\n\nOptions:\n1. offer prayers and praise to God for Jesus\n2. approach enemy ships undetected\n3. teach world literature"
+    },
+    {
+        "test_id": 39,
+        "relation": "UsedTo",
+        "correct_feat": "explore talent as a pop music performer",
+        "options": "1. explore talent as a pop music performer\n2. acquaint players with the rules\n3. grant eternal life",
+        "correct_num": 1,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is used to [MASK].\n\nOptions:\n1. explore talent as a pop music performer\n2. acquaint players with the rules\n3. grant eternal life"
+    },
+    {
+        "test_id": 40,
+        "relation": "WonBy",
+        "correct_feat": "the couple at the National Pop Music Festival \"Mamaia - 91",
+        "options": "1. Martin Salter \"The Phantom of the Orchard\"\n2. the couple at the National Pop Music Festival \"Mamaia - 91\n3. Asa Long",
+        "correct_num": 2,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> was won by [MASK].\n\nOptions:\n1. Martin Salter \"The Phantom of the Orchard\"\n2. the couple at the National Pop Music Festival \"Mamaia - 91\n3. Asa Long"
+    },
+    {
+        "test_id": 41,
+        "relation": "WonBy",
+        "correct_feat": "the couple at the \"Cerbul de Aur\" Festival in Brașov",
+        "options": "1. Arrhichion\n2. Andrew McManus\n3. the couple at the \"Cerbul de Aur\" Festival in Brașov",
+        "correct_num": 3,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> was won by [MASK].\n\nOptions:\n1. Arrhichion\n2. Andrew McManus\n3. the couple at the \"Cerbul de Aur\" Festival in Brașov"
+    },
+    {
+        "test_id": 42,
+        "relation": "WonBy",
+        "correct_feat": "the couple for the title of \"Artistă Emerită\" of the Republic of Moldova",
+        "options": "1. the couple for the title of \"Artistă Emerită\" of the Republic of Moldova\n2. Brian \"Young Gun\" Krause\n3. the Collegers in 1955",
+        "correct_num": 1,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> was won by [MASK].\n\nOptions:\n1. the couple for the title of \"Artistă Emerită\" of the Republic of Moldova\n2. Brian \"Young Gun\" Krause\n3. the Collegers in 1955"
+    },
+    {
+        "test_id": 43,
+        "relation": "WrittenBy",
+        "correct_feat": "D. Matcovschi",
+        "options": "1. J. R. R. Tolkien\n2. D. Matcovschi\n3. Daphne du Maurier",
+        "correct_num": 2,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> was written by [MASK].\n\nOptions:\n1. J. R. R. Tolkien\n2. D. Matcovschi\n3. Daphne du Maurier"
+    },
+    {
+        "test_id": 44,
+        "relation": "WrittenBy",
+        "correct_feat": "A. Burac",
+        "options": "1. Théo Rivière\n2. Marx and Engels\n3. A. Burac",
+        "correct_num": 3,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> was written by [MASK].\n\nOptions:\n1. Théo Rivière\n2. Marx and Engels\n3. A. Burac"
+    },
+    {
+        "test_id": 45,
+        "relation": "WrittenBy",
+        "correct_feat": "Gh. Malarciuc",
+        "options": "1. Gh. Malarciuc\n2. Anselmo Carretero\n3. George Bernard Shaw",
+        "correct_num": 1,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> was written by [MASK].\n\nOptions:\n1. Gh. Malarciuc\n2. Anselmo Carretero\n3. George Bernard Shaw"
+    },
+    {
+        "test_id": 46,
+        "relation": "WrittenBy",
+        "correct_feat": "Grigore Vieru",
+        "options": "1. Billy Stevenson\n2. Grigore Vieru\n3. Valentí Almirall",
+        "correct_num": 2,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> was written by [MASK].\n\nOptions:\n1. Billy Stevenson\n2. Grigore Vieru\n3. Valentí Almirall"
+    },
+    {
+        "test_id": 47,
+        "relation": "WrittenBy",
+        "correct_feat": "Adrian Păunescu",
+        "options": "1. Newt Gingrich and William R. Forstchen\n2. William Butler Yeats\n3. Adrian Păunescu",
+        "correct_num": 3,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> was written by [MASK].\n\nOptions:\n1. Newt Gingrich and William R. Forstchen\n2. William Butler Yeats\n3. Adrian Păunescu"
+    },
+    {
+        "test_id": 48,
+        "relation": "WrittenIn",
+        "correct_feat": "Moldova",
+        "options": "1. Moldova\n2. 2004\n3. Akkadian",
+        "correct_num": 1,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> was written in [MASK].\n\nOptions:\n1. Moldova\n2. 2004\n3. Akkadian"
+    }
+]

@@ -1,0 +1,834 @@
+[
+    {
+        "test_id": 0,
+        "relation": "About",
+        "correct_feat": "dogmatism, a lack of internal consistency, criticism related to materialism, arguments that Marxism is a type of historical determinism or that it necessitates a suppression of individual rights, issues with the implementation of communism and economic issues such as the distortion or absence of price signals and reduced incentives",
+        "options": "1. dogmatism, a lack of internal consistency, criticism related to materialism, arguments that Marxism is a type of historical determinism or that it necessitates a suppression of individual rights, issues with the implementation of communism and economic issues such as the distortion or absence of price signals and reduced incentives\n2. the Bancroft Treaties and their eventual abandonment\n3. folk rock",
+        "correct_num": 1,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is about [MASK].\n\nOptions:\n1. dogmatism, a lack of internal consistency, criticism related to materialism, arguments that Marxism is a type of historical determinism or that it necessitates a suppression of individual rights, issues with the implementation of communism and economic issues such as the distortion or absence of price signals and reduced incentives\n2. the Bancroft Treaties and their eventual abandonment\n3. folk rock"
+    },
+    {
+        "test_id": 1,
+        "relation": "About",
+        "correct_feat": "empirical and epistemological concerns, arguing that Marxism relies on vague or unfalsifiable theories, resists refutation through dialectical reinterpretation, and has failed key predictions about capitalist collapse and socialist revolution",
+        "options": "1. the problem of lust gone astray\n2. empirical and epistemological concerns, arguing that Marxism relies on vague or unfalsifiable theories, resists refutation through dialectical reinterpretation, and has failed key predictions about capitalist collapse and socialist revolution\n3. celebrating Latino and, more specifically, Chicano culture and influence at The University of Southern California and in Los Angeles",
+        "correct_num": 2,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is about [MASK].\n\nOptions:\n1. the problem of lust gone astray\n2. empirical and epistemological concerns, arguing that Marxism relies on vague or unfalsifiable theories, resists refutation through dialectical reinterpretation, and has failed key predictions about capitalist collapse and socialist revolution\n3. celebrating Latino and, more specifically, Chicano culture and influence at The University of Southern California and in Los Angeles"
+    },
+    {
+        "test_id": 2,
+        "relation": "Affects",
+        "correct_feat": "the suppression of individual rights",
+        "options": "1. the legality of a unilateral secession of Quebec from Canada\n2. the Supreme Court of the United States\n3. the suppression of individual rights",
+        "correct_num": 3,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> affects [MASK].\n\nOptions:\n1. the legality of a unilateral secession of Quebec from Canada\n2. the Supreme Court of the United States\n3. the suppression of individual rights"
+    },
+    {
+        "test_id": 3,
+        "relation": "Affects",
+        "correct_feat": "the implementation of communism",
+        "options": "1. the implementation of communism\n2. younger generations with gloomy consequences\n3. the working ability and instinct of terriers and Dachshunds",
+        "correct_num": 1,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> affects [MASK].\n\nOptions:\n1. the implementation of communism\n2. younger generations with gloomy consequences\n3. the working ability and instinct of terriers and Dachshunds"
+    },
+    {
+        "test_id": 4,
+        "relation": "Affects",
+        "correct_feat": "economic issues such as the distortion or absence of price signals and reduced incentives",
+        "options": "1. the music of the generation that followed them\n2. economic issues such as the distortion or absence of price signals and reduced incentives\n3. the bond between handler and dog",
+        "correct_num": 2,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> affects [MASK].\n\nOptions:\n1. the music of the generation that followed them\n2. economic issues such as the distortion or absence of price signals and reduced incentives\n3. the bond between handler and dog"
+    },
+    {
+        "test_id": 5,
+        "relation": "AssociatedWith",
+        "correct_feat": "various political ideologies, campaigns and academic disciplines",
+        "options": "1. water power from the Lehigh River\n2. Fredrik Olsson\n3. various political ideologies, campaigns and academic disciplines",
+        "correct_num": 3,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is associated with [MASK].\n\nOptions:\n1. water power from the Lehigh River\n2. Fredrik Olsson\n3. various political ideologies, campaigns and academic disciplines"
+    },
+    {
+        "test_id": 6,
+        "relation": "AssociatedWith",
+        "correct_feat": "general intellectual criticism about dogmatism",
+        "options": "1. general intellectual criticism about dogmatism\n2. Sin\u00e9ad O'Connor\n3. Gang Starr",
+        "correct_num": 1,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is associated with [MASK].\n\nOptions:\n1. general intellectual criticism about dogmatism\n2. Sin\u00e9ad O'Connor\n3. Gang Starr"
+    },
+    {
+        "test_id": 7,
+        "relation": "AssociatedWith",
+        "correct_feat": "a lack of internal consistency",
+        "options": "1. the Banu Marin tribe\n2. a lack of internal consistency\n3. the Union of Krewo",
+        "correct_num": 2,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is associated with [MASK].\n\nOptions:\n1. the Banu Marin tribe\n2. a lack of internal consistency\n3. the Union of Krewo"
+    },
+    {
+        "test_id": 8,
+        "relation": "AssociatedWith",
+        "correct_feat": "criticism related to materialism",
+        "options": "1. the UN Security Council chamber's east wall\n2. the Consecration of the National Cemetery\n3. criticism related to materialism",
+        "correct_num": 3,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is associated with [MASK].\n\nOptions:\n1. the UN Security Council chamber's east wall\n2. the Consecration of the National Cemetery\n3. criticism related to materialism"
+    },
+    {
+        "test_id": 9,
+        "relation": "AssociatedWith",
+        "correct_feat": "arguments that Marxism is a type of historical determinism",
+        "options": "1. arguments that Marxism is a type of historical determinism\n2. Claud\n3. the Stuart Restoration in 1660",
+        "correct_num": 1,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is associated with [MASK].\n\nOptions:\n1. arguments that Marxism is a type of historical determinism\n2. Claud\n3. the Stuart Restoration in 1660"
+    },
+    {
+        "test_id": 10,
+        "relation": "AssociatedWith",
+        "correct_feat": "issues with the implementation of communism",
+        "options": "1. Thurgood Marshall\n2. issues with the implementation of communism\n3. carnival midways",
+        "correct_num": 2,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is associated with [MASK].\n\nOptions:\n1. Thurgood Marshall\n2. issues with the implementation of communism\n3. carnival midways"
+    },
+    {
+        "test_id": 11,
+        "relation": "AssociatedWith",
+        "correct_feat": "economic issues such as the distortion or absence of price signals and reduced incentives",
+        "options": "1. the German invasion of Greece\n2. carting dog breeds\n3. economic issues such as the distortion or absence of price signals and reduced incentives",
+        "correct_num": 3,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is associated with [MASK].\n\nOptions:\n1. the German invasion of Greece\n2. carting dog breeds\n3. economic issues such as the distortion or absence of price signals and reduced incentives"
+    },
+    {
+        "test_id": 12,
+        "relation": "AssociatedWith",
+        "correct_feat": "empirical and epistemological concerns",
+        "options": "1. empirical and epistemological concerns\n2. the village of Zarudchi in the Lyubeshiv district\n3. the Exposition Universelle of 1900",
+        "correct_num": 1,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is associated with [MASK].\n\nOptions:\n1. empirical and epistemological concerns\n2. the village of Zarudchi in the Lyubeshiv district\n3. the Exposition Universelle of 1900"
+    },
+    {
+        "test_id": 13,
+        "relation": "AssociatedWith",
+        "correct_feat": "vague or unfalsifiable theories",
+        "options": "1. the Roman Republic\n2. vague or unfalsifiable theories\n3. Pedro Le\u00f3n Zapata",
+        "correct_num": 2,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is associated with [MASK].\n\nOptions:\n1. the Roman Republic\n2. vague or unfalsifiable theories\n3. Pedro Le\u00f3n Zapata"
+    },
+    {
+        "test_id": 14,
+        "relation": "AssociatedWith",
+        "correct_feat": "dialectical reinterpretation",
+        "options": "1. the 2nd millennium\n2. the Feast of the Epiphany\n3. dialectical reinterpretation",
+        "correct_num": 3,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is associated with [MASK].\n\nOptions:\n1. the 2nd millennium\n2. the Feast of the Epiphany\n3. dialectical reinterpretation"
+    },
+    {
+        "test_id": 15,
+        "relation": "BelongsTo",
+        "correct_feat": "general criticism",
+        "options": "1. general criticism\n2. Accord\u00e9on M\u00e9lancolique\n3. the history of the Fourteenth Amendment",
+        "correct_num": 1,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> belongs to [MASK].\n\nOptions:\n1. general criticism\n2. Accord\u00e9on M\u00e9lancolique\n3. the history of the Fourteenth Amendment"
+    },
+    {
+        "test_id": 16,
+        "relation": "CausedBy",
+        "correct_feat": "a lack of internal consistency",
+        "options": "1. throwing a Frisbee upside down\n2. a lack of internal consistency\n3. the Battle of Gettysburg",
+        "correct_num": 2,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is caused by [MASK].\n\nOptions:\n1. throwing a Frisbee upside down\n2. a lack of internal consistency\n3. the Battle of Gettysburg"
+    },
+    {
+        "test_id": 17,
+        "relation": "CausedBy",
+        "correct_feat": "issues with the implementation of communism",
+        "options": "1. sepsis following infection due to the wounds caused by the nails or by the scourging\n2. the 1980 Quebec independence referendum\n3. issues with the implementation of communism",
+        "correct_num": 3,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is caused by [MASK].\n\nOptions:\n1. sepsis following infection due to the wounds caused by the nails or by the scourging\n2. the 1980 Quebec independence referendum\n3. issues with the implementation of communism"
+    },
+    {
+        "test_id": 18,
+        "relation": "CausedBy",
+        "correct_feat": "economic issues such as the distortion or absence of price signals and reduced incentives",
+        "options": "1. economic issues such as the distortion or absence of price signals and reduced incentives\n2. the extinction of the Babenbergs\n3. being established by a government",
+        "correct_num": 1,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is caused by [MASK].\n\nOptions:\n1. economic issues such as the distortion or absence of price signals and reduced incentives\n2. the extinction of the Babenbergs\n3. being established by a government"
+    },
+    {
+        "test_id": 19,
+        "relation": "CausedBy",
+        "correct_feat": "vague or unfalsifiable theories",
+        "options": "1. the failure of States to meet their obligations to protect the climate system\n2. vague or unfalsifiable theories\n3. the suspicion that Egyptian security officials abducted, tortured and killed Giulio Regeni",
+        "correct_num": 2,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is caused by [MASK].\n\nOptions:\n1. the failure of States to meet their obligations to protect the climate system\n2. vague or unfalsifiable theories\n3. the suspicion that Egyptian security officials abducted, tortured and killed Giulio Regeni"
+    },
+    {
+        "test_id": 20,
+        "relation": "CausedBy",
+        "correct_feat": "dialectical reinterpretation",
+        "options": "1. viral infections\n2. anthropogenic greenhouse gas emissions\n3. dialectical reinterpretation",
+        "correct_num": 3,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is caused by [MASK].\n\nOptions:\n1. viral infections\n2. anthropogenic greenhouse gas emissions\n3. dialectical reinterpretation"
+    },
+    {
+        "test_id": 21,
+        "relation": "CausedBy",
+        "correct_feat": "failed predictions about capitalist collapse and socialist revolution",
+        "options": "1. failed predictions about capitalist collapse and socialist revolution\n2. dehydration\n3. the decentralization of an empire",
+        "correct_num": 1,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is caused by [MASK].\n\nOptions:\n1. failed predictions about capitalist collapse and socialist revolution\n2. dehydration\n3. the decentralization of an empire"
+    },
+    {
+        "test_id": 22,
+        "relation": "ConsistsOf",
+        "correct_feat": "general intellectual criticism about dogmatism",
+        "options": "1. 108 tiles\n2. general intellectual criticism about dogmatism\n3. a square pyramid floating on a raft",
+        "correct_num": 2,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> consists of [MASK].\n\nOptions:\n1. 108 tiles\n2. general intellectual criticism about dogmatism\n3. a square pyramid floating on a raft"
+    },
+    {
+        "test_id": 23,
+        "relation": "ConsistsOf",
+        "correct_feat": "a lack of internal consistency",
+        "options": "1. dogs and their human flying disc throwers competing in events\n2. members Ryan Ross, Spencer Smith, Brendon Urie, and Brent Wilson\n3. a lack of internal consistency",
+        "correct_num": 3,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> consists of [MASK].\n\nOptions:\n1. dogs and their human flying disc throwers competing in events\n2. members Ryan Ross, Spencer Smith, Brendon Urie, and Brent Wilson\n3. a lack of internal consistency"
+    },
+    {
+        "test_id": 24,
+        "relation": "ConsistsOf",
+        "correct_feat": "criticism related to materialism",
+        "options": "1. criticism related to materialism\n2. two teams, usually of seven players each\n3. 3 plastic counter storage trays",
+        "correct_num": 1,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> consists of [MASK].\n\nOptions:\n1. criticism related to materialism\n2. two teams, usually of seven players each\n3. 3 plastic counter storage trays"
+    },
+    {
+        "test_id": 25,
+        "relation": "ConsistsOf",
+        "correct_feat": "arguments that Marxism is a type of historical determinism",
+        "options": "1. a map-folded rulesheet\n2. arguments that Marxism is a type of historical determinism\n3. an empire that stretched over the western Maghreb and al-Andalus",
+        "correct_num": 2,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> consists of [MASK].\n\nOptions:\n1. a map-folded rulesheet\n2. arguments that Marxism is a type of historical determinism\n3. an empire that stretched over the western Maghreb and al-Andalus"
+    },
+    {
+        "test_id": 26,
+        "relation": "ConsistsOf",
+        "correct_feat": "arguments that Marxism necessitates a suppression of individual rights",
+        "options": "1. railroad cars\n2. a death oracle given to Adam\n3. arguments that Marxism necessitates a suppression of individual rights",
+        "correct_num": 3,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> consists of [MASK].\n\nOptions:\n1. railroad cars\n2. a death oracle given to Adam\n3. arguments that Marxism necessitates a suppression of individual rights"
+    },
+    {
+        "test_id": 27,
+        "relation": "ConsistsOf",
+        "correct_feat": "issues with the implementation of communism",
+        "options": "1. issues with the implementation of communism\n2. 100 counters\n3. several thousand troops",
+        "correct_num": 1,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> consists of [MASK].\n\nOptions:\n1. issues with the implementation of communism\n2. 100 counters\n3. several thousand troops"
+    },
+    {
+        "test_id": 28,
+        "relation": "ConsistsOf",
+        "correct_feat": "economic issues such as the distortion or absence of price signals and reduced incentives",
+        "options": "1. a football that is 68\u201370 cm in circumference\n2. economic issues such as the distortion or absence of price signals and reduced incentives\n3. miniatures, monster-specific cards, and gear cards",
+        "correct_num": 2,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> consists of [MASK].\n\nOptions:\n1. a football that is 68\u201370 cm in circumference\n2. economic issues such as the distortion or absence of price signals and reduced incentives\n3. miniatures, monster-specific cards, and gear cards"
+    },
+    {
+        "test_id": 29,
+        "relation": "ConsistsOf",
+        "correct_feat": "empirical and epistemological concerns",
+        "options": "1. Rolls-Royce Griffon engines\n2. soldiers and war machinery\n3. empirical and epistemological concerns",
+        "correct_num": 3,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> consists of [MASK].\n\nOptions:\n1. Rolls-Royce Griffon engines\n2. soldiers and war machinery\n3. empirical and epistemological concerns"
+    },
+    {
+        "test_id": 30,
+        "relation": "ConsistsOf",
+        "correct_feat": "arguments that Marxism relies on vague or unfalsifiable theories",
+        "options": "1. arguments that Marxism relies on vague or unfalsifiable theories\n2. a map\n3. egg tempera",
+        "correct_num": 1,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> consists of [MASK].\n\nOptions:\n1. arguments that Marxism relies on vague or unfalsifiable theories\n2. a map\n3. egg tempera"
+    },
+    {
+        "test_id": 31,
+        "relation": "ConsistsOf",
+        "correct_feat": "arguments that Marxism resists refutation through dialectical reinterpretation",
+        "options": "1. a ball and a pile of flat stones\n2. arguments that Marxism resists refutation through dialectical reinterpretation\n3. brothers Dimitri Thivaios and Michael Thivaios",
+        "correct_num": 2,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> consists of [MASK].\n\nOptions:\n1. a ball and a pile of flat stones\n2. arguments that Marxism resists refutation through dialectical reinterpretation\n3. brothers Dimitri Thivaios and Michael Thivaios"
+    },
+    {
+        "test_id": 32,
+        "relation": "HasA",
+        "correct_feat": "a tendency to accumulate immense masses of half-assimilated materials",
+        "options": "1. an album titled Trop d'amour\n2. a crowd shouting 'Hosanna!'\n3. a tendency to accumulate immense masses of half-assimilated materials",
+        "correct_num": 3,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> has [MASK].\n\nOptions:\n1. an album titled Trop d'amour\n2. a crowd shouting 'Hosanna!'\n3. a tendency to accumulate immense masses of half-assimilated materials"
+    },
+    {
+        "test_id": 33,
+        "relation": "HasA",
+        "correct_feat": "a tendency to plan encyclopaedic works which were never completed",
+        "options": "1. a tendency to plan encyclopaedic works which were never completed\n2. a section painted blue for the next President in front of the reflecting pool\n3. a second international album titled Dangerous and Moving",
+        "correct_num": 1,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> has [MASK].\n\nOptions:\n1. a tendency to plan encyclopaedic works which were never completed\n2. a section painted blue for the next President in front of the reflecting pool\n3. a second international album titled Dangerous and Moving"
+    },
+    {
+        "test_id": 34,
+        "relation": "HasA",
+        "correct_feat": "a tendency towards a withering contempt for all non-scholars",
+        "options": "1. a cultural landmark status\n2. a tendency towards a withering contempt for all non-scholars\n3. a nickname",
+        "correct_num": 2,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> has [MASK].\n\nOptions:\n1. a cultural landmark status\n2. a tendency towards a withering contempt for all non-scholars\n3. a nickname"
+    },
+    {
+        "test_id": 36,
+        "relation": "HasA",
+        "correct_feat": "the hallmark of Talmudic study",
+        "options": "1. the hallmark of Talmudic study\n2. a Showdown Phase\n3. a king-piece",
+        "correct_num": 1,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> has [MASK].\n\nOptions:\n1. the hallmark of Talmudic study\n2. a Showdown Phase\n3. a king-piece"
+    },
+    {
+        "test_id": 37,
+        "relation": "HasA",
+        "correct_feat": "a commentary on, a critique of the work of others in his field",
+        "options": "1. dimension added to the shallow stage for the figures\n2. a commentary on, a critique of the work of others in his field\n3. a 6-sided die",
+        "correct_num": 2,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> has [MASK].\n\nOptions:\n1. dimension added to the shallow stage for the figures\n2. a commentary on, a critique of the work of others in his field\n3. a 6-sided die"
+    },
+    {
+        "test_id": 38,
+        "relation": "HasA",
+        "correct_feat": "a thesis that an objective examination of the facts showed was untenable",
+        "options": "1. a death toll estimate ranging from 2.28 to 7.71 million\n2. a country path that broadens into a road and joins with the city road\n3. a thesis that an objective examination of the facts showed was untenable",
+        "correct_num": 3,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> has [MASK].\n\nOptions:\n1. a death toll estimate ranging from 2.28 to 7.71 million\n2. a country path that broadens into a road and joins with the city road\n3. a thesis that an objective examination of the facts showed was untenable"
+    },
+    {
+        "test_id": 39,
+        "relation": "HasA",
+        "correct_feat": "a basis in historical materialism",
+        "options": "1. a basis in historical materialism\n2. a 15th-century Byzantine icon\n3. two brothers as its members",
+        "correct_num": 1,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> has [MASK].\n\nOptions:\n1. a basis in historical materialism\n2. a 15th-century Byzantine icon\n3. two brothers as its members"
+    },
+    {
+        "test_id": 40,
+        "relation": "HasA",
+        "correct_feat": "a proposal that technological advances in modes of production inevitably lead to changes in the social relations of production",
+        "options": "1. singers with open mouths\n2. a proposal that technological advances in modes of production inevitably lead to changes in the social relations of production\n3. a start/finish line",
+        "correct_num": 2,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> has [MASK].\n\nOptions:\n1. singers with open mouths\n2. a proposal that technological advances in modes of production inevitably lead to changes in the social relations of production\n3. a start/finish line"
+    },
+    {
+        "test_id": 41,
+        "relation": "HasA",
+        "correct_feat": "a concept of the dialectic",
+        "options": "1. a claimed single death\n2. a Roman Catholic Marian title\n3. a concept of the dialectic",
+        "correct_num": 3,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> has [MASK].\n\nOptions:\n1. a claimed single death\n2. a Roman Catholic Marian title\n3. a concept of the dialectic"
+    },
+    {
+        "test_id": 42,
+        "relation": "HasFeatureOf",
+        "correct_feat": "dogmatism",
+        "options": "1. dogmatism\n2. a plot following a failed attempt by the Rebel Alliance to destroy the second Death Star\n3. a king that started in the centre",
+        "correct_num": 1,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is characterized by [MASK].\n\nOptions:\n1. dogmatism\n2. a plot following a failed attempt by the Rebel Alliance to destroy the second Death Star\n3. a king that started in the centre"
+    },
+    {
+        "test_id": 43,
+        "relation": "HasFeatureOf",
+        "correct_feat": "a lack of internal consistency",
+        "options": "1. faithful adherence to the Byzantine pattern\n2. a lack of internal consistency\n3. the carts being usually themed",
+        "correct_num": 2,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is characterized by [MASK].\n\nOptions:\n1. faithful adherence to the Byzantine pattern\n2. a lack of internal consistency\n3. the carts being usually themed"
+    },
+    {
+        "test_id": 44,
+        "relation": "HasFeatureOf",
+        "correct_feat": "criticism related to materialism",
+        "options": "1. its conditions\n2. being the longest board game ever produced\n3. criticism related to materialism",
+        "correct_num": 3,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is characterized by [MASK].\n\nOptions:\n1. its conditions\n2. being the longest board game ever produced\n3. criticism related to materialism"
+    },
+    {
+        "test_id": 45,
+        "relation": "HasFeatureOf",
+        "correct_feat": "arguments that Marxism is a type of historical determinism",
+        "options": "1. arguments that Marxism is a type of historical determinism\n2. being used in over 40 television shows and movies\n3. the shouting of 'Blessed is he who comes in the name of the Lord!'",
+        "correct_num": 1,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is characterized by [MASK].\n\nOptions:\n1. arguments that Marxism is a type of historical determinism\n2. being used in over 40 television shows and movies\n3. the shouting of 'Blessed is he who comes in the name of the Lord!'"
+    },
+    {
+        "test_id": 46,
+        "relation": "HasFeatureOf",
+        "correct_feat": "arguments that Marxism necessitates a suppression of individual rights",
+        "options": "1. lasting influence on American music and culture\n2. arguments that Marxism necessitates a suppression of individual rights\n3. variations played throughout India",
+        "correct_num": 2,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is characterized by [MASK].\n\nOptions:\n1. lasting influence on American music and culture\n2. arguments that Marxism necessitates a suppression of individual rights\n3. variations played throughout India"
+    },
+    {
+        "test_id": 47,
+        "relation": "HasFeatureOf",
+        "correct_feat": "issues with the implementation of communism",
+        "options": "1. slight variations as to the layout of the game, number of players and strategy of play\n2. the Christ child precociously recognizing the niddy-noddy as a symbol of his destiny\n3. issues with the implementation of communism",
+        "correct_num": 3,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is characterized by [MASK].\n\nOptions:\n1. slight variations as to the layout of the game, number of players and strategy of play\n2. the Christ child precociously recognizing the niddy-noddy as a symbol of his destiny\n3. issues with the implementation of communism"
+    },
+    {
+        "test_id": 48,
+        "relation": "HasFeatureOf",
+        "correct_feat": "economic issues such as the distortion or absence of price signals and reduced incentives",
+        "options": "1. economic issues such as the distortion or absence of price signals and reduced incentives\n2. being a jazz duo\n3. its military camps",
+        "correct_num": 1,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is characterized by [MASK].\n\nOptions:\n1. economic issues such as the distortion or absence of price signals and reduced incentives\n2. being a jazz duo\n3. its military camps"
+    },
+    {
+        "test_id": 49,
+        "relation": "HasFeatureOf",
+        "correct_feat": "empirical and epistemological concerns",
+        "options": "1. mixed-breed teams\n2. empirical and epistemological concerns\n3. the king's trap",
+        "correct_num": 2,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is characterized by [MASK].\n\nOptions:\n1. mixed-breed teams\n2. empirical and epistemological concerns\n3. the king's trap"
+    },
+    {
+        "test_id": 50,
+        "relation": "HasFeatureOf",
+        "correct_feat": "vague or unfalsifiable theories",
+        "options": "1. its storage\n2. unknown routes being tried until a fall\n3. vague or unfalsifiable theories",
+        "correct_num": 3,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is characterized by [MASK].\n\nOptions:\n1. its storage\n2. unknown routes being tried until a fall\n3. vague or unfalsifiable theories"
+    },
+    {
+        "test_id": 51,
+        "relation": "HasFeatureOf",
+        "correct_feat": "dialectical reinterpretation",
+        "options": "1. dialectical reinterpretation\n2. the granting of land (a fief) in exchange for service and protection\n3. four related conflicts",
+        "correct_num": 1,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is characterized by [MASK].\n\nOptions:\n1. dialectical reinterpretation\n2. the granting of land (a fief) in exchange for service and protection\n3. four related conflicts"
+    },
+    {
+        "test_id": 52,
+        "relation": "Influenced",
+        "correct_feat": "the social relations of production",
+        "options": "1. subsequent patent law cases like In re Kirk and In re Joly\n2. the social relations of production\n3. the Qizilbash confederacy",
+        "correct_num": 2,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> influenced [MASK].\n\nOptions:\n1. subsequent patent law cases like In re Kirk and In re Joly\n2. the social relations of production\n3. the Qizilbash confederacy"
+    },
+    {
+        "test_id": 53,
+        "relation": "Influenced",
+        "correct_feat": "the ideological superstructure which encompasses culture, religion, politics, and all other aspects of humanity's social consciousness",
+        "options": "1. subsequent Supreme Court decisions regarding citizenship\n2. Mesopotamia\n3. the ideological superstructure which encompasses culture, religion, politics, and all other aspects of humanity's social consciousness",
+        "correct_num": 3,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> influenced [MASK].\n\nOptions:\n1. subsequent Supreme Court decisions regarding citizenship\n2. Mesopotamia\n3. the ideological superstructure which encompasses culture, religion, politics, and all other aspects of humanity's social consciousness"
+    },
+    {
+        "test_id": 54,
+        "relation": "Influenced",
+        "correct_feat": "the course of society",
+        "options": "1. the course of society\n2. the intellectual center of the Mediterranean world\n3. Christian Freeling's draughts variant Bushka",
+        "correct_num": 1,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> influenced [MASK].\n\nOptions:\n1. the course of society\n2. the intellectual center of the Mediterranean world\n3. Christian Freeling's draughts variant Bushka"
+    },
+    {
+        "test_id": 55,
+        "relation": "InfluencedBy",
+        "correct_feat": "economic factors",
+        "options": "1. the cycle of alternating glacial and interglacial periods\n2. economic factors\n3. the intervention of colonists",
+        "correct_num": 2,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> was influenced by [MASK].\n\nOptions:\n1. the cycle of alternating glacial and interglacial periods\n2. economic factors\n3. the intervention of colonists"
+    },
+    {
+        "test_id": 56,
+        "relation": "InfluencedBy",
+        "correct_feat": "technological factors",
+        "options": "1. the Virgin Mary's appearance in a dream\n2. the plaintiffs' argument that the law and judgments against their permits were flawed\n3. technological factors",
+        "correct_num": 3,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> was influenced by [MASK].\n\nOptions:\n1. the Virgin Mary's appearance in a dream\n2. the plaintiffs' argument that the law and judgments against their permits were flawed\n3. technological factors"
+    },
+    {
+        "test_id": 57,
+        "relation": "InfluencedBy",
+        "correct_feat": "material factors",
+        "options": "1. material factors\n2. artists such as Talking Heads, Peter Gabriel and Brian Eno\n3. the tradition of social realism initiated in the region by Chilean painter and muralist Gregorio de la Fuente",
+        "correct_num": 1,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> was influenced by [MASK].\n\nOptions:\n1. material factors\n2. artists such as Talking Heads, Peter Gabriel and Brian Eno\n3. the tradition of social realism initiated in the region by Chilean painter and muralist Gregorio de la Fuente"
+    },
+    {
+        "test_id": 58,
+        "relation": "InfluencedBy",
+        "correct_feat": "the clashes of material interests among tribes, social classes, and nations",
+        "options": "1. the City of Portland's Bureau of Planning\n2. the clashes of material interests among tribes, social classes, and nations\n3. Gary Numan",
+        "correct_num": 2,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> was influenced by [MASK].\n\nOptions:\n1. the City of Portland's Bureau of Planning\n2. the clashes of material interests among tribes, social classes, and nations\n3. Gary Numan"
+    },
+    {
+        "test_id": 59,
+        "relation": "InfluencedBy",
+        "correct_feat": "the economic base of society",
+        "options": "1. the outlawing of bull- and bear-baiting in England\n2. Gypsy romantics\n3. the economic base of society",
+        "correct_num": 3,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> was influenced by [MASK].\n\nOptions:\n1. the outlawing of bull- and bear-baiting in England\n2. Gypsy romantics\n3. the economic base of society"
+    },
+    {
+        "test_id": 60,
+        "relation": "InfluencedBy",
+        "correct_feat": "the ideas of other theorists such as Max Weber",
+        "options": "1. the ideas of other theorists such as Max Weber\n2. Saint Thyagaraja Swamy Sishya Parampara\n3. Daniel Caesar",
+        "correct_num": 1,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> was influenced by [MASK].\n\nOptions:\n1. the ideas of other theorists such as Max Weber\n2. Saint Thyagaraja Swamy Sishya Parampara\n3. Daniel Caesar"
+    },
+    {
+        "test_id": 61,
+        "relation": "InfluencedBy",
+        "correct_feat": "the Frankfurt School",
+        "options": "1. the 1848 Revolution\n2. the Frankfurt School\n3. the grammaire g\u00e9n\u00e9rale",
+        "correct_num": 2,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> was influenced by [MASK].\n\nOptions:\n1. the 1848 Revolution\n2. the Frankfurt School\n3. the grammaire g\u00e9n\u00e9rale"
+    },
+    {
+        "test_id": 62,
+        "relation": "InfluencedBy",
+        "correct_feat": "Georg Wilhelm Friedrich Hegel",
+        "options": "1. mass media\n2. The Wild Bunch\n3. Georg Wilhelm Friedrich Hegel",
+        "correct_num": 3,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> was influenced by [MASK].\n\nOptions:\n1. mass media\n2. The Wild Bunch\n3. Georg Wilhelm Friedrich Hegel"
+    },
+    {
+        "test_id": 63,
+        "relation": "InfluencedBy",
+        "correct_feat": "Arnold Toynbee",
+        "options": "1. Arnold Toynbee\n2. the ethnonym\n3. Russian draughts (Shashki)",
+        "correct_num": 1,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> was influenced by [MASK].\n\nOptions:\n1. Arnold Toynbee\n2. the ethnonym\n3. Russian draughts (Shashki)"
+    },
+    {
+        "test_id": 64,
+        "relation": "InfluencedBy",
+        "correct_feat": "Oswald Spengler",
+        "options": "1. Vocaloid 2 singing synthesizer software Hatsune Miku\n2. Oswald Spengler\n3. earlier artists' prototypes",
+        "correct_num": 2,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> was influenced by [MASK].\n\nOptions:\n1. Vocaloid 2 singing synthesizer software Hatsune Miku\n2. Oswald Spengler\n3. earlier artists' prototypes"
+    },
+    {
+        "test_id": 65,
+        "relation": "IsA",
+        "correct_feat": "a type of historical determinism",
+        "options": "1. a self-governing Caribbean archipelago\n2. a team sport\n3. a type of historical determinism",
+        "correct_num": 3,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is [MASK].\n\nOptions:\n1. a self-governing Caribbean archipelago\n2. a team sport\n3. a type of historical determinism"
+    },
+    {
+        "test_id": 66,
+        "relation": "IsA",
+        "correct_feat": "a commentary on, a critique of the work of others in his field",
+        "options": "1. a commentary on, a critique of the work of others in his field\n2. a specialized train\n3. a supergroup",
+        "correct_num": 1,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is [MASK].\n\nOptions:\n1. a commentary on, a critique of the work of others in his field\n2. a specialized train\n3. a supergroup"
+    },
+    {
+        "test_id": 67,
+        "relation": "IsA",
+        "correct_feat": "a variant of historical determinism",
+        "options": "1. a noble family\n2. a variant of historical determinism\n3. one of the best games available on ancient warfare",
+        "correct_num": 2,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is [MASK].\n\nOptions:\n1. a noble family\n2. a variant of historical determinism\n3. one of the best games available on ancient warfare"
+    },
+    {
+        "test_id": 68,
+        "relation": "IsA",
+        "correct_feat": "a classic chicken or the egg argument",
+        "options": "1. marvellous for lovers of complex, realistic games\n2. a patrimony\n3. a classic chicken or the egg argument",
+        "correct_num": 3,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is [MASK].\n\nOptions:\n1. marvellous for lovers of complex, realistic games\n2. a patrimony\n3. a classic chicken or the egg argument"
+    },
+    {
+        "test_id": 69,
+        "relation": "IsA",
+        "correct_feat": "a myth",
+        "options": "1. a myth\n2. a science fiction board wargame\n3. a dog sport",
+        "correct_num": 1,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is [MASK].\n\nOptions:\n1. a myth\n2. a science fiction board wargame\n3. a dog sport"
+    },
+    {
+        "test_id": 70,
+        "relation": "KnownAs",
+        "correct_feat": "a type of historical determinism",
+        "options": "1. an icon cross\n2. a type of historical determinism\n3. 'rich port' in Spanish",
+        "correct_num": 2,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is known as [MASK].\n\nOptions:\n1. an icon cross\n2. a type of historical determinism\n3. 'rich port' in Spanish"
+    },
+    {
+        "test_id": 71,
+        "relation": "KnownAs",
+        "correct_feat": "a variant of historical determinism",
+        "options": "1. 'xboygeniusx' occasionally\n2. Madonna of the Yarnwinder\n3. a variant of historical determinism",
+        "correct_num": 3,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is known as [MASK].\n\nOptions:\n1. 'xboygeniusx' occasionally\n2. Madonna of the Yarnwinder\n3. a variant of historical determinism"
+    },
+    {
+        "test_id": 72,
+        "relation": "KnownFor",
+        "correct_feat": "dogmatism",
+        "options": "1. dogmatism\n2. its use in structural parts of aircraft\n3. its cruelty",
+        "correct_num": 1,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is known for [MASK].\n\nOptions:\n1. dogmatism\n2. its use in structural parts of aircraft\n3. its cruelty"
+    },
+    {
+        "test_id": 73,
+        "relation": "KnownFor",
+        "correct_feat": "a lack of internal consistency",
+        "options": "1. its interpretation of the Citizenship Clause of the Fourteenth Amendment\n2. a lack of internal consistency\n3. its base",
+        "correct_num": 2,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is known for [MASK].\n\nOptions:\n1. its interpretation of the Citizenship Clause of the Fourteenth Amendment\n2. a lack of internal consistency\n3. its base"
+    },
+    {
+        "test_id": 74,
+        "relation": "KnownFor",
+        "correct_feat": "criticism related to materialism",
+        "options": "1. its wrinkle-resistance\n2. its relationship to the board game Ludo\n3. criticism related to materialism",
+        "correct_num": 3,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is known for [MASK].\n\nOptions:\n1. its wrinkle-resistance\n2. its relationship to the board game Ludo\n3. criticism related to materialism"
+    },
+    {
+        "test_id": 75,
+        "relation": "KnownFor",
+        "correct_feat": "arguments that Marxism is a type of historical determinism",
+        "options": "1. arguments that Marxism is a type of historical determinism\n2. its association with military victories against invasions\n3. being played by two people",
+        "correct_num": 1,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is known for [MASK].\n\nOptions:\n1. arguments that Marxism is a type of historical determinism\n2. its association with military victories against invasions\n3. being played by two people"
+    },
+    {
+        "test_id": 76,
+        "relation": "KnownFor",
+        "correct_feat": "arguments that Marxism necessitates a suppression of individual rights",
+        "options": "1. its base\n2. arguments that Marxism necessitates a suppression of individual rights\n3. being the most common format of books printed in the incunabula period",
+        "correct_num": 2,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is known for [MASK].\n\nOptions:\n1. its base\n2. arguments that Marxism necessitates a suppression of individual rights\n3. being the most common format of books printed in the incunabula period"
+    },
+    {
+        "test_id": 77,
+        "relation": "KnownFor",
+        "correct_feat": "issues with the implementation of communism",
+        "options": "1. clarifying the framework for Second Amendment cases\n2. their comedy career\n3. issues with the implementation of communism",
+        "correct_num": 3,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is known for [MASK].\n\nOptions:\n1. clarifying the framework for Second Amendment cases\n2. their comedy career\n3. issues with the implementation of communism"
+    },
+    {
+        "test_id": 78,
+        "relation": "KnownFor",
+        "correct_feat": "economic issues such as the distortion or absence of price signals and reduced incentives",
+        "options": "1. economic issues such as the distortion or absence of price signals and reduced incentives\n2. influencing later High Renaissance depictions of the Madonna and Child\n3. being a blood sport",
+        "correct_num": 1,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is known for [MASK].\n\nOptions:\n1. economic issues such as the distortion or absence of price signals and reduced incentives\n2. influencing later High Renaissance depictions of the Madonna and Child\n3. being a blood sport"
+    },
+    {
+        "test_id": 79,
+        "relation": "KnownFor",
+        "correct_feat": "empirical and epistemological concerns",
+        "options": "1. its influence\n2. empirical and epistemological concerns\n3. its polyomino pieces",
+        "correct_num": 2,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is known for [MASK].\n\nOptions:\n1. its influence\n2. empirical and epistemological concerns\n3. its polyomino pieces"
+    },
+    {
+        "test_id": 80,
+        "relation": "KnownFor",
+        "correct_feat": "vague or unfalsifiable theories",
+        "options": "1. its use in various deployment variants\n2. a district of the military park\n3. vague or unfalsifiable theories",
+        "correct_num": 3,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is known for [MASK].\n\nOptions:\n1. its use in various deployment variants\n2. a district of the military park\n3. vague or unfalsifiable theories"
+    },
+    {
+        "test_id": 81,
+        "relation": "KnownFor",
+        "correct_feat": "dialectical reinterpretation",
+        "options": "1. dialectical reinterpretation\n2. covers of popular songs\n3. hegemony over Ancient Greece",
+        "correct_num": 1,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is known for [MASK].\n\nOptions:\n1. dialectical reinterpretation\n2. covers of popular songs\n3. hegemony over Ancient Greece"
+    },
+    {
+        "test_id": 82,
+        "relation": "PartOf",
+        "correct_feat": "general criticism",
+        "options": "1. the Tujunga Wash Greenbelt Project\n2. general criticism\n3. the historical understanding of medieval society",
+        "correct_num": 2,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is part of [MASK].\n\nOptions:\n1. the Tujunga Wash Greenbelt Project\n2. general criticism\n3. the historical understanding of medieval society"
+    },
+    {
+        "test_id": 83,
+        "relation": "PartOf",
+        "correct_feat": "historical materialism",
+        "options": "1. Loaded Records\n2. Soul Eater media\n3. historical materialism",
+        "correct_num": 3,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is part of [MASK].\n\nOptions:\n1. Loaded Records\n2. Soul Eater media\n3. historical materialism"
+    },
+    {
+        "test_id": 84,
+        "relation": "PartOf",
+        "correct_feat": "historical determinism",
+        "options": "1. historical determinism\n2. the Kansas State Capitol building\n3. cable-stayed bridges",
+        "correct_num": 1,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is part of [MASK].\n\nOptions:\n1. historical determinism\n2. the Kansas State Capitol building\n3. cable-stayed bridges"
+    },
+    {
+        "test_id": 85,
+        "relation": "PublishedIn",
+        "correct_feat": "the 1978 book The Downfall of Capitalism and Communism",
+        "options": "1. 1965\n2. the 1978 book The Downfall of Capitalism and Communism\n3. 1971",
+        "correct_num": 2,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> was published in [MASK].\n\nOptions:\n1. 1965\n2. the 1978 book The Downfall of Capitalism and Communism\n3. 1971"
+    },
+    {
+        "test_id": 86,
+        "relation": "UsedAs",
+        "correct_feat": "a commentary on, a critique of the work of others in his field",
+        "options": "1. the second versicle and response of the Angelus prayer\n2. a trainer\n3. a commentary on, a critique of the work of others in his field",
+        "correct_num": 3,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is used as [MASK].\n\nOptions:\n1. the second versicle and response of the Angelus prayer\n2. a trainer\n3. a commentary on, a critique of the work of others in his field"
+    },
+    {
+        "test_id": 87,
+        "relation": "UsedAs",
+        "correct_feat": "a conceptual framework for describing the often-opposing forces of historical evolution",
+        "options": "1. a conceptual framework for describing the often-opposing forces of historical evolution\n2. a video\n3. music",
+        "correct_num": 1,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is used as [MASK].\n\nOptions:\n1. a conceptual framework for describing the often-opposing forces of historical evolution\n2. a video\n3. music"
+    },
+    {
+        "test_id": 88,
+        "relation": "UsedAs",
+        "correct_feat": "a tool of history",
+        "options": "1. a form of tennis\n2. a tool of history\n3. a liberal arts college",
+        "correct_num": 2,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is used as [MASK].\n\nOptions:\n1. a form of tennis\n2. a tool of history\n3. a liberal arts college"
+    },
+    {
+        "test_id": 89,
+        "relation": "UsedFor",
+        "correct_feat": "criticizing capitalism",
+        "options": "1. charity\n2. personal profit\n3. criticizing capitalism",
+        "correct_num": 3,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is used for [MASK].\n\nOptions:\n1. charity\n2. personal profit\n3. criticizing capitalism"
+    },
+    {
+        "test_id": 90,
+        "relation": "UsedFor",
+        "correct_feat": "advocating socialism using other arguments",
+        "options": "1. advocating socialism using other arguments\n2. exploring a murder case\n3. clarifying legal consequences for States",
+        "correct_num": 1,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is used for [MASK].\n\nOptions:\n1. advocating socialism using other arguments\n2. exploring a murder case\n3. clarifying legal consequences for States"
+    },
+    {
+        "test_id": 91,
+        "relation": "UsedFor",
+        "correct_feat": "describing the often-opposing forces of historical evolution",
+        "options": "1. transport\n2. describing the often-opposing forces of historical evolution\n3. refueling spacecraft",
+        "correct_num": 2,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is used for [MASK].\n\nOptions:\n1. transport\n2. describing the often-opposing forces of historical evolution\n3. refueling spacecraft"
+    },
+    {
+        "test_id": 92,
+        "relation": "UsedFor",
+        "correct_feat": "understanding the forces of history",
+        "options": "1. eating opponents\n2. establishing a dynasty\n3. understanding the forces of history",
+        "correct_num": 3,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is used for [MASK].\n\nOptions:\n1. eating opponents\n2. establishing a dynasty\n3. understanding the forces of history"
+    },
+    {
+        "test_id": 93,
+        "relation": "UsedIn",
+        "correct_feat": "academic papers",
+        "options": "1. academic papers\n2. the planned Sanctuary of The Divine Mercy\n3. East Germany",
+        "correct_num": 1,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is used in [MASK].\n\nOptions:\n1. academic papers\n2. the planned Sanctuary of The Divine Mercy\n3. East Germany"
+    },
+    {
+        "test_id": 94,
+        "relation": "UsedIn",
+        "correct_feat": "scholarly works",
+        "options": "1. WW2-period British invention\n2. scholarly works\n3. Counter-Strike: Global Offensive",
+        "correct_num": 2,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is used in [MASK].\n\nOptions:\n1. WW2-period British invention\n2. scholarly works\n3. Counter-Strike: Global Offensive"
+    },
+    {
+        "test_id": 95,
+        "relation": "UsedTo",
+        "correct_feat": "prove a thesis",
+        "options": "1. practice a religion\n2. defeat Coragus\n3. prove a thesis",
+        "correct_num": 3,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is used to [MASK].\n\nOptions:\n1. practice a religion\n2. defeat Coragus\n3. prove a thesis"
+    },
+    {
+        "test_id": 96,
+        "relation": "UsedTo",
+        "correct_feat": "assert that the history of society is one of economic class conflict",
+        "options": "1. assert that the history of society is one of economic class conflict\n2. measure jump distance\n3. repel the Swedish invasion of 1709",
+        "correct_num": 1,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is used to [MASK].\n\nOptions:\n1. assert that the history of society is one of economic class conflict\n2. measure jump distance\n3. repel the Swedish invasion of 1709"
+    },
+    {
+        "test_id": 99,
+        "relation": "WrittenBy",
+        "correct_feat": "Friedrich Engels",
+        "options": "1. Friedrich Engels\n2. Agnetha F\u00e4ltskog\n3. A. Burac",
+        "correct_num": 1,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> was written by [MASK].\n\nOptions:\n1. Friedrich Engels\n2. Agnetha F\u00e4ltskog\n3. A. Burac"
+    },
+    {
+        "test_id": 100,
+        "relation": "WrittenBy",
+        "correct_feat": "Georg Wilhelm Friedrich Hegel",
+        "options": "1. Modest Mouse\n2. Georg Wilhelm Friedrich Hegel\n3. John O'Hara in the novel BUtterfield 8",
+        "correct_num": 2,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> was written by [MASK].\n\nOptions:\n1. Modest Mouse\n2. Georg Wilhelm Friedrich Hegel\n3. John O'Hara in the novel BUtterfield 8"
+    },
+    {
+        "test_id": 101,
+        "relation": "WrittenBy",
+        "correct_feat": "Arnold Toynbee",
+        "options": "1. Adrian P\u0103unescu\n2. Jennifer Hudson\n3. Arnold Toynbee",
+        "correct_num": 3,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> was written by [MASK].\n\nOptions:\n1. Adrian P\u0103unescu\n2. Jennifer Hudson\n3. Arnold Toynbee"
+    },
+    {
+        "test_id": 102,
+        "relation": "WrittenBy",
+        "correct_feat": "Oswald Spengler",
+        "options": "1. Oswald Spengler\n2. Boots\n3. Daryl Hall and John Oates",
+        "correct_num": 1,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> was written by [MASK].\n\nOptions:\n1. Oswald Spengler\n2. Boots\n3. Daryl Hall and John Oates"
+    },
+    {
+        "test_id": 103,
+        "relation": "WrittenBy",
+        "correct_feat": "Prabhat Ranjan Sarkar",
+        "options": "1. Razor Boy Music Publishing\n2. Prabhat Ranjan Sarkar\n3. the two brothers",
+        "correct_num": 2,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> was written by [MASK].\n\nOptions:\n1. Razor Boy Music Publishing\n2. Prabhat Ranjan Sarkar\n3. the two brothers"
+    },
+    {
+        "test_id": 104,
+        "relation": "WrittenBy",
+        "correct_feat": "Ravi Batra",
+        "options": "1. Eminem, Royce da 5'9\" and Sly \"Pyper\" Jordan\n2. Keith Gross\n3. Ravi Batra",
+        "correct_num": 3,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> was written by [MASK].\n\nOptions:\n1. Eminem, Royce da 5'9\" and Sly \"Pyper\" Jordan\n2. Keith Gross\n3. Ravi Batra"
+    },
+    {
+        "test_id": 105,
+        "relation": "WrittenBy",
+        "correct_feat": "Paul Johnson",
+        "options": "1. Paul Johnson\n2. William Butler Yeats\n3. Davey Havok",
+        "correct_num": 1,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> was written by [MASK].\n\nOptions:\n1. Paul Johnson\n2. William Butler Yeats\n3. Davey Havok"
+    },
+    {
+        "test_id": 108,
+        "relation": "WrittenIn",
+        "correct_feat": "the early 19th century",
+        "options": "1. the early 19th century\n2. 1885\n3. 1970",
+        "correct_num": 1,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> was written in [MASK].\n\nOptions:\n1. the early 19th century\n2. 1885\n3. 1970"
+    }
+]

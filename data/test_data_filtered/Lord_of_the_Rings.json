@@ -1,0 +1,506 @@
+[
+    {
+        "test_id": 0,
+        "relation": "About",
+        "correct_feat": "the Dark Lord Sauron's campaign to conquer all of Middle-earth",
+        "options": "1. the Dark Lord Sauron's campaign to conquer all of Middle-earth\n2. the Bancroft Treaties and their eventual abandonment\n3. folk rock",
+        "correct_num": 1,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is about [MASK].\n\nOptions:\n1. the Dark Lord Sauron's campaign to conquer all of Middle-earth\n2. the Bancroft Treaties and their eventual abandonment\n3. folk rock"
+    },
+    {
+        "test_id": 1,
+        "relation": "About",
+        "correct_feat": "the quest to destroy the One Ring",
+        "options": "1. the problem of lust gone astray\n2. the quest to destroy the One Ring\n3. celebrating Latino and, more specifically, Chicano culture and influence at The University of Southern California and in Los Angeles",
+        "correct_num": 2,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is about [MASK].\n\nOptions:\n1. the problem of lust gone astray\n2. the quest to destroy the One Ring\n3. celebrating Latino and, more specifically, Chicano culture and influence at The University of Southern California and in Los Angeles"
+    },
+    {
+        "test_id": 2,
+        "relation": "Affects",
+        "correct_feat": "the modern fantasy genre",
+        "options": "1. the legality of a unilateral secession of Quebec from Canada\n2. the Supreme Court of the United States\n3. the modern fantasy genre",
+        "correct_num": 3,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> affects [MASK].\n\nOptions:\n1. the legality of a unilateral secession of Quebec from Canada\n2. the Supreme Court of the United States\n3. the modern fantasy genre"
+    },
+    {
+        "test_id": 3,
+        "relation": "AssociatedWith",
+        "correct_feat": "Middle-earth",
+        "options": "1. Middle-earth\n2. the Republic of Texas\n3. Peter D\u00fcring on drums",
+        "correct_num": 1,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is associated with [MASK].\n\nOptions:\n1. Middle-earth\n2. the Republic of Texas\n3. Peter D\u00fcring on drums"
+    },
+    {
+        "test_id": 4,
+        "relation": "AssociatedWith",
+        "correct_feat": "the One Ring",
+        "options": "1. philosophical anarcho-pacifism, egalitarianism, anti-consumerism, and socialism\n2. the One Ring\n3. the ideas of Peter Kropotkin",
+        "correct_num": 2,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is associated with [MASK].\n\nOptions:\n1. philosophical anarcho-pacifism, egalitarianism, anti-consumerism, and socialism\n2. the One Ring\n3. the ideas of Peter Kropotkin"
+    },
+    {
+        "test_id": 5,
+        "relation": "AssociatedWith",
+        "correct_feat": "the Dark Lord Sauron",
+        "options": "1. land sailing\n2. the village of Zarudchi in the Lyubeshiv district\n3. the Dark Lord Sauron",
+        "correct_num": 3,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is associated with [MASK].\n\nOptions:\n1. land sailing\n2. the village of Zarudchi in the Lyubeshiv district\n3. the Dark Lord Sauron"
+    },
+    {
+        "test_id": 6,
+        "relation": "AssociatedWith",
+        "correct_feat": "Frodo",
+        "options": "1. Frodo\n2. Big Death\n3. the Galician Nationalist Bloc",
+        "correct_num": 1,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is associated with [MASK].\n\nOptions:\n1. Frodo\n2. Big Death\n3. the Galician Nationalist Bloc"
+    },
+    {
+        "test_id": 7,
+        "relation": "AssociatedWith",
+        "correct_feat": "Sam",
+        "options": "1. water power from the Lehigh River\n2. Sam\n3. Fredrik Olsson",
+        "correct_num": 2,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is associated with [MASK].\n\nOptions:\n1. water power from the Lehigh River\n2. Sam\n3. Fredrik Olsson"
+    },
+    {
+        "test_id": 8,
+        "relation": "AssociatedWith",
+        "correct_feat": "Merry",
+        "options": "1. Sin\u00e9ad O'Connor\n2. Gang Starr\n3. Merry",
+        "correct_num": 3,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is associated with [MASK].\n\nOptions:\n1. Sin\u00e9ad O'Connor\n2. Gang Starr\n3. Merry"
+    },
+    {
+        "test_id": 9,
+        "relation": "AssociatedWith",
+        "correct_feat": "Pippin",
+        "options": "1. Pippin\n2. the Banu Marin tribe\n3. the Union of Krewo",
+        "correct_num": 1,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is associated with [MASK].\n\nOptions:\n1. Pippin\n2. the Banu Marin tribe\n3. the Union of Krewo"
+    },
+    {
+        "test_id": 10,
+        "relation": "AssociatedWith",
+        "correct_feat": "Gandalf",
+        "options": "1. the UN Security Council chamber's east wall\n2. Gandalf\n3. the Young Ottomans",
+        "correct_num": 2,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is associated with [MASK].\n\nOptions:\n1. the UN Security Council chamber's east wall\n2. Gandalf\n3. the Young Ottomans"
+    },
+    {
+        "test_id": 11,
+        "relation": "AssociatedWith",
+        "correct_feat": "Aragorn",
+        "options": "1. Claud\n2. the socialist calculation debate\n3. Aragorn",
+        "correct_num": 3,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is associated with [MASK].\n\nOptions:\n1. Claud\n2. the socialist calculation debate\n3. Aragorn"
+    },
+    {
+        "test_id": 12,
+        "relation": "AssociatedWith",
+        "correct_feat": "Boromir",
+        "options": "1. Boromir\n2. Thurgood Marshall\n3. Saddam Hussein's Ba'athist Iraq",
+        "correct_num": 1,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is associated with [MASK].\n\nOptions:\n1. Boromir\n2. Thurgood Marshall\n3. Saddam Hussein's Ba'athist Iraq"
+    },
+    {
+        "test_id": 13,
+        "relation": "BelongsTo",
+        "correct_feat": "the fantasy genre",
+        "options": "1. the history of Ireland\n2. the fantasy genre\n3. conservatism",
+        "correct_num": 2,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> belongs to [MASK].\n\nOptions:\n1. the history of Ireland\n2. the fantasy genre\n3. conservatism"
+    },
+    {
+        "test_id": 14,
+        "relation": "ConsistsOf",
+        "correct_feat": "six books",
+        "options": "1. the Afrikaner people's history\n2. a 9-foot-wide Iconic Monstrance\n3. six books",
+        "correct_num": 3,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> consists of [MASK].\n\nOptions:\n1. the Afrikaner people's history\n2. a 9-foot-wide Iconic Monstrance\n3. six books"
+    },
+    {
+        "test_id": 15,
+        "relation": "ConsistsOf",
+        "correct_feat": "several appendices of chronologies, genealogies, and linguistic information",
+        "options": "1. several appendices of chronologies, genealogies, and linguistic information\n2. elements that typically rely on cultural crisis\n3. bats",
+        "correct_num": 1,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> consists of [MASK].\n\nOptions:\n1. several appendices of chronologies, genealogies, and linguistic information\n2. elements that typically rely on cultural crisis\n3. bats"
+    },
+    {
+        "test_id": 16,
+        "relation": "CreatedBy",
+        "correct_feat": "J. R. R. Tolkien",
+        "options": "1. artists to display their handling of complex, crowded scenes\n2. J. R. R. Tolkien\n3. various political leaders and intellectuals in Uganda",
+        "correct_num": 2,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> was created by [MASK].\n\nOptions:\n1. artists to display their handling of complex, crowded scenes\n2. J. R. R. Tolkien\n3. various political leaders and intellectuals in Uganda"
+    },
+    {
+        "test_id": 17,
+        "relation": "HasA",
+        "correct_feat": "numerous references in popular culture",
+        "options": "1. four UK number-ones\n2. a size of 22 ft \u00d7 74 ft\n3. numerous references in popular culture",
+        "correct_num": 3,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> has [MASK].\n\nOptions:\n1. four UK number-ones\n2. a size of 22 ft \u00d7 74 ft\n3. numerous references in popular culture"
+    },
+    {
+        "test_id": 18,
+        "relation": "HasA",
+        "correct_feat": "inspired many derivative works",
+        "options": "1. inspired many derivative works\n2. a tendency to prioritize prudence when enacting change\n3. a tendency towards extreme assertiveness and irascibility in dealing with other scholars",
+        "correct_num": 1,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> has [MASK].\n\nOptions:\n1. inspired many derivative works\n2. a tendency to prioritize prudence when enacting change\n3. a tendency towards extreme assertiveness and irascibility in dealing with other scholars"
+    },
+    {
+        "test_id": 19,
+        "relation": "HasFeatureOf",
+        "correct_feat": "extensive analysis of its themes, literary devices, and origins",
+        "options": "1. a coiled dragon holding a sword in its mouth\n2. extensive analysis of its themes, literary devices, and origins\n3. the traditional maniera greca",
+        "correct_num": 2,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is characterized by [MASK].\n\nOptions:\n1. a coiled dragon holding a sword in its mouth\n2. extensive analysis of its themes, literary devices, and origins\n3. the traditional maniera greca"
+    },
+    {
+        "test_id": 20,
+        "relation": "HasFeatureOf",
+        "correct_feat": "enduring popularity",
+        "options": "1. its distances\n2. the gulf between Islamist Palestinians favoring a more authoritarian state compared to centrist and secular Palestinians supporting democratic self-determination\n3. enduring popularity",
+        "correct_num": 3,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is characterized by [MASK].\n\nOptions:\n1. its distances\n2. the gulf between Islamist Palestinians favoring a more authoritarian state compared to centrist and secular Palestinians supporting democratic self-determination\n3. enduring popularity"
+    },
+    {
+        "test_id": 21,
+        "relation": "Influenced",
+        "correct_feat": "the creation and shaping of the modern fantasy genre",
+        "options": "1. the creation and shaping of the modern fantasy genre\n2. hard rock\n3. the US Billboard Hot 100",
+        "correct_num": 1,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> influenced [MASK].\n\nOptions:\n1. the creation and shaping of the modern fantasy genre\n2. hard rock\n3. the US Billboard Hot 100"
+    },
+    {
+        "test_id": 22,
+        "relation": "InfluencedBy",
+        "correct_feat": "philology",
+        "options": "1. Georg Wilhelm Friedrich Hegel\n2. philology\n3. the United Nations Convention on the Law of the Sea",
+        "correct_num": 2,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> was influenced by [MASK].\n\nOptions:\n1. Georg Wilhelm Friedrich Hegel\n2. philology\n3. the United Nations Convention on the Law of the Sea"
+    },
+    {
+        "test_id": 23,
+        "relation": "InfluencedBy",
+        "correct_feat": "mythology",
+        "options": "1. nativism in India\n2. Auguste Comte\n3. mythology",
+        "correct_num": 3,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> was influenced by [MASK].\n\nOptions:\n1. nativism in India\n2. Auguste Comte\n3. mythology"
+    },
+    {
+        "test_id": 24,
+        "relation": "InfluencedBy",
+        "correct_feat": "Christianity",
+        "options": "1. Christianity\n2. socialism\n3. Nas",
+        "correct_num": 1,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> was influenced by [MASK].\n\nOptions:\n1. Christianity\n2. socialism\n3. Nas"
+    },
+    {
+        "test_id": 25,
+        "relation": "InfluencedBy",
+        "correct_feat": "earlier fantasy works",
+        "options": "1. the growth of productive forces such as technology and natural resources\n2. earlier fantasy works\n3. baseball",
+        "correct_num": 2,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> was influenced by [MASK].\n\nOptions:\n1. the growth of productive forces such as technology and natural resources\n2. earlier fantasy works\n3. baseball"
+    },
+    {
+        "test_id": 26,
+        "relation": "InfluencedBy",
+        "correct_feat": "Tolkien's own experiences in the First World War",
+        "options": "1. the Abbasid Caliphate\n2. the economic base of society\n3. Tolkien's own experiences in the First World War",
+        "correct_num": 3,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> was influenced by [MASK].\n\nOptions:\n1. the Abbasid Caliphate\n2. the economic base of society\n3. Tolkien's own experiences in the First World War"
+    },
+    {
+        "test_id": 27,
+        "relation": "IsA",
+        "correct_feat": "an epic high fantasy novel",
+        "options": "1. an epic high fantasy novel\n2. an American hip hop duo\n3. a totalitarian ideology",
+        "correct_num": 1,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is [MASK].\n\nOptions:\n1. an epic high fantasy novel\n2. an American hip hop duo\n3. a totalitarian ideology"
+    },
+    {
+        "test_id": 28,
+        "relation": "IsA",
+        "correct_feat": "one of the best-selling books ever written",
+        "options": "1. part of the Fundo Museu Paulista Collection\n2. one of the best-selling books ever written\n3. the 14th most popular children's sport in Australia",
+        "correct_num": 2,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is [MASK].\n\nOptions:\n1. part of the Fundo Museu Paulista Collection\n2. one of the best-selling books ever written\n3. the 14th most popular children's sport in Australia"
+    },
+    {
+        "test_id": 29,
+        "relation": "IsA",
+        "correct_feat": "considered one of the most influential fantasy books ever written",
+        "options": "1. a commentary on, a critique of the work of others in his field\n2. a secular nationalist movement\n3. considered one of the most influential fantasy books ever written",
+        "correct_num": 3,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is [MASK].\n\nOptions:\n1. a commentary on, a critique of the work of others in his field\n2. a secular nationalist movement\n3. considered one of the most influential fantasy books ever written"
+    },
+    {
+        "test_id": 30,
+        "relation": "IsA",
+        "correct_feat": "Britain's best-loved novel of all time",
+        "options": "1. Britain's best-loved novel of all time\n2. played with a ball 16 inches in circumference\n3. an effective way to burn off dogs' energy",
+        "correct_num": 1,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is [MASK].\n\nOptions:\n1. Britain's best-loved novel of all time\n2. played with a ball 16 inches in circumference\n3. an effective way to burn off dogs' energy"
+    },
+    {
+        "test_id": 31,
+        "relation": "IsA",
+        "correct_feat": "often called a trilogy",
+        "options": "1. a mural painting\n2. often called a trilogy\n3. a response to Zionist immigration and settlement",
+        "correct_num": 2,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is [MASK].\n\nOptions:\n1. a mural painting\n2. often called a trilogy\n3. a response to Zionist immigration and settlement"
+    },
+    {
+        "test_id": 33,
+        "relation": "KnownFor",
+        "correct_feat": "its main antagonist, the Dark Lord Sauron",
+        "options": "1. its main antagonist, the Dark Lord Sauron\n2. electronic music\n3. its collaboration with Masayoshi \u014cishi and Tom Hack",
+        "correct_num": 1,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is known for [MASK].\n\nOptions:\n1. its main antagonist, the Dark Lord Sauron\n2. electronic music\n3. its collaboration with Masayoshi \u014cishi and Tom Hack"
+    },
+    {
+        "test_id": 34,
+        "relation": "KnownFor",
+        "correct_feat": "the One Ring",
+        "options": "1. prioritizing prudence when enacting change\n2. the One Ring\n3. being great patrons of Persian culture, art, literature, and language",
+        "correct_num": 2,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is known for [MASK].\n\nOptions:\n1. prioritizing prudence when enacting change\n2. the One Ring\n3. being great patrons of Persian culture, art, literature, and language"
+    },
+    {
+        "test_id": 35,
+        "relation": "KnownFor",
+        "correct_feat": "its characters Frodo, Sam, Merry, and Pippin",
+        "options": "1. its fixed matches\n2. its similar theme and characteristics to Damaskino's masterpieces\n3. its characters Frodo, Sam, Merry, and Pippin",
+        "correct_num": 3,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is known for [MASK].\n\nOptions:\n1. its fixed matches\n2. its similar theme and characteristics to Damaskino's masterpieces\n3. its characters Frodo, Sam, Merry, and Pippin"
+    },
+    {
+        "test_id": 36,
+        "relation": "KnownFor",
+        "correct_feat": "its characters Gandalf, Aragorn, Boromir, Legolas, and Gimli",
+        "options": "1. its characters Gandalf, Aragorn, Boromir, Legolas, and Gimli\n2. embittered explorations of working class life\n3. its language isolate",
+        "correct_num": 1,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is known for [MASK].\n\nOptions:\n1. its characters Gandalf, Aragorn, Boromir, Legolas, and Gimli\n2. embittered explorations of working class life\n3. its language isolate"
+    },
+    {
+        "test_id": 37,
+        "relation": "KnownFor",
+        "correct_feat": "its themes",
+        "options": "1. \"I'm Too Sexy\"\n2. its themes\n3. its veneration in Gorodets",
+        "correct_num": 2,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is known for [MASK].\n\nOptions:\n1. \"I'm Too Sexy\"\n2. its themes\n3. its veneration in Gorodets"
+    },
+    {
+        "test_id": 38,
+        "relation": "KnownFor",
+        "correct_feat": "its literary devices",
+        "options": "1. its Impressionist aesthetic\n2. asserting that women are oppressed due to their financial dependence on males\n3. its literary devices",
+        "correct_num": 3,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is known for [MASK].\n\nOptions:\n1. its Impressionist aesthetic\n2. asserting that women are oppressed due to their financial dependence on males\n3. its literary devices"
+    },
+    {
+        "test_id": 39,
+        "relation": "KnownFor",
+        "correct_feat": "its origins",
+        "options": "1. its origins\n2. its definition in terms of a shared European cultural heritage\n3. being referred to as tenis adaptivo de pie",
+        "correct_num": 1,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is known for [MASK].\n\nOptions:\n1. its origins\n2. its definition in terms of a shared European cultural heritage\n3. being referred to as tenis adaptivo de pie"
+    },
+    {
+        "test_id": 40,
+        "relation": "LocatedIn",
+        "correct_feat": "in Middle-earth",
+        "options": "1. on an interior wall of the Chapel Hill Post Office\n2. in Middle-earth\n3. in Amstetten, Lower Austria",
+        "correct_num": 2,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is located [MASK].\n\nOptions:\n1. on an interior wall of the Chapel Hill Post Office\n2. in Middle-earth\n3. in Amstetten, Lower Austria"
+    },
+    {
+        "test_id": 41,
+        "relation": "LocatedIn",
+        "correct_feat": "in the Shire",
+        "options": "1. at the intersection of North Columbia Street and East Rosemary Street\n2. in the sanctuary of an Orthodox church\n3. in the Shire",
+        "correct_num": 3,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is located [MASK].\n\nOptions:\n1. at the intersection of North Columbia Street and East Rosemary Street\n2. in the sanctuary of an Orthodox church\n3. in the Shire"
+    },
+    {
+        "test_id": 42,
+        "relation": "LocatedIn",
+        "correct_feat": "in Rivendell",
+        "options": "1. in Rivendell\n2. in northern Gaul\n3. on the wall of The Prince Albert pub in Brighton",
+        "correct_num": 1,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is located [MASK].\n\nOptions:\n1. in Rivendell\n2. in northern Gaul\n3. on the wall of The Prince Albert pub in Brighton"
+    },
+    {
+        "test_id": 43,
+        "relation": "LocatedIn",
+        "correct_feat": "in the Mines of Moria",
+        "options": "1. in Sutton High Street\n2. in the Mines of Moria\n3. in North Macedonia",
+        "correct_num": 2,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is located [MASK].\n\nOptions:\n1. in Sutton High Street\n2. in the Mines of Moria\n3. in North Macedonia"
+    },
+    {
+        "test_id": 44,
+        "relation": "LocatedIn",
+        "correct_feat": "in Lothl\u00f3rien",
+        "options": "1. in Southern Africa\n2. in cities\n3. in Lothl\u00f3rien",
+        "correct_num": 3,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is located [MASK].\n\nOptions:\n1. in Southern Africa\n2. in cities\n3. in Lothl\u00f3rien"
+    },
+    {
+        "test_id": 45,
+        "relation": "LocatedIn",
+        "correct_feat": "in Mordor",
+        "options": "1. in Mordor\n2. in New York City\n3. in the Prof. C\u00e9sar Leyton Caravagno Pharmacy Museum",
+        "correct_num": 1,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is located [MASK].\n\nOptions:\n1. in Mordor\n2. in New York City\n3. in the Prof. C\u00e9sar Leyton Caravagno Pharmacy Museum"
+    },
+    {
+        "test_id": 46,
+        "relation": "LocatedIn",
+        "correct_feat": "in the Emyn Muil",
+        "options": "1. in the Nilgiris\n2. in the Emyn Muil\n3. in Topsfield",
+        "correct_num": 2,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is located [MASK].\n\nOptions:\n1. in the Nilgiris\n2. in the Emyn Muil\n3. in Topsfield"
+    },
+    {
+        "test_id": 47,
+        "relation": "LocatedIn",
+        "correct_feat": "in Ithilien",
+        "options": "1. in the present-day counties of Santa Barbara, Ventura, and San Luis Obispo\n2. in the Davis Mountains Resort in Jeff Davis County\n3. in Ithilien",
+        "correct_num": 3,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is located [MASK].\n\nOptions:\n1. in the present-day counties of Santa Barbara, Ventura, and San Luis Obispo\n2. in the Davis Mountains Resort in Jeff Davis County\n3. in Ithilien"
+    },
+    {
+        "test_id": 48,
+        "relation": "LocatedIn",
+        "correct_feat": "in Minas Tirith",
+        "options": "1. in Minas Tirith\n2. in the Diyala River region\n3. in Amstetten, Lower Austria",
+        "correct_num": 1,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is located [MASK].\n\nOptions:\n1. in Minas Tirith\n2. in the Diyala River region\n3. in Amstetten, Lower Austria"
+    },
+    {
+        "test_id": 50,
+        "relation": "OriginatedIn",
+        "correct_feat": "a sequel to The Hobbit",
+        "options": "1. the Blachernae quarter\n2. Southern California\n3. a sequel to The Hobbit",
+        "correct_num": 3,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> originated in [MASK].\n\nOptions:\n1. the Blachernae quarter\n2. Southern California\n3. a sequel to The Hobbit"
+    },
+    {
+        "test_id": 51,
+        "relation": "PartOf",
+        "correct_feat": "a two-volume set with The Silmarillion",
+        "options": "1. a two-volume set with The Silmarillion\n2. the regulation of taxicabs in the United Kingdom\n3. the sport with an official international match",
+        "correct_num": 1,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is part of [MASK].\n\nOptions:\n1. a two-volume set with The Silmarillion\n2. the regulation of taxicabs in the United Kingdom\n3. the sport with an official international match"
+    },
+    {
+        "test_id": 52,
+        "relation": "PublishedAs",
+        "correct_feat": "a single volume in 1968",
+        "options": "1. \"Freestyle\" EPs\n2. a single volume in 1968\n3. the EP Vacuum",
+        "correct_num": 2,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> was published as [MASK].\n\nOptions:\n1. \"Freestyle\" EPs\n2. a single volume in 1968\n3. the EP Vacuum"
+    },
+    {
+        "test_id": 53,
+        "relation": "PublishedAs",
+        "correct_feat": "a boxed set in 1957",
+        "options": "1. Eton Alive\n2. a single\n3. a boxed set in 1957",
+        "correct_num": 3,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> was published as [MASK].\n\nOptions:\n1. Eton Alive\n2. a single\n3. a boxed set in 1957"
+    },
+    {
+        "test_id": 54,
+        "relation": "PublishedIn",
+        "correct_feat": "three volumes",
+        "options": "1. three volumes\n2. the travel/recreational pages of the newspapers\n3. 1985",
+        "correct_num": 1,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> was published in [MASK].\n\nOptions:\n1. three volumes\n2. the travel/recreational pages of the newspapers\n3. 1985"
+    },
+    {
+        "test_id": 55,
+        "relation": "PublishedIn",
+        "correct_feat": "stages from 29 July 1954 to 20 October 1955",
+        "options": "1. 2013\n2. stages from 29 July 1954 to 20 October 1955\n3. 2021",
+        "correct_num": 2,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> was published in [MASK].\n\nOptions:\n1. 2013\n2. stages from 29 July 1954 to 20 October 1955\n3. 2021"
+    },
+    {
+        "test_id": 56,
+        "relation": "UsedIn",
+        "correct_feat": "popular culture",
+        "options": "1. the Eurovision Song Contest 1978\n2. administrative texts\n3. popular culture",
+        "correct_num": 3,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is used in [MASK].\n\nOptions:\n1. the Eurovision Song Contest 1978\n2. administrative texts\n3. popular culture"
+    },
+    {
+        "test_id": 58,
+        "relation": "UsedIn",
+        "correct_feat": "music",
+        "options": "1. the Secession Building\n2. music\n3. seal inscriptions",
+        "correct_num": 2,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is used in [MASK].\n\nOptions:\n1. the Secession Building\n2. music\n3. seal inscriptions"
+    },
+    {
+        "test_id": 59,
+        "relation": "UsedIn",
+        "correct_feat": "films",
+        "options": "1. the Sinjska alka\n2. the 1992 presidential election\n3. films",
+        "correct_num": 3,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is used in [MASK].\n\nOptions:\n1. the Sinjska alka\n2. the 1992 presidential election\n3. films"
+    },
+    {
+        "test_id": 60,
+        "relation": "UsedIn",
+        "correct_feat": "television",
+        "options": "1. television\n2. Iraq\n3. EFC rules",
+        "correct_num": 1,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is used in [MASK].\n\nOptions:\n1. television\n2. Iraq\n3. EFC rules"
+    },
+    {
+        "test_id": 61,
+        "relation": "UsedIn",
+        "correct_feat": "video games",
+        "options": "1. intergovernmental organizations\n2. video games\n3. the Belgian movie Gangsta",
+        "correct_num": 2,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is used in [MASK].\n\nOptions:\n1. intergovernmental organizations\n2. video games\n3. the Belgian movie Gangsta"
+    },
+    {
+        "test_id": 62,
+        "relation": "UsedIn",
+        "correct_feat": "board games",
+        "options": "1. the planned Sanctuary of The Divine Mercy\n2. the US\n3. board games",
+        "correct_num": 3,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is used in [MASK].\n\nOptions:\n1. the planned Sanctuary of The Divine Mercy\n2. the US\n3. board games"
+    },
+    {
+        "test_id": 63,
+        "relation": "UsedTo",
+        "correct_feat": "rally the Free Peoples of Middle-earth against Sauron's armies",
+        "options": "1. rally the Free Peoples of Middle-earth against Sauron's armies\n2. depict specific individuals\n3. seize control by means foul and fair",
+        "correct_num": 1,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is used to [MASK].\n\nOptions:\n1. rally the Free Peoples of Middle-earth against Sauron's armies\n2. depict specific individuals\n3. seize control by means foul and fair"
+    },
+    {
+        "test_id": 65,
+        "relation": "WrittenBy",
+        "correct_feat": "J. R. R. Tolkien",
+        "options": "1. William Morris\n2. Jacques de Guyse\n3. J. R. R. Tolkien",
+        "correct_num": 3,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> was written by [MASK].\n\nOptions:\n1. William Morris\n2. Jacques de Guyse\n3. J. R. R. Tolkien"
+    },
+    {
+        "test_id": 66,
+        "relation": "WrittenIn",
+        "correct_feat": "stages between 1937 and 1949",
+        "options": "1. stages between 1937 and 1949\n2. the Gospel of Luke\n3. 1885",
+        "correct_num": 1,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> was written in [MASK].\n\nOptions:\n1. stages between 1937 and 1949\n2. the Gospel of Luke\n3. 1885"
+    }
+]

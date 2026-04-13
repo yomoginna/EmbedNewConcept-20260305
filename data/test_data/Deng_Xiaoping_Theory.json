@@ -1,0 +1,410 @@
+[
+    {
+        "test_id": 0,
+        "relation": "IsA",
+        "correct_feat": "a series of political and economic ideologies",
+        "options": "1. a series of political and economic ideologies\n2. a patrimony\n3. a performing act",
+        "correct_num": 1,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is [MASK].\n\nOptions:\n1. a series of political and economic ideologies\n2. a patrimony\n3. a performing act"
+    },
+    {
+        "test_id": 1,
+        "relation": "IsA",
+        "correct_feat": "Dengism",
+        "options": "1. a 2003 book\n2. Dengism\n3. a fresco",
+        "correct_num": 2,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is [MASK].\n\nOptions:\n1. a 2003 book\n2. Dengism\n3. a fresco"
+    },
+    {
+        "test_id": 2,
+        "relation": "IsA",
+        "correct_feat": "an adaptation of Marxism–Leninism and Maoism",
+        "options": "1. a notable Greek-style version of the subject\n2. a mural\n3. an adaptation of Marxism–Leninism and Maoism",
+        "correct_num": 3,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is [MASK].\n\nOptions:\n1. a notable Greek-style version of the subject\n2. a mural\n3. an adaptation of Marxism–Leninism and Maoism"
+    },
+    {
+        "test_id": 3,
+        "relation": "IsA",
+        "correct_feat": "the guiding ideology of the Chinese Communist Party",
+        "options": "1. the guiding ideology of the Chinese Communist Party\n2. a case of incest\n3. a legal precedent",
+        "correct_num": 1,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is [MASK].\n\nOptions:\n1. the guiding ideology of the Chinese Communist Party\n2. a case of incest\n3. a legal precedent"
+    },
+    {
+        "test_id": 4,
+        "relation": "IsA",
+        "correct_feat": "the spiritual pillar of the Chinese nation",
+        "options": "1. a game that can be played with advanced rules known as WAFU rules\n2. the spiritual pillar of the Chinese nation\n3. a portmanteau of agitation and propaganda",
+        "correct_num": 2,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is [MASK].\n\nOptions:\n1. a game that can be played with advanced rules known as WAFU rules\n2. the spiritual pillar of the Chinese nation\n3. a portmanteau of agitation and propaganda"
+    },
+    {
+        "test_id": 5,
+        "relation": "Affects",
+        "correct_feat": "China's modern economy",
+        "options": "1. the anime series Ace of Diamond: Act II\n2. voter turnout for elections\n3. China's modern economy",
+        "correct_num": 3,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> affects [MASK].\n\nOptions:\n1. the anime series Ace of Diamond: Act II\n2. voter turnout for elections\n3. China's modern economy"
+    },
+    {
+        "test_id": 6,
+        "relation": "AssociatedWith",
+        "correct_feat": "Marxism–Leninism",
+        "options": "1. Marxism–Leninism\n2. the Banu Marin tribe\n3. the Union of Krewo",
+        "correct_num": 1,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is associated with [MASK].\n\nOptions:\n1. Marxism–Leninism\n2. the Banu Marin tribe\n3. the Union of Krewo"
+    },
+    {
+        "test_id": 7,
+        "relation": "AssociatedWith",
+        "correct_feat": "Maoism",
+        "options": "1. the UN Security Council chamber's east wall\n2. Maoism\n3. the Consecration of the National Cemetery",
+        "correct_num": 2,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is associated with [MASK].\n\nOptions:\n1. the UN Security Council chamber's east wall\n2. Maoism\n3. the Consecration of the National Cemetery"
+    },
+    {
+        "test_id": 8,
+        "relation": "BelongsTo",
+        "correct_feat": "the theory of socialism with Chinese characteristics",
+        "options": "1. the South Korean boy band SS501\n2. the steeplechase calendar\n3. the theory of socialism with Chinese characteristics",
+        "correct_num": 3,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> belongs to [MASK].\n\nOptions:\n1. the South Korean boy band SS501\n2. the steeplechase calendar\n3. the theory of socialism with Chinese characteristics"
+    },
+    {
+        "test_id": 9,
+        "relation": "CreatedBy",
+        "correct_feat": "Chinese leader Deng Xiaoping",
+        "options": "1. Chinese leader Deng Xiaoping\n2. General Assembly resolution 77/276 adopted on March 29, 2023\n3. Big Wreck",
+        "correct_num": 1,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> was created by [MASK].\n\nOptions:\n1. Chinese leader Deng Xiaoping\n2. General Assembly resolution 77/276 adopted on March 29, 2023\n3. Big Wreck"
+    },
+    {
+        "test_id": 10,
+        "relation": "CreatedTo",
+        "correct_feat": "be an adaptation of Marxism–Leninism and Maoism to the existing socioeconomic conditions of China",
+        "options": "1. bounce on water\n2. be an adaptation of Marxism–Leninism and Maoism to the existing socioeconomic conditions of China\n3. improve the visibility of the clock",
+        "correct_num": 2,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> was created to [MASK].\n\nOptions:\n1. bounce on water\n2. be an adaptation of Marxism–Leninism and Maoism to the existing socioeconomic conditions of China\n3. improve the visibility of the clock"
+    },
+    {
+        "test_id": 11,
+        "relation": "DevelopedBy",
+        "correct_feat": "Chinese leader Deng Xiaoping",
+        "options": "1. Simulations Publications Inc. (SPI)\n2. Choi Yong-sool's disciples\n3. Chinese leader Deng Xiaoping",
+        "correct_num": 3,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> was developed by [MASK].\n\nOptions:\n1. Simulations Publications Inc. (SPI)\n2. Choi Yong-sool's disciples\n3. Chinese leader Deng Xiaoping"
+    },
+    {
+        "test_id": 12,
+        "relation": "FoundedBy",
+        "correct_feat": "Deng Xiaoping",
+        "options": "1. Deng Xiaoping\n2. Ilya Prusikin\n3. John Hizer",
+        "correct_num": 1,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> was founded by [MASK].\n\nOptions:\n1. Deng Xiaoping\n2. Ilya Prusikin\n3. John Hizer"
+    },
+    {
+        "test_id": 13,
+        "relation": "HasA",
+        "correct_feat": "an advocation of political and economic pragmatism",
+        "options": "1. four UK number-ones\n2. an advocation of political and economic pragmatism\n3. a size of 22 ft × 74 ft",
+        "correct_num": 2,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> has [MASK].\n\nOptions:\n1. four UK number-ones\n2. an advocation of political and economic pragmatism\n3. a size of 22 ft × 74 ft"
+    },
+    {
+        "test_id": 14,
+        "relation": "HasA",
+        "correct_feat": "the concept of 'Comrade Deng Xiaoping's Theory of Building Socialism with Chinese Characteristics'",
+        "options": "1. a government-debt crisis\n2. \"limited intelligence\" gameplay\n3. the concept of 'Comrade Deng Xiaoping's Theory of Building Socialism with Chinese Characteristics'",
+        "correct_num": 3,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> has [MASK].\n\nOptions:\n1. a government-debt crisis\n2. \"limited intelligence\" gameplay\n3. the concept of 'Comrade Deng Xiaoping's Theory of Building Socialism with Chinese Characteristics'"
+    },
+    {
+        "test_id": 15,
+        "relation": "HasA",
+        "correct_feat": "the terms 'theory of socialism with Chinese characteristics,' 'path of socialism with Chinese characteristics,' 'cause of socialism with Chinese characteristics,' and 'great banner of socialism with Chinese characteristics'",
+        "options": "1. the terms 'theory of socialism with Chinese characteristics,' 'path of socialism with Chinese characteristics,' 'cause of socialism with Chinese characteristics,' and 'great banner of socialism with Chinese characteristics'\n2. a niche\n3. a large portion of Christ's hair on his left side with damage",
+        "correct_num": 1,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> has [MASK].\n\nOptions:\n1. the terms 'theory of socialism with Chinese characteristics,' 'path of socialism with Chinese characteristics,' 'cause of socialism with Chinese characteristics,' and 'great banner of socialism with Chinese characteristics'\n2. a niche\n3. a large portion of Christ's hair on his left side with damage"
+    },
+    {
+        "test_id": 16,
+        "relation": "HasA",
+        "correct_feat": "the concept of 'one country, two systems'",
+        "options": "1. tuned mass dampers\n2. the concept of 'one country, two systems'\n3. an east-west axis of Poland to Belgium",
+        "correct_num": 2,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> has [MASK].\n\nOptions:\n1. tuned mass dampers\n2. the concept of 'one country, two systems'\n3. an east-west axis of Poland to Belgium"
+    },
+    {
+        "test_id": 17,
+        "relation": "HasFeatureOf",
+        "correct_feat": "opening China to the outside world",
+        "options": "1. its ruling that New York's law was unconstitutional\n2. the practice of torture widely documented as a distinctive trait of the Egyptian police\n3. opening China to the outside world",
+        "correct_num": 3,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is characterized by [MASK].\n\nOptions:\n1. its ruling that New York's law was unconstitutional\n2. the practice of torture widely documented as a distinctive trait of the Egyptian police\n3. opening China to the outside world"
+    },
+    {
+        "test_id": 18,
+        "relation": "HasFeatureOf",
+        "correct_feat": "the implementation of one country, two systems",
+        "options": "1. the implementation of one country, two systems\n2. five men, one of whom was a \"Branán\" or chief\n3. a per curiam decision",
+        "correct_num": 1,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is characterized by [MASK].\n\nOptions:\n1. the implementation of one country, two systems\n2. five men, one of whom was a \"Branán\" or chief\n3. a per curiam decision"
+    },
+    {
+        "test_id": 19,
+        "relation": "HasFeatureOf",
+        "correct_feat": "the phrase 'seek truth from facts'",
+        "options": "1. four maps in four colors\n2. the phrase 'seek truth from facts'\n3. being an abstract strategy game",
+        "correct_num": 2,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is characterized by [MASK].\n\nOptions:\n1. four maps in four colors\n2. the phrase 'seek truth from facts'\n3. being an abstract strategy game"
+    },
+    {
+        "test_id": 20,
+        "relation": "HasFeatureOf",
+        "correct_feat": "political and economic pragmatism",
+        "options": "1. occurring with any caliber\n2. its perspectiveless style\n3. political and economic pragmatism",
+        "correct_num": 3,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is characterized by [MASK].\n\nOptions:\n1. occurring with any caliber\n2. its perspectiveless style\n3. political and economic pragmatism"
+    },
+    {
+        "test_id": 21,
+        "relation": "HasFeatureOf",
+        "correct_feat": "following its own path",
+        "options": "1. following its own path\n2. embittered rants about modern working life\n3. the Peace of Nicias",
+        "correct_num": 1,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is characterized by [MASK].\n\nOptions:\n1. following its own path\n2. embittered rants about modern working life\n3. the Peace of Nicias"
+    },
+    {
+        "test_id": 22,
+        "relation": "HasFeatureOf",
+        "correct_feat": "not treating books as dogma",
+        "options": "1. attracting between 7000 and 8000 people in 2017\n2. not treating books as dogma\n3. its founder, Seljuk Beg",
+        "correct_num": 2,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is characterized by [MASK].\n\nOptions:\n1. attracting between 7000 and 8000 people in 2017\n2. not treating books as dogma\n3. its founder, Seljuk Beg"
+    },
+    {
+        "test_id": 23,
+        "relation": "HasFeatureOf",
+        "correct_feat": "not copying foreign models",
+        "options": "1. two armies of uneven numbers\n2. being popular, influential, and enduring\n3. not copying foreign models",
+        "correct_num": 3,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is characterized by [MASK].\n\nOptions:\n1. two armies of uneven numbers\n2. being popular, influential, and enduring\n3. not copying foreign models"
+    },
+    {
+        "test_id": 24,
+        "relation": "HasFeatureOf",
+        "correct_feat": "taking Marxism as a guide",
+        "options": "1. taking Marxism as a guide\n2. being a popular method of community and student outreach\n3. high contrast between the space and the subjects",
+        "correct_num": 1,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is characterized by [MASK].\n\nOptions:\n1. taking Marxism as a guide\n2. being a popular method of community and student outreach\n3. high contrast between the space and the subjects"
+    },
+    {
+        "test_id": 25,
+        "relation": "HasFeatureOf",
+        "correct_feat": "taking practice as the sole criterion for testing truth",
+        "options": "1. prioritizing defense over offense\n2. taking practice as the sole criterion for testing truth\n3. players advancing to the higher numbered square when someone gets out",
+        "correct_num": 2,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is characterized by [MASK].\n\nOptions:\n1. prioritizing defense over offense\n2. taking practice as the sole criterion for testing truth\n3. players advancing to the higher numbered square when someone gets out"
+    },
+    {
+        "test_id": 26,
+        "relation": "HasFeatureOf",
+        "correct_feat": "emancipating minds",
+        "options": "1. specifications of game length, map board configuration, counters involved, special rules for the conditions of the particular battle such as weather, and victory conditions\n2. a shallow, oval hull on fixed runners\n3. emancipating minds",
+        "correct_num": 3,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is characterized by [MASK].\n\nOptions:\n1. specifications of game length, map board configuration, counters involved, special rules for the conditions of the particular battle such as weather, and victory conditions\n2. a shallow, oval hull on fixed runners\n3. emancipating minds"
+    },
+    {
+        "test_id": 27,
+        "relation": "Influenced",
+        "correct_feat": "China's modern economy",
+        "options": "1. China's modern economy\n2. the succession by being tonsured and sent to a monastery\n3. the cultural identity of Toulouse",
+        "correct_num": 1,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> influenced [MASK].\n\nOptions:\n1. China's modern economy\n2. the succession by being tonsured and sent to a monastery\n3. the cultural identity of Toulouse"
+    },
+    {
+        "test_id": 28,
+        "relation": "InfluencedBy",
+        "correct_feat": "Marxism–Leninism",
+        "options": "1. Greek folk music\n2. Marxism–Leninism\n3. the game of chess",
+        "correct_num": 2,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> was influenced by [MASK].\n\nOptions:\n1. Greek folk music\n2. Marxism–Leninism\n3. the game of chess"
+    },
+    {
+        "test_id": 29,
+        "relation": "InfluencedBy",
+        "correct_feat": "Maoism",
+        "options": "1. the Parti Québécois leader Lucien Bouchard's announcement to hold another referendum\n2. Tang Soo Do\n3. Maoism",
+        "correct_num": 3,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> was influenced by [MASK].\n\nOptions:\n1. the Parti Québécois leader Lucien Bouchard's announcement to hold another referendum\n2. Tang Soo Do\n3. Maoism"
+    },
+    {
+        "test_id": 30,
+        "relation": "InfluencedBy",
+        "correct_feat": "Lenin's New Economic Policy",
+        "options": "1. Lenin's New Economic Policy\n2. Egypt\n3. The Platters",
+        "correct_num": 1,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> was influenced by [MASK].\n\nOptions:\n1. Lenin's New Economic Policy\n2. Egypt\n3. The Platters"
+    },
+    {
+        "test_id": 31,
+        "relation": "KnownAs",
+        "correct_feat": "Dengism",
+        "options": "1. Feszty Cyclorama\n2. Dengism\n3. the Karolinger",
+        "correct_num": 2,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is known as [MASK].\n\nOptions:\n1. Feszty Cyclorama\n2. Dengism\n3. the Karolinger"
+    },
+    {
+        "test_id": 32,
+        "relation": "KnownFor",
+        "correct_feat": "advocating political and economic pragmatism",
+        "options": "1. its veneration in Gorodets\n2. its Impressionist aesthetic\n3. advocating political and economic pragmatism",
+        "correct_num": 3,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is known for [MASK].\n\nOptions:\n1. its veneration in Gorodets\n2. its Impressionist aesthetic\n3. advocating political and economic pragmatism"
+    },
+    {
+        "test_id": 33,
+        "relation": "KnownFor",
+        "correct_feat": "stressing opening China to the outside world",
+        "options": "1. stressing opening China to the outside world\n2. simulating Operation Barbarossa\n3. receiving many positive reviews",
+        "correct_num": 1,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is known for [MASK].\n\nOptions:\n1. stressing opening China to the outside world\n2. simulating Operation Barbarossa\n3. receiving many positive reviews"
+    },
+    {
+        "test_id": 34,
+        "relation": "KnownFor",
+        "correct_feat": "the concept of 'one country, two systems'",
+        "options": "1. its association with Christianity\n2. the concept of 'one country, two systems'\n3. its compositions",
+        "correct_num": 2,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is known for [MASK].\n\nOptions:\n1. its association with Christianity\n2. the concept of 'one country, two systems'\n3. its compositions"
+    },
+    {
+        "test_id": 35,
+        "relation": "UsedAs",
+        "correct_feat": "the guiding ideology of the Chinese Communist Party",
+        "options": "1. a title of the Blessed Virgin Mary\n2. an object of childish play\n3. the guiding ideology of the Chinese Communist Party",
+        "correct_num": 3,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is used as [MASK].\n\nOptions:\n1. a title of the Blessed Virgin Mary\n2. an object of childish play\n3. the guiding ideology of the Chinese Communist Party"
+    },
+    {
+        "test_id": 36,
+        "relation": "UsedAs",
+        "correct_feat": "the spiritual pillar of the Chinese nation",
+        "options": "1. the spiritual pillar of the Chinese nation\n2. a copy at Yaroslavl\n3. a pleasure craft",
+        "correct_num": 1,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is used as [MASK].\n\nOptions:\n1. the spiritual pillar of the Chinese nation\n2. a copy at Yaroslavl\n3. a pleasure craft"
+    },
+    {
+        "test_id": 37,
+        "relation": "UsedFor",
+        "correct_feat": "the construction of socialism within China",
+        "options": "1. celebrating the composer's 250th birthday\n2. the construction of socialism within China\n3. intentional ricochets",
+        "correct_num": 2,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is used for [MASK].\n\nOptions:\n1. celebrating the composer's 250th birthday\n2. the construction of socialism within China\n3. intentional ricochets"
+    },
+    {
+        "test_id": 38,
+        "relation": "UsedFor",
+        "correct_feat": "self-improvement",
+        "options": "1. tandem BASE jumping\n2. capturing and reviewing high speed camera footage\n3. self-improvement",
+        "correct_num": 3,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is used for [MASK].\n\nOptions:\n1. tandem BASE jumping\n2. capturing and reviewing high speed camera footage\n3. self-improvement"
+    },
+    {
+        "test_id": 39,
+        "relation": "UsedFor",
+        "correct_feat": "the development of a socialist system",
+        "options": "1. the development of a socialist system\n2. durable upholstery\n3. team attendance at Major and Minor League baseball games",
+        "correct_num": 1,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is used for [MASK].\n\nOptions:\n1. the development of a socialist system\n2. durable upholstery\n3. team attendance at Major and Minor League baseball games"
+    },
+    {
+        "test_id": 40,
+        "relation": "UsedIn",
+        "correct_feat": "China's modern economy",
+        "options": "1. the International Cherry Pit-Spitting Championship\n2. China's modern economy\n3. the context of the American Convention on Human Rights",
+        "correct_num": 2,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is used in [MASK].\n\nOptions:\n1. the International Cherry Pit-Spitting Championship\n2. China's modern economy\n3. the context of the American Convention on Human Rights"
+    },
+    {
+        "test_id": 41,
+        "relation": "UsedTo",
+        "correct_feat": "develop productive forces",
+        "options": "1. attempt a goal\n2. depict the beginning of the Hungarian conquest of the Carpathian Basin in 895\n3. develop productive forces",
+        "correct_num": 3,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is used to [MASK].\n\nOptions:\n1. attempt a goal\n2. depict the beginning of the Hungarian conquest of the Carpathian Basin in 895\n3. develop productive forces"
+    },
+    {
+        "test_id": 42,
+        "relation": "UsedTo",
+        "correct_feat": "eliminate exploitation",
+        "options": "1. eliminate exploitation\n2. revive the symbols and practices of the Sasanian Empire\n3. introduce potential pieces with special powers",
+        "correct_num": 1,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is used to [MASK].\n\nOptions:\n1. eliminate exploitation\n2. revive the symbols and practices of the Sasanian Empire\n3. introduce potential pieces with special powers"
+    },
+    {
+        "test_id": 43,
+        "relation": "UsedTo",
+        "correct_feat": "eliminate polarization",
+        "options": "1. provide the standard equipment for playing ASL\n2. eliminate polarization\n3. hang criminals",
+        "correct_num": 2,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is used to [MASK].\n\nOptions:\n1. provide the standard equipment for playing ASL\n2. eliminate polarization\n3. hang criminals"
+    },
+    {
+        "test_id": 44,
+        "relation": "UsedTo",
+        "correct_feat": "achieve common prosperity",
+        "options": "1. provide additional lift\n2. fight bears\n3. achieve common prosperity",
+        "correct_num": 3,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is used to [MASK].\n\nOptions:\n1. provide additional lift\n2. fight bears\n3. achieve common prosperity"
+    },
+    {
+        "test_id": 45,
+        "relation": "UsedTo",
+        "correct_feat": "promote comprehensive social progress",
+        "options": "1. promote comprehensive social progress\n2. make another water-ski kite glider\n3. visualize pre-modern viewers' various conceptions of a \"great age",
+        "correct_num": 1,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is used to [MASK].\n\nOptions:\n1. promote comprehensive social progress\n2. make another water-ski kite glider\n3. visualize pre-modern viewers' various conceptions of a \"great age"
+    },
+    {
+        "test_id": 46,
+        "relation": "UsedTo",
+        "correct_feat": "establish and improve a socialist market economy system",
+        "options": "1. kill bulls\n2. establish and improve a socialist market economy system\n3. build train tracks",
+        "correct_num": 2,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is used to [MASK].\n\nOptions:\n1. kill bulls\n2. establish and improve a socialist market economy system\n3. build train tracks"
+    },
+    {
+        "test_id": 47,
+        "relation": "UsedTo",
+        "correct_feat": "develop socialist democracy",
+        "options": "1. showcase their musical talent\n2. protect from exposure\n3. develop socialist democracy",
+        "correct_num": 3,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is used to [MASK].\n\nOptions:\n1. showcase their musical talent\n2. protect from exposure\n3. develop socialist democracy"
+    },
+    {
+        "test_id": 48,
+        "relation": "UsedTo",
+        "correct_feat": "cultivate individuals who are idealistic, moral, cultured, and disciplined",
+        "options": "1. cultivate individuals who are idealistic, moral, cultured, and disciplined\n2. tour the country\n3. weigh deeds on a divine scale",
+        "correct_num": 1,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is used to [MASK].\n\nOptions:\n1. cultivate individuals who are idealistic, moral, cultured, and disciplined\n2. tour the country\n3. weigh deeds on a divine scale"
+    },
+    {
+        "test_id": 49,
+        "relation": "UsedTo",
+        "correct_feat": "strive for a favorable international environment for China's modernization",
+        "options": "1. bombard Wotje\n2. strive for a favorable international environment for China's modernization\n3. speak to everyone there of his importance to redemption in Jerusalem",
+        "correct_num": 2,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is used to [MASK].\n\nOptions:\n1. bombard Wotje\n2. strive for a favorable international environment for China's modernization\n3. speak to everyone there of his importance to redemption in Jerusalem"
+    },
+    {
+        "test_id": 50,
+        "relation": "UsedTo",
+        "correct_feat": "absorb and utilize all advanced achievements of civilization created by countries around the world",
+        "options": "1. release a self-titled album\n2. entertain a crowd\n3. absorb and utilize all advanced achievements of civilization created by countries around the world",
+        "correct_num": 3,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is used to [MASK].\n\nOptions:\n1. release a self-titled album\n2. entertain a crowd\n3. absorb and utilize all advanced achievements of civilization created by countries around the world"
+    }
+]

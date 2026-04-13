@@ -1,0 +1,762 @@
+[
+    {
+        "test_id": 0,
+        "relation": "About",
+        "correct_feat": "the belief that white people are superior to those of other races",
+        "options": "1. the belief that white people are superior to those of other races\n2. the Bancroft Treaties and their eventual abandonment\n3. folk rock",
+        "correct_num": 1,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is about [MASK].\n\nOptions:\n1. the belief that white people are superior to those of other races\n2. the Bancroft Treaties and their eventual abandonment\n3. folk rock"
+    },
+    {
+        "test_id": 1,
+        "relation": "About",
+        "correct_feat": "the maintenance and defense of any power and privilege held by white people",
+        "options": "1. the problem of lust gone astray\n2. the maintenance and defense of any power and privilege held by white people\n3. celebrating Latino and, more specifically, Chicano culture and influence at The University of Southern California and in Los Angeles",
+        "correct_num": 2,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is about [MASK].\n\nOptions:\n1. the problem of lust gone astray\n2. the maintenance and defense of any power and privilege held by white people\n3. celebrating Latino and, more specifically, Chicano culture and influence at The University of Southern California and in Los Angeles"
+    },
+    {
+        "test_id": 2,
+        "relation": "About",
+        "correct_feat": "a social system in which white people enjoy structural advantages over other ethnic groups",
+        "options": "1. a particular type of icon of the Theotokos (Virgin Mary)\n2. the Interstate Commerce Act\n3. a social system in which white people enjoy structural advantages over other ethnic groups",
+        "correct_num": 3,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is about [MASK].\n\nOptions:\n1. a particular type of icon of the Theotokos (Virgin Mary)\n2. the Interstate Commerce Act\n3. a social system in which white people enjoy structural advantages over other ethnic groups"
+    },
+    {
+        "test_id": 3,
+        "relation": "Affects",
+        "correct_feat": "the maintenance and defense of any power and privilege held by white people",
+        "options": "1. the maintenance and defense of any power and privilege held by white people\n2. younger generations with gloomy consequences\n3. the working ability and instinct of terriers and Dachshunds",
+        "correct_num": 1,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> affects [MASK].\n\nOptions:\n1. the maintenance and defense of any power and privilege held by white people\n2. younger generations with gloomy consequences\n3. the working ability and instinct of terriers and Dachshunds"
+    },
+    {
+        "test_id": 4,
+        "relation": "Affects",
+        "correct_feat": "the domination by white people and non-white supporters",
+        "options": "1. the music of the generation that followed them\n2. the domination by white people and non-white supporters\n3. the bond between handler and dog",
+        "correct_num": 2,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> affects [MASK].\n\nOptions:\n1. the music of the generation that followed them\n2. the domination by white people and non-white supporters\n3. the bond between handler and dog"
+    },
+    {
+        "test_id": 5,
+        "relation": "Affects",
+        "correct_feat": "the social system in which white people enjoy structural advantages over other ethnic groups",
+        "options": "1. Czechoslovakia\n2. the anime series Ore no Imōto ga Konna ni Kawaii Wake ga Nai\n3. the social system in which white people enjoy structural advantages over other ethnic groups",
+        "correct_num": 3,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> affects [MASK].\n\nOptions:\n1. Czechoslovakia\n2. the anime series Ore no Imōto ga Konna ni Kawaii Wake ga Nai\n3. the social system in which white people enjoy structural advantages over other ethnic groups"
+    },
+    {
+        "test_id": 6,
+        "relation": "AssociatedWith",
+        "correct_feat": "the now-discredited doctrine of scientific racism",
+        "options": "1. the now-discredited doctrine of scientific racism\n2. Sinéad O'Connor\n3. Gang Starr",
+        "correct_num": 1,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is associated with [MASK].\n\nOptions:\n1. the now-discredited doctrine of scientific racism\n2. Sinéad O'Connor\n3. Gang Starr"
+    },
+    {
+        "test_id": 7,
+        "relation": "AssociatedWith",
+        "correct_feat": "European colonialism",
+        "options": "1. the Banu Marin tribe\n2. European colonialism\n3. the Union of Krewo",
+        "correct_num": 2,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is associated with [MASK].\n\nOptions:\n1. the Banu Marin tribe\n2. European colonialism\n3. the Union of Krewo"
+    },
+    {
+        "test_id": 8,
+        "relation": "AssociatedWith",
+        "correct_feat": "the Atlantic slave trade",
+        "options": "1. the UN Security Council chamber's east wall\n2. the Consecration of the National Cemetery\n3. the Atlantic slave trade",
+        "correct_num": 3,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is associated with [MASK].\n\nOptions:\n1. the UN Security Council chamber's east wall\n2. the Consecration of the National Cemetery\n3. the Atlantic slave trade"
+    },
+    {
+        "test_id": 9,
+        "relation": "AssociatedWith",
+        "correct_feat": "European colonial labor and social practices",
+        "options": "1. European colonial labor and social practices\n2. Claud\n3. the Stuart Restoration in 1660",
+        "correct_num": 1,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is associated with [MASK].\n\nOptions:\n1. European colonial labor and social practices\n2. Claud\n3. the Stuart Restoration in 1660"
+    },
+    {
+        "test_id": 10,
+        "relation": "AssociatedWith",
+        "correct_feat": "the Scramble for Africa",
+        "options": "1. Thurgood Marshall\n2. the Scramble for Africa\n3. carnival midways",
+        "correct_num": 2,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is associated with [MASK].\n\nOptions:\n1. Thurgood Marshall\n2. the Scramble for Africa\n3. carnival midways"
+    },
+    {
+        "test_id": 11,
+        "relation": "AssociatedWith",
+        "correct_feat": "Jim Crow laws in the United States",
+        "options": "1. the German invasion of Greece\n2. carting dog breeds\n3. Jim Crow laws in the United States",
+        "correct_num": 3,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is associated with [MASK].\n\nOptions:\n1. the German invasion of Greece\n2. carting dog breeds\n3. Jim Crow laws in the United States"
+    },
+    {
+        "test_id": 12,
+        "relation": "AssociatedWith",
+        "correct_feat": "the activities of the Native Land Court in New Zealand",
+        "options": "1. the activities of the Native Land Court in New Zealand\n2. the village of Zarudchi in the Lyubeshiv district\n3. the Exposition Universelle of 1900",
+        "correct_num": 1,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is associated with [MASK].\n\nOptions:\n1. the activities of the Native Land Court in New Zealand\n2. the village of Zarudchi in the Lyubeshiv district\n3. the Exposition Universelle of 1900"
+    },
+    {
+        "test_id": 13,
+        "relation": "AssociatedWith",
+        "correct_feat": "the White Australia policies from the 1890s to the mid-1970s",
+        "options": "1. the Roman Republic\n2. the White Australia policies from the 1890s to the mid-1970s\n3. Pedro León Zapata",
+        "correct_num": 2,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is associated with [MASK].\n\nOptions:\n1. the Roman Republic\n2. the White Australia policies from the 1890s to the mid-1970s\n3. Pedro León Zapata"
+    },
+    {
+        "test_id": 14,
+        "relation": "AssociatedWith",
+        "correct_feat": "apartheid in South Africa",
+        "options": "1. the 2nd millennium\n2. the Feast of the Epiphany\n3. apartheid in South Africa",
+        "correct_num": 3,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is associated with [MASK].\n\nOptions:\n1. the 2nd millennium\n2. the Feast of the Epiphany\n3. apartheid in South Africa"
+    },
+    {
+        "test_id": 15,
+        "relation": "AssociatedWith",
+        "correct_feat": "neo-Confederates",
+        "options": "1. neo-Confederates\n2. the Harry E. Harris Sport of Kings Four-Year-Old Hurdle Stakes\n3. Lex Records",
+        "correct_num": 1,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is associated with [MASK].\n\nOptions:\n1. neo-Confederates\n2. the Harry E. Harris Sport of Kings Four-Year-Old Hurdle Stakes\n3. Lex Records"
+    },
+    {
+        "test_id": 16,
+        "relation": "BelongsTo",
+        "correct_feat": "a spectrum of contemporary movements including white nationalism, white separatism, neo-Nazism, and the Christian Identity movement",
+        "options": "1. the history of the Fourteenth Amendment\n2. a spectrum of contemporary movements including white nationalism, white separatism, neo-Nazism, and the Christian Identity movement\n3. the mancala family of board games",
+        "correct_num": 2,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> belongs to [MASK].\n\nOptions:\n1. the history of the Fourteenth Amendment\n2. a spectrum of contemporary movements including white nationalism, white separatism, neo-Nazism, and the Christian Identity movement\n3. the mancala family of board games"
+    },
+    {
+        "test_id": 17,
+        "relation": "CausedBy",
+        "correct_feat": "the belief that white people are superior to those of other races",
+        "options": "1. the Battle of Gettysburg\n2. sepsis following infection due to the wounds caused by the nails or by the scourging\n3. the belief that white people are superior to those of other races",
+        "correct_num": 3,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is caused by [MASK].\n\nOptions:\n1. the Battle of Gettysburg\n2. sepsis following infection due to the wounds caused by the nails or by the scourging\n3. the belief that white people are superior to those of other races"
+    },
+    {
+        "test_id": 18,
+        "relation": "ConsistsOf",
+        "correct_feat": "a belief in racial purity",
+        "options": "1. a belief in racial purity\n2. a cape that floats creating a weightless setting\n3. the Christ child often holding a scroll",
+        "correct_num": 1,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> consists of [MASK].\n\nOptions:\n1. a belief in racial purity\n2. a cape that floats creating a weightless setting\n3. the Christ child often holding a scroll"
+    },
+    {
+        "test_id": 19,
+        "relation": "ConsistsOf",
+        "correct_feat": "the idea of white superiority and black inferiority",
+        "options": "1. a larger ball that gradually becomes softer the more the ball is hit\n2. the idea of white superiority and black inferiority\n3. eight main elements, one large bottom field and seven separate framed panels",
+        "correct_num": 2,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> consists of [MASK].\n\nOptions:\n1. a larger ball that gradually becomes softer the more the ball is hit\n2. the idea of white superiority and black inferiority\n3. eight main elements, one large bottom field and seven separate framed panels"
+    },
+    {
+        "test_id": 20,
+        "relation": "CreatedTo",
+        "correct_feat": "justify economic exploitation of black people",
+        "options": "1. invalidate the death penalty for rape\n2. establish a moratorium on capital punishment\n3. justify economic exploitation of black people",
+        "correct_num": 3,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> was created to [MASK].\n\nOptions:\n1. invalidate the death penalty for rape\n2. establish a moratorium on capital punishment\n3. justify economic exploitation of black people"
+    },
+    {
+        "test_id": 21,
+        "relation": "HasA",
+        "correct_feat": "ideological foundations that date back to 18th-century scientific racism",
+        "options": "1. ideological foundations that date back to 18th-century scientific racism\n2. characteristics that are sometimes called 'semifeudal'\n3. a story that was prefixed to the Jewish story",
+        "correct_num": 1,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> has [MASK].\n\nOptions:\n1. ideological foundations that date back to 18th-century scientific racism\n2. characteristics that are sometimes called 'semifeudal'\n3. a story that was prefixed to the Jewish story"
+    },
+    {
+        "test_id": 22,
+        "relation": "HasA",
+        "correct_feat": "roots in the now-discredited doctrine of scientific racism",
+        "options": "1. rules that were initially problematic\n2. roots in the now-discredited doctrine of scientific racism\n3. a very strong systemic approach",
+        "correct_num": 2,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> has [MASK].\n\nOptions:\n1. rules that were initially problematic\n2. roots in the now-discredited doctrine of scientific racism\n3. a very strong systemic approach"
+    },
+    {
+        "test_id": 23,
+        "relation": "HasA",
+        "correct_feat": "been put into effect through socioeconomic and legal structures",
+        "options": "1. a stationary wave\n2. a tilted head towards her son\n3. been put into effect through socioeconomic and legal structures",
+        "correct_num": 3,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> has [MASK].\n\nOptions:\n1. a stationary wave\n2. a tilted head towards her son\n3. been put into effect through socioeconomic and legal structures"
+    },
+    {
+        "test_id": 24,
+        "relation": "HasA",
+        "correct_feat": "been publicly endorsed in the 1940s",
+        "options": "1. been publicly endorsed in the 1940s\n2. compositions that often feature live instruments\n3. a round that is over when no counters remain",
+        "correct_num": 1,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> has [MASK].\n\nOptions:\n1. been publicly endorsed in the 1940s\n2. compositions that often feature live instruments\n3. a round that is over when no counters remain"
+    },
+    {
+        "test_id": 25,
+        "relation": "HasA",
+        "correct_feat": "remained an important ideology to the American far-right after the mid-1960s",
+        "options": "1. puppy races approximately 5 miles long\n2. remained an important ideology to the American far-right after the mid-1960s\n3. a history of economic prosperity",
+        "correct_num": 2,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> has [MASK].\n\nOptions:\n1. puppy races approximately 5 miles long\n2. remained an important ideology to the American far-right after the mid-1960s\n3. a history of economic prosperity"
+    },
+    {
+        "test_id": 26,
+        "relation": "HasFeatureOf",
+        "correct_feat": "the belief that white people are superior to those of other races",
+        "options": "1. two armies of uneven numbers\n2. being popular, influential, and enduring\n3. the belief that white people are superior to those of other races",
+        "correct_num": 3,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is characterized by [MASK].\n\nOptions:\n1. two armies of uneven numbers\n2. being popular, influential, and enduring\n3. the belief that white people are superior to those of other races"
+    },
+    {
+        "test_id": 27,
+        "relation": "HasFeatureOf",
+        "correct_feat": "favoring the maintenance and defense of any power and privilege held by white people",
+        "options": "1. favoring the maintenance and defense of any power and privilege held by white people\n2. being a popular method of community and student outreach\n3. high contrast between the space and the subjects",
+        "correct_num": 1,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is characterized by [MASK].\n\nOptions:\n1. favoring the maintenance and defense of any power and privilege held by white people\n2. being a popular method of community and student outreach\n3. high contrast between the space and the subjects"
+    },
+    {
+        "test_id": 28,
+        "relation": "HasFeatureOf",
+        "correct_feat": "imposing and maintaining cultural, social, political, historical or institutional domination by white people and non-white supporters",
+        "options": "1. prioritizing defense over offense\n2. imposing and maintaining cultural, social, political, historical or institutional domination by white people and non-white supporters\n3. players advancing to the higher numbered square when someone gets out",
+        "correct_num": 2,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is characterized by [MASK].\n\nOptions:\n1. prioritizing defense over offense\n2. imposing and maintaining cultural, social, political, historical or institutional domination by white people and non-white supporters\n3. players advancing to the higher numbered square when someone gets out"
+    },
+    {
+        "test_id": 29,
+        "relation": "HasFeatureOf",
+        "correct_feat": "the denial of social and political freedom to minorities",
+        "options": "1. specifications of game length, map board configuration, counters involved, special rules for the conditions of the particular battle such as weather, and victory conditions\n2. a shallow, oval hull on fixed runners\n3. the denial of social and political freedom to minorities",
+        "correct_num": 3,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is characterized by [MASK].\n\nOptions:\n1. specifications of game length, map board configuration, counters involved, special rules for the conditions of the particular battle such as weather, and victory conditions\n2. a shallow, oval hull on fixed runners\n3. the denial of social and political freedom to minorities"
+    },
+    {
+        "test_id": 30,
+        "relation": "HasFeatureOf",
+        "correct_feat": "the scapegoating of disenfranchised populations",
+        "options": "1. the scapegoating of disenfranchised populations\n2. side wings\n3. songs carrying profound patriotic themes",
+        "correct_num": 1,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is characterized by [MASK].\n\nOptions:\n1. the scapegoating of disenfranchised populations\n2. side wings\n3. songs carrying profound patriotic themes"
+    },
+    {
+        "test_id": 31,
+        "relation": "Influenced",
+        "correct_feat": "international relations",
+        "options": "1. the film Dhadak\n2. international relations\n3. the rise of the Tudor dynasty",
+        "correct_num": 2,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> influenced [MASK].\n\nOptions:\n1. the film Dhadak\n2. international relations\n3. the rise of the Tudor dynasty"
+    },
+    {
+        "test_id": 32,
+        "relation": "Influenced",
+        "correct_feat": "racial policy",
+        "options": "1. several other depictions of prehistoric life\n2. the United Kingdom music charts\n3. racial policy",
+        "correct_num": 3,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> influenced [MASK].\n\nOptions:\n1. several other depictions of prehistoric life\n2. the United Kingdom music charts\n3. racial policy"
+    },
+    {
+        "test_id": 33,
+        "relation": "Influenced",
+        "correct_feat": "the desire to uphold white supremacy being cited as a cause for state secession and the formation of the Confederate States of America",
+        "options": "1. the desire to uphold white supremacy being cited as a cause for state secession and the formation of the Confederate States of America\n2. the advent of early modern Britain\n3. subsequent nuevo flamenco releases, including Veneno and La leyenda del tiempo",
+        "correct_num": 1,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> influenced [MASK].\n\nOptions:\n1. the desire to uphold white supremacy being cited as a cause for state secession and the formation of the Confederate States of America\n2. the advent of early modern Britain\n3. subsequent nuevo flamenco releases, including Veneno and La leyenda del tiempo"
+    },
+    {
+        "test_id": 34,
+        "relation": "Influenced",
+        "correct_feat": "the anti-miscegenation laws in the U.S",
+        "options": "1. the construction of railroads\n2. the anti-miscegenation laws in the U.S\n3. the iconography of the Nativity scene",
+        "correct_num": 2,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> influenced [MASK].\n\nOptions:\n1. the construction of railroads\n2. the anti-miscegenation laws in the U.S\n3. the iconography of the Nativity scene"
+    },
+    {
+        "test_id": 35,
+        "relation": "InfluencedBy",
+        "correct_feat": "the belief that white people are superior to those of other races",
+        "options": "1. a panoramic painting by Detaille and Neuville in Paris\n2. Burm's childhood experiences of playing \"race\" cars with his brother\n3. the belief that white people are superior to those of other races",
+        "correct_num": 3,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> was influenced by [MASK].\n\nOptions:\n1. a panoramic painting by Detaille and Neuville in Paris\n2. Burm's childhood experiences of playing \"race\" cars with his brother\n3. the belief that white people are superior to those of other races"
+    },
+    {
+        "test_id": 36,
+        "relation": "InfluencedBy",
+        "correct_feat": "the doctrine of scientific racism",
+        "options": "1. the doctrine of scientific racism\n2. calcio storico fiorentino\n3. the need to save it from the Polish invasion of 1612",
+        "correct_num": 1,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> was influenced by [MASK].\n\nOptions:\n1. the doctrine of scientific racism\n2. calcio storico fiorentino\n3. the need to save it from the Polish invasion of 1612"
+    },
+    {
+        "test_id": 37,
+        "relation": "InfluencedBy",
+        "correct_feat": "the desire to uphold white supremacy",
+        "options": "1. foreign styles and influences\n2. the desire to uphold white supremacy\n3. the Siege of Leningrad during World War II",
+        "correct_num": 2,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> was influenced by [MASK].\n\nOptions:\n1. foreign styles and influences\n2. the desire to uphold white supremacy\n3. the Siege of Leningrad during World War II"
+    },
+    {
+        "test_id": 38,
+        "relation": "InfluencedBy",
+        "correct_feat": "the belief in racial purity",
+        "options": "1. Georges Cuvier's drawings of prehistoric creatures\n2. the evolving standards of decency of contemporary society\n3. the belief in racial purity",
+        "correct_num": 3,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> was influenced by [MASK].\n\nOptions:\n1. Georges Cuvier's drawings of prehistoric creatures\n2. the evolving standards of decency of contemporary society\n3. the belief in racial purity"
+    },
+    {
+        "test_id": 39,
+        "relation": "InfluencedBy",
+        "correct_feat": "the idea of white superiority and black inferiority",
+        "options": "1. the idea of white superiority and black inferiority\n2. Arden of Faversham\n3. Julian Cesarini",
+        "correct_num": 1,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> was influenced by [MASK].\n\nOptions:\n1. the idea of white superiority and black inferiority\n2. Arden of Faversham\n3. Julian Cesarini"
+    },
+    {
+        "test_id": 40,
+        "relation": "InfluencedBy",
+        "correct_feat": "the dehumanization of Native Americans as 'merciless Indian savages'",
+        "options": "1. Protocol Additional to the Geneva Conventions\n2. the dehumanization of Native Americans as 'merciless Indian savages'\n3. philology",
+        "correct_num": 2,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> was influenced by [MASK].\n\nOptions:\n1. Protocol Additional to the Geneva Conventions\n2. the dehumanization of Native Americans as 'merciless Indian savages'\n3. philology"
+    },
+    {
+        "test_id": 41,
+        "relation": "InfluencedBy",
+        "correct_feat": "the idea that the Whites, by law of conquest, by justice of civilization, are masters of the American continent",
+        "options": "1. the U.S. government\n2. 1970s disco music\n3. the idea that the Whites, by law of conquest, by justice of civilization, are masters of the American continent",
+        "correct_num": 3,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> was influenced by [MASK].\n\nOptions:\n1. the U.S. government\n2. 1970s disco music\n3. the idea that the Whites, by law of conquest, by justice of civilization, are masters of the American continent"
+    },
+    {
+        "test_id": 42,
+        "relation": "InfluencedBy",
+        "correct_feat": "the idea that Northern Europeans are a superior subspecies of the white race",
+        "options": "1. the idea that Northern Europeans are a superior subspecies of the white race\n2. the Battle of Gettysburg\n3. Burm's childhood experiences of playing \"race\" cars with his brother",
+        "correct_num": 1,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> was influenced by [MASK].\n\nOptions:\n1. the idea that Northern Europeans are a superior subspecies of the white race\n2. the Battle of Gettysburg\n3. Burm's childhood experiences of playing \"race\" cars with his brother"
+    },
+    {
+        "test_id": 43,
+        "relation": "InfluencedBy",
+        "correct_feat": "the outcome of the 2016 United States presidential election",
+        "options": "1. the rising protest and activist spirit in American society in the late 1960s\n2. the outcome of the 2016 United States presidential election\n3. ancient rock art",
+        "correct_num": 2,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> was influenced by [MASK].\n\nOptions:\n1. the rising protest and activist spirit in American society in the late 1960s\n2. the outcome of the 2016 United States presidential election\n3. ancient rock art"
+    },
+    {
+        "test_id": 44,
+        "relation": "InfluencedBy",
+        "correct_feat": "the controversies that surrounded the 2016 United States presidential election",
+        "options": "1. the combative form\n2. King Philip's War\n3. the controversies that surrounded the 2016 United States presidential election",
+        "correct_num": 3,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> was influenced by [MASK].\n\nOptions:\n1. the combative form\n2. King Philip's War\n3. the controversies that surrounded the 2016 United States presidential election"
+    },
+    {
+        "test_id": 45,
+        "relation": "IsA",
+        "correct_feat": "the belief that white people are superior to those of other races",
+        "options": "1. the belief that white people are superior to those of other races\n2. a sensory journey both in time and space\n3. a controlled hunting encounter",
+        "correct_num": 1,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is [MASK].\n\nOptions:\n1. the belief that white people are superior to those of other races\n2. a sensory journey both in time and space\n3. a controlled hunting encounter"
+    },
+    {
+        "test_id": 46,
+        "relation": "IsA",
+        "correct_feat": "a key justification for European colonialism",
+        "options": "1. a series of games that introduce potential pieces\n2. a key justification for European colonialism\n3. a 2007 Chinese film",
+        "correct_num": 2,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is [MASK].\n\nOptions:\n1. a series of games that introduce potential pieces\n2. a key justification for European colonialism\n3. a 2007 Chinese film"
+    },
+    {
+        "test_id": 47,
+        "relation": "IsA",
+        "correct_feat": "a political ideology",
+        "options": "1. an aesthetic, symbolic representation of significant concepts and entities that is painted on or carved into a rock surface\n2. a medley\n3. a political ideology",
+        "correct_num": 3,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is [MASK].\n\nOptions:\n1. an aesthetic, symbolic representation of significant concepts and entities that is painted on or carved into a rock surface\n2. a medley\n3. a political ideology"
+    },
+    {
+        "test_id": 48,
+        "relation": "IsA",
+        "correct_feat": "an ideology",
+        "options": "1. an ideology\n2. a French hip hop duo\n3. a Roman Catholic image",
+        "correct_num": 1,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is [MASK].\n\nOptions:\n1. an ideology\n2. a French hip hop duo\n3. a Roman Catholic image"
+    },
+    {
+        "test_id": 49,
+        "relation": "IsA",
+        "correct_feat": "a social system",
+        "options": "1. a shortened name for the Department for Agitation and Propaganda\n2. a social system\n3. a \"baggy game\"",
+        "correct_num": 2,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is [MASK].\n\nOptions:\n1. a shortened name for the Department for Agitation and Propaganda\n2. a social system\n3. a \"baggy game\""
+    },
+    {
+        "test_id": 50,
+        "relation": "IsA",
+        "correct_feat": "a perceived fear of the Virginian planter gentry",
+        "options": "1. considered one of the most influential fantasy books ever written\n2. a board wargame\n3. a perceived fear of the Virginian planter gentry",
+        "correct_num": 3,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is [MASK].\n\nOptions:\n1. considered one of the most influential fantasy books ever written\n2. a board wargame\n3. a perceived fear of the Virginian planter gentry"
+    },
+    {
+        "test_id": 51,
+        "relation": "IsA",
+        "correct_feat": "a \"scientific\" theory of white superiority and black inferiority",
+        "options": "1. a \"scientific\" theory of white superiority and black inferiority\n2. a children's musical group\n3. history/myth painting",
+        "correct_num": 1,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is [MASK].\n\nOptions:\n1. a \"scientific\" theory of white superiority and black inferiority\n2. a children's musical group\n3. history/myth painting"
+    },
+    {
+        "test_id": 52,
+        "relation": "IsA",
+        "correct_feat": "a doctrine",
+        "options": "1. a \"fascinating problem\"\n2. a doctrine\n3. a myth",
+        "correct_num": 2,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is [MASK].\n\nOptions:\n1. a \"fascinating problem\"\n2. a doctrine\n3. a myth"
+    },
+    {
+        "test_id": 53,
+        "relation": "IsA",
+        "correct_feat": "a belief in racial purity",
+        "options": "1. a skip off a surface\n2. high-energy X-rays\n3. a belief in racial purity",
+        "correct_num": 3,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is [MASK].\n\nOptions:\n1. a skip off a surface\n2. high-energy X-rays\n3. a belief in racial purity"
+    },
+    {
+        "test_id": 54,
+        "relation": "IsA",
+        "correct_feat": "a social system in which white people enjoy structural advantages over other ethnic groups",
+        "options": "1. a social system in which white people enjoy structural advantages over other ethnic groups\n2. a sport\n3. a Roman Catholic Marian title",
+        "correct_num": 1,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is [MASK].\n\nOptions:\n1. a social system in which white people enjoy structural advantages over other ethnic groups\n2. a sport\n3. a Roman Catholic Marian title"
+    },
+    {
+        "test_id": 55,
+        "relation": "KnownAs",
+        "correct_feat": "'white power'",
+        "options": "1. the Buccleuch Madonna\n2. 'white power'\n3. a subject that has been depicted by numerous artists",
+        "correct_num": 2,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is known as [MASK].\n\nOptions:\n1. the Buccleuch Madonna\n2. 'white power'\n3. a subject that has been depicted by numerous artists"
+    },
+    {
+        "test_id": 56,
+        "relation": "KnownAs",
+        "correct_feat": "'white nationalism'",
+        "options": "1. Portaitissa or Gate-Keeper\n2. teeball\n3. 'white nationalism'",
+        "correct_num": 3,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is known as [MASK].\n\nOptions:\n1. Portaitissa or Gate-Keeper\n2. teeball\n3. 'white nationalism'"
+    },
+    {
+        "test_id": 57,
+        "relation": "KnownFor",
+        "correct_feat": "its roots in the now-discredited doctrine of scientific racism",
+        "options": "1. its roots in the now-discredited doctrine of scientific racism\n2. its abstract strategy gameplay\n3. its turning circle not greater than 8.535 m",
+        "correct_num": 1,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is known for [MASK].\n\nOptions:\n1. its roots in the now-discredited doctrine of scientific racism\n2. its abstract strategy gameplay\n3. its turning circle not greater than 8.535 m"
+    },
+    {
+        "test_id": 58,
+        "relation": "KnownFor",
+        "correct_feat": "being a key justification for European colonialism",
+        "options": "1. its mock combat\n2. being a key justification for European colonialism\n3. driving fasteners",
+        "correct_num": 2,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is known for [MASK].\n\nOptions:\n1. its mock combat\n2. being a key justification for European colonialism\n3. driving fasteners"
+    },
+    {
+        "test_id": 59,
+        "relation": "KnownFor",
+        "correct_feat": "imposing and maintaining cultural, social, political, historical or institutional domination by white people and non-white supporters",
+        "options": "1. its tactical side of sieges in the Ancient Period\n2. its treatment of race\n3. imposing and maintaining cultural, social, political, historical or institutional domination by white people and non-white supporters",
+        "correct_num": 3,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is known for [MASK].\n\nOptions:\n1. its tactical side of sieges in the Ancient Period\n2. its treatment of race\n3. imposing and maintaining cultural, social, political, historical or institutional domination by white people and non-white supporters"
+    },
+    {
+        "test_id": 60,
+        "relation": "KnownFor",
+        "correct_feat": "its presence among neo-Confederates",
+        "options": "1. its presence among neo-Confederates\n2. its origin from the Georgian monastery of Ancha\n3. the procession with lighted candles",
+        "correct_num": 1,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is known for [MASK].\n\nOptions:\n1. its presence among neo-Confederates\n2. its origin from the Georgian monastery of Ancha\n3. the procession with lighted candles"
+    },
+    {
+        "test_id": 61,
+        "relation": "KnownFor",
+        "correct_feat": "underlying a spectrum of contemporary movements including white nationalism, white separatism, neo-Nazism, and the Christian Identity movement",
+        "options": "1. the Polish \"Golden Age\"\n2. underlying a spectrum of contemporary movements including white nationalism, white separatism, neo-Nazism, and the Christian Identity movement\n3. its unique album naming conventions",
+        "correct_num": 2,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is known for [MASK].\n\nOptions:\n1. the Polish \"Golden Age\"\n2. underlying a spectrum of contemporary movements including white nationalism, white separatism, neo-Nazism, and the Christian Identity movement\n3. its unique album naming conventions"
+    },
+    {
+        "test_id": 62,
+        "relation": "KnownFor",
+        "correct_feat": "being primarily associated with Aryan Nations, White Aryan Resistance, and the Ku Klux Klan in the United States",
+        "options": "1. its cylindrical design\n2. its historical significance\n3. being primarily associated with Aryan Nations, White Aryan Resistance, and the Ku Klux Klan in the United States",
+        "correct_num": 3,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is known for [MASK].\n\nOptions:\n1. its cylindrical design\n2. its historical significance\n3. being primarily associated with Aryan Nations, White Aryan Resistance, and the Ku Klux Klan in the United States"
+    },
+    {
+        "test_id": 63,
+        "relation": "KnownFor",
+        "correct_feat": "being implicitly present among the Proud Boys",
+        "options": "1. being implicitly present among the Proud Boys\n2. their fashion influence\n3. the Henri Toivonen Memorial Trophy",
+        "correct_num": 1,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is known for [MASK].\n\nOptions:\n1. being implicitly present among the Proud Boys\n2. their fashion influence\n3. the Henri Toivonen Memorial Trophy"
+    },
+    {
+        "test_id": 64,
+        "relation": "KnownFor",
+        "correct_feat": "its presence among neo-Nazis",
+        "options": "1. the song \"U R Man\"\n2. its presence among neo-Nazis\n3. its two brothers, Florian and Olivio Ordoñez",
+        "correct_num": 2,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is known for [MASK].\n\nOptions:\n1. the song \"U R Man\"\n2. its presence among neo-Nazis\n3. its two brothers, Florian and Olivio Ordoñez"
+    },
+    {
+        "test_id": 65,
+        "relation": "KnownFor",
+        "correct_feat": "its presence among racist skinheads",
+        "options": "1. their comedy career\n2. variations in rules, such as WAFU Rules\n3. its presence among racist skinheads",
+        "correct_num": 3,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is known for [MASK].\n\nOptions:\n1. their comedy career\n2. variations in rules, such as WAFU Rules\n3. its presence among racist skinheads"
+    },
+    {
+        "test_id": 66,
+        "relation": "KnownFor",
+        "correct_feat": "its presence among Christian Identity adherents",
+        "options": "1. its presence among Christian Identity adherents\n2. being the first exponent of flamenco music aimed at a non-exclusively flamenco audience\n3. its global reach with players in over 200 countries and territories",
+        "correct_num": 1,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is known for [MASK].\n\nOptions:\n1. its presence among Christian Identity adherents\n2. being the first exponent of flamenco music aimed at a non-exclusively flamenco audience\n3. its global reach with players in over 200 countries and territories"
+    },
+    {
+        "test_id": 67,
+        "relation": "OriginatedIn",
+        "correct_feat": "the belief that white people are superior to those of other races",
+        "options": "1. Korea's Three Kingdom Period\n2. the belief that white people are superior to those of other races\n3. Sweden",
+        "correct_num": 2,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> originated in [MASK].\n\nOptions:\n1. Korea's Three Kingdom Period\n2. the belief that white people are superior to those of other races\n3. Sweden"
+    },
+    {
+        "test_id": 68,
+        "relation": "OriginatedIn",
+        "correct_feat": "the now-discredited doctrine of scientific racism",
+        "options": "1. the Soviet Union\n2. Canada\n3. the now-discredited doctrine of scientific racism",
+        "correct_num": 3,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> originated in [MASK].\n\nOptions:\n1. the Soviet Union\n2. Canada\n3. the now-discredited doctrine of scientific racism"
+    },
+    {
+        "test_id": 69,
+        "relation": "OriginatedIn",
+        "correct_feat": "the 18th century",
+        "options": "1. the 18th century\n2. Sweden\n3. the release of the video game Donkey Kong in 1981",
+        "correct_num": 1,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> originated in [MASK].\n\nOptions:\n1. the 18th century\n2. Sweden\n3. the release of the video game Donkey Kong in 1981"
+    },
+    {
+        "test_id": 70,
+        "relation": "UsedAs",
+        "correct_feat": "a justification for European colonialism",
+        "options": "1. a repeater\n2. a justification for European colonialism\n3. a tool",
+        "correct_num": 2,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is used as [MASK].\n\nOptions:\n1. a repeater\n2. a justification for European colonialism\n3. a tool"
+    },
+    {
+        "test_id": 71,
+        "relation": "UsedAs",
+        "correct_feat": "a justification for economic exploitation of black people",
+        "options": "1. a trio sub-unit\n2. a test\n3. a justification for economic exploitation of black people",
+        "correct_num": 3,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is used as [MASK].\n\nOptions:\n1. a trio sub-unit\n2. a test\n3. a justification for economic exploitation of black people"
+    },
+    {
+        "test_id": 72,
+        "relation": "UsedAs",
+        "correct_feat": "a justification for state secession and the formation of the Confederate States of America",
+        "options": "1. a justification for state secession and the formation of the Confederate States of America\n2. a blood sport\n3. a tool to confront the climate crisis",
+        "correct_num": 1,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is used as [MASK].\n\nOptions:\n1. a justification for state secession and the formation of the Confederate States of America\n2. a blood sport\n3. a tool to confront the climate crisis"
+    },
+    {
+        "test_id": 73,
+        "relation": "UsedAs",
+        "correct_feat": "a justification for the anti-miscegenation laws in the U.S",
+        "options": "1. a form of entertainment\n2. a justification for the anti-miscegenation laws in the U.S\n3. a testing ground for new tactics and aircraft",
+        "correct_num": 2,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is used as [MASK].\n\nOptions:\n1. a form of entertainment\n2. a justification for the anti-miscegenation laws in the U.S\n3. a testing ground for new tactics and aircraft"
+    },
+    {
+        "test_id": 74,
+        "relation": "UsedAs",
+        "correct_feat": "a justification for the idea that Northern Europeans are a superior subspecies of the white race",
+        "options": "1. a launch tower\n2. a means to raise awareness for farms and harvests\n3. a justification for the idea that Northern Europeans are a superior subspecies of the white race",
+        "correct_num": 3,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is used as [MASK].\n\nOptions:\n1. a launch tower\n2. a means to raise awareness for farms and harvests\n3. a justification for the idea that Northern Europeans are a superior subspecies of the white race"
+    },
+    {
+        "test_id": 75,
+        "relation": "UsedFor",
+        "correct_feat": "the maintenance and defense of any power and privilege held by white people",
+        "options": "1. the maintenance and defense of any power and privilege held by white people\n2. building and extending train lines\n3. promoting safe driving",
+        "correct_num": 1,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is used for [MASK].\n\nOptions:\n1. the maintenance and defense of any power and privilege held by white people\n2. building and extending train lines\n3. promoting safe driving"
+    },
+    {
+        "test_id": 76,
+        "relation": "UsedFor",
+        "correct_feat": "imposing and maintaining cultural, social, political, historical or institutional domination by white people and non-white supporters",
+        "options": "1. a reward to those who had already contributed\n2. imposing and maintaining cultural, social, political, historical or institutional domination by white people and non-white supporters\n3. gameplay",
+        "correct_num": 2,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is used for [MASK].\n\nOptions:\n1. a reward to those who had already contributed\n2. imposing and maintaining cultural, social, political, historical or institutional domination by white people and non-white supporters\n3. gameplay"
+    },
+    {
+        "test_id": 77,
+        "relation": "UsedFor",
+        "correct_feat": "the legitimization and creation of difference and social, economic and political exclusion",
+        "options": "1. referring to the period of history in which the Angevin kings reigned\n2. online multiplayer\n3. the legitimization and creation of difference and social, economic and political exclusion",
+        "correct_num": 3,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is used for [MASK].\n\nOptions:\n1. referring to the period of history in which the Angevin kings reigned\n2. online multiplayer\n3. the legitimization and creation of difference and social, economic and political exclusion"
+    },
+    {
+        "test_id": 78,
+        "relation": "UsedFor",
+        "correct_feat": "the establishment of a white homeland",
+        "options": "1. the establishment of a white homeland\n2. providing instruction in stage properties\n3. promoting the development of hand-eye coordination and motor skills",
+        "correct_num": 1,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is used for [MASK].\n\nOptions:\n1. the establishment of a white homeland\n2. providing instruction in stage properties\n3. promoting the development of hand-eye coordination and motor skills"
+    },
+    {
+        "test_id": 79,
+        "relation": "UsedIn",
+        "correct_feat": "international relations",
+        "options": "1. AKC coursing\n2. international relations\n3. the iconostasis",
+        "correct_num": 2,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is used in [MASK].\n\nOptions:\n1. AKC coursing\n2. international relations\n3. the iconostasis"
+    },
+    {
+        "test_id": 80,
+        "relation": "UsedIn",
+        "correct_feat": "racial policy",
+        "options": "1. the age of Obama\n2. New Zealand\n3. racial policy",
+        "correct_num": 3,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is used in [MASK].\n\nOptions:\n1. the age of Obama\n2. New Zealand\n3. racial policy"
+    },
+    {
+        "test_id": 81,
+        "relation": "UsedIn",
+        "correct_feat": "socioeconomic and legal structures",
+        "options": "1. socioeconomic and legal structures\n2. the examination of legal precedents\n3. The Comprehensive Guide to Board Wargaming",
+        "correct_num": 1,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is used in [MASK].\n\nOptions:\n1. socioeconomic and legal structures\n2. the examination of legal precedents\n3. The Comprehensive Guide to Board Wargaming"
+    },
+    {
+        "test_id": 82,
+        "relation": "UsedIn",
+        "correct_feat": "social practices",
+        "options": "1. lightweight fabrics when printed\n2. social practices\n3. Little League",
+        "correct_num": 2,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is used in [MASK].\n\nOptions:\n1. lightweight fabrics when printed\n2. social practices\n3. Little League"
+    },
+    {
+        "test_id": 83,
+        "relation": "UsedIn",
+        "correct_feat": "government jobs",
+        "options": "1. Luke 19:28–44\n2. Rowley's Red Barn in Utah, US\n3. government jobs",
+        "correct_num": 3,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is used in [MASK].\n\nOptions:\n1. Luke 19:28–44\n2. Rowley's Red Barn in Utah, US\n3. government jobs"
+    },
+    {
+        "test_id": 84,
+        "relation": "UsedIn",
+        "correct_feat": "the United States",
+        "options": "1. the United States\n2. the United Arab Emirates\n3. Brunei Darussalam",
+        "correct_num": 1,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is used in [MASK].\n\nOptions:\n1. the United States\n2. the United Arab Emirates\n3. Brunei Darussalam"
+    },
+    {
+        "test_id": 85,
+        "relation": "UsedTo",
+        "correct_feat": "maintain white supremacy",
+        "options": "1. identify the Houses of Lancaster and York\n2. maintain white supremacy\n3. determine the title of individual games",
+        "correct_num": 2,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is used to [MASK].\n\nOptions:\n1. identify the Houses of Lancaster and York\n2. maintain white supremacy\n3. determine the title of individual games"
+    },
+    {
+        "test_id": 86,
+        "relation": "UsedTo",
+        "correct_feat": "prevent repeated events such as Bacon's Rebellion",
+        "options": "1. record land grants\n2. defeat Coragus\n3. prevent repeated events such as Bacon's Rebellion",
+        "correct_num": 3,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is used to [MASK].\n\nOptions:\n1. record land grants\n2. defeat Coragus\n3. prevent repeated events such as Bacon's Rebellion"
+    },
+    {
+        "test_id": 87,
+        "relation": "UsedTo",
+        "correct_feat": "justify their economic exploitation of black people",
+        "options": "1. justify their economic exploitation of black people\n2. aim for inclusion in future Paralympic Games editions\n3. release fewer videos per month due to Nataly Dawn's condition",
+        "correct_num": 1,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is used to [MASK].\n\nOptions:\n1. justify their economic exploitation of black people\n2. aim for inclusion in future Paralympic Games editions\n3. release fewer videos per month due to Nataly Dawn's condition"
+    },
+    {
+        "test_id": 88,
+        "relation": "UsedTo",
+        "correct_feat": "create a \"scientific\" theory of white superiority and black inferiority",
+        "options": "1. help solve hunger issues\n2. create a \"scientific\" theory of white superiority and black inferiority\n3. pay fees and collect payment for deliveries",
+        "correct_num": 2,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is used to [MASK].\n\nOptions:\n1. help solve hunger issues\n2. create a \"scientific\" theory of white superiority and black inferiority\n3. pay fees and collect payment for deliveries"
+    },
+    {
+        "test_id": 89,
+        "relation": "UsedTo",
+        "correct_feat": "uphold white supremacy",
+        "options": "1. generate a solution\n2. release songs online\n3. uphold white supremacy",
+        "correct_num": 3,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is used to [MASK].\n\nOptions:\n1. generate a solution\n2. release songs online\n3. uphold white supremacy"
+    },
+    {
+        "test_id": 90,
+        "relation": "UsedTo",
+        "correct_feat": "legitimize and create difference and social, economic and political exclusion",
+        "options": "1. legitimize and create difference and social, economic and political exclusion\n2. provide assurances of non-repetition\n3. play games against modified versions of itself",
+        "correct_num": 1,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is used to [MASK].\n\nOptions:\n1. legitimize and create difference and social, economic and political exclusion\n2. provide assurances of non-repetition\n3. play games against modified versions of itself"
+    },
+    {
+        "test_id": 91,
+        "relation": "UsedTo",
+        "correct_feat": "make voters or jurors of negroes, or to qualify them to hold office, or to intermarry with white people",
+        "options": "1. promote development\n2. make voters or jurors of negroes, or to qualify them to hold office, or to intermarry with white people\n3. maintain order during the festival",
+        "correct_num": 2,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is used to [MASK].\n\nOptions:\n1. promote development\n2. make voters or jurors of negroes, or to qualify them to hold office, or to intermarry with white people\n3. maintain order during the festival"
+    },
+    {
+        "test_id": 92,
+        "relation": "UsedTo",
+        "correct_feat": "maintain white supremacy",
+        "options": "1. gain worldwide attention\n2. emphasize the claim that Jesus had a hereditary right to the throne of Israel\n3. maintain white supremacy",
+        "correct_num": 3,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is used to [MASK].\n\nOptions:\n1. gain worldwide attention\n2. emphasize the claim that Jesus had a hereditary right to the throne of Israel\n3. maintain white supremacy"
+    },
+    {
+        "test_id": 93,
+        "relation": "UsedTo",
+        "correct_feat": "deny social and political freedom to minorities",
+        "options": "1. deny social and political freedom to minorities\n2. participate in the program\n3. be resident BeatFM radio DJs",
+        "correct_num": 1,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is used to [MASK].\n\nOptions:\n1. deny social and political freedom to minorities\n2. participate in the program\n3. be resident BeatFM radio DJs"
+    },
+    {
+        "test_id": 94,
+        "relation": "UsedTo",
+        "correct_feat": "establish a white homeland",
+        "options": "1. become more mainstream\n2. establish a white homeland\n3. play tiles on a crossword-style grid",
+        "correct_num": 2,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is used to [MASK].\n\nOptions:\n1. become more mainstream\n2. establish a white homeland\n3. play tiles on a crossword-style grid"
+    }
+]

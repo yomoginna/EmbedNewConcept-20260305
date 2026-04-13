@@ -1,0 +1,514 @@
+[
+    {
+        "test_id": 0,
+        "relation": "About",
+        "correct_feat": "testing the working ability and instinct of small, often short-legged terriers or Dachshunds",
+        "options": "1. testing the working ability and instinct of small, often short-legged terriers or Dachshunds\n2. a nationalist phrase and concept of a racially defined national body united with a settlement area\n3. the Bancroft Treaties and their eventual abandonment",
+        "correct_num": 1,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is about [MASK].\n\nOptions:\n1. testing the working ability and instinct of small, often short-legged terriers or Dachshunds\n2. a nationalist phrase and concept of a racially defined national body united with a settlement area\n3. the Bancroft Treaties and their eventual abandonment"
+    },
+    {
+        "test_id": 1,
+        "relation": "About",
+        "correct_feat": "human-made tunnels that dogs must navigate while scenting a rat",
+        "options": "1. folk rock\n2. human-made tunnels that dogs must navigate while scenting a rat\n3. the problem of lust gone astray",
+        "correct_num": 2,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is about [MASK].\n\nOptions:\n1. folk rock\n2. human-made tunnels that dogs must navigate while scenting a rat\n3. the problem of lust gone astray"
+    },
+    {
+        "test_id": 2,
+        "relation": "About",
+        "correct_feat": "the controlled hunting encounter where neither the dog nor the quarry are endangered",
+        "options": "1. celebrating Latino and, more specifically, Chicano culture and influence at The University of Southern California and in Los Angeles\n2. a particular type of icon of the Theotokos (Virgin Mary)\n3. the controlled hunting encounter where neither the dog nor the quarry are endangered",
+        "correct_num": 3,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is about [MASK].\n\nOptions:\n1. celebrating Latino and, more specifically, Chicano culture and influence at The University of Southern California and in Los Angeles\n2. a particular type of icon of the Theotokos (Virgin Mary)\n3. the controlled hunting encounter where neither the dog nor the quarry are endangered"
+    },
+    {
+        "test_id": 3,
+        "relation": "Affects",
+        "correct_feat": "the working ability and instinct of terriers and Dachshunds",
+        "options": "1. the working ability and instinct of terriers and Dachshunds\n2. the Supreme Court of the United States\n3. the public space and the public sphere of society in general",
+        "correct_num": 1,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> affects [MASK].\n\nOptions:\n1. the working ability and instinct of terriers and Dachshunds\n2. the Supreme Court of the United States\n3. the public space and the public sphere of society in general"
+    },
+    {
+        "test_id": 4,
+        "relation": "AssociatedWith",
+        "correct_feat": "the Canadian Kennel Club",
+        "options": "1. Peter D\u00fcring on drums\n2. the Canadian Kennel Club\n3. the Orange and Alexandria Railroad",
+        "correct_num": 2,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is associated with [MASK].\n\nOptions:\n1. Peter D\u00fcring on drums\n2. the Canadian Kennel Club\n3. the Orange and Alexandria Railroad"
+    },
+    {
+        "test_id": 5,
+        "relation": "AssociatedWith",
+        "correct_feat": "the American Kennel Club",
+        "options": "1. the American Revolution\n2. the men's movement\n3. the American Kennel Club",
+        "correct_num": 3,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is associated with [MASK].\n\nOptions:\n1. the American Revolution\n2. the men's movement\n3. the American Kennel Club"
+    },
+    {
+        "test_id": 6,
+        "relation": "AssociatedWith",
+        "correct_feat": "the American Working Terrier Association",
+        "options": "1. the American Working Terrier Association\n2. the village of Zarudchi in the Lyubeshiv district\n3. Big Death",
+        "correct_num": 1,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is associated with [MASK].\n\nOptions:\n1. the American Working Terrier Association\n2. the village of Zarudchi in the Lyubeshiv district\n3. Big Death"
+    },
+    {
+        "test_id": 7,
+        "relation": "BelongsTo",
+        "correct_feat": "the sport of dog training and testing",
+        "options": "1. the Muslim world\n2. the sport of dog training and testing\n3. the mancala family of board games",
+        "correct_num": 2,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> belongs to [MASK].\n\nOptions:\n1. the Muslim world\n2. the sport of dog training and testing\n3. the mancala family of board games"
+    },
+    {
+        "test_id": 8,
+        "relation": "BuiltIn",
+        "correct_feat": "in human-made tunnels",
+        "options": "1. in Iran\n2. in Babylonia\n3. in human-made tunnels",
+        "correct_num": 3,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> was built [MASK].\n\nOptions:\n1. in Iran\n2. in Babylonia\n3. in human-made tunnels"
+    },
+    {
+        "test_id": 9,
+        "relation": "ConsistsOf",
+        "correct_feat": "human-made tunnels",
+        "options": "1. human-made tunnels\n2. nationally determined contributions (NDCs)\n3. an ancient Byzantine icon of the Mother of God \"Nikopea\" from the 6th century",
+        "correct_num": 1,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> consists of [MASK].\n\nOptions:\n1. human-made tunnels\n2. nationally determined contributions (NDCs)\n3. an ancient Byzantine icon of the Mother of God \"Nikopea\" from the 6th century"
+    },
+    {
+        "test_id": 10,
+        "relation": "ConsistsOf",
+        "correct_feat": "scenting a rat",
+        "options": "1. a mode of transport, music or vocalizations, a visual signal of a hierarchy, and the display of eye-catching items like banners\n2. scenting a rat\n3. 300 die cut unit counters",
+        "correct_num": 2,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> consists of [MASK].\n\nOptions:\n1. a mode of transport, music or vocalizations, a visual signal of a hierarchy, and the display of eye-catching items like banners\n2. scenting a rat\n3. 300 die cut unit counters"
+    },
+    {
+        "test_id": 11,
+        "relation": "ConsistsOf",
+        "correct_feat": "barking, scratching, staring, pawing, or digging",
+        "options": "1. negotiation phases and the absence of dice and other game elements that produce random effects\n2. 11 tracks condensed from several months of demos\n3. barking, scratching, staring, pawing, or digging",
+        "correct_num": 3,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> consists of [MASK].\n\nOptions:\n1. negotiation phases and the absence of dice and other game elements that produce random effects\n2. 11 tracks condensed from several months of demos\n3. barking, scratching, staring, pawing, or digging"
+    },
+    {
+        "test_id": 12,
+        "relation": "CreatedFor",
+        "correct_feat": "testing the working ability and instinct of terriers and Dachshunds",
+        "options": "1. testing the working ability and instinct of terriers and Dachshunds\n2. Florimond Robertet\n3. an impromptu rendition of their makeshift track \"Indian Cab Driver\"",
+        "correct_num": 1,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> was created for [MASK].\n\nOptions:\n1. testing the working ability and instinct of terriers and Dachshunds\n2. Florimond Robertet\n3. an impromptu rendition of their makeshift track \"Indian Cab Driver\""
+    },
+    {
+        "test_id": 13,
+        "relation": "CreatedTo",
+        "correct_feat": "test the working ability and instinct of terriers and Dachshunds",
+        "options": "1. serve as a cause for Risorgimento\n2. test the working ability and instinct of terriers and Dachshunds\n3. describe a revival of the Cristero movement",
+        "correct_num": 2,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> was created to [MASK].\n\nOptions:\n1. serve as a cause for Risorgimento\n2. test the working ability and instinct of terriers and Dachshunds\n3. describe a revival of the Cristero movement"
+    },
+    {
+        "test_id": 14,
+        "relation": "CreatedTo",
+        "correct_feat": "introduce dogs to den work and quarry",
+        "options": "1. distinguish his version of socialist ideology from the international socialist movement\n2. improve the visibility of the clock\n3. introduce dogs to den work and quarry",
+        "correct_num": 3,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> was created to [MASK].\n\nOptions:\n1. distinguish his version of socialist ideology from the international socialist movement\n2. improve the visibility of the clock\n3. introduce dogs to den work and quarry"
+    },
+    {
+        "test_id": 15,
+        "relation": "CreatedTo",
+        "correct_feat": "gauge a dog's natural hunting aptitude",
+        "options": "1. gauge a dog's natural hunting aptitude\n2. provide their own theories to the foundation Marx provided\n3. reveal a state-framed set of actions",
+        "correct_num": 1,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> was created to [MASK].\n\nOptions:\n1. gauge a dog's natural hunting aptitude\n2. provide their own theories to the foundation Marx provided\n3. reveal a state-framed set of actions"
+    },
+    {
+        "test_id": 16,
+        "relation": "HasA",
+        "correct_feat": "tunnels",
+        "options": "1. a niche-like throne\n2. tunnels\n3. four UK number-ones",
+        "correct_num": 2,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> has [MASK].\n\nOptions:\n1. a niche-like throne\n2. tunnels\n3. four UK number-ones"
+    },
+    {
+        "test_id": 17,
+        "relation": "HasA",
+        "correct_feat": "quarry",
+        "options": "1. a size of 22 ft \u00d7 74 ft\n2. a government-debt crisis\n3. quarry",
+        "correct_num": 3,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> has [MASK].\n\nOptions:\n1. a size of 22 ft \u00d7 74 ft\n2. a government-debt crisis\n3. quarry"
+    },
+    {
+        "test_id": 19,
+        "relation": "HasA",
+        "correct_feat": "judges",
+        "options": "1. a large portion of Christ's hair on his left side with damage\n2. judges\n3. tuned mass dampers",
+        "correct_num": 2,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> has [MASK].\n\nOptions:\n1. a large portion of Christ's hair on his left side with damage\n2. judges\n3. tuned mass dampers"
+    },
+    {
+        "test_id": 20,
+        "relation": "HasA",
+        "correct_feat": "titles",
+        "options": "1. an east-west axis of Poland to Belgium\n2. a lawsuit for damages in libel\n3. titles",
+        "correct_num": 3,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> has [MASK].\n\nOptions:\n1. an east-west axis of Poland to Belgium\n2. a lawsuit for damages in libel\n3. titles"
+    },
+    {
+        "test_id": 21,
+        "relation": "HasA",
+        "correct_feat": "levels of increasing difficulty",
+        "options": "1. levels of increasing difficulty\n2. a second EP titled Gone\n3. characteristics that are sometimes called 'semifeudal'",
+        "correct_num": 1,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> has [MASK].\n\nOptions:\n1. levels of increasing difficulty\n2. a second EP titled Gone\n3. characteristics that are sometimes called 'semifeudal'"
+    },
+    {
+        "test_id": 22,
+        "relation": "HasFeatureOf",
+        "correct_feat": "human-made tunnels",
+        "options": "1. a per curiam decision\n2. human-made tunnels\n3. four maps in four colors",
+        "correct_num": 2,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is characterized by [MASK].\n\nOptions:\n1. a per curiam decision\n2. human-made tunnels\n3. four maps in four colors"
+    },
+    {
+        "test_id": 23,
+        "relation": "HasFeatureOf",
+        "correct_feat": "the use of rats as quarry",
+        "options": "1. being an abstract strategy game\n2. the revival of ancient heritage\n3. the use of rats as quarry",
+        "correct_num": 3,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is characterized by [MASK].\n\nOptions:\n1. being an abstract strategy game\n2. the revival of ancient heritage\n3. the use of rats as quarry"
+    },
+    {
+        "test_id": 24,
+        "relation": "HasFeatureOf",
+        "correct_feat": "specific breeds of terriers and Dachshunds",
+        "options": "1. specific breeds of terriers and Dachshunds\n2. its perspectiveless style\n3. embittered rants about modern working life",
+        "correct_num": 1,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is characterized by [MASK].\n\nOptions:\n1. specific breeds of terriers and Dachshunds\n2. its perspectiveless style\n3. embittered rants about modern working life"
+    },
+    {
+        "test_id": 25,
+        "relation": "HasFeatureOf",
+        "correct_feat": "different levels of difficulty",
+        "options": "1. the Peace of Nicias\n2. different levels of difficulty\n3. the use of conspiracy theories",
+        "correct_num": 2,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is characterized by [MASK].\n\nOptions:\n1. the Peace of Nicias\n2. different levels of difficulty\n3. the use of conspiracy theories"
+    },
+    {
+        "test_id": 26,
+        "relation": "HasFeatureOf",
+        "correct_feat": "the need for dogs to follow a scent trail",
+        "options": "1. its founder, Seljuk Beg\n2. two armies of uneven numbers\n3. the need for dogs to follow a scent trail",
+        "correct_num": 3,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is characterized by [MASK].\n\nOptions:\n1. its founder, Seljuk Beg\n2. two armies of uneven numbers\n3. the need for dogs to follow a scent trail"
+    },
+    {
+        "test_id": 27,
+        "relation": "HasFeatureOf",
+        "correct_feat": "the dog working the quarry",
+        "options": "1. the dog working the quarry\n2. being popular, influential, and enduring\n3. a focus on moralism",
+        "correct_num": 1,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is characterized by [MASK].\n\nOptions:\n1. the dog working the quarry\n2. being popular, influential, and enduring\n3. a focus on moralism"
+    },
+    {
+        "test_id": 28,
+        "relation": "HasFeatureOf",
+        "correct_feat": "the quarry being protected by wooden bars",
+        "options": "1. high contrast between the space and the subjects\n2. the quarry being protected by wooden bars\n3. considering domestication, technology and language to cause social alienation from \"authentic reality\"",
+        "correct_num": 2,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is characterized by [MASK].\n\nOptions:\n1. high contrast between the space and the subjects\n2. the quarry being protected by wooden bars\n3. considering domestication, technology and language to cause social alienation from \"authentic reality\""
+    },
+    {
+        "test_id": 29,
+        "relation": "HeldIn",
+        "correct_feat": "Canada",
+        "options": "1. Western Sahara\n2. Sri Lanka\n3. Canada",
+        "correct_num": 3,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> was held in [MASK].\n\nOptions:\n1. Western Sahara\n2. Sri Lanka\n3. Canada"
+    },
+    {
+        "test_id": 30,
+        "relation": "HeldIn",
+        "correct_feat": "the United States",
+        "options": "1. the United States\n2. Iraq\n3. Mauritius",
+        "correct_num": 1,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> was held in [MASK].\n\nOptions:\n1. the United States\n2. Iraq\n3. Mauritius"
+    },
+    {
+        "test_id": 33,
+        "relation": "IsA",
+        "correct_feat": "a test of working ability and instinct",
+        "options": "1. a test of working ability and instinct\n2. an English rock band\n3. an excellent thing",
+        "correct_num": 1,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is [MASK].\n\nOptions:\n1. a test of working ability and instinct\n2. an English rock band\n3. an excellent thing"
+    },
+    {
+        "test_id": 34,
+        "relation": "IsA",
+        "correct_feat": "a test for small, often short-legged terriers or Dachshunds",
+        "options": "1. a phrase penned by majority opinion author Justice Clarence Thomas\n2. a test for small, often short-legged terriers or Dachshunds\n3. a series of games based on elements",
+        "correct_num": 2,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is [MASK].\n\nOptions:\n1. a phrase penned by majority opinion author Justice Clarence Thomas\n2. a test for small, often short-legged terriers or Dachshunds\n3. a series of games based on elements"
+    },
+    {
+        "test_id": 35,
+        "relation": "IsA",
+        "correct_feat": "a test involving human-made tunnels",
+        "options": "1. the first game in the series\n2. an ideology which aims to promote political violence\n3. a test involving human-made tunnels",
+        "correct_num": 3,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is [MASK].\n\nOptions:\n1. the first game in the series\n2. an ideology which aims to promote political violence\n3. a test involving human-made tunnels"
+    },
+    {
+        "test_id": 36,
+        "relation": "IsA",
+        "correct_feat": "a controlled hunting encounter",
+        "options": "1. a controlled hunting encounter\n2. a Japanese film\n3. an entertainment attraction",
+        "correct_num": 1,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is [MASK].\n\nOptions:\n1. a controlled hunting encounter\n2. a Japanese film\n3. an entertainment attraction"
+    },
+    {
+        "test_id": 37,
+        "relation": "IsA",
+        "correct_feat": "a noncompetitive venue",
+        "options": "1. a shoot-em-up slugfest\n2. a noncompetitive venue\n3. a solved game",
+        "correct_num": 2,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is [MASK].\n\nOptions:\n1. a shoot-em-up slugfest\n2. a noncompetitive venue\n3. a solved game"
+    },
+    {
+        "test_id": 38,
+        "relation": "IsA",
+        "correct_feat": "a program broken down into several levels of increasing difficulty",
+        "options": "1. a portrait artists make of themselves\n2. moderately suited for solitaire play\n3. a program broken down into several levels of increasing difficulty",
+        "correct_num": 3,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is [MASK].\n\nOptions:\n1. a portrait artists make of themselves\n2. moderately suited for solitaire play\n3. a program broken down into several levels of increasing difficulty"
+    },
+    {
+        "test_id": 39,
+        "relation": "IsA",
+        "correct_feat": "a den trial",
+        "options": "1. a den trial\n2. a 12-inch record\n3. a pictural representation of the final judgment",
+        "correct_num": 1,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is [MASK].\n\nOptions:\n1. a den trial\n2. a 12-inch record\n3. a pictural representation of the final judgment"
+    },
+    {
+        "test_id": 40,
+        "relation": "KnownAs",
+        "correct_feat": "an earthdog test",
+        "options": "1. those who follow the line of Yeshivat HaKav\n2. an earthdog test\n3. the Iviron Theotokos",
+        "correct_num": 2,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is known as [MASK].\n\nOptions:\n1. those who follow the line of Yeshivat HaKav\n2. an earthdog test\n3. the Iviron Theotokos"
+    },
+    {
+        "test_id": 41,
+        "relation": "KnownFor",
+        "correct_feat": "testing the working ability and instinct of terriers and Dachshunds",
+        "options": "1. its stadium and arena tours\n2. the abapa variation\n3. testing the working ability and instinct of terriers and Dachshunds",
+        "correct_num": 3,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is known for [MASK].\n\nOptions:\n1. its stadium and arena tours\n2. the abapa variation\n3. testing the working ability and instinct of terriers and Dachshunds"
+    },
+    {
+        "test_id": 42,
+        "relation": "KnownFor",
+        "correct_feat": "its use of human-made tunnels",
+        "options": "1. its use of human-made tunnels\n2. its veneration in Yaroslavl\n3. Marian apparitions reported in 1667",
+        "correct_num": 1,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is known for [MASK].\n\nOptions:\n1. its use of human-made tunnels\n2. its veneration in Yaroslavl\n3. Marian apparitions reported in 1667"
+    },
+    {
+        "test_id": 43,
+        "relation": "KnownFor",
+        "correct_feat": "involving quarry such as rats",
+        "options": "1. having cup-shaped holes\n2. involving quarry such as rats\n3. its six principles",
+        "correct_num": 2,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is known for [MASK].\n\nOptions:\n1. having cup-shaped holes\n2. involving quarry such as rats\n3. its six principles"
+    },
+    {
+        "test_id": 44,
+        "relation": "KnownFor",
+        "correct_feat": "its different levels of difficulty and titles",
+        "options": "1. its historical continuity\n2. the Polish \"Golden Age\"\n3. its different levels of difficulty and titles",
+        "correct_num": 3,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is known for [MASK].\n\nOptions:\n1. its historical continuity\n2. the Polish \"Golden Age\"\n3. its different levels of difficulty and titles"
+    },
+    {
+        "test_id": 45,
+        "relation": "MemberOf",
+        "correct_feat": "activities sanctioned by the Canadian Kennel Club",
+        "options": "1. activities sanctioned by the Canadian Kennel Club\n2. Nippon Kaigi\n3. the quarantia",
+        "correct_num": 1,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is a member of [MASK].\n\nOptions:\n1. activities sanctioned by the Canadian Kennel Club\n2. Nippon Kaigi\n3. the quarantia"
+    },
+    {
+        "test_id": 46,
+        "relation": "MemberOf",
+        "correct_feat": "activities sanctioned by the American Kennel Club",
+        "options": "1. the Mexican Democratic Party\n2. activities sanctioned by the American Kennel Club\n3. the Non-Aligned Movement",
+        "correct_num": 2,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is a member of [MASK].\n\nOptions:\n1. the Mexican Democratic Party\n2. activities sanctioned by the American Kennel Club\n3. the Non-Aligned Movement"
+    },
+    {
+        "test_id": 47,
+        "relation": "MemberOf",
+        "correct_feat": "activities sanctioned by the American Working Terrier Association",
+        "options": "1. the RIAA\n2. the Primeval History in the Torah\n3. activities sanctioned by the American Working Terrier Association",
+        "correct_num": 3,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is a member of [MASK].\n\nOptions:\n1. the RIAA\n2. the Primeval History in the Torah\n3. activities sanctioned by the American Working Terrier Association"
+    },
+    {
+        "test_id": 48,
+        "relation": "PartOf",
+        "correct_feat": "the American Kennel Club's program",
+        "options": "1. the American Kennel Club's program\n2. the Hollies\n3. the Synoptic Gospels",
+        "correct_num": 1,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is part of [MASK].\n\nOptions:\n1. the American Kennel Club's program\n2. the Hollies\n3. the Synoptic Gospels"
+    },
+    {
+        "test_id": 49,
+        "relation": "PartOf",
+        "correct_feat": "the American Working Terrier Association's den trials",
+        "options": "1. the history of Rockefeller Center\n2. the American Working Terrier Association's den trials\n3. the \"Kursk-Root\" icon",
+        "correct_num": 2,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is part of [MASK].\n\nOptions:\n1. the history of Rockefeller Center\n2. the American Working Terrier Association's den trials\n3. the \"Kursk-Root\" icon"
+    },
+    {
+        "test_id": 51,
+        "relation": "PerformedBy",
+        "correct_feat": "dogs registered with the AKC",
+        "options": "1. dogs registered with the AKC\n2. two people\n3. nuns",
+        "correct_num": 1,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> was performed by [MASK].\n\nOptions:\n1. dogs registered with the AKC\n2. two people\n3. nuns"
+    },
+    {
+        "test_id": 52,
+        "relation": "PerformedBy",
+        "correct_feat": "purebred dogs with ILP numbers",
+        "options": "1. Egyptian security services\n2. purebred dogs with ILP numbers\n3. women",
+        "correct_num": 2,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> was performed by [MASK].\n\nOptions:\n1. Egyptian security services\n2. purebred dogs with ILP numbers\n3. women"
+    },
+    {
+        "test_id": 53,
+        "relation": "PerformedBy",
+        "correct_feat": "two dogs hunting together as a brace in the Master Earthdog test",
+        "options": "1. Luftwaffe Field Divisions\n2. Jesus Christ\n3. two dogs hunting together as a brace in the Master Earthdog test",
+        "correct_num": 3,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> was performed by [MASK].\n\nOptions:\n1. Luftwaffe Field Divisions\n2. Jesus Christ\n3. two dogs hunting together as a brace in the Master Earthdog test"
+    },
+    {
+        "test_id": 54,
+        "relation": "UsedAs",
+        "correct_feat": "a way to gauge a dog's natural hunting aptitude",
+        "options": "1. a way to gauge a dog's natural hunting aptitude\n2. a term to describe emigration advocates\n3. an example of government-granted monopolies",
+        "correct_num": 1,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is used as [MASK].\n\nOptions:\n1. a way to gauge a dog's natural hunting aptitude\n2. a term to describe emigration advocates\n3. an example of government-granted monopolies"
+    },
+    {
+        "test_id": 55,
+        "relation": "UsedAs",
+        "correct_feat": "a noncompetitive venue",
+        "options": "1. the official language of the government in Persia\n2. a noncompetitive venue\n3. a support for bridges",
+        "correct_num": 2,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is used as [MASK].\n\nOptions:\n1. the official language of the government in Persia\n2. a noncompetitive venue\n3. a support for bridges"
+    },
+    {
+        "test_id": 56,
+        "relation": "UsedAs",
+        "correct_feat": "a test for working ability and instinct",
+        "options": "1. a name for the family\n2. an element of the Aurelian Walls\n3. a test for working ability and instinct",
+        "correct_num": 3,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is used as [MASK].\n\nOptions:\n1. a name for the family\n2. an element of the Aurelian Walls\n3. a test for working ability and instinct"
+    },
+    {
+        "test_id": 57,
+        "relation": "UsedFor",
+        "correct_feat": "testing the working ability and instinct of terriers and Dachshunds",
+        "options": "1. testing the working ability and instinct of terriers and Dachshunds\n2. creating a tightly coordinated anarchist federation\n3. improving the conditions of the poor",
+        "correct_num": 1,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is used for [MASK].\n\nOptions:\n1. testing the working ability and instinct of terriers and Dachshunds\n2. creating a tightly coordinated anarchist federation\n3. improving the conditions of the poor"
+    },
+    {
+        "test_id": 58,
+        "relation": "UsedFor",
+        "correct_feat": "introducing dogs to den work and quarry",
+        "options": "1. getting all player pieces home before the opponent does\n2. introducing dogs to den work and quarry\n3. creating poems",
+        "correct_num": 2,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is used for [MASK].\n\nOptions:\n1. getting all player pieces home before the opponent does\n2. introducing dogs to den work and quarry\n3. creating poems"
+    },
+    {
+        "test_id": 59,
+        "relation": "UsedFor",
+        "correct_feat": "demonstrating the consistency of a hunting earthdog",
+        "options": "1. encouraging and agitating workers to rebel against the state and capitalism\n2. the purpose of political violence\n3. demonstrating the consistency of a hunting earthdog",
+        "correct_num": 3,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is used for [MASK].\n\nOptions:\n1. encouraging and agitating workers to rebel against the state and capitalism\n2. the purpose of political violence\n3. demonstrating the consistency of a hunting earthdog"
+    },
+    {
+        "test_id": 60,
+        "relation": "UsedFor",
+        "correct_feat": "promoting and testing the working abilities of terriers and dachshunds",
+        "options": "1. promoting and testing the working abilities of terriers and dachshunds\n2. distinguishing it from other board games\n3. the purpose of creating white ethnostates",
+        "correct_num": 1,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is used for [MASK].\n\nOptions:\n1. promoting and testing the working abilities of terriers and dachshunds\n2. distinguishing it from other board games\n3. the purpose of creating white ethnostates"
+    },
+    {
+        "test_id": 61,
+        "relation": "UsedIn",
+        "correct_feat": "AKC earthdog tests",
+        "options": "1. the summer\n2. AKC earthdog tests\n3. the UN Security Council chamber",
+        "correct_num": 2,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is used in [MASK].\n\nOptions:\n1. the summer\n2. AKC earthdog tests\n3. the UN Security Council chamber"
+    },
+    {
+        "test_id": 62,
+        "relation": "UsedIn",
+        "correct_feat": "AWTA earthdog den trials",
+        "options": "1. the Kingdom of Naples\n2. the film \"Dragostea ce mi\u0219c\u0103 sori \u0219i stele\n3. AWTA earthdog den trials",
+        "correct_num": 3,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is used in [MASK].\n\nOptions:\n1. the Kingdom of Naples\n2. the film \"Dragostea ce mi\u0219c\u0103 sori \u0219i stele\n3. AWTA earthdog den trials"
+    },
+    {
+        "test_id": 63,
+        "relation": "UsedTo",
+        "correct_feat": "test the working ability and instinct of small terriers or Dachshunds",
+        "options": "1. test the working ability and instinct of small terriers or Dachshunds\n2. distinguish between legitimate combatants and others\n3. arrest a fall",
+        "correct_num": 1,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is used to [MASK].\n\nOptions:\n1. test the working ability and instinct of small terriers or Dachshunds\n2. distinguish between legitimate combatants and others\n3. arrest a fall"
+    },
+    {
+        "test_id": 64,
+        "relation": "UsedTo",
+        "correct_feat": "introduce dogs to den work and quarry",
+        "options": "1. explain cross-linguistic variation\n2. introduce dogs to den work and quarry\n3. audition for the X Factor",
+        "correct_num": 2,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is used to [MASK].\n\nOptions:\n1. explain cross-linguistic variation\n2. introduce dogs to den work and quarry\n3. audition for the X Factor"
+    },
+    {
+        "test_id": 65,
+        "relation": "UsedTo",
+        "correct_feat": "demonstrate a dog's willingness to perform required tasks",
+        "options": "1. protect the environment from anthropogenic greenhouse gas emissions\n2. identify the Houses of Lancaster and York\n3. demonstrate a dog's willingness to perform required tasks",
+        "correct_num": 3,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is used to [MASK].\n\nOptions:\n1. protect the environment from anthropogenic greenhouse gas emissions\n2. identify the Houses of Lancaster and York\n3. demonstrate a dog's willingness to perform required tasks"
+    },
+    {
+        "test_id": 66,
+        "relation": "UsedTo",
+        "correct_feat": "gauge a dog's natural hunting aptitude",
+        "options": "1. gauge a dog's natural hunting aptitude\n2. seize power\n3. refer to the Svevi",
+        "correct_num": 1,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is used to [MASK].\n\nOptions:\n1. gauge a dog's natural hunting aptitude\n2. seize power\n3. refer to the Svevi"
+    },
+    {
+        "test_id": 67,
+        "relation": "UsedTo",
+        "correct_feat": "demonstrate the consistency of a hunting earthdog",
+        "options": "1. prevent criticism of their ideology\n2. demonstrate the consistency of a hunting earthdog\n3. describe non-Western societies",
+        "correct_num": 2,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is used to [MASK].\n\nOptions:\n1. prevent criticism of their ideology\n2. demonstrate the consistency of a hunting earthdog\n3. describe non-Western societies"
+    }
+]

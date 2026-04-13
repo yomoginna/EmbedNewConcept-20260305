@@ -45,6 +45,45 @@ os.makedirs(gen_result_savedir, exist_ok=True)
 generated_concepts_save_filepath = os.path.join(gen_result_savedir, "generated_concepts_map.jsonl")
 rel_to_maskedSentence_path = os.path.join(project_root, 'data', 'templates', 'rel_to_maskedSentence.json')
 
+# 自分で対象のconceptを指定する場合はここ:
+TARGET_CONCEPTS = [
+    # "House of Habsburg",
+    # "House of Bourbon",
+    # "Carolingian dynasty",
+    # "Ptolemaic dynasty",
+    # "Seljuk dynasty",
+    # "Almoravid dynasty",
+    # "Merovingian dynasty",
+    # "House of Romanov",
+    # "Ayyubid dynasty",
+    # "House of Tudor",
+    # "House of Windsor",
+    # "Qajar dynasty",
+    # "House of Stuart",
+    # "House of Plantagenet",
+    # "Pahlavi dynasty",
+    # "Goryeo",
+    # "Jagiellonian dynasty",
+    # "Ottoman dynasty",
+    # "Kassites",
+    # "Samanid dynasty",
+    # "House of Bernadotte",
+    # "Piast dynasty",
+    # "Flavian dynasty",
+    # "Julio-Claudian dynasty",
+    # "House of Hohenstaufen",
+    # "House of Bonaparte",
+    # "House of Glücksburg",
+    # "Marinid dynasty",
+    # "Hasmonean dynasty",
+    # "Idrisid dynasty",
+    # "Buyid dynasty",
+    # "Nerva–Antonine dynasty",
+    # "Ghurid dynasty",
+    # "Tahirid dynasty"
+    
+] # None # ["sport", "ideology", "System of law", "Legal Case"] # 例. ["Band"]
+
 def main(args):
     
     # 引数
@@ -79,12 +118,17 @@ def main(args):
     filtered_category_count_df = category_count_df[category_count_df["count"] >= propnoun_num_threshold]
     print(f"{propnoun_num_threshold}以上の固有名詞があるカテゴリの数: {filtered_category_count_df.shape[0]}")
     
-    if target_categories:
-        target_categories = [cat for cat in target_categories if cat in filtered_category_count_df["class_label"].tolist()]
-        print(f"Target categories specified: {target_categories}. Will generate features only for these categories.")
-    else:
-        target_categories = filtered_category_count_df["class_label"].tolist()
-        print("No target categories specified. Will generate features for all categories.")
+    if target_categories and TARGET_CONCEPTS is not None:
+        # target_categories と TARGET_CONCEPTS の両方が指定されている場合は、警告を出す
+        raise ValueError("Both target_categories and TARGET_CONCEPTS are specified. Please specify only one of them to avoid confusion.")
+    
+    if TARGET_CONCEPTS is None:
+        if target_categories:
+            target_categories = [cat for cat in target_categories if cat in filtered_category_count_df["class_label"].tolist()]
+            print(f"Target categories specified: {target_categories}. Will generate features only for these categories.")
+        else:
+            target_categories = filtered_category_count_df["class_label"].tolist()
+            print("No target categories specified. Will generate features for all categories.")
 
 
     # ************* wiki page の本文から特徴抽出 *************
@@ -122,25 +166,31 @@ def main(args):
             concept = filename.split('.json')[0]  # 拡張子を除いた部分を取得
             concept = concept.replace('_', ' ')  # ファイル名のアンダースコアをスペースに変換
             generated_concepts.append(concept)
-    print(f"Already generated concepts: {generated_concepts}")
+    print(f"Already generated concepts: {generated_concepts[:10]}... ({len(generated_concepts)}) ")
 
     # *** 生成ループ: target_categoriesの各カテゴリについて、Wikipediaから特徴抽出を行う ***
+    if TARGET_CONCEPTS is not None:
+        target_categories = ['-']
+
     for target_category in target_categories:
         # 再現性のためにシードを固定 
         # - target_categoriesに複数カテゴリを指定した場合も生成対象のconceptが同じになるよう、seedはカテゴリ内のループ開始時に設定する
         random.seed(RANDOM_SEED)
 
-        # target_categoryに属する固有名詞を全てリストアップし、シャッフルする
-        target_concepts = whole_df[whole_df["class_label"] == target_category]["label"].tolist()
-        target_concepts = sorted(target_concepts)
-        target_concepts = random.sample(target_concepts, k=len(target_concepts))
+        if TARGET_CONCEPTS == None:
+            # target_categoryに属する固有名詞を全てリストアップし、シャッフルする
+            target_concepts = whole_df[whole_df["class_label"] == target_category]["label"].tolist()
+            target_concepts = sorted(target_concepts)
+            target_concepts = random.sample(target_concepts, k=len(target_concepts))
+        else:
+            target_concepts = TARGET_CONCEPTS
 
 
         # * カテゴリ内の各固有名詞について、wiki page取得・特徴生成をループする
         gen_success_count = 0   # 生成成功した概念の数 (生成された特徴の数が feat_num_threshold 以上であった概念の数)
         total_gen_count = 0     # 生成を試みた概念の総数 (生成成功・失敗に関わらず)
         gen_success_concepts = [] # 生成成功した概念のリスト (生成された特徴の数が feat_num_threshold 以上であった概念のリスト)
-        generated_concepts = [] # 生成成功・失敗に関わらず、生成を試みた概念のリスト
+        # generated_concepts = [] # 生成成功・失敗に関わらず、生成を試みた概念のリスト
         for target_concept in target_concepts:
             # 既に生成済みのconceptであればスキップする
             if target_concept in generated_concepts:
@@ -419,6 +469,6 @@ def extract_wiki_main_text(text: str) -> str:
 
 if __name__ == "__main__":
     parser = argparse.ArgumentParser()
-    parser.add_argument("--target_categories", nargs="+", default=None, help="The target categories for which to generate features. If not specified, features will be generated for all categories.")
+    parser.add_argument("--target_categories", nargs="*", default=None, help="The target categories for which to generate features. If not specified, features will be generated for all categories.")
     args = parser.parse_args()
     main(args)

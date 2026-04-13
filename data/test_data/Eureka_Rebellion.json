@@ -1,0 +1,418 @@
+[
+    {
+        "test_id": 0,
+        "relation": "About",
+        "correct_feat": "gold miners who revolted against the British administration of the colony of Victoria, Australia, during the Victorian gold rush",
+        "options": "1. gold miners who revolted against the British administration of the colony of Victoria, Australia, during the Victorian gold rush\n2. the Bancroft Treaties and their eventual abandonment\n3. folk rock",
+        "correct_num": 1,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is about [MASK].\n\nOptions:\n1. gold miners who revolted against the British administration of the colony of Victoria, Australia, during the Victorian gold rush\n2. the Bancroft Treaties and their eventual abandonment\n3. folk rock"
+    },
+    {
+        "test_id": 1,
+        "relation": "Affects",
+        "correct_feat": "the cost of mining permits and the officious way the system was enforced",
+        "options": "1. the western Maghreb and al-Andalus\n2. the cost of mining permits and the officious way the system was enforced\n3. the Duchy of Swabia from 1079",
+        "correct_num": 2,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> affects [MASK].\n\nOptions:\n1. the western Maghreb and al-Andalus\n2. the cost of mining permits and the officious way the system was enforced\n3. the Duchy of Swabia from 1079"
+    },
+    {
+        "test_id": 2,
+        "relation": "AssociatedWith",
+        "correct_feat": "the Victorian gold rush",
+        "options": "1. the Abbasid caliphate\n2. Trevor Horn\n3. the Victorian gold rush",
+        "correct_num": 3,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is associated with [MASK].\n\nOptions:\n1. the Abbasid caliphate\n2. Trevor Horn\n3. the Victorian gold rush"
+    },
+    {
+        "test_id": 3,
+        "relation": "AssociatedWith",
+        "correct_feat": "the Battle of the Eureka Stockade",
+        "options": "1. the Battle of the Eureka Stockade\n2. Kevin Bartz\n3. Peter Düring on drums",
+        "correct_num": 1,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is associated with [MASK].\n\nOptions:\n1. the Battle of the Eureka Stockade\n2. Kevin Bartz\n3. Peter Düring on drums"
+    },
+    {
+        "test_id": 4,
+        "relation": "AssociatedWith",
+        "correct_feat": "Peter Lalor",
+        "options": "1. the Orange and Alexandria Railroad\n2. Peter Lalor\n3. The Wall Street Journal",
+        "correct_num": 2,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is associated with [MASK].\n\nOptions:\n1. the Orange and Alexandria Railroad\n2. Peter Lalor\n3. The Wall Street Journal"
+    },
+    {
+        "test_id": 5,
+        "relation": "AssociatedWith",
+        "correct_feat": "the Eureka Flag",
+        "options": "1. the village of Zarudchi in the Lyubeshiv district\n2. Big Death\n3. the Eureka Flag",
+        "correct_num": 3,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is associated with [MASK].\n\nOptions:\n1. the village of Zarudchi in the Lyubeshiv district\n2. Big Death\n3. the Eureka Flag"
+    },
+    {
+        "test_id": 6,
+        "relation": "BelongsTo",
+        "correct_feat": "the colony of Victoria, Australia",
+        "options": "1. the colony of Victoria, Australia\n2. the mancala family of board games\n3. TamStar Records",
+        "correct_num": 1,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> belongs to [MASK].\n\nOptions:\n1. the colony of Victoria, Australia\n2. the mancala family of board games\n3. TamStar Records"
+    },
+    {
+        "test_id": 7,
+        "relation": "CausedBy",
+        "correct_feat": "the cost of mining permits and the officious way the system was enforced",
+        "options": "1. the dissolution of their first band, Graduate\n2. the cost of mining permits and the officious way the system was enforced\n3. the suspicion that Egyptian security officials abducted, tortured and killed Giulio Regeni",
+        "correct_num": 2,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is caused by [MASK].\n\nOptions:\n1. the dissolution of their first band, Graduate\n2. the cost of mining permits and the officious way the system was enforced\n3. the suspicion that Egyptian security officials abducted, tortured and killed Giulio Regeni"
+    },
+    {
+        "test_id": 8,
+        "relation": "CausedBy",
+        "correct_feat": "the introduction of a tax on gold mines",
+        "options": "1. the extinction of the Babenbergs\n2. concerns and demands made by Latino and Chicano students during the 1993-1994 academic year\n3. the introduction of a tax on gold mines",
+        "correct_num": 3,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is caused by [MASK].\n\nOptions:\n1. the extinction of the Babenbergs\n2. concerns and demands made by Latino and Chicano students during the 1993-1994 academic year\n3. the introduction of a tax on gold mines"
+    },
+    {
+        "test_id": 9,
+        "relation": "CausedBy",
+        "correct_feat": "the murder of a gold miner and the burning of a local hotel",
+        "options": "1. the murder of a gold miner and the burning of a local hotel\n2. the COVID-19 pandemic in Australia\n3. a road traffic accident",
+        "correct_num": 1,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is caused by [MASK].\n\nOptions:\n1. the murder of a gold miner and the burning of a local hotel\n2. the COVID-19 pandemic in Australia\n3. a road traffic accident"
+    },
+    {
+        "test_id": 10,
+        "relation": "HasA",
+        "correct_feat": "grievances concerning the cost of mining permits",
+        "options": "1. the ROC Nations' Cup\n2. grievances concerning the cost of mining permits\n3. three winged putti flying away",
+        "correct_num": 2,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> has [MASK].\n\nOptions:\n1. the ROC Nations' Cup\n2. grievances concerning the cost of mining permits\n3. three winged putti flying away"
+    },
+    {
+        "test_id": 11,
+        "relation": "HasA",
+        "correct_feat": "a preceding period of peaceful demonstrations and civil disobedience",
+        "options": "1. a backbone and wire guy-ropes\n2. a game of sacrifice\n3. a preceding period of peaceful demonstrations and civil disobedience",
+        "correct_num": 3,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> has [MASK].\n\nOptions:\n1. a backbone and wire guy-ropes\n2. a game of sacrifice\n3. a preceding period of peaceful demonstrations and civil disobedience"
+    },
+    {
+        "test_id": 12,
+        "relation": "HasA",
+        "correct_feat": "a de facto leader named Peter Lalor",
+        "options": "1. a de facto leader named Peter Lalor\n2. a width of 15.9 in. 40.3 cm\n3. reception details",
+        "correct_num": 1,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> has [MASK].\n\nOptions:\n1. a de facto leader named Peter Lalor\n2. a width of 15.9 in. 40.3 cm\n3. reception details"
+    },
+    {
+        "test_id": 13,
+        "relation": "HasA",
+        "correct_feat": "a legacy that is contested",
+        "options": "1. an objective to score more goals than the opposing team\n2. a legacy that is contested\n3. a niche-like throne",
+        "correct_num": 2,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> has [MASK].\n\nOptions:\n1. an objective to score more goals than the opposing team\n2. a legacy that is contested\n3. a niche-like throne"
+    },
+    {
+        "test_id": 14,
+        "relation": "HasA",
+        "correct_feat": "reforms implemented, including universal adult male suffrage",
+        "options": "1. four UK number-ones\n2. a size of 22 ft × 74 ft\n3. reforms implemented, including universal adult male suffrage",
+        "correct_num": 3,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> has [MASK].\n\nOptions:\n1. four UK number-ones\n2. a size of 22 ft × 74 ft\n3. reforms implemented, including universal adult male suffrage"
+    },
+    {
+        "test_id": 15,
+        "relation": "HasA",
+        "correct_feat": "origins in the Australian gold rush that began in 1851",
+        "options": "1. origins in the Australian gold rush that began in 1851\n2. a government-debt crisis\n3. \"limited intelligence\" gameplay",
+        "correct_num": 1,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> has [MASK].\n\nOptions:\n1. origins in the Australian gold rush that began in 1851\n2. a government-debt crisis\n3. \"limited intelligence\" gameplay"
+    },
+    {
+        "test_id": 16,
+        "relation": "HasFeatureOf",
+        "correct_feat": "the Battle of the Eureka Stockade",
+        "options": "1. a coiled dragon holding a sword in its mouth\n2. the Battle of the Eureka Stockade\n3. the traditional maniera greca",
+        "correct_num": 2,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is characterized by [MASK].\n\nOptions:\n1. a coiled dragon holding a sword in its mouth\n2. the Battle of the Eureka Stockade\n3. the traditional maniera greca"
+    },
+    {
+        "test_id": 17,
+        "relation": "HasFeatureOf",
+        "correct_feat": "the Eureka Flag",
+        "options": "1. its distances\n2. \"untried\" Soviet units in its second edition\n3. the Eureka Flag",
+        "correct_num": 3,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is characterized by [MASK].\n\nOptions:\n1. its distances\n2. \"untried\" Soviet units in its second edition\n3. the Eureka Flag"
+    },
+    {
+        "test_id": 18,
+        "relation": "HasFeatureOf",
+        "correct_feat": "the grievances of gold miners",
+        "options": "1. the grievances of gold miners\n2. its ruling that New York's law was unconstitutional\n3. the practice of torture widely documented as a distinctive trait of the Egyptian police",
+        "correct_num": 1,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is characterized by [MASK].\n\nOptions:\n1. the grievances of gold miners\n2. its ruling that New York's law was unconstitutional\n3. the practice of torture widely documented as a distinctive trait of the Egyptian police"
+    },
+    {
+        "test_id": 19,
+        "relation": "HasFeatureOf",
+        "correct_feat": "peaceful demonstrations and civil disobedience",
+        "options": "1. five men, one of whom was a \"Branán\" or chief\n2. peaceful demonstrations and civil disobedience\n3. a per curiam decision",
+        "correct_num": 2,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is characterized by [MASK].\n\nOptions:\n1. five men, one of whom was a \"Branán\" or chief\n2. peaceful demonstrations and civil disobedience\n3. a per curiam decision"
+    },
+    {
+        "test_id": 20,
+        "relation": "HasFeatureOf",
+        "correct_feat": "open rebellion",
+        "options": "1. four maps in four colors\n2. being an abstract strategy game\n3. open rebellion",
+        "correct_num": 3,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is characterized by [MASK].\n\nOptions:\n1. four maps in four colors\n2. being an abstract strategy game\n3. open rebellion"
+    },
+    {
+        "test_id": 21,
+        "relation": "HasFeatureOf",
+        "correct_feat": "mass public support leading to acquittal",
+        "options": "1. mass public support leading to acquittal\n2. occurring with any caliber\n3. its perspectiveless style",
+        "correct_num": 1,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is characterized by [MASK].\n\nOptions:\n1. mass public support leading to acquittal\n2. occurring with any caliber\n3. its perspectiveless style"
+    },
+    {
+        "test_id": 22,
+        "relation": "HasFeatureOf",
+        "correct_feat": "the birth of democracy in Australia",
+        "options": "1. embittered rants about modern working life\n2. the birth of democracy in Australia\n3. the Peace of Nicias",
+        "correct_num": 2,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is characterized by [MASK].\n\nOptions:\n1. embittered rants about modern working life\n2. the birth of democracy in Australia\n3. the Peace of Nicias"
+    },
+    {
+        "test_id": 23,
+        "relation": "HasFeatureOf",
+        "correct_feat": "a political revolt",
+        "options": "1. attracting between 7000 and 8000 people in 2017\n2. its founder, Seljuk Beg\n3. a political revolt",
+        "correct_num": 3,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is characterized by [MASK].\n\nOptions:\n1. attracting between 7000 and 8000 people in 2017\n2. its founder, Seljuk Beg\n3. a political revolt"
+    },
+    {
+        "test_id": 24,
+        "relation": "HeldIn",
+        "correct_feat": "Ballarat",
+        "options": "1. Ballarat\n2. Turkmenistan\n3. Austin",
+        "correct_num": 1,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> was held in [MASK].\n\nOptions:\n1. Ballarat\n2. Turkmenistan\n3. Austin"
+    },
+    {
+        "test_id": 25,
+        "relation": "HeldIn",
+        "correct_feat": "Melbourne",
+        "options": "1. Macau\n2. Melbourne\n3. Bağcılar",
+        "correct_num": 2,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> was held in [MASK].\n\nOptions:\n1. Macau\n2. Melbourne\n3. Bağcılar"
+    },
+    {
+        "test_id": 26,
+        "relation": "HeldOn",
+        "correct_feat": "3 December 1854",
+        "options": "1. the Sunday before Labor Day\n2. Saturday, January 19\n3. 3 December 1854",
+        "correct_num": 3,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> was held on [MASK].\n\nOptions:\n1. the Sunday before Labor Day\n2. Saturday, January 19\n3. 3 December 1854"
+    },
+    {
+        "test_id": 27,
+        "relation": "Influenced",
+        "correct_feat": "legislation providing for universal adult male suffrage for Assembly elections",
+        "options": "1. legislation providing for universal adult male suffrage for Assembly elections\n2. Gregory of Nyssa's narration of Moses climbing the ladder\n3. the succession by being tonsured and sent to a monastery",
+        "correct_num": 1,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> influenced [MASK].\n\nOptions:\n1. legislation providing for universal adult male suffrage for Assembly elections\n2. Gregory of Nyssa's narration of Moses climbing the ladder\n3. the succession by being tonsured and sent to a monastery"
+    },
+    {
+        "test_id": 28,
+        "relation": "Influenced",
+        "correct_feat": "the removal of property qualifications for Legislative Assembly members",
+        "options": "1. the cultural identity of Toulouse\n2. the removal of property qualifications for Legislative Assembly members\n3. the film Dhadak",
+        "correct_num": 2,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> influenced [MASK].\n\nOptions:\n1. the cultural identity of Toulouse\n2. the removal of property qualifications for Legislative Assembly members\n3. the film Dhadak"
+    },
+    {
+        "test_id": 29,
+        "relation": "InfluencedBy",
+        "correct_feat": "the introduction of a tax on gold mines",
+        "options": "1. the game of chess\n2. the Parti Québécois leader Lucien Bouchard's announcement to hold another referendum\n3. the introduction of a tax on gold mines",
+        "correct_num": 3,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> was influenced by [MASK].\n\nOptions:\n1. the game of chess\n2. the Parti Québécois leader Lucien Bouchard's announcement to hold another referendum\n3. the introduction of a tax on gold mines"
+    },
+    {
+        "test_id": 30,
+        "relation": "InfluencedBy",
+        "correct_feat": "the murder of a gold miner and the burning of a local hotel",
+        "options": "1. the murder of a gold miner and the burning of a local hotel\n2. Tang Soo Do\n3. Egypt",
+        "correct_num": 1,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> was influenced by [MASK].\n\nOptions:\n1. the murder of a gold miner and the burning of a local hotel\n2. Tang Soo Do\n3. Egypt"
+    },
+    {
+        "test_id": 31,
+        "relation": "InfluencedBy",
+        "correct_feat": "the cost of mining permits",
+        "options": "1. The Platters\n2. the cost of mining permits\n3. the COVID-19 pandemic",
+        "correct_num": 2,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> was influenced by [MASK].\n\nOptions:\n1. The Platters\n2. the cost of mining permits\n3. the COVID-19 pandemic"
+    },
+    {
+        "test_id": 32,
+        "relation": "InfluencedBy",
+        "correct_feat": "the officious way the system was enforced",
+        "options": "1. Aron Trainin's concept of crimes against peace\n2. Beyoncé\n3. the officious way the system was enforced",
+        "correct_num": 3,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> was influenced by [MASK].\n\nOptions:\n1. Aron Trainin's concept of crimes against peace\n2. Beyoncé\n3. the officious way the system was enforced"
+    },
+    {
+        "test_id": 33,
+        "relation": "InfluencedBy",
+        "correct_feat": "the strict prohibition of liquor imposed by the government",
+        "options": "1. the strict prohibition of liquor imposed by the government\n2. a depiction in the mausoleum of St Agnes in Rome dating to the 4th century\n3. Muslim cities",
+        "correct_num": 1,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> was influenced by [MASK].\n\nOptions:\n1. the strict prohibition of liquor imposed by the government\n2. a depiction in the mausoleum of St Agnes in Rome dating to the 4th century\n3. Muslim cities"
+    },
+    {
+        "test_id": 34,
+        "relation": "InfluencedBy",
+        "correct_feat": "the need for improvements in the road from Melbourne",
+        "options": "1. a panoramic painting by Detaille and Neuville in Paris\n2. the need for improvements in the road from Melbourne\n3. Burm's childhood experiences of playing \"race\" cars with his brother",
+        "correct_num": 2,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> was influenced by [MASK].\n\nOptions:\n1. a panoramic painting by Detaille and Neuville in Paris\n2. the need for improvements in the road from Melbourne\n3. Burm's childhood experiences of playing \"race\" cars with his brother"
+    },
+    {
+        "test_id": 35,
+        "relation": "InfluencedBy",
+        "correct_feat": "the lack of police protection",
+        "options": "1. calcio storico fiorentino\n2. the need to save it from the Polish invasion of 1612\n3. the lack of police protection",
+        "correct_num": 3,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> was influenced by [MASK].\n\nOptions:\n1. calcio storico fiorentino\n2. the need to save it from the Polish invasion of 1612\n3. the lack of police protection"
+    },
+    {
+        "test_id": 36,
+        "relation": "InfluencedBy",
+        "correct_feat": "the disquiet on the goldfields",
+        "options": "1. the disquiet on the goldfields\n2. foreign styles and influences\n3. the Siege of Leningrad during World War II",
+        "correct_num": 1,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> was influenced by [MASK].\n\nOptions:\n1. the disquiet on the goldfields\n2. foreign styles and influences\n3. the Siege of Leningrad during World War II"
+    },
+    {
+        "test_id": 37,
+        "relation": "IsA",
+        "correct_feat": "a revolt",
+        "options": "1. a solved game\n2. a revolt\n3. a portrait artists make of themselves",
+        "correct_num": 2,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is [MASK].\n\nOptions:\n1. a solved game\n2. a revolt\n3. a portrait artists make of themselves"
+    },
+    {
+        "test_id": 38,
+        "relation": "IsA",
+        "correct_feat": "a rebellion",
+        "options": "1. moderately suited for solitaire play\n2. a 12-inch record\n3. a rebellion",
+        "correct_num": 3,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is [MASK].\n\nOptions:\n1. moderately suited for solitaire play\n2. a 12-inch record\n3. a rebellion"
+    },
+    {
+        "test_id": 39,
+        "relation": "IsA",
+        "correct_feat": "a political revolt",
+        "options": "1. a political revolt\n2. a pictural representation of the final judgment\n3. a work of medieval Georgian art",
+        "correct_num": 1,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is [MASK].\n\nOptions:\n1. a political revolt\n2. a pictural representation of the final judgment\n3. a work of medieval Georgian art"
+    },
+    {
+        "test_id": 40,
+        "relation": "KnownFor",
+        "correct_feat": "the Battle of the Eureka Stockade",
+        "options": "1. its stadium and arena tours\n2. the Battle of the Eureka Stockade\n3. the abapa variation",
+        "correct_num": 2,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is known for [MASK].\n\nOptions:\n1. its stadium and arena tours\n2. the Battle of the Eureka Stockade\n3. the abapa variation"
+    },
+    {
+        "test_id": 41,
+        "relation": "KnownFor",
+        "correct_feat": "the Eureka Flag",
+        "options": "1. its veneration in Yaroslavl\n2. Marian apparitions reported in 1667\n3. the Eureka Flag",
+        "correct_num": 3,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is known for [MASK].\n\nOptions:\n1. its veneration in Yaroslavl\n2. Marian apparitions reported in 1667\n3. the Eureka Flag"
+    },
+    {
+        "test_id": 42,
+        "relation": "KnownFor",
+        "correct_feat": "the grievances of gold miners",
+        "options": "1. the grievances of gold miners\n2. having cup-shaped holes\n3. the Western Regional Cherry Pit Spit",
+        "correct_num": 1,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is known for [MASK].\n\nOptions:\n1. the grievances of gold miners\n2. having cup-shaped holes\n3. the Western Regional Cherry Pit Spit"
+    },
+    {
+        "test_id": 43,
+        "relation": "KnownFor",
+        "correct_feat": "the implementation of reforms",
+        "options": "1. its historical continuity\n2. the implementation of reforms\n3. the Polish \"Golden Age\"",
+        "correct_num": 2,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is known for [MASK].\n\nOptions:\n1. its historical continuity\n2. the implementation of reforms\n3. the Polish \"Golden Age\""
+    },
+    {
+        "test_id": 44,
+        "relation": "KnownFor",
+        "correct_feat": "its contested legacy",
+        "options": "1. its gameplay involving a ball and a pile of seven stones\n2. the hundreds of replicas and copies made by later artists\n3. its contested legacy",
+        "correct_num": 3,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is known for [MASK].\n\nOptions:\n1. its gameplay involving a ball and a pile of seven stones\n2. the hundreds of replicas and copies made by later artists\n3. its contested legacy"
+    },
+    {
+        "test_id": 45,
+        "relation": "KnownFor",
+        "correct_feat": "being identified with the birth of democracy in Australia",
+        "options": "1. being identified with the birth of democracy in Australia\n2. the bond between handler and dog\n3. its decline in popularity due to newer sports and economic factors",
+        "correct_num": 1,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is known for [MASK].\n\nOptions:\n1. being identified with the birth of democracy in Australia\n2. the bond between handler and dog\n3. its decline in popularity due to newer sports and economic factors"
+    },
+    {
+        "test_id": 46,
+        "relation": "LocatedIn",
+        "correct_feat": "in the colony of Victoria, Australia",
+        "options": "1. in the history of French music\n2. in the colony of Victoria, Australia\n3. in the Nouveau Musée National de Monaco",
+        "correct_num": 2,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is located [MASK].\n\nOptions:\n1. in the history of French music\n2. in the colony of Victoria, Australia\n3. in the Nouveau Musée National de Monaco"
+    },
+    {
+        "test_id": 47,
+        "relation": "LocatedIn",
+        "correct_feat": "at Ballarat",
+        "options": "1. in Philadelphia, Pennsylvania\n2. in the Nilgiri Mountains\n3. at Ballarat",
+        "correct_num": 3,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is located [MASK].\n\nOptions:\n1. in Philadelphia, Pennsylvania\n2. in the Nilgiri Mountains\n3. at Ballarat"
+    },
+    {
+        "test_id": 48,
+        "relation": "OriginatedIn",
+        "correct_feat": "the Australian gold rush that began in 1851",
+        "options": "1. the Australian gold rush that began in 1851\n2. Germanic languages\n3. a luncheon hosted by Abby Rockefeller in January 1932",
+        "correct_num": 1,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> originated in [MASK].\n\nOptions:\n1. the Australian gold rush that began in 1851\n2. Germanic languages\n3. a luncheon hosted by Abby Rockefeller in January 1932"
+    },
+    {
+        "test_id": 49,
+        "relation": "OriginatedIn",
+        "correct_feat": "the colony of Victoria, Australia",
+        "options": "1. Muhlenberg County, Kentucky\n2. the colony of Victoria, Australia\n3. Greece",
+        "correct_num": 2,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> originated in [MASK].\n\nOptions:\n1. Muhlenberg County, Kentucky\n2. the colony of Victoria, Australia\n3. Greece"
+    },
+    {
+        "test_id": 50,
+        "relation": "PartOf",
+        "correct_feat": "the Victorian gold rush",
+        "options": "1. the athletic competitions of the ancient Greek world\n2. the events leading to his crucifixion and resurrection\n3. the Victorian gold rush",
+        "correct_num": 3,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is part of [MASK].\n\nOptions:\n1. the athletic competitions of the ancient Greek world\n2. the events leading to his crucifixion and resurrection\n3. the Victorian gold rush"
+    },
+    {
+        "test_id": 51,
+        "relation": "PerformedBy",
+        "correct_feat": "gold miners",
+        "options": "1. gold miners\n2. a bucking bar\n3. Janna van der Weg in 1917",
+        "correct_num": 1,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> was performed by [MASK].\n\nOptions:\n1. gold miners\n2. a bucking bar\n3. Janna van der Weg in 1917"
+    }
+]

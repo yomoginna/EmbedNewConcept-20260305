@@ -1,0 +1,514 @@
+[
+    {
+        "test_id": 0,
+        "relation": "About",
+        "correct_feat": "Indian music composers Ajay Ashok Gogavale and Atul Ashok Gogavale",
+        "options": "1. Indian music composers Ajay Ashok Gogavale and Atul Ashok Gogavale\n2. a rodeo sport involving a rider on a bucking bull\n3. life and time on Horn Island",
+        "correct_num": 1,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is about [MASK].\n\nOptions:\n1. Indian music composers Ajay Ashok Gogavale and Atul Ashok Gogavale\n2. a rodeo sport involving a rider on a bucking bull\n3. life and time on Horn Island"
+    },
+    {
+        "test_id": 1,
+        "relation": "Affects",
+        "correct_feat": "the sanctity of devotional music",
+        "options": "1. dual citizenship\n2. the sanctity of devotional music\n3. the way the game is played",
+        "correct_num": 2,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> affects [MASK].\n\nOptions:\n1. dual citizenship\n2. the sanctity of devotional music\n3. the way the game is played"
+    },
+    {
+        "test_id": 2,
+        "relation": "AssociatedWith",
+        "correct_feat": "Indian cinema",
+        "options": "1. Richard Wagner's interpretation of Beethoven's Ninth symphony\n2. drop tubes\n3. Indian cinema",
+        "correct_num": 3,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is associated with [MASK].\n\nOptions:\n1. Richard Wagner's interpretation of Beethoven's Ninth symphony\n2. drop tubes\n3. Indian cinema"
+    },
+    {
+        "test_id": 3,
+        "relation": "AssociatedWith",
+        "correct_feat": "Marathi films",
+        "options": "1. Marathi films\n2. skyscrapers\n3. Mozart's Don Giovanni",
+        "correct_num": 1,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is associated with [MASK].\n\nOptions:\n1. Marathi films\n2. skyscrapers\n3. Mozart's Don Giovanni"
+    },
+    {
+        "test_id": 6,
+        "relation": "ComposedBy",
+        "correct_feat": "Ajay Ashok Gogavale and Atul Ashok Gogavale",
+        "options": "1. Ajay Ashok Gogavale and Atul Ashok Gogavale\n2. Iced Earth\n3. Julio Esc\u00e1mez",
+        "correct_num": 1,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> was composed by [MASK].\n\nOptions:\n1. Ajay Ashok Gogavale and Atul Ashok Gogavale\n2. Iced Earth\n3. Julio Esc\u00e1mez"
+    },
+    {
+        "test_id": 7,
+        "relation": "ConsistsOf",
+        "correct_feat": "brothers Ajay Ashok Gogavale and Atul Ashok Gogavale",
+        "options": "1. mass hysteria\n2. brothers Ajay Ashok Gogavale and Atul Ashok Gogavale\n3. grand juries and trials",
+        "correct_num": 2,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> consists of [MASK].\n\nOptions:\n1. mass hysteria\n2. brothers Ajay Ashok Gogavale and Atul Ashok Gogavale\n3. grand juries and trials"
+    },
+    {
+        "test_id": 8,
+        "relation": "CreatedBy",
+        "correct_feat": "Ajay Ashok Gogavale and Atul Ashok Gogavale",
+        "options": "1. artists to display their handling of complex, crowded scenes\n2. Zhang Zeduan\n3. Ajay Ashok Gogavale and Atul Ashok Gogavale",
+        "correct_num": 3,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> was created by [MASK].\n\nOptions:\n1. artists to display their handling of complex, crowded scenes\n2. Zhang Zeduan\n3. Ajay Ashok Gogavale and Atul Ashok Gogavale"
+    },
+    {
+        "test_id": 9,
+        "relation": "CreatedFor",
+        "correct_feat": "Indian cinema",
+        "options": "1. Indian cinema\n2. the collection of Philippe II, Duke of Orl\u00e9ans\n3. the Republic of T\u00fcrkiye",
+        "correct_num": 1,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> was created for [MASK].\n\nOptions:\n1. Indian cinema\n2. the collection of Philippe II, Duke of Orl\u00e9ans\n3. the Republic of T\u00fcrkiye"
+    },
+    {
+        "test_id": 11,
+        "relation": "CreatedFor",
+        "correct_feat": "Hindi films",
+        "options": "1. the purpose of promoting the VMRO-DPMNE narrative\n2. the Yale Center for British Art\n3. Hindi films",
+        "correct_num": 3,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> was created for [MASK].\n\nOptions:\n1. the purpose of promoting the VMRO-DPMNE narrative\n2. the Yale Center for British Art\n3. Hindi films"
+    },
+    {
+        "test_id": 12,
+        "relation": "HasA",
+        "correct_feat": "a National Film Award",
+        "options": "1. a National Film Award\n2. dogs\n3. mainstream historical types including Liberal, Labor, Revisionist, and Cultural Zionism",
+        "correct_num": 1,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> has [MASK].\n\nOptions:\n1. a National Film Award\n2. dogs\n3. mainstream historical types including Liberal, Labor, Revisionist, and Cultural Zionism"
+    },
+    {
+        "test_id": 15,
+        "relation": "HasA",
+        "correct_feat": "twelve Mirchi Music Awards",
+        "options": "1. twelve Mirchi Music Awards\n2. led to the abandonment of the Bancroft Treaties\n3. mosaics and stained glass by Albinas Elskus",
+        "correct_num": 1,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> has [MASK].\n\nOptions:\n1. twelve Mirchi Music Awards\n2. led to the abandonment of the Bancroft Treaties\n3. mosaics and stained glass by Albinas Elskus"
+    },
+    {
+        "test_id": 16,
+        "relation": "HasA",
+        "correct_feat": "two Zee Cine Awards",
+        "options": "1. a tendency to accumulate immense masses of half-assimilated materials\n2. two Zee Cine Awards\n3. a tributary of the Elands River",
+        "correct_num": 2,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> has [MASK].\n\nOptions:\n1. a tendency to accumulate immense masses of half-assimilated materials\n2. two Zee Cine Awards\n3. a tributary of the Elands River"
+    },
+    {
+        "test_id": 17,
+        "relation": "HasA",
+        "correct_feat": "a debut in the 2015 Forbes India Celebrity 100 List",
+        "options": "1. hundreds of counters\n2. landscapes bedecked with homespun aphorisms\n3. a debut in the 2015 Forbes India Celebrity 100 List",
+        "correct_num": 3,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> has [MASK].\n\nOptions:\n1. hundreds of counters\n2. landscapes bedecked with homespun aphorisms\n3. a debut in the 2015 Forbes India Celebrity 100 List"
+    },
+    {
+        "test_id": 18,
+        "relation": "HasA",
+        "correct_feat": "a position of 82 in the 2015 Forbes India Celebrity 100 List",
+        "options": "1. a position of 82 in the 2015 Forbes India Celebrity 100 List\n2. thirty-one types of terrain\n3. rules that track stragglers, the accumulation of soldier fatigue, ammunition, changing regimental assignments and strength of individual units",
+        "correct_num": 1,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> has [MASK].\n\nOptions:\n1. a position of 82 in the 2015 Forbes India Celebrity 100 List\n2. thirty-one types of terrain\n3. rules that track stragglers, the accumulation of soldier fatigue, ammunition, changing regimental assignments and strength of individual units"
+    },
+    {
+        "test_id": 20,
+        "relation": "HasA",
+        "correct_feat": "a devotional album Vishwa Vinayak",
+        "options": "1. an emphasis placed on modesty in dress\n2. a band introducing the Second Coming\n3. a devotional album Vishwa Vinayak",
+        "correct_num": 3,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> has [MASK].\n\nOptions:\n1. an emphasis placed on modesty in dress\n2. a band introducing the Second Coming\n3. a devotional album Vishwa Vinayak"
+    },
+    {
+        "test_id": 21,
+        "relation": "HasA",
+        "correct_feat": "compositions that often feature live instruments",
+        "options": "1. compositions that often feature live instruments\n2. a rectangular board with 2 rows and 7 columns\n3. Colonel Brandt",
+        "correct_num": 1,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> has [MASK].\n\nOptions:\n1. compositions that often feature live instruments\n2. a rectangular board with 2 rows and 7 columns\n3. Colonel Brandt"
+    },
+    {
+        "test_id": 22,
+        "relation": "HasFeatureOf",
+        "correct_feat": "drawing from a mix of traditional and contemporary styles",
+        "options": "1. the International Cherry Pit-Spitting Championship being founded in 1974\n2. drawing from a mix of traditional and contemporary styles\n3. a scandalous depiction of the revels of Venus's court",
+        "correct_num": 2,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is characterized by [MASK].\n\nOptions:\n1. the International Cherry Pit-Spitting Championship being founded in 1974\n2. drawing from a mix of traditional and contemporary styles\n3. a scandalous depiction of the revels of Venus's court"
+    },
+    {
+        "test_id": 23,
+        "relation": "HasFeatureOf",
+        "correct_feat": "compositions featuring live instruments",
+        "options": "1. its descendant of a royal Khazar chief Tuqaq\n2. a postulate of patriotism\n3. compositions featuring live instruments",
+        "correct_num": 3,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is characterized by [MASK].\n\nOptions:\n1. its descendant of a royal Khazar chief Tuqaq\n2. a postulate of patriotism\n3. compositions featuring live instruments"
+    },
+    {
+        "test_id": 24,
+        "relation": "Influenced",
+        "correct_feat": "the devotional music scene",
+        "options": "1. the devotional music scene\n2. the developing world\n3. the Ghibelline faction of the Italian civic rivalries",
+        "correct_num": 1,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> influenced [MASK].\n\nOptions:\n1. the devotional music scene\n2. the developing world\n3. the Ghibelline faction of the Italian civic rivalries"
+    },
+    {
+        "test_id": 25,
+        "relation": "Influenced",
+        "correct_feat": "Marathi folk music forms like Lavani, Phataka and Tamasha",
+        "options": "1. the formulation of a radical nationalistic policy\n2. Marathi folk music forms like Lavani, Phataka and Tamasha\n3. the modern-day Korean identity",
+        "correct_num": 2,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> influenced [MASK].\n\nOptions:\n1. the formulation of a radical nationalistic policy\n2. Marathi folk music forms like Lavani, Phataka and Tamasha\n3. the modern-day Korean identity"
+    },
+    {
+        "test_id": 26,
+        "relation": "Influenced",
+        "correct_feat": "the film Singham",
+        "options": "1. the narrative promoted by VMRO-DPMNE\n2. Richard Wagner's large three-act opera Tannh\u00e4user\n3. the film Singham",
+        "correct_num": 3,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> influenced [MASK].\n\nOptions:\n1. the narrative promoted by VMRO-DPMNE\n2. Richard Wagner's large three-act opera Tannh\u00e4user\n3. the film Singham"
+    },
+    {
+        "test_id": 27,
+        "relation": "Influenced",
+        "correct_feat": "the film Bol Bachchan",
+        "options": "1. the film Bol Bachchan\n2. the political philosophy of Pope Pius XI\n3. the building of modern welfare states",
+        "correct_num": 1,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> influenced [MASK].\n\nOptions:\n1. the film Bol Bachchan\n2. the political philosophy of Pope Pius XI\n3. the building of modern welfare states"
+    },
+    {
+        "test_id": 28,
+        "relation": "Influenced",
+        "correct_feat": "the film Agneepath",
+        "options": "1. the post-war political system\n2. the film Agneepath\n3. the rest of the U.S. identity in the 20th century",
+        "correct_num": 2,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> influenced [MASK].\n\nOptions:\n1. the post-war political system\n2. the film Agneepath\n3. the rest of the U.S. identity in the 20th century"
+    },
+    {
+        "test_id": 29,
+        "relation": "Influenced",
+        "correct_feat": "the film Brothers",
+        "options": "1. Mexican Americans to actively protest violent police behavior\n2. the marketing of inflatable wings\n3. the film Brothers",
+        "correct_num": 3,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> influenced [MASK].\n\nOptions:\n1. Mexican Americans to actively protest violent police behavior\n2. the marketing of inflatable wings\n3. the film Brothers"
+    },
+    {
+        "test_id": 30,
+        "relation": "Influenced",
+        "correct_feat": "the film PK",
+        "options": "1. the film PK\n2. Judaism\n3. the constitutional interpretation of the Eighth Amendment",
+        "correct_num": 1,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> influenced [MASK].\n\nOptions:\n1. the film PK\n2. Judaism\n3. the constitutional interpretation of the Eighth Amendment"
+    },
+    {
+        "test_id": 31,
+        "relation": "Influenced",
+        "correct_feat": "the film Sairat",
+        "options": "1. the political discourse in Uganda\n2. the film Sairat\n3. a wide number of paintings from the following century",
+        "correct_num": 2,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> influenced [MASK].\n\nOptions:\n1. the political discourse in Uganda\n2. the film Sairat\n3. a wide number of paintings from the following century"
+    },
+    {
+        "test_id": 33,
+        "relation": "Influenced",
+        "correct_feat": "the film Dhadak",
+        "options": "1. the film Dhadak\n2. Early Netherlandish artists from the 1420s\n3. the reorientation of Polish territorial priorities to the east",
+        "correct_num": 1,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> influenced [MASK].\n\nOptions:\n1. the film Dhadak\n2. Early Netherlandish artists from the 1420s\n3. the reorientation of Polish territorial priorities to the east"
+    },
+    {
+        "test_id": 34,
+        "relation": "InfluencedBy",
+        "correct_feat": "traditional Marathi folk music forms",
+        "options": "1. the communist movement of Luiz Carlos Prestes\n2. traditional Marathi folk music forms\n3. Abraham Isaac Kook",
+        "correct_num": 2,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> was influenced by [MASK].\n\nOptions:\n1. the communist movement of Luiz Carlos Prestes\n2. traditional Marathi folk music forms\n3. Abraham Isaac Kook"
+    },
+    {
+        "test_id": 35,
+        "relation": "InfluencedBy",
+        "correct_feat": "Western composers like Bach and Beethoven",
+        "options": "1. the growth of productive forces such as technology and natural resources\n2. West Germany's squatter scene\n3. Western composers like Bach and Beethoven",
+        "correct_num": 3,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> was influenced by [MASK].\n\nOptions:\n1. the growth of productive forces such as technology and natural resources\n2. West Germany's squatter scene\n3. Western composers like Bach and Beethoven"
+    },
+    {
+        "test_id": 36,
+        "relation": "InfluencedBy",
+        "correct_feat": "film tunes and repetitive loops in devotional music",
+        "options": "1. film tunes and repetitive loops in devotional music\n2. John Carroll's hopes to site the columns at the Elizabeth Lofts\n3. the controversies that surrounded the 2016 United States presidential election",
+        "correct_num": 1,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> was influenced by [MASK].\n\nOptions:\n1. film tunes and repetitive loops in devotional music\n2. John Carroll's hopes to site the columns at the Elizabeth Lofts\n3. the controversies that surrounded the 2016 United States presidential election"
+    },
+    {
+        "test_id": 37,
+        "relation": "IsA",
+        "correct_feat": "an Indian music composer duo",
+        "options": "1. a form of market simulated planning\n2. an Indian music composer duo\n3. a science fiction board wargame",
+        "correct_num": 2,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is [MASK].\n\nOptions:\n1. a form of market simulated planning\n2. an Indian music composer duo\n3. a science fiction board wargame"
+    },
+    {
+        "test_id": 39,
+        "relation": "IsA",
+        "correct_feat": "a recipient of four Filmfare Awards Marathi",
+        "options": "1. a recipient of four Filmfare Awards Marathi\n2. a work meant to be divine and spiritual\n3. an international motorsport event",
+        "correct_num": 1,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is [MASK].\n\nOptions:\n1. a recipient of four Filmfare Awards Marathi\n2. a work meant to be divine and spiritual\n3. an international motorsport event"
+    },
+    {
+        "test_id": 40,
+        "relation": "IsA",
+        "correct_feat": "a recipient of three Maharashtra State Film Awards",
+        "options": "1. a kids version\n2. a recipient of three Maharashtra State Film Awards\n3. a presentation miniature",
+        "correct_num": 2,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is [MASK].\n\nOptions:\n1. a kids version\n2. a recipient of three Maharashtra State Film Awards\n3. a presentation miniature"
+    },
+    {
+        "test_id": 41,
+        "relation": "IsA",
+        "correct_feat": "a recipient of twelve Mirchi Music Awards",
+        "options": "1. a political neologism\n2. a fringe party\n3. a recipient of twelve Mirchi Music Awards",
+        "correct_num": 3,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is [MASK].\n\nOptions:\n1. a political neologism\n2. a fringe party\n3. a recipient of twelve Mirchi Music Awards"
+    },
+    {
+        "test_id": 42,
+        "relation": "IsA",
+        "correct_feat": "a recipient of two Zee Cine Awards",
+        "options": "1. a recipient of two Zee Cine Awards\n2. a free desktop version\n3. a blood sport",
+        "correct_num": 1,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is [MASK].\n\nOptions:\n1. a recipient of two Zee Cine Awards\n2. a free desktop version\n3. a blood sport"
+    },
+    {
+        "test_id": 43,
+        "relation": "IsA",
+        "correct_feat": "a composer duo comprising brothers Ajay Ashok Gogavale and Atul Ashok Gogavale",
+        "options": "1. a game where enemy pieces are captured by jumping over them\n2. a composer duo comprising brothers Ajay Ashok Gogavale and Atul Ashok Gogavale\n3. a general description of size of books",
+        "correct_num": 2,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is [MASK].\n\nOptions:\n1. a game where enemy pieces are captured by jumping over them\n2. a composer duo comprising brothers Ajay Ashok Gogavale and Atul Ashok Gogavale\n3. a general description of size of books"
+    },
+    {
+        "test_id": 44,
+        "relation": "IsA",
+        "correct_feat": "a composer duo known for their works in Indian cinema",
+        "options": "1. the centerpiece of the Art In Action exhibit\n2. a board wargame\n3. a composer duo known for their works in Indian cinema",
+        "correct_num": 3,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is [MASK].\n\nOptions:\n1. the centerpiece of the Art In Action exhibit\n2. a board wargame\n3. a composer duo known for their works in Indian cinema"
+    },
+    {
+        "test_id": 45,
+        "relation": "IsA",
+        "correct_feat": "a composer duo predominantly in Marathi and Hindi films",
+        "options": "1. a composer duo predominantly in Marathi and Hindi films\n2. a Turkic dynasty\n3. a photo-reconnaissance aircraft",
+        "correct_num": 1,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is [MASK].\n\nOptions:\n1. a composer duo predominantly in Marathi and Hindi films\n2. a Turkic dynasty\n3. a photo-reconnaissance aircraft"
+    },
+    {
+        "test_id": 46,
+        "relation": "IsA",
+        "correct_feat": "a composer duo that made their debut in the 2015 Forbes India Celebrity 100 List",
+        "options": "1. a progressive cause\n2. a composer duo that made their debut in the 2015 Forbes India Celebrity 100 List\n3. a town that fell to the Albertine line after the Battle of M\u00fchlberg",
+        "correct_num": 2,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is [MASK].\n\nOptions:\n1. a progressive cause\n2. a composer duo that made their debut in the 2015 Forbes India Celebrity 100 List\n3. a town that fell to the Albertine line after the Battle of M\u00fchlberg"
+    },
+    {
+        "test_id": 47,
+        "relation": "KnownFor",
+        "correct_feat": "their works in Indian cinema",
+        "options": "1. espousing Iranian nationalism rooted in the pre-Islamic era\n2. being a replica of an Eleusa icon\n3. their works in Indian cinema",
+        "correct_num": 3,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is known for [MASK].\n\nOptions:\n1. espousing Iranian nationalism rooted in the pre-Islamic era\n2. being a replica of an Eleusa icon\n3. their works in Indian cinema"
+    },
+    {
+        "test_id": 48,
+        "relation": "KnownFor",
+        "correct_feat": "their works in Marathi films",
+        "options": "1. their works in Marathi films\n2. its presence among racist skinheads\n3. being played standing",
+        "correct_num": 1,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is known for [MASK].\n\nOptions:\n1. their works in Marathi films\n2. its presence among racist skinheads\n3. being played standing"
+    },
+    {
+        "test_id": 49,
+        "relation": "KnownFor",
+        "correct_feat": "their works in Hindi films",
+        "options": "1. being played on a strip of ground next to a brick wall\n2. their works in Hindi films\n3. introducing the concept of \"limited intelligence\"",
+        "correct_num": 2,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is known for [MASK].\n\nOptions:\n1. being played on a strip of ground next to a brick wall\n2. their works in Hindi films\n3. introducing the concept of \"limited intelligence\""
+    },
+    {
+        "test_id": 50,
+        "relation": "OriginatedIn",
+        "correct_feat": "India",
+        "options": "1. Sint Maarten (Dutch part)\n2. South Africa\n3. India",
+        "correct_num": 3,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> originated in [MASK].\n\nOptions:\n1. Sint Maarten (Dutch part)\n2. South Africa\n3. India"
+    },
+    {
+        "test_id": 51,
+        "relation": "PartOf",
+        "correct_feat": "Indian cinema",
+        "options": "1. Indian cinema\n2. the Coral Sea Islands Territory\n3. music",
+        "correct_num": 1,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is part of [MASK].\n\nOptions:\n1. Indian cinema\n2. the Coral Sea Islands Territory\n3. music"
+    },
+    {
+        "test_id": 52,
+        "relation": "PartOf",
+        "correct_feat": "Marathi films",
+        "options": "1. the peace movement\n2. Marathi films\n3. the celebration of the great religious festivals",
+        "correct_num": 2,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is part of [MASK].\n\nOptions:\n1. the peace movement\n2. Marathi films\n3. the celebration of the great religious festivals"
+    },
+    {
+        "test_id": 53,
+        "relation": "PartOf",
+        "correct_feat": "Hindi films",
+        "options": "1. the history of Rockefeller Center\n2. celebrations and ceremonies\n3. Hindi films",
+        "correct_num": 3,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is part of [MASK].\n\nOptions:\n1. the history of Rockefeller Center\n2. celebrations and ceremonies\n3. Hindi films"
+    },
+    {
+        "test_id": 54,
+        "relation": "ProducedBy",
+        "correct_feat": "Girish Kulkarni for the Marathi film Jaundya Na Balasaheb",
+        "options": "1. Girish Kulkarni for the Marathi film Jaundya Na Balasaheb\n2. Jacques de Guyse\n3. Johannes Gutenberg",
+        "correct_num": 1,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> was produced by [MASK].\n\nOptions:\n1. Girish Kulkarni for the Marathi film Jaundya Na Balasaheb\n2. Jacques de Guyse\n3. Johannes Gutenberg"
+    },
+    {
+        "test_id": 56,
+        "relation": "UsedFor",
+        "correct_feat": "creating devotional albums",
+        "options": "1. simulating combat\n2. setting world records\n3. creating devotional albums",
+        "correct_num": 3,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is used for [MASK].\n\nOptions:\n1. simulating combat\n2. setting world records\n3. creating devotional albums"
+    },
+    {
+        "test_id": 57,
+        "relation": "UsedFor",
+        "correct_feat": "creating film scores",
+        "options": "1. creating film scores\n2. defying the United States\n3. a longer game by pairing scenarios",
+        "correct_num": 1,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is used for [MASK].\n\nOptions:\n1. creating film scores\n2. defying the United States\n3. a longer game by pairing scenarios"
+    },
+    {
+        "test_id": 58,
+        "relation": "UsedFor",
+        "correct_feat": "creating commercial jingles",
+        "options": "1. promoting secession\n2. creating commercial jingles\n3. discovering new abilities",
+        "correct_num": 2,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is used for [MASK].\n\nOptions:\n1. promoting secession\n2. creating commercial jingles\n3. discovering new abilities"
+    },
+    {
+        "test_id": 60,
+        "relation": "UsedFor",
+        "correct_feat": "creating advertisements",
+        "options": "1. creating advertisements\n2. drinking chocolate\n3. upholding the political union that is the United Kingdom",
+        "correct_num": 1,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is used for [MASK].\n\nOptions:\n1. creating advertisements\n2. drinking chocolate\n3. upholding the political union that is the United Kingdom"
+    },
+    {
+        "test_id": 61,
+        "relation": "UsedIn",
+        "correct_feat": "Indian cinema",
+        "options": "1. Jewish messianic belief\n2. Indian cinema\n3. the four canonical gospels",
+        "correct_num": 2,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is used in [MASK].\n\nOptions:\n1. Jewish messianic belief\n2. Indian cinema\n3. the four canonical gospels"
+    },
+    {
+        "test_id": 62,
+        "relation": "UsedIn",
+        "correct_feat": "Marathi films",
+        "options": "1. Portugal\n2. the valley\n3. Marathi films",
+        "correct_num": 3,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is used in [MASK].\n\nOptions:\n1. Portugal\n2. the valley\n3. Marathi films"
+    },
+    {
+        "test_id": 63,
+        "relation": "UsedIn",
+        "correct_feat": "Hindi films",
+        "options": "1. Hindi films\n2. the Eucharist\n3. the Secession Building",
+        "correct_num": 1,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is used in [MASK].\n\nOptions:\n1. Hindi films\n2. the Eucharist\n3. the Secession Building"
+    },
+    {
+        "test_id": 64,
+        "relation": "UsedIn",
+        "correct_feat": "devotional albums",
+        "options": "1. organized competitions in Australia\n2. devotional albums\n3. astronomical events",
+        "correct_num": 2,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is used in [MASK].\n\nOptions:\n1. organized competitions in Australia\n2. devotional albums\n3. astronomical events"
+    },
+    {
+        "test_id": 65,
+        "relation": "UsedIn",
+        "correct_feat": "films like Natarang",
+        "options": "1. cruise ships\n2. the 2007 documentary The King of Kong\n3. films like Natarang",
+        "correct_num": 3,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is used in [MASK].\n\nOptions:\n1. cruise ships\n2. the 2007 documentary The King of Kong\n3. films like Natarang"
+    },
+    {
+        "test_id": 66,
+        "relation": "UsedIn",
+        "correct_feat": "films like Sairat",
+        "options": "1. films like Sairat\n2. the settling of Eretz Yisrael\n3. armed combat",
+        "correct_num": 1,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is used in [MASK].\n\nOptions:\n1. films like Sairat\n2. the settling of Eretz Yisrael\n3. armed combat"
+    },
+    {
+        "test_id": 67,
+        "relation": "UsedIn",
+        "correct_feat": "films like Agneepath",
+        "options": "1. Sutton town centre\n2. films like Agneepath\n3. World War II",
+        "correct_num": 2,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is used in [MASK].\n\nOptions:\n1. Sutton town centre\n2. films like Agneepath\n3. World War II"
+    },
+    {
+        "test_id": 68,
+        "relation": "UsedIn",
+        "correct_feat": "films like Dhadak",
+        "options": "1. the Ben 10 franchise\n2. the battle of Mycale\n3. films like Dhadak",
+        "correct_num": 3,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is used in [MASK].\n\nOptions:\n1. the Ben 10 franchise\n2. the battle of Mycale\n3. films like Dhadak"
+    },
+    {
+        "test_id": 69,
+        "relation": "UsedIn",
+        "correct_feat": "films like Tumbbad",
+        "options": "1. films like Tumbbad\n2. intellectual and student circles in France\n3. ancient Greek philosophy",
+        "correct_num": 1,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is used in [MASK].\n\nOptions:\n1. films like Tumbbad\n2. intellectual and student circles in France\n3. ancient Greek philosophy"
+    },
+    {
+        "test_id": 70,
+        "relation": "UsedIn",
+        "correct_feat": "films like Chandramukhi",
+        "options": "1. artisanal commercial fisheries\n2. films like Chandramukhi\n3. anti-feminist literature",
+        "correct_num": 2,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is used in [MASK].\n\nOptions:\n1. artisanal commercial fisheries\n2. films like Chandramukhi\n3. anti-feminist literature"
+    },
+    {
+        "test_id": 72,
+        "relation": "UsedTo",
+        "correct_feat": "explore new projects",
+        "options": "1. explore new projects\n2. donate a minimum amount of high protein, non perishable food items\n3. depict boats, carts, markets, bridges, city walls, and streets",
+        "correct_num": 1,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is used to [MASK].\n\nOptions:\n1. explore new projects\n2. donate a minimum amount of high protein, non perishable food items\n3. depict boats, carts, markets, bridges, city walls, and streets"
+    },
+    {
+        "test_id": 73,
+        "relation": "WrittenIn",
+        "correct_feat": "Marathi",
+        "options": "1. Interlingua (International Auxiliary Language Association)\n2. Marathi\n3. Bambara",
+        "correct_num": 2,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> was written in [MASK].\n\nOptions:\n1. Interlingua (International Auxiliary Language Association)\n2. Marathi\n3. Bambara"
+    },
+    {
+        "test_id": 74,
+        "relation": "WrittenIn",
+        "correct_feat": "Hindi",
+        "options": "1. Belarusian\n2. Hiri Motu\n3. Hindi",
+        "correct_num": 3,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> was written in [MASK].\n\nOptions:\n1. Belarusian\n2. Hiri Motu\n3. Hindi"
+    }
+]

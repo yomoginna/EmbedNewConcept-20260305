@@ -1,0 +1,290 @@
+[
+    {
+        "test_id": 0,
+        "relation": "About",
+        "correct_feat": "the story of a puffin named Uppspretta",
+        "options": "1. the story of a puffin named Uppspretta\n2. the Bancroft Treaties and their eventual abandonment\n3. folk rock",
+        "correct_num": 1,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is about [MASK].\n\nOptions:\n1. the story of a puffin named Uppspretta\n2. the Bancroft Treaties and their eventual abandonment\n3. folk rock"
+    },
+    {
+        "test_id": 1,
+        "relation": "AssociatedWith",
+        "correct_feat": "Toyist artwork",
+        "options": "1. sabotage\n2. Toyist artwork\n3. Historical Perspectives",
+        "correct_num": 2,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is associated with [MASK].\n\nOptions:\n1. sabotage\n2. Toyist artwork\n3. Historical Perspectives"
+    },
+    {
+        "test_id": 2,
+        "relation": "BuiltIn",
+        "correct_feat": "in Keflavík",
+        "options": "1. in Adams County, Pennsylvania\n2. in Dark Souls\n3. in Keflavík",
+        "correct_num": 3,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> was built [MASK].\n\nOptions:\n1. in Adams County, Pennsylvania\n2. in Dark Souls\n3. in Keflavík"
+    },
+    {
+        "test_id": 3,
+        "relation": "CreatedBy",
+        "correct_feat": "the Toyists",
+        "options": "1. the Toyists\n2. Chas Hodges and Dave Peacock\n3. Claude Lewis",
+        "correct_num": 1,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> was created by [MASK].\n\nOptions:\n1. the Toyists\n2. Chas Hodges and Dave Peacock\n3. Claude Lewis"
+    },
+    {
+        "test_id": 4,
+        "relation": "CreatedIn",
+        "correct_feat": "Keflavík",
+        "options": "1. Russia\n2. Keflavík\n3. the studios of the Polydor label",
+        "correct_num": 2,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> was created in [MASK].\n\nOptions:\n1. Russia\n2. Keflavík\n3. the studios of the Polydor label"
+    },
+    {
+        "test_id": 5,
+        "relation": "HasA",
+        "correct_feat": "a painting showing the story of a puffin named Uppspretta",
+        "options": "1. a \"rebel\" or Confederate identity\n2. tumultuous relationships\n3. a painting showing the story of a puffin named Uppspretta",
+        "correct_num": 3,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> has [MASK].\n\nOptions:\n1. a \"rebel\" or Confederate identity\n2. tumultuous relationships\n3. a painting showing the story of a puffin named Uppspretta"
+    },
+    {
+        "test_id": 6,
+        "relation": "HasA",
+        "correct_feat": "a theme that resembles a legend",
+        "options": "1. a theme that resembles a legend\n2. a single titled Unison Volume 1\n3. topics that a syntactic theory is designed to explain",
+        "correct_num": 1,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> has [MASK].\n\nOptions:\n1. a theme that resembles a legend\n2. a single titled Unison Volume 1\n3. topics that a syntactic theory is designed to explain"
+    },
+    {
+        "test_id": 7,
+        "relation": "HasA",
+        "correct_feat": "a dream boat in its story",
+        "options": "1. a central king-piece\n2. a dream boat in its story\n3. reciprocal legal and military obligations",
+        "correct_num": 2,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> has [MASK].\n\nOptions:\n1. a central king-piece\n2. a dream boat in its story\n3. reciprocal legal and military obligations"
+    },
+    {
+        "test_id": 8,
+        "relation": "HasA",
+        "correct_feat": "an image of a viking ship",
+        "options": "1. tunnels\n2. a debut studio album titled The Cold Vein\n3. an image of a viking ship",
+        "correct_num": 3,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> has [MASK].\n\nOptions:\n1. tunnels\n2. a debut studio album titled The Cold Vein\n3. an image of a viking ship"
+    },
+    {
+        "test_id": 9,
+        "relation": "HasA",
+        "correct_feat": "a main character that is a puffin",
+        "options": "1. a main character that is a puffin\n2. an ornate wooden post at each end\n3. similar games that originated around the world",
+        "correct_num": 1,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> has [MASK].\n\nOptions:\n1. a main character that is a puffin\n2. an ornate wooden post at each end\n3. similar games that originated around the world"
+    },
+    {
+        "test_id": 10,
+        "relation": "HasA",
+        "correct_feat": "parents who warned the puffin character",
+        "options": "1. a ROC Car buggy\n2. parents who warned the puffin character\n3. a division of powers between the federal government and the provincial governments",
+        "correct_num": 2,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> has [MASK].\n\nOptions:\n1. a ROC Car buggy\n2. parents who warned the puffin character\n3. a division of powers between the federal government and the provincial governments"
+    },
+    {
+        "test_id": 11,
+        "relation": "HasA",
+        "correct_feat": "a puffin character who fell to earth",
+        "options": "1. a king that started in the centre\n2. a commitment to democracy\n3. a puffin character who fell to earth",
+        "correct_num": 3,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> has [MASK].\n\nOptions:\n1. a king that started in the centre\n2. a commitment to democracy\n3. a puffin character who fell to earth"
+    },
+    {
+        "test_id": 12,
+        "relation": "HasA",
+        "correct_feat": "a puffin character who dreamed about people and music",
+        "options": "1. a puffin character who dreamed about people and music\n2. a propeller at the rear\n3. four UK number-ones",
+        "correct_num": 1,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> has [MASK].\n\nOptions:\n1. a puffin character who dreamed about people and music\n2. a propeller at the rear\n3. four UK number-ones"
+    },
+    {
+        "test_id": 13,
+        "relation": "HasA",
+        "correct_feat": "a puffin character who married a female puffin",
+        "options": "1. four shortcut spaces\n2. a puffin character who married a female puffin\n3. a slogan \"Texas. It's Like a Whole Other Country\"",
+        "correct_num": 2,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> has [MASK].\n\nOptions:\n1. four shortcut spaces\n2. a puffin character who married a female puffin\n3. a slogan \"Texas. It's Like a Whole Other Country\""
+    },
+    {
+        "test_id": 14,
+        "relation": "HasA",
+        "correct_feat": "a puffin character who became the leader of all puffins on Iceland",
+        "options": "1. a common root in religio-nationalism\n2. a special 55 cent stamp\n3. a puffin character who became the leader of all puffins on Iceland",
+        "correct_num": 3,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> has [MASK].\n\nOptions:\n1. a common root in religio-nationalism\n2. a special 55 cent stamp\n3. a puffin character who became the leader of all puffins on Iceland"
+    },
+    {
+        "test_id": 15,
+        "relation": "HasFeatureOf",
+        "correct_feat": "being the largest artistic wall painting of Iceland",
+        "options": "1. being the largest artistic wall painting of Iceland\n2. divisions over the nature of the political settlement\n3. being an important prestige piece in medieval houses",
+        "correct_num": 1,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is characterized by [MASK].\n\nOptions:\n1. being the largest artistic wall painting of Iceland\n2. divisions over the nature of the political settlement\n3. being an important prestige piece in medieval houses"
+    },
+    {
+        "test_id": 16,
+        "relation": "HasFeatureOf",
+        "correct_feat": "its theme of a legend",
+        "options": "1. militarism\n2. its theme of a legend\n3. its ruling that New York's law was unconstitutional",
+        "correct_num": 2,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is characterized by [MASK].\n\nOptions:\n1. militarism\n2. its theme of a legend\n3. its ruling that New York's law was unconstitutional"
+    },
+    {
+        "test_id": 17,
+        "relation": "HasFeatureOf",
+        "correct_feat": "the appearance of Freyja, the goddess of love from Norse mythology",
+        "options": "1. the practice of torture widely documented as a distinctive trait of the Egyptian police\n2. a desire for order\n3. the appearance of Freyja, the goddess of love from Norse mythology",
+        "correct_num": 3,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is characterized by [MASK].\n\nOptions:\n1. the practice of torture widely documented as a distinctive trait of the Egyptian police\n2. a desire for order\n3. the appearance of Freyja, the goddess of love from Norse mythology"
+    },
+    {
+        "test_id": 18,
+        "relation": "HasFeatureOf",
+        "correct_feat": "the appearance of a viking ship",
+        "options": "1. the appearance of a viking ship\n2. a per curiam decision\n3. the apparition of modern Galician nationalism",
+        "correct_num": 1,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is characterized by [MASK].\n\nOptions:\n1. the appearance of a viking ship\n2. a per curiam decision\n3. the apparition of modern Galician nationalism"
+    },
+    {
+        "test_id": 19,
+        "relation": "InfluencedBy",
+        "correct_feat": "Sólfar, a work of the Icelandic artist Jón Gunnar Árnason",
+        "options": "1. the thoughts of José Antonio Primo de Rivera\n2. Sólfar, a work of the Icelandic artist Jón Gunnar Árnason\n3. histories of colonialism that sought to erase the interconnected framework of reciprocal responsibility",
+        "correct_num": 2,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> was influenced by [MASK].\n\nOptions:\n1. the thoughts of José Antonio Primo de Rivera\n2. Sólfar, a work of the Icelandic artist Jón Gunnar Árnason\n3. histories of colonialism that sought to erase the interconnected framework of reciprocal responsibility"
+    },
+    {
+        "test_id": 20,
+        "relation": "InfluencedBy",
+        "correct_feat": "Iceland, like a geyser",
+        "options": "1. Nas\n2. pan-Africanist ideas\n3. Iceland, like a geyser",
+        "correct_num": 3,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> was influenced by [MASK].\n\nOptions:\n1. Nas\n2. pan-Africanist ideas\n3. Iceland, like a geyser"
+    },
+    {
+        "test_id": 21,
+        "relation": "IsA",
+        "correct_feat": "a Toyist artwork",
+        "options": "1. a Toyist artwork\n2. a former imperial and royal European dynasty\n3. a political movement",
+        "correct_num": 1,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is [MASK].\n\nOptions:\n1. a Toyist artwork\n2. a former imperial and royal European dynasty\n3. a political movement"
+    },
+    {
+        "test_id": 22,
+        "relation": "IsA",
+        "correct_feat": "a painting",
+        "options": "1. a couple\n2. a painting\n3. not usually regarded as an abstract strategy game",
+        "correct_num": 2,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is [MASK].\n\nOptions:\n1. a couple\n2. a painting\n3. not usually regarded as an abstract strategy game"
+    },
+    {
+        "test_id": 23,
+        "relation": "IsA",
+        "correct_feat": "a wall painting",
+        "options": "1. a legislative suggestion\n2. in the public domain\n3. a wall painting",
+        "correct_num": 3,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is [MASK].\n\nOptions:\n1. a legislative suggestion\n2. in the public domain\n3. a wall painting"
+    },
+    {
+        "test_id": 24,
+        "relation": "IsA",
+        "correct_feat": "a project",
+        "options": "1. a project\n2. a brand of cider\n3. a YouTube channel",
+        "correct_num": 1,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is [MASK].\n\nOptions:\n1. a project\n2. a brand of cider\n3. a YouTube channel"
+    },
+    {
+        "test_id": 25,
+        "relation": "IsA",
+        "correct_feat": "figurative art",
+        "options": "1. a tension-type headache\n2. figurative art\n3. a game that can be played with advanced rules known as WAFU rules",
+        "correct_num": 2,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is [MASK].\n\nOptions:\n1. a tension-type headache\n2. figurative art\n3. a game that can be played with advanced rules known as WAFU rules"
+    },
+    {
+        "test_id": 26,
+        "relation": "IsA",
+        "correct_feat": "a legend",
+        "options": "1. an English rock band\n2. an American Christian film\n3. a legend",
+        "correct_num": 3,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is [MASK].\n\nOptions:\n1. an English rock band\n2. an American Christian film\n3. a legend"
+    },
+    {
+        "test_id": 27,
+        "relation": "IsA",
+        "correct_feat": "a dream boat",
+        "options": "1. a dream boat\n2. a phrase penned by majority opinion author Justice Clarence Thomas\n3. a political group",
+        "correct_num": 1,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is [MASK].\n\nOptions:\n1. a dream boat\n2. a phrase penned by majority opinion author Justice Clarence Thomas\n3. a political group"
+    },
+    {
+        "test_id": 28,
+        "relation": "IsA",
+        "correct_feat": "a geyser",
+        "options": "1. a two-player board wargame\n2. a geyser\n3. an amateur sport",
+        "correct_num": 2,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is [MASK].\n\nOptions:\n1. a two-player board wargame\n2. a geyser\n3. an amateur sport"
+    },
+    {
+        "test_id": 29,
+        "relation": "IsA",
+        "correct_feat": "a goddess of love",
+        "options": "1. a distinct ethnicity\n2. a game system by design rather than just one game\n3. a goddess of love",
+        "correct_num": 3,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is [MASK].\n\nOptions:\n1. a distinct ethnicity\n2. a game system by design rather than just one game\n3. a goddess of love"
+    },
+    {
+        "test_id": 30,
+        "relation": "IsA",
+        "correct_feat": "a viking ship",
+        "options": "1. a viking ship\n2. a movement\n3. a populist movement",
+        "correct_num": 1,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is [MASK].\n\nOptions:\n1. a viking ship\n2. a movement\n3. a populist movement"
+    },
+    {
+        "test_id": 31,
+        "relation": "KnownFor",
+        "correct_feat": "being the largest artistic wall painting of Iceland",
+        "options": "1. its rulers taking the Greek title basileus\n2. being the largest artistic wall painting of Iceland\n3. defending private property rights against excessive state intervention",
+        "correct_num": 2,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is known for [MASK].\n\nOptions:\n1. its rulers taking the Greek title basileus\n2. being the largest artistic wall painting of Iceland\n3. defending private property rights against excessive state intervention"
+    },
+    {
+        "test_id": 32,
+        "relation": "LocatedIn",
+        "correct_feat": "in Keflavík",
+        "options": "1. in Chicago\n2. in Great Queen Street, London\n3. in Keflavík",
+        "correct_num": 3,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is located [MASK].\n\nOptions:\n1. in Chicago\n2. in Great Queen Street, London\n3. in Keflavík"
+    },
+    {
+        "test_id": 33,
+        "relation": "LocatedIn",
+        "correct_feat": "in a popular recreation area of Keflavík",
+        "options": "1. in a popular recreation area of Keflavík\n2. on the Hudson River\n3. in New York City",
+        "correct_num": 1,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is located [MASK].\n\nOptions:\n1. in a popular recreation area of Keflavík\n2. on the Hudson River\n3. in New York City"
+    },
+    {
+        "test_id": 34,
+        "relation": "UsedFor",
+        "correct_feat": "painting a facade and a dining room in the same style",
+        "options": "1. forming coalition governments\n2. painting a facade and a dining room in the same style\n3. subduing opponents",
+        "correct_num": 2,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is used for [MASK].\n\nOptions:\n1. forming coalition governments\n2. painting a facade and a dining room in the same style\n3. subduing opponents"
+    },
+    {
+        "test_id": 35,
+        "relation": "UsedIn",
+        "correct_feat": "a popular recreation area of Keflavík",
+        "options": "1. the context of the American Convention on Human Rights\n2. the Juche calendar\n3. a popular recreation area of Keflavík",
+        "correct_num": 3,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is used in [MASK].\n\nOptions:\n1. the context of the American Convention on Human Rights\n2. the Juche calendar\n3. a popular recreation area of Keflavík"
+    }
+]

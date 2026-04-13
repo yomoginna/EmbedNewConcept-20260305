@@ -1,0 +1,594 @@
+[
+    {
+        "test_id": 0,
+        "relation": "IsA",
+        "correct_feat": "a steeplechase horserace",
+        "options": "1. a steeplechase horserace\n2. a patrimony\n3. a performing act",
+        "correct_num": 1,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is [MASK].\n\nOptions:\n1. a steeplechase horserace\n2. a patrimony\n3. a performing act"
+    },
+    {
+        "test_id": 1,
+        "relation": "IsA",
+        "correct_feat": "a steeplechase horserace",
+        "options": "1. a 2003 book\n2. a steeplechase horserace\n3. a fresco",
+        "correct_num": 2,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is [MASK].\n\nOptions:\n1. a 2003 book\n2. a steeplechase horserace\n3. a fresco"
+    },
+    {
+        "test_id": 2,
+        "relation": "IsA",
+        "correct_feat": "one of the premier social events of the year in the tri-state area",
+        "options": "1. a notable Greek-style version of the subject\n2. a mural\n3. one of the premier social events of the year in the tri-state area",
+        "correct_num": 3,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is [MASK].\n\nOptions:\n1. a notable Greek-style version of the subject\n2. a mural\n3. one of the premier social events of the year in the tri-state area"
+    },
+    {
+        "test_id": 3,
+        "relation": "IsA",
+        "correct_feat": "a tradition and a reunion of family and friends",
+        "options": "1. a tradition and a reunion of family and friends\n2. a case of incest\n3. moderately conservative",
+        "correct_num": 1,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is [MASK].\n\nOptions:\n1. a tradition and a reunion of family and friends\n2. a case of incest\n3. moderately conservative"
+    },
+    {
+        "test_id": 4,
+        "relation": "IsA",
+        "correct_feat": "the richest steeplechase race in America",
+        "options": "1. a legal precedent\n2. the richest steeplechase race in America\n3. a game that can be played with advanced rules known as WAFU rules",
+        "correct_num": 2,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is [MASK].\n\nOptions:\n1. a legal precedent\n2. the richest steeplechase race in America\n3. a game that can be played with advanced rules known as WAFU rules"
+    },
+    {
+        "test_id": 5,
+        "relation": "IsA",
+        "correct_feat": "a Grade 1 hurdle race",
+        "options": "1. a portmanteau of agitation and propaganda\n2. a band that released their debut full-length album Invitation to Her's\n3. a Grade 1 hurdle race",
+        "correct_num": 3,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is [MASK].\n\nOptions:\n1. a portmanteau of agitation and propaganda\n2. a band that released their debut full-length album Invitation to Her's\n3. a Grade 1 hurdle race"
+    },
+    {
+        "test_id": 6,
+        "relation": "IsA",
+        "correct_feat": "a steeplechase event",
+        "options": "1. a steeplechase event\n2. a global common good\n3. a critique of abstract expressionism",
+        "correct_num": 1,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is [MASK].\n\nOptions:\n1. a steeplechase event\n2. a global common good\n3. a critique of abstract expressionism"
+    },
+    {
+        "test_id": 7,
+        "relation": "Affects",
+        "correct_feat": "the Steeplechase Cancer Center at the Somerset Medical Center",
+        "options": "1. the governance of Khorasan\n2. the Steeplechase Cancer Center at the Somerset Medical Center\n3. the Religious Zionist Jewish community in Israel",
+        "correct_num": 2,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> affects [MASK].\n\nOptions:\n1. the governance of Khorasan\n2. the Steeplechase Cancer Center at the Somerset Medical Center\n3. the Religious Zionist Jewish community in Israel"
+    },
+    {
+        "test_id": 8,
+        "relation": "AssociatedWith",
+        "correct_feat": "the Essex Hunt",
+        "options": "1. the Consecration of the National Cemetery\n2. Claud\n3. the Essex Hunt",
+        "correct_num": 3,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is associated with [MASK].\n\nOptions:\n1. the Consecration of the National Cemetery\n2. Claud\n3. the Essex Hunt"
+    },
+    {
+        "test_id": 9,
+        "relation": "AssociatedWith",
+        "correct_feat": "the Essex Fox Hounds",
+        "options": "1. the Essex Fox Hounds\n2. the Stuart Restoration in 1660\n3. Thurgood Marshall",
+        "correct_num": 1,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is associated with [MASK].\n\nOptions:\n1. the Essex Fox Hounds\n2. the Stuart Restoration in 1660\n3. Thurgood Marshall"
+    },
+    {
+        "test_id": 10,
+        "relation": "AssociatedWith",
+        "correct_feat": "the Breeders' Cup Grand National Steeplechase",
+        "options": "1. opposition to South Africa's entry into World War I\n2. the Breeders' Cup Grand National Steeplechase\n3. the German invasion of Greece",
+        "correct_num": 2,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is associated with [MASK].\n\nOptions:\n1. opposition to South Africa's entry into World War I\n2. the Breeders' Cup Grand National Steeplechase\n3. the German invasion of Greece"
+    },
+    {
+        "test_id": 11,
+        "relation": "AssociatedWith",
+        "correct_feat": "the National Steeplechase Association circuit",
+        "options": "1. the term Torani-Leumi\n2. the village of Zarudchi in the Lyubeshiv district\n3. the National Steeplechase Association circuit",
+        "correct_num": 3,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is associated with [MASK].\n\nOptions:\n1. the term Torani-Leumi\n2. the village of Zarudchi in the Lyubeshiv district\n3. the National Steeplechase Association circuit"
+    },
+    {
+        "test_id": 12,
+        "relation": "AssociatedWith",
+        "correct_feat": "America's Day the Races",
+        "options": "1. America's Day the Races\n2. the Exposition Universelle of 1900\n3. the Roman Republic",
+        "correct_num": 1,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is associated with [MASK].\n\nOptions:\n1. America's Day the Races\n2. the Exposition Universelle of 1900\n3. the Roman Republic"
+    },
+    {
+        "test_id": 13,
+        "relation": "AssociatedWith",
+        "correct_feat": "the American Grand National",
+        "options": "1. Pedro León Zapata\n2. the American Grand National\n3. the 2nd millennium",
+        "correct_num": 2,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is associated with [MASK].\n\nOptions:\n1. Pedro León Zapata\n2. the American Grand National\n3. the 2nd millennium"
+    },
+    {
+        "test_id": 14,
+        "relation": "AssociatedWith",
+        "correct_feat": "the Harry E. Harris Sport of Kings Four-Year-Old Hurdle Stakes",
+        "options": "1. the Feast of the Epiphany\n2. the Brazilian Communist Party\n3. the Harry E. Harris Sport of Kings Four-Year-Old Hurdle Stakes",
+        "correct_num": 3,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is associated with [MASK].\n\nOptions:\n1. the Feast of the Epiphany\n2. the Brazilian Communist Party\n3. the Harry E. Harris Sport of Kings Four-Year-Old Hurdle Stakes"
+    },
+    {
+        "test_id": 15,
+        "relation": "BelongsTo",
+        "correct_feat": "the steeplechase calendar",
+        "options": "1. the steeplechase calendar\n2. Accordéon Mélancolique\n3. the history of the Fourteenth Amendment",
+        "correct_num": 1,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> belongs to [MASK].\n\nOptions:\n1. the steeplechase calendar\n2. Accordéon Mélancolique\n3. the history of the Fourteenth Amendment"
+    },
+    {
+        "test_id": 16,
+        "relation": "CausedBy",
+        "correct_feat": "the COVID-19 pandemic",
+        "options": "1. two developments in Aflaq's life\n2. the COVID-19 pandemic\n3. the Battle of Gettysburg",
+        "correct_num": 2,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is caused by [MASK].\n\nOptions:\n1. two developments in Aflaq's life\n2. the COVID-19 pandemic\n3. the Battle of Gettysburg"
+    },
+    {
+        "test_id": 17,
+        "relation": "ConsistsOf",
+        "correct_feat": "six races",
+        "options": "1. four main parts\n2. a cape that floats creating a weightless setting\n3. six races",
+        "correct_num": 3,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> consists of [MASK].\n\nOptions:\n1. four main parts\n2. a cape that floats creating a weightless setting\n3. six races"
+    },
+    {
+        "test_id": 18,
+        "relation": "ConsistsOf",
+        "correct_feat": "the American Grand National, a Grade 1 hurdle race",
+        "options": "1. the American Grand National, a Grade 1 hurdle race\n2. the Christ child often holding a scroll\n3. staging public events",
+        "correct_num": 1,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> consists of [MASK].\n\nOptions:\n1. the American Grand National, a Grade 1 hurdle race\n2. the Christ child often holding a scroll\n3. staging public events"
+    },
+    {
+        "test_id": 19,
+        "relation": "ConsistsOf",
+        "correct_feat": "the Harry E. Harris Sport of Kings Four-Year-Old Hurdle Stakes",
+        "options": "1. eight main elements, one large bottom field and seven separate framed panels\n2. the Harry E. Harris Sport of Kings Four-Year-Old Hurdle Stakes\n3. dissenting opinions from four justices",
+        "correct_num": 2,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> consists of [MASK].\n\nOptions:\n1. eight main elements, one large bottom field and seven separate framed panels\n2. the Harry E. Harris Sport of Kings Four-Year-Old Hurdle Stakes\n3. dissenting opinions from four justices"
+    },
+    {
+        "test_id": 20,
+        "relation": "CreatedFor",
+        "correct_feat": "farmers and landowners who allowed fox hunting on their property",
+        "options": "1. Daichi Miura\n2. illustrating a Gulf Coast day\n3. farmers and landowners who allowed fox hunting on their property",
+        "correct_num": 3,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> was created for [MASK].\n\nOptions:\n1. Daichi Miura\n2. illustrating a Gulf Coast day\n3. farmers and landowners who allowed fox hunting on their property"
+    },
+    {
+        "test_id": 21,
+        "relation": "CreatedTo",
+        "correct_feat": "thank farmers and landowners",
+        "options": "1. thank farmers and landowners\n2. uphold the Eighth and Fourteenth Amendments\n3. provide an enjoyable experience",
+        "correct_num": 1,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> was created to [MASK].\n\nOptions:\n1. thank farmers and landowners\n2. uphold the Eighth and Fourteenth Amendments\n3. provide an enjoyable experience"
+    },
+    {
+        "test_id": 22,
+        "relation": "FoundedIn",
+        "correct_feat": "Montclair, New Jersey in 1870",
+        "options": "1. 1928\n2. Montclair, New Jersey in 1870\n3. 2010",
+        "correct_num": 2,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> was founded in [MASK].\n\nOptions:\n1. 1928\n2. Montclair, New Jersey in 1870\n3. 2010"
+    },
+    {
+        "test_id": 23,
+        "relation": "HasA",
+        "correct_feat": "race day purses that can equal up to or more than $1,000,000",
+        "options": "1. focuses on improving globally under-developed regions\n2. a tilted head towards her son\n3. race day purses that can equal up to or more than $1,000,000",
+        "correct_num": 3,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> has [MASK].\n\nOptions:\n1. focuses on improving globally under-developed regions\n2. a tilted head towards her son\n3. race day purses that can equal up to or more than $1,000,000"
+    },
+    {
+        "test_id": 24,
+        "relation": "HasA",
+        "correct_feat": "six races offering the highest purses on the National Steeplechase Association circuit",
+        "options": "1. six races offering the highest purses on the National Steeplechase Association circuit\n2. compositions that often feature live instruments\n3. a round that is over when no counters remain",
+        "correct_num": 1,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> has [MASK].\n\nOptions:\n1. six races offering the highest purses on the National Steeplechase Association circuit\n2. compositions that often feature live instruments\n3. a round that is over when no counters remain"
+    },
+    {
+        "test_id": 25,
+        "relation": "HasA",
+        "correct_feat": "a course record of 4:53.80",
+        "options": "1. a legislative suggestion that was rejected by a legislative committee\n2. a course record of 4:53.80\n3. a history of economic prosperity",
+        "correct_num": 2,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> has [MASK].\n\nOptions:\n1. a legislative suggestion that was rejected by a legislative committee\n2. a course record of 4:53.80\n3. a history of economic prosperity"
+    },
+    {
+        "test_id": 26,
+        "relation": "HasA",
+        "correct_feat": "a purse of $250,000 for the American Grand National",
+        "options": "1. one long 60-turn campaign game\n2. a song \"Rabbit\" performed in 2016 on Strictly Come Dancing\n3. a purse of $250,000 for the American Grand National",
+        "correct_num": 3,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> has [MASK].\n\nOptions:\n1. one long 60-turn campaign game\n2. a song \"Rabbit\" performed in 2016 on Strictly Come Dancing\n3. a purse of $250,000 for the American Grand National"
+    },
+    {
+        "test_id": 27,
+        "relation": "HasA",
+        "correct_feat": "a purse of $50,000 for the Harry E. Harris Sport of Kings Four-Year-Old Hurdle Stakes",
+        "options": "1. a purse of $50,000 for the Harry E. Harris Sport of Kings Four-Year-Old Hurdle Stakes\n2. a modernist religious outlook\n3. hands folded in prayer",
+        "correct_num": 1,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> has [MASK].\n\nOptions:\n1. a purse of $50,000 for the Harry E. Harris Sport of Kings Four-Year-Old Hurdle Stakes\n2. a modernist religious outlook\n3. hands folded in prayer"
+    },
+    {
+        "test_id": 28,
+        "relation": "HasA",
+        "correct_feat": "a purse of $175,000 for the Breeders' Cup Steeplechase",
+        "options": "1. groupers\n2. a purse of $175,000 for the Breeders' Cup Steeplechase\n3. opponents who argue that it would increase the number of drug users",
+        "correct_num": 2,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> has [MASK].\n\nOptions:\n1. groupers\n2. a purse of $175,000 for the Breeders' Cup Steeplechase\n3. opponents who argue that it would increase the number of drug users"
+    },
+    {
+        "test_id": 29,
+        "relation": "HasA",
+        "correct_feat": "a purse of $300,000 for the Grade 1 Breeders' Cup Grand National",
+        "options": "1. an empty casket at the foot of the bed\n2. a pattern of parallel, diagonal ribs\n3. a purse of $300,000 for the Grade 1 Breeders' Cup Grand National",
+        "correct_num": 3,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> has [MASK].\n\nOptions:\n1. an empty casket at the foot of the bed\n2. a pattern of parallel, diagonal ribs\n3. a purse of $300,000 for the Grade 1 Breeders' Cup Grand National"
+    },
+    {
+        "test_id": 30,
+        "relation": "HasA",
+        "correct_feat": "a 2+5⁄8-mile distance",
+        "options": "1. a 2+5⁄8-mile distance\n2. an album titled Trop d'amour\n3. a crowd shouting 'Hosanna!'",
+        "correct_num": 1,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> has [MASK].\n\nOptions:\n1. a 2+5⁄8-mile distance\n2. an album titled Trop d'amour\n3. a crowd shouting 'Hosanna!'"
+    },
+    {
+        "test_id": 31,
+        "relation": "HasA",
+        "correct_feat": "14 jumps",
+        "options": "1. a section painted blue for the next President in front of the reflecting pool\n2. 14 jumps\n3. a second international album titled Dangerous and Moving",
+        "correct_num": 2,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> has [MASK].\n\nOptions:\n1. a section painted blue for the next President in front of the reflecting pool\n2. 14 jumps\n3. a second international album titled Dangerous and Moving"
+    },
+    {
+        "test_id": 32,
+        "relation": "HasA",
+        "correct_feat": "a legacy as a premier event in the steeplechase calendar",
+        "options": "1. a cultural landmark status\n2. a nickname\n3. a legacy as a premier event in the steeplechase calendar",
+        "correct_num": 3,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> has [MASK].\n\nOptions:\n1. a cultural landmark status\n2. a nickname\n3. a legacy as a premier event in the steeplechase calendar"
+    },
+    {
+        "test_id": 33,
+        "relation": "HasFeatureOf",
+        "correct_feat": "premier social events",
+        "options": "1. premier social events\n2. five men, one of whom was a \"Branán\" or chief\n3. a coiled dragon holding a sword in its mouth",
+        "correct_num": 1,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is characterized by [MASK].\n\nOptions:\n1. premier social events\n2. five men, one of whom was a \"Branán\" or chief\n3. a coiled dragon holding a sword in its mouth"
+    },
+    {
+        "test_id": 34,
+        "relation": "HasFeatureOf",
+        "correct_feat": "unique and often extravagant fall picnic areas",
+        "options": "1. frequent rains\n2. unique and often extravagant fall picnic areas\n3. the Battle of the Eureka Stockade",
+        "correct_num": 2,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is characterized by [MASK].\n\nOptions:\n1. frequent rains\n2. unique and often extravagant fall picnic areas\n3. the Battle of the Eureka Stockade"
+    },
+    {
+        "test_id": 35,
+        "relation": "HasFeatureOf",
+        "correct_feat": "beautiful floral centerpieces",
+        "options": "1. a game for two, three, or four players\n2. its large size\n3. beautiful floral centerpieces",
+        "correct_num": 3,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is characterized by [MASK].\n\nOptions:\n1. a game for two, three, or four players\n2. its large size\n3. beautiful floral centerpieces"
+    },
+    {
+        "test_id": 36,
+        "relation": "HasFeatureOf",
+        "correct_feat": "ice carvings",
+        "options": "1. ice carvings\n2. requiring skilled workers for installation in structural steel applications\n3. a large number of units",
+        "correct_num": 1,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is characterized by [MASK].\n\nOptions:\n1. ice carvings\n2. requiring skilled workers for installation in structural steel applications\n3. a large number of units"
+    },
+    {
+        "test_id": 37,
+        "relation": "HasFeatureOf",
+        "correct_feat": "haybale seating",
+        "options": "1. its defensive positions\n2. haybale seating\n3. the Christ child twisting his body away from his mother's embrace",
+        "correct_num": 2,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is characterized by [MASK].\n\nOptions:\n1. its defensive positions\n2. haybale seating\n3. the Christ child twisting his body away from his mother's embrace"
+    },
+    {
+        "test_id": 38,
+        "relation": "HasFeatureOf",
+        "correct_feat": "culinary feasts",
+        "options": "1. irredentist claims on Alsace-Lorraine\n2. producing its own beats\n3. culinary feasts",
+        "correct_num": 3,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is characterized by [MASK].\n\nOptions:\n1. irredentist claims on Alsace-Lorraine\n2. producing its own beats\n3. culinary feasts"
+    },
+    {
+        "test_id": 39,
+        "relation": "HasFeatureOf",
+        "correct_feat": "tradition and reunion of family and friends",
+        "options": "1. tradition and reunion of family and friends\n2. planned economies\n3. a unified political policy",
+        "correct_num": 1,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is characterized by [MASK].\n\nOptions:\n1. tradition and reunion of family and friends\n2. planned economies\n3. a unified political policy"
+    },
+    {
+        "test_id": 40,
+        "relation": "HasFeatureOf",
+        "correct_feat": "the highest prize money of a steeplechase in America",
+        "options": "1. local fishermen\n2. the highest prize money of a steeplechase in America\n3. opposition to a united Ireland independent of the UK",
+        "correct_num": 2,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is characterized by [MASK].\n\nOptions:\n1. local fishermen\n2. the highest prize money of a steeplechase in America\n3. opposition to a united Ireland independent of the UK"
+    },
+    {
+        "test_id": 41,
+        "relation": "HasFeatureOf",
+        "correct_feat": "excessive-drinking problems",
+        "options": "1. its message concerned with Venezuela's social present\n2. being the first depiction of the Paulista Avenue\n3. excessive-drinking problems",
+        "correct_num": 3,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is characterized by [MASK].\n\nOptions:\n1. its message concerned with Venezuela's social present\n2. being the first depiction of the Paulista Avenue\n3. excessive-drinking problems"
+    },
+    {
+        "test_id": 42,
+        "relation": "HasFeatureOf",
+        "correct_feat": "Parimutuel wagering",
+        "options": "1. Parimutuel wagering\n2. a plot following a failed attempt by the Rebel Alliance to destroy the second Death Star\n3. a king that started in the centre",
+        "correct_num": 1,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is characterized by [MASK].\n\nOptions:\n1. Parimutuel wagering\n2. a plot following a failed attempt by the Rebel Alliance to destroy the second Death Star\n3. a king that started in the centre"
+    },
+    {
+        "test_id": 43,
+        "relation": "HeldIn",
+        "correct_feat": "Far Hills, New Jersey",
+        "options": "1. the Zagros Mountains\n2. Far Hills, New Jersey\n3. the Second Spanish Republic",
+        "correct_num": 2,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> was held in [MASK].\n\nOptions:\n1. the Zagros Mountains\n2. Far Hills, New Jersey\n3. the Second Spanish Republic"
+    },
+    {
+        "test_id": 44,
+        "relation": "HeldIn",
+        "correct_feat": "Far Hills",
+        "options": "1. Europe\n2. a monastery near the town of Gorodets-on-the-Volga\n3. Far Hills",
+        "correct_num": 3,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> was held in [MASK].\n\nOptions:\n1. Europe\n2. a monastery near the town of Gorodets-on-the-Volga\n3. Far Hills"
+    },
+    {
+        "test_id": 45,
+        "relation": "HeldOn",
+        "correct_feat": "October 15, 2022",
+        "options": "1. October 15, 2022\n2. January 25, 2019\n3. October 2–7",
+        "correct_num": 1,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> was held on [MASK].\n\nOptions:\n1. October 15, 2022\n2. January 25, 2019\n3. October 2–7"
+    },
+    {
+        "test_id": 46,
+        "relation": "Influenced",
+        "correct_feat": "the Steeplechase Cancer Center at the Somerset Medical Center's growth and ability to offer comprehensive, state-of-the-art medical services",
+        "options": "1. the promotion of a united Italy\n2. the Steeplechase Cancer Center at the Somerset Medical Center's growth and ability to offer comprehensive, state-of-the-art medical services\n3. the political discourse in Uganda",
+        "correct_num": 2,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> influenced [MASK].\n\nOptions:\n1. the promotion of a united Italy\n2. the Steeplechase Cancer Center at the Somerset Medical Center's growth and ability to offer comprehensive, state-of-the-art medical services\n3. the political discourse in Uganda"
+    },
+    {
+        "test_id": 47,
+        "relation": "InfluencedBy",
+        "correct_feat": "the tradition of fox hunting clubs",
+        "options": "1. Manambuchaavadi Venkatasubbayyar\n2. the literary renditions of Ovid and Fulgentius\n3. the tradition of fox hunting clubs",
+        "correct_num": 3,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> was influenced by [MASK].\n\nOptions:\n1. Manambuchaavadi Venkatasubbayyar\n2. the literary renditions of Ovid and Fulgentius\n3. the tradition of fox hunting clubs"
+    },
+    {
+        "test_id": 48,
+        "relation": "InfluencedBy",
+        "correct_feat": "World War II",
+        "options": "1. World War II\n2. Vocaloid 2 singing synthesizer software Hatsune Miku\n3. the 1871–1918 monarchy",
+        "correct_num": 1,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> was influenced by [MASK].\n\nOptions:\n1. World War II\n2. Vocaloid 2 singing synthesizer software Hatsune Miku\n3. the 1871–1918 monarchy"
+    },
+    {
+        "test_id": 49,
+        "relation": "InfluencedBy",
+        "correct_feat": "the September 11, 2001 attacks at the World Trade Center",
+        "options": "1. James Harrington\n2. the September 11, 2001 attacks at the World Trade Center\n3. the invention of the steam locomotive",
+        "correct_num": 2,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> was influenced by [MASK].\n\nOptions:\n1. James Harrington\n2. the September 11, 2001 attacks at the World Trade Center\n3. the invention of the steam locomotive"
+    },
+    {
+        "test_id": 50,
+        "relation": "KnownAs",
+        "correct_feat": "Moorland Farms",
+        "options": "1. a case that affirmed the Eighth and Fourteenth Amendments\n2. the Panagia Samis\n3. Moorland Farms",
+        "correct_num": 3,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is known as [MASK].\n\nOptions:\n1. a case that affirmed the Eighth and Fourteenth Amendments\n2. the Panagia Samis\n3. Moorland Farms"
+    },
+    {
+        "test_id": 51,
+        "relation": "KnownFor",
+        "correct_feat": "the highest prize money of a steeplechase in America",
+        "options": "1. the highest prize money of a steeplechase in America\n2. its strategic role within the Spanish Empire\n3. promoting the cultural unity of France",
+        "correct_num": 1,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is known for [MASK].\n\nOptions:\n1. the highest prize money of a steeplechase in America\n2. its strategic role within the Spanish Empire\n3. promoting the cultural unity of France"
+    },
+    {
+        "test_id": 52,
+        "relation": "KnownFor",
+        "correct_feat": "being a premier social event",
+        "options": "1. the formation of communes, intentional communities and squatter movements\n2. being a premier social event\n3. retaining its religious character after the ascendency of Christianity",
+        "correct_num": 2,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is known for [MASK].\n\nOptions:\n1. the formation of communes, intentional communities and squatter movements\n2. being a premier social event\n3. retaining its religious character after the ascendency of Christianity"
+    },
+    {
+        "test_id": 53,
+        "relation": "KnownFor",
+        "correct_feat": "its elaborate picnic setups",
+        "options": "1. initiating the process by which Persian became written in the Perso-Arabic script\n2. its development during the Victorian era\n3. its elaborate picnic setups",
+        "correct_num": 3,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is known for [MASK].\n\nOptions:\n1. initiating the process by which Persian became written in the Perso-Arabic script\n2. its development during the Victorian era\n3. its elaborate picnic setups"
+    },
+    {
+        "test_id": 54,
+        "relation": "KnownFor",
+        "correct_feat": "raising money for charitable organizations",
+        "options": "1. raising money for charitable organizations\n2. being a permanent mechanical fastener\n3. alluding to the giving of the Torah",
+        "correct_num": 1,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is known for [MASK].\n\nOptions:\n1. raising money for charitable organizations\n2. being a permanent mechanical fastener\n3. alluding to the giving of the Torah"
+    },
+    {
+        "test_id": 55,
+        "relation": "KnownFor",
+        "correct_feat": "its legacy as a premier event in the steeplechase calendar",
+        "options": "1. believing that Israel is Atchalta De'Geulah\n2. its legacy as a premier event in the steeplechase calendar\n3. its standardized notation for recording games",
+        "correct_num": 2,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is known for [MASK].\n\nOptions:\n1. believing that Israel is Atchalta De'Geulah\n2. its legacy as a premier event in the steeplechase calendar\n3. its standardized notation for recording games"
+    },
+    {
+        "test_id": 56,
+        "relation": "LocatedIn",
+        "correct_feat": "in Far Hills, New Jersey, United States",
+        "options": "1. in London\n2. between the Draa, the Niger, and the Senegal rivers\n3. in Far Hills, New Jersey, United States",
+        "correct_num": 3,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is located [MASK].\n\nOptions:\n1. in London\n2. between the Draa, the Niger, and the Senegal rivers\n3. in Far Hills, New Jersey, United States"
+    },
+    {
+        "test_id": 57,
+        "relation": "LocatedIn",
+        "correct_feat": "on the Grant B. Schley estate",
+        "options": "1. on the Grant B. Schley estate\n2. in Los Angeles, California\n3. in Ancient Egypt",
+        "correct_num": 1,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is located [MASK].\n\nOptions:\n1. on the Grant B. Schley estate\n2. in Los Angeles, California\n3. in Ancient Egypt"
+    },
+    {
+        "test_id": 58,
+        "relation": "OriginatedIn",
+        "correct_feat": "the Essex Hunt",
+        "options": "1. the Civic Democratic Party (ODS)\n2. the Essex Hunt\n3. Nicaragua",
+        "correct_num": 2,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> originated in [MASK].\n\nOptions:\n1. the Civic Democratic Party (ODS)\n2. the Essex Hunt\n3. Nicaragua"
+    },
+    {
+        "test_id": 59,
+        "relation": "OriginatedIn",
+        "correct_feat": "Montclair, New Jersey",
+        "options": "1. the Georgian monastery of Ancha\n2. the American proslavery movement\n3. Montclair, New Jersey",
+        "correct_num": 3,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> originated in [MASK].\n\nOptions:\n1. the Georgian monastery of Ancha\n2. the American proslavery movement\n3. Montclair, New Jersey"
+    },
+    {
+        "test_id": 60,
+        "relation": "PartOf",
+        "correct_feat": "the National Steeplechase Association circuit",
+        "options": "1. the National Steeplechase Association circuit\n2. Lutheran theology\n3. the Bourbon Restoration in France",
+        "correct_num": 1,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is part of [MASK].\n\nOptions:\n1. the National Steeplechase Association circuit\n2. Lutheran theology\n3. the Bourbon Restoration in France"
+    },
+    {
+        "test_id": 61,
+        "relation": "PerformedBy",
+        "correct_feat": "the Essex Hunt",
+        "options": "1. Allah\n2. the Essex Hunt\n3. Niccolò Piccinino",
+        "correct_num": 2,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> was performed by [MASK].\n\nOptions:\n1. Allah\n2. the Essex Hunt\n3. Niccolò Piccinino"
+    },
+    {
+        "test_id": 62,
+        "relation": "PerformedBy",
+        "correct_feat": "the Essex Fox Hounds",
+        "options": "1. Muslim Brotherhood\n2. Chas Hodges\n3. the Essex Fox Hounds",
+        "correct_num": 3,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> was performed by [MASK].\n\nOptions:\n1. Muslim Brotherhood\n2. Chas Hodges\n3. the Essex Fox Hounds"
+    },
+    {
+        "test_id": 63,
+        "relation": "PublishedAs",
+        "correct_feat": "\"steeplechasing's richest race\" by USA Today",
+        "options": "1. \"steeplechasing's richest race\" by USA Today\n2. a holy icon of the highest stature within the Russian Orthodox Church\n3. part of the Gospel of Luke",
+        "correct_num": 1,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> was published as [MASK].\n\nOptions:\n1. \"steeplechasing's richest race\" by USA Today\n2. a holy icon of the highest stature within the Russian Orthodox Church\n3. part of the Gospel of Luke"
+    },
+    {
+        "test_id": 64,
+        "relation": "UsedAs",
+        "correct_feat": "a fundraiser for the Steeplechase Cancer Center at the Somerset Medical Center",
+        "options": "1. a song for the club\n2. a fundraiser for the Steeplechase Cancer Center at the Somerset Medical Center\n3. a bass guitarist",
+        "correct_num": 2,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is used as [MASK].\n\nOptions:\n1. a song for the club\n2. a fundraiser for the Steeplechase Cancer Center at the Somerset Medical Center\n3. a bass guitarist"
+    },
+    {
+        "test_id": 65,
+        "relation": "UsedFor",
+        "correct_feat": "charitable organizations",
+        "options": "1. promoting skin-cancer awareness\n2. achieving its \"true national unification\"\n3. charitable organizations",
+        "correct_num": 3,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is used for [MASK].\n\nOptions:\n1. promoting skin-cancer awareness\n2. achieving its \"true national unification\"\n3. charitable organizations"
+    },
+    {
+        "test_id": 66,
+        "relation": "UsedFor",
+        "correct_feat": "emergency workers and victims of the September 11, 2001 attacks at the World Trade Center",
+        "options": "1. emergency workers and victims of the September 11, 2001 attacks at the World Trade Center\n2. national self-determination\n3. referring to cousins who held the crown of Jerusalem",
+        "correct_num": 1,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is used for [MASK].\n\nOptions:\n1. emergency workers and victims of the September 11, 2001 attacks at the World Trade Center\n2. national self-determination\n3. referring to cousins who held the crown of Jerusalem"
+    },
+    {
+        "test_id": 67,
+        "relation": "UsedIn",
+        "correct_feat": "the tri-state area",
+        "options": "1. the United States\n2. the tri-state area\n3. first-person shooters",
+        "correct_num": 2,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is used in [MASK].\n\nOptions:\n1. the United States\n2. the tri-state area\n3. first-person shooters"
+    },
+    {
+        "test_id": 68,
+        "relation": "UsedTo",
+        "correct_feat": "curb excessive-drinking problems",
+        "options": "1. take on a more domestic role for women in China\n2. commemorate achieving worldwide record sales\n3. curb excessive-drinking problems",
+        "correct_num": 3,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is used to [MASK].\n\nOptions:\n1. take on a more domestic role for women in China\n2. commemorate achieving worldwide record sales\n3. curb excessive-drinking problems"
+    },
+    {
+        "test_id": 69,
+        "relation": "UsedTo",
+        "correct_feat": "benefit emergency workers and victims of the September 11, 2001 attacks at the World Trade Center",
+        "options": "1. benefit emergency workers and victims of the September 11, 2001 attacks at the World Trade Center\n2. return pieces to the starting position\n3. simulate German vehicles",
+        "correct_num": 1,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is used to [MASK].\n\nOptions:\n1. benefit emergency workers and victims of the September 11, 2001 attacks at the World Trade Center\n2. return pieces to the starting position\n3. simulate German vehicles"
+    },
+    {
+        "test_id": 70,
+        "relation": "WonBy",
+        "correct_feat": "All Gong",
+        "options": "1. the Mensa Select Award in 2003\n2. All Gong\n3. the Royal Air Force",
+        "correct_num": 2,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> was won by [MASK].\n\nOptions:\n1. the Mensa Select Award in 2003\n2. All Gong\n3. the Royal Air Force"
+    },
+    {
+        "test_id": 71,
+        "relation": "WonBy",
+        "correct_feat": "McDynamo",
+        "options": "1. the band\n2. the monster\n3. McDynamo",
+        "correct_num": 3,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> was won by [MASK].\n\nOptions:\n1. the band\n2. the monster\n3. McDynamo"
+    },
+    {
+        "test_id": 72,
+        "relation": "WonBy",
+        "correct_feat": "Snap Decision",
+        "options": "1. Snap Decision\n2. Pet Shop Boys\n3. Bigflo and Oli, achieving platinum record status for their albums",
+        "correct_num": 1,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> was won by [MASK].\n\nOptions:\n1. Snap Decision\n2. Pet Shop Boys\n3. Bigflo and Oli, achieving platinum record status for their albums"
+    },
+    {
+        "test_id": 73,
+        "relation": "WonBy",
+        "correct_feat": "Ljay",
+        "options": "1. Allied countries\n2. Ljay\n3. Jonathan Goodman's true crime book The Passing of Starr Faithfull",
+        "correct_num": 2,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> was won by [MASK].\n\nOptions:\n1. Allied countries\n2. Ljay\n3. Jonathan Goodman's true crime book The Passing of Starr Faithfull"
+    }
+]

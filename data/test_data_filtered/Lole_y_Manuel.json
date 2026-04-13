@@ -1,0 +1,378 @@
+[
+    {
+        "test_id": 0,
+        "relation": "About",
+        "correct_feat": "gitano musical duo",
+        "options": "1. gitano musical duo\n2. a rodeo sport involving a rider on a bucking bull\n3. life and time on Horn Island",
+        "correct_num": 1,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is about [MASK].\n\nOptions:\n1. gitano musical duo\n2. a rodeo sport involving a rider on a bucking bull\n3. life and time on Horn Island"
+    },
+    {
+        "test_id": 1,
+        "relation": "Affects",
+        "correct_feat": "subsequent nuevo flamenco releases",
+        "options": "1. dual citizenship\n2. subsequent nuevo flamenco releases\n3. the way the game is played",
+        "correct_num": 2,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> affects [MASK].\n\nOptions:\n1. dual citizenship\n2. subsequent nuevo flamenco releases\n3. the way the game is played"
+    },
+    {
+        "test_id": 2,
+        "relation": "AssociatedWith",
+        "correct_feat": "flamenco music",
+        "options": "1. Richard Wagner's interpretation of Beethoven's Ninth symphony\n2. drop tubes\n3. flamenco music",
+        "correct_num": 3,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is associated with [MASK].\n\nOptions:\n1. Richard Wagner's interpretation of Beethoven's Ninth symphony\n2. drop tubes\n3. flamenco music"
+    },
+    {
+        "test_id": 3,
+        "relation": "AssociatedWith",
+        "correct_feat": "gitano musical duo",
+        "options": "1. gitano musical duo\n2. skyscrapers\n3. Mozart's Don Giovanni",
+        "correct_num": 1,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is associated with [MASK].\n\nOptions:\n1. gitano musical duo\n2. skyscrapers\n3. Mozart's Don Giovanni"
+    },
+    {
+        "test_id": 5,
+        "relation": "AssociatedWith",
+        "correct_feat": "Romani families of artistic descent",
+        "options": "1. the John Randolph Club\n2. Aristotle\n3. Romani families of artistic descent",
+        "correct_num": 3,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is associated with [MASK].\n\nOptions:\n1. the John Randolph Club\n2. Aristotle\n3. Romani families of artistic descent"
+    },
+    {
+        "test_id": 6,
+        "relation": "BelongsTo",
+        "correct_feat": "gitano musical duo",
+        "options": "1. gitano musical duo\n2. conservatism\n3. the Qizilbash confederacy",
+        "correct_num": 1,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> belongs to [MASK].\n\nOptions:\n1. gitano musical duo\n2. conservatism\n3. the Qizilbash confederacy"
+    },
+    {
+        "test_id": 7,
+        "relation": "ComposedBy",
+        "correct_feat": "Dolores Montoya Rodr\u00edguez and Manuel Molina Jim\u00e9nez",
+        "options": "1. Iced Earth\n2. Dolores Montoya Rodr\u00edguez and Manuel Molina Jim\u00e9nez\n3. Julio Esc\u00e1mez",
+        "correct_num": 2,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> was composed by [MASK].\n\nOptions:\n1. Iced Earth\n2. Dolores Montoya Rodr\u00edguez and Manuel Molina Jim\u00e9nez\n3. Julio Esc\u00e1mez"
+    },
+    {
+        "test_id": 8,
+        "relation": "ConsistsOf",
+        "correct_feat": "singer Dolores Montoya Rodr\u00edguez and guitarist Manuel Molina Jim\u00e9nez",
+        "options": "1. mass hysteria\n2. grand juries and trials\n3. singer Dolores Montoya Rodr\u00edguez and guitarist Manuel Molina Jim\u00e9nez",
+        "correct_num": 3,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> consists of [MASK].\n\nOptions:\n1. mass hysteria\n2. grand juries and trials\n3. singer Dolores Montoya Rodr\u00edguez and guitarist Manuel Molina Jim\u00e9nez"
+    },
+    {
+        "test_id": 9,
+        "relation": "CreatedBy",
+        "correct_feat": "Dolores Montoya Rodr\u00edguez and Manuel Molina Jim\u00e9nez",
+        "options": "1. Dolores Montoya Rodr\u00edguez and Manuel Molina Jim\u00e9nez\n2. artists to display their handling of complex, crowded scenes\n3. Zhang Zeduan",
+        "correct_num": 1,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> was created by [MASK].\n\nOptions:\n1. Dolores Montoya Rodr\u00edguez and Manuel Molina Jim\u00e9nez\n2. artists to display their handling of complex, crowded scenes\n3. Zhang Zeduan"
+    },
+    {
+        "test_id": 11,
+        "relation": "HasA",
+        "correct_feat": "operatic, flashy guitar of Manuel Molina Jim\u00e9nez",
+        "options": "1. a minimum number of turns\n2. military and security commanders\n3. operatic, flashy guitar of Manuel Molina Jim\u00e9nez",
+        "correct_num": 3,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> has [MASK].\n\nOptions:\n1. a minimum number of turns\n2. military and security commanders\n3. operatic, flashy guitar of Manuel Molina Jim\u00e9nez"
+    },
+    {
+        "test_id": 12,
+        "relation": "HasFeatureOf",
+        "correct_feat": "innovative flamenco music",
+        "options": "1. innovative flamenco music\n2. its development among intellectual elites\n3. its association with the Image of Edessa",
+        "correct_num": 1,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is characterized by [MASK].\n\nOptions:\n1. innovative flamenco music\n2. its development among intellectual elites\n3. its association with the Image of Edessa"
+    },
+    {
+        "test_id": 15,
+        "relation": "HasFeatureOf",
+        "correct_feat": "being the first exponent of flamenco music aimed at a non-exclusively flamenco audience",
+        "options": "1. being the first exponent of flamenco music aimed at a non-exclusively flamenco audience\n2. the separation of the saved and the damned\n3. being a science regarding the supposed laws behind the building of socialism and communism",
+        "correct_num": 1,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is characterized by [MASK].\n\nOptions:\n1. being the first exponent of flamenco music aimed at a non-exclusively flamenco audience\n2. the separation of the saved and the damned\n3. being a science regarding the supposed laws behind the building of socialism and communism"
+    },
+    {
+        "test_id": 16,
+        "relation": "HasFeatureOf",
+        "correct_feat": "being one of the precursors to the musical stream called New flamenco",
+        "options": "1. a low lift-to-drag ratio in early designs\n2. being one of the precursors to the musical stream called New flamenco\n3. rules that are quite easy to understand",
+        "correct_num": 2,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is characterized by [MASK].\n\nOptions:\n1. a low lift-to-drag ratio in early designs\n2. being one of the precursors to the musical stream called New flamenco\n3. rules that are quite easy to understand"
+    },
+    {
+        "test_id": 17,
+        "relation": "HasFeatureOf",
+        "correct_feat": "fused traditional Spanish flamenco with Molina's poetic lyrics and foreign styles and influences",
+        "options": "1. a documentary film made in 2003\n2. perfect modelling\n3. fused traditional Spanish flamenco with Molina's poetic lyrics and foreign styles and influences",
+        "correct_num": 3,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is characterized by [MASK].\n\nOptions:\n1. a documentary film made in 2003\n2. perfect modelling\n3. fused traditional Spanish flamenco with Molina's poetic lyrics and foreign styles and influences"
+    },
+    {
+        "test_id": 18,
+        "relation": "HasFeatureOf",
+        "correct_feat": "incorporating Arabic influences",
+        "options": "1. incorporating Arabic influences\n2. rules that may vary widely today\n3. significant political, demographic, and cultural changes",
+        "correct_num": 1,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is characterized by [MASK].\n\nOptions:\n1. incorporating Arabic influences\n2. rules that may vary widely today\n3. significant political, demographic, and cultural changes"
+    },
+    {
+        "test_id": 21,
+        "relation": "Influenced",
+        "correct_feat": "subsequent nuevo flamenco releases, including Veneno and La leyenda del tiempo",
+        "options": "1. subsequent nuevo flamenco releases, including Veneno and La leyenda del tiempo\n2. the design of later fighter aircraft\n3. Poland's politics with a stabilizing effect",
+        "correct_num": 1,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> influenced [MASK].\n\nOptions:\n1. subsequent nuevo flamenco releases, including Veneno and La leyenda del tiempo\n2. the design of later fighter aircraft\n3. Poland's politics with a stabilizing effect"
+    },
+    {
+        "test_id": 24,
+        "relation": "IsA",
+        "correct_feat": "a gitano musical duo",
+        "options": "1. a gitano musical duo\n2. a grand tactical monster board wargame\n3. a construct for understanding medieval society",
+        "correct_num": 1,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is [MASK].\n\nOptions:\n1. a gitano musical duo\n2. a grand tactical monster board wargame\n3. a construct for understanding medieval society"
+    },
+    {
+        "test_id": 25,
+        "relation": "IsA",
+        "correct_feat": "a couple",
+        "options": "1. a royal dynasty\n2. a couple\n3. a radical environmentalist philosophy",
+        "correct_num": 2,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is [MASK].\n\nOptions:\n1. a royal dynasty\n2. a couple\n3. a radical environmentalist philosophy"
+    },
+    {
+        "test_id": 26,
+        "relation": "IsA",
+        "correct_feat": "a professional couple",
+        "options": "1. a competitive sport\n2. a depiction of the beginning of the Hungarian conquest of the Carpathian Basin in 895\n3. a professional couple",
+        "correct_num": 3,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is [MASK].\n\nOptions:\n1. a competitive sport\n2. a depiction of the beginning of the Hungarian conquest of the Carpathian Basin in 895\n3. a professional couple"
+    },
+    {
+        "test_id": 27,
+        "relation": "IsA",
+        "correct_feat": "an exponent of flamenco music",
+        "options": "1. an exponent of flamenco music\n2. extreme conservative views in politics or religious practice\n3. an entertainment attraction",
+        "correct_num": 1,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is [MASK].\n\nOptions:\n1. an exponent of flamenco music\n2. extreme conservative views in politics or religious practice\n3. an entertainment attraction"
+    },
+    {
+        "test_id": 28,
+        "relation": "IsA",
+        "correct_feat": "a precursor to the musical stream called New flamenco",
+        "options": "1. a road race\n2. a precursor to the musical stream called New flamenco\n3. a traditional board game",
+        "correct_num": 2,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is [MASK].\n\nOptions:\n1. a road race\n2. a precursor to the musical stream called New flamenco\n3. a traditional board game"
+    },
+    {
+        "test_id": 30,
+        "relation": "KnownFor",
+        "correct_feat": "the emotive, yet sweet voice of Lole Montoya",
+        "options": "1. the emotive, yet sweet voice of Lole Montoya\n2. emphasizing the nation state, national sovereignty\n3. the FIFA World Cup",
+        "correct_num": 1,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is known for [MASK].\n\nOptions:\n1. the emotive, yet sweet voice of Lole Montoya\n2. emphasizing the nation state, national sovereignty\n3. the FIFA World Cup"
+    },
+    {
+        "test_id": 31,
+        "relation": "KnownFor",
+        "correct_feat": "the operatic, flashy guitar of Manuel Molina Jim\u00e9nez",
+        "options": "1. the concepts of lords, vassals, and fiefs\n2. the operatic, flashy guitar of Manuel Molina Jim\u00e9nez\n3. its perceived capacity for international leadership",
+        "correct_num": 2,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is known for [MASK].\n\nOptions:\n1. the concepts of lords, vassals, and fiefs\n2. the operatic, flashy guitar of Manuel Molina Jim\u00e9nez\n3. its perceived capacity for international leadership"
+    },
+    {
+        "test_id": 32,
+        "relation": "KnownFor",
+        "correct_feat": "being the first exponent of flamenco music aimed at a non-exclusively flamenco audience",
+        "options": "1. the prophetess Anna\n2. prioritizing prudence when enacting change\n3. being the first exponent of flamenco music aimed at a non-exclusively flamenco audience",
+        "correct_num": 3,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is known for [MASK].\n\nOptions:\n1. the prophetess Anna\n2. prioritizing prudence when enacting change\n3. being the first exponent of flamenco music aimed at a non-exclusively flamenco audience"
+    },
+    {
+        "test_id": 33,
+        "relation": "KnownFor",
+        "correct_feat": "being one of the precursors to the musical stream called New flamenco",
+        "options": "1. being one of the precursors to the musical stream called New flamenco\n2. Napoleon III\n3. flourishing commerce",
+        "correct_num": 1,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is known for [MASK].\n\nOptions:\n1. being one of the precursors to the musical stream called New flamenco\n2. Napoleon III\n3. flourishing commerce"
+    },
+    {
+        "test_id": 35,
+        "relation": "PartOf",
+        "correct_feat": "gitano musical duo",
+        "options": "1. Islamic eschatology\n2. the Feast of the Nativity in the Eastern Orthodox Church\n3. gitano musical duo",
+        "correct_num": 3,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is part of [MASK].\n\nOptions:\n1. Islamic eschatology\n2. the Feast of the Nativity in the Eastern Orthodox Church\n3. gitano musical duo"
+    },
+    {
+        "test_id": 36,
+        "relation": "PerformedBy",
+        "correct_feat": "Dolores Montoya Rodr\u00edguez and Manuel Molina Jim\u00e9nez",
+        "options": "1. Dolores Montoya Rodr\u00edguez and Manuel Molina Jim\u00e9nez\n2. the Essex Hunt\n3. installers",
+        "correct_num": 1,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> was performed by [MASK].\n\nOptions:\n1. Dolores Montoya Rodr\u00edguez and Manuel Molina Jim\u00e9nez\n2. the Essex Hunt\n3. installers"
+    },
+    {
+        "test_id": 37,
+        "relation": "ProducedBy",
+        "correct_feat": "Ricardo Pach\u00f3n",
+        "options": "1. the Skopje 2014 project\n2. Ricardo Pach\u00f3n\n3. the Compagnie des chemins de fer de Paris \u00e0 Lyon et \u00e0 la M\u00e9diterran\u00e9e",
+        "correct_num": 2,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> was produced by [MASK].\n\nOptions:\n1. the Skopje 2014 project\n2. Ricardo Pach\u00f3n\n3. the Compagnie des chemins de fer de Paris \u00e0 Lyon et \u00e0 la M\u00e9diterran\u00e9e"
+    },
+    {
+        "test_id": 39,
+        "relation": "ProducedBy",
+        "correct_feat": "Gualberto Garc\u00eda",
+        "options": "1. Gualberto Garc\u00eda\n2. the Cedar Walton/Hank Mobley Quintet\n3. GMT Games",
+        "correct_num": 1,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> was produced by [MASK].\n\nOptions:\n1. Gualberto Garc\u00eda\n2. the Cedar Walton/Hank Mobley Quintet\n3. GMT Games"
+    },
+    {
+        "test_id": 40,
+        "relation": "PublishedAs",
+        "correct_feat": "Nuevo D\u00eda",
+        "options": "1. Kingdom Death: Monster 1.5\n2. Nuevo D\u00eda\n3. Group of Soviet Forces Germany in Strategy & Tactics #220",
+        "correct_num": 2,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> was published as [MASK].\n\nOptions:\n1. Kingdom Death: Monster 1.5\n2. Nuevo D\u00eda\n3. Group of Soviet Forces Germany in Strategy & Tactics #220"
+    },
+    {
+        "test_id": 42,
+        "relation": "PublishedAs",
+        "correct_feat": "Lole y Manuel",
+        "options": "1. Lole y Manuel\n2. a film\n3. a 2011 single",
+        "correct_num": 1,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> was published as [MASK].\n\nOptions:\n1. Lole y Manuel\n2. a film\n3. a 2011 single"
+    },
+    {
+        "test_id": 44,
+        "relation": "PublishedAs",
+        "correct_feat": "Casta",
+        "options": "1. Rumis\n2. Group of Soviet Forces Germany in Strategy & Tactics #220\n3. Casta",
+        "correct_num": 3,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> was published as [MASK].\n\nOptions:\n1. Rumis\n2. Group of Soviet Forces Germany in Strategy & Tactics #220\n3. Casta"
+    },
+    {
+        "test_id": 45,
+        "relation": "PublishedAs",
+        "correct_feat": "Lole y Manuel Cantan a Manuel de Falla",
+        "options": "1. Lole y Manuel Cantan a Manuel de Falla\n2. \"Italia mia\" (Rime 128)\n3. a boxed set in 1957",
+        "correct_num": 1,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> was published as [MASK].\n\nOptions:\n1. Lole y Manuel Cantan a Manuel de Falla\n2. \"Italia mia\" (Rime 128)\n3. a boxed set in 1957"
+    },
+    {
+        "test_id": 46,
+        "relation": "PublishedAs",
+        "correct_feat": "Alba Molina",
+        "options": "1. a 2004 single\n2. Alba Molina\n3. a block wargame",
+        "correct_num": 2,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> was published as [MASK].\n\nOptions:\n1. a 2004 single\n2. Alba Molina\n3. a block wargame"
+    },
+    {
+        "test_id": 51,
+        "relation": "UsedFor",
+        "correct_feat": "innovative flamenco music",
+        "options": "1. innovative flamenco music\n2. depicting the Paulista Avenue on its inauguration day\n3. simulating the Roman attack on Jerusalem by Cestius Gallus",
+        "correct_num": 1,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is used for [MASK].\n\nOptions:\n1. innovative flamenco music\n2. depicting the Paulista Avenue on its inauguration day\n3. simulating the Roman attack on Jerusalem by Cestius Gallus"
+    },
+    {
+        "test_id": 52,
+        "relation": "UsedFor",
+        "correct_feat": "New flamenco",
+        "options": "1. reviving ancient heritage\n2. New flamenco\n3. playing with young children",
+        "correct_num": 2,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is used for [MASK].\n\nOptions:\n1. reviving ancient heritage\n2. New flamenco\n3. playing with young children"
+    },
+    {
+        "test_id": 53,
+        "relation": "UsedFor",
+        "correct_feat": "fused traditional Spanish flamenco with Molina's poetic lyrics and foreign styles and influences",
+        "options": "1. historic preservation\n2. arctic warfare\n3. fused traditional Spanish flamenco with Molina's poetic lyrics and foreign styles and influences",
+        "correct_num": 3,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is used for [MASK].\n\nOptions:\n1. historic preservation\n2. arctic warfare\n3. fused traditional Spanish flamenco with Molina's poetic lyrics and foreign styles and influences"
+    },
+    {
+        "test_id": 54,
+        "relation": "UsedFor",
+        "correct_feat": "experimental style",
+        "options": "1. experimental style\n2. qualification rounds\n3. pursuing goals of workers",
+        "correct_num": 1,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is used for [MASK].\n\nOptions:\n1. experimental style\n2. qualification rounds\n3. pursuing goals of workers"
+    },
+    {
+        "test_id": 55,
+        "relation": "UsedFor",
+        "correct_feat": "symphonic versions of Manuel de Falla's works",
+        "options": "1. preparing for the city's centennial\n2. symphonic versions of Manuel de Falla's works\n3. maximizing votes",
+        "correct_num": 2,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is used for [MASK].\n\nOptions:\n1. preparing for the city's centennial\n2. symphonic versions of Manuel de Falla's works\n3. maximizing votes"
+    },
+    {
+        "test_id": 56,
+        "relation": "UsedFor",
+        "correct_feat": "soundtracks",
+        "options": "1. the purpose of exacerbating social conflict\n2. its functional purpose\n3. soundtracks",
+        "correct_num": 3,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is used for [MASK].\n\nOptions:\n1. the purpose of exacerbating social conflict\n2. its functional purpose\n3. soundtracks"
+    },
+    {
+        "test_id": 57,
+        "relation": "UsedFor",
+        "correct_feat": "a tribute to their daughter Alba Molina",
+        "options": "1. a tribute to their daughter Alba Molina\n2. studying a major battle at close range\n3. marketing",
+        "correct_num": 1,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is used for [MASK].\n\nOptions:\n1. a tribute to their daughter Alba Molina\n2. studying a major battle at close range\n3. marketing"
+    },
+    {
+        "test_id": 60,
+        "relation": "UsedIn",
+        "correct_feat": "Flamenco",
+        "options": "1. Flamenco\n2. Dark Souls\n3. International Defensive Pistol Association 3-Gun rulesets",
+        "correct_num": 1,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is used in [MASK].\n\nOptions:\n1. Flamenco\n2. Dark Souls\n3. International Defensive Pistol Association 3-Gun rulesets"
+    },
+    {
+        "test_id": 63,
+        "relation": "UsedIn",
+        "correct_feat": "Kill Bill: Volume 2",
+        "options": "1. Kill Bill: Volume 2\n2. the Battle of Britain\n3. the context of political and social messages",
+        "correct_num": 1,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is used in [MASK].\n\nOptions:\n1. Kill Bill: Volume 2\n2. the Battle of Britain\n3. the context of political and social messages"
+    },
+    {
+        "test_id": 64,
+        "relation": "UsedTo",
+        "correct_feat": "fuse traditional Spanish flamenco with Molina's poetic lyrics and foreign styles and influences",
+        "options": "1. show the history of California\n2. fuse traditional Spanish flamenco with Molina's poetic lyrics and foreign styles and influences\n3. assert that the history of society is one of economic class conflict",
+        "correct_num": 2,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is used to [MASK].\n\nOptions:\n1. show the history of California\n2. fuse traditional Spanish flamenco with Molina's poetic lyrics and foreign styles and influences\n3. assert that the history of society is one of economic class conflict"
+    },
+    {
+        "test_id": 66,
+        "relation": "UsedTo",
+        "correct_feat": "feature orchestral arrangements",
+        "options": "1. feature orchestral arrangements\n2. allow wrestlers to perform more frequently\n3. identify four distinct royal houses",
+        "correct_num": 1,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is used to [MASK].\n\nOptions:\n1. feature orchestral arrangements\n2. allow wrestlers to perform more frequently\n3. identify four distinct royal houses"
+    },
+    {
+        "test_id": 68,
+        "relation": "WrittenBy",
+        "correct_feat": "Juan Manuel Flores",
+        "options": "1. Kim Jong Il\n2. Bernard Cornwell\n3. Juan Manuel Flores",
+        "correct_num": 3,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> was written by [MASK].\n\nOptions:\n1. Kim Jong Il\n2. Bernard Cornwell\n3. Juan Manuel Flores"
+    },
+    {
+        "test_id": 69,
+        "relation": "WrittenIn",
+        "correct_feat": "Spain",
+        "options": "1. Spain\n2. Russian Federation\n3. Wallis and Futuna",
+        "correct_num": 1,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> was written in [MASK].\n\nOptions:\n1. Spain\n2. Russian Federation\n3. Wallis and Futuna"
+    }
+]

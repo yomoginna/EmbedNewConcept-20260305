@@ -1,0 +1,594 @@
+[
+    {
+        "test_id": 0,
+        "relation": "About",
+        "correct_feat": "a daily long-distance passenger train operated by Amtrak",
+        "options": "1. a daily long-distance passenger train operated by Amtrak\n2. the Bancroft Treaties and their eventual abandonment\n3. folk rock",
+        "correct_num": 1,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is about [MASK].\n\nOptions:\n1. a daily long-distance passenger train operated by Amtrak\n2. the Bancroft Treaties and their eventual abandonment\n3. folk rock"
+    },
+    {
+        "test_id": 1,
+        "relation": "Affects",
+        "correct_feat": "the Cascade Mountains and Glacier National Park",
+        "options": "1. the prominence of the competition after it was covered in the 2007 documentary The King of Kong\n2. the Cascade Mountains and Glacier National Park\n3. the western Maghreb and al-Andalus",
+        "correct_num": 2,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> affects [MASK].\n\nOptions:\n1. the prominence of the competition after it was covered in the 2007 documentary The King of Kong\n2. the Cascade Mountains and Glacier National Park\n3. the western Maghreb and al-Andalus"
+    },
+    {
+        "test_id": 2,
+        "relation": "AssociatedWith",
+        "correct_feat": "James J. Hill",
+        "options": "1. the Sultanate of Rum\n2. the Abbasid caliphate\n3. James J. Hill",
+        "correct_num": 3,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is associated with [MASK].\n\nOptions:\n1. the Sultanate of Rum\n2. the Abbasid caliphate\n3. James J. Hill"
+    },
+    {
+        "test_id": 3,
+        "relation": "BelongsTo",
+        "correct_feat": "Amtrak",
+        "options": "1. Amtrak\n2. the context of torture, deaths in prison, and forced disappearances\n3. Disruptor Records",
+        "correct_num": 1,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> belongs to [MASK].\n\nOptions:\n1. Amtrak\n2. the context of torture, deaths in prison, and forced disappearances\n3. Disruptor Records"
+    },
+    {
+        "test_id": 4,
+        "relation": "BuiltIn",
+        "correct_feat": "in 1929",
+        "options": "1. in the Netherlands\n2. in 1929\n3. in Keflav\u00edk",
+        "correct_num": 2,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> was built [MASK].\n\nOptions:\n1. in the Netherlands\n2. in 1929\n3. in Keflav\u00edk"
+    },
+    {
+        "test_id": 6,
+        "relation": "HasFeatureOf",
+        "correct_feat": "a travel time of 45\u201346 hours",
+        "options": "1. a travel time of 45\u201346 hours\n2. collaborations with other artists\n3. the growing reliance on international law to confront the climate crisis",
+        "correct_num": 1,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is characterized by [MASK].\n\nOptions:\n1. a travel time of 45\u201346 hours\n2. collaborations with other artists\n3. the growing reliance on international law to confront the climate crisis"
+    },
+    {
+        "test_id": 8,
+        "relation": "HasFeatureOf",
+        "correct_feat": "speeds as fast as 79 mph",
+        "options": "1. beginning on the beach by dropping the board onto the thin wash of previous waves\n2. its album Takin' It Easy which featured experimentation with other types of sounds\n3. speeds as fast as 79 mph",
+        "correct_num": 3,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is characterized by [MASK].\n\nOptions:\n1. beginning on the beach by dropping the board onto the thin wash of previous waves\n2. its album Takin' It Easy which featured experimentation with other types of sounds\n3. speeds as fast as 79 mph"
+    },
+    {
+        "test_id": 9,
+        "relation": "HasFeatureOf",
+        "correct_feat": "dome coaches",
+        "options": "1. dome coaches\n2. subjective judging in freestyle events\n3. being the most renowned work among all Chinese paintings",
+        "correct_num": 1,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is characterized by [MASK].\n\nOptions:\n1. dome coaches\n2. subjective judging in freestyle events\n3. being the most renowned work among all Chinese paintings"
+    },
+    {
+        "test_id": 10,
+        "relation": "HasFeatureOf",
+        "correct_feat": "a full-length Great Dome car for first class passengers",
+        "options": "1. performers who are competitive wrestlers\n2. a full-length Great Dome car for first class passengers\n3. the presentation of visions and outlines for imaginary or futuristic ideal and socialist societies",
+        "correct_num": 2,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is characterized by [MASK].\n\nOptions:\n1. performers who are competitive wrestlers\n2. a full-length Great Dome car for first class passengers\n3. the presentation of visions and outlines for imaginary or futuristic ideal and socialist societies"
+    },
+    {
+        "test_id": 11,
+        "relation": "HasFeatureOf",
+        "correct_feat": "Superliner I cars",
+        "options": "1. its gases\n2. its role as a cause for Risorgimento\n3. Superliner I cars",
+        "correct_num": 3,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is characterized by [MASK].\n\nOptions:\n1. its gases\n2. its role as a cause for Risorgimento\n3. Superliner I cars"
+    },
+    {
+        "test_id": 12,
+        "relation": "IsA",
+        "correct_feat": "a daily long-distance passenger train",
+        "options": "1. a daily long-distance passenger train\n2. a hardline pro-Beijing conservative stance\n3. a fuel cell powered taxi",
+        "correct_num": 1,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is [MASK].\n\nOptions:\n1. a daily long-distance passenger train\n2. a hardline pro-Beijing conservative stance\n3. a fuel cell powered taxi"
+    },
+    {
+        "test_id": 13,
+        "relation": "IsA",
+        "correct_feat": "the flagship passenger train of the Great Northern Railway",
+        "options": "1. a social sport\n2. the flagship passenger train of the Great Northern Railway\n3. a hybrid form of self-defense",
+        "correct_num": 2,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is [MASK].\n\nOptions:\n1. a social sport\n2. the flagship passenger train of the Great Northern Railway\n3. a hybrid form of self-defense"
+    },
+    {
+        "test_id": 14,
+        "relation": "IsA",
+        "correct_feat": "Amtrak's busiest long-distance route",
+        "options": "1. a successful duo in UK music history\n2. an anarchist organizational theory\n3. Amtrak's busiest long-distance route",
+        "correct_num": 3,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is [MASK].\n\nOptions:\n1. a successful duo in UK music history\n2. an anarchist organizational theory\n3. Amtrak's busiest long-distance route"
+    },
+    {
+        "test_id": 15,
+        "relation": "IsA",
+        "correct_feat": "Amtrak's most popular long-distance train",
+        "options": "1. Amtrak's most popular long-distance train\n2. a water lacrosse\n3. an English rock band",
+        "correct_num": 1,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is [MASK].\n\nOptions:\n1. Amtrak's most popular long-distance train\n2. a water lacrosse\n3. an English rock band"
+    },
+    {
+        "test_id": 16,
+        "relation": "KnownAs",
+        "correct_feat": "The Empire Builder",
+        "options": "1. Jucheism\n2. The Empire Builder\n3. Ancap",
+        "correct_num": 2,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is known as [MASK].\n\nOptions:\n1. Jucheism\n2. The Empire Builder\n3. Ancap"
+    },
+    {
+        "test_id": 17,
+        "relation": "KnownFor",
+        "correct_feat": "its route between Chicago and Seattle or Portland",
+        "options": "1. its Impressionist aesthetic\n2. their tours\n3. its route between Chicago and Seattle or Portland",
+        "correct_num": 3,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is known for [MASK].\n\nOptions:\n1. its Impressionist aesthetic\n2. their tours\n3. its route between Chicago and Seattle or Portland"
+    },
+    {
+        "test_id": 18,
+        "relation": "KnownFor",
+        "correct_feat": "its historical significance as the flagship passenger train of the Great Northern Railway",
+        "options": "1. its historical significance as the flagship passenger train of the Great Northern Railway\n2. the merging of individual identities into a single entity\n3. its popularity in New Orleans",
+        "correct_num": 1,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is known for [MASK].\n\nOptions:\n1. its historical significance as the flagship passenger train of the Great Northern Railway\n2. the merging of individual identities into a single entity\n3. its popularity in New Orleans"
+    },
+    {
+        "test_id": 19,
+        "relation": "KnownFor",
+        "correct_feat": "carrying 338,993 passengers in fiscal year 2023",
+        "options": "1. its silk and lace mills\n2. carrying 338,993 passengers in fiscal year 2023\n3. the song \"Goodbye Heartbreak\"",
+        "correct_num": 2,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is known for [MASK].\n\nOptions:\n1. its silk and lace mills\n2. carrying 338,993 passengers in fiscal year 2023\n3. the song \"Goodbye Heartbreak\""
+    },
+    {
+        "test_id": 20,
+        "relation": "KnownFor",
+        "correct_feat": "its service to the Pacific Northwest",
+        "options": "1. its parodies based on the works of American comedic songwriter Tom Lehrer\n2. its veneration in Gorodets\n3. its service to the Pacific Northwest",
+        "correct_num": 3,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is known for [MASK].\n\nOptions:\n1. its parodies based on the works of American comedic songwriter Tom Lehrer\n2. its veneration in Gorodets\n3. its service to the Pacific Northwest"
+    },
+    {
+        "test_id": 21,
+        "relation": "KnownFor",
+        "correct_feat": "its route through Glacier National Park",
+        "options": "1. its route through Glacier National Park\n2. a musical journey spanning more than sixty years\n3. its visual communication of political continuity and status",
+        "correct_num": 1,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is known for [MASK].\n\nOptions:\n1. its route through Glacier National Park\n2. a musical journey spanning more than sixty years\n3. its visual communication of political continuity and status"
+    },
+    {
+        "test_id": 28,
+        "relation": "LocatedIn",
+        "correct_feat": "in Idaho",
+        "options": "1. on Mount Athos in Greece\n2. in Idaho\n3. in the church of San Damiano nearby",
+        "correct_num": 2,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is located [MASK].\n\nOptions:\n1. on Mount Athos in Greece\n2. in Idaho\n3. in the church of San Damiano nearby"
+    },
+    {
+        "test_id": 29,
+        "relation": "LocatedIn",
+        "correct_feat": "in Montana",
+        "options": "1. in India\n2. in the Dormition Cathedral\n3. in Montana",
+        "correct_num": 3,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is located [MASK].\n\nOptions:\n1. in India\n2. in the Dormition Cathedral\n3. in Montana"
+    },
+    {
+        "test_id": 30,
+        "relation": "LocatedIn",
+        "correct_feat": "in North Dakota",
+        "options": "1. in North Dakota\n2. in Tbilisi\n3. in the St. Eloyen Gasthuis",
+        "correct_num": 1,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is located [MASK].\n\nOptions:\n1. in North Dakota\n2. in Tbilisi\n3. in the St. Eloyen Gasthuis"
+    },
+    {
+        "test_id": 35,
+        "relation": "LocatedIn",
+        "correct_feat": "in Whitefish, Montana",
+        "options": "1. in the Korean Peninsula\n2. in school playgrounds\n3. in Whitefish, Montana",
+        "correct_num": 3,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is located [MASK].\n\nOptions:\n1. in the Korean Peninsula\n2. in school playgrounds\n3. in Whitefish, Montana"
+    },
+    {
+        "test_id": 36,
+        "relation": "LocatedIn",
+        "correct_feat": "in Williston, North Dakota",
+        "options": "1. in Williston, North Dakota\n2. at the Diocesan Shrine of Our Lady of Solitude of Porta Vaga, Church of San Roque\n3. in Arkalgud Thaluk",
+        "correct_num": 1,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is located [MASK].\n\nOptions:\n1. in Williston, North Dakota\n2. at the Diocesan Shrine of Our Lady of Solitude of Porta Vaga, Church of San Roque\n3. in Arkalgud Thaluk"
+    },
+    {
+        "test_id": 37,
+        "relation": "LocatedIn",
+        "correct_feat": "in Fargo, North Dakota",
+        "options": "1. in England\n2. in Fargo, North Dakota\n3. in Swabia",
+        "correct_num": 2,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is located [MASK].\n\nOptions:\n1. in England\n2. in Fargo, North Dakota\n3. in Swabia"
+    },
+    {
+        "test_id": 38,
+        "relation": "LocatedIn",
+        "correct_feat": "in Milwaukee, Wisconsin",
+        "options": "1. in Grevenbicht\n2. in France\n3. in Milwaukee, Wisconsin",
+        "correct_num": 3,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is located [MASK].\n\nOptions:\n1. in Grevenbicht\n2. in France\n3. in Milwaukee, Wisconsin"
+    },
+    {
+        "test_id": 39,
+        "relation": "LocatedIn",
+        "correct_feat": "in St. Paul, Minnesota",
+        "options": "1. in St. Paul, Minnesota\n2. on the Strand\n3. on the City College of San Francisco campus",
+        "correct_num": 1,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is located [MASK].\n\nOptions:\n1. in St. Paul, Minnesota\n2. on the Strand\n3. on the City College of San Francisco campus"
+    },
+    {
+        "test_id": 40,
+        "relation": "LocatedIn",
+        "correct_feat": "in Rondout, Illinois",
+        "options": "1. in the Huntington Library\n2. in Rondout, Illinois\n3. in the Nilgiris",
+        "correct_num": 2,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is located [MASK].\n\nOptions:\n1. in the Huntington Library\n2. in Rondout, Illinois\n3. in the Nilgiris"
+    },
+    {
+        "test_id": 41,
+        "relation": "NamedAfter",
+        "correct_feat": "James J. Hill",
+        "options": "1. the company's first invention\n2. Charles Martel\n3. James J. Hill",
+        "correct_num": 3,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is named after [MASK].\n\nOptions:\n1. the company's first invention\n2. Charles Martel\n3. James J. Hill"
+    },
+    {
+        "test_id": 42,
+        "relation": "OccurredBetween",
+        "correct_feat": "Chicago and Seattle",
+        "options": "1. Chicago and Seattle\n2. February 20, 1995 and July 20, 1995\n3. the 1050s and 1147",
+        "correct_num": 1,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> occurred between [MASK].\n\nOptions:\n1. Chicago and Seattle\n2. February 20, 1995 and July 20, 1995\n3. the 1050s and 1147"
+    },
+    {
+        "test_id": 43,
+        "relation": "OccurredBetween",
+        "correct_feat": "Chicago and Portland",
+        "options": "1. the 14th century and 1675\n2. Chicago and Portland\n3. 1213 and 1214",
+        "correct_num": 2,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> occurred between [MASK].\n\nOptions:\n1. the 14th century and 1675\n2. Chicago and Portland\n3. 1213 and 1214"
+    },
+    {
+        "test_id": 44,
+        "relation": "OccurredBetween",
+        "correct_feat": "Spokane and Seattle",
+        "options": "1. 41\u201344 AD\n2. the release of singles and the full album\n3. Spokane and Seattle",
+        "correct_num": 3,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> occurred between [MASK].\n\nOptions:\n1. 41\u201344 AD\n2. the release of singles and the full album\n3. Spokane and Seattle"
+    },
+    {
+        "test_id": 45,
+        "relation": "OccurredBetween",
+        "correct_feat": "the Twin Cities and Spokane",
+        "options": "1. the Twin Cities and Spokane\n2. periods of 20 minutes each in Kyrgyzstan\n3. December 2 to 13, 2024",
+        "correct_num": 1,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> occurred between [MASK].\n\nOptions:\n1. the Twin Cities and Spokane\n2. periods of 20 minutes each in Kyrgyzstan\n3. December 2 to 13, 2024"
+    },
+    {
+        "test_id": 46,
+        "relation": "OccurredBetween",
+        "correct_feat": "Minneapolis-St. Paul and Fargo",
+        "options": "1. the 1st millennium and the present\n2. Minneapolis-St. Paul and Fargo\n3. 66 and 63 BC",
+        "correct_num": 2,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> occurred between [MASK].\n\nOptions:\n1. the 1st millennium and the present\n2. Minneapolis-St. Paul and Fargo\n3. 66 and 63 BC"
+    },
+    {
+        "test_id": 48,
+        "relation": "OccurredBetween",
+        "correct_feat": "Joplin, Montana and Chester, Montana",
+        "options": "1. Joplin, Montana and Chester, Montana\n2. the 1120s and 1147\n3. 41\u201344 AD",
+        "correct_num": 1,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> occurred between [MASK].\n\nOptions:\n1. Joplin, Montana and Chester, Montana\n2. the 1120s and 1147\n3. 41\u201344 AD"
+    },
+    {
+        "test_id": 49,
+        "relation": "UsedAs",
+        "correct_feat": "a passenger train",
+        "options": "1. a recreational craft\n2. a passenger train\n3. a basis for distinguishing different football codes",
+        "correct_num": 2,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is used as [MASK].\n\nOptions:\n1. a recreational craft\n2. a passenger train\n3. a basis for distinguishing different football codes"
+    },
+    {
+        "test_id": 50,
+        "relation": "UsedFor",
+        "correct_feat": "passenger rail service",
+        "options": "1. qualification rounds\n2. practicing a religion\n3. passenger rail service",
+        "correct_num": 3,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is used for [MASK].\n\nOptions:\n1. qualification rounds\n2. practicing a religion\n3. passenger rail service"
+    },
+    {
+        "test_id": 51,
+        "relation": "UsedFor",
+        "correct_feat": "transporting passengers between Chicago and Seattle or Portland",
+        "options": "1. transporting passengers between Chicago and Seattle or Portland\n2. earning a Lure Courser Excellent suffix title\n3. concentrating on Mary's grief for her son",
+        "correct_num": 1,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is used for [MASK].\n\nOptions:\n1. transporting passengers between Chicago and Seattle or Portland\n2. earning a Lure Courser Excellent suffix title\n3. concentrating on Mary's grief for her son"
+    },
+    {
+        "test_id": 52,
+        "relation": "UsedFor",
+        "correct_feat": "providing views of the Cascade Mountains and Glacier National Park",
+        "options": "1. accepting awards\n2. providing views of the Cascade Mountains and Glacier National Park\n3. the preservation of human life",
+        "correct_num": 2,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is used for [MASK].\n\nOptions:\n1. accepting awards\n2. providing views of the Cascade Mountains and Glacier National Park\n3. the preservation of human life"
+    },
+    {
+        "test_id": 53,
+        "relation": "UsedFor",
+        "correct_feat": "volunteer tour guides to give commentary on points of interest",
+        "options": "1. promotion\n2. the frontispiece to the Chroniques de Hainaut\n3. volunteer tour guides to give commentary on points of interest",
+        "correct_num": 3,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is used for [MASK].\n\nOptions:\n1. promotion\n2. the frontispiece to the Chroniques de Hainaut\n3. volunteer tour guides to give commentary on points of interest"
+    },
+    {
+        "test_id": 54,
+        "relation": "UsedIn",
+        "correct_feat": "Chicago",
+        "options": "1. Chicago\n2. Mykolayiv\n3. Kandah\u0101r",
+        "correct_num": 1,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is used in [MASK].\n\nOptions:\n1. Chicago\n2. Mykolayiv\n3. Kandah\u0101r"
+    },
+    {
+        "test_id": 55,
+        "relation": "UsedIn",
+        "correct_feat": "Seattle",
+        "options": "1. \u0162ar\u0163\u016bs\n2. Seattle\n3. Najafgarh",
+        "correct_num": 2,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is used in [MASK].\n\nOptions:\n1. \u0162ar\u0163\u016bs\n2. Seattle\n3. Najafgarh"
+    },
+    {
+        "test_id": 56,
+        "relation": "UsedIn",
+        "correct_feat": "Portland",
+        "options": "1. Dombivali\n2. Yixing\n3. Portland",
+        "correct_num": 3,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is used in [MASK].\n\nOptions:\n1. Dombivali\n2. Yixing\n3. Portland"
+    },
+    {
+        "test_id": 57,
+        "relation": "UsedIn",
+        "correct_feat": "Spokane",
+        "options": "1. Spokane\n2. seal inscriptions\n3. the Sinjska alka",
+        "correct_num": 1,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is used in [MASK].\n\nOptions:\n1. Spokane\n2. seal inscriptions\n3. the Sinjska alka"
+    },
+    {
+        "test_id": 58,
+        "relation": "UsedIn",
+        "correct_feat": "Oregon",
+        "options": "1. the 1992 presidential election\n2. Oregon\n3. Iraq",
+        "correct_num": 2,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is used in [MASK].\n\nOptions:\n1. the 1992 presidential election\n2. Oregon\n3. Iraq"
+    },
+    {
+        "test_id": 59,
+        "relation": "UsedIn",
+        "correct_feat": "Washington",
+        "options": "1. Calabar\n2. Ajegunle\n3. Washington",
+        "correct_num": 3,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is used in [MASK].\n\nOptions:\n1. Calabar\n2. Ajegunle\n3. Washington"
+    },
+    {
+        "test_id": 60,
+        "relation": "UsedIn",
+        "correct_feat": "Idaho",
+        "options": "1. Idaho\n2. the Belgian movie Gangsta\n3. the planned Sanctuary of The Divine Mercy",
+        "correct_num": 1,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is used in [MASK].\n\nOptions:\n1. Idaho\n2. the Belgian movie Gangsta\n3. the planned Sanctuary of The Divine Mercy"
+    },
+    {
+        "test_id": 62,
+        "relation": "UsedIn",
+        "correct_feat": "North Dakota",
+        "options": "1. contests\n2. ancient artworks\n3. North Dakota",
+        "correct_num": 3,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is used in [MASK].\n\nOptions:\n1. contests\n2. ancient artworks\n3. North Dakota"
+    },
+    {
+        "test_id": 63,
+        "relation": "UsedIn",
+        "correct_feat": "Minnesota",
+        "options": "1. Minnesota\n2. the May 1968 movement\n3. the half-dome that stands above the altar",
+        "correct_num": 1,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is used in [MASK].\n\nOptions:\n1. Minnesota\n2. the May 1968 movement\n3. the half-dome that stands above the altar"
+    },
+    {
+        "test_id": 64,
+        "relation": "UsedIn",
+        "correct_feat": "Wisconsin",
+        "options": "1. Europe\n2. Wisconsin\n3. the World Games",
+        "correct_num": 2,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is used in [MASK].\n\nOptions:\n1. Europe\n2. Wisconsin\n3. the World Games"
+    },
+    {
+        "test_id": 65,
+        "relation": "UsedIn",
+        "correct_feat": "Illinois",
+        "options": "1. the administrative system\n2. the 2028 Summer Olympics\n3. Illinois",
+        "correct_num": 3,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is used in [MASK].\n\nOptions:\n1. the administrative system\n2. the 2028 Summer Olympics\n3. Illinois"
+    },
+    {
+        "test_id": 66,
+        "relation": "UsedIn",
+        "correct_feat": "Vancouver, Washington",
+        "options": "1. Vancouver, Washington\n2. the defense of the Afrikaans language\n3. the UN Security Council chamber",
+        "correct_num": 1,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is used in [MASK].\n\nOptions:\n1. Vancouver, Washington\n2. the defense of the Afrikaans language\n3. the UN Security Council chamber"
+    },
+    {
+        "test_id": 67,
+        "relation": "UsedIn",
+        "correct_feat": "Whitefish, Montana",
+        "options": "1. the Kingdom of Naples\n2. Whitefish, Montana\n3. the film \"Dragostea ce mi\u0219c\u0103 sori \u0219i stele",
+        "correct_num": 2,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is used in [MASK].\n\nOptions:\n1. the Kingdom of Naples\n2. Whitefish, Montana\n3. the film \"Dragostea ce mi\u0219c\u0103 sori \u0219i stele"
+    },
+    {
+        "test_id": 68,
+        "relation": "UsedIn",
+        "correct_feat": "Williston, North Dakota",
+        "options": "1. schools\n2. ancient philosophy\n3. Williston, North Dakota",
+        "correct_num": 3,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is used in [MASK].\n\nOptions:\n1. schools\n2. ancient philosophy\n3. Williston, North Dakota"
+    },
+    {
+        "test_id": 69,
+        "relation": "UsedIn",
+        "correct_feat": "Fargo, North Dakota",
+        "options": "1. Fargo, North Dakota\n2. the Danish single chart\n3. an enclosed patch of ground",
+        "correct_num": 1,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is used in [MASK].\n\nOptions:\n1. Fargo, North Dakota\n2. the Danish single chart\n3. an enclosed patch of ground"
+    },
+    {
+        "test_id": 71,
+        "relation": "UsedIn",
+        "correct_feat": "St. Paul, Minnesota",
+        "options": "1. Manuela\n2. games organized by VOC Cricket club in Rotterdam\n3. St. Paul, Minnesota",
+        "correct_num": 3,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is used in [MASK].\n\nOptions:\n1. Manuela\n2. games organized by VOC Cricket club in Rotterdam\n3. St. Paul, Minnesota"
+    },
+    {
+        "test_id": 72,
+        "relation": "UsedIn",
+        "correct_feat": "Rondout, Illinois",
+        "options": "1. Rondout, Illinois\n2. the Torah\n3. the Scala, King's Cross",
+        "correct_num": 1,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is used in [MASK].\n\nOptions:\n1. Rondout, Illinois\n2. the Torah\n3. the Scala, King's Cross"
+    },
+    {
+        "test_id": 73,
+        "relation": "UsedIn",
+        "correct_feat": "the Cascade Mountains",
+        "options": "1. the Gettysburg Address\n2. the Cascade Mountains\n3. Pakistan",
+        "correct_num": 2,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is used in [MASK].\n\nOptions:\n1. the Gettysburg Address\n2. the Cascade Mountains\n3. Pakistan"
+    },
+    {
+        "test_id": 75,
+        "relation": "UsedIn",
+        "correct_feat": "the Upper Midwest plains",
+        "options": "1. the Upper Midwest plains\n2. Brighton's cultural identity\n3. Nepal",
+        "correct_num": 1,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is used in [MASK].\n\nOptions:\n1. the Upper Midwest plains\n2. Brighton's cultural identity\n3. Nepal"
+    },
+    {
+        "test_id": 76,
+        "relation": "UsedIn",
+        "correct_feat": "the mountainous areas of Montana, Idaho and Washington",
+        "options": "1. scholarly works\n2. the mountainous areas of Montana, Idaho and Washington\n3. the Constitution of 1978",
+        "correct_num": 2,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is used in [MASK].\n\nOptions:\n1. scholarly works\n2. the mountainous areas of Montana, Idaho and Washington\n3. the Constitution of 1978"
+    },
+    {
+        "test_id": 77,
+        "relation": "UsedTo",
+        "correct_feat": "cut the scheduled 2,211-mile trip between Chicago and Seattle from 58.5 hours to 45 hours",
+        "options": "1. illustrate the paradox of depicting copulation with a swan\n2. attempt a goal\n3. cut the scheduled 2,211-mile trip between Chicago and Seattle from 58.5 hours to 45 hours",
+        "correct_num": 3,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is used to [MASK].\n\nOptions:\n1. illustrate the paradox of depicting copulation with a swan\n2. attempt a goal\n3. cut the scheduled 2,211-mile trip between Chicago and Seattle from 58.5 hours to 45 hours"
+    },
+    {
+        "test_id": 78,
+        "relation": "UsedTo",
+        "correct_feat": "offer passengers sweeping views of the route",
+        "options": "1. offer passengers sweeping views of the route\n2. release new artists\n3. reverse play",
+        "correct_num": 1,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is used to [MASK].\n\nOptions:\n1. offer passengers sweeping views of the route\n2. release new artists\n3. reverse play"
+    },
+    {
+        "test_id": 79,
+        "relation": "UsedTo",
+        "correct_feat": "improve its farebox recovery ratio",
+        "options": "1. mimic the movements of other board sports\n2. improve its farebox recovery ratio\n3. ensure consistency in the application of the death penalty",
+        "correct_num": 2,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is used to [MASK].\n\nOptions:\n1. mimic the movements of other board sports\n2. improve its farebox recovery ratio\n3. ensure consistency in the application of the death penalty"
+    },
+    {
+        "test_id": 81,
+        "relation": "UsedTo",
+        "correct_feat": "operate west from the Twin Cities before turning northwest in Willmar",
+        "options": "1. operate west from the Twin Cities before turning northwest in Willmar\n2. prophesy to Mary\n3. stream attempts live on Twitch",
+        "correct_num": 1,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is used to [MASK].\n\nOptions:\n1. operate west from the Twin Cities before turning northwest in Willmar\n2. prophesy to Mary\n3. stream attempts live on Twitch"
+    },
+    {
+        "test_id": 82,
+        "relation": "UsedTo",
+        "correct_feat": "reach Fargo",
+        "options": "1. broaden radical feminism's theory\n2. reach Fargo\n3. halt harmful conduct",
+        "correct_num": 2,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is used to [MASK].\n\nOptions:\n1. broaden radical feminism's theory\n2. reach Fargo\n3. halt harmful conduct"
+    },
+    {
+        "test_id": 83,
+        "relation": "UsedTo",
+        "correct_feat": "reroute the Builder over the route between Fargo and Minot via Grand Forks",
+        "options": "1. illustrate the United Nation's commitment to future peace and individual freedom\n2. represent ideas\n3. reroute the Builder over the route between Fargo and Minot via Grand Forks",
+        "correct_num": 3,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is used to [MASK].\n\nOptions:\n1. illustrate the United Nation's commitment to future peace and individual freedom\n2. represent ideas\n3. reroute the Builder over the route between Fargo and Minot via Grand Forks"
+    },
+    {
+        "test_id": 84,
+        "relation": "UsedTo",
+        "correct_feat": "complement the Builder and North Coast Hiawatha on the segment between Spokane and Seattle",
+        "options": "1. complement the Builder and North Coast Hiawatha on the segment between Spokane and Seattle\n2. refer to the dynasty\n3. build up more solidly the foundations of an independent national economy",
+        "correct_num": 1,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is used to [MASK].\n\nOptions:\n1. complement the Builder and North Coast Hiawatha on the segment between Spokane and Seattle\n2. refer to the dynasty\n3. build up more solidly the foundations of an independent national economy"
+    },
+    {
+        "test_id": 85,
+        "relation": "UsedTo",
+        "correct_feat": "provide a three-times-daily service on a long-distance route outside the Silver corridor",
+        "options": "1. perform small roles\n2. provide a three-times-daily service on a long-distance route outside the Silver corridor\n3. simulate different forms of ocean waves",
+        "correct_num": 2,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is used to [MASK].\n\nOptions:\n1. perform small roles\n2. provide a three-times-daily service on a long-distance route outside the Silver corridor\n3. simulate different forms of ocean waves"
+    },
+    {
+        "test_id": 87,
+        "relation": "UsedTo",
+        "correct_feat": "continue to serve St. Cloud, Staples and Detroit Lakes",
+        "options": "1. continue to serve St. Cloud, Staples and Detroit Lakes\n2. bring together anarchists of different tendencies\n3. represent the marriage of Mexican artistry and US technology",
+        "correct_num": 1,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is used to [MASK].\n\nOptions:\n1. continue to serve St. Cloud, Staples and Detroit Lakes\n2. bring together anarchists of different tendencies\n3. represent the marriage of Mexican artistry and US technology"
+    },
+    {
+        "test_id": 89,
+        "relation": "UsedTo",
+        "correct_feat": "restore service to the line previously operated by the Spokane, Portland and Seattle Railway",
+        "options": "1. determine the winner\n2. describe the Christian Church as the 'ladder of ascent to God'\n3. restore service to the line previously operated by the Spokane, Portland and Seattle Railway",
+        "correct_num": 3,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is used to [MASK].\n\nOptions:\n1. determine the winner\n2. describe the Christian Church as the 'ladder of ascent to God'\n3. restore service to the line previously operated by the Spokane, Portland and Seattle Railway"
+    },
+    {
+        "test_id": 90,
+        "relation": "UsedTo",
+        "correct_feat": "split in Spokane for much of the 1940s and 1950s",
+        "options": "1. split in Spokane for much of the 1940s and 1950s\n2. withdraw from competitive play\n3. encourage stability",
+        "correct_num": 1,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is used to [MASK].\n\nOptions:\n1. split in Spokane for much of the 1940s and 1950s\n2. withdraw from competitive play\n3. encourage stability"
+    },
+    {
+        "test_id": 91,
+        "relation": "UsedTo",
+        "correct_feat": "include a wine and cheese tasting in the dining car for sleeping car passengers",
+        "options": "1. stay in the pool\n2. include a wine and cheese tasting in the dining car for sleeping car passengers\n3. protect the city of Kazan",
+        "correct_num": 2,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is used to [MASK].\n\nOptions:\n1. stay in the pool\n2. include a wine and cheese tasting in the dining car for sleeping car passengers\n3. protect the city of Kazan"
+    },
+    {
+        "test_id": 93,
+        "relation": "UsedTo",
+        "correct_feat": "give commentary on points of visual and historic interest",
+        "options": "1. give commentary on points of visual and historic interest\n2. record land grants\n3. capture more reliable activist voters",
+        "correct_num": 1,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is used to [MASK].\n\nOptions:\n1. give commentary on points of visual and historic interest\n2. record land grants\n3. capture more reliable activist voters"
+    }
+]

@@ -1,0 +1,658 @@
+[
+    {
+        "test_id": 0,
+        "relation": "About",
+        "correct_feat": "an organisational principle that seeks unity in diversity",
+        "options": "1. an organisational principle that seeks unity in diversity\n2. the Bancroft Treaties and their eventual abandonment\n3. folk rock",
+        "correct_num": 1,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is about [MASK].\n\nOptions:\n1. an organisational principle that seeks unity in diversity\n2. the Bancroft Treaties and their eventual abandonment\n3. folk rock"
+    },
+    {
+        "test_id": 1,
+        "relation": "About",
+        "correct_feat": "aiming to bring together anarchists of different tendencies into a single federation",
+        "options": "1. the problem of lust gone astray\n2. aiming to bring together anarchists of different tendencies into a single federation\n3. celebrating Latino and, more specifically, Chicano culture and influence at The University of Southern California and in Los Angeles",
+        "correct_num": 2,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is about [MASK].\n\nOptions:\n1. the problem of lust gone astray\n2. aiming to bring together anarchists of different tendencies into a single federation\n3. celebrating Latino and, more specifically, Chicano culture and influence at The University of Southern California and in Los Angeles"
+    },
+    {
+        "test_id": 2,
+        "relation": "Affects",
+        "correct_feat": "anarchists of different tendencies",
+        "options": "1. the legality of a unilateral secession of Quebec from Canada\n2. the Supreme Court of the United States\n3. anarchists of different tendencies",
+        "correct_num": 3,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> affects [MASK].\n\nOptions:\n1. the legality of a unilateral secession of Quebec from Canada\n2. the Supreme Court of the United States\n3. anarchists of different tendencies"
+    },
+    {
+        "test_id": 3,
+        "relation": "AssociatedWith",
+        "correct_feat": "the Nabat Confederation of Anarchist Organizations",
+        "options": "1. the Nabat Confederation of Anarchist Organizations\n2. Kevin Bartz\n3. Peter Düring on drums",
+        "correct_num": 1,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is associated with [MASK].\n\nOptions:\n1. the Nabat Confederation of Anarchist Organizations\n2. Kevin Bartz\n3. Peter Düring on drums"
+    },
+    {
+        "test_id": 4,
+        "relation": "AssociatedWith",
+        "correct_feat": "the French Anarchist Union",
+        "options": "1. the Orange and Alexandria Railroad\n2. the French Anarchist Union\n3. The Wall Street Journal",
+        "correct_num": 2,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is associated with [MASK].\n\nOptions:\n1. the Orange and Alexandria Railroad\n2. the French Anarchist Union\n3. The Wall Street Journal"
+    },
+    {
+        "test_id": 5,
+        "relation": "AssociatedWith",
+        "correct_feat": "the Iberian Anarchist Federation",
+        "options": "1. the village of Zarudchi in the Lyubeshiv district\n2. Big Death\n3. the Iberian Anarchist Federation",
+        "correct_num": 3,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is associated with [MASK].\n\nOptions:\n1. the village of Zarudchi in the Lyubeshiv district\n2. Big Death\n3. the Iberian Anarchist Federation"
+    },
+    {
+        "test_id": 6,
+        "relation": "AssociatedWith",
+        "correct_feat": "the International of Anarchist Federations",
+        "options": "1. the International of Anarchist Federations\n2. escape rooms\n3. water power from the Lehigh River",
+        "correct_num": 1,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is associated with [MASK].\n\nOptions:\n1. the International of Anarchist Federations\n2. escape rooms\n3. water power from the Lehigh River"
+    },
+    {
+        "test_id": 7,
+        "relation": "BelongsTo",
+        "correct_feat": "the anarchist movement",
+        "options": "1. TamStar Records\n2. the anarchist movement\n3. Victor Entertainment",
+        "correct_num": 2,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> belongs to [MASK].\n\nOptions:\n1. TamStar Records\n2. the anarchist movement\n3. Victor Entertainment"
+    },
+    {
+        "test_id": 8,
+        "relation": "ConsistsOf",
+        "correct_feat": "anarchists of different tendencies",
+        "options": "1. nationally determined contributions (NDCs)\n2. an ancient Byzantine icon of the Mother of God \"Nikopea\" from the 6th century\n3. anarchists of different tendencies",
+        "correct_num": 3,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> consists of [MASK].\n\nOptions:\n1. nationally determined contributions (NDCs)\n2. an ancient Byzantine icon of the Mother of God \"Nikopea\" from the 6th century\n3. anarchists of different tendencies"
+    },
+    {
+        "test_id": 9,
+        "relation": "CreatedFor",
+        "correct_feat": "anarchists of different tendencies",
+        "options": "1. anarchists of different tendencies\n2. achieving mainstream recognition\n3. the collection of Louis XV",
+        "correct_num": 1,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> was created for [MASK].\n\nOptions:\n1. anarchists of different tendencies\n2. achieving mainstream recognition\n3. the collection of Louis XV"
+    },
+    {
+        "test_id": 10,
+        "relation": "CreatedTo",
+        "correct_feat": "appeal to communists, syndicalists and individualists alike",
+        "options": "1. release music\n2. appeal to communists, syndicalists and individualists alike\n3. serve as a palladium of all of Russia and Rus'",
+        "correct_num": 2,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> was created to [MASK].\n\nOptions:\n1. release music\n2. appeal to communists, syndicalists and individualists alike\n3. serve as a palladium of all of Russia and Rus'"
+    },
+    {
+        "test_id": 11,
+        "relation": "CreatedTo",
+        "correct_feat": "preserve the individual autonomy of its members",
+        "options": "1. bounce on water\n2. improve the visibility of the clock\n3. preserve the individual autonomy of its members",
+        "correct_num": 3,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> was created to [MASK].\n\nOptions:\n1. bounce on water\n2. improve the visibility of the clock\n3. preserve the individual autonomy of its members"
+    },
+    {
+        "test_id": 12,
+        "relation": "CreatedTo",
+        "correct_feat": "foster cooperation between the various anarchist schools of thought",
+        "options": "1. foster cooperation between the various anarchist schools of thought\n2. develop bat-and-ball game skills\n3. bring some color to the university",
+        "correct_num": 1,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> was created to [MASK].\n\nOptions:\n1. foster cooperation between the various anarchist schools of thought\n2. develop bat-and-ball game skills\n3. bring some color to the university"
+    },
+    {
+        "test_id": 13,
+        "relation": "CreatedTo",
+        "correct_feat": "unite anarchists across ideological lines",
+        "options": "1. pursue careers as songwriting partners\n2. unite anarchists across ideological lines\n3. depict scenes from Alabama’s agricultural history",
+        "correct_num": 2,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> was created to [MASK].\n\nOptions:\n1. pursue careers as songwriting partners\n2. unite anarchists across ideological lines\n3. depict scenes from Alabama’s agricultural history"
+    },
+    {
+        "test_id": 14,
+        "relation": "CreatedTo",
+        "correct_feat": "unite anarchists into a single organisation",
+        "options": "1. bounce efficiently on water\n2. fulfill the idea that mural art is available for the public and for the masses\n3. unite anarchists into a single organisation",
+        "correct_num": 3,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> was created to [MASK].\n\nOptions:\n1. bounce efficiently on water\n2. fulfill the idea that mural art is available for the public and for the masses\n3. unite anarchists into a single organisation"
+    },
+    {
+        "test_id": 15,
+        "relation": "CreatedTo",
+        "correct_feat": "encourage mutual aid between its members",
+        "options": "1. encourage mutual aid between its members\n2. bring some color to the university\n3. highlight criticism at the state of the stagnant peace process between the Israelis and the Palestinians",
+        "correct_num": 1,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> was created to [MASK].\n\nOptions:\n1. encourage mutual aid between its members\n2. bring some color to the university\n3. highlight criticism at the state of the stagnant peace process between the Israelis and the Palestinians"
+    },
+    {
+        "test_id": 16,
+        "relation": "CreatedTo",
+        "correct_feat": "unite anarchists of different tendencies behind a set of common principles and goals",
+        "options": "1. spare Noah, his family, and one pair of every animal species in the world from a global deluge\n2. unite anarchists of different tendencies behind a set of common principles and goals\n3. become a gift to the City of Washington DC to celebrate this historical moment in American History",
+        "correct_num": 2,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> was created to [MASK].\n\nOptions:\n1. spare Noah, his family, and one pair of every animal species in the world from a global deluge\n2. unite anarchists of different tendencies behind a set of common principles and goals\n3. become a gift to the City of Washington DC to celebrate this historical moment in American History"
+    },
+    {
+        "test_id": 17,
+        "relation": "CreatedTo",
+        "correct_feat": "form an organisational platform acceptable to the entire anarchist movement",
+        "options": "1. invalidate the death penalty for rape\n2. establish a moratorium on capital punishment\n3. form an organisational platform acceptable to the entire anarchist movement",
+        "correct_num": 3,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> was created to [MASK].\n\nOptions:\n1. invalidate the death penalty for rape\n2. establish a moratorium on capital punishment\n3. form an organisational platform acceptable to the entire anarchist movement"
+    },
+    {
+        "test_id": 18,
+        "relation": "CreatedTo",
+        "correct_feat": "unify the disorganised anarchist movement into a coordinated revolutionary organisation",
+        "options": "1. unify the disorganised anarchist movement into a coordinated revolutionary organisation\n2. prevent seizures\n3. uphold the Eighth and Fourteenth Amendments",
+        "correct_num": 1,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> was created to [MASK].\n\nOptions:\n1. unify the disorganised anarchist movement into a coordinated revolutionary organisation\n2. prevent seizures\n3. uphold the Eighth and Fourteenth Amendments"
+    },
+    {
+        "test_id": 19,
+        "relation": "CreatedTo",
+        "correct_feat": "combat the rise of Bolshevism",
+        "options": "1. provide an enjoyable experience\n2. combat the rise of Bolshevism\n3. depict the first celebration of the Triumph of Orthodoxy",
+        "correct_num": 2,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> was created to [MASK].\n\nOptions:\n1. provide an enjoyable experience\n2. combat the rise of Bolshevism\n3. depict the first celebration of the Triumph of Orthodoxy"
+    },
+    {
+        "test_id": 20,
+        "relation": "DevelopedBy",
+        "correct_feat": "the Russian anarchist Volin",
+        "options": "1. Iepe Rubingh\n2. Redmond A. Simonsen\n3. the Russian anarchist Volin",
+        "correct_num": 3,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> was developed by [MASK].\n\nOptions:\n1. Iepe Rubingh\n2. Redmond A. Simonsen\n3. the Russian anarchist Volin"
+    },
+    {
+        "test_id": 21,
+        "relation": "DevelopedBy",
+        "correct_feat": "the French anarchist Sébastien Faure",
+        "options": "1. the French anarchist Sébastien Faure\n2. SkyVu Entertainment for mobile app games\n3. Sam Peckinpah",
+        "correct_num": 1,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> was developed by [MASK].\n\nOptions:\n1. the French anarchist Sébastien Faure\n2. SkyVu Entertainment for mobile app games\n3. Sam Peckinpah"
+    },
+    {
+        "test_id": 22,
+        "relation": "DevelopedBy",
+        "correct_feat": "Max Nettlau",
+        "options": "1. Joseph Fourestier Simpson\n2. Max Nettlau\n3. artists to display their handling of complex, crowded scenes",
+        "correct_num": 2,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> was developed by [MASK].\n\nOptions:\n1. Joseph Fourestier Simpson\n2. Max Nettlau\n3. artists to display their handling of complex, crowded scenes"
+    },
+    {
+        "test_id": 23,
+        "relation": "HasA",
+        "correct_feat": "a principle of individual autonomy",
+        "options": "1. one long 60-turn campaign game\n2. a song \"Rabbit\" performed in 2016 on Strictly Come Dancing\n3. a principle of individual autonomy",
+        "correct_num": 3,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> has [MASK].\n\nOptions:\n1. one long 60-turn campaign game\n2. a song \"Rabbit\" performed in 2016 on Strictly Come Dancing\n3. a principle of individual autonomy"
+    },
+    {
+        "test_id": 24,
+        "relation": "HasA",
+        "correct_feat": "a pluralistic organisation",
+        "options": "1. a pluralistic organisation\n2. dogs\n3. hands folded in prayer",
+        "correct_num": 1,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> has [MASK].\n\nOptions:\n1. a pluralistic organisation\n2. dogs\n3. hands folded in prayer"
+    },
+    {
+        "test_id": 25,
+        "relation": "HasA",
+        "correct_feat": "a loosely organised grouping",
+        "options": "1. groupers\n2. a loosely organised grouping\n3. a very strong wooden shaft and a heavy metal head",
+        "correct_num": 2,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> has [MASK].\n\nOptions:\n1. groupers\n2. a loosely organised grouping\n3. a very strong wooden shaft and a heavy metal head"
+    },
+    {
+        "test_id": 26,
+        "relation": "HasA",
+        "correct_feat": "a heterogeneous and relatively loosely organised structure",
+        "options": "1. an empty casket at the foot of the bed\n2. a pattern of parallel, diagonal ribs\n3. a heterogeneous and relatively loosely organised structure",
+        "correct_num": 3,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> has [MASK].\n\nOptions:\n1. an empty casket at the foot of the bed\n2. a pattern of parallel, diagonal ribs\n3. a heterogeneous and relatively loosely organised structure"
+    },
+    {
+        "test_id": 27,
+        "relation": "HasA",
+        "correct_feat": "a commitment to the principles of libertarian communism",
+        "options": "1. a commitment to the principles of libertarian communism\n2. an album titled Trop d'amour\n3. a crowd shouting 'Hosanna!'",
+        "correct_num": 1,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> has [MASK].\n\nOptions:\n1. a commitment to the principles of libertarian communism\n2. an album titled Trop d'amour\n3. a crowd shouting 'Hosanna!'"
+    },
+    {
+        "test_id": 28,
+        "relation": "HasFeatureOf",
+        "correct_feat": "unity in diversity",
+        "options": "1. locomotives\n2. unity in diversity\n3. innocence and lack of embarrassment about nakedness",
+        "correct_num": 2,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is characterized by [MASK].\n\nOptions:\n1. locomotives\n2. unity in diversity\n3. innocence and lack of embarrassment about nakedness"
+    },
+    {
+        "test_id": 29,
+        "relation": "HasFeatureOf",
+        "correct_feat": "heterogeneity",
+        "options": "1. the humanization of figures and attention to human anatomy\n2. the arrest of Bruce Boynton for trespassing\n3. heterogeneity",
+        "correct_num": 3,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is characterized by [MASK].\n\nOptions:\n1. the humanization of figures and attention to human anatomy\n2. the arrest of Bruce Boynton for trespassing\n3. heterogeneity"
+    },
+    {
+        "test_id": 30,
+        "relation": "HasFeatureOf",
+        "correct_feat": "loose organisation",
+        "options": "1. loose organisation\n2. five men, one of whom was a \"Branán\" or chief\n3. a coiled dragon holding a sword in its mouth",
+        "correct_num": 1,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is characterized by [MASK].\n\nOptions:\n1. loose organisation\n2. five men, one of whom was a \"Branán\" or chief\n3. a coiled dragon holding a sword in its mouth"
+    },
+    {
+        "test_id": 31,
+        "relation": "HasFeatureOf",
+        "correct_feat": "individual autonomy",
+        "options": "1. frequent rains\n2. individual autonomy\n3. riders attempting to balance on artificial waves",
+        "correct_num": 2,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is characterized by [MASK].\n\nOptions:\n1. frequent rains\n2. individual autonomy\n3. riders attempting to balance on artificial waves"
+    },
+    {
+        "test_id": 32,
+        "relation": "HasFeatureOf",
+        "correct_feat": "ideological diversity",
+        "options": "1. a game for two, three, or four players\n2. its large size\n3. ideological diversity",
+        "correct_num": 3,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is characterized by [MASK].\n\nOptions:\n1. a game for two, three, or four players\n2. its large size\n3. ideological diversity"
+    },
+    {
+        "test_id": 33,
+        "relation": "HasFeatureOf",
+        "correct_feat": "mutual aid",
+        "options": "1. mutual aid\n2. requiring skilled workers for installation in structural steel applications\n3. a large number of units",
+        "correct_num": 1,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is characterized by [MASK].\n\nOptions:\n1. mutual aid\n2. requiring skilled workers for installation in structural steel applications\n3. a large number of units"
+    },
+    {
+        "test_id": 34,
+        "relation": "Influenced",
+        "correct_feat": "the Nabat Confederation of Anarchist Organizations",
+        "options": "1. professional Japanese pirates\n2. the Nabat Confederation of Anarchist Organizations\n3. the Abbasid caliphs",
+        "correct_num": 2,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> influenced [MASK].\n\nOptions:\n1. professional Japanese pirates\n2. the Nabat Confederation of Anarchist Organizations\n3. the Abbasid caliphs"
+    },
+    {
+        "test_id": 35,
+        "relation": "Influenced",
+        "correct_feat": "the formation of synthesis federations",
+        "options": "1. the Beatles\n2. the Interstate Commerce Commission to issue regulations\n3. the formation of synthesis federations",
+        "correct_num": 3,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> influenced [MASK].\n\nOptions:\n1. the Beatles\n2. the Interstate Commerce Commission to issue regulations\n3. the formation of synthesis federations"
+    },
+    {
+        "test_id": 36,
+        "relation": "Influenced",
+        "correct_feat": "the International of Anarchist Federations",
+        "options": "1. the International of Anarchist Federations\n2. the development of volleyball\n3. the region of Babylonia",
+        "correct_num": 1,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> influenced [MASK].\n\nOptions:\n1. the International of Anarchist Federations\n2. the development of volleyball\n3. the region of Babylonia"
+    },
+    {
+        "test_id": 37,
+        "relation": "InfluencedBy",
+        "correct_feat": "the principle of \"anarchism without adjectives\"",
+        "options": "1. blues and early rock and roll\n2. the principle of \"anarchism without adjectives\"\n3. Jean Cocteau",
+        "correct_num": 2,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> was influenced by [MASK].\n\nOptions:\n1. blues and early rock and roll\n2. the principle of \"anarchism without adjectives\"\n3. Jean Cocteau"
+    },
+    {
+        "test_id": 38,
+        "relation": "InfluencedBy",
+        "correct_feat": "the organisational ideas of Sébastien Faure",
+        "options": "1. ancient Christian art\n2. the annulment of Louis VII of France's marriage to Eleanor of Aquitaine\n3. the organisational ideas of Sébastien Faure",
+        "correct_num": 3,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> was influenced by [MASK].\n\nOptions:\n1. ancient Christian art\n2. the annulment of Louis VII of France's marriage to Eleanor of Aquitaine\n3. the organisational ideas of Sébastien Faure"
+    },
+    {
+        "test_id": 39,
+        "relation": "InfluencedBy",
+        "correct_feat": "the organisational ideas of Emma Goldman",
+        "options": "1. the organisational ideas of Emma Goldman\n2. a lack of trained pilots and aviation fuel\n3. the growth of the power of Athens",
+        "correct_num": 1,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> was influenced by [MASK].\n\nOptions:\n1. the organisational ideas of Emma Goldman\n2. a lack of trained pilots and aviation fuel\n3. the growth of the power of Athens"
+    },
+    {
+        "test_id": 40,
+        "relation": "InfluencedBy",
+        "correct_feat": "the Japanese \"pure anarchists\"",
+        "options": "1. Jesus' teaching of the narrow gate\n2. the Japanese \"pure anarchists\"\n3. the plaintiffs' argument that the law and judgments against their permits were flawed",
+        "correct_num": 2,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> was influenced by [MASK].\n\nOptions:\n1. Jesus' teaching of the narrow gate\n2. the Japanese \"pure anarchists\"\n3. the plaintiffs' argument that the law and judgments against their permits were flawed"
+    },
+    {
+        "test_id": 41,
+        "relation": "InfluencedBy",
+        "correct_feat": "the model of the Nabat",
+        "options": "1. Christianity\n2. councils offering free licensing for disabled-friendly vehicles\n3. the model of the Nabat",
+        "correct_num": 3,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> was influenced by [MASK].\n\nOptions:\n1. Christianity\n2. councils offering free licensing for disabled-friendly vehicles\n3. the model of the Nabat"
+    },
+    {
+        "test_id": 42,
+        "relation": "InfluencedBy",
+        "correct_feat": "the Platform",
+        "options": "1. the Platform\n2. claims of an ancient and venerable history\n3. the pursuit of sheepdog trialling",
+        "correct_num": 1,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> was influenced by [MASK].\n\nOptions:\n1. the Platform\n2. claims of an ancient and venerable history\n3. the pursuit of sheepdog trialling"
+    },
+    {
+        "test_id": 43,
+        "relation": "IsA",
+        "correct_feat": "an organisational principle",
+        "options": "1. a French hip hop duo\n2. an organisational principle\n3. a Roman Catholic image",
+        "correct_num": 2,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is [MASK].\n\nOptions:\n1. a French hip hop duo\n2. an organisational principle\n3. a Roman Catholic image"
+    },
+    {
+        "test_id": 44,
+        "relation": "IsA",
+        "correct_feat": "a federation",
+        "options": "1. a shortened name for the Department for Agitation and Propaganda\n2. a \"baggy game\"\n3. a federation",
+        "correct_num": 3,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is [MASK].\n\nOptions:\n1. a shortened name for the Department for Agitation and Propaganda\n2. a \"baggy game\"\n3. a federation"
+    },
+    {
+        "test_id": 45,
+        "relation": "IsA",
+        "correct_feat": "a call for anarchists to unite into a single organisation",
+        "options": "1. a call for anarchists to unite into a single organisation\n2. considered one of the most influential fantasy books ever written\n3. a board wargame",
+        "correct_num": 1,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is [MASK].\n\nOptions:\n1. a call for anarchists to unite into a single organisation\n2. considered one of the most influential fantasy books ever written\n3. a board wargame"
+    },
+    {
+        "test_id": 46,
+        "relation": "IsA",
+        "correct_feat": "a \"synthesis\" of the different tendencies",
+        "options": "1. a children's musical group\n2. a \"synthesis\" of the different tendencies\n3. history/myth painting",
+        "correct_num": 2,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is [MASK].\n\nOptions:\n1. a children's musical group\n2. a \"synthesis\" of the different tendencies\n3. history/myth painting"
+    },
+    {
+        "test_id": 47,
+        "relation": "IsA",
+        "correct_feat": "a \"united anarchism\"",
+        "options": "1. a \"fascinating problem\"\n2. a myth\n3. a \"united anarchism\"",
+        "correct_num": 3,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is [MASK].\n\nOptions:\n1. a \"fascinating problem\"\n2. a myth\n3. a \"united anarchism\""
+    },
+    {
+        "test_id": 48,
+        "relation": "IsA",
+        "correct_feat": "a coordinated revolutionary organisation",
+        "options": "1. a coordinated revolutionary organisation\n2. a skip off a surface\n3. high-energy X-rays",
+        "correct_num": 1,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is [MASK].\n\nOptions:\n1. a coordinated revolutionary organisation\n2. a skip off a surface\n3. high-energy X-rays"
+    },
+    {
+        "test_id": 49,
+        "relation": "IsA",
+        "correct_feat": "a federation with its own unitary policy",
+        "options": "1. a sport\n2. a federation with its own unitary policy\n3. a Roman Catholic Marian title",
+        "correct_num": 2,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is [MASK].\n\nOptions:\n1. a sport\n2. a federation with its own unitary policy\n3. a Roman Catholic Marian title"
+    },
+    {
+        "test_id": 50,
+        "relation": "IsA",
+        "correct_feat": "a conception of synthesis",
+        "options": "1. a game that is mentioned in James Joyce's Ulysses\n2. a mural\n3. a conception of synthesis",
+        "correct_num": 3,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is [MASK].\n\nOptions:\n1. a game that is mentioned in James Joyce's Ulysses\n2. a mural\n3. a conception of synthesis"
+    },
+    {
+        "test_id": 51,
+        "relation": "IsA",
+        "correct_feat": "a federal association",
+        "options": "1. a federal association\n2. a Byzantine palladium\n3. a strategy board game",
+        "correct_num": 1,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is [MASK].\n\nOptions:\n1. a federal association\n2. a Byzantine palladium\n3. a strategy board game"
+    },
+    {
+        "test_id": 52,
+        "relation": "IsA",
+        "correct_feat": "a synthesis federation",
+        "options": "1. a massive company-level game\n2. a synthesis federation\n3. a short-range, high-performance interceptor aircraft",
+        "correct_num": 2,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is [MASK].\n\nOptions:\n1. a massive company-level game\n2. a synthesis federation\n3. a short-range, high-performance interceptor aircraft"
+    },
+    {
+        "test_id": 53,
+        "relation": "KnownAs",
+        "correct_feat": "the synthesis",
+        "options": "1. Parchís in Spain and northern Morocco\n2. \"China's Mona Lisa\n3. the synthesis",
+        "correct_num": 3,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is known as [MASK].\n\nOptions:\n1. Parchís in Spain and northern Morocco\n2. \"China's Mona Lisa\n3. the synthesis"
+    },
+    {
+        "test_id": 54,
+        "relation": "KnownAs",
+        "correct_feat": "united anarchism",
+        "options": "1. united anarchism\n2. a subject that includes gifts of gold, frankincense, and myrrh\n3. an eight-piece dicking",
+        "correct_num": 1,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is known as [MASK].\n\nOptions:\n1. united anarchism\n2. a subject that includes gifts of gold, frankincense, and myrrh\n3. an eight-piece dicking"
+    },
+    {
+        "test_id": 55,
+        "relation": "KnownFor",
+        "correct_feat": "seeking unity in diversity",
+        "options": "1. its historical significance\n2. seeking unity in diversity\n3. their fashion influence",
+        "correct_num": 2,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is known for [MASK].\n\nOptions:\n1. its historical significance\n2. seeking unity in diversity\n3. their fashion influence"
+    },
+    {
+        "test_id": 56,
+        "relation": "KnownFor",
+        "correct_feat": "bringing together anarchists of different tendencies",
+        "options": "1. the Henri Toivonen Memorial Trophy\n2. the song \"U R Man\"\n3. bringing together anarchists of different tendencies",
+        "correct_num": 3,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is known for [MASK].\n\nOptions:\n1. the Henri Toivonen Memorial Trophy\n2. the song \"U R Man\"\n3. bringing together anarchists of different tendencies"
+    },
+    {
+        "test_id": 57,
+        "relation": "KnownFor",
+        "correct_feat": "preserving individual autonomy",
+        "options": "1. preserving individual autonomy\n2. its two brothers, Florian and Olivio Ordoñez\n3. their comedy career",
+        "correct_num": 1,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is known for [MASK].\n\nOptions:\n1. preserving individual autonomy\n2. its two brothers, Florian and Olivio Ordoñez\n3. their comedy career"
+    },
+    {
+        "test_id": 58,
+        "relation": "KnownFor",
+        "correct_feat": "encouraging mutual aid",
+        "options": "1. variations in rules, such as WAFU Rules\n2. encouraging mutual aid\n3. being the first exponent of flamenco music aimed at a non-exclusively flamenco audience",
+        "correct_num": 2,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is known for [MASK].\n\nOptions:\n1. variations in rules, such as WAFU Rules\n2. encouraging mutual aid\n3. being the first exponent of flamenco music aimed at a non-exclusively flamenco audience"
+    },
+    {
+        "test_id": 59,
+        "relation": "PartOf",
+        "correct_feat": "the anarchist movement",
+        "options": "1. the Ukrainian Orthodox Church of the village of Buchyn\n2. the British Empire's colonization process\n3. the anarchist movement",
+        "correct_num": 3,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is part of [MASK].\n\nOptions:\n1. the Ukrainian Orthodox Church of the village of Buchyn\n2. the British Empire's colonization process\n3. the anarchist movement"
+    },
+    {
+        "test_id": 60,
+        "relation": "UsedFor",
+        "correct_feat": "fostering cooperation between anarchist schools of thought",
+        "options": "1. fostering cooperation between anarchist schools of thought\n2. a reality series\n3. withholding income",
+        "correct_num": 1,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is used for [MASK].\n\nOptions:\n1. fostering cooperation between anarchist schools of thought\n2. a reality series\n3. withholding income"
+    },
+    {
+        "test_id": 61,
+        "relation": "UsedFor",
+        "correct_feat": "uniting anarchists across ideological lines",
+        "options": "1. leveling up weapons in a mod\n2. uniting anarchists across ideological lines\n3. flight",
+        "correct_num": 2,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is used for [MASK].\n\nOptions:\n1. leveling up weapons in a mod\n2. uniting anarchists across ideological lines\n3. flight"
+    },
+    {
+        "test_id": 62,
+        "relation": "UsedFor",
+        "correct_feat": "preserving individual autonomy",
+        "options": "1. historical empires in general, such as the Roman Empire, Persian Empire, and both the Tsardom of Russia and the Russian Empire\n2. capturing shells\n3. preserving individual autonomy",
+        "correct_num": 3,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is used for [MASK].\n\nOptions:\n1. historical empires in general, such as the Roman Empire, Persian Empire, and both the Tsardom of Russia and the Russian Empire\n2. capturing shells\n3. preserving individual autonomy"
+    },
+    {
+        "test_id": 63,
+        "relation": "UsedFor",
+        "correct_feat": "encouraging mutual aid",
+        "options": "1. encouraging mutual aid\n2. fulfilling Old Testament prophecy\n3. playing the La Belle Alliance battle",
+        "correct_num": 1,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is used for [MASK].\n\nOptions:\n1. encouraging mutual aid\n2. fulfilling Old Testament prophecy\n3. playing the La Belle Alliance battle"
+    },
+    {
+        "test_id": 64,
+        "relation": "UsedFor",
+        "correct_feat": "creating an organisational platform",
+        "options": "1. \"audiovisual terrorism\"\n2. creating an organisational platform\n3. recreational activity",
+        "correct_num": 2,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is used for [MASK].\n\nOptions:\n1. \"audiovisual terrorism\"\n2. creating an organisational platform\n3. recreational activity"
+    },
+    {
+        "test_id": 65,
+        "relation": "UsedFor",
+        "correct_feat": "unifying the anarchist movement",
+        "options": "1. recreation\n2. explaining agreement\n3. unifying the anarchist movement",
+        "correct_num": 3,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is used for [MASK].\n\nOptions:\n1. recreation\n2. explaining agreement\n3. unifying the anarchist movement"
+    },
+    {
+        "test_id": 66,
+        "relation": "UsedFor",
+        "correct_feat": "combating Bolshevism",
+        "options": "1. combating Bolshevism\n2. providing additional lift\n3. enacting scenarios",
+        "correct_num": 1,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is used for [MASK].\n\nOptions:\n1. combating Bolshevism\n2. providing additional lift\n3. enacting scenarios"
+    },
+    {
+        "test_id": 67,
+        "relation": "UsedFor",
+        "correct_feat": "extending autonomy to each tendency",
+        "options": "1. celebrating the composer's 250th birthday\n2. extending autonomy to each tendency\n3. guided adventure experiences",
+        "correct_num": 2,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is used for [MASK].\n\nOptions:\n1. celebrating the composer's 250th birthday\n2. extending autonomy to each tendency\n3. guided adventure experiences"
+    },
+    {
+        "test_id": 68,
+        "relation": "UsedFor",
+        "correct_feat": "establishing a coordinated revolutionary organisation",
+        "options": "1. building and extending train lines\n2. promoting safe driving\n3. establishing a coordinated revolutionary organisation",
+        "correct_num": 3,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is used for [MASK].\n\nOptions:\n1. building and extending train lines\n2. promoting safe driving\n3. establishing a coordinated revolutionary organisation"
+    },
+    {
+        "test_id": 69,
+        "relation": "UsedFor",
+        "correct_feat": "leading an insurrection",
+        "options": "1. leading an insurrection\n2. a reward to those who had already contributed\n3. gameplay",
+        "correct_num": 1,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is used for [MASK].\n\nOptions:\n1. leading an insurrection\n2. a reward to those who had already contributed\n3. gameplay"
+    },
+    {
+        "test_id": 70,
+        "relation": "UsedIn",
+        "correct_feat": "the anarchist movement",
+        "options": "1. Judaism\n2. the anarchist movement\n3. lighting, brakes, ladders, binders, HVAC duct-work, mechanical products, and electronics",
+        "correct_num": 2,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is used in [MASK].\n\nOptions:\n1. Judaism\n2. the anarchist movement\n3. lighting, brakes, ladders, binders, HVAC duct-work, mechanical products, and electronics"
+    },
+    {
+        "test_id": 71,
+        "relation": "UsedIn",
+        "correct_feat": "federations",
+        "options": "1. the album Wednesday Morning, 3 A.M\n2. international trials\n3. federations",
+        "correct_num": 3,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is used in [MASK].\n\nOptions:\n1. the album Wednesday Morning, 3 A.M\n2. international trials\n3. federations"
+    },
+    {
+        "test_id": 72,
+        "relation": "UsedTo",
+        "correct_feat": "bring together anarchists of different tendencies",
+        "options": "1. bring together anarchists of different tendencies\n2. show political continuity and status\n3. determine if the monster is wounded",
+        "correct_num": 1,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is used to [MASK].\n\nOptions:\n1. bring together anarchists of different tendencies\n2. show political continuity and status\n3. determine if the monster is wounded"
+    },
+    {
+        "test_id": 73,
+        "relation": "UsedTo",
+        "correct_feat": "preserve the individual autonomy of its members",
+        "options": "1. represent the marriage of Mexican artistry and US technology\n2. preserve the individual autonomy of its members\n3. define individuals in armed conflicts",
+        "correct_num": 2,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is used to [MASK].\n\nOptions:\n1. represent the marriage of Mexican artistry and US technology\n2. preserve the individual autonomy of its members\n3. define individuals in armed conflicts"
+    },
+    {
+        "test_id": 74,
+        "relation": "UsedTo",
+        "correct_feat": "foster cooperation between anarchist schools of thought",
+        "options": "1. determine the application of the Charter to common law\n2. test a gundog's natural hunting abilities\n3. foster cooperation between anarchist schools of thought",
+        "correct_num": 3,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is used to [MASK].\n\nOptions:\n1. determine the application of the Charter to common law\n2. test a gundog's natural hunting abilities\n3. foster cooperation between anarchist schools of thought"
+    },
+    {
+        "test_id": 75,
+        "relation": "UsedTo",
+        "correct_feat": "unite anarchists across ideological lines",
+        "options": "1. unite anarchists across ideological lines\n2. describe the Christian Church as the 'ladder of ascent to God'\n3. slow descent",
+        "correct_num": 1,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is used to [MASK].\n\nOptions:\n1. unite anarchists across ideological lines\n2. describe the Christian Church as the 'ladder of ascent to God'\n3. slow descent"
+    },
+    {
+        "test_id": 76,
+        "relation": "UsedTo",
+        "correct_feat": "unite anarchists into a single organisation",
+        "options": "1. define individuals in armed conflicts\n2. unite anarchists into a single organisation\n3. review frame-by-frame",
+        "correct_num": 2,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is used to [MASK].\n\nOptions:\n1. define individuals in armed conflicts\n2. unite anarchists into a single organisation\n3. review frame-by-frame"
+    },
+    {
+        "test_id": 77,
+        "relation": "UsedTo",
+        "correct_feat": "encourage mutual aid between its members",
+        "options": "1. protect the city of Kazan\n2. identify the Houses of Lancaster and York\n3. encourage mutual aid between its members",
+        "correct_num": 3,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is used to [MASK].\n\nOptions:\n1. protect the city of Kazan\n2. identify the Houses of Lancaster and York\n3. encourage mutual aid between its members"
+    },
+    {
+        "test_id": 78,
+        "relation": "UsedTo",
+        "correct_feat": "unite anarchists of different tendencies behind common principles and goals",
+        "options": "1. unite anarchists of different tendencies behind common principles and goals\n2. determine the title of individual games\n3. record land grants",
+        "correct_num": 1,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is used to [MASK].\n\nOptions:\n1. unite anarchists of different tendencies behind common principles and goals\n2. determine the title of individual games\n3. record land grants"
+    },
+    {
+        "test_id": 79,
+        "relation": "UsedTo",
+        "correct_feat": "create an organisational platform acceptable to the entire anarchist movement",
+        "options": "1. defeat Coragus\n2. create an organisational platform acceptable to the entire anarchist movement\n3. aim for inclusion in future Paralympic Games editions",
+        "correct_num": 2,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is used to [MASK].\n\nOptions:\n1. defeat Coragus\n2. create an organisational platform acceptable to the entire anarchist movement\n3. aim for inclusion in future Paralympic Games editions"
+    },
+    {
+        "test_id": 80,
+        "relation": "UsedTo",
+        "correct_feat": "unify the disorganised anarchist movement",
+        "options": "1. release fewer videos per month due to Nataly Dawn's condition\n2. help solve hunger issues\n3. unify the disorganised anarchist movement",
+        "correct_num": 3,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is used to [MASK].\n\nOptions:\n1. release fewer videos per month due to Nataly Dawn's condition\n2. help solve hunger issues\n3. unify the disorganised anarchist movement"
+    },
+    {
+        "test_id": 81,
+        "relation": "UsedTo",
+        "correct_feat": "combat the rise of Bolshevism",
+        "options": "1. combat the rise of Bolshevism\n2. pay fees and collect payment for deliveries\n3. generate a solution",
+        "correct_num": 1,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is used to [MASK].\n\nOptions:\n1. combat the rise of Bolshevism\n2. pay fees and collect payment for deliveries\n3. generate a solution"
+    }
+]

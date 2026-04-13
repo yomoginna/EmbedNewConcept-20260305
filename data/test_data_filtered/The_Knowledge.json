@@ -1,0 +1,274 @@
+[
+    {
+        "test_id": 9,
+        "relation": "CreatedAround",
+        "correct_feat": "the end of the Second World War",
+        "options": "1. the end of the Second World War\n2. 300,000 years ago\n3. the economic crisis of the 1930s",
+        "correct_num": 1,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> was created around [MASK].\n\nOptions:\n1. the end of the Second World War\n2. 300,000 years ago\n3. the economic crisis of the 1930s"
+    },
+    {
+        "test_id": 12,
+        "relation": "CreatedIn",
+        "correct_feat": "London",
+        "options": "1. London\n2. Nashik\n3. Tampa",
+        "correct_num": 1,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> was created in [MASK].\n\nOptions:\n1. London\n2. Nashik\n3. Tampa"
+    },
+    {
+        "test_id": 15,
+        "relation": "DevelopedIn",
+        "correct_feat": "London",
+        "options": "1. London\n2. Jo\u00e3o Pessoa\n3. Vereeniging",
+        "correct_num": 1,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> was developed in [MASK].\n\nOptions:\n1. London\n2. Jo\u00e3o Pessoa\n3. Vereeniging"
+    },
+    {
+        "test_id": 21,
+        "relation": "HasFeatureOf",
+        "correct_feat": "being a symbol of London and Britain",
+        "options": "1. being a symbol of London and Britain\n2. a per curiam decision\n3. the apparition of modern Galician nationalism",
+        "correct_num": 1,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is characterized by [MASK].\n\nOptions:\n1. being a symbol of London and Britain\n2. a per curiam decision\n3. the apparition of modern Galician nationalism"
+    },
+    {
+        "test_id": 22,
+        "relation": "HasFeatureOf",
+        "correct_feat": "its unique vehicle design for the London market",
+        "options": "1. republicanism\n2. its unique vehicle design for the London market\n3. being a sport",
+        "correct_num": 2,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is characterized by [MASK].\n\nOptions:\n1. republicanism\n2. its unique vehicle design for the London market\n3. being a sport"
+    },
+    {
+        "test_id": 27,
+        "relation": "HasFeatureOf",
+        "correct_feat": "a turning circle not greater than 8.535 m",
+        "options": "1. a turning circle not greater than 8.535 m\n2. violence\n3. a vacuum that helps keep riders from skipping",
+        "correct_num": 1,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is characterized by [MASK].\n\nOptions:\n1. a turning circle not greater than 8.535 m\n2. violence\n3. a vacuum that helps keep riders from skipping"
+    },
+    {
+        "test_id": 32,
+        "relation": "InfluencedBy",
+        "correct_feat": "councils offering free licensing for disabled-friendly vehicles",
+        "options": "1. the Eighth and Fourteenth Amendments\n2. the Skopje 2014 project\n3. councils offering free licensing for disabled-friendly vehicles",
+        "correct_num": 3,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> was influenced by [MASK].\n\nOptions:\n1. the Eighth and Fourteenth Amendments\n2. the Skopje 2014 project\n3. councils offering free licensing for disabled-friendly vehicles"
+    },
+    {
+        "test_id": 35,
+        "relation": "IsA",
+        "correct_feat": "a carriage or car for hire",
+        "options": "1. a movement\n2. a populist movement\n3. a carriage or car for hire",
+        "correct_num": 3,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is [MASK].\n\nOptions:\n1. a movement\n2. a populist movement\n3. a carriage or car for hire"
+    },
+    {
+        "test_id": 36,
+        "relation": "IsA",
+        "correct_feat": "a symbol of London and Britain",
+        "options": "1. a symbol of London and Britain\n2. a game with a point-to-point movement system\n3. a photo-reconnaissance aircraft",
+        "correct_num": 1,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is [MASK].\n\nOptions:\n1. a symbol of London and Britain\n2. a game with a point-to-point movement system\n3. a photo-reconnaissance aircraft"
+    },
+    {
+        "test_id": 43,
+        "relation": "KnownAs",
+        "correct_feat": "a cab, black cab, hack, or taxi",
+        "options": "1. a person fighting for money or material compensation\n2. a cab, black cab, hack, or taxi\n3. 'white power'",
+        "correct_num": 2,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is known as [MASK].\n\nOptions:\n1. a person fighting for money or material compensation\n2. a cab, black cab, hack, or taxi\n3. 'white power'"
+    },
+    {
+        "test_id": 49,
+        "relation": "KnownAs",
+        "correct_feat": "black cab since the end of the Second World War",
+        "options": "1. Texit\n2. black cab since the end of the Second World War\n3. The Desert War",
+        "correct_num": 2,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is known as [MASK].\n\nOptions:\n1. Texit\n2. black cab since the end of the Second World War\n3. The Desert War"
+    },
+    {
+        "test_id": 50,
+        "relation": "KnownFor",
+        "correct_feat": "its rigorous regulation in London",
+        "options": "1. its airplane pieces\n2. songs with profound patriotic themes\n3. its rigorous regulation in London",
+        "correct_num": 3,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is known for [MASK].\n\nOptions:\n1. its airplane pieces\n2. songs with profound patriotic themes\n3. its rigorous regulation in London"
+    },
+    {
+        "test_id": 51,
+        "relation": "KnownFor",
+        "correct_feat": "being a symbol of London and Britain",
+        "options": "1. being a symbol of London and Britain\n2. ruling Spain\n3. being promoted by the NFL as a safer alternative to tackle football",
+        "correct_num": 1,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is known for [MASK].\n\nOptions:\n1. being a symbol of London and Britain\n2. ruling Spain\n3. being promoted by the NFL as a safer alternative to tackle football"
+    },
+    {
+        "test_id": 53,
+        "relation": "KnownFor",
+        "correct_feat": "its broad rear doors that open very wide or slide",
+        "options": "1. its \"I Go, You Go\" alternating series of turns\n2. its variations\n3. its broad rear doors that open very wide or slide",
+        "correct_num": 3,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is known for [MASK].\n\nOptions:\n1. its \"I Go, You Go\" alternating series of turns\n2. its variations\n3. its broad rear doors that open very wide or slide"
+    },
+    {
+        "test_id": 54,
+        "relation": "KnownFor",
+        "correct_feat": "its electrically controlled ramp for access",
+        "options": "1. its electrically controlled ramp for access\n2. being anti-imperialist\n3. including new scenes shot twenty years after the first Star Wars film",
+        "correct_num": 1,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is known for [MASK].\n\nOptions:\n1. its electrically controlled ramp for access\n2. being anti-imperialist\n3. including new scenes shot twenty years after the first Star Wars film"
+    },
+    {
+        "test_id": 57,
+        "relation": "ManufacturedBy",
+        "correct_feat": "Austin",
+        "options": "1. Austin\n2. Goyang-si\n3. Huai'an",
+        "correct_num": 1,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> was manufactured by [MASK].\n\nOptions:\n1. Austin\n2. Goyang-si\n3. Huai'an"
+    },
+    {
+        "test_id": 63,
+        "relation": "OccurredAround",
+        "correct_feat": "the end of the 19th century",
+        "options": "1. the end of the 19th century\n2. 2017\n3. the 18th century",
+        "correct_num": 1,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> occurred around [MASK].\n\nOptions:\n1. the end of the 19th century\n2. 2017\n3. the 18th century"
+    },
+    {
+        "test_id": 66,
+        "relation": "OriginatedIn",
+        "correct_feat": "London",
+        "options": "1. London\n2. Srinagar\n3. Manila",
+        "correct_num": 1,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> originated in [MASK].\n\nOptions:\n1. London\n2. Srinagar\n3. Manila"
+    },
+    {
+        "test_id": 67,
+        "relation": "PartOf",
+        "correct_feat": "the regulation of taxicabs in the United Kingdom",
+        "options": "1. Bring Me the Horizon\n2. the regulation of taxicabs in the United Kingdom\n3. the series Space: 1999",
+        "correct_num": 2,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is part of [MASK].\n\nOptions:\n1. Bring Me the Horizon\n2. the regulation of taxicabs in the United Kingdom\n3. the series Space: 1999"
+    },
+    {
+        "test_id": 72,
+        "relation": "PerformedBy",
+        "correct_feat": "the Stamp Office",
+        "options": "1. the Stamp Office\n2. Neil Tennant\n3. athletes with disabilities",
+        "correct_num": 1,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> was performed by [MASK].\n\nOptions:\n1. the Stamp Office\n2. Neil Tennant\n3. athletes with disabilities"
+    },
+    {
+        "test_id": 75,
+        "relation": "ProducedBy",
+        "correct_feat": "Austin",
+        "options": "1. Austin\n2. Bucaramanga\n3. Cuenca",
+        "correct_num": 1,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> was produced by [MASK].\n\nOptions:\n1. Austin\n2. Bucaramanga\n3. Cuenca"
+    },
+    {
+        "test_id": 78,
+        "relation": "ProducedBy",
+        "correct_feat": "London Electric Vehicle Company",
+        "options": "1. London Electric Vehicle Company\n2. Paris Hilton\n3. Agnes Carlsson",
+        "correct_num": 1,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> was produced by [MASK].\n\nOptions:\n1. London Electric Vehicle Company\n2. Paris Hilton\n3. Agnes Carlsson"
+    },
+    {
+        "test_id": 81,
+        "relation": "PublishedBy",
+        "correct_feat": "Parliament",
+        "options": "1. Parliament\n2. Columbia Records\n3. Ratatat",
+        "correct_num": 1,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> was published by [MASK].\n\nOptions:\n1. Parliament\n2. Columbia Records\n3. Ratatat"
+    },
+    {
+        "test_id": 83,
+        "relation": "PublishedIn",
+        "correct_feat": "London",
+        "options": "1. Dammam\n2. Kaduna\n3. London",
+        "correct_num": 3,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> was published in [MASK].\n\nOptions:\n1. Dammam\n2. Kaduna\n3. London"
+    },
+    {
+        "test_id": 84,
+        "relation": "PublishedIn",
+        "correct_feat": "Westminster",
+        "options": "1. Westminster\n2. 1975\n3. 1965",
+        "correct_num": 1,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> was published in [MASK].\n\nOptions:\n1. Westminster\n2. 1975\n3. 1965"
+    },
+    {
+        "test_id": 86,
+        "relation": "UsedAs",
+        "correct_feat": "a carriage or car for hire",
+        "options": "1. a museum in Forest Park, Illinois\n2. a video\n3. a carriage or car for hire",
+        "correct_num": 3,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is used as [MASK].\n\nOptions:\n1. a museum in Forest Park, Illinois\n2. a video\n3. a carriage or car for hire"
+    },
+    {
+        "test_id": 87,
+        "relation": "UsedAs",
+        "correct_feat": "a symbol of London and Britain",
+        "options": "1. a symbol of London and Britain\n2. music\n3. a means of entertainment",
+        "correct_num": 1,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is used as [MASK].\n\nOptions:\n1. a symbol of London and Britain\n2. music\n3. a means of entertainment"
+    },
+    {
+        "test_id": 92,
+        "relation": "UsedAs",
+        "correct_feat": "a minicab",
+        "options": "1. a glue that brings together a group of estranged siblings\n2. a legal alternative to other forms of hunting\n3. a minicab",
+        "correct_num": 3,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is used as [MASK].\n\nOptions:\n1. a glue that brings together a group of estranged siblings\n2. a legal alternative to other forms of hunting\n3. a minicab"
+    },
+    {
+        "test_id": 93,
+        "relation": "UsedAs",
+        "correct_feat": "a tourist attraction",
+        "options": "1. a tourist attraction\n2. a comparison\n3. a riveter",
+        "correct_num": 1,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is used as [MASK].\n\nOptions:\n1. a tourist attraction\n2. a comparison\n3. a riveter"
+    },
+    {
+        "test_id": 98,
+        "relation": "UsedFor",
+        "correct_feat": "calculating the fare",
+        "options": "1. the liberation of slaves\n2. populism\n3. calculating the fare",
+        "correct_num": 3,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is used for [MASK].\n\nOptions:\n1. the liberation of slaves\n2. populism\n3. calculating the fare"
+    },
+    {
+        "test_id": 104,
+        "relation": "UsedIn",
+        "correct_feat": "the United Kingdom",
+        "options": "1. Venezuela, Bolivarian Republic of\n2. Benin\n3. the United Kingdom",
+        "correct_num": 3,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is used in [MASK].\n\nOptions:\n1. Venezuela, Bolivarian Republic of\n2. Benin\n3. the United Kingdom"
+    },
+    {
+        "test_id": 105,
+        "relation": "UsedIn",
+        "correct_feat": "the metropolis",
+        "options": "1. the metropolis\n2. rock music\n3. the ROC Nations' Cup",
+        "correct_num": 1,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is used in [MASK].\n\nOptions:\n1. the metropolis\n2. rock music\n3. the ROC Nations' Cup"
+    },
+    {
+        "test_id": 107,
+        "relation": "UsedIn",
+        "correct_feat": "Ireland",
+        "options": "1. Spain\n2. Iraq\n3. Ireland",
+        "correct_num": 3,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is used in [MASK].\n\nOptions:\n1. Spain\n2. Iraq\n3. Ireland"
+    },
+    {
+        "test_id": 118,
+        "relation": "UsedTo",
+        "correct_feat": "pick up passengers",
+        "options": "1. skim out to breaking waves\n2. pick up passengers\n3. describe fringe parties",
+        "correct_num": 2,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is used to [MASK].\n\nOptions:\n1. skim out to breaking waves\n2. pick up passengers\n3. describe fringe parties"
+    }
+]

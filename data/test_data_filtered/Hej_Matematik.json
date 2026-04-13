@@ -1,0 +1,258 @@
+[
+    {
+        "test_id": 0,
+        "relation": "About",
+        "correct_feat": "mathematics",
+        "options": "1. mathematics\n2. a rodeo sport involving a rider on a bucking bull\n3. life and time on Horn Island",
+        "correct_num": 1,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is about [MASK].\n\nOptions:\n1. mathematics\n2. a rodeo sport involving a rider on a bucking bull\n3. life and time on Horn Island"
+    },
+    {
+        "test_id": 1,
+        "relation": "AssociatedWith",
+        "correct_feat": "Aqua",
+        "options": "1. the Fourteenth Amendment\n2. Aqua\n3. the First Spanish Republic",
+        "correct_num": 2,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is associated with [MASK].\n\nOptions:\n1. the Fourteenth Amendment\n2. Aqua\n3. the First Spanish Republic"
+    },
+    {
+        "test_id": 2,
+        "relation": "AssociatedWith",
+        "correct_feat": "S\u00f8ren Rasted",
+        "options": "1. Richard Wagner's interpretation of Beethoven's Ninth symphony\n2. drop tubes\n3. S\u00f8ren Rasted",
+        "correct_num": 3,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is associated with [MASK].\n\nOptions:\n1. Richard Wagner's interpretation of Beethoven's Ninth symphony\n2. drop tubes\n3. S\u00f8ren Rasted"
+    },
+    {
+        "test_id": 3,
+        "relation": "AssociatedWith",
+        "correct_feat": "Nicolaj Rasted",
+        "options": "1. Nicolaj Rasted\n2. skyscrapers\n3. Mozart's Don Giovanni",
+        "correct_num": 1,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is associated with [MASK].\n\nOptions:\n1. Nicolaj Rasted\n2. skyscrapers\n3. Mozart's Don Giovanni"
+    },
+    {
+        "test_id": 5,
+        "relation": "AssociatedWith",
+        "correct_feat": "Nicholas Findsen on bass",
+        "options": "1. the John Randolph Club\n2. Aristotle\n3. Nicholas Findsen on bass",
+        "correct_num": 3,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is associated with [MASK].\n\nOptions:\n1. the John Randolph Club\n2. Aristotle\n3. Nicholas Findsen on bass"
+    },
+    {
+        "test_id": 6,
+        "relation": "AssociatedWith",
+        "correct_feat": "Mads Storm on keyboards",
+        "options": "1. Mads Storm on keyboards\n2. Shrove Tuesday celebrations\n3. the Victorian era",
+        "correct_num": 1,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is associated with [MASK].\n\nOptions:\n1. Mads Storm on keyboards\n2. Shrove Tuesday celebrations\n3. the Victorian era"
+    },
+    {
+        "test_id": 8,
+        "relation": "AssociatedWith",
+        "correct_feat": "TV-2",
+        "options": "1. escape rooms\n2. Attorney General Robert F. Kennedy\n3. TV-2",
+        "correct_num": 3,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is associated with [MASK].\n\nOptions:\n1. escape rooms\n2. Attorney General Robert F. Kennedy\n3. TV-2"
+    },
+    {
+        "test_id": 9,
+        "relation": "AssociatedWith",
+        "correct_feat": "Michael Hardinger",
+        "options": "1. Michael Hardinger\n2. the Interstate Commerce Act\n3. the Napoleonic Wars",
+        "correct_num": 1,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is associated with [MASK].\n\nOptions:\n1. Michael Hardinger\n2. the Interstate Commerce Act\n3. the Napoleonic Wars"
+    },
+    {
+        "test_id": 11,
+        "relation": "ConsistsOf",
+        "correct_feat": "S\u00f8ren Rasted and Nicolaj Rasted",
+        "options": "1. Player Aid Sheets\n2. a two-pronged theory\n3. S\u00f8ren Rasted and Nicolaj Rasted",
+        "correct_num": 3,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> consists of [MASK].\n\nOptions:\n1. Player Aid Sheets\n2. a two-pronged theory\n3. S\u00f8ren Rasted and Nicolaj Rasted"
+    },
+    {
+        "test_id": 12,
+        "relation": "FoundedBy",
+        "correct_feat": "S\u00f8ren Rasted and Nicolaj Rasted",
+        "options": "1. S\u00f8ren Rasted and Nicolaj Rasted\n2. Saladin\n3. Richard Lance McLaren",
+        "correct_num": 1,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> was founded by [MASK].\n\nOptions:\n1. S\u00f8ren Rasted and Nicolaj Rasted\n2. Saladin\n3. Richard Lance McLaren"
+    },
+    {
+        "test_id": 13,
+        "relation": "FoundedIn",
+        "correct_feat": "2005",
+        "options": "1. 1701\n2. 2005\n3. 1966",
+        "correct_num": 2,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> was founded in [MASK].\n\nOptions:\n1. 1701\n2. 2005\n3. 1966"
+    },
+    {
+        "test_id": 14,
+        "relation": "HasA",
+        "correct_feat": "backing vocals on TV-2's album For dig ku' jeg g\u00f8re alting",
+        "options": "1. dogs\n2. mainstream historical types including Liberal, Labor, Revisionist, and Cultural Zionism\n3. backing vocals on TV-2's album For dig ku' jeg g\u00f8re alting",
+        "correct_num": 3,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> has [MASK].\n\nOptions:\n1. dogs\n2. mainstream historical types including Liberal, Labor, Revisionist, and Cultural Zionism\n3. backing vocals on TV-2's album For dig ku' jeg g\u00f8re alting"
+    },
+    {
+        "test_id": 15,
+        "relation": "HasA",
+        "correct_feat": "a debut album Vi burde ses noget mere",
+        "options": "1. a debut album Vi burde ses noget mere\n2. a semi-simultaneous system of play\n3. been labelled as open attacks on secularism by rivals",
+        "correct_num": 1,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> has [MASK].\n\nOptions:\n1. a debut album Vi burde ses noget mere\n2. a semi-simultaneous system of play\n3. been labelled as open attacks on secularism by rivals"
+    },
+    {
+        "test_id": 19,
+        "relation": "HasA",
+        "correct_feat": "a promotional single \"Vi ka' alt vi to\"",
+        "options": "1. hundreds of counters\n2. a promotional single \"Vi ka' alt vi to\"\n3. landscapes bedecked with homespun aphorisms",
+        "correct_num": 2,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> has [MASK].\n\nOptions:\n1. hundreds of counters\n2. a promotional single \"Vi ka' alt vi to\"\n3. landscapes bedecked with homespun aphorisms"
+    },
+    {
+        "test_id": 20,
+        "relation": "HasA",
+        "correct_feat": "a single \"Walkmand\"",
+        "options": "1. thirty-one types of terrain\n2. rules that track stragglers, the accumulation of soldier fatigue, ammunition, changing regimental assignments and strength of individual units\n3. a single \"Walkmand\"",
+        "correct_num": 3,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> has [MASK].\n\nOptions:\n1. thirty-one types of terrain\n2. rules that track stragglers, the accumulation of soldier fatigue, ammunition, changing regimental assignments and strength of individual units\n3. a single \"Walkmand\""
+    },
+    {
+        "test_id": 21,
+        "relation": "HasA",
+        "correct_feat": "a second studio album Alt g\u00e5r op i 6",
+        "options": "1. a second studio album Alt g\u00e5r op i 6\n2. a statue of Edwin Wilkins Field\n3. an aura featuring a three-dimensional layer of clouds",
+        "correct_num": 1,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> has [MASK].\n\nOptions:\n1. a second studio album Alt g\u00e5r op i 6\n2. a statue of Edwin Wilkins Field\n3. an aura featuring a three-dimensional layer of clouds"
+    },
+    {
+        "test_id": 24,
+        "relation": "HasFeatureOf",
+        "correct_feat": "live shows accompanied by Nikolaj Teinvig on guitar, Nicholas Findsen on bass, Mads Storm on keyboards and Peter D\u00fcring on drums",
+        "options": "1. live shows accompanied by Nikolaj Teinvig on guitar, Nicholas Findsen on bass, Mads Storm on keyboards and Peter D\u00fcring on drums\n2. the International Cherry Pit-Spitting Championship being founded in 1974\n3. a scandalous depiction of the revels of Venus's court",
+        "correct_num": 1,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is characterized by [MASK].\n\nOptions:\n1. live shows accompanied by Nikolaj Teinvig on guitar, Nicholas Findsen on bass, Mads Storm on keyboards and Peter D\u00fcring on drums\n2. the International Cherry Pit-Spitting Championship being founded in 1974\n3. a scandalous depiction of the revels of Venus's court"
+    },
+    {
+        "test_id": 25,
+        "relation": "HasFeatureOf",
+        "correct_feat": "a music video for \"Centerpubben\" featuring S\u00f8ren's fellow band members of Aqua",
+        "options": "1. its descendant of a royal Khazar chief Tuqaq\n2. a music video for \"Centerpubben\" featuring S\u00f8ren's fellow band members of Aqua\n3. a postulate of patriotism",
+        "correct_num": 2,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is characterized by [MASK].\n\nOptions:\n1. its descendant of a royal Khazar chief Tuqaq\n2. a music video for \"Centerpubben\" featuring S\u00f8ren's fellow band members of Aqua\n3. a postulate of patriotism"
+    },
+    {
+        "test_id": 27,
+        "relation": "HasFeatureOf",
+        "correct_feat": "a single \"Walkmand\" featuring a vocal sample by Michael Hardinger",
+        "options": "1. a single \"Walkmand\" featuring a vocal sample by Michael Hardinger\n2. the replacement of democracies with Spartan-style oligarchies\n3. the inscription Jesus of Nazareth, King of the Jews",
+        "correct_num": 1,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is characterized by [MASK].\n\nOptions:\n1. a single \"Walkmand\" featuring a vocal sample by Michael Hardinger\n2. the replacement of democracies with Spartan-style oligarchies\n3. the inscription Jesus of Nazareth, King of the Jews"
+    },
+    {
+        "test_id": 30,
+        "relation": "HasFeatureOf",
+        "correct_feat": "a music video for \"The loser sign\" where fans were invited to send in a clip of themselves",
+        "options": "1. a music video for \"The loser sign\" where fans were invited to send in a clip of themselves\n2. having land and sea power be almost equally significant\n3. scoring a goal worth nine points",
+        "correct_num": 1,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is characterized by [MASK].\n\nOptions:\n1. a music video for \"The loser sign\" where fans were invited to send in a clip of themselves\n2. having land and sea power be almost equally significant\n3. scoring a goal worth nine points"
+    },
+    {
+        "test_id": 32,
+        "relation": "HasFeatureOf",
+        "correct_feat": "a single \"Sikke en fest (S\u00e5 da bas)\" sampling Johnny Reimar's \"Sikken fest\" and Gunnar Nu Hansen's \"S\u00e5 der bas\"",
+        "options": "1. being a symbol of London and Britain\n2. Jacobite claims to the throne\n3. a single \"Sikke en fest (S\u00e5 da bas)\" sampling Johnny Reimar's \"Sikken fest\" and Gunnar Nu Hansen's \"S\u00e5 der bas\"",
+        "correct_num": 3,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is characterized by [MASK].\n\nOptions:\n1. being a symbol of London and Britain\n2. Jacobite claims to the throne\n3. a single \"Sikke en fest (S\u00e5 da bas)\" sampling Johnny Reimar's \"Sikken fest\" and Gunnar Nu Hansen's \"S\u00e5 der bas\""
+    },
+    {
+        "test_id": 33,
+        "relation": "HasFeatureOf",
+        "correct_feat": "a single \"Ik ordin\u00e6r\" featuring guest vocals from Jesper Binzer",
+        "options": "1. a single \"Ik ordin\u00e6r\" featuring guest vocals from Jesper Binzer\n2. hitting the wicket with the ball\n3. an \"I Go, You Go\" alternating series of turns",
+        "correct_num": 1,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is characterized by [MASK].\n\nOptions:\n1. a single \"Ik ordin\u00e6r\" featuring guest vocals from Jesper Binzer\n2. hitting the wicket with the ball\n3. an \"I Go, You Go\" alternating series of turns"
+    },
+    {
+        "test_id": 34,
+        "relation": "IsA",
+        "correct_feat": "a Danish pop group",
+        "options": "1. a coastal commune\n2. a Danish pop group\n3. a technological march towards an increasingly perfectly realistic reproduction",
+        "correct_num": 2,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is [MASK].\n\nOptions:\n1. a coastal commune\n2. a Danish pop group\n3. a technological march towards an increasingly perfectly realistic reproduction"
+    },
+    {
+        "test_id": 36,
+        "relation": "IsA",
+        "correct_feat": "a band",
+        "options": "1. a band\n2. a faction of the Iranian principalists\n3. a painkiller headache",
+        "correct_num": 1,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is [MASK].\n\nOptions:\n1. a band\n2. a faction of the Iranian principalists\n3. a painkiller headache"
+    },
+    {
+        "test_id": 37,
+        "relation": "KnownFor",
+        "correct_feat": "the music video for \"Centerpubben\"",
+        "options": "1. providing an opportunity for monstrous fantasies\n2. the music video for \"Centerpubben\"\n3. romanticizing jihad and Islamist terrorism",
+        "correct_num": 2,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is known for [MASK].\n\nOptions:\n1. providing an opportunity for monstrous fantasies\n2. the music video for \"Centerpubben\"\n3. romanticizing jihad and Islamist terrorism"
+    },
+    {
+        "test_id": 38,
+        "relation": "KnownFor",
+        "correct_feat": "the single \"Walkmand\"",
+        "options": "1. being frowned upon by some\n2. the Lutheran Formula of Concord\n3. the single \"Walkmand\"",
+        "correct_num": 3,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is known for [MASK].\n\nOptions:\n1. being frowned upon by some\n2. the Lutheran Formula of Concord\n3. the single \"Walkmand\""
+    },
+    {
+        "test_id": 39,
+        "relation": "KnownFor",
+        "correct_feat": "the single \"The loser sign\" being the group's first release not sung in Danish",
+        "options": "1. the single \"The loser sign\" being the group's first release not sung in Danish\n2. its potential energy utilization\n3. its numerous spinoffs",
+        "correct_num": 1,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is known for [MASK].\n\nOptions:\n1. the single \"The loser sign\" being the group's first release not sung in Danish\n2. its potential energy utilization\n3. its numerous spinoffs"
+    },
+    {
+        "test_id": 41,
+        "relation": "MemberOf",
+        "correct_feat": "Copenhagen Records",
+        "options": "1. activities sanctioned by the American Kennel Club\n2. the Albertine line\n3. Copenhagen Records",
+        "correct_num": 3,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is a member of [MASK].\n\nOptions:\n1. activities sanctioned by the American Kennel Club\n2. the Albertine line\n3. Copenhagen Records"
+    },
+    {
+        "test_id": 43,
+        "relation": "MemberOf",
+        "correct_feat": "Labelland",
+        "options": "1. the National Council of Youth Sports\n2. Labelland\n3. the Holy Roman Empire",
+        "correct_num": 2,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is a member of [MASK].\n\nOptions:\n1. the National Council of Youth Sports\n2. Labelland\n3. the Holy Roman Empire"
+    },
+    {
+        "test_id": 46,
+        "relation": "UsedIn",
+        "correct_feat": "the Danish album chart",
+        "options": "1. the Netherlands\n2. the Danish album chart\n3. Wisconsin",
+        "correct_num": 2,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is used in [MASK].\n\nOptions:\n1. the Netherlands\n2. the Danish album chart\n3. Wisconsin"
+    },
+    {
+        "test_id": 47,
+        "relation": "UsedIn",
+        "correct_feat": "the Danish single chart",
+        "options": "1. canyons above Santa Barbara\n2. the economic system\n3. the Danish single chart",
+        "correct_num": 3,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is used in [MASK].\n\nOptions:\n1. canyons above Santa Barbara\n2. the economic system\n3. the Danish single chart"
+    },
+    {
+        "test_id": 48,
+        "relation": "UsedIn",
+        "correct_feat": "the Danish comedy show Ditte & Louise",
+        "options": "1. the Danish comedy show Ditte & Louise\n2. computer nomenclature\n3. introductory kits",
+        "correct_num": 1,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is used in [MASK].\n\nOptions:\n1. the Danish comedy show Ditte & Louise\n2. computer nomenclature\n3. introductory kits"
+    }
+]

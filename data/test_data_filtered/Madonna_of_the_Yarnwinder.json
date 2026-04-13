@@ -1,0 +1,882 @@
+[
+    {
+        "test_id": 0,
+        "relation": "About",
+        "correct_feat": "the Madonna and Christ child",
+        "options": "1. the Madonna and Christ child\n2. the Bancroft Treaties and their eventual abandonment\n3. folk rock",
+        "correct_num": 1,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is about [MASK].\n\nOptions:\n1. the Madonna and Christ child\n2. the Bancroft Treaties and their eventual abandonment\n3. folk rock"
+    },
+    {
+        "test_id": 1,
+        "relation": "About",
+        "correct_feat": "Mary seated in a landscape with the Christ child",
+        "options": "1. a coastal commune in the Seine-Maritime department, Normandy, northern France\n2. Mary seated in a landscape with the Christ child\n3. the obligations of all three estates of the realm: the nobility, the clergy, and the peasantry",
+        "correct_num": 2,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is about [MASK].\n\nOptions:\n1. a coastal commune in the Seine-Maritime department, Normandy, northern France\n2. Mary seated in a landscape with the Christ child\n3. the obligations of all three estates of the realm: the nobility, the clergy, and the peasantry"
+    },
+    {
+        "test_id": 2,
+        "relation": "About",
+        "correct_feat": "the Christ child gazing at a niddy-noddy used to collect spun yarn",
+        "options": "1. a small container used to hold liquids for drinking\n2. the Interstate Commerce Act\n3. the Christ child gazing at a niddy-noddy used to collect spun yarn",
+        "correct_num": 3,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is about [MASK].\n\nOptions:\n1. a small container used to hold liquids for drinking\n2. the Interstate Commerce Act\n3. the Christ child gazing at a niddy-noddy used to collect spun yarn"
+    },
+    {
+        "test_id": 3,
+        "relation": "About",
+        "correct_feat": "the niddy-noddy serving as a symbol of Mary's domesticity and as a foreshadowing of the cross",
+        "options": "1. the niddy-noddy serving as a symbol of Mary's domesticity and as a foreshadowing of the cross\n2. a libel case against the Church of Scientology\n3. water sports toys",
+        "correct_num": 1,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is about [MASK].\n\nOptions:\n1. the niddy-noddy serving as a symbol of Mary's domesticity and as a foreshadowing of the cross\n2. a libel case against the Church of Scientology\n3. water sports toys"
+    },
+    {
+        "test_id": 4,
+        "relation": "About",
+        "correct_feat": "humanity's fall, its ensuing travails and its redemption through Christ's sacrifice",
+        "options": "1. the rock era\n2. humanity's fall, its ensuing travails and its redemption through Christ's sacrifice\n3. a form of tennis for individuals with physical disability who play the sport of tennis standing",
+        "correct_num": 2,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is about [MASK].\n\nOptions:\n1. the rock era\n2. humanity's fall, its ensuing travails and its redemption through Christ's sacrifice\n3. a form of tennis for individuals with physical disability who play the sport of tennis standing"
+    },
+    {
+        "test_id": 5,
+        "relation": "Affects",
+        "correct_feat": "later High Renaissance depictions of the Madonna and Child",
+        "options": "1. many of the other arms of the UK Armed Forces\n2. the anime series Ore no Im\u014dto ga Konna ni Kawaii Wake ga Nai\n3. later High Renaissance depictions of the Madonna and Child",
+        "correct_num": 3,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> affects [MASK].\n\nOptions:\n1. many of the other arms of the UK Armed Forces\n2. the anime series Ore no Im\u014dto ga Konna ni Kawaii Wake ga Nai\n3. later High Renaissance depictions of the Madonna and Child"
+    },
+    {
+        "test_id": 6,
+        "relation": "AssociatedWith",
+        "correct_feat": "Leonardo da Vinci",
+        "options": "1. Leonardo da Vinci\n2. Sin\u00e9ad O'Connor\n3. Gang Starr",
+        "correct_num": 1,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is associated with [MASK].\n\nOptions:\n1. Leonardo da Vinci\n2. Sin\u00e9ad O'Connor\n3. Gang Starr"
+    },
+    {
+        "test_id": 7,
+        "relation": "AssociatedWith",
+        "correct_feat": "Florimond Robertet",
+        "options": "1. the Banu Marin tribe\n2. Florimond Robertet\n3. the Union of Krewo",
+        "correct_num": 2,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is associated with [MASK].\n\nOptions:\n1. the Banu Marin tribe\n2. Florimond Robertet\n3. the Union of Krewo"
+    },
+    {
+        "test_id": 8,
+        "relation": "AssociatedWith",
+        "correct_feat": "King Louis XII of France",
+        "options": "1. social democratic governments\n2. Arab socialism\n3. King Louis XII of France",
+        "correct_num": 3,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is associated with [MASK].\n\nOptions:\n1. social democratic governments\n2. Arab socialism\n3. King Louis XII of France"
+    },
+    {
+        "test_id": 9,
+        "relation": "AssociatedWith",
+        "correct_feat": "Isabella d'Este, Marchioness of Mantua",
+        "options": "1. Isabella d'Este, Marchioness of Mantua\n2. Claud\n3. ancient philosophers",
+        "correct_num": 1,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is associated with [MASK].\n\nOptions:\n1. Isabella d'Este, Marchioness of Mantua\n2. Claud\n3. ancient philosophers"
+    },
+    {
+        "test_id": 10,
+        "relation": "AssociatedWith",
+        "correct_feat": "Fra Pietro da Novellara",
+        "options": "1. Thurgood Marshall\n2. Fra Pietro da Novellara\n3. the International Lagori Foundation",
+        "correct_num": 2,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is associated with [MASK].\n\nOptions:\n1. Thurgood Marshall\n2. Fra Pietro da Novellara\n3. the International Lagori Foundation"
+    },
+    {
+        "test_id": 11,
+        "relation": "AssociatedWith",
+        "correct_feat": "Raphael",
+        "options": "1. conservative liberalism\n2. Jan Von Heland\n3. Raphael",
+        "correct_num": 3,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is associated with [MASK].\n\nOptions:\n1. conservative liberalism\n2. Jan Von Heland\n3. Raphael"
+    },
+    {
+        "test_id": 12,
+        "relation": "AssociatedWith",
+        "correct_feat": "Andrea del Sarto",
+        "options": "1. Andrea del Sarto\n2. the Ottoman Empire\n3. India",
+        "correct_num": 1,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is associated with [MASK].\n\nOptions:\n1. Andrea del Sarto\n2. the Ottoman Empire\n3. India"
+    },
+    {
+        "test_id": 13,
+        "relation": "AssociatedWith",
+        "correct_feat": "Sala\u00ec",
+        "options": "1. the Roman Republic\n2. Sala\u00ec\n3. Marxist feminism",
+        "correct_num": 2,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is associated with [MASK].\n\nOptions:\n1. the Roman Republic\n2. Sala\u00ec\n3. Marxist feminism"
+    },
+    {
+        "test_id": 14,
+        "relation": "AssociatedWith",
+        "correct_feat": "Francesco Pandolfini",
+        "options": "1. the staging of public events\n2. the Battle of Leipzig in 1813\n3. Francesco Pandolfini",
+        "correct_num": 3,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is associated with [MASK].\n\nOptions:\n1. the staging of public events\n2. the Battle of Leipzig in 1813\n3. Francesco Pandolfini"
+    },
+    {
+        "test_id": 15,
+        "relation": "AssociatedWith",
+        "correct_feat": "Richard Scott, Duke of Buccleuch",
+        "options": "1. Richard Scott, Duke of Buccleuch\n2. the Bull Ring in Wexford\n3. Lex Records",
+        "correct_num": 1,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is associated with [MASK].\n\nOptions:\n1. Richard Scott, Duke of Buccleuch\n2. the Bull Ring in Wexford\n3. Lex Records"
+    },
+    {
+        "test_id": 16,
+        "relation": "AssociatedWith",
+        "correct_feat": "Lady Elizabeth Montagu",
+        "options": "1. the historic database of Twin Galaxies leader boards\n2. Lady Elizabeth Montagu\n3. blood sport",
+        "correct_num": 2,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is associated with [MASK].\n\nOptions:\n1. the historic database of Twin Galaxies leader boards\n2. Lady Elizabeth Montagu\n3. blood sport"
+    },
+    {
+        "test_id": 18,
+        "relation": "AssociatedWith",
+        "correct_feat": "the Duke and Duchess of Montagu",
+        "options": "1. the Duke and Duchess of Montagu\n2. the term Torani\n3. the Akan language",
+        "correct_num": 1,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is associated with [MASK].\n\nOptions:\n1. the Duke and Duchess of Montagu\n2. the term Torani\n3. the Akan language"
+    },
+    {
+        "test_id": 21,
+        "relation": "BelongsTo",
+        "correct_feat": "the subject depicted by Leonardo da Vinci",
+        "options": "1. the subject depicted by Leonardo da Vinci\n2. the category of individuals participating in conflicts for payment\n3. Disruptor Records",
+        "correct_num": 1,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> belongs to [MASK].\n\nOptions:\n1. the subject depicted by Leonardo da Vinci\n2. the category of individuals participating in conflicts for payment\n3. Disruptor Records"
+    },
+    {
+        "test_id": 22,
+        "relation": "ConsistsOf",
+        "correct_feat": "Mary seated in a landscape with the Christ child",
+        "options": "1. mitigation and adaptation measures\n2. Mary seated in a landscape with the Christ child\n3. Monarchism",
+        "correct_num": 2,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> consists of [MASK].\n\nOptions:\n1. mitigation and adaptation measures\n2. Mary seated in a landscape with the Christ child\n3. Monarchism"
+    },
+    {
+        "test_id": 23,
+        "relation": "ConsistsOf",
+        "correct_feat": "the Christ child gazing at a niddy-noddy",
+        "options": "1. separate opinions from five justices\n2. individuals who are outsiders to the conflict\n3. the Christ child gazing at a niddy-noddy",
+        "correct_num": 3,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> consists of [MASK].\n\nOptions:\n1. separate opinions from five justices\n2. individuals who are outsiders to the conflict\n3. the Christ child gazing at a niddy-noddy"
+    },
+    {
+        "test_id": 24,
+        "relation": "ConsistsOf",
+        "correct_feat": "a niddy-noddy",
+        "options": "1. a niddy-noddy\n2. 192 cardstock counters\n3. gathering herding style",
+        "correct_num": 1,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> consists of [MASK].\n\nOptions:\n1. a niddy-noddy\n2. 192 cardstock counters\n3. gathering herding style"
+    },
+    {
+        "test_id": 26,
+        "relation": "ConsistsOf",
+        "correct_feat": "a rocky outcrop in the foreground",
+        "options": "1. economic liberalism, political responsibility, a small state, opposition to other ideologies, and the rule of common sense\n2. a carcass that occasionally has sand packed into it to give it extra weight\n3. a rocky outcrop in the foreground",
+        "correct_num": 3,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> consists of [MASK].\n\nOptions:\n1. economic liberalism, political responsibility, a small state, opposition to other ideologies, and the rule of common sense\n2. a carcass that occasionally has sand packed into it to give it extra weight\n3. a rocky outcrop in the foreground"
+    },
+    {
+        "test_id": 30,
+        "relation": "CreatedAround",
+        "correct_feat": "1499",
+        "options": "1. 1499\n2. 1916\n3. 1785",
+        "correct_num": 1,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> was created around [MASK].\n\nOptions:\n1. 1499\n2. 1916\n3. 1785"
+    },
+    {
+        "test_id": 31,
+        "relation": "CreatedBy",
+        "correct_feat": "Leonardo da Vinci",
+        "options": "1. Bohumil Dole\u017eal\n2. Leonardo da Vinci\n3. a newspaper article",
+        "correct_num": 2,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> was created by [MASK].\n\nOptions:\n1. Bohumil Dole\u017eal\n2. Leonardo da Vinci\n3. a newspaper article"
+    },
+    {
+        "test_id": 32,
+        "relation": "CreatedFor",
+        "correct_feat": "Florimond Robertet",
+        "options": "1. individuals who qualified to play para standing tennis\n2. Armin Van Buuren\n3. Florimond Robertet",
+        "correct_num": 3,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> was created for [MASK].\n\nOptions:\n1. individuals who qualified to play para standing tennis\n2. Armin Van Buuren\n3. Florimond Robertet"
+    },
+    {
+        "test_id": 33,
+        "relation": "CreatedIn",
+        "correct_feat": "Florence",
+        "options": "1. Florence\n2. Philadelphia, Pennsylvania\n3. 1863",
+        "correct_num": 1,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> was created in [MASK].\n\nOptions:\n1. Florence\n2. Philadelphia, Pennsylvania\n3. 1863"
+    },
+    {
+        "test_id": 34,
+        "relation": "CreatedIn",
+        "correct_feat": "Milan",
+        "options": "1. Kupang\n2. Milan\n3. Sakai",
+        "correct_num": 2,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> was created in [MASK].\n\nOptions:\n1. Kupang\n2. Milan\n3. Sakai"
+    },
+    {
+        "test_id": 35,
+        "relation": "HasA",
+        "correct_feat": "a composition showing Mary seated in a landscape with the Christ child",
+        "options": "1. three estates of the realm: the nobility, the clergy, and the peasantry\n2. a nickname\n3. a composition showing Mary seated in a landscape with the Christ child",
+        "correct_num": 3,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> has [MASK].\n\nOptions:\n1. three estates of the realm: the nobility, the clergy, and the peasantry\n2. a nickname\n3. a composition showing Mary seated in a landscape with the Christ child"
+    },
+    {
+        "test_id": 36,
+        "relation": "HasA",
+        "correct_feat": "a Christ child gazing at a niddy-noddy",
+        "options": "1. a Christ child gazing at a niddy-noddy\n2. a principle called the Internal Revolution or Revolution of the Self\n3. a special 55 cent stamp",
+        "correct_num": 1,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> has [MASK].\n\nOptions:\n1. a Christ child gazing at a niddy-noddy\n2. a principle called the Internal Revolution or Revolution of the Self\n3. a special 55 cent stamp"
+    },
+    {
+        "test_id": 37,
+        "relation": "HasA",
+        "correct_feat": "a niddy-noddy",
+        "options": "1. regional, linguistic, age, cultural, racial, and gender differences\n2. a niddy-noddy\n3. seen the revival of anarchism in the mid-20th century",
+        "correct_num": 2,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> has [MASK].\n\nOptions:\n1. regional, linguistic, age, cultural, racial, and gender differences\n2. a niddy-noddy\n3. seen the revival of anarchism in the mid-20th century"
+    },
+    {
+        "test_id": 38,
+        "relation": "HasA",
+        "correct_feat": "a dynamic composition",
+        "options": "1. Royalist areas including the countryside, the Shires, and cathedral cities\n2. been both a straitjacket and a lifejacket for the ILO\n3. a dynamic composition",
+        "correct_num": 3,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> has [MASK].\n\nOptions:\n1. Royalist areas including the countryside, the Shires, and cathedral cities\n2. been both a straitjacket and a lifejacket for the ILO\n3. a dynamic composition"
+    },
+    {
+        "test_id": 39,
+        "relation": "HasA",
+        "correct_feat": "an implied narrative",
+        "options": "1. an implied narrative\n2. a Protestant majority in the province of Ulster\n3. a board size of 8x8",
+        "correct_num": 1,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> has [MASK].\n\nOptions:\n1. an implied narrative\n2. a Protestant majority in the province of Ulster\n3. a board size of 8x8"
+    },
+    {
+        "test_id": 40,
+        "relation": "HasA",
+        "correct_feat": "a vast unpopulated landscape",
+        "options": "1. playing pieces that are either golf tees or cribbage pegs\n2. a vast unpopulated landscape\n3. two brothers as its members",
+        "correct_num": 2,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> has [MASK].\n\nOptions:\n1. playing pieces that are either golf tees or cribbage pegs\n2. a vast unpopulated landscape\n3. two brothers as its members"
+    },
+    {
+        "test_id": 41,
+        "relation": "HasA",
+        "correct_feat": "a rocky outcrop in the foreground",
+        "options": "1. counters representing the German, Russian and American armies\n2. rules that may relate to the male-to-female ratio of team members and batting order in co-ed leagues\n3. a rocky outcrop in the foreground",
+        "correct_num": 3,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> has [MASK].\n\nOptions:\n1. counters representing the German, Russian and American armies\n2. rules that may relate to the male-to-female ratio of team members and batting order in co-ed leagues\n3. a rocky outcrop in the foreground"
+    },
+    {
+        "test_id": 42,
+        "relation": "HasA",
+        "correct_feat": "a watery landscape",
+        "options": "1. a watery landscape\n2. variable Confederate reinforcements\n3. cavalry positioned on each side of the infantry",
+        "correct_num": 1,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> has [MASK].\n\nOptions:\n1. a watery landscape\n2. variable Confederate reinforcements\n3. cavalry positioned on each side of the infantry"
+    },
+    {
+        "test_id": 44,
+        "relation": "HasA",
+        "correct_feat": "a bridge",
+        "options": "1. four scenario cards\n2. contestants who have 60 seconds to make as many throws as possible\n3. a bridge",
+        "correct_num": 3,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> has [MASK].\n\nOptions:\n1. four scenario cards\n2. contestants who have 60 seconds to make as many throws as possible\n3. a bridge"
+    },
+    {
+        "test_id": 45,
+        "relation": "HasFeatureOf",
+        "correct_feat": "the Christ child twisting his body away from his mother's embrace",
+        "options": "1. the Christ child twisting his body away from his mother's embrace\n2. innovations\n3. all four scenarios and their maps being joined to form a large campaign game covering all four battles from beginning to end",
+        "correct_num": 1,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is characterized by [MASK].\n\nOptions:\n1. the Christ child twisting his body away from his mother's embrace\n2. innovations\n3. all four scenarios and their maps being joined to form a large campaign game covering all four battles from beginning to end"
+    },
+    {
+        "test_id": 46,
+        "relation": "HasFeatureOf",
+        "correct_feat": "the Christ child's attention caught by her niddy-noddy",
+        "options": "1. being used in over 40 television shows and movies\n2. the Christ child's attention caught by her niddy-noddy\n3. a reception center",
+        "correct_num": 2,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is characterized by [MASK].\n\nOptions:\n1. being used in over 40 television shows and movies\n2. the Christ child's attention caught by her niddy-noddy\n3. a reception center"
+    },
+    {
+        "test_id": 47,
+        "relation": "HasFeatureOf",
+        "correct_feat": "the niddy-noddy's arms giving it the shape of a cross",
+        "options": "1. lasting influence on American music and culture\n2. combat-oriented gameplay\n3. the niddy-noddy's arms giving it the shape of a cross",
+        "correct_num": 3,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is characterized by [MASK].\n\nOptions:\n1. lasting influence on American music and culture\n2. combat-oriented gameplay\n3. the niddy-noddy's arms giving it the shape of a cross"
+    },
+    {
+        "test_id": 48,
+        "relation": "HasFeatureOf",
+        "correct_feat": "the Christ child precociously recognizing the niddy-noddy as a symbol of his destiny",
+        "options": "1. the Christ child precociously recognizing the niddy-noddy as a symbol of his destiny\n2. arguments that Marxism is a type of historical determinism\n3. potential pieces with special powers",
+        "correct_num": 1,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is characterized by [MASK].\n\nOptions:\n1. the Christ child precociously recognizing the niddy-noddy as a symbol of his destiny\n2. arguments that Marxism is a type of historical determinism\n3. potential pieces with special powers"
+    },
+    {
+        "test_id": 49,
+        "relation": "HasFeatureOf",
+        "correct_feat": "Mary's ambiguous reaction",
+        "options": "1. being a jazz duo\n2. Mary's ambiguous reaction\n3. scenarios that are reusable by other players afterward",
+        "correct_num": 2,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is characterized by [MASK].\n\nOptions:\n1. being a jazz duo\n2. Mary's ambiguous reaction\n3. scenarios that are reusable by other players afterward"
+    },
+    {
+        "test_id": 50,
+        "relation": "HasFeatureOf",
+        "correct_feat": "Mary's gesture of suspense",
+        "options": "1. the involvement of specific players like Billy Mitchell, Tim Sczerby, Steve Wiebe, Hank Chien, Robbie Lakeman, Wes Copeland, and Jeff Wolfe\n2. leaders having an Initiative rating\n3. Mary's gesture of suspense",
+        "correct_num": 3,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is characterized by [MASK].\n\nOptions:\n1. the involvement of specific players like Billy Mitchell, Tim Sczerby, Steve Wiebe, Hank Chien, Robbie Lakeman, Wes Copeland, and Jeff Wolfe\n2. leaders having an Initiative rating\n3. Mary's gesture of suspense"
+    },
+    {
+        "test_id": 51,
+        "relation": "HasFeatureOf",
+        "correct_feat": "the use of a symbol of the Passion as an object of childish play",
+        "options": "1. the use of a symbol of the Passion as an object of childish play\n2. mandatory capturing\n3. the feats of ancient champions",
+        "correct_num": 1,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is characterized by [MASK].\n\nOptions:\n1. the use of a symbol of the Passion as an object of childish play\n2. mandatory capturing\n3. the feats of ancient champions"
+    },
+    {
+        "test_id": 52,
+        "relation": "HasFeatureOf",
+        "correct_feat": "the depiction of Mary spinning",
+        "options": "1. a belief in national self-determination for Jews\n2. the depiction of Mary spinning\n3. heterogeneity",
+        "correct_num": 2,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is characterized by [MASK].\n\nOptions:\n1. a belief in national self-determination for Jews\n2. the depiction of Mary spinning\n3. heterogeneity"
+    },
+    {
+        "test_id": 53,
+        "relation": "HasFeatureOf",
+        "correct_feat": "the iconography recalling humanity's fall, its ensuing travails and its redemption through Christ's sacrifice",
+        "options": "1. a large number of operations\n2. step reductions displayed at 3 o'clock, 6 o'clock, and 9 o'clock\n3. the iconography recalling humanity's fall, its ensuing travails and its redemption through Christ's sacrifice",
+        "correct_num": 3,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is characterized by [MASK].\n\nOptions:\n1. a large number of operations\n2. step reductions displayed at 3 o'clock, 6 o'clock, and 9 o'clock\n3. the iconography recalling humanity's fall, its ensuing travails and its redemption through Christ's sacrifice"
+    },
+    {
+        "test_id": 54,
+        "relation": "HasFeatureOf",
+        "correct_feat": "figures appearing in a vast unpopulated landscape",
+        "options": "1. figures appearing in a vast unpopulated landscape\n2. its decline after the loss of Zaragoza\n3. the 4\u00d74\u00d74 board having 16 cells lying on the body diagonals",
+        "correct_num": 1,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is characterized by [MASK].\n\nOptions:\n1. figures appearing in a vast unpopulated landscape\n2. its decline after the loss of Zaragoza\n3. the 4\u00d74\u00d74 board having 16 cells lying on the body diagonals"
+    },
+    {
+        "test_id": 57,
+        "relation": "HeldIn",
+        "correct_feat": "Drumlanrig Castle",
+        "options": "1. Drumlanrig Castle\n2. a body of water\n3. the United States",
+        "correct_num": 1,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> was held in [MASK].\n\nOptions:\n1. Drumlanrig Castle\n2. a body of water\n3. the United States"
+    },
+    {
+        "test_id": 59,
+        "relation": "Influenced",
+        "correct_feat": "later High Renaissance depictions of the Madonna and Child by artists such as Raphael and Andrea del Sarto",
+        "options": "1. the Civic Democratic Party (ODS)\n2. the synth-pop bands of the 1980s\n3. later High Renaissance depictions of the Madonna and Child by artists such as Raphael and Andrea del Sarto",
+        "correct_num": 3,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> influenced [MASK].\n\nOptions:\n1. the Civic Democratic Party (ODS)\n2. the synth-pop bands of the 1980s\n3. later High Renaissance depictions of the Madonna and Child by artists such as Raphael and Andrea del Sarto"
+    },
+    {
+        "test_id": 60,
+        "relation": "InfluencedBy",
+        "correct_feat": "Leonardo's Milanese altarpiece The Virgin of the Rocks",
+        "options": "1. Leonardo's Milanese altarpiece The Virgin of the Rocks\n2. Reagan-era industrial and EBM\n3. the plaintiffs' argument that the law and judgments against their permits were flawed",
+        "correct_num": 1,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> was influenced by [MASK].\n\nOptions:\n1. Leonardo's Milanese altarpiece The Virgin of the Rocks\n2. Reagan-era industrial and EBM\n3. the plaintiffs' argument that the law and judgments against their permits were flawed"
+    },
+    {
+        "test_id": 61,
+        "relation": "InfluencedBy",
+        "correct_feat": "Leonardo's religious paintings",
+        "options": "1. the desire to refound the Sanhaja union\n2. Leonardo's religious paintings\n3. player feedback gathered by SPI's house magazine Strategy & Tactics",
+        "correct_num": 2,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> was influenced by [MASK].\n\nOptions:\n1. the desire to refound the Sanhaja union\n2. Leonardo's religious paintings\n3. player feedback gathered by SPI's house magazine Strategy & Tactics"
+    },
+    {
+        "test_id": 62,
+        "relation": "IsA",
+        "correct_feat": "a subject depicted by Leonardo da Vinci",
+        "options": "1. the pro-indigenist ethnic nationalist ideology of Chicanos\n2. a BBC Four documentary\n3. a subject depicted by Leonardo da Vinci",
+        "correct_num": 3,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is [MASK].\n\nOptions:\n1. the pro-indigenist ethnic nationalist ideology of Chicanos\n2. a BBC Four documentary\n3. a subject depicted by Leonardo da Vinci"
+    },
+    {
+        "test_id": 63,
+        "relation": "IsA",
+        "correct_feat": "a painting",
+        "options": "1. a painting\n2. a practice of giving a city the appearance of ancient Rome or Athens\n3. a fascistic ideology",
+        "correct_num": 1,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is [MASK].\n\nOptions:\n1. a painting\n2. a practice of giving a city the appearance of ancient Rome or Athens\n3. a fascistic ideology"
+    },
+    {
+        "test_id": 64,
+        "relation": "IsA",
+        "correct_feat": "a small religious painting",
+        "options": "1. a hobby\n2. a small religious painting\n3. a board game",
+        "correct_num": 2,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is [MASK].\n\nOptions:\n1. a hobby\n2. a small religious painting\n3. a board game"
+    },
+    {
+        "test_id": 66,
+        "relation": "IsA",
+        "correct_feat": "a version of the Madonna of the Yarnwinder",
+        "options": "1. a version of the Madonna of the Yarnwinder\n2. a short-range, high-performance interceptor aircraft\n3. the guiding ideology of the Revolutionary Internationalist Movement",
+        "correct_num": 1,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is [MASK].\n\nOptions:\n1. a version of the Madonna of the Yarnwinder\n2. a short-range, high-performance interceptor aircraft\n3. the guiding ideology of the Revolutionary Internationalist Movement"
+    },
+    {
+        "test_id": 67,
+        "relation": "IsA",
+        "correct_feat": "a primary painting",
+        "options": "1. a patrimony\n2. a primary painting\n3. played with one six-sided die",
+        "correct_num": 2,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is [MASK].\n\nOptions:\n1. a patrimony\n2. a primary painting\n3. played with one six-sided die"
+    },
+    {
+        "test_id": 68,
+        "relation": "IsA",
+        "correct_feat": "a work by Leonardo",
+        "options": "1. a wrestling match\n2. a board wargame for two players\n3. a work by Leonardo",
+        "correct_num": 3,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is [MASK].\n\nOptions:\n1. a wrestling match\n2. a board wargame for two players\n3. a work by Leonardo"
+    },
+    {
+        "test_id": 69,
+        "relation": "IsA",
+        "correct_feat": "an excellent thing",
+        "options": "1. an excellent thing\n2. a sport\n3. a successful duo in UK music history",
+        "correct_num": 1,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is [MASK].\n\nOptions:\n1. an excellent thing\n2. a sport\n3. a successful duo in UK music history"
+    },
+    {
+        "test_id": 70,
+        "relation": "KnownAs",
+        "correct_feat": "Madonna of the Yarnwinder",
+        "options": "1. Borinquen\n2. Madonna of the Yarnwinder\n3. the communist left",
+        "correct_num": 2,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is known as [MASK].\n\nOptions:\n1. Borinquen\n2. Madonna of the Yarnwinder\n3. the communist left"
+    },
+    {
+        "test_id": 71,
+        "relation": "KnownAs",
+        "correct_feat": "Madonna dei Fusi",
+        "options": "1. CoH\n2. 'Watermelon' in some versions\n3. Madonna dei Fusi",
+        "correct_num": 3,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is known as [MASK].\n\nOptions:\n1. CoH\n2. 'Watermelon' in some versions\n3. Madonna dei Fusi"
+    },
+    {
+        "test_id": 72,
+        "relation": "KnownAs",
+        "correct_feat": "the Buccleuch Madonna",
+        "options": "1. the Buccleuch Madonna\n2. Saljuqids\n3. winging",
+        "correct_num": 1,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is known as [MASK].\n\nOptions:\n1. the Buccleuch Madonna\n2. Saljuqids\n3. winging"
+    },
+    {
+        "test_id": 73,
+        "relation": "KnownAs",
+        "correct_feat": "the Lansdowne Madonna",
+        "options": "1. Qto\n2. the Lansdowne Madonna\n3. King Out in Sweden",
+        "correct_num": 2,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is known as [MASK].\n\nOptions:\n1. Qto\n2. the Lansdowne Madonna\n3. King Out in Sweden"
+    },
+    {
+        "test_id": 74,
+        "relation": "KnownFor",
+        "correct_feat": "its composition showing Mary seated in a landscape with the Christ child",
+        "options": "1. empowering Indigenous women within the context of Indigenous cultural values and priorities\n2. the argument that slaves are better off than the poorest non-slaves\n3. its composition showing Mary seated in a landscape with the Christ child",
+        "correct_num": 3,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is known for [MASK].\n\nOptions:\n1. empowering Indigenous women within the context of Indigenous cultural values and priorities\n2. the argument that slaves are better off than the poorest non-slaves\n3. its composition showing Mary seated in a landscape with the Christ child"
+    },
+    {
+        "test_id": 75,
+        "relation": "KnownFor",
+        "correct_feat": "the Christ child gazing at a niddy-noddy",
+        "options": "1. the Christ child gazing at a niddy-noddy\n2. clarifying the framework for Second Amendment cases\n3. their comedy career",
+        "correct_num": 1,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is known for [MASK].\n\nOptions:\n1. the Christ child gazing at a niddy-noddy\n2. clarifying the framework for Second Amendment cases\n3. their comedy career"
+    },
+    {
+        "test_id": 76,
+        "relation": "KnownFor",
+        "correct_feat": "the niddy-noddy serving as a symbol of Mary's domesticity and as a foreshadowing of the cross",
+        "options": "1. immunotherapy\n2. the niddy-noddy serving as a symbol of Mary's domesticity and as a foreshadowing of the cross\n3. challenging amateur radio operators to accurately receive and copy Morse code transmissions sent at very high speeds",
+        "correct_num": 2,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is known for [MASK].\n\nOptions:\n1. immunotherapy\n2. the niddy-noddy serving as a symbol of Mary's domesticity and as a foreshadowing of the cross\n3. challenging amateur radio operators to accurately receive and copy Morse code transmissions sent at very high speeds"
+    },
+    {
+        "test_id": 78,
+        "relation": "KnownFor",
+        "correct_feat": "its implied narrative",
+        "options": "1. its implied narrative\n2. movement along the intertidal zone of a rocky coastline\n3. its defense of human rights",
+        "correct_num": 1,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is known for [MASK].\n\nOptions:\n1. its implied narrative\n2. movement along the intertidal zone of a rocky coastline\n3. its defense of human rights"
+    },
+    {
+        "test_id": 79,
+        "relation": "KnownFor",
+        "correct_feat": "influencing later High Renaissance depictions of the Madonna and Child",
+        "options": "1. covers of popular songs\n2. influencing later High Renaissance depictions of the Madonna and Child\n3. Euroscepticism",
+        "correct_num": 2,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is known for [MASK].\n\nOptions:\n1. covers of popular songs\n2. influencing later High Renaissance depictions of the Madonna and Child\n3. Euroscepticism"
+    },
+    {
+        "test_id": 80,
+        "relation": "KnownFor",
+        "correct_feat": "the Christ child twisting his body away from his mother's embrace",
+        "options": "1. its naval warfare focus\n2. its authoritarian and totalitarian nature\n3. the Christ child twisting his body away from his mother's embrace",
+        "correct_num": 3,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is known for [MASK].\n\nOptions:\n1. its naval warfare focus\n2. its authoritarian and totalitarian nature\n3. the Christ child twisting his body away from his mother's embrace"
+    },
+    {
+        "test_id": 81,
+        "relation": "KnownFor",
+        "correct_feat": "the niddy-noddy's arms giving it the shape of a cross",
+        "options": "1. the niddy-noddy's arms giving it the shape of a cross\n2. its music\n3. winning the \"Original Song of the Year\" award at the Victoires de la Musique",
+        "correct_num": 1,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is known for [MASK].\n\nOptions:\n1. the niddy-noddy's arms giving it the shape of a cross\n2. its music\n3. winning the \"Original Song of the Year\" award at the Victoires de la Musique"
+    },
+    {
+        "test_id": 82,
+        "relation": "KnownFor",
+        "correct_feat": "the Christ child precociously recognizing the niddy-noddy as a symbol of his destiny",
+        "options": "1. the meeting of the United States Army and the Soviet Army on 25 April 1945, remembered as Elbe Day\n2. the Christ child precociously recognizing the niddy-noddy as a symbol of his destiny\n3. the FlowRider and FlowBarrel technologies",
+        "correct_num": 2,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is known for [MASK].\n\nOptions:\n1. the meeting of the United States Army and the Soviet Army on 25 April 1945, remembered as Elbe Day\n2. the Christ child precociously recognizing the niddy-noddy as a symbol of his destiny\n3. the FlowRider and FlowBarrel technologies"
+    },
+    {
+        "test_id": 83,
+        "relation": "KnownFor",
+        "correct_feat": "Mary's ambiguous reaction",
+        "options": "1. its origins in Spain\n2. a professional league that lasted through the 1950s\n3. Mary's ambiguous reaction",
+        "correct_num": 3,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is known for [MASK].\n\nOptions:\n1. its origins in Spain\n2. a professional league that lasted through the 1950s\n3. Mary's ambiguous reaction"
+    },
+    {
+        "test_id": 84,
+        "relation": "LocatedIn",
+        "correct_feat": "in the Scottish National Gallery in Edinburgh",
+        "options": "1. in the Scottish National Gallery in Edinburgh\n2. in the Gulf of Mexico\n3. in the Zagros Mountains",
+        "correct_num": 1,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is located [MASK].\n\nOptions:\n1. in the Scottish National Gallery in Edinburgh\n2. in the Gulf of Mexico\n3. in the Zagros Mountains"
+    },
+    {
+        "test_id": 85,
+        "relation": "LocatedIn",
+        "correct_feat": "in Buccleuch ancestral home in Drumlanrig Castle, Dumfries and Galloway, Scotland",
+        "options": "1. in Scotland\n2. in Buccleuch ancestral home in Drumlanrig Castle, Dumfries and Galloway, Scotland\n3. in Babylonia",
+        "correct_num": 2,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is located [MASK].\n\nOptions:\n1. in Scotland\n2. in Buccleuch ancestral home in Drumlanrig Castle, Dumfries and Galloway, Scotland\n3. in Babylonia"
+    },
+    {
+        "test_id": 86,
+        "relation": "MemberOf",
+        "correct_feat": "the French court",
+        "options": "1. the sport with a football league\n2. the Party of the Reconstruction of the National Order\n3. the French court",
+        "correct_num": 3,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is a member of [MASK].\n\nOptions:\n1. the sport with a football league\n2. the Party of the Reconstruction of the National Order\n3. the French court"
+    },
+    {
+        "test_id": 87,
+        "relation": "MemberOf",
+        "correct_feat": "Isabella d'Este's collection",
+        "options": "1. Isabella d'Este's collection\n2. Copenhagen Records\n3. ArtPeople",
+        "correct_num": 1,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is a member of [MASK].\n\nOptions:\n1. Isabella d'Este's collection\n2. Copenhagen Records\n3. ArtPeople"
+    },
+    {
+        "test_id": 88,
+        "relation": "MemberOf",
+        "correct_feat": "Leonardo's possession",
+        "options": "1. the National Council of Youth Sports\n2. Leonardo's possession\n3. the Dutch Reformed Church",
+        "correct_num": 2,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is a member of [MASK].\n\nOptions:\n1. the National Council of Youth Sports\n2. Leonardo's possession\n3. the Dutch Reformed Church"
+    },
+    {
+        "test_id": 89,
+        "relation": "MemberOf",
+        "correct_feat": "the Buccleuch collection",
+        "options": "1. the International Practical Shooting Confederation\n2. Southern California\n3. the Buccleuch collection",
+        "correct_num": 3,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is a member of [MASK].\n\nOptions:\n1. the International Practical Shooting Confederation\n2. Southern California\n3. the Buccleuch collection"
+    },
+    {
+        "test_id": 90,
+        "relation": "MemberOf",
+        "correct_feat": "the Montagu collection",
+        "options": "1. the Montagu collection\n2. activities sanctioned by the American Working Terrier Association\n3. The Communist Party",
+        "correct_num": 1,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is a member of [MASK].\n\nOptions:\n1. the Montagu collection\n2. activities sanctioned by the American Working Terrier Association\n3. The Communist Party"
+    },
+    {
+        "test_id": 92,
+        "relation": "PartOf",
+        "correct_feat": "the subject depicted by Leonardo da Vinci",
+        "options": "1. sled sports\n2. athletic theater\n3. the subject depicted by Leonardo da Vinci",
+        "correct_num": 3,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is part of [MASK].\n\nOptions:\n1. sled sports\n2. athletic theater\n3. the subject depicted by Leonardo da Vinci"
+    },
+    {
+        "test_id": 93,
+        "relation": "PartOf",
+        "correct_feat": "the Buccleuch collection",
+        "options": "1. the Buccleuch collection\n2. the framework for Second Amendment cases\n3. Simulations Publications Inc. (SPI) house magazine Strategy & Tactics Issue 56",
+        "correct_num": 1,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is part of [MASK].\n\nOptions:\n1. the Buccleuch collection\n2. the framework for Second Amendment cases\n3. Simulations Publications Inc. (SPI) house magazine Strategy & Tactics Issue 56"
+    },
+    {
+        "test_id": 94,
+        "relation": "PartOf",
+        "correct_feat": "the Montagu collection",
+        "options": "1. amateur radio\n2. the Montagu collection\n3. the American proslavery movement",
+        "correct_num": 2,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is part of [MASK].\n\nOptions:\n1. amateur radio\n2. the Montagu collection\n3. the American proslavery movement"
+    },
+    {
+        "test_id": 95,
+        "relation": "PartOf",
+        "correct_feat": "the collection of Marie-Joseph duc d\u2019Hostun et de Tallard",
+        "options": "1. the Bellevue series novels\n2. the game of softball\n3. the collection of Marie-Joseph duc d\u2019Hostun et de Tallard",
+        "correct_num": 3,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is part of [MASK].\n\nOptions:\n1. the Bellevue series novels\n2. the game of softball\n3. the collection of Marie-Joseph duc d\u2019Hostun et de Tallard"
+    },
+    {
+        "test_id": 96,
+        "relation": "PartOf",
+        "correct_feat": "Leonardo's possession",
+        "options": "1. Leonardo's possession\n2. the Hellenistic period\n3. a two-volume set with The Silmarillion",
+        "correct_num": 1,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is part of [MASK].\n\nOptions:\n1. Leonardo's possession\n2. the Hellenistic period\n3. a two-volume set with The Silmarillion"
+    },
+    {
+        "test_id": 97,
+        "relation": "ProducedBy",
+        "correct_feat": "Leonardo da Vinci",
+        "options": "1. Elvis Presley\n2. Leonardo da Vinci\n3. Simulations Canada",
+        "correct_num": 2,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> was produced by [MASK].\n\nOptions:\n1. Elvis Presley\n2. Leonardo da Vinci\n3. Simulations Canada"
+    },
+    {
+        "test_id": 98,
+        "relation": "ProducedBy",
+        "correct_feat": "a pupil",
+        "options": "1. Simulations Publications, Inc. (SPI)\n2. Filmation\n3. a pupil",
+        "correct_num": 3,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> was produced by [MASK].\n\nOptions:\n1. Simulations Publications, Inc. (SPI)\n2. Filmation\n3. a pupil"
+    },
+    {
+        "test_id": 99,
+        "relation": "PublishedAs",
+        "correct_feat": "a cartoon for a portrait of Isabella d'Este",
+        "options": "1. a cartoon for a portrait of Isabella d'Este\n2. a second EP, titled Gone\n3. the International Adaptive Standing Tennis World Championships",
+        "correct_num": 1,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> was published as [MASK].\n\nOptions:\n1. a cartoon for a portrait of Isabella d'Este\n2. a second EP, titled Gone\n3. the International Adaptive Standing Tennis World Championships"
+    },
+    {
+        "test_id": 100,
+        "relation": "PublishedIn",
+        "correct_feat": "a letter of 14 April 1501",
+        "options": "1. 1910\n2. a letter of 14 April 1501\n3. his 1975 paper Administrative Absorption of Politics in Hong Kong",
+        "correct_num": 2,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> was published in [MASK].\n\nOptions:\n1. 1910\n2. a letter of 14 April 1501\n3. his 1975 paper Administrative Absorption of Politics in Hong Kong"
+    },
+    {
+        "test_id": 102,
+        "relation": "UsedAs",
+        "correct_feat": "a symbol of Mary's domesticity",
+        "options": "1. a symbol of Mary's domesticity\n2. a hyperboloid tower\n3. a means to connect with fans",
+        "correct_num": 1,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is used as [MASK].\n\nOptions:\n1. a symbol of Mary's domesticity\n2. a hyperboloid tower\n3. a means to connect with fans"
+    },
+    {
+        "test_id": 103,
+        "relation": "UsedAs",
+        "correct_feat": "a foreshadowing of the cross",
+        "options": "1. a means to protect the nation\n2. a foreshadowing of the cross\n3. a re-recorded version",
+        "correct_num": 2,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is used as [MASK].\n\nOptions:\n1. a means to protect the nation\n2. a foreshadowing of the cross\n3. a re-recorded version"
+    },
+    {
+        "test_id": 106,
+        "relation": "UsedAs",
+        "correct_feat": "a depiction of Mary spinning",
+        "options": "1. a basis for reconstructing balanced rules\n2. a depiction of Mary spinning\n3. a foundation for a video",
+        "correct_num": 2,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is used as [MASK].\n\nOptions:\n1. a basis for reconstructing balanced rules\n2. a depiction of Mary spinning\n3. a foundation for a video"
+    },
+    {
+        "test_id": 107,
+        "relation": "UsedAs",
+        "correct_feat": "an antitype, Eve",
+        "options": "1. a cultural export of France\n2. jackets\n3. an antitype, Eve",
+        "correct_num": 3,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is used as [MASK].\n\nOptions:\n1. a cultural export of France\n2. jackets\n3. an antitype, Eve"
+    },
+    {
+        "test_id": 112,
+        "relation": "UsedFor",
+        "correct_feat": "collecting spun yarn",
+        "options": "1. supporting independent parent-administered leagues\n2. collecting spun yarn\n3. the construction of socialism within China",
+        "correct_num": 2,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is used for [MASK].\n\nOptions:\n1. supporting independent parent-administered leagues\n2. collecting spun yarn\n3. the construction of socialism within China"
+    },
+    {
+        "test_id": 113,
+        "relation": "UsedFor",
+        "correct_feat": "depicting the Madonna and Child",
+        "options": "1. maneuvering\n2. proving the uninterrupted existence of the contemporary Macedonians\n3. depicting the Madonna and Child",
+        "correct_num": 3,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is used for [MASK].\n\nOptions:\n1. maneuvering\n2. proving the uninterrupted existence of the contemporary Macedonians\n3. depicting the Madonna and Child"
+    },
+    {
+        "test_id": 114,
+        "relation": "UsedFor",
+        "correct_feat": "collecting spun yarn",
+        "options": "1. collecting spun yarn\n2. guiding global action in addressing the climate crisis\n3. league play",
+        "correct_num": 1,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is used for [MASK].\n\nOptions:\n1. collecting spun yarn\n2. guiding global action in addressing the climate crisis\n3. league play"
+    },
+    {
+        "test_id": 115,
+        "relation": "UsedFor",
+        "correct_feat": "a portrait of Isabella d'Este",
+        "options": "1. encouraging mutual aid\n2. a portrait of Isabella d'Este\n3. the political organization of the Spanish nation",
+        "correct_num": 2,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is used for [MASK].\n\nOptions:\n1. encouraging mutual aid\n2. a portrait of Isabella d'Este\n3. the political organization of the Spanish nation"
+    },
+    {
+        "test_id": 117,
+        "relation": "UsedIn",
+        "correct_feat": "Leonardo's religious paintings",
+        "options": "1. Leonardo's religious paintings\n2. the Paralympics\n3. armed revolutions",
+        "correct_num": 1,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is used in [MASK].\n\nOptions:\n1. Leonardo's religious paintings\n2. the Paralympics\n3. armed revolutions"
+    },
+    {
+        "test_id": 118,
+        "relation": "UsedIn",
+        "correct_feat": "High Renaissance depictions of the Madonna and Child",
+        "options": "1. a small box\n2. High Renaissance depictions of the Madonna and Child\n3. Ptolemaic Egypt",
+        "correct_num": 2,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is used in [MASK].\n\nOptions:\n1. a small box\n2. High Renaissance depictions of the Madonna and Child\n3. Ptolemaic Egypt"
+    },
+    {
+        "test_id": 119,
+        "relation": "UsedIn",
+        "correct_feat": "the Buccleuch Madonna",
+        "options": "1. clubs\n2. the United States\n3. the Buccleuch Madonna",
+        "correct_num": 3,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is used in [MASK].\n\nOptions:\n1. clubs\n2. the United States\n3. the Buccleuch Madonna"
+    },
+    {
+        "test_id": 121,
+        "relation": "UsedIn",
+        "correct_feat": "the Benois Madonna",
+        "options": "1. a solitaire game\n2. the Benois Madonna\n3. the post-war period by the Golden Dawn party",
+        "correct_num": 2,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is used in [MASK].\n\nOptions:\n1. a solitaire game\n2. the Benois Madonna\n3. the post-war period by the Golden Dawn party"
+    },
+    {
+        "test_id": 122,
+        "relation": "UsedIn",
+        "correct_feat": "the Virgin and Child with St. Anne",
+        "options": "1. the Royal Australian Navy\n2. medical departments\n3. the Virgin and Child with St. Anne",
+        "correct_num": 3,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is used in [MASK].\n\nOptions:\n1. the Royal Australian Navy\n2. medical departments\n3. the Virgin and Child with St. Anne"
+    },
+    {
+        "test_id": 123,
+        "relation": "UsedIn",
+        "correct_feat": "the Buccleuch painting",
+        "options": "1. the Buccleuch painting\n2. playing the game\n3. the absence of SS501 members Kim Hyun-joong and Park Jung-min",
+        "correct_num": 1,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is used in [MASK].\n\nOptions:\n1. the Buccleuch painting\n2. playing the game\n3. the absence of SS501 members Kim Hyun-joong and Park Jung-min"
+    },
+    {
+        "test_id": 124,
+        "relation": "UsedIn",
+        "correct_feat": "the Lansdowne painting",
+        "options": "1. United Kingdom Flyball League rules\n2. the Lansdowne painting\n3. AWTA earthdog den trials",
+        "correct_num": 2,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is used in [MASK].\n\nOptions:\n1. United Kingdom Flyball League rules\n2. the Lansdowne painting\n3. AWTA earthdog den trials"
+    },
+    {
+        "test_id": 125,
+        "relation": "UsedTo",
+        "correct_feat": "collect spun yarn",
+        "options": "1. hit or touch the seekers with the ball\n2. earn money\n3. collect spun yarn",
+        "correct_num": 3,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is used to [MASK].\n\nOptions:\n1. hit or touch the seekers with the ball\n2. earn money\n3. collect spun yarn"
+    },
+    {
+        "test_id": 126,
+        "relation": "UsedTo",
+        "correct_feat": "foreshadow the cross",
+        "options": "1. foreshadow the cross\n2. premiere a documentary\n3. abolish the regularized institution of aggressive coercion",
+        "correct_num": 1,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is used to [MASK].\n\nOptions:\n1. foreshadow the cross\n2. premiere a documentary\n3. abolish the regularized institution of aggressive coercion"
+    },
+    {
+        "test_id": 127,
+        "relation": "UsedTo",
+        "correct_feat": "represent Mary's domesticity",
+        "options": "1. simulate live coursing\n2. represent Mary's domesticity\n3. generate a solution",
+        "correct_num": 2,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is used to [MASK].\n\nOptions:\n1. simulate live coursing\n2. represent Mary's domesticity\n3. generate a solution"
+    },
+    {
+        "test_id": 128,
+        "relation": "UsedTo",
+        "correct_feat": "recall humanity's fall",
+        "options": "1. protect the climate system\n2. invade Celebes\n3. recall humanity's fall",
+        "correct_num": 3,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is used to [MASK].\n\nOptions:\n1. protect the climate system\n2. invade Celebes\n3. recall humanity's fall"
+    },
+    {
+        "test_id": 129,
+        "relation": "UsedTo",
+        "correct_feat": "recall humanity's ensuing travails",
+        "options": "1. recall humanity's ensuing travails\n2. awaken pawns\n3. move another man",
+        "correct_num": 1,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is used to [MASK].\n\nOptions:\n1. recall humanity's ensuing travails\n2. awaken pawns\n3. move another man"
+    },
+    {
+        "test_id": 130,
+        "relation": "UsedTo",
+        "correct_feat": "recall humanity's redemption through Christ's sacrifice",
+        "options": "1. secede from Mexico\n2. recall humanity's redemption through Christ's sacrifice\n3. seize power through workers' uprisings",
+        "correct_num": 2,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is used to [MASK].\n\nOptions:\n1. secede from Mexico\n2. recall humanity's redemption through Christ's sacrifice\n3. seize power through workers' uprisings"
+    },
+    {
+        "test_id": 132,
+        "relation": "UsedTo",
+        "correct_feat": "depict the figures of Mary and Christ twice in the same painting",
+        "options": "1. depict the figures of Mary and Christ twice in the same painting\n2. manipulate the opponent's position\n3. play with AI opponents",
+        "correct_num": 1,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is used to [MASK].\n\nOptions:\n1. depict the figures of Mary and Christ twice in the same painting\n2. manipulate the opponent's position\n3. play with AI opponents"
+    },
+    {
+        "test_id": 133,
+        "relation": "UsedTo",
+        "correct_feat": "plan an architectural structure with an arched opening",
+        "options": "1. maintain white supremacy\n2. plan an architectural structure with an arched opening\n3. attack Allied shipping",
+        "correct_num": 2,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is used to [MASK].\n\nOptions:\n1. maintain white supremacy\n2. plan an architectural structure with an arched opening\n3. attack Allied shipping"
+    }
+]

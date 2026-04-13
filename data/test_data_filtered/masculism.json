@@ -1,0 +1,866 @@
+[
+    {
+        "test_id": 0,
+        "relation": "About",
+        "correct_feat": "ideologies and socio-political movements that seek to eliminate discrimination against men",
+        "options": "1. ideologies and socio-political movements that seek to eliminate discrimination against men\n2. the Bancroft Treaties and their eventual abandonment\n3. folk rock",
+        "correct_num": 1,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is about [MASK].\n\nOptions:\n1. ideologies and socio-political movements that seek to eliminate discrimination against men\n2. the Bancroft Treaties and their eventual abandonment\n3. folk rock"
+    },
+    {
+        "test_id": 1,
+        "relation": "About",
+        "correct_feat": "the promotion of masculine ideals",
+        "options": "1. the problem of lust gone astray\n2. the promotion of masculine ideals\n3. celebrating Latino and, more specifically, Chicano culture and influence at The University of Southern California and in Los Angeles",
+        "correct_num": 2,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is about [MASK].\n\nOptions:\n1. the problem of lust gone astray\n2. the promotion of masculine ideals\n3. celebrating Latino and, more specifically, Chicano culture and influence at The University of Southern California and in Los Angeles"
+    },
+    {
+        "test_id": 2,
+        "relation": "About",
+        "correct_feat": "the men's rights movement",
+        "options": "1. a particular type of icon of the Theotokos (Virgin Mary)\n2. the Interstate Commerce Act\n3. the men's rights movement",
+        "correct_num": 3,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is about [MASK].\n\nOptions:\n1. a particular type of icon of the Theotokos (Virgin Mary)\n2. the Interstate Commerce Act\n3. the men's rights movement"
+    },
+    {
+        "test_id": 3,
+        "relation": "About",
+        "correct_feat": "the men's movement",
+        "options": "1. the men's movement\n2. a libel case against the Church of Scientology\n3. a competition or test of the working abilities of herding dogs",
+        "correct_num": 1,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is about [MASK].\n\nOptions:\n1. the men's movement\n2. a libel case against the Church of Scientology\n3. a competition or test of the working abilities of herding dogs"
+    },
+    {
+        "test_id": 4,
+        "relation": "About",
+        "correct_feat": "antifeminism",
+        "options": "1. the rock era\n2. antifeminism\n3. abstract strategy games among the mancala family of board games",
+        "correct_num": 2,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is about [MASK].\n\nOptions:\n1. the rock era\n2. antifeminism\n3. abstract strategy games among the mancala family of board games"
+    },
+    {
+        "test_id": 5,
+        "relation": "About",
+        "correct_feat": "machismo",
+        "options": "1. Indian music composers Ajay Ashok Gogavale and Atul Ashok Gogavale\n2. a pop rock duo\n3. machismo",
+        "correct_num": 3,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is about [MASK].\n\nOptions:\n1. Indian music composers Ajay Ashok Gogavale and Atul Ashok Gogavale\n2. a pop rock duo\n3. machismo"
+    },
+    {
+        "test_id": 6,
+        "relation": "Affects",
+        "correct_feat": "men",
+        "options": "1. men\n2. voter turnout for elections\n3. the validity of public-carry gun control laws",
+        "correct_num": 1,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> affects [MASK].\n\nOptions:\n1. men\n2. voter turnout for elections\n3. the validity of public-carry gun control laws"
+    },
+    {
+        "test_id": 7,
+        "relation": "Affects",
+        "correct_feat": "women",
+        "options": "1. the governance of Khorasan\n2. women\n3. the Dana Farber Cancer Institute",
+        "correct_num": 2,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> affects [MASK].\n\nOptions:\n1. the governance of Khorasan\n2. women\n3. the Dana Farber Cancer Institute"
+    },
+    {
+        "test_id": 8,
+        "relation": "Affects",
+        "correct_feat": "children",
+        "options": "1. the Steeplechase Cancer Center at the Somerset Medical Center\n2. the anime series SSSS.Gridman\n3. children",
+        "correct_num": 3,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> affects [MASK].\n\nOptions:\n1. the Steeplechase Cancer Center at the Somerset Medical Center\n2. the anime series SSSS.Gridman\n3. children"
+    },
+    {
+        "test_id": 9,
+        "relation": "Affects",
+        "correct_feat": "families",
+        "options": "1. families\n2. the way dogs are handled\n3. the Interstate Commerce Commission's enforcement of bus desegregation rulings",
+        "correct_num": 1,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> affects [MASK].\n\nOptions:\n1. families\n2. the way dogs are handled\n3. the Interstate Commerce Commission's enforcement of bus desegregation rulings"
+    },
+    {
+        "test_id": 10,
+        "relation": "Affects",
+        "correct_feat": "the nation",
+        "options": "1. the working ability and instinct of terriers and Dachshunds\n2. the nation\n3. the Soviet Union",
+        "correct_num": 2,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> affects [MASK].\n\nOptions:\n1. the working ability and instinct of terriers and Dachshunds\n2. the nation\n3. the Soviet Union"
+    },
+    {
+        "test_id": 11,
+        "relation": "Affects",
+        "correct_feat": "the planet",
+        "options": "1. the compelling interest of states to protect the public by restricting possession of guns in public spaces\n2. a patient who is taking medicine to prevent seizures\n3. the planet",
+        "correct_num": 3,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> affects [MASK].\n\nOptions:\n1. the compelling interest of states to protect the public by restricting possession of guns in public spaces\n2. a patient who is taking medicine to prevent seizures\n3. the planet"
+    },
+    {
+        "test_id": 12,
+        "relation": "AssociatedWith",
+        "correct_feat": "the men's rights movement",
+        "options": "1. the men's rights movement\n2. the 2nd millennium\n3. the Feast of the Epiphany",
+        "correct_num": 1,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is associated with [MASK].\n\nOptions:\n1. the men's rights movement\n2. the 2nd millennium\n3. the Feast of the Epiphany"
+    },
+    {
+        "test_id": 13,
+        "relation": "AssociatedWith",
+        "correct_feat": "the men's movement",
+        "options": "1. the Harry E. Harris Sport of Kings Four-Year-Old Hurdle Stakes\n2. the men's movement\n3. Lex Records",
+        "correct_num": 2,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is associated with [MASK].\n\nOptions:\n1. the Harry E. Harris Sport of Kings Four-Year-Old Hurdle Stakes\n2. the men's movement\n3. Lex Records"
+    },
+    {
+        "test_id": 14,
+        "relation": "AssociatedWith",
+        "correct_feat": "antifeminism",
+        "options": "1. dog training regimes\n2. pest control\n3. antifeminism",
+        "correct_num": 3,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is associated with [MASK].\n\nOptions:\n1. dog training regimes\n2. pest control\n3. antifeminism"
+    },
+    {
+        "test_id": 15,
+        "relation": "AssociatedWith",
+        "correct_feat": "machismo",
+        "options": "1. machismo\n2. generative grammar\n3. India",
+        "correct_num": 1,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is associated with [MASK].\n\nOptions:\n1. machismo\n2. generative grammar\n3. India"
+    },
+    {
+        "test_id": 16,
+        "relation": "AssociatedWith",
+        "correct_feat": "the opposition of misogynist men to women's rights",
+        "options": "1. the four canonical Gospels\n2. the opposition of misogynist men to women's rights\n3. Rus'",
+        "correct_num": 2,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is associated with [MASK].\n\nOptions:\n1. the four canonical Gospels\n2. the opposition of misogynist men to women's rights\n3. Rus'"
+    },
+    {
+        "test_id": 17,
+        "relation": "AssociatedWith",
+        "correct_feat": "men's collective political and cultural actions on behalf of their own sex",
+        "options": "1. the Feast of the Epiphany\n2. Omaha, Nebraska\n3. men's collective political and cultural actions on behalf of their own sex",
+        "correct_num": 3,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is associated with [MASK].\n\nOptions:\n1. the Feast of the Epiphany\n2. Omaha, Nebraska\n3. men's collective political and cultural actions on behalf of their own sex"
+    },
+    {
+        "test_id": 18,
+        "relation": "AssociatedWith",
+        "correct_feat": "the sexual politics of androcentric cultural discourses",
+        "options": "1. the sexual politics of androcentric cultural discourses\n2. Joseph Glanvill\n3. drag hunting",
+        "correct_num": 1,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is associated with [MASK].\n\nOptions:\n1. the sexual politics of androcentric cultural discourses\n2. Joseph Glanvill\n3. drag hunting"
+    },
+    {
+        "test_id": 19,
+        "relation": "AssociatedWith",
+        "correct_feat": "men who opposed women's suffrage",
+        "options": "1. moving images\n2. men who opposed women's suffrage\n3. Peter D\u00fcring on drums",
+        "correct_num": 2,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is associated with [MASK].\n\nOptions:\n1. moving images\n2. men who opposed women's suffrage\n3. Peter D\u00fcring on drums"
+    },
+    {
+        "test_id": 20,
+        "relation": "AssociatedWith",
+        "correct_feat": "women who collaborated with men opposing women's suffrage",
+        "options": "1. Sprite TV commercial\n2. clock towers\n3. women who collaborated with men opposing women's suffrage",
+        "correct_num": 3,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is associated with [MASK].\n\nOptions:\n1. Sprite TV commercial\n2. clock towers\n3. women who collaborated with men opposing women's suffrage"
+    },
+    {
+        "test_id": 22,
+        "relation": "BelongsTo",
+        "correct_feat": "ideologies",
+        "options": "1. the British Museum\n2. ideologies\n3. the nave of the church",
+        "correct_num": 2,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> belongs to [MASK].\n\nOptions:\n1. the British Museum\n2. ideologies\n3. the nave of the church"
+    },
+    {
+        "test_id": 23,
+        "relation": "BelongsTo",
+        "correct_feat": "socio-political movements",
+        "options": "1. the music industry\n2. the Breede River\n3. socio-political movements",
+        "correct_num": 3,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> belongs to [MASK].\n\nOptions:\n1. the music industry\n2. the Breede River\n3. socio-political movements"
+    },
+    {
+        "test_id": 24,
+        "relation": "CausedBy",
+        "correct_feat": "a decline of masculine values",
+        "options": "1. a decline of masculine values\n2. concerns about the influence of race and financial resources on sentencing outcomes\n3. the effects of recreational drugs",
+        "correct_num": 1,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is caused by [MASK].\n\nOptions:\n1. a decline of masculine values\n2. concerns about the influence of race and financial resources on sentencing outcomes\n3. the effects of recreational drugs"
+    },
+    {
+        "test_id": 25,
+        "relation": "ConsistsOf",
+        "correct_feat": "ideologies",
+        "options": "1. a death oracle given to Adam\n2. ideologies\n3. 100 counters",
+        "correct_num": 2,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> consists of [MASK].\n\nOptions:\n1. a death oracle given to Adam\n2. ideologies\n3. 100 counters"
+    },
+    {
+        "test_id": 26,
+        "relation": "ConsistsOf",
+        "correct_feat": "socio-political movements",
+        "options": "1. several thousand troops\n2. a football that is 68\u201370 cm in circumference\n3. socio-political movements",
+        "correct_num": 3,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> consists of [MASK].\n\nOptions:\n1. several thousand troops\n2. a football that is 68\u201370 cm in circumference\n3. socio-political movements"
+    },
+    {
+        "test_id": 27,
+        "relation": "CreatedBy",
+        "correct_feat": "Charlotte Perkins Gilman",
+        "options": "1. Charlotte Perkins Gilman\n2. Counter-Strike 2\n3. the Call of Duty series",
+        "correct_num": 1,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> was created by [MASK].\n\nOptions:\n1. Charlotte Perkins Gilman\n2. Counter-Strike 2\n3. the Call of Duty series"
+    },
+    {
+        "test_id": 28,
+        "relation": "HasA",
+        "correct_feat": "a desire for equal rights for men",
+        "options": "1. groupers\n2. a desire for equal rights for men\n3. a very strong wooden shaft and a heavy metal head",
+        "correct_num": 2,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> has [MASK].\n\nOptions:\n1. groupers\n2. a desire for equal rights for men\n3. a very strong wooden shaft and a heavy metal head"
+    },
+    {
+        "test_id": 29,
+        "relation": "HasA",
+        "correct_feat": "militant calls for the total abolition of women's rights",
+        "options": "1. an empty casket at the foot of the bed\n2. a pattern of parallel, diagonal ribs\n3. militant calls for the total abolition of women's rights",
+        "correct_num": 3,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> has [MASK].\n\nOptions:\n1. an empty casket at the foot of the bed\n2. a pattern of parallel, diagonal ribs\n3. militant calls for the total abolition of women's rights"
+    },
+    {
+        "test_id": 30,
+        "relation": "HasA",
+        "correct_feat": "a belief in the inherent superiority of men over women",
+        "options": "1. a belief in the inherent superiority of men over women\n2. an album titled Trop d'amour\n3. a crowd shouting 'Hosanna!'",
+        "correct_num": 1,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> has [MASK].\n\nOptions:\n1. a belief in the inherent superiority of men over women\n2. an album titled Trop d'amour\n3. a crowd shouting 'Hosanna!'"
+    },
+    {
+        "test_id": 31,
+        "relation": "HasA",
+        "correct_feat": "a resistance to gender equality as incompatible with Christian values",
+        "options": "1. a section painted blue for the next President in front of the reflecting pool\n2. a resistance to gender equality as incompatible with Christian values\n3. a second international album titled Dangerous and Moving",
+        "correct_num": 2,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> has [MASK].\n\nOptions:\n1. a section painted blue for the next President in front of the reflecting pool\n2. a resistance to gender equality as incompatible with Christian values\n3. a second international album titled Dangerous and Moving"
+    },
+    {
+        "test_id": 33,
+        "relation": "HasA",
+        "correct_feat": "a justification of male domination in society",
+        "options": "1. a justification of male domination in society\n2. characteristics that are sometimes called 'semifeudal'\n3. a niche",
+        "correct_num": 1,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> has [MASK].\n\nOptions:\n1. a justification of male domination in society\n2. characteristics that are sometimes called 'semifeudal'\n3. a niche"
+    },
+    {
+        "test_id": 34,
+        "relation": "HasA",
+        "correct_feat": "a belief that men suffer from discrimination",
+        "options": "1. a Showdown Phase\n2. a belief that men suffer from discrimination\n3. a king-piece",
+        "correct_num": 2,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> has [MASK].\n\nOptions:\n1. a Showdown Phase\n2. a belief that men suffer from discrimination\n3. a king-piece"
+    },
+    {
+        "test_id": 35,
+        "relation": "HasA",
+        "correct_feat": "a belief that men need to reclaim their rightful status as men",
+        "options": "1. dimension added to the shallow stage for the figures\n2. a 6-sided die\n3. a belief that men need to reclaim their rightful status as men",
+        "correct_num": 3,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> has [MASK].\n\nOptions:\n1. dimension added to the shallow stage for the figures\n2. a 6-sided die\n3. a belief that men need to reclaim their rightful status as men"
+    },
+    {
+        "test_id": 36,
+        "relation": "HasA",
+        "correct_feat": "a belief that there is a fundamental difference between men and women",
+        "options": "1. a belief that there is a fundamental difference between men and women\n2. a death toll estimate ranging from 2.28 to 7.71 million\n3. a country path that broadens into a road and joins with the city road",
+        "correct_num": 1,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> has [MASK].\n\nOptions:\n1. a belief that there is a fundamental difference between men and women\n2. a death toll estimate ranging from 2.28 to 7.71 million\n3. a country path that broadens into a road and joins with the city road"
+    },
+    {
+        "test_id": 37,
+        "relation": "HasA",
+        "correct_feat": "a rejection of feminist arguments that male\u2013female relationships are political constructs",
+        "options": "1. a 15th-century Byzantine icon\n2. a rejection of feminist arguments that male\u2013female relationships are political constructs\n3. two brothers as its members",
+        "correct_num": 2,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> has [MASK].\n\nOptions:\n1. a 15th-century Byzantine icon\n2. a rejection of feminist arguments that male\u2013female relationships are political constructs\n3. two brothers as its members"
+    },
+    {
+        "test_id": 38,
+        "relation": "HasFeatureOf",
+        "correct_feat": "the opposition of misogynist men to women's rights",
+        "options": "1. the Factory division being restricted to iron sights on handguns and shotguns\n2. the movement of the rider derived from the water flowing over the stationary surface\n3. the opposition of misogynist men to women's rights",
+        "correct_num": 3,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is characterized by [MASK].\n\nOptions:\n1. the Factory division being restricted to iron sights on handguns and shotguns\n2. the movement of the rider derived from the water flowing over the stationary surface\n3. the opposition of misogynist men to women's rights"
+    },
+    {
+        "test_id": 39,
+        "relation": "HasFeatureOf",
+        "correct_feat": "men's collective political and cultural actions on behalf of their own sex",
+        "options": "1. men's collective political and cultural actions on behalf of their own sex\n2. local fishermen\n3. manipulated cherry stones being found on the spitting range",
+        "correct_num": 1,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is characterized by [MASK].\n\nOptions:\n1. men's collective political and cultural actions on behalf of their own sex\n2. local fishermen\n3. manipulated cherry stones being found on the spitting range"
+    },
+    {
+        "test_id": 40,
+        "relation": "HasFeatureOf",
+        "correct_feat": "the sexual politics of androcentric cultural discourses",
+        "options": "1. its message concerned with Venezuela's social present\n2. the sexual politics of androcentric cultural discourses\n3. being the first depiction of the Paulista Avenue",
+        "correct_num": 2,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is characterized by [MASK].\n\nOptions:\n1. its message concerned with Venezuela's social present\n2. the sexual politics of androcentric cultural discourses\n3. being the first depiction of the Paulista Avenue"
+    },
+    {
+        "test_id": 41,
+        "relation": "HasFeatureOf",
+        "correct_feat": "the ideology asserting that women and men should have different roles and rights owing to fundamental differences between them",
+        "options": "1. a plot following a failed attempt by the Rebel Alliance to destroy the second Death Star\n2. a king that started in the centre\n3. the ideology asserting that women and men should have different roles and rights owing to fundamental differences between them",
+        "correct_num": 3,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is characterized by [MASK].\n\nOptions:\n1. a plot following a failed attempt by the Rebel Alliance to destroy the second Death Star\n2. a king that started in the centre\n3. the ideology asserting that women and men should have different roles and rights owing to fundamental differences between them"
+    },
+    {
+        "test_id": 42,
+        "relation": "HasFeatureOf",
+        "correct_feat": "the ideology justifying male domination in society",
+        "options": "1. the ideology justifying male domination in society\n2. faithful adherence to the Byzantine pattern\n3. the carts being usually themed",
+        "correct_num": 1,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is characterized by [MASK].\n\nOptions:\n1. the ideology justifying male domination in society\n2. faithful adherence to the Byzantine pattern\n3. the carts being usually themed"
+    },
+    {
+        "test_id": 43,
+        "relation": "HasFeatureOf",
+        "correct_feat": "the ethos of the early gender-egalitarian men's movement",
+        "options": "1. its conditions\n2. the ethos of the early gender-egalitarian men's movement\n3. being the longest board game ever produced",
+        "correct_num": 2,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is characterized by [MASK].\n\nOptions:\n1. its conditions\n2. the ethos of the early gender-egalitarian men's movement\n3. being the longest board game ever produced"
+    },
+    {
+        "test_id": 44,
+        "relation": "HasFeatureOf",
+        "correct_feat": "the ideology of patriarchy",
+        "options": "1. being used in over 40 television shows and movies\n2. the shouting of 'Blessed is he who comes in the name of the Lord!'\n3. the ideology of patriarchy",
+        "correct_num": 3,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is characterized by [MASK].\n\nOptions:\n1. being used in over 40 television shows and movies\n2. the shouting of 'Blessed is he who comes in the name of the Lord!'\n3. the ideology of patriarchy"
+    },
+    {
+        "test_id": 45,
+        "relation": "HasFeatureOf",
+        "correct_feat": "antifeminism",
+        "options": "1. antifeminism\n2. lasting influence on American music and culture\n3. variations played throughout India",
+        "correct_num": 1,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is characterized by [MASK].\n\nOptions:\n1. antifeminism\n2. lasting influence on American music and culture\n3. variations played throughout India"
+    },
+    {
+        "test_id": 46,
+        "relation": "HasFeatureOf",
+        "correct_feat": "the belief that social ills are caused by a decline of masculine values",
+        "options": "1. slight variations as to the layout of the game, number of players and strategy of play\n2. the belief that social ills are caused by a decline of masculine values\n3. the Christ child precociously recognizing the niddy-noddy as a symbol of his destiny",
+        "correct_num": 2,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is characterized by [MASK].\n\nOptions:\n1. slight variations as to the layout of the game, number of players and strategy of play\n2. the belief that social ills are caused by a decline of masculine values\n3. the Christ child precociously recognizing the niddy-noddy as a symbol of his destiny"
+    },
+    {
+        "test_id": 47,
+        "relation": "HasFeatureOf",
+        "correct_feat": "the belief that its adherents see female domination",
+        "options": "1. being a jazz duo\n2. its military camps\n3. the belief that its adherents see female domination",
+        "correct_num": 3,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is characterized by [MASK].\n\nOptions:\n1. being a jazz duo\n2. its military camps\n3. the belief that its adherents see female domination"
+    },
+    {
+        "test_id": 48,
+        "relation": "InfluencedBy",
+        "correct_feat": "third-wave feminism",
+        "options": "1. third-wave feminism\n2. Napoleon's Last Battles\n3. the Indian game Pachisi",
+        "correct_num": 1,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> was influenced by [MASK].\n\nOptions:\n1. third-wave feminism\n2. Napoleon's Last Battles\n3. the Indian game Pachisi"
+    },
+    {
+        "test_id": 51,
+        "relation": "IsA",
+        "correct_feat": "an ideology",
+        "options": "1. an ideology\n2. high-energy X-rays\n3. a sport",
+        "correct_num": 1,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is [MASK].\n\nOptions:\n1. an ideology\n2. high-energy X-rays\n3. a sport"
+    },
+    {
+        "test_id": 52,
+        "relation": "IsA",
+        "correct_feat": "a socio-political movement",
+        "options": "1. a Roman Catholic Marian title\n2. a socio-political movement\n3. a game that is mentioned in James Joyce's Ulysses",
+        "correct_num": 2,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is [MASK].\n\nOptions:\n1. a Roman Catholic Marian title\n2. a socio-political movement\n3. a game that is mentioned in James Joyce's Ulysses"
+    },
+    {
+        "test_id": 53,
+        "relation": "IsA",
+        "correct_feat": "the men's rights movement",
+        "options": "1. a mural\n2. a Byzantine palladium\n3. the men's rights movement",
+        "correct_num": 3,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is [MASK].\n\nOptions:\n1. a mural\n2. a Byzantine palladium\n3. the men's rights movement"
+    },
+    {
+        "test_id": 54,
+        "relation": "IsA",
+        "correct_feat": "the men's movement",
+        "options": "1. the men's movement\n2. a strategy board game\n3. a massive company-level game",
+        "correct_num": 1,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is [MASK].\n\nOptions:\n1. the men's movement\n2. a strategy board game\n3. a massive company-level game"
+    },
+    {
+        "test_id": 55,
+        "relation": "IsA",
+        "correct_feat": "antifeminism",
+        "options": "1. a short-range, high-performance interceptor aircraft\n2. antifeminism\n3. a painkiller headache",
+        "correct_num": 2,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is [MASK].\n\nOptions:\n1. a short-range, high-performance interceptor aircraft\n2. antifeminism\n3. a painkiller headache"
+    },
+    {
+        "test_id": 56,
+        "relation": "IsA",
+        "correct_feat": "machismo",
+        "options": "1. a maritime, hunter-gatherer society\n2. a common sight on the streets of London\n3. machismo",
+        "correct_num": 3,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is [MASK].\n\nOptions:\n1. a maritime, hunter-gatherer society\n2. a common sight on the streets of London\n3. machismo"
+    },
+    {
+        "test_id": 57,
+        "relation": "IsA",
+        "correct_feat": "a male counterpart to feminism",
+        "options": "1. a male counterpart to feminism\n2. a sport with a history dating back to at least the eighth century in England\n3. a tradition",
+        "correct_num": 1,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is [MASK].\n\nOptions:\n1. a male counterpart to feminism\n2. a sport with a history dating back to at least the eighth century in England\n3. a tradition"
+    },
+    {
+        "test_id": 58,
+        "relation": "IsA",
+        "correct_feat": "a form of antifeminism",
+        "options": "1. a heated political debate\n2. a form of antifeminism\n3. a music EP",
+        "correct_num": 2,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is [MASK].\n\nOptions:\n1. a heated political debate\n2. a form of antifeminism\n3. a music EP"
+    },
+    {
+        "test_id": 59,
+        "relation": "IsA",
+        "correct_feat": "a variation of masculinism",
+        "options": "1. a culturally Arabized, Sunni Muslim dynasty\n2. a spectacular mural\n3. a variation of masculinism",
+        "correct_num": 3,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is [MASK].\n\nOptions:\n1. a culturally Arabized, Sunni Muslim dynasty\n2. a spectacular mural\n3. a variation of masculinism"
+    },
+    {
+        "test_id": 61,
+        "relation": "KnownAs",
+        "correct_feat": "masculism",
+        "options": "1. a stock dog trial\n2. masculism\n3. the case that led to a moratorium on capital punishment",
+        "correct_num": 2,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is known as [MASK].\n\nOptions:\n1. a stock dog trial\n2. masculism\n3. the case that led to a moratorium on capital punishment"
+    },
+    {
+        "test_id": 62,
+        "relation": "KnownAs",
+        "correct_feat": "masculinism",
+        "options": "1. \"Swedes and Russians\"\n2. \"game of the gospels\"\n3. masculinism",
+        "correct_num": 3,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is known as [MASK].\n\nOptions:\n1. \"Swedes and Russians\"\n2. \"game of the gospels\"\n3. masculinism"
+    },
+    {
+        "test_id": 63,
+        "relation": "KnownAs",
+        "correct_feat": "the men's rights movement",
+        "options": "1. the men's rights movement\n2. a stock dog trial\n3. Othello",
+        "correct_num": 1,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is known as [MASK].\n\nOptions:\n1. the men's rights movement\n2. a stock dog trial\n3. Othello"
+    },
+    {
+        "test_id": 64,
+        "relation": "KnownAs",
+        "correct_feat": "the men's movement",
+        "options": "1. Chinese handball\n2. the men's movement\n3. the Feast of the Presentation of the Lord",
+        "correct_num": 2,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is known as [MASK].\n\nOptions:\n1. Chinese handball\n2. the men's movement\n3. the Feast of the Presentation of the Lord"
+    },
+    {
+        "test_id": 65,
+        "relation": "KnownAs",
+        "correct_feat": "antifeminism",
+        "options": "1. \"Touch and Tail football\" in its early history\n2. CSNY\n3. antifeminism",
+        "correct_num": 3,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is known as [MASK].\n\nOptions:\n1. \"Touch and Tail football\" in its early history\n2. CSNY\n3. antifeminism"
+    },
+    {
+        "test_id": 66,
+        "relation": "KnownAs",
+        "correct_feat": "machismo",
+        "options": "1. machismo\n2. Adaptive Standing Tennis\n3. the House of Piast",
+        "correct_num": 1,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is known as [MASK].\n\nOptions:\n1. machismo\n2. Adaptive Standing Tennis\n3. the House of Piast"
+    },
+    {
+        "test_id": 67,
+        "relation": "KnownAs",
+        "correct_feat": "virism",
+        "options": "1. Tenis Adaptivo de Pie\n2. virism\n3. \"upper Pankration\" when fought standing",
+        "correct_num": 2,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is known as [MASK].\n\nOptions:\n1. Tenis Adaptivo de Pie\n2. virism\n3. \"upper Pankration\" when fought standing"
+    },
+    {
+        "test_id": 68,
+        "relation": "KnownAs",
+        "correct_feat": "meninism",
+        "options": "1. Madonna of St. Alexis\n2. the Great North River Tug Boat Race and Competition\n3. meninism",
+        "correct_num": 3,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is known as [MASK].\n\nOptions:\n1. Madonna of St. Alexis\n2. the Great North River Tug Boat Race and Competition\n3. meninism"
+    },
+    {
+        "test_id": 69,
+        "relation": "KnownFor",
+        "correct_feat": "seeking to eliminate discrimination against men",
+        "options": "1. seeking to eliminate discrimination against men\n2. its Mahoning Drive-In Theater\n3. its music videos, some of which have millions of views",
+        "correct_num": 1,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is known for [MASK].\n\nOptions:\n1. seeking to eliminate discrimination against men\n2. its Mahoning Drive-In Theater\n3. its music videos, some of which have millions of views"
+    },
+    {
+        "test_id": 70,
+        "relation": "KnownFor",
+        "correct_feat": "promoting masculine ideals",
+        "options": "1. being an entertainment attraction at the 1900 Paris Exposition\n2. promoting masculine ideals\n3. being engrossing",
+        "correct_num": 2,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is known for [MASK].\n\nOptions:\n1. being an entertainment attraction at the 1900 Paris Exposition\n2. promoting masculine ideals\n3. being engrossing"
+    },
+    {
+        "test_id": 72,
+        "relation": "KnownFor",
+        "correct_feat": "arguing that men do a disproportionate share of dirty, physically demanding, and hazardous jobs",
+        "options": "1. arguing that men do a disproportionate share of dirty, physically demanding, and hazardous jobs\n2. \"I Am a Rock\"\n3. qualities of good stockmanship",
+        "correct_num": 1,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is known for [MASK].\n\nOptions:\n1. arguing that men do a disproportionate share of dirty, physically demanding, and hazardous jobs\n2. \"I Am a Rock\"\n3. qualities of good stockmanship"
+    },
+    {
+        "test_id": 73,
+        "relation": "KnownFor",
+        "correct_feat": "citing higher rates of suicide in men than women",
+        "options": "1. guiding sheep through obstacles\n2. citing higher rates of suicide in men than women\n3. being the centerpiece of the Art In Action exhibit",
+        "correct_num": 2,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is known for [MASK].\n\nOptions:\n1. guiding sheep through obstacles\n2. citing higher rates of suicide in men than women\n3. being the centerpiece of the Art In Action exhibit"
+    },
+    {
+        "test_id": 74,
+        "relation": "KnownFor",
+        "correct_feat": "expressing concern about violence against men being depicted as humorous",
+        "options": "1. its use in structural parts of aircraft\n2. its cruelty\n3. expressing concern about violence against men being depicted as humorous",
+        "correct_num": 3,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is known for [MASK].\n\nOptions:\n1. its use in structural parts of aircraft\n2. its cruelty\n3. expressing concern about violence against men being depicted as humorous"
+    },
+    {
+        "test_id": 75,
+        "relation": "KnownFor",
+        "correct_feat": "expressing concern about violence against men being ignored or minimized",
+        "options": "1. expressing concern about violence against men being ignored or minimized\n2. its interpretation of the Citizenship Clause of the Fourteenth Amendment\n3. its base",
+        "correct_num": 1,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is known for [MASK].\n\nOptions:\n1. expressing concern about violence against men being ignored or minimized\n2. its interpretation of the Citizenship Clause of the Fourteenth Amendment\n3. its base"
+    },
+    {
+        "test_id": 76,
+        "relation": "KnownFor",
+        "correct_feat": "asserting gender symmetry in domestic violence",
+        "options": "1. its wrinkle-resistance\n2. asserting gender symmetry in domestic violence\n3. its relationship to the board game Ludo",
+        "correct_num": 2,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is known for [MASK].\n\nOptions:\n1. its wrinkle-resistance\n2. asserting gender symmetry in domestic violence\n3. its relationship to the board game Ludo"
+    },
+    {
+        "test_id": 77,
+        "relation": "KnownFor",
+        "correct_feat": "rejecting the idea of universal patriarchy",
+        "options": "1. its association with military victories against invasions\n2. being played by two people\n3. rejecting the idea of universal patriarchy",
+        "correct_num": 3,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is known for [MASK].\n\nOptions:\n1. its association with military victories against invasions\n2. being played by two people\n3. rejecting the idea of universal patriarchy"
+    },
+    {
+        "test_id": 78,
+        "relation": "KnownFor",
+        "correct_feat": "arguing that in the post-feminist era, men are in a worse position because of the emphasis on women's rights",
+        "options": "1. arguing that in the post-feminist era, men are in a worse position because of the emphasis on women's rights\n2. its base\n3. being the most common format of books printed in the incunabula period",
+        "correct_num": 1,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is known for [MASK].\n\nOptions:\n1. arguing that in the post-feminist era, men are in a worse position because of the emphasis on women's rights\n2. its base\n3. being the most common format of books printed in the incunabula period"
+    },
+    {
+        "test_id": 79,
+        "relation": "MemberOf",
+        "correct_feat": "men's rights literature",
+        "options": "1. the hip-hop superduo\n2. men's rights literature\n3. the category of award-winning musicians",
+        "correct_num": 2,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is a member of [MASK].\n\nOptions:\n1. the hip-hop superduo\n2. men's rights literature\n3. the category of award-winning musicians"
+    },
+    {
+        "test_id": 80,
+        "relation": "MemberOf",
+        "correct_feat": "anti-feminist literature",
+        "options": "1. the greater Eastern Orthodox Church\n2. the International Defensive Pistol Association\n3. anti-feminist literature",
+        "correct_num": 3,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is a member of [MASK].\n\nOptions:\n1. the greater Eastern Orthodox Church\n2. the International Defensive Pistol Association\n3. anti-feminist literature"
+    },
+    {
+        "test_id": 81,
+        "relation": "MemberOf",
+        "correct_feat": "the mythopoetic men's movement",
+        "options": "1. the mythopoetic men's movement\n2. the Ordo\u00f1ez family\n3. the Wehrmacht",
+        "correct_num": 1,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is a member of [MASK].\n\nOptions:\n1. the mythopoetic men's movement\n2. the Ordo\u00f1ez family\n3. the Wehrmacht"
+    },
+    {
+        "test_id": 83,
+        "relation": "PartOf",
+        "correct_feat": "ideologies",
+        "options": "1. a game of SPL\n2. the Tujunga Wash Greenbelt Project\n3. ideologies",
+        "correct_num": 3,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is part of [MASK].\n\nOptions:\n1. a game of SPL\n2. the Tujunga Wash Greenbelt Project\n3. ideologies"
+    },
+    {
+        "test_id": 84,
+        "relation": "PartOf",
+        "correct_feat": "socio-political movements",
+        "options": "1. socio-political movements\n2. the historical understanding of medieval society\n3. Loaded Records",
+        "correct_num": 1,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is part of [MASK].\n\nOptions:\n1. socio-political movements\n2. the historical understanding of medieval society\n3. Loaded Records"
+    },
+    {
+        "test_id": 85,
+        "relation": "PerformedBy",
+        "correct_feat": "men",
+        "options": "1. Egypt's National Security Agency\n2. men\n3. members of the Waltham Abbey and Enfield Lock Small Arms Factory Cricket Club and their friends",
+        "correct_num": 2,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> was performed by [MASK].\n\nOptions:\n1. Egypt's National Security Agency\n2. men\n3. members of the Waltham Abbey and Enfield Lock Small Arms Factory Cricket Club and their friends"
+    },
+    {
+        "test_id": 86,
+        "relation": "PerformedBy",
+        "correct_feat": "women",
+        "options": "1. Wakhi people\n2. Twice\n3. women",
+        "correct_num": 3,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> was performed by [MASK].\n\nOptions:\n1. Wakhi people\n2. Twice\n3. women"
+    },
+    {
+        "test_id": 88,
+        "relation": "UsedAs",
+        "correct_feat": "a term for the men's rights movement",
+        "options": "1. a trainer\n2. a term for the men's rights movement\n3. a video",
+        "correct_num": 2,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is used as [MASK].\n\nOptions:\n1. a trainer\n2. a term for the men's rights movement\n3. a video"
+    },
+    {
+        "test_id": 89,
+        "relation": "UsedAs",
+        "correct_feat": "a term for the men's movement",
+        "options": "1. music\n2. a form of tennis\n3. a term for the men's movement",
+        "correct_num": 3,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is used as [MASK].\n\nOptions:\n1. music\n2. a form of tennis\n3. a term for the men's movement"
+    },
+    {
+        "test_id": 90,
+        "relation": "UsedAs",
+        "correct_feat": "a term for antifeminism",
+        "options": "1. a term for antifeminism\n2. a liberal arts college\n3. a brand identity",
+        "correct_num": 1,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is used as [MASK].\n\nOptions:\n1. a term for antifeminism\n2. a liberal arts college\n3. a brand identity"
+    },
+    {
+        "test_id": 91,
+        "relation": "UsedAs",
+        "correct_feat": "a term for machismo",
+        "options": "1. a platform for introducing potential pieces with special powers\n2. a term for machismo\n3. a patrimony",
+        "correct_num": 2,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is used as [MASK].\n\nOptions:\n1. a platform for introducing potential pieces with special powers\n2. a term for machismo\n3. a patrimony"
+    },
+    {
+        "test_id": 92,
+        "relation": "UsedAs",
+        "correct_feat": "a term for virism",
+        "options": "1. a retrospective name for all of Geoffrey's male-line descendants\n2. a hobby\n3. a term for virism",
+        "correct_num": 3,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is used as [MASK].\n\nOptions:\n1. a retrospective name for all of Geoffrey's male-line descendants\n2. a hobby\n3. a term for virism"
+    },
+    {
+        "test_id": 93,
+        "relation": "UsedAs",
+        "correct_feat": "a term for meninism",
+        "options": "1. a term for meninism\n2. a status symbol\n3. a torpedo charge",
+        "correct_num": 1,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is used as [MASK].\n\nOptions:\n1. a term for meninism\n2. a status symbol\n3. a torpedo charge"
+    },
+    {
+        "test_id": 94,
+        "relation": "UsedFor",
+        "correct_feat": "the promotion of masculine ideals",
+        "options": "1. establishing a dynasty\n2. the promotion of masculine ideals\n3. marketing",
+        "correct_num": 2,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is used for [MASK].\n\nOptions:\n1. establishing a dynasty\n2. the promotion of masculine ideals\n3. marketing"
+    },
+    {
+        "test_id": 95,
+        "relation": "UsedFor",
+        "correct_feat": "the elimination of discrimination against men",
+        "options": "1. writing paper\n2. supporting local parks and recreation departments\n3. the elimination of discrimination against men",
+        "correct_num": 3,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is used for [MASK].\n\nOptions:\n1. writing paper\n2. supporting local parks and recreation departments\n3. the elimination of discrimination against men"
+    },
+    {
+        "test_id": 96,
+        "relation": "UsedFor",
+        "correct_feat": "the justification of male domination in society",
+        "options": "1. the justification of male domination in society\n2. decoration\n3. the Annunciation",
+        "correct_num": 1,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is used for [MASK].\n\nOptions:\n1. the justification of male domination in society\n2. decoration\n3. the Annunciation"
+    },
+    {
+        "test_id": 97,
+        "relation": "UsedFor",
+        "correct_feat": "the opposition of what its adherents see as female domination",
+        "options": "1. achieving all pieces home without the opponent getting any home at all\n2. the opposition of what its adherents see as female domination\n3. television broadcasts",
+        "correct_num": 2,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is used for [MASK].\n\nOptions:\n1. achieving all pieces home without the opponent getting any home at all\n2. the opposition of what its adherents see as female domination\n3. television broadcasts"
+    },
+    {
+        "test_id": 98,
+        "relation": "UsedFor",
+        "correct_feat": "the belief in the inherent superiority of men over women",
+        "options": "1. earning a QC\n2. educational purposes\n3. the belief in the inherent superiority of men over women",
+        "correct_num": 3,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is used for [MASK].\n\nOptions:\n1. earning a QC\n2. educational purposes\n3. the belief in the inherent superiority of men over women"
+    },
+    {
+        "test_id": 99,
+        "relation": "UsedFor",
+        "correct_feat": "the resistance to gender equality as incompatible with Christian values",
+        "options": "1. the resistance to gender equality as incompatible with Christian values\n2. running\n3. representing the way of creation itself",
+        "correct_num": 1,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is used for [MASK].\n\nOptions:\n1. the resistance to gender equality as incompatible with Christian values\n2. running\n3. representing the way of creation itself"
+    },
+    {
+        "test_id": 100,
+        "relation": "UsedFor",
+        "correct_feat": "raising patriarchy to a hyper-normative status",
+        "options": "1. commercial versions of similar games\n2. raising patriarchy to a hyper-normative status\n3. providing entertainment to spectators",
+        "correct_num": 2,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is used for [MASK].\n\nOptions:\n1. commercial versions of similar games\n2. raising patriarchy to a hyper-normative status\n3. providing entertainment to spectators"
+    },
+    {
+        "test_id": 101,
+        "relation": "UsedIn",
+        "correct_feat": "men's rights literature",
+        "options": "1. amateur radio\n2. railcars\n3. men's rights literature",
+        "correct_num": 3,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is used in [MASK].\n\nOptions:\n1. amateur radio\n2. railcars\n3. men's rights literature"
+    },
+    {
+        "test_id": 102,
+        "relation": "UsedIn",
+        "correct_feat": "anti-feminist literature",
+        "options": "1. anti-feminist literature\n2. Mensch \u00e4rgere Dich nicht in Germany\n3. a campaign game",
+        "correct_num": 1,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is used in [MASK].\n\nOptions:\n1. anti-feminist literature\n2. Mensch \u00e4rgere Dich nicht in Germany\n3. a campaign game"
+    },
+    {
+        "test_id": 103,
+        "relation": "UsedIn",
+        "correct_feat": "gender studies",
+        "options": "1. Egyptian spearheads\n2. gender studies\n3. films",
+        "correct_num": 2,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is used in [MASK].\n\nOptions:\n1. Egyptian spearheads\n2. gender studies\n3. films"
+    },
+    {
+        "test_id": 104,
+        "relation": "UsedIn",
+        "correct_feat": "the French-language media",
+        "options": "1. a popular recreation area of Keflav\u00edk\n2. the western Mediterranean\n3. the French-language media",
+        "correct_num": 3,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is used in [MASK].\n\nOptions:\n1. a popular recreation area of Keflav\u00edk\n2. the western Mediterranean\n3. the French-language media"
+    },
+    {
+        "test_id": 105,
+        "relation": "UsedIn",
+        "correct_feat": "South African masculinist evangelical movements",
+        "options": "1. South African masculinist evangelical movements\n2. the social media app TikTok\n3. Van Sant's film Drugstore Cowboy",
+        "correct_num": 1,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is used in [MASK].\n\nOptions:\n1. South African masculinist evangelical movements\n2. the social media app TikTok\n3. Van Sant's film Drugstore Cowboy"
+    },
+    {
+        "test_id": 106,
+        "relation": "UsedTo",
+        "correct_feat": "refer to the opposition of misogynist men to women's rights",
+        "options": "1. arrange songs\n2. refer to the opposition of misogynist men to women's rights\n3. transfer its energy on impact",
+        "correct_num": 2,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is used to [MASK].\n\nOptions:\n1. arrange songs\n2. refer to the opposition of misogynist men to women's rights\n3. transfer its energy on impact"
+    },
+    {
+        "test_id": 107,
+        "relation": "UsedTo",
+        "correct_feat": "refer to men's collective political and cultural actions on behalf of their own sex",
+        "options": "1. gain thousands of meters of altitude\n2. test height-intensive applications\n3. refer to men's collective political and cultural actions on behalf of their own sex",
+        "correct_num": 3,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is used to [MASK].\n\nOptions:\n1. gain thousands of meters of altitude\n2. test height-intensive applications\n3. refer to men's collective political and cultural actions on behalf of their own sex"
+    },
+    {
+        "test_id": 108,
+        "relation": "UsedTo",
+        "correct_feat": "describe the sexual politics of androcentric cultural discourses",
+        "options": "1. describe the sexual politics of androcentric cultural discourses\n2. shed water\n3. improve the visibility of the clock",
+        "correct_num": 1,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is used to [MASK].\n\nOptions:\n1. describe the sexual politics of androcentric cultural discourses\n2. shed water\n3. improve the visibility of the clock"
+    },
+    {
+        "test_id": 109,
+        "relation": "UsedTo",
+        "correct_feat": "refer to men and women who opposed women's suffrage",
+        "options": "1. give rhythmic melodies an extra sprakle\n2. refer to men and women who opposed women's suffrage\n3. release their second international album",
+        "correct_num": 2,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is used to [MASK].\n\nOptions:\n1. give rhythmic melodies an extra sprakle\n2. refer to men and women who opposed women's suffrage\n3. release their second international album"
+    },
+    {
+        "test_id": 110,
+        "relation": "UsedTo",
+        "correct_feat": "describe World War I",
+        "options": "1. make wrestlers more entertaining\n2. chart in Australia\n3. describe World War I",
+        "correct_num": 3,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is used to [MASK].\n\nOptions:\n1. make wrestlers more entertaining\n2. chart in Australia\n3. describe World War I"
+    },
+    {
+        "test_id": 111,
+        "relation": "UsedTo",
+        "correct_feat": "assert that women and men should have different roles and rights owing to fundamental differences between them",
+        "options": "1. assert that women and men should have different roles and rights owing to fundamental differences between them\n2. expel and disperse potentially harmful gases and particulates into the atmosphere\n3. reach the chart",
+        "correct_num": 1,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is used to [MASK].\n\nOptions:\n1. assert that women and men should have different roles and rights owing to fundamental differences between them\n2. expel and disperse potentially harmful gases and particulates into the atmosphere\n3. reach the chart"
+    },
+    {
+        "test_id": 112,
+        "relation": "UsedTo",
+        "correct_feat": "justify male domination in society",
+        "options": "1. spread new methods of agriculture\n2. justify male domination in society\n3. jump four spaces ahead",
+        "correct_num": 2,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is used to [MASK].\n\nOptions:\n1. spread new methods of agriculture\n2. justify male domination in society\n3. jump four spaces ahead"
+    },
+    {
+        "test_id": 113,
+        "relation": "UsedTo",
+        "correct_feat": "express the ethos of the early gender-egalitarian men's movement",
+        "options": "1. release their second international album\n2. destroy an opponent's blob\n3. express the ethos of the early gender-egalitarian men's movement",
+        "correct_num": 3,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is used to [MASK].\n\nOptions:\n1. release their second international album\n2. destroy an opponent's blob\n3. express the ethos of the early gender-egalitarian men's movement"
+    },
+    {
+        "test_id": 114,
+        "relation": "UsedTo",
+        "correct_feat": "refer to the ideology of patriarchy",
+        "options": "1. refer to the ideology of patriarchy\n2. introduce the events of the Passion of Jesus\n3. represent Mary's domesticity",
+        "correct_num": 1,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is used to [MASK].\n\nOptions:\n1. refer to the ideology of patriarchy\n2. introduce the events of the Passion of Jesus\n3. represent Mary's domesticity"
+    },
+    {
+        "test_id": 115,
+        "relation": "UsedTo",
+        "correct_feat": "refer to a form of antifeminism",
+        "options": "1. reflect from rubber vehicle tires\n2. refer to a form of antifeminism\n3. generate short equations using simple arithmetic",
+        "correct_num": 2,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is used to [MASK].\n\nOptions:\n1. reflect from rubber vehicle tires\n2. refer to a form of antifeminism\n3. generate short equations using simple arithmetic"
+    }
+]

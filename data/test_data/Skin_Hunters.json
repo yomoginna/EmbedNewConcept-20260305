@@ -1,0 +1,346 @@
+[
+    {
+        "test_id": 0,
+        "relation": "About",
+        "correct_feat": "hospital casualty workers from Łódź responsible for murdering elderly patients and selling information about their deaths to funeral homes",
+        "options": "1. hospital casualty workers from Łódź responsible for murdering elderly patients and selling information about their deaths to funeral homes\n2. a light, non-motorised, fixed-wing heavier-than-air aircraft called a hang glider\n3. an English and Welsh dynasty that held the throne of England from 1485 to 1603",
+        "correct_num": 1,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is about [MASK].\n\nOptions:\n1. hospital casualty workers from Łódź responsible for murdering elderly patients and selling information about their deaths to funeral homes\n2. a light, non-motorised, fixed-wing heavier-than-air aircraft called a hang glider\n3. an English and Welsh dynasty that held the throne of England from 1485 to 1603"
+    },
+    {
+        "test_id": 1,
+        "relation": "Affects",
+        "correct_feat": "elderly patients",
+        "options": "1. the anime series Hand Shakers\n2. elderly patients\n3. the development of sports programs for youth and women",
+        "correct_num": 2,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> affects [MASK].\n\nOptions:\n1. the anime series Hand Shakers\n2. elderly patients\n3. the development of sports programs for youth and women"
+    },
+    {
+        "test_id": 2,
+        "relation": "AssociatedWith",
+        "correct_feat": "funeral homes",
+        "options": "1. Winning Moves Games USA\n2. cycles of the Life of the Virgin\n3. funeral homes",
+        "correct_num": 3,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is associated with [MASK].\n\nOptions:\n1. Winning Moves Games USA\n2. cycles of the Life of the Virgin\n3. funeral homes"
+    },
+    {
+        "test_id": 3,
+        "relation": "AssociatedWith",
+        "correct_feat": "hospital casualty workers",
+        "options": "1. hospital casualty workers\n2. the Feast of the Pheasant\n3. Leopold von Buch",
+        "correct_num": 1,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is associated with [MASK].\n\nOptions:\n1. hospital casualty workers\n2. the Feast of the Pheasant\n3. Leopold von Buch"
+    },
+    {
+        "test_id": 4,
+        "relation": "AssociatedWith",
+        "correct_feat": "the Polish city of Łódź",
+        "options": "1. the Tudors of Penmynydd\n2. the Polish city of Łódź\n3. the Pahlavi script",
+        "correct_num": 2,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is associated with [MASK].\n\nOptions:\n1. the Tudors of Penmynydd\n2. the Polish city of Łódź\n3. the Pahlavi script"
+    },
+    {
+        "test_id": 5,
+        "relation": "BelongsTo",
+        "correct_feat": "a scandal",
+        "options": "1. Arab nationalist ideology\n2. the Northern Virginia region\n3. a scandal",
+        "correct_num": 3,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> belongs to [MASK].\n\nOptions:\n1. Arab nationalist ideology\n2. the Northern Virginia region\n3. a scandal"
+    },
+    {
+        "test_id": 6,
+        "relation": "CausedBy",
+        "correct_feat": "hospital casualty workers",
+        "options": "1. hospital casualty workers\n2. the Russian invasion of Ukraine\n3. the dissolution of their first band, Graduate",
+        "correct_num": 1,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is caused by [MASK].\n\nOptions:\n1. hospital casualty workers\n2. the Russian invasion of Ukraine\n3. the dissolution of their first band, Graduate"
+    },
+    {
+        "test_id": 7,
+        "relation": "ConsistsOf",
+        "correct_feat": "the murder of elderly patients",
+        "options": "1. seven individual paintings\n2. the murder of elderly patients\n3. depictions of workers and activists",
+        "correct_num": 2,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> consists of [MASK].\n\nOptions:\n1. seven individual paintings\n2. the murder of elderly patients\n3. depictions of workers and activists"
+    },
+    {
+        "test_id": 8,
+        "relation": "ConsistsOf",
+        "correct_feat": "selling information regarding patient deaths to competing funeral homes",
+        "options": "1. a ship's hull with a sloped roof and a side door\n2. various player aids and charts\n3. selling information regarding patient deaths to competing funeral homes",
+        "correct_num": 3,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> consists of [MASK].\n\nOptions:\n1. a ship's hull with a sloped roof and a side door\n2. various player aids and charts\n3. selling information regarding patient deaths to competing funeral homes"
+    },
+    {
+        "test_id": 9,
+        "relation": "CreatedBy",
+        "correct_feat": "a newspaper article",
+        "options": "1. a newspaper article\n2. sisters Hanna Nicole and Ashley Grace\n3. 18th-century French painter Philip James de Loutherbourg",
+        "correct_num": 1,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> was created by [MASK].\n\nOptions:\n1. a newspaper article\n2. sisters Hanna Nicole and Ashley Grace\n3. 18th-century French painter Philip James de Loutherbourg"
+    },
+    {
+        "test_id": 10,
+        "relation": "HasA",
+        "correct_feat": "a nickname",
+        "options": "1. conventional gaff mainsails and jibs\n2. a nickname\n3. a playing area",
+        "correct_num": 2,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> has [MASK].\n\nOptions:\n1. conventional gaff mainsails and jibs\n2. a nickname\n3. a playing area"
+    },
+    {
+        "test_id": 11,
+        "relation": "HasFeatureOf",
+        "correct_feat": "the murder of at least five elderly patients",
+        "options": "1. fragmented and peripheral acts\n2. an 8x8 board\n3. the murder of at least five elderly patients",
+        "correct_num": 3,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is characterized by [MASK].\n\nOptions:\n1. fragmented and peripheral acts\n2. an 8x8 board\n3. the murder of at least five elderly patients"
+    },
+    {
+        "test_id": 12,
+        "relation": "HasFeatureOf",
+        "correct_feat": "selling information regarding patient deaths to competing funeral homes",
+        "options": "1. selling information regarding patient deaths to competing funeral homes\n2. knights expecting to surrender for ransom\n3. gaining victory points for destroying buildings or eliminating humans",
+        "correct_num": 1,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is characterized by [MASK].\n\nOptions:\n1. selling information regarding patient deaths to competing funeral homes\n2. knights expecting to surrender for ransom\n3. gaining victory points for destroying buildings or eliminating humans"
+    },
+    {
+        "test_id": 13,
+        "relation": "HasFeatureOf",
+        "correct_feat": "bribes paid to killers",
+        "options": "1. the belief that its adherents see female domination\n2. bribes paid to killers\n3. blowing holes in the ice with nuclear weapons",
+        "correct_num": 2,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is characterized by [MASK].\n\nOptions:\n1. the belief that its adherents see female domination\n2. bribes paid to killers\n3. blowing holes in the ice with nuclear weapons"
+    },
+    {
+        "test_id": 14,
+        "relation": "HasFeatureOf",
+        "correct_feat": "the use of the muscle relaxant pancuronium",
+        "options": "1. its Apprentice Program for Technicians\n2. a stationary wave\n3. the use of the muscle relaxant pancuronium",
+        "correct_num": 3,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is characterized by [MASK].\n\nOptions:\n1. its Apprentice Program for Technicians\n2. a stationary wave\n3. the use of the muscle relaxant pancuronium"
+    },
+    {
+        "test_id": 15,
+        "relation": "HasFeatureOf",
+        "correct_feat": "the perpetrators being apprehended in 2002",
+        "options": "1. the perpetrators being apprehended in 2002\n2. involving a mode of transport\n3. striking attacks",
+        "correct_num": 1,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is characterized by [MASK].\n\nOptions:\n1. the perpetrators being apprehended in 2002\n2. involving a mode of transport\n3. striking attacks"
+    },
+    {
+        "test_id": 16,
+        "relation": "HasFeatureOf",
+        "correct_feat": "a newspaper article that brought the story to public attention",
+        "options": "1. a six-digit, three-byte hexadecimal number\n2. a newspaper article that brought the story to public attention\n3. being largely replaced by high-strength bolts in structural steel construction",
+        "correct_num": 2,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is characterized by [MASK].\n\nOptions:\n1. a six-digit, three-byte hexadecimal number\n2. a newspaper article that brought the story to public attention\n3. being largely replaced by high-strength bolts in structural steel construction"
+    },
+    {
+        "test_id": 17,
+        "relation": "HasFeatureOf",
+        "correct_feat": "a documentary film made in 2003",
+        "options": "1. satellite searches of the ice to the north of the oilfield\n2. the letters ΜΡ ΘΥ on the upper left and right of the head of the Virgin Mary\n3. a documentary film made in 2003",
+        "correct_num": 3,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is characterized by [MASK].\n\nOptions:\n1. satellite searches of the ice to the north of the oilfield\n2. the letters ΜΡ ΘΥ on the upper left and right of the head of the Virgin Mary\n3. a documentary film made in 2003"
+    },
+    {
+        "test_id": 18,
+        "relation": "HasFeatureOf",
+        "correct_feat": "a documentary film made in 2008",
+        "options": "1. a documentary film made in 2008\n2. being an open-air gallery\n3. opportunity actions",
+        "correct_num": 1,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is characterized by [MASK].\n\nOptions:\n1. a documentary film made in 2008\n2. being an open-air gallery\n3. opportunity actions"
+    },
+    {
+        "test_id": 19,
+        "relation": "HasFeatureOf",
+        "correct_feat": "inspiration for a novel",
+        "options": "1. ruling in Pomerania\n2. inspiration for a novel\n3. its prominent rulers ascending the imperial throne",
+        "correct_num": 2,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is characterized by [MASK].\n\nOptions:\n1. ruling in Pomerania\n2. inspiration for a novel\n3. its prominent rulers ascending the imperial throne"
+    },
+    {
+        "test_id": 20,
+        "relation": "Influenced",
+        "correct_feat": "a film made in 2003",
+        "options": "1. the emergence of the Roman Empire\n2. various other European countries and Australia\n3. a film made in 2003",
+        "correct_num": 3,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> influenced [MASK].\n\nOptions:\n1. the emergence of the Roman Empire\n2. various other European countries and Australia\n3. a film made in 2003"
+    },
+    {
+        "test_id": 21,
+        "relation": "Influenced",
+        "correct_feat": "a documentary made in 2008",
+        "options": "1. a documentary made in 2008\n2. the development of European monarchies\n3. later history",
+        "correct_num": 1,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> influenced [MASK].\n\nOptions:\n1. a documentary made in 2008\n2. the development of European monarchies\n3. later history"
+    },
+    {
+        "test_id": 22,
+        "relation": "Influenced",
+        "correct_feat": "a novel",
+        "options": "1. the staging of public events\n2. a novel\n3. the domination of central Italy",
+        "correct_num": 2,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> influenced [MASK].\n\nOptions:\n1. the staging of public events\n2. a novel\n3. the domination of central Italy"
+    },
+    {
+        "test_id": 23,
+        "relation": "IsA",
+        "correct_feat": "a media nickname",
+        "options": "1. a musical performance\n2. a doctrine\n3. a media nickname",
+        "correct_num": 3,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is [MASK].\n\nOptions:\n1. a musical performance\n2. a doctrine\n3. a media nickname"
+    },
+    {
+        "test_id": 24,
+        "relation": "IsA",
+        "correct_feat": "a scandal",
+        "options": "1. a scandal\n2. a political stance that exists internationally\n3. a small artwork",
+        "correct_num": 1,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is [MASK].\n\nOptions:\n1. a scandal\n2. a political stance that exists internationally\n3. a small artwork"
+    },
+    {
+        "test_id": 25,
+        "relation": "KnownAs",
+        "correct_feat": "Łowcy skór",
+        "options": "1. Blokus XL in its re-release\n2. Łowcy skór\n3. the Karolinger",
+        "correct_num": 2,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is known as [MASK].\n\nOptions:\n1. Blokus XL in its re-release\n2. Łowcy skór\n3. the Karolinger"
+    },
+    {
+        "test_id": 26,
+        "relation": "KnownFor",
+        "correct_feat": "murdering elderly patients",
+        "options": "1. its humor\n2. appearing with Brazil's imperial flag in military parades and similar events during Independence Day\n3. murdering elderly patients",
+        "correct_num": 3,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is known for [MASK].\n\nOptions:\n1. its humor\n2. appearing with Brazil's imperial flag in military parades and similar events during Independence Day\n3. murdering elderly patients"
+    },
+    {
+        "test_id": 27,
+        "relation": "KnownFor",
+        "correct_feat": "selling information about patient deaths to funeral homes",
+        "options": "1. selling information about patient deaths to funeral homes\n2. being stolen and returned many times\n3. its \"sweet fruit cake [taste] with a herbal tea finish\" cannabis strain",
+        "correct_num": 1,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is known for [MASK].\n\nOptions:\n1. selling information about patient deaths to funeral homes\n2. being stolen and returned many times\n3. its \"sweet fruit cake [taste] with a herbal tea finish\" cannabis strain"
+    },
+    {
+        "test_id": 28,
+        "relation": "LocatedIn",
+        "correct_feat": "in the Polish city of Łódź",
+        "options": "1. in Germany\n2. in the Polish city of Łódź\n3. on the eastern edge of the Valley College campus",
+        "correct_num": 2,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is located [MASK].\n\nOptions:\n1. in Germany\n2. in the Polish city of Łódź\n3. on the eastern edge of the Valley College campus"
+    },
+    {
+        "test_id": 29,
+        "relation": "PerformedBy",
+        "correct_feat": "hospital casualty workers",
+        "options": "1. women\n2. Greg Nice\n3. hospital casualty workers",
+        "correct_num": 3,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> was performed by [MASK].\n\nOptions:\n1. women\n2. Greg Nice\n3. hospital casualty workers"
+    },
+    {
+        "test_id": 30,
+        "relation": "ProducedBy",
+        "correct_feat": "a Swedish company",
+        "options": "1. a Swedish company\n2. Alex Winitsky\n3. Rolf Soja and Frank Dostal",
+        "correct_num": 1,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> was produced by [MASK].\n\nOptions:\n1. a Swedish company\n2. Alex Winitsky\n3. Rolf Soja and Frank Dostal"
+    },
+    {
+        "test_id": 31,
+        "relation": "PublishedAs",
+        "correct_feat": "Łowcy skór",
+        "options": "1. an individual \"folio game\"\n2. Łowcy skór\n3. a single",
+        "correct_num": 2,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> was published as [MASK].\n\nOptions:\n1. an individual \"folio game\"\n2. Łowcy skór\n3. a single"
+    },
+    {
+        "test_id": 32,
+        "relation": "PublishedBy",
+        "correct_feat": "Gazeta Wyborcza",
+        "options": "1. Historical Military Simulations (HMS)\n2. Compass Games\n3. Gazeta Wyborcza",
+        "correct_num": 3,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> was published by [MASK].\n\nOptions:\n1. Historical Military Simulations (HMS)\n2. Compass Games\n3. Gazeta Wyborcza"
+    },
+    {
+        "test_id": 33,
+        "relation": "PublishedIn",
+        "correct_feat": "the Polish newspaper Gazeta Wyborcza",
+        "options": "1. the Polish newspaper Gazeta Wyborcza\n2. 1593\n3. Linnaeus's journal",
+        "correct_num": 1,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> was published in [MASK].\n\nOptions:\n1. the Polish newspaper Gazeta Wyborcza\n2. 1593\n3. Linnaeus's journal"
+    },
+    {
+        "test_id": 34,
+        "relation": "UsedFor",
+        "correct_feat": "murdering patients",
+        "options": "1. conquest\n2. murdering patients\n3. placing station tokens",
+        "correct_num": 2,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is used for [MASK].\n\nOptions:\n1. conquest\n2. murdering patients\n3. placing station tokens"
+    },
+    {
+        "test_id": 35,
+        "relation": "UsedFor",
+        "correct_feat": "selling information about patient deaths",
+        "options": "1. subverting someone else's government\n2. incorporating people living at the hostel at that time\n3. selling information about patient deaths",
+        "correct_num": 3,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is used for [MASK].\n\nOptions:\n1. subverting someone else's government\n2. incorporating people living at the hostel at that time\n3. selling information about patient deaths"
+    },
+    {
+        "test_id": 36,
+        "relation": "UsedFor",
+        "correct_feat": "exacting bribes",
+        "options": "1. exacting bribes\n2. consolidating political independence\n3. showcasing art for a broader audience",
+        "correct_num": 1,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is used for [MASK].\n\nOptions:\n1. exacting bribes\n2. consolidating political independence\n3. showcasing art for a broader audience"
+    },
+    {
+        "test_id": 37,
+        "relation": "UsedIn",
+        "correct_feat": "funerals",
+        "options": "1. governing programs\n2. funerals\n3. the Civil War",
+        "correct_num": 2,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is used in [MASK].\n\nOptions:\n1. governing programs\n2. funerals\n3. the Civil War"
+    },
+    {
+        "test_id": 38,
+        "relation": "UsedTo",
+        "correct_feat": "contact relatives before other funeral homes could",
+        "options": "1. emphasize integrity and unity among the Slavic peoples\n2. release their Russian equivalent album\n3. contact relatives before other funeral homes could",
+        "correct_num": 3,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is used to [MASK].\n\nOptions:\n1. emphasize integrity and unity among the Slavic peoples\n2. release their Russian equivalent album\n3. contact relatives before other funeral homes could"
+    },
+    {
+        "test_id": 39,
+        "relation": "WrittenBy",
+        "correct_feat": "Tomasz Patora",
+        "options": "1. Tomasz Patora\n2. Florian Ordoñez\n3. Paul Johnson",
+        "correct_num": 1,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> was written by [MASK].\n\nOptions:\n1. Tomasz Patora\n2. Florian Ordoñez\n3. Paul Johnson"
+    },
+    {
+        "test_id": 40,
+        "relation": "WrittenBy",
+        "correct_feat": "Marcin Stelmasiak",
+        "options": "1. Juan Manuel Flores\n2. Marcin Stelmasiak\n3. Agostino Carollo",
+        "correct_num": 2,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> was written by [MASK].\n\nOptions:\n1. Juan Manuel Flores\n2. Marcin Stelmasiak\n3. Agostino Carollo"
+    },
+    {
+        "test_id": 41,
+        "relation": "WrittenBy",
+        "correct_feat": "Przemysław Witkowski",
+        "options": "1. J. R. R. Tolkien\n2. Pierre Chabosy\n3. Przemysław Witkowski",
+        "correct_num": 3,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> was written by [MASK].\n\nOptions:\n1. J. R. R. Tolkien\n2. Pierre Chabosy\n3. Przemysław Witkowski"
+    },
+    {
+        "test_id": 42,
+        "relation": "WrittenIn",
+        "correct_feat": "the Polish newspaper Gazeta Wyborcza",
+        "options": "1. the Polish newspaper Gazeta Wyborcza\n2. the Hebrew Bible\n3. the early 19th century",
+        "correct_num": 1,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> was written in [MASK].\n\nOptions:\n1. the Polish newspaper Gazeta Wyborcza\n2. the Hebrew Bible\n3. the early 19th century"
+    }
+]

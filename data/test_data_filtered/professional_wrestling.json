@@ -1,0 +1,1010 @@
+[
+    {
+        "test_id": 0,
+        "relation": "About",
+        "correct_feat": "athletic theater centered around mock combat",
+        "options": "1. athletic theater centered around mock combat\n2. a nationalist phrase and concept of a racially defined national body united with a settlement area\n3. the Bancroft Treaties and their eventual abandonment",
+        "correct_num": 1,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is about [MASK].\n\nOptions:\n1. athletic theater centered around mock combat\n2. a nationalist phrase and concept of a racially defined national body united with a settlement area\n3. the Bancroft Treaties and their eventual abandonment"
+    },
+    {
+        "test_id": 1,
+        "relation": "About",
+        "correct_feat": "performers who are competitive wrestlers",
+        "options": "1. folk rock\n2. performers who are competitive wrestlers\n3. the problem of lust gone astray",
+        "correct_num": 2,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is about [MASK].\n\nOptions:\n1. folk rock\n2. performers who are competitive wrestlers\n3. the problem of lust gone astray"
+    },
+    {
+        "test_id": 3,
+        "relation": "About",
+        "correct_feat": "the history of professional wrestling in the United States",
+        "options": "1. the history of professional wrestling in the United States\n2. the Interstate Commerce Act\n3. a libel case against the Church of Scientology",
+        "correct_num": 1,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is about [MASK].\n\nOptions:\n1. the history of professional wrestling in the United States\n2. the Interstate Commerce Act\n3. a libel case against the Church of Scientology"
+    },
+    {
+        "test_id": 4,
+        "relation": "About",
+        "correct_feat": "the transition of wrestling to theater",
+        "options": "1. the social democratic political ideology of Gordon Brown and his followers\n2. the transition of wrestling to theater\n3. the ideology of Ottoman nationalism",
+        "correct_num": 2,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is about [MASK].\n\nOptions:\n1. the social democratic political ideology of Gordon Brown and his followers\n2. the transition of wrestling to theater\n3. the ideology of Ottoman nationalism"
+    },
+    {
+        "test_id": 5,
+        "relation": "About",
+        "correct_feat": "carnival culture's influence on professional wrestling",
+        "options": "1. the rock era\n2. neologisms invented by Klaus\n3. carnival culture's influence on professional wrestling",
+        "correct_num": 3,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is about [MASK].\n\nOptions:\n1. the rock era\n2. neologisms invented by Klaus\n3. carnival culture's influence on professional wrestling"
+    },
+    {
+        "test_id": 6,
+        "relation": "Affects",
+        "correct_feat": "popular culture",
+        "options": "1. popular culture\n2. Czechoslovakia\n3. the anime series Ore no Im\u014dto ga Konna ni Kawaii Wake ga Nai",
+        "correct_num": 1,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> affects [MASK].\n\nOptions:\n1. popular culture\n2. Czechoslovakia\n3. the anime series Ore no Im\u014dto ga Konna ni Kawaii Wake ga Nai"
+    },
+    {
+        "test_id": 7,
+        "relation": "Affects",
+        "correct_feat": "everyday language",
+        "options": "1. the anime series Ace of Diamond: Act II\n2. everyday language\n3. voter turnout for elections",
+        "correct_num": 2,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> affects [MASK].\n\nOptions:\n1. the anime series Ace of Diamond: Act II\n2. everyday language\n3. voter turnout for elections"
+    },
+    {
+        "test_id": 8,
+        "relation": "Affects",
+        "correct_feat": "film",
+        "options": "1. the validity of public-carry gun control laws\n2. the governance of Khorasan\n3. film",
+        "correct_num": 3,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> affects [MASK].\n\nOptions:\n1. the validity of public-carry gun control laws\n2. the governance of Khorasan\n3. film"
+    },
+    {
+        "test_id": 9,
+        "relation": "Affects",
+        "correct_feat": "television",
+        "options": "1. television\n2. the Religious Zionist Jewish community in Israel\n3. the rising ethnic nationalism in the Empire",
+        "correct_num": 1,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> affects [MASK].\n\nOptions:\n1. television\n2. the Religious Zionist Jewish community in Israel\n3. the rising ethnic nationalism in the Empire"
+    },
+    {
+        "test_id": 11,
+        "relation": "Affects",
+        "correct_feat": "video games",
+        "options": "1. the Interstate Commerce Commission's enforcement of bus desegregation rulings\n2. the interpretation of religious texts\n3. video games",
+        "correct_num": 3,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> affects [MASK].\n\nOptions:\n1. the Interstate Commerce Commission's enforcement of bus desegregation rulings\n2. the interpretation of religious texts\n3. video games"
+    },
+    {
+        "test_id": 12,
+        "relation": "AssociatedWith",
+        "correct_feat": "athletic theater",
+        "options": "1. athletic theater\n2. the German invasion of Greece\n3. the term Torani-Leumi",
+        "correct_num": 1,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is associated with [MASK].\n\nOptions:\n1. athletic theater\n2. the German invasion of Greece\n3. the term Torani-Leumi"
+    },
+    {
+        "test_id": 13,
+        "relation": "AssociatedWith",
+        "correct_feat": "mock combat",
+        "options": "1. the village of Zarudchi in the Lyubeshiv district\n2. mock combat\n3. the Exposition Universelle of 1900",
+        "correct_num": 2,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is associated with [MASK].\n\nOptions:\n1. the village of Zarudchi in the Lyubeshiv district\n2. mock combat\n3. the Exposition Universelle of 1900"
+    },
+    {
+        "test_id": 14,
+        "relation": "AssociatedWith",
+        "correct_feat": "competitive wrestlers",
+        "options": "1. the Roman Republic\n2. Pedro Le\u00f3n Zapata\n3. competitive wrestlers",
+        "correct_num": 3,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is associated with [MASK].\n\nOptions:\n1. the Roman Republic\n2. Pedro Le\u00f3n Zapata\n3. competitive wrestlers"
+    },
+    {
+        "test_id": 15,
+        "relation": "AssociatedWith",
+        "correct_feat": "scripted victories",
+        "options": "1. scripted victories\n2. the 2nd millennium\n3. the Feast of the Epiphany",
+        "correct_num": 1,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is associated with [MASK].\n\nOptions:\n1. scripted victories\n2. the 2nd millennium\n3. the Feast of the Epiphany"
+    },
+    {
+        "test_id": 16,
+        "relation": "AssociatedWith",
+        "correct_feat": "personae and gimmicks",
+        "options": "1. the Brazilian Communist Party\n2. personae and gimmicks\n3. antisemitism",
+        "correct_num": 2,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is associated with [MASK].\n\nOptions:\n1. the Brazilian Communist Party\n2. personae and gimmicks\n3. antisemitism"
+    },
+    {
+        "test_id": 17,
+        "relation": "AssociatedWith",
+        "correct_feat": "heroic \"faces\" and villainous \"heels\"",
+        "options": "1. Lex Records\n2. Chavismo\n3. heroic \"faces\" and villainous \"heels\"",
+        "correct_num": 3,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is associated with [MASK].\n\nOptions:\n1. Lex Records\n2. Chavismo\n3. heroic \"faces\" and villainous \"heels\""
+    },
+    {
+        "test_id": 18,
+        "relation": "AssociatedWith",
+        "correct_feat": "\"kayfabe\"",
+        "options": "1. \"kayfabe\"\n2. European mass movements\n3. generative grammar",
+        "correct_num": 1,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is associated with [MASK].\n\nOptions:\n1. \"kayfabe\"\n2. European mass movements\n3. generative grammar"
+    },
+    {
+        "test_id": 19,
+        "relation": "AssociatedWith",
+        "correct_feat": "promotions",
+        "options": "1. India\n2. promotions\n3. the four canonical Gospels",
+        "correct_num": 2,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is associated with [MASK].\n\nOptions:\n1. India\n2. promotions\n3. the four canonical Gospels"
+    },
+    {
+        "test_id": 20,
+        "relation": "AssociatedWith",
+        "correct_feat": "a unique glossary of terms",
+        "options": "1. Rus'\n2. the Feast of the Epiphany\n3. a unique glossary of terms",
+        "correct_num": 3,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is associated with [MASK].\n\nOptions:\n1. Rus'\n2. the Feast of the Epiphany\n3. a unique glossary of terms"
+    },
+    {
+        "test_id": 21,
+        "relation": "AssociatedWith",
+        "correct_feat": "national or international sports icons",
+        "options": "1. national or international sports icons\n2. Omaha, Nebraska\n3. Joseph Glanvill",
+        "correct_num": 1,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is associated with [MASK].\n\nOptions:\n1. national or international sports icons\n2. Omaha, Nebraska\n3. Joseph Glanvill"
+    },
+    {
+        "test_id": 22,
+        "relation": "BelongsTo",
+        "correct_feat": "athletic theater",
+        "options": "1. the history of art\n2. athletic theater\n3. Disruptor Records",
+        "correct_num": 2,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> belongs to [MASK].\n\nOptions:\n1. the history of art\n2. athletic theater\n3. Disruptor Records"
+    },
+    {
+        "test_id": 23,
+        "relation": "CausedBy",
+        "correct_feat": "the need for more entertaining action in wrestling",
+        "options": "1. the suspicion that Egyptian security officials abducted, tortured and killed Giulio Regeni\n2. viral infections\n3. the need for more entertaining action in wrestling",
+        "correct_num": 3,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is caused by [MASK].\n\nOptions:\n1. the suspicion that Egyptian security officials abducted, tortured and killed Giulio Regeni\n2. viral infections\n3. the need for more entertaining action in wrestling"
+    },
+    {
+        "test_id": 24,
+        "relation": "CausedBy",
+        "correct_feat": "the lack of popularity of the legitimate sport of wrestling",
+        "options": "1. the lack of popularity of the legitimate sport of wrestling\n2. anthropogenic greenhouse gas emissions\n3. dehydration",
+        "correct_num": 1,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is caused by [MASK].\n\nOptions:\n1. the lack of popularity of the legitimate sport of wrestling\n2. anthropogenic greenhouse gas emissions\n3. dehydration"
+    },
+    {
+        "test_id": 25,
+        "relation": "CausedBy",
+        "correct_feat": "the desire to please fans",
+        "options": "1. the decentralization of an empire\n2. the desire to please fans\n3. the influence of regenerationism",
+        "correct_num": 2,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is caused by [MASK].\n\nOptions:\n1. the decentralization of an empire\n2. the desire to please fans\n3. the influence of regenerationism"
+    },
+    {
+        "test_id": 26,
+        "relation": "CausedBy",
+        "correct_feat": "the need to make wrestlers more entertaining",
+        "options": "1. hypovolemic shock\n2. Adam eating fruit from the forbidden tree\n3. the need to make wrestlers more entertaining",
+        "correct_num": 3,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is caused by [MASK].\n\nOptions:\n1. hypovolemic shock\n2. Adam eating fruit from the forbidden tree\n3. the need to make wrestlers more entertaining"
+    },
+    {
+        "test_id": 28,
+        "relation": "CausedBy",
+        "correct_feat": "the shift in audience tastes",
+        "options": "1. concerns about the influence of race and financial resources on sentencing outcomes\n2. the shift in audience tastes\n3. the effects of recreational drugs",
+        "correct_num": 2,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is caused by [MASK].\n\nOptions:\n1. concerns about the influence of race and financial resources on sentencing outcomes\n2. the shift in audience tastes\n3. the effects of recreational drugs"
+    },
+    {
+        "test_id": 29,
+        "relation": "CausedBy",
+        "correct_feat": "the desire to minimize injury",
+        "options": "1. a large dose of a sedative in the system\n2. the desire to depict a coherent continuity of history and descendancy from the ancient Kingdom of Macedon\n3. the desire to minimize injury",
+        "correct_num": 3,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is caused by [MASK].\n\nOptions:\n1. a large dose of a sedative in the system\n2. the desire to depict a coherent continuity of history and descendancy from the ancient Kingdom of Macedon\n3. the desire to minimize injury"
+    },
+    {
+        "test_id": 30,
+        "relation": "ConsistsOf",
+        "correct_feat": "mock combat",
+        "options": "1. mock combat\n2. several thousand troops\n3. miniatures, monster-specific cards, and gear cards",
+        "correct_num": 1,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> consists of [MASK].\n\nOptions:\n1. mock combat\n2. several thousand troops\n3. miniatures, monster-specific cards, and gear cards"
+    },
+    {
+        "test_id": 31,
+        "relation": "ConsistsOf",
+        "correct_feat": "performers who are competitive wrestlers",
+        "options": "1. Rolls-Royce Griffon engines\n2. performers who are competitive wrestlers\n3. soldiers and war machinery",
+        "correct_num": 2,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> consists of [MASK].\n\nOptions:\n1. Rolls-Royce Griffon engines\n2. performers who are competitive wrestlers\n3. soldiers and war machinery"
+    },
+    {
+        "test_id": 32,
+        "relation": "ConsistsOf",
+        "correct_feat": "improvisation and choreography",
+        "options": "1. a map\n2. egg tempera\n3. improvisation and choreography",
+        "correct_num": 3,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> consists of [MASK].\n\nOptions:\n1. a map\n2. egg tempera\n3. improvisation and choreography"
+    },
+    {
+        "test_id": 33,
+        "relation": "ConsistsOf",
+        "correct_feat": "personae and gimmicks",
+        "options": "1. personae and gimmicks\n2. ideals formed by the supporters of spouses N\u00e9stor Kirchner and Cristina Fern\u00e1ndez de Kirchner\n3. brothers Dimitri Thivaios and Michael Thivaios",
+        "correct_num": 1,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> consists of [MASK].\n\nOptions:\n1. personae and gimmicks\n2. ideals formed by the supporters of spouses N\u00e9stor Kirchner and Cristina Fern\u00e1ndez de Kirchner\n3. brothers Dimitri Thivaios and Michael Thivaios"
+    },
+    {
+        "test_id": 34,
+        "relation": "ConsistsOf",
+        "correct_feat": "dramatic stories",
+        "options": "1. two brothers, Florian \"Bigflo\" Ordo\u00f1ez and Olivio \"Oli\" Ordo\u00f1ez\n2. dramatic stories\n3. Greek nationalism",
+        "correct_num": 2,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> consists of [MASK].\n\nOptions:\n1. two brothers, Florian \"Bigflo\" Ordo\u00f1ez and Olivio \"Oli\" Ordo\u00f1ez\n2. dramatic stories\n3. Greek nationalism"
+    },
+    {
+        "test_id": 35,
+        "relation": "ConsistsOf",
+        "correct_feat": "heroic \"faces\" and villainous \"heels\"",
+        "options": "1. an angel carrying a scroll with names\n2. ideologies\n3. heroic \"faces\" and villainous \"heels\"",
+        "correct_num": 3,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> consists of [MASK].\n\nOptions:\n1. an angel carrying a scroll with names\n2. ideologies\n3. heroic \"faces\" and villainous \"heels\""
+    },
+    {
+        "test_id": 36,
+        "relation": "ConsistsOf",
+        "correct_feat": "various promotions",
+        "options": "1. various promotions\n2. a choir singing in a loving embrace\n3. an intradivine monologue determining the couple's expulsion",
+        "correct_num": 1,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> consists of [MASK].\n\nOptions:\n1. various promotions\n2. a choir singing in a loving embrace\n3. an intradivine monologue determining the couple's expulsion"
+    },
+    {
+        "test_id": 38,
+        "relation": "CreatedFor",
+        "correct_feat": "pleasing fans",
+        "options": "1. illustrating a Gulf Coast day\n2. the clarification of legal consequences under these obligations for States\n3. pleasing fans",
+        "correct_num": 3,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> was created for [MASK].\n\nOptions:\n1. illustrating a Gulf Coast day\n2. the clarification of legal consequences under these obligations for States\n3. pleasing fans"
+    },
+    {
+        "test_id": 39,
+        "relation": "CreatedFor",
+        "correct_feat": "making wrestlers more entertaining",
+        "options": "1. making wrestlers more entertaining\n2. training purposes\n3. the reception center",
+        "correct_num": 1,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> was created for [MASK].\n\nOptions:\n1. making wrestlers more entertaining\n2. training purposes\n3. the reception center"
+    },
+    {
+        "test_id": 40,
+        "relation": "CreatedFor",
+        "correct_feat": "drawing sustainable audiences",
+        "options": "1. the purpose of asserting ethnic Macedonian achievements\n2. drawing sustainable audiences\n3. the Art in Action exhibition at Treasure Island's Golden Gate International Exposition",
+        "correct_num": 2,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> was created for [MASK].\n\nOptions:\n1. the purpose of asserting ethnic Macedonian achievements\n2. drawing sustainable audiences\n3. the Art in Action exhibition at Treasure Island's Golden Gate International Exposition"
+    },
+    {
+        "test_id": 41,
+        "relation": "CreatedTo",
+        "correct_feat": "display more entertaining action",
+        "options": "1. focus farmers on a vision of the future\n2. serve as a reception center\n3. display more entertaining action",
+        "correct_num": 3,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> was created to [MASK].\n\nOptions:\n1. focus farmers on a vision of the future\n2. serve as a reception center\n3. display more entertaining action"
+    },
+    {
+        "test_id": 42,
+        "relation": "CreatedTo",
+        "correct_feat": "please the fans",
+        "options": "1. please the fans\n2. incorporate capture by approach into a draughts framework\n3. celebrate Latino and Chicano culture and influence at The University of Southern California and in Los Angeles",
+        "correct_num": 1,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> was created to [MASK].\n\nOptions:\n1. please the fans\n2. incorporate capture by approach into a draughts framework\n3. celebrate Latino and Chicano culture and influence at The University of Southern California and in Los Angeles"
+    },
+    {
+        "test_id": 43,
+        "relation": "CreatedTo",
+        "correct_feat": "make wrestlers more entertaining",
+        "options": "1. depict other stories\n2. make wrestlers more entertaining\n3. promote the cultural unity of Italy",
+        "correct_num": 2,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> was created to [MASK].\n\nOptions:\n1. depict other stories\n2. make wrestlers more entertaining\n3. promote the cultural unity of Italy"
+    },
+    {
+        "test_id": 44,
+        "relation": "CreatedTo",
+        "correct_feat": "provide entertainment to spectators",
+        "options": "1. be Adam's companion\n2. unite the Arab society\n3. provide entertainment to spectators",
+        "correct_num": 3,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> was created to [MASK].\n\nOptions:\n1. be Adam's companion\n2. unite the Arab society\n3. provide entertainment to spectators"
+    },
+    {
+        "test_id": 45,
+        "relation": "DevelopedIn",
+        "correct_feat": "the United States",
+        "options": "1. the United States\n2. United Kingdom\n3. Barbados",
+        "correct_num": 1,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> was developed in [MASK].\n\nOptions:\n1. the United States\n2. United Kingdom\n3. Barbados"
+    },
+    {
+        "test_id": 46,
+        "relation": "DevelopedIn",
+        "correct_feat": "Mexico",
+        "options": "1. the Netherlands\n2. Mexico\n3. Saint Martin (French part)",
+        "correct_num": 2,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> was developed in [MASK].\n\nOptions:\n1. the Netherlands\n2. Mexico\n3. Saint Martin (French part)"
+    },
+    {
+        "test_id": 47,
+        "relation": "DevelopedIn",
+        "correct_feat": "Japan",
+        "options": "1. Svalbard and Jan Mayen\n2. the Comoros\n3. Japan",
+        "correct_num": 3,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> was developed in [MASK].\n\nOptions:\n1. Svalbard and Jan Mayen\n2. the Comoros\n3. Japan"
+    },
+    {
+        "test_id": 50,
+        "relation": "HasA",
+        "correct_feat": "a history",
+        "options": "1. Jesus looking at the city and weeping over it\n2. a starring role as Allyson Henlen\n3. a history",
+        "correct_num": 3,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> has [MASK].\n\nOptions:\n1. Jesus looking at the city and weeping over it\n2. a starring role as Allyson Henlen\n3. a history"
+    },
+    {
+        "test_id": 51,
+        "relation": "HasA",
+        "correct_feat": "its own culture and community",
+        "options": "1. its own culture and community\n2. a two-player gameplay\n3. rules preventing Hungarian and Romanian forces from being stacked together or participating in the same attack due to Balkan rivalry",
+        "correct_num": 1,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> has [MASK].\n\nOptions:\n1. its own culture and community\n2. a two-player gameplay\n3. rules preventing Hungarian and Romanian forces from being stacked together or participating in the same attack due to Balkan rivalry"
+    },
+    {
+        "test_id": 52,
+        "relation": "HasA",
+        "correct_feat": "a unique glossary of terms",
+        "options": "1. an official formalized title Nostra Mater de Perpetuo Succursu\n2. a unique glossary of terms\n3. a second album, Sex and Travel",
+        "correct_num": 2,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> has [MASK].\n\nOptions:\n1. an official formalized title Nostra Mater de Perpetuo Succursu\n2. a unique glossary of terms\n3. a second album, Sex and Travel"
+    },
+    {
+        "test_id": 53,
+        "relation": "HasA",
+        "correct_feat": "achieved mainstream success",
+        "options": "1. a door in the side\n2. a federal parliament\n3. achieved mainstream success",
+        "correct_num": 3,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> has [MASK].\n\nOptions:\n1. a door in the side\n2. a federal parliament\n3. achieved mainstream success"
+    },
+    {
+        "test_id": 54,
+        "relation": "HasA",
+        "correct_feat": "achieved influence within popular culture",
+        "options": "1. achieved influence within popular culture\n2. 1,800 counters\n3. a significant factor in width",
+        "correct_num": 1,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> has [MASK].\n\nOptions:\n1. achieved influence within popular culture\n2. 1,800 counters\n3. a significant factor in width"
+    },
+    {
+        "test_id": 55,
+        "relation": "HasA",
+        "correct_feat": "numerous wrestlers who have become sports icons",
+        "options": "1. a symbol of the Six Arrows\n2. numerous wrestlers who have become sports icons\n3. pain",
+        "correct_num": 2,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> has [MASK].\n\nOptions:\n1. a symbol of the Six Arrows\n2. numerous wrestlers who have become sports icons\n3. pain"
+    },
+    {
+        "test_id": 56,
+        "relation": "HasA",
+        "correct_feat": "a legal definition in numerous American states as a non-sport",
+        "options": "1. a winner declared when one player captures all the shells\n2. the title of Emperor of the French\n3. a legal definition in numerous American states as a non-sport",
+        "correct_num": 3,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> has [MASK].\n\nOptions:\n1. a winner declared when one player captures all the shells\n2. the title of Emperor of the French\n3. a legal definition in numerous American states as a non-sport"
+    },
+    {
+        "test_id": 57,
+        "relation": "HasA",
+        "correct_feat": "distinct styles, traditions, and subgenres in different countries",
+        "options": "1. distinct styles, traditions, and subgenres in different countries\n2. arms that warmly cradle him\n3. a language of uncertain origin and classification",
+        "correct_num": 1,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> has [MASK].\n\nOptions:\n1. distinct styles, traditions, and subgenres in different countries\n2. arms that warmly cradle him\n3. a language of uncertain origin and classification"
+    },
+    {
+        "test_id": 58,
+        "relation": "HasFeatureOf",
+        "correct_feat": "athletic theater",
+        "options": "1. the Milanese force being numerically superior\n2. athletic theater\n3. its partial violence as described by German government institutions",
+        "correct_num": 2,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is characterized by [MASK].\n\nOptions:\n1. the Milanese force being numerically superior\n2. athletic theater\n3. its partial violence as described by German government institutions"
+    },
+    {
+        "test_id": 59,
+        "relation": "HasFeatureOf",
+        "correct_feat": "mock combat",
+        "options": "1. its denunciation of U.S. interventionist policies\n2. death taking minutes to days\n3. mock combat",
+        "correct_num": 3,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is characterized by [MASK].\n\nOptions:\n1. its denunciation of U.S. interventionist policies\n2. death taking minutes to days\n3. mock combat"
+    },
+    {
+        "test_id": 60,
+        "relation": "HasFeatureOf",
+        "correct_feat": "performers who are competitive wrestlers",
+        "options": "1. performers who are competitive wrestlers\n2. Euroscepticism\n3. the owning player turning the wooden block by 90 degrees when a hit occurs",
+        "correct_num": 1,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is characterized by [MASK].\n\nOptions:\n1. performers who are competitive wrestlers\n2. Euroscepticism\n3. the owning player turning the wooden block by 90 degrees when a hit occurs"
+    },
+    {
+        "test_id": 61,
+        "relation": "HasFeatureOf",
+        "correct_feat": "fixed matches",
+        "options": "1. a conspiracy by French industrial and banking interests\n2. fixed matches\n3. being the location where the Lutheran Formula of Concord was written",
+        "correct_num": 2,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is characterized by [MASK].\n\nOptions:\n1. a conspiracy by French industrial and banking interests\n2. fixed matches\n3. being the location where the Lutheran Formula of Concord was written"
+    },
+    {
+        "test_id": 62,
+        "relation": "HasFeatureOf",
+        "correct_feat": "improvisation and choreography",
+        "options": "1. a detailed set of instructions in the ASL Rulebook for Design Your Own scenarios\n2. its objects\n3. improvisation and choreography",
+        "correct_num": 3,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is characterized by [MASK].\n\nOptions:\n1. a detailed set of instructions in the ASL Rulebook for Design Your Own scenarios\n2. its objects\n3. improvisation and choreography"
+    },
+    {
+        "test_id": 63,
+        "relation": "HasFeatureOf",
+        "correct_feat": "personae and gimmicks",
+        "options": "1. personae and gimmicks\n2. its empire spanning the western Maghreb and al-Andalus\n3. aiming at reconciliation between Poles and Russians",
+        "correct_num": 1,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is characterized by [MASK].\n\nOptions:\n1. personae and gimmicks\n2. its empire spanning the western Maghreb and al-Andalus\n3. aiming at reconciliation between Poles and Russians"
+    },
+    {
+        "test_id": 64,
+        "relation": "HasFeatureOf",
+        "correct_feat": "dramatic stories",
+        "options": "1. variations in rules and number of holes\n2. dramatic stories\n3. a diary with explicit descriptions of sexual liaisons",
+        "correct_num": 2,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is characterized by [MASK].\n\nOptions:\n1. variations in rules and number of holes\n2. dramatic stories\n3. a diary with explicit descriptions of sexual liaisons"
+    },
+    {
+        "test_id": 65,
+        "relation": "HasFeatureOf",
+        "correct_feat": "\"kayfabe\"",
+        "options": "1. a markedly different sound than those heard on their debut album\n2. the death of at least five people in jail without trial\n3. \"kayfabe\"",
+        "correct_num": 3,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is characterized by [MASK].\n\nOptions:\n1. a markedly different sound than those heard on their debut album\n2. the death of at least five people in jail without trial\n3. \"kayfabe\""
+    },
+    {
+        "test_id": 66,
+        "relation": "HasFeatureOf",
+        "correct_feat": "promotions",
+        "options": "1. promotions\n2. being a true fresco\n3. advocating the dissolution of agriculture",
+        "correct_num": 1,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is characterized by [MASK].\n\nOptions:\n1. promotions\n2. being a true fresco\n3. advocating the dissolution of agriculture"
+    },
+    {
+        "test_id": 67,
+        "relation": "HasFeatureOf",
+        "correct_feat": "a unique glossary of terms",
+        "options": "1. surrounding figures that are smaller\n2. a unique glossary of terms\n3. the game ending when one player captures all stones of the opponent",
+        "correct_num": 2,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is characterized by [MASK].\n\nOptions:\n1. surrounding figures that are smaller\n2. a unique glossary of terms\n3. the game ending when one player captures all stones of the opponent"
+    },
+    {
+        "test_id": 68,
+        "relation": "HeldIn",
+        "correct_feat": "the United States",
+        "options": "1. Zambia\n2. Christmas Island\n3. the United States",
+        "correct_num": 3,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> was held in [MASK].\n\nOptions:\n1. Zambia\n2. Christmas Island\n3. the United States"
+    },
+    {
+        "test_id": 69,
+        "relation": "HeldIn",
+        "correct_feat": "Mexico",
+        "options": "1. Mexico\n2. Togo\n3. Jamaica",
+        "correct_num": 1,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> was held in [MASK].\n\nOptions:\n1. Mexico\n2. Togo\n3. Jamaica"
+    },
+    {
+        "test_id": 70,
+        "relation": "HeldIn",
+        "correct_feat": "Japan",
+        "options": "1. Greece\n2. Japan\n3. Cameroon",
+        "correct_num": 2,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> was held in [MASK].\n\nOptions:\n1. Greece\n2. Japan\n3. Cameroon"
+    },
+    {
+        "test_id": 71,
+        "relation": "HeldIn",
+        "correct_feat": "Europe",
+        "options": "1. the first book of Philo's De somniis\n2. Australia\n3. Europe",
+        "correct_num": 3,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> was held in [MASK].\n\nOptions:\n1. the first book of Philo's De somniis\n2. Australia\n3. Europe"
+    },
+    {
+        "test_id": 72,
+        "relation": "HeldIn",
+        "correct_feat": "the United Kingdom",
+        "options": "1. the United Kingdom\n2. Argentina\n3. the Gambia",
+        "correct_num": 1,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> was held in [MASK].\n\nOptions:\n1. the United Kingdom\n2. Argentina\n3. the Gambia"
+    },
+    {
+        "test_id": 74,
+        "relation": "HeldIn",
+        "correct_feat": "Germany/Austria",
+        "options": "1. Fars\n2. the nave of the church\n3. Germany/Austria",
+        "correct_num": 3,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> was held in [MASK].\n\nOptions:\n1. Fars\n2. the nave of the church\n3. Germany/Austria"
+    },
+    {
+        "test_id": 75,
+        "relation": "HeldIn",
+        "correct_feat": "India",
+        "options": "1. India\n2. Comoros\n3. Sierra Leone",
+        "correct_num": 1,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> was held in [MASK].\n\nOptions:\n1. India\n2. Comoros\n3. Sierra Leone"
+    },
+    {
+        "test_id": 77,
+        "relation": "Influenced",
+        "correct_feat": "popular culture",
+        "options": "1. the translation of the Bible into Afrikaans\n2. the development of Italian nationalism\n3. popular culture",
+        "correct_num": 3,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> influenced [MASK].\n\nOptions:\n1. the translation of the Bible into Afrikaans\n2. the development of Italian nationalism\n3. popular culture"
+    },
+    {
+        "test_id": 78,
+        "relation": "Influenced",
+        "correct_feat": "everyday language",
+        "options": "1. everyday language\n2. the application of the \"historical tradition test\"\n3. Russia",
+        "correct_num": 1,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> influenced [MASK].\n\nOptions:\n1. everyday language\n2. the application of the \"historical tradition test\"\n3. Russia"
+    },
+    {
+        "test_id": 79,
+        "relation": "Influenced",
+        "correct_feat": "film",
+        "options": "1. the youthful counterculture of the 1960s\n2. film\n3. the Tricolour Citizens' Movement (Tricolour)",
+        "correct_num": 2,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> influenced [MASK].\n\nOptions:\n1. the youthful counterculture of the 1960s\n2. film\n3. the Tricolour Citizens' Movement (Tricolour)"
+    },
+    {
+        "test_id": 80,
+        "relation": "Influenced",
+        "correct_feat": "television",
+        "options": "1. the technological march towards the invention of cinema\n2. the Party of Common Sense (Rozumn\u00ed)\n3. television",
+        "correct_num": 3,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> influenced [MASK].\n\nOptions:\n1. the technological march towards the invention of cinema\n2. the Party of Common Sense (Rozumn\u00ed)\n3. television"
+    },
+    {
+        "test_id": 81,
+        "relation": "Influenced",
+        "correct_feat": "music",
+        "options": "1. music\n2. Russia\n3. the Brazilian Labour Renewal Party",
+        "correct_num": 1,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> influenced [MASK].\n\nOptions:\n1. music\n2. Russia\n3. the Brazilian Labour Renewal Party"
+    },
+    {
+        "test_id": 82,
+        "relation": "Influenced",
+        "correct_feat": "video games",
+        "options": "1. the ruling class of the northern kingdom of Balhae\n2. video games\n3. the confirmation of the ruling on the death penalty for rape in Coker v. Georgia",
+        "correct_num": 2,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> influenced [MASK].\n\nOptions:\n1. the ruling class of the northern kingdom of Balhae\n2. video games\n3. the confirmation of the ruling on the death penalty for rape in Coker v. Georgia"
+    },
+    {
+        "test_id": 83,
+        "relation": "InfluencedBy",
+        "correct_feat": "carnival culture",
+        "options": "1. Abraham Kuyper\n2. Transport for London's strict Conditions of Fitness\n3. carnival culture",
+        "correct_num": 3,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> was influenced by [MASK].\n\nOptions:\n1. Abraham Kuyper\n2. Transport for London's strict Conditions of Fitness\n3. carnival culture"
+    },
+    {
+        "test_id": 84,
+        "relation": "InfluencedBy",
+        "correct_feat": "spectator sports",
+        "options": "1. spectator sports\n2. the categorisation of Islam as having an anti-democratic and anti-modern character\n3. the federal government in Washington",
+        "correct_num": 1,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> was influenced by [MASK].\n\nOptions:\n1. spectator sports\n2. the categorisation of Islam as having an anti-democratic and anti-modern character\n3. the federal government in Washington"
+    },
+    {
+        "test_id": 86,
+        "relation": "InfluencedBy",
+        "correct_feat": "urbanization",
+        "options": "1. the U.S. government\n2. the National Syndicalism of Primo De Rivera\n3. urbanization",
+        "correct_num": 3,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> was influenced by [MASK].\n\nOptions:\n1. the U.S. government\n2. the National Syndicalism of Primo De Rivera\n3. urbanization"
+    },
+    {
+        "test_id": 87,
+        "relation": "InfluencedBy",
+        "correct_feat": "railroads",
+        "options": "1. railroads\n2. French accordion music\n3. the 1982 patriation of Canada's constitution",
+        "correct_num": 1,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> was influenced by [MASK].\n\nOptions:\n1. railroads\n2. French accordion music\n3. the 1982 patriation of Canada's constitution"
+    },
+    {
+        "test_id": 89,
+        "relation": "InfluencedBy",
+        "correct_feat": "mass media",
+        "options": "1. Exodus\n2. film scores\n3. mass media",
+        "correct_num": 3,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> was influenced by [MASK].\n\nOptions:\n1. Exodus\n2. film scores\n3. mass media"
+    },
+    {
+        "test_id": 90,
+        "relation": "InfluencedBy",
+        "correct_feat": "boxing",
+        "options": "1. boxing\n2. the prophetess Anna\n3. the organizational principles of Mikhail Bakunin",
+        "correct_num": 1,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> was influenced by [MASK].\n\nOptions:\n1. boxing\n2. the prophetess Anna\n3. the organizational principles of Mikhail Bakunin"
+    },
+    {
+        "test_id": 91,
+        "relation": "IsA",
+        "correct_feat": "a form of athletic theater",
+        "options": "1. a couple\n2. a form of athletic theater\n3. a United States Supreme Court case",
+        "correct_num": 2,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is [MASK].\n\nOptions:\n1. a couple\n2. a form of athletic theater\n3. a United States Supreme Court case"
+    },
+    {
+        "test_id": 92,
+        "relation": "IsA",
+        "correct_feat": "a practice known as \"kayfabe\"",
+        "options": "1. a civic nationalist movement\n2. a fantasy novel\n3. a practice known as \"kayfabe\"",
+        "correct_num": 3,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is [MASK].\n\nOptions:\n1. a civic nationalist movement\n2. a fantasy novel\n3. a practice known as \"kayfabe\""
+    },
+    {
+        "test_id": 93,
+        "relation": "IsA",
+        "correct_feat": "a non-sport in numerous American states",
+        "options": "1. a non-sport in numerous American states\n2. a public health issue in Portugal\n3. the Imperial House of France",
+        "correct_num": 1,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is [MASK].\n\nOptions:\n1. a non-sport in numerous American states\n2. a public health issue in Portugal\n3. the Imperial House of France"
+    },
+    {
+        "test_id": 94,
+        "relation": "IsA",
+        "correct_feat": "\"theatrical wrestling\" in the state of Washington",
+        "options": "1. a Zaydi and later Twelver Shi'a dynasty\n2. \"theatrical wrestling\" in the state of Washington\n3. a cultural movement",
+        "correct_num": 2,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is [MASK].\n\nOptions:\n1. a Zaydi and later Twelver Shi'a dynasty\n2. \"theatrical wrestling\" in the state of Washington\n3. a cultural movement"
+    },
+    {
+        "test_id": 95,
+        "relation": "IsA",
+        "correct_feat": "a genuine contest where both wrestlers fight to win in some countries",
+        "options": "1. a movement\n2. a protector and patroness of the city of Kazan\n3. a genuine contest where both wrestlers fight to win in some countries",
+        "correct_num": 3,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is [MASK].\n\nOptions:\n1. a movement\n2. a protector and patroness of the city of Kazan\n3. a genuine contest where both wrestlers fight to win in some countries"
+    },
+    {
+        "test_id": 96,
+        "relation": "IsA",
+        "correct_feat": "a fixed match referred to as a worked match in the industry's slang",
+        "options": "1. a fixed match referred to as a worked match in the industry's slang\n2. a game that is mentioned in Upton Sinclair's Dragon's Teeth\n3. a socialist romance novel",
+        "correct_num": 1,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is [MASK].\n\nOptions:\n1. a fixed match referred to as a worked match in the industry's slang\n2. a game that is mentioned in Upton Sinclair's Dragon's Teeth\n3. a socialist romance novel"
+    },
+    {
+        "test_id": 98,
+        "relation": "KnownAs",
+        "correct_feat": "pro wrestling",
+        "options": "1. Tory democracy\n2. Nazionalismo italiano\n3. pro wrestling",
+        "correct_num": 3,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is known as [MASK].\n\nOptions:\n1. Tory democracy\n2. Nazionalismo italiano\n3. pro wrestling"
+    },
+    {
+        "test_id": 99,
+        "relation": "KnownAs",
+        "correct_feat": "wrestling",
+        "options": "1. wrestling\n2. rogationes\n3. Buchynska Theotokos",
+        "correct_num": 1,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is known as [MASK].\n\nOptions:\n1. wrestling\n2. rogationes\n3. Buchynska Theotokos"
+    },
+    {
+        "test_id": 100,
+        "relation": "KnownAs",
+        "correct_feat": "\"theatrical wrestling\" in the state of Washington",
+        "options": "1. Blokus Portable: Steambot Championship in its international release\n2. \"theatrical wrestling\" in the state of Washington\n3. drug relegalization",
+        "correct_num": 2,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is known as [MASK].\n\nOptions:\n1. Blokus Portable: Steambot Championship in its international release\n2. \"theatrical wrestling\" in the state of Washington\n3. drug relegalization"
+    },
+    {
+        "test_id": 102,
+        "relation": "KnownFor",
+        "correct_feat": "its mock combat",
+        "options": "1. its mock combat\n2. its updated game system\n3. its simplified rules",
+        "correct_num": 1,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is known for [MASK].\n\nOptions:\n1. its mock combat\n2. its updated game system\n3. its simplified rules"
+    },
+    {
+        "test_id": 103,
+        "relation": "KnownFor",
+        "correct_feat": "its fixed matches",
+        "options": "1. its speed and high quality\n2. its fixed matches\n3. their association with Tottenham Hotspur",
+        "correct_num": 2,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is known for [MASK].\n\nOptions:\n1. its speed and high quality\n2. its fixed matches\n3. their association with Tottenham Hotspur"
+    },
+    {
+        "test_id": 104,
+        "relation": "KnownFor",
+        "correct_feat": "its improvisation and choreography",
+        "options": "1. ruling Hungary\n2. becoming the de facto rulers of the Franks\n3. its improvisation and choreography",
+        "correct_num": 3,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is known for [MASK].\n\nOptions:\n1. ruling Hungary\n2. becoming the de facto rulers of the Franks\n3. its improvisation and choreography"
+    },
+    {
+        "test_id": 105,
+        "relation": "KnownFor",
+        "correct_feat": "its personae and gimmicks",
+        "options": "1. its personae and gimmicks\n2. a fusion of rock music, soul music, and rhythm and blues\n3. its automatic-press works",
+        "correct_num": 1,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is known for [MASK].\n\nOptions:\n1. its personae and gimmicks\n2. a fusion of rock music, soul music, and rhythm and blues\n3. its automatic-press works"
+    },
+    {
+        "test_id": 106,
+        "relation": "KnownFor",
+        "correct_feat": "its dramatic stories",
+        "options": "1. its use of silence in music\n2. its dramatic stories\n3. its numerous coral formations",
+        "correct_num": 2,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is known for [MASK].\n\nOptions:\n1. its use of silence in music\n2. its dramatic stories\n3. its numerous coral formations"
+    },
+    {
+        "test_id": 107,
+        "relation": "KnownFor",
+        "correct_feat": "\"kayfabe\"",
+        "options": "1. its use in German history\n2. its extinction with the death of Cardinal Henry Benedict Stuart\n3. \"kayfabe\"",
+        "correct_num": 3,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is known for [MASK].\n\nOptions:\n1. its use in German history\n2. its extinction with the death of Cardinal Henry Benedict Stuart\n3. \"kayfabe\""
+    },
+    {
+        "test_id": 108,
+        "relation": "KnownFor",
+        "correct_feat": "its unique glossary of terms",
+        "options": "1. its unique glossary of terms\n2. the world's largest reef system, the Great Barrier Reef\n3. the 16th century",
+        "correct_num": 1,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is known for [MASK].\n\nOptions:\n1. its unique glossary of terms\n2. the world's largest reef system, the Great Barrier Reef\n3. the 16th century"
+    },
+    {
+        "test_id": 110,
+        "relation": "KnownFor",
+        "correct_feat": "wrestlers becoming sports icons",
+        "options": "1. advocating absolute integral nationalism\n2. its wager\n3. wrestlers becoming sports icons",
+        "correct_num": 3,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is known for [MASK].\n\nOptions:\n1. advocating absolute integral nationalism\n2. its wager\n3. wrestlers becoming sports icons"
+    },
+    {
+        "test_id": 111,
+        "relation": "OriginatedIn",
+        "correct_feat": "the United States",
+        "options": "1. the United States\n2. Slovakia\n3. Ukraine",
+        "correct_num": 1,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> originated in [MASK].\n\nOptions:\n1. the United States\n2. Slovakia\n3. Ukraine"
+    },
+    {
+        "test_id": 112,
+        "relation": "OriginatedIn",
+        "correct_feat": "America",
+        "options": "1. Russia\n2. America\n3. America",
+        "correct_num": 2,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> originated in [MASK].\n\nOptions:\n1. Russia\n2. America\n3. America"
+    },
+    {
+        "test_id": 113,
+        "relation": "PartOf",
+        "correct_feat": "athletic theater",
+        "options": "1. a cycle of \"eminent men\"\n2. the sishya lineage of Manambuchaavadi Venkatasubbayyar\n3. athletic theater",
+        "correct_num": 3,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is part of [MASK].\n\nOptions:\n1. a cycle of \"eminent men\"\n2. the sishya lineage of Manambuchaavadi Venkatasubbayyar\n3. athletic theater"
+    },
+    {
+        "test_id": 114,
+        "relation": "PartOf",
+        "correct_feat": "popular culture",
+        "options": "1. popular culture\n2. the Spanish Empire\n3. a broader WPA initiative",
+        "correct_num": 1,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is part of [MASK].\n\nOptions:\n1. popular culture\n2. the Spanish Empire\n3. a broader WPA initiative"
+    },
+    {
+        "test_id": 116,
+        "relation": "PartOf",
+        "correct_feat": "film",
+        "options": "1. the Ticonderoga-class\n2. the Feast of the Epiphany\n3. film",
+        "correct_num": 3,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is part of [MASK].\n\nOptions:\n1. the Ticonderoga-class\n2. the Feast of the Epiphany\n3. film"
+    },
+    {
+        "test_id": 117,
+        "relation": "PartOf",
+        "correct_feat": "television",
+        "options": "1. television\n2. the Netherlands\n3. the Book of Genesis",
+        "correct_num": 1,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is part of [MASK].\n\nOptions:\n1. television\n2. the Netherlands\n3. the Book of Genesis"
+    },
+    {
+        "test_id": 118,
+        "relation": "PartOf",
+        "correct_feat": "music",
+        "options": "1. the Whig canon\n2. music\n3. Marxism\u2013Leninism",
+        "correct_num": 2,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is part of [MASK].\n\nOptions:\n1. the Whig canon\n2. music\n3. Marxism\u2013Leninism"
+    },
+    {
+        "test_id": 119,
+        "relation": "PartOf",
+        "correct_feat": "video games",
+        "options": "1. church liturgy\n2. the Walter Anderson Museum of Art\n3. video games",
+        "correct_num": 3,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is part of [MASK].\n\nOptions:\n1. church liturgy\n2. the Walter Anderson Museum of Art\n3. video games"
+    },
+    {
+        "test_id": 120,
+        "relation": "PerformedBy",
+        "correct_feat": "wrestlers",
+        "options": "1. wrestlers\n2. Queen\n3. the German Empire, Austria-Hungary, the Ottoman Empire, the United Kingdom, France, the Russian Empire, the Kingdom of Italy, and the United States of America",
+        "correct_num": 1,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> was performed by [MASK].\n\nOptions:\n1. wrestlers\n2. Queen\n3. the German Empire, Austria-Hungary, the Ottoman Empire, the United Kingdom, France, the Russian Empire, the Kingdom of Italy, and the United States of America"
+    },
+    {
+        "test_id": 121,
+        "relation": "UsedAs",
+        "correct_feat": "athletic theater",
+        "options": "1. a symbol of John the Evangelist\n2. athletic theater\n3. a pseudonym",
+        "correct_num": 2,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is used as [MASK].\n\nOptions:\n1. a symbol of John the Evangelist\n2. athletic theater\n3. a pseudonym"
+    },
+    {
+        "test_id": 122,
+        "relation": "UsedAs",
+        "correct_feat": "a form of entertainment",
+        "options": "1. a symbol of Africa or Ghana\n2. a doctrine\n3. a form of entertainment",
+        "correct_num": 3,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is used as [MASK].\n\nOptions:\n1. a symbol of Africa or Ghana\n2. a doctrine\n3. a form of entertainment"
+    },
+    {
+        "test_id": 123,
+        "relation": "UsedAs",
+        "correct_feat": "a non-sport in numerous American states",
+        "options": "1. a non-sport in numerous American states\n2. a game where pieces are crowned upon reaching the opposite end of the board\n3. a foreshadowing of the cross",
+        "correct_num": 1,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is used as [MASK].\n\nOptions:\n1. a non-sport in numerous American states\n2. a game where pieces are crowned upon reaching the opposite end of the board\n3. a foreshadowing of the cross"
+    },
+    {
+        "test_id": 124,
+        "relation": "UsedAs",
+        "correct_feat": "\"theatrical wrestling\" in the state of Washington",
+        "options": "1. a passenger train\n2. \"theatrical wrestling\" in the state of Washington\n3. a depiction on the central tympanum of cathedral entrances",
+        "correct_num": 2,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is used as [MASK].\n\nOptions:\n1. a passenger train\n2. \"theatrical wrestling\" in the state of Washington\n3. a depiction on the central tympanum of cathedral entrances"
+    },
+    {
+        "test_id": 125,
+        "relation": "UsedFor",
+        "correct_feat": "providing entertainment to spectators",
+        "options": "1. breaking through an enemy defensive line\n2. establishing a coordinated revolutionary organisation\n3. providing entertainment to spectators",
+        "correct_num": 3,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is used for [MASK].\n\nOptions:\n1. breaking through an enemy defensive line\n2. establishing a coordinated revolutionary organisation\n3. providing entertainment to spectators"
+    },
+    {
+        "test_id": 126,
+        "relation": "UsedFor",
+        "correct_feat": "drawing sustainable audiences",
+        "options": "1. drawing sustainable audiences\n2. singing the national anthem\n3. the enslavement of those who are guilty of capital offences",
+        "correct_num": 1,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is used for [MASK].\n\nOptions:\n1. drawing sustainable audiences\n2. singing the national anthem\n3. the enslavement of those who are guilty of capital offences"
+    },
+    {
+        "test_id": 128,
+        "relation": "UsedFor",
+        "correct_feat": "performances",
+        "options": "1. promotional flyers\n2. representing Armenia in the Eurovision Song Contest\n3. performances",
+        "correct_num": 3,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is used for [MASK].\n\nOptions:\n1. promotional flyers\n2. representing Armenia in the Eurovision Song Contest\n3. performances"
+    },
+    {
+        "test_id": 130,
+        "relation": "UsedIn",
+        "correct_feat": "film",
+        "options": "1. a music video featuring Elliott Smith\n2. film\n3. collaborations",
+        "correct_num": 2,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is used in [MASK].\n\nOptions:\n1. a music video featuring Elliott Smith\n2. film\n3. collaborations"
+    },
+    {
+        "test_id": 131,
+        "relation": "UsedIn",
+        "correct_feat": "television",
+        "options": "1. the Cretan School\n2. Abbasid Baghdad\n3. television",
+        "correct_num": 3,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is used in [MASK].\n\nOptions:\n1. the Cretan School\n2. Abbasid Baghdad\n3. television"
+    },
+    {
+        "test_id": 133,
+        "relation": "UsedIn",
+        "correct_feat": "video games",
+        "options": "1. the 2nd Annual Grammy Awards\n2. video games\n3. Switzerland",
+        "correct_num": 2,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is used in [MASK].\n\nOptions:\n1. the 2nd Annual Grammy Awards\n2. video games\n3. Switzerland"
+    },
+    {
+        "test_id": 134,
+        "relation": "UsedTo",
+        "correct_feat": "display more entertaining action",
+        "options": "1. describe non-Western societies\n2. relieve Walker of detailed painting\n3. display more entertaining action",
+        "correct_num": 3,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is used to [MASK].\n\nOptions:\n1. describe non-Western societies\n2. relieve Walker of detailed painting\n3. display more entertaining action"
+    },
+    {
+        "test_id": 135,
+        "relation": "UsedTo",
+        "correct_feat": "please the fans",
+        "options": "1. please the fans\n2. represent Mary's domesticity\n3. provide ranked abstract games on Boardgamegeek",
+        "correct_num": 1,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is used to [MASK].\n\nOptions:\n1. please the fans\n2. represent Mary's domesticity\n3. provide ranked abstract games on Boardgamegeek"
+    },
+    {
+        "test_id": 136,
+        "relation": "UsedTo",
+        "correct_feat": "make wrestlers more entertaining",
+        "options": "1. depict himself as Christ\n2. make wrestlers more entertaining\n3. promote albums",
+        "correct_num": 2,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is used to [MASK].\n\nOptions:\n1. depict himself as Christ\n2. make wrestlers more entertaining\n3. promote albums"
+    },
+    {
+        "test_id": 137,
+        "relation": "UsedTo",
+        "correct_feat": "perform more spectacular moves",
+        "options": "1. refer to the Holy Roman Empire\n2. reject the Orthodox Marxist notion that class and class struggle are the only defining aspects of history and economic development\n3. perform more spectacular moves",
+        "correct_num": 3,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is used to [MASK].\n\nOptions:\n1. refer to the Holy Roman Empire\n2. reject the Orthodox Marxist notion that class and class struggle are the only defining aspects of history and economic development\n3. perform more spectacular moves"
+    },
+    {
+        "test_id": 138,
+        "relation": "UsedTo",
+        "correct_feat": "keep matches short",
+        "options": "1. keep matches short\n2. break records\n3. conduct research projects",
+        "correct_num": 1,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is used to [MASK].\n\nOptions:\n1. keep matches short\n2. break records\n3. conduct research projects"
+    },
+    {
+        "test_id": 139,
+        "relation": "UsedTo",
+        "correct_feat": "schedule matches",
+        "options": "1. argue that slavery is a time-proven practice\n2. schedule matches\n3. control all aspects of Iraqi life",
+        "correct_num": 2,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is used to [MASK].\n\nOptions:\n1. argue that slavery is a time-proven practice\n2. schedule matches\n3. control all aspects of Iraqi life"
+    },
+    {
+        "test_id": 141,
+        "relation": "UsedTo",
+        "correct_feat": "reduce the risk of injury",
+        "options": "1. reduce the risk of injury\n2. make products available to major markets\n3. show that all its inherited rights continued",
+        "correct_num": 1,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is used to [MASK].\n\nOptions:\n1. reduce the risk of injury\n2. make products available to major markets\n3. show that all its inherited rights continued"
+    },
+    {
+        "test_id": 142,
+        "relation": "UsedTo",
+        "correct_feat": "fake holds convincingly without inflicting injury",
+        "options": "1. reduce the chance of the mug being broken\n2. fake holds convincingly without inflicting injury\n3. generate short equations using simple arithmetic",
+        "correct_num": 2,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is used to [MASK].\n\nOptions:\n1. reduce the chance of the mug being broken\n2. fake holds convincingly without inflicting injury\n3. generate short equations using simple arithmetic"
+    },
+    {
+        "test_id": 143,
+        "relation": "UsedTo",
+        "correct_feat": "dupe spectators",
+        "options": "1. transport armies\n2. protect and defend the western borders of Russia\n3. dupe spectators",
+        "correct_num": 3,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is used to [MASK].\n\nOptions:\n1. transport armies\n2. protect and defend the western borders of Russia\n3. dupe spectators"
+    }
+]

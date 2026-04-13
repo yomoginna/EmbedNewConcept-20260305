@@ -1,0 +1,386 @@
+[
+    {
+        "test_id": 0,
+        "relation": "About",
+        "correct_feat": "Armenian folk singing",
+        "options": "1. Armenian folk singing\n2. a rodeo sport involving a rider on a bucking bull\n3. life and time on Horn Island",
+        "correct_num": 1,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is about [MASK].\n\nOptions:\n1. Armenian folk singing\n2. a rodeo sport involving a rider on a bucking bull\n3. life and time on Horn Island"
+    },
+    {
+        "test_id": 1,
+        "relation": "AssociatedWith",
+        "correct_feat": "the Eurovision Song Contest 2009",
+        "options": "1. the Fourteenth Amendment\n2. the Eurovision Song Contest 2009\n3. the First Spanish Republic",
+        "correct_num": 2,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is associated with [MASK].\n\nOptions:\n1. the Fourteenth Amendment\n2. the Eurovision Song Contest 2009\n3. the First Spanish Republic"
+    },
+    {
+        "test_id": 2,
+        "relation": "ComposedBy",
+        "correct_feat": "Mane Akopyan",
+        "options": "1. Johann Sebastian Bach\n2. Michael Brown\n3. Mane Akopyan",
+        "correct_num": 3,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> was composed by [MASK].\n\nOptions:\n1. Johann Sebastian Bach\n2. Michael Brown\n3. Mane Akopyan"
+    },
+    {
+        "test_id": 3,
+        "relation": "CreatedIn",
+        "correct_feat": "Yerevan",
+        "options": "1. Yerevan\n2. Bukit Rahman Putra\n3. Takeo",
+        "correct_num": 1,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> was created in [MASK].\n\nOptions:\n1. Yerevan\n2. Bukit Rahman Putra\n3. Takeo"
+    },
+    {
+        "test_id": 4,
+        "relation": "HasA",
+        "correct_feat": "a repertoire that includes duets and arias",
+        "options": "1. a tall clock tower\n2. a repertoire that includes duets and arias\n3. spectators",
+        "correct_num": 2,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> has [MASK].\n\nOptions:\n1. a tall clock tower\n2. a repertoire that includes duets and arias\n3. spectators"
+    },
+    {
+        "test_id": 5,
+        "relation": "HasA",
+        "correct_feat": "a second album titled Tamzara",
+        "options": "1. the Farewell Prayer\n2. two teams\n3. a second album titled Tamzara",
+        "correct_num": 3,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> has [MASK].\n\nOptions:\n1. the Farewell Prayer\n2. two teams\n3. a second album titled Tamzara"
+    },
+    {
+        "test_id": 6,
+        "relation": "HasA",
+        "correct_feat": "a third studio album titled Heartbeat of my Land",
+        "options": "1. a third studio album titled Heartbeat of my Land\n2. been put into effect through socioeconomic and legal structures\n3. members who were Grand Dukes of Lithuania",
+        "correct_num": 1,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> has [MASK].\n\nOptions:\n1. a third studio album titled Heartbeat of my Land\n2. been put into effect through socioeconomic and legal structures\n3. members who were Grand Dukes of Lithuania"
+    },
+    {
+        "test_id": 7,
+        "relation": "HasA",
+        "correct_feat": "a fourth album titled Sketches",
+        "options": "1. a strong familial kinship with Balhae\n2. a fourth album titled Sketches\n3. the image of the Child Jesus depicted within a round aureole upon her breast",
+        "correct_num": 2,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> has [MASK].\n\nOptions:\n1. a strong familial kinship with Balhae\n2. a fourth album titled Sketches\n3. the image of the Child Jesus depicted within a round aureole upon her breast"
+    },
+    {
+        "test_id": 8,
+        "relation": "HasA",
+        "correct_feat": "a song titled \"Jan Jan\"",
+        "options": "1. 12 different scenarios\n2. scoring houses carved into the two halves of the cover\n3. a song titled \"Jan Jan\"",
+        "correct_num": 3,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> has [MASK].\n\nOptions:\n1. 12 different scenarios\n2. scoring houses carved into the two halves of the cover\n3. a song titled \"Jan Jan\""
+    },
+    {
+        "test_id": 9,
+        "relation": "HasFeatureOf",
+        "correct_feat": "folk singing",
+        "options": "1. folk singing\n2. its focus on achieving gender equality through political and legal reform within the framework of liberal democracy and informed by a human rights perspective\n3. multiple international competitions",
+        "correct_num": 1,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is characterized by [MASK].\n\nOptions:\n1. folk singing\n2. its focus on achieving gender equality through political and legal reform within the framework of liberal democracy and informed by a human rights perspective\n3. multiple international competitions"
+    },
+    {
+        "test_id": 10,
+        "relation": "HeldIn",
+        "correct_feat": "Moscow, Russia",
+        "options": "1. England\n2. Moscow, Russia\n3. New Zealand",
+        "correct_num": 2,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> was held in [MASK].\n\nOptions:\n1. England\n2. Moscow, Russia\n3. New Zealand"
+    },
+    {
+        "test_id": 12,
+        "relation": "HeldIn",
+        "correct_feat": "Los Angeles",
+        "options": "1. Los Angeles\n2. Qiqihar\n3. Cairo",
+        "correct_num": 1,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> was held in [MASK].\n\nOptions:\n1. Los Angeles\n2. Qiqihar\n3. Cairo"
+    },
+    {
+        "test_id": 15,
+        "relation": "HeldIn",
+        "correct_feat": "Toronto",
+        "options": "1. Toronto\n2. Vereeniging\n3. Kano",
+        "correct_num": 1,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> was held in [MASK].\n\nOptions:\n1. Toronto\n2. Vereeniging\n3. Kano"
+    },
+    {
+        "test_id": 18,
+        "relation": "HeldIn",
+        "correct_feat": "London",
+        "options": "1. London\n2. Ujjain\n3. Port Sudan",
+        "correct_num": 1,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> was held in [MASK].\n\nOptions:\n1. London\n2. Ujjain\n3. Port Sudan"
+    },
+    {
+        "test_id": 19,
+        "relation": "HeldIn",
+        "correct_feat": "Germany",
+        "options": "1. Bermuda\n2. Germany\n3. United States Minor Outlying Islands",
+        "correct_num": 2,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> was held in [MASK].\n\nOptions:\n1. Bermuda\n2. Germany\n3. United States Minor Outlying Islands"
+    },
+    {
+        "test_id": 21,
+        "relation": "HeldOn",
+        "correct_feat": "16 May",
+        "options": "1. 16 May\n2. Lake St. Moritz\n3. a single UTC day",
+        "correct_num": 1,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> was held on [MASK].\n\nOptions:\n1. 16 May\n2. Lake St. Moritz\n3. a single UTC day"
+    },
+    {
+        "test_id": 24,
+        "relation": "IsA",
+        "correct_feat": "an Armenian folk singing duo",
+        "options": "1. an Armenian folk singing duo\n2. a competitive sport\n3. a depiction of the beginning of the Hungarian conquest of the Carpathian Basin in 895",
+        "correct_num": 1,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is [MASK].\n\nOptions:\n1. an Armenian folk singing duo\n2. a competitive sport\n3. a depiction of the beginning of the Hungarian conquest of the Carpathian Basin in 895"
+    },
+    {
+        "test_id": 25,
+        "relation": "IsA",
+        "correct_feat": "a group of sisters",
+        "options": "1. extreme conservative views in politics or religious practice\n2. a group of sisters\n3. an entertainment attraction",
+        "correct_num": 2,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is [MASK].\n\nOptions:\n1. extreme conservative views in politics or religious practice\n2. a group of sisters\n3. an entertainment attraction"
+    },
+    {
+        "test_id": 26,
+        "relation": "IsA",
+        "correct_feat": "a soloist",
+        "options": "1. a road race\n2. a traditional board game\n3. a soloist",
+        "correct_num": 3,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is [MASK].\n\nOptions:\n1. a road race\n2. a traditional board game\n3. a soloist"
+    },
+    {
+        "test_id": 30,
+        "relation": "IsA",
+        "correct_feat": "an album",
+        "options": "1. an album\n2. a technological march towards an increasingly perfectly realistic reproduction\n3. a complete replacement of the games of the original SL series",
+        "correct_num": 1,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is [MASK].\n\nOptions:\n1. an album\n2. a technological march towards an increasingly perfectly realistic reproduction\n3. a complete replacement of the games of the original SL series"
+    },
+    {
+        "test_id": 32,
+        "relation": "IsA",
+        "correct_feat": "a video",
+        "options": "1. a painkiller headache\n2. a federation with its own unitary policy\n3. a video",
+        "correct_num": 3,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is [MASK].\n\nOptions:\n1. a painkiller headache\n2. a federation with its own unitary policy\n3. a video"
+    },
+    {
+        "test_id": 33,
+        "relation": "IsA",
+        "correct_feat": "a group",
+        "options": "1. a group\n2. a philosophy that is recognized and enhanced by Crenshaw's intersectionality\n3. a Byzantine palladium",
+        "correct_num": 1,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is [MASK].\n\nOptions:\n1. a group\n2. a philosophy that is recognized and enhanced by Crenshaw's intersectionality\n3. a Byzantine palladium"
+    },
+    {
+        "test_id": 34,
+        "relation": "KnownAs",
+        "correct_feat": "the Arshakyan Sisters",
+        "options": "1. tunnel hole-through\n2. the Arshakyan Sisters\n3. uril",
+        "correct_num": 2,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is known as [MASK].\n\nOptions:\n1. tunnel hole-through\n2. the Arshakyan Sisters\n3. uril"
+    },
+    {
+        "test_id": 35,
+        "relation": "KnownFor",
+        "correct_feat": "representing Armenia in the Eurovision Song Contest 2009",
+        "options": "1. its veneration during the Makariev Fair\n2. reconciling Catholicism with democracy\n3. representing Armenia in the Eurovision Song Contest 2009",
+        "correct_num": 3,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is known for [MASK].\n\nOptions:\n1. its veneration during the Makariev Fair\n2. reconciling Catholicism with democracy\n3. representing Armenia in the Eurovision Song Contest 2009"
+    },
+    {
+        "test_id": 36,
+        "relation": "KnownFor",
+        "correct_feat": "its folk music",
+        "options": "1. its folk music\n2. its inclusion of the clash at Hanau as a bonus\n3. its role in forming coalition governments",
+        "correct_num": 1,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is known for [MASK].\n\nOptions:\n1. its folk music\n2. its inclusion of the clash at Hanau as a bonus\n3. its role in forming coalition governments"
+    },
+    {
+        "test_id": 37,
+        "relation": "KnownFor",
+        "correct_feat": "its albums We and our Mountains, Tamzara, Heartbeat of my Land, and Sketches",
+        "options": "1. supporting political democracy\n2. its albums We and our Mountains, Tamzara, Heartbeat of my Land, and Sketches\n3. endeavoring to pave the way for the new social Gospel by small experiments, necessarily doomed to failure, and by the force of example",
+        "correct_num": 2,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is known for [MASK].\n\nOptions:\n1. supporting political democracy\n2. its albums We and our Mountains, Tamzara, Heartbeat of my Land, and Sketches\n3. endeavoring to pave the way for the new social Gospel by small experiments, necessarily doomed to failure, and by the force of example"
+    },
+    {
+        "test_id": 38,
+        "relation": "MemberOf",
+        "correct_feat": "Genealogy",
+        "options": "1. the Holy Roman Empire\n2. the Hellenic world\n3. Genealogy",
+        "correct_num": 3,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is a member of [MASK].\n\nOptions:\n1. the Holy Roman Empire\n2. the Hellenic world\n3. Genealogy"
+    },
+    {
+        "test_id": 39,
+        "relation": "OriginatedIn",
+        "correct_feat": "Armenia",
+        "options": "1. Armenia\n2. Andorra\n3. Barbados",
+        "correct_num": 1,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> originated in [MASK].\n\nOptions:\n1. Armenia\n2. Andorra\n3. Barbados"
+    },
+    {
+        "test_id": 40,
+        "relation": "PartOf",
+        "correct_feat": "Armenia State Philharmonic Orchestra and Chorus",
+        "options": "1. the Servian Walls\n2. Armenia State Philharmonic Orchestra and Chorus\n3. the housing and employment crisis in most of Western Europe",
+        "correct_num": 2,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is part of [MASK].\n\nOptions:\n1. the Servian Walls\n2. Armenia State Philharmonic Orchestra and Chorus\n3. the housing and employment crisis in most of Western Europe"
+    },
+    {
+        "test_id": 41,
+        "relation": "PartOf",
+        "correct_feat": "the G. Achemyan violin ensemble",
+        "options": "1. the New World\n2. the Dormition Cathedral\n3. the G. Achemyan violin ensemble",
+        "correct_num": 3,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is part of [MASK].\n\nOptions:\n1. the New World\n2. the Dormition Cathedral\n3. the G. Achemyan violin ensemble"
+    },
+    {
+        "test_id": 42,
+        "relation": "PartOf",
+        "correct_feat": "the State Song Theater of Armenia",
+        "options": "1. the State Song Theater of Armenia\n2. everyday language\n3. Gordon Brown's political identity",
+        "correct_num": 1,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is part of [MASK].\n\nOptions:\n1. the State Song Theater of Armenia\n2. everyday language\n3. Gordon Brown's political identity"
+    },
+    {
+        "test_id": 43,
+        "relation": "PartOf",
+        "correct_feat": "SHARM Holding LLC",
+        "options": "1. the life of Jesus Christ\n2. SHARM Holding LLC\n3. Napoleon's Last Battles",
+        "correct_num": 2,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is part of [MASK].\n\nOptions:\n1. the life of Jesus Christ\n2. SHARM Holding LLC\n3. Napoleon's Last Battles"
+    },
+    {
+        "test_id": 45,
+        "relation": "ProducedBy",
+        "correct_feat": "A. Grigoryan",
+        "options": "1. A. Grigoryan\n2. the Renaissance\n3. Austin",
+        "correct_num": 1,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> was produced by [MASK].\n\nOptions:\n1. A. Grigoryan\n2. the Renaissance\n3. Austin"
+    },
+    {
+        "test_id": 46,
+        "relation": "PublishedAs",
+        "correct_feat": "the album We and our Mountains",
+        "options": "1. \"The Conduct of the Aerial War\"\n2. the album We and our Mountains\n3. \"Nationalism as a Worldview and Its Relationship to Internationalism\"",
+        "correct_num": 2,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> was published as [MASK].\n\nOptions:\n1. \"The Conduct of the Aerial War\"\n2. the album We and our Mountains\n3. \"Nationalism as a Worldview and Its Relationship to Internationalism\""
+    },
+    {
+        "test_id": 47,
+        "relation": "PublishedAs",
+        "correct_feat": "the album Tamzara",
+        "options": "1. a 2019 single\n2. the \"Seraphim-Ponetaevka\" icon\n3. the album Tamzara",
+        "correct_num": 3,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> was published as [MASK].\n\nOptions:\n1. a 2019 single\n2. the \"Seraphim-Ponetaevka\" icon\n3. the album Tamzara"
+    },
+    {
+        "test_id": 48,
+        "relation": "PublishedAs",
+        "correct_feat": "the album Heartbeat of my Land",
+        "options": "1. the album Heartbeat of my Land\n2. a television movie\n3. \"The Conduct of the Aerial War\"",
+        "correct_num": 1,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> was published as [MASK].\n\nOptions:\n1. the album Heartbeat of my Land\n2. a television movie\n3. \"The Conduct of the Aerial War\""
+    },
+    {
+        "test_id": 49,
+        "relation": "PublishedAs",
+        "correct_feat": "the album Sketches",
+        "options": "1. a television movie\n2. the album Sketches\n3. a 1-hour program on the Science Channel",
+        "correct_num": 2,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> was published as [MASK].\n\nOptions:\n1. a television movie\n2. the album Sketches\n3. a 1-hour program on the Science Channel"
+    },
+    {
+        "test_id": 50,
+        "relation": "PublishedAs",
+        "correct_feat": "the single \"Tamzara\"",
+        "options": "1. Le Tour du monde en quatre-vingts jours\n2. Species Traitor\n3. the single \"Tamzara\"",
+        "correct_num": 3,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> was published as [MASK].\n\nOptions:\n1. Le Tour du monde en quatre-vingts jours\n2. Species Traitor\n3. the single \"Tamzara\""
+    },
+    {
+        "test_id": 51,
+        "relation": "PublishedAs",
+        "correct_feat": "the single \"Khlpane\"",
+        "options": "1. the single \"Khlpane\"\n2. part of the Four Battles in North Africa \"quadrigame\"\n3. a 2006 single",
+        "correct_num": 1,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> was published as [MASK].\n\nOptions:\n1. the single \"Khlpane\"\n2. part of the Four Battles in North Africa \"quadrigame\"\n3. a 2006 single"
+    },
+    {
+        "test_id": 57,
+        "relation": "UsedFor",
+        "correct_feat": "promoting activities",
+        "options": "1. promoting activities\n2. advertising something\n3. recreational leagues",
+        "correct_num": 1,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is used for [MASK].\n\nOptions:\n1. promoting activities\n2. advertising something\n3. recreational leagues"
+    },
+    {
+        "test_id": 59,
+        "relation": "UsedFor",
+        "correct_feat": "representing Armenia in the Eurovision Song Contest",
+        "options": "1. restoration\n2. reducing the perceived harms of capitalism\n3. representing Armenia in the Eurovision Song Contest",
+        "correct_num": 3,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is used for [MASK].\n\nOptions:\n1. restoration\n2. reducing the perceived harms of capitalism\n3. representing Armenia in the Eurovision Song Contest"
+    },
+    {
+        "test_id": 60,
+        "relation": "UsedFor",
+        "correct_feat": "promoting their album Heartbeat of my Land",
+        "options": "1. promoting their album Heartbeat of my Land\n2. veneration\n3. playing on links",
+        "correct_num": 1,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is used for [MASK].\n\nOptions:\n1. promoting their album Heartbeat of my Land\n2. veneration\n3. playing on links"
+    },
+    {
+        "test_id": 62,
+        "relation": "UsedIn",
+        "correct_feat": "the Eurovision Song Contest 2015",
+        "options": "1. armed combat\n2. Sutton town centre\n3. the Eurovision Song Contest 2015",
+        "correct_num": 3,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is used in [MASK].\n\nOptions:\n1. armed combat\n2. Sutton town centre\n3. the Eurovision Song Contest 2015"
+    },
+    {
+        "test_id": 63,
+        "relation": "UsedTo",
+        "correct_feat": "promote themselves as a writer/composer",
+        "options": "1. promote themselves as a writer/composer\n2. incorporate sequences using any number of adjacent tiles in a line\n3. play tiles on a crossword-style grid",
+        "correct_num": 1,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is used to [MASK].\n\nOptions:\n1. promote themselves as a writer/composer\n2. incorporate sequences using any number of adjacent tiles in a line\n3. play tiles on a crossword-style grid"
+    },
+    {
+        "test_id": 64,
+        "relation": "UsedTo",
+        "correct_feat": "promote their activities",
+        "options": "1. justify male domination in society\n2. promote their activities\n3. banish religious interference in government affairs",
+        "correct_num": 2,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is used to [MASK].\n\nOptions:\n1. justify male domination in society\n2. promote their activities\n3. banish religious interference in government affairs"
+    },
+    {
+        "test_id": 66,
+        "relation": "UsedTo",
+        "correct_feat": "achieve victory in Moscow",
+        "options": "1. achieve victory in Moscow\n2. fight the neoconservative leadership of the Republican Party\n3. establish a moratorium on capital punishment",
+        "correct_num": 1,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is used to [MASK].\n\nOptions:\n1. achieve victory in Moscow\n2. fight the neoconservative leadership of the Republican Party\n3. establish a moratorium on capital punishment"
+    },
+    {
+        "test_id": 67,
+        "relation": "WrittenBy",
+        "correct_feat": "Avet Barseghyan",
+        "options": "1. Francesc Pi i Margall\n2. Avet Barseghyan\n3. Janet Morris",
+        "correct_num": 2,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> was written by [MASK].\n\nOptions:\n1. Francesc Pi i Margall\n2. Avet Barseghyan\n3. Janet Morris"
+    },
+    {
+        "test_id": 68,
+        "relation": "WrittenBy",
+        "correct_feat": "Vardan Zadoyan",
+        "options": "1. Francesc Pi i Margall\n2. Frederick Engels\n3. Vardan Zadoyan",
+        "correct_num": 3,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> was written by [MASK].\n\nOptions:\n1. Francesc Pi i Margall\n2. Frederick Engels\n3. Vardan Zadoyan"
+    }
+]

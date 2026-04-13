@@ -1,0 +1,450 @@
+[
+    {
+        "test_id": 0,
+        "relation": "About",
+        "correct_feat": "a libel case against the Church of Scientology",
+        "options": "1. a libel case against the Church of Scientology\n2. a light, non-motorised, fixed-wing heavier-than-air aircraft called a hang glider\n3. an English and Welsh dynasty that held the throne of England from 1485 to 1603",
+        "correct_num": 1,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is about [MASK].\n\nOptions:\n1. a libel case against the Church of Scientology\n2. a light, non-motorised, fixed-wing heavier-than-air aircraft called a hang glider\n3. an English and Welsh dynasty that held the throne of England from 1485 to 1603"
+    },
+    {
+        "test_id": 1,
+        "relation": "About",
+        "correct_feat": "the interpretation of Ontario's libel law in relation to the Canadian Charter of Rights and Freedoms",
+        "options": "1. folk rock\n2. the interpretation of Ontario's libel law in relation to the Canadian Charter of Rights and Freedoms\n3. the depiction of Jesus' mother Mary cradling his body",
+        "correct_num": 2,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is about [MASK].\n\nOptions:\n1. folk rock\n2. the interpretation of Ontario's libel law in relation to the Canadian Charter of Rights and Freedoms\n3. the depiction of Jesus' mother Mary cradling his body"
+    },
+    {
+        "test_id": 2,
+        "relation": "Affects",
+        "correct_feat": "the interpretation of Ontario's libel law",
+        "options": "1. the fate of those outside the Church in Eastern Orthodoxy\n2. the Pearl District\n3. the interpretation of Ontario's libel law",
+        "correct_num": 3,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> affects [MASK].\n\nOptions:\n1. the fate of those outside the Church in Eastern Orthodoxy\n2. the Pearl District\n3. the interpretation of Ontario's libel law"
+    },
+    {
+        "test_id": 3,
+        "relation": "Affects",
+        "correct_feat": "the application of the Canadian Charter of Rights and Freedoms to common law",
+        "options": "1. the application of the Canadian Charter of Rights and Freedoms to common law\n2. Italy and Burgundy\n3. the way American football is played by replacing tackling with flag removal",
+        "correct_num": 1,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> affects [MASK].\n\nOptions:\n1. the application of the Canadian Charter of Rights and Freedoms to common law\n2. Italy and Burgundy\n3. the way American football is played by replacing tackling with flag removal"
+    },
+    {
+        "test_id": 4,
+        "relation": "AssociatedWith",
+        "correct_feat": "the Church of Scientology",
+        "options": "1. the Tudors of Penmynydd\n2. the Church of Scientology\n3. the Pahlavi script",
+        "correct_num": 2,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is associated with [MASK].\n\nOptions:\n1. the Tudors of Penmynydd\n2. the Church of Scientology\n3. the Pahlavi script"
+    },
+    {
+        "test_id": 5,
+        "relation": "AssociatedWith",
+        "correct_feat": "the Supreme Court of Canada",
+        "options": "1. the opposition of misogynist men to women's rights\n2. ClariS\n3. the Supreme Court of Canada",
+        "correct_num": 3,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is associated with [MASK].\n\nOptions:\n1. the opposition of misogynist men to women's rights\n2. ClariS\n3. the Supreme Court of Canada"
+    },
+    {
+        "test_id": 6,
+        "relation": "AssociatedWith",
+        "correct_feat": "the Canadian Charter of Rights and Freedoms",
+        "options": "1. the Canadian Charter of Rights and Freedoms\n2. Pony Canyon\n3. the Franks",
+        "correct_num": 1,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is associated with [MASK].\n\nOptions:\n1. the Canadian Charter of Rights and Freedoms\n2. Pony Canyon\n3. the Franks"
+    },
+    {
+        "test_id": 7,
+        "relation": "AssociatedWith",
+        "correct_feat": "the New York Times Co. v. Sullivan case",
+        "options": "1. Isabella d'Este, Marchioness of Mantua\n2. the New York Times Co. v. Sullivan case\n3. the New York World-Telegram",
+        "correct_num": 2,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is associated with [MASK].\n\nOptions:\n1. Isabella d'Este, Marchioness of Mantua\n2. the New York Times Co. v. Sullivan case\n3. the New York World-Telegram"
+    },
+    {
+        "test_id": 8,
+        "relation": "BelongsTo",
+        "correct_feat": "Canadian jurisprudence",
+        "options": "1. the political movement in Germany\n2. the pan-West European phenomenon\n3. Canadian jurisprudence",
+        "correct_num": 3,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> belongs to [MASK].\n\nOptions:\n1. the political movement in Germany\n2. the pan-West European phenomenon\n3. Canadian jurisprudence"
+    },
+    {
+        "test_id": 9,
+        "relation": "CausedBy",
+        "correct_feat": "allegations in a notice of motion by Scientology",
+        "options": "1. allegations in a notice of motion by Scientology\n2. a road traffic accident\n3. the development of foilboards",
+        "correct_num": 1,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is caused by [MASK].\n\nOptions:\n1. allegations in a notice of motion by Scientology\n2. a road traffic accident\n3. the development of foilboards"
+    },
+    {
+        "test_id": 10,
+        "relation": "HasA",
+        "correct_feat": "a libel case",
+        "options": "1. an aesthetically pleasing landscape with trees and a stream to the lower left\n2. a libel case\n3. conventional gaff mainsails and jibs",
+        "correct_num": 2,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> has [MASK].\n\nOptions:\n1. an aesthetically pleasing landscape with trees and a stream to the lower left\n2. a libel case\n3. conventional gaff mainsails and jibs"
+    },
+    {
+        "test_id": 11,
+        "relation": "HasA",
+        "correct_feat": "a determination by the Supreme Court of Canada",
+        "options": "1. a playing area\n2. supporters and enemies\n3. a determination by the Supreme Court of Canada",
+        "correct_num": 3,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> has [MASK].\n\nOptions:\n1. a playing area\n2. supporters and enemies\n3. a determination by the Supreme Court of Canada"
+    },
+    {
+        "test_id": 13,
+        "relation": "HasA",
+        "correct_feat": "allegations against Casey Hill",
+        "options": "1. an introductory scenario, \"Hell's Highway\", to learn the rules\n2. allegations against Casey Hill\n3. dogs pulling a cart or sled",
+        "correct_num": 2,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> has [MASK].\n\nOptions:\n1. an introductory scenario, \"Hell's Highway\", to learn the rules\n2. allegations against Casey Hill\n3. dogs pulling a cart or sled"
+    },
+    {
+        "test_id": 14,
+        "relation": "HasA",
+        "correct_feat": "a lawsuit for damages in libel",
+        "options": "1. ratings for commanders\n2. four UK number-ones\n3. a lawsuit for damages in libel",
+        "correct_num": 3,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> has [MASK].\n\nOptions:\n1. ratings for commanders\n2. four UK number-ones\n3. a lawsuit for damages in libel"
+    },
+    {
+        "test_id": 15,
+        "relation": "HasA",
+        "correct_feat": "a judgment affirmed by the Court of Appeal for Ontario",
+        "options": "1. a judgment affirmed by the Court of Appeal for Ontario\n2. a split level view showing action above and below the surface of the water\n3. a bull's nose",
+        "correct_num": 1,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> has [MASK].\n\nOptions:\n1. a judgment affirmed by the Court of Appeal for Ontario\n2. a split level view showing action above and below the surface of the water\n3. a bull's nose"
+    },
+    {
+        "test_id": 16,
+        "relation": "HasA",
+        "correct_feat": "arguments regarding the common law of defamation and the Canadian Charter of Rights and Freedoms",
+        "options": "1. a VHS video tape\n2. arguments regarding the common law of defamation and the Canadian Charter of Rights and Freedoms\n3. a central king-piece",
+        "correct_num": 2,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> has [MASK].\n\nOptions:\n1. a VHS video tape\n2. arguments regarding the common law of defamation and the Canadian Charter of Rights and Freedoms\n3. a central king-piece"
+    },
+    {
+        "test_id": 17,
+        "relation": "HasA",
+        "correct_feat": "a discussion on qualified privilege",
+        "options": "1. Army Commanders that use Officers to transmit orders\n2. a molieben composed in Russian and English\n3. a discussion on qualified privilege",
+        "correct_num": 3,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> has [MASK].\n\nOptions:\n1. Army Commanders that use Officers to transmit orders\n2. a molieben composed in Russian and English\n3. a discussion on qualified privilege"
+    },
+    {
+        "test_id": 18,
+        "relation": "HasA",
+        "correct_feat": "a majority opinion and a concurrence in result",
+        "options": "1. a majority opinion and a concurrence in result\n2. an apron featuring a small pinafore\n3. lionfish",
+        "correct_num": 1,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> has [MASK].\n\nOptions:\n1. a majority opinion and a concurrence in result\n2. an apron featuring a small pinafore\n3. lionfish"
+    },
+    {
+        "test_id": 19,
+        "relation": "HasA",
+        "correct_feat": "a factual background concerning Casey Hill's employment",
+        "options": "1. popularity in the eastern lands of the Abbasid caliphate\n2. a factual background concerning Casey Hill's employment\n3. a second EP titled Gone",
+        "correct_num": 2,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> has [MASK].\n\nOptions:\n1. popularity in the eastern lands of the Abbasid caliphate\n2. a factual background concerning Casey Hill's employment\n3. a second EP titled Gone"
+    },
+    {
+        "test_id": 20,
+        "relation": "HasFeatureOf",
+        "correct_feat": "the Supreme Court of Canada's interpretation of Ontario's libel law",
+        "options": "1. nausea\n2. the adoption of the French spelling Stuart\n3. the Supreme Court of Canada's interpretation of Ontario's libel law",
+        "correct_num": 3,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is characterized by [MASK].\n\nOptions:\n1. nausea\n2. the adoption of the French spelling Stuart\n3. the Supreme Court of Canada's interpretation of Ontario's libel law"
+    },
+    {
+        "test_id": 21,
+        "relation": "HasFeatureOf",
+        "correct_feat": "the rejection of the actual malice standard for libel cases in Canada",
+        "options": "1. the rejection of the actual malice standard for libel cases in Canada\n2. the transition from edged weapons to firearms in the 16th and 17th centuries\n3. no priority given to capturing with a king rather than a man",
+        "correct_num": 1,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is characterized by [MASK].\n\nOptions:\n1. the rejection of the actual malice standard for libel cases in Canada\n2. the transition from edged weapons to firearms in the 16th and 17th centuries\n3. no priority given to capturing with a king rather than a man"
+    },
+    {
+        "test_id": 22,
+        "relation": "HasFeatureOf",
+        "correct_feat": "the affirmation of a jury award for general, aggravated, and punitive damages",
+        "options": "1. realistic expectations about technological progress\n2. the affirmation of a jury award for general, aggravated, and punitive damages\n3. the typical position of Christ's body changing from being flat on the ground or slab, usually seen in profile across the centre of the work, to the upper torso being raised by Mary or others, and finally being held in a near-vertical position, seen frontally, or across Mary's lap",
+        "correct_num": 2,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is characterized by [MASK].\n\nOptions:\n1. realistic expectations about technological progress\n2. the affirmation of a jury award for general, aggravated, and punitive damages\n3. the typical position of Christ's body changing from being flat on the ground or slab, usually seen in profile across the centre of the work, to the upper torso being raised by Mary or others, and finally being held in a near-vertical position, seen frontally, or across Mary's lap"
+    },
+    {
+        "test_id": 23,
+        "relation": "HasFeatureOf",
+        "correct_feat": "the largest libel award in Canadian history at the time",
+        "options": "1. embittered rants about modern working life\n2. low friction\n3. the largest libel award in Canadian history at the time",
+        "correct_num": 3,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is characterized by [MASK].\n\nOptions:\n1. embittered rants about modern working life\n2. low friction\n3. the largest libel award in Canadian history at the time"
+    },
+    {
+        "test_id": 24,
+        "relation": "HeldIn",
+        "correct_feat": "the Supreme Court of Canada",
+        "options": "1. the Supreme Court of Canada\n2. the public space\n3. outdoor pits",
+        "correct_num": 1,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> was held in [MASK].\n\nOptions:\n1. the Supreme Court of Canada\n2. the public space\n3. outdoor pits"
+    },
+    {
+        "test_id": 27,
+        "relation": "InfluencedBy",
+        "correct_feat": "the New York Times Co. v. Sullivan case",
+        "options": "1. the New York Times Co. v. Sullivan case\n2. The Merchant's Tale\n3. the COVID-19 pandemic",
+        "correct_num": 1,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> was influenced by [MASK].\n\nOptions:\n1. the New York Times Co. v. Sullivan case\n2. The Merchant's Tale\n3. the COVID-19 pandemic"
+    },
+    {
+        "test_id": 28,
+        "relation": "InfluencedBy",
+        "correct_feat": "the principles of the Canadian Charter of Rights and Freedoms",
+        "options": "1. calcio storico fiorentino\n2. the principles of the Canadian Charter of Rights and Freedoms\n3. James Harrington",
+        "correct_num": 2,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> was influenced by [MASK].\n\nOptions:\n1. calcio storico fiorentino\n2. the principles of the Canadian Charter of Rights and Freedoms\n3. James Harrington"
+    },
+    {
+        "test_id": 29,
+        "relation": "InfluencedBy",
+        "correct_feat": "the decision in RWDSU v. Dolphin Delivery Ltd",
+        "options": "1. bear-baiting\n2. Fran\u00e7ois Boucher\n3. the decision in RWDSU v. Dolphin Delivery Ltd",
+        "correct_num": 3,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> was influenced by [MASK].\n\nOptions:\n1. bear-baiting\n2. Fran\u00e7ois Boucher\n3. the decision in RWDSU v. Dolphin Delivery Ltd"
+    },
+    {
+        "test_id": 30,
+        "relation": "InfluencedBy",
+        "correct_feat": "the decision in R. v. Salituro",
+        "options": "1. the decision in R. v. Salituro\n2. the synth-pop sound of Tubeway Army\n3. Gary Numan",
+        "correct_num": 1,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> was influenced by [MASK].\n\nOptions:\n1. the decision in R. v. Salituro\n2. the synth-pop sound of Tubeway Army\n3. Gary Numan"
+    },
+    {
+        "test_id": 31,
+        "relation": "InfluencedBy",
+        "correct_feat": "the decision in Dagenais v. Canadian Broadcasting Corp",
+        "options": "1. wagonways\n2. the decision in Dagenais v. Canadian Broadcasting Corp\n3. new technologies for propulsion and stability",
+        "correct_num": 2,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> was influenced by [MASK].\n\nOptions:\n1. wagonways\n2. the decision in Dagenais v. Canadian Broadcasting Corp\n3. new technologies for propulsion and stability"
+    },
+    {
+        "test_id": 32,
+        "relation": "InfluencedBy",
+        "correct_feat": "the decision in R. v. Park",
+        "options": "1. the grammaire g\u00e9n\u00e9rale\n2. a work by John de Critz\n3. the decision in R. v. Park",
+        "correct_num": 3,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> was influenced by [MASK].\n\nOptions:\n1. the grammaire g\u00e9n\u00e9rale\n2. a work by John de Critz\n3. the decision in R. v. Park"
+    },
+    {
+        "test_id": 33,
+        "relation": "IsA",
+        "correct_feat": "a libel case",
+        "options": "1. a libel case\n2. a semi-legendary dynasty\n3. a game intended for three to six players",
+        "correct_num": 1,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is [MASK].\n\nOptions:\n1. a libel case\n2. a semi-legendary dynasty\n3. a game intended for three to six players"
+    },
+    {
+        "test_id": 34,
+        "relation": "IsA",
+        "correct_feat": "a Supreme Court of Canada case",
+        "options": "1. a game for two players\n2. a Supreme Court of Canada case\n3. the only United Nations agency based on tripartism",
+        "correct_num": 2,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is [MASK].\n\nOptions:\n1. a game for two players\n2. a Supreme Court of Canada case\n3. the only United Nations agency based on tripartism"
+    },
+    {
+        "test_id": 35,
+        "relation": "IsA",
+        "correct_feat": "a legal precedent",
+        "options": "1. a Roman general and statesman\n2. a Category A historic heritage place in the Auckland Council's unitary plan\n3. a legal precedent",
+        "correct_num": 3,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is [MASK].\n\nOptions:\n1. a Roman general and statesman\n2. a Category A historic heritage place in the Auckland Council's unitary plan\n3. a legal precedent"
+    },
+    {
+        "test_id": 36,
+        "relation": "KnownAs",
+        "correct_feat": "2 S.C.R. 1130",
+        "options": "1. 2 S.C.R. 1130\n2. Gettysburg Battlefield\n3. hnefatafl games",
+        "correct_num": 1,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is known as [MASK].\n\nOptions:\n1. 2 S.C.R. 1130\n2. Gettysburg Battlefield\n3. hnefatafl games"
+    },
+    {
+        "test_id": 37,
+        "relation": "KnownFor",
+        "correct_feat": "interpreting Ontario's libel law in relation to the Canadian Charter of Rights and Freedoms",
+        "options": "1. the three-move restriction variation\n2. interpreting Ontario's libel law in relation to the Canadian Charter of Rights and Freedoms\n3. establishing itself in tournament form",
+        "correct_num": 2,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is known for [MASK].\n\nOptions:\n1. the three-move restriction variation\n2. interpreting Ontario's libel law in relation to the Canadian Charter of Rights and Freedoms\n3. establishing itself in tournament form"
+    },
+    {
+        "test_id": 38,
+        "relation": "KnownFor",
+        "correct_feat": "determining that the Supreme Court of Canada would not follow the actual malice standard from New York Times Co. v. Sullivan",
+        "options": "1. its album Youngsters\n2. its veneration in Yaroslavl\n3. determining that the Supreme Court of Canada would not follow the actual malice standard from New York Times Co. v. Sullivan",
+        "correct_num": 3,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is known for [MASK].\n\nOptions:\n1. its album Youngsters\n2. its veneration in Yaroslavl\n3. determining that the Supreme Court of Canada would not follow the actual malice standard from New York Times Co. v. Sullivan"
+    },
+    {
+        "test_id": 39,
+        "relation": "KnownFor",
+        "correct_feat": "affirming the largest libel award in Canadian history at the time",
+        "options": "1. affirming the largest libel award in Canadian history at the time\n2. being easy to play\n3. the crucifixion of Jesus",
+        "correct_num": 1,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is known for [MASK].\n\nOptions:\n1. affirming the largest libel award in Canadian history at the time\n2. being easy to play\n3. the crucifixion of Jesus"
+    },
+    {
+        "test_id": 40,
+        "relation": "KnownFor",
+        "correct_feat": "establishing that the common law should be interpreted according to general Charter principles, even if the Charter does not directly apply",
+        "options": "1. employing joint locks\n2. establishing that the common law should be interpreted according to general Charter principles, even if the Charter does not directly apply\n3. increasing status in Arabs worldwide",
+        "correct_num": 2,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is known for [MASK].\n\nOptions:\n1. employing joint locks\n2. establishing that the common law should be interpreted according to general Charter principles, even if the Charter does not directly apply\n3. increasing status in Arabs worldwide"
+    },
+    {
+        "test_id": 41,
+        "relation": "OccurredBetween",
+        "correct_feat": "February 20, 1995 and July 20, 1995",
+        "options": "1. 1155 and 1268\n2. 92 and 85 BC\n3. February 20, 1995 and July 20, 1995",
+        "correct_num": 3,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> occurred between [MASK].\n\nOptions:\n1. 1155 and 1268\n2. 92 and 85 BC\n3. February 20, 1995 and July 20, 1995"
+    },
+    {
+        "test_id": 42,
+        "relation": "PartOf",
+        "correct_feat": "Canadian jurisprudence",
+        "options": "1. Canadian jurisprudence\n2. a control frame\n3. the anti-globalisation movement",
+        "correct_num": 1,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is part of [MASK].\n\nOptions:\n1. Canadian jurisprudence\n2. a control frame\n3. the anti-globalisation movement"
+    },
+    {
+        "test_id": 43,
+        "relation": "PartOf",
+        "correct_feat": "the history of libel law in Canada",
+        "options": "1. the New Testament\n2. the history of libel law in Canada\n3. an international outdoor toy and sporting goods brand",
+        "correct_num": 2,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is part of [MASK].\n\nOptions:\n1. the New Testament\n2. the history of libel law in Canada\n3. an international outdoor toy and sporting goods brand"
+    },
+    {
+        "test_id": 44,
+        "relation": "PerformedBy",
+        "correct_feat": "the Supreme Court of Canada",
+        "options": "1. H. David Werder\n2. M. Ward\n3. the Supreme Court of Canada",
+        "correct_num": 3,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> was performed by [MASK].\n\nOptions:\n1. H. David Werder\n2. M. Ward\n3. the Supreme Court of Canada"
+    },
+    {
+        "test_id": 45,
+        "relation": "PerformedBy",
+        "correct_feat": "the Court of Appeal for Ontario",
+        "options": "1. the Court of Appeal for Ontario\n2. Squadron Leader Anderson\n3. Greg Reeves",
+        "correct_num": 1,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> was performed by [MASK].\n\nOptions:\n1. the Court of Appeal for Ontario\n2. Squadron Leader Anderson\n3. Greg Reeves"
+    },
+    {
+        "test_id": 46,
+        "relation": "PerformedBy",
+        "correct_feat": "Morris Manning",
+        "options": "1. Afghan refugees\n2. Morris Manning\n3. Pembroke Corgis",
+        "correct_num": 2,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> was performed by [MASK].\n\nOptions:\n1. Afghan refugees\n2. Morris Manning\n3. Pembroke Corgis"
+    },
+    {
+        "test_id": 47,
+        "relation": "PerformedBy",
+        "correct_feat": "representatives of the Church of Scientology",
+        "options": "1. the \"Frente Integralista Brasileira\"\n2. Bj\u00f6rn Ulvaeus\n3. representatives of the Church of Scientology",
+        "correct_num": 3,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> was performed by [MASK].\n\nOptions:\n1. the \"Frente Integralista Brasileira\"\n2. Bj\u00f6rn Ulvaeus\n3. representatives of the Church of Scientology"
+    },
+    {
+        "test_id": 48,
+        "relation": "PerformedBy",
+        "correct_feat": "Casey Hill",
+        "options": "1. Casey Hill\n2. Luftwaffe Field Divisions\n3. Pashtuns",
+        "correct_num": 1,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> was performed by [MASK].\n\nOptions:\n1. Casey Hill\n2. Luftwaffe Field Divisions\n3. Pashtuns"
+    },
+    {
+        "test_id": 49,
+        "relation": "PerformedBy",
+        "correct_feat": "Cory J",
+        "options": "1. Hermann G\u00f6ring\n2. Cory J\n3. British Olympians Marlon Devonish",
+        "correct_num": 2,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> was performed by [MASK].\n\nOptions:\n1. Hermann G\u00f6ring\n2. Cory J\n3. British Olympians Marlon Devonish"
+    },
+    {
+        "test_id": 50,
+        "relation": "PerformedBy",
+        "correct_feat": "L'Heureux-Dub\u00e9 J",
+        "options": "1. Jack Russell Terriers\n2. pullers\n3. L'Heureux-Dub\u00e9 J",
+        "correct_num": 3,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> was performed by [MASK].\n\nOptions:\n1. Jack Russell Terriers\n2. pullers\n3. L'Heureux-Dub\u00e9 J"
+    },
+    {
+        "test_id": 51,
+        "relation": "PerformedBy",
+        "correct_feat": "McIntyre J",
+        "options": "1. McIntyre J\n2. Niccol\u00f2 Piccinino\n3. the Integralists",
+        "correct_num": 1,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> was performed by [MASK].\n\nOptions:\n1. McIntyre J\n2. Niccol\u00f2 Piccinino\n3. the Integralists"
+    },
+    {
+        "test_id": 52,
+        "relation": "PublishedIn",
+        "correct_feat": "2 S.C.R. 1130",
+        "options": "1. Germany\n2. 2 S.C.R. 1130\n3. 1973",
+        "correct_num": 2,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> was published in [MASK].\n\nOptions:\n1. Germany\n2. 2 S.C.R. 1130\n3. 1973"
+    },
+    {
+        "test_id": 53,
+        "relation": "UsedIn",
+        "correct_feat": "libel cases",
+        "options": "1. WW2-period British invention\n2. army service\n3. libel cases",
+        "correct_num": 3,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is used in [MASK].\n\nOptions:\n1. WW2-period British invention\n2. army service\n3. libel cases"
+    },
+    {
+        "test_id": 54,
+        "relation": "UsedIn",
+        "correct_feat": "the interpretation of Canadian libel law",
+        "options": "1. the interpretation of Canadian libel law\n2. popular culture\n3. Diocletian's Palace",
+        "correct_num": 1,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is used in [MASK].\n\nOptions:\n1. the interpretation of Canadian libel law\n2. popular culture\n3. Diocletian's Palace"
+    },
+    {
+        "test_id": 55,
+        "relation": "UsedIn",
+        "correct_feat": "discussions of the Canadian Charter of Rights and Freedoms",
+        "options": "1. the mountains of Torres del Paine\n2. discussions of the Canadian Charter of Rights and Freedoms\n3. the context of the Southern Poverty Law Center's analysis",
+        "correct_num": 2,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is used in [MASK].\n\nOptions:\n1. the mountains of Torres del Paine\n2. discussions of the Canadian Charter of Rights and Freedoms\n3. the context of the Southern Poverty Law Center's analysis"
+    },
+    {
+        "test_id": 56,
+        "relation": "UsedIn",
+        "correct_feat": "legal analysis of freedom of expression",
+        "options": "1. structural steel construction\n2. the United States\n3. legal analysis of freedom of expression",
+        "correct_num": 3,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is used in [MASK].\n\nOptions:\n1. structural steel construction\n2. the United States\n3. legal analysis of freedom of expression"
+    },
+    {
+        "test_id": 57,
+        "relation": "UsedTo",
+        "correct_feat": "determine the application of the Charter to common law",
+        "options": "1. determine the application of the Charter to common law\n2. deny social and political freedom to minorities\n3. play with AI opponents",
+        "correct_num": 1,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is used to [MASK].\n\nOptions:\n1. determine the application of the Charter to common law\n2. deny social and political freedom to minorities\n3. play with AI opponents"
+    },
+    {
+        "test_id": 58,
+        "relation": "UsedTo",
+        "correct_feat": "balance freedom of speech with the protection of reputation",
+        "options": "1. create another, 79-minute, condensation for broadcast\n2. balance freedom of speech with the protection of reputation\n3. depict himself",
+        "correct_num": 2,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is used to [MASK].\n\nOptions:\n1. create another, 79-minute, condensation for broadcast\n2. balance freedom of speech with the protection of reputation\n3. depict himself"
+    }
+]

@@ -1,0 +1,506 @@
+[
+    {
+        "test_id": 0,
+        "relation": "About",
+        "correct_feat": "a self-governing Caribbean archipelago and island organized as an unincorporated territory of the United States under the designation of commonwealth",
+        "options": "1. a self-governing Caribbean archipelago and island organized as an unincorporated territory of the United States under the designation of commonwealth\n2. the Bancroft Treaties and their eventual abandonment\n3. folk rock",
+        "correct_num": 1,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is about [MASK].\n\nOptions:\n1. a self-governing Caribbean archipelago and island organized as an unincorporated territory of the United States under the designation of commonwealth\n2. the Bancroft Treaties and their eventual abandonment\n3. folk rock"
+    },
+    {
+        "test_id": 2,
+        "relation": "AssociatedWith",
+        "correct_feat": "the Spanish\u2013American War",
+        "options": "1. the Sultanate of Rum\n2. the Abbasid caliphate\n3. the Spanish\u2013American War",
+        "correct_num": 3,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is associated with [MASK].\n\nOptions:\n1. the Sultanate of Rum\n2. the Abbasid caliphate\n3. the Spanish\u2013American War"
+    },
+    {
+        "test_id": 3,
+        "relation": "BelongsTo",
+        "correct_feat": "the United States",
+        "options": "1. the United States\n2. Pakistan\n3. Bermuda",
+        "correct_num": 1,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> belongs to [MASK].\n\nOptions:\n1. the United States\n2. Pakistan\n3. Bermuda"
+    },
+    {
+        "test_id": 4,
+        "relation": "CausedBy",
+        "correct_feat": "new infectious diseases carried by Europeans, exploitation by Spanish settlers, and warfare",
+        "options": "1. advances in pilot training and glider construction\n2. new infectious diseases carried by Europeans, exploitation by Spanish settlers, and warfare\n3. Beys Afroyim casting a vote in an Israeli election after becoming a naturalized U.S. citizen",
+        "correct_num": 2,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is caused by [MASK].\n\nOptions:\n1. advances in pilot training and glider construction\n2. new infectious diseases carried by Europeans, exploitation by Spanish settlers, and warfare\n3. Beys Afroyim casting a vote in an Israeli election after becoming a naturalized U.S. citizen"
+    },
+    {
+        "test_id": 5,
+        "relation": "ConsistsOf",
+        "correct_feat": "the eponymous main island and numerous smaller islands, including Vieques, Culebra, and Mona",
+        "options": "1. balls\n2. Afrikaner Calvinism\n3. the eponymous main island and numerous smaller islands, including Vieques, Culebra, and Mona",
+        "correct_num": 3,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> consists of [MASK].\n\nOptions:\n1. balls\n2. Afrikaner Calvinism\n3. the eponymous main island and numerous smaller islands, including Vieques, Culebra, and Mona"
+    },
+    {
+        "test_id": 6,
+        "relation": "CreatedAround",
+        "correct_feat": "2,000 to 4,000 years ago",
+        "options": "1. 2,000 to 4,000 years ago\n2. the period they started scouring local scenes as high school students\n3. the time they released their first music video on YouTube",
+        "correct_num": 1,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> was created around [MASK].\n\nOptions:\n1. 2,000 to 4,000 years ago\n2. the period they started scouring local scenes as high school students\n3. the time they released their first music video on YouTube"
+    },
+    {
+        "test_id": 7,
+        "relation": "DevelopedBy",
+        "correct_feat": "the U.S. government together with the Puerto Rico Industrial Development Company",
+        "options": "1. artists to reinforce the idea that Jesus was recognized as king from infancy\n2. the U.S. government together with the Puerto Rico Industrial Development Company\n3. the National Party",
+        "correct_num": 2,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> was developed by [MASK].\n\nOptions:\n1. artists to reinforce the idea that Jesus was recognized as king from infancy\n2. the U.S. government together with the Puerto Rico Industrial Development Company\n3. the National Party"
+    },
+    {
+        "test_id": 9,
+        "relation": "DiscoveredIn",
+        "correct_feat": "the New World",
+        "options": "1. the New World\n2. Fuerteventura\n3. 1579",
+        "correct_num": 1,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> was discovered in [MASK].\n\nOptions:\n1. the New World\n2. Fuerteventura\n3. 1579"
+    },
+    {
+        "test_id": 10,
+        "relation": "HasA",
+        "correct_feat": "approximately 3.2 million people",
+        "options": "1. three winged putti flying away\n2. approximately 3.2 million people\n3. disciplines like Extreme Vertical, Speed Retrieve, and Iron Dog",
+        "correct_num": 2,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> has [MASK].\n\nOptions:\n1. three winged putti flying away\n2. approximately 3.2 million people\n3. disciplines like Extreme Vertical, Speed Retrieve, and Iron Dog"
+    },
+    {
+        "test_id": 11,
+        "relation": "HasA",
+        "correct_feat": "a distinct Puerto Rican identity",
+        "options": "1. a \"robust concern for redistributive politics\"\n2. a width of 15.9 in. 40.3 cm\n3. a distinct Puerto Rican identity",
+        "correct_num": 3,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> has [MASK].\n\nOptions:\n1. a \"robust concern for redistributive politics\"\n2. a width of 15.9 in. 40.3 cm\n3. a distinct Puerto Rican identity"
+    },
+    {
+        "test_id": 12,
+        "relation": "HasA",
+        "correct_feat": "a territorial constitution",
+        "options": "1. a territorial constitution\n2. a biplane hang glider\n3. a niche-like throne",
+        "correct_num": 1,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> has [MASK].\n\nOptions:\n1. a territorial constitution\n2. a biplane hang glider\n3. a niche-like throne"
+    },
+    {
+        "test_id": 13,
+        "relation": "HasA",
+        "correct_feat": "a governor, a senate, and a house of representatives",
+        "options": "1. four UK number-ones\n2. a governor, a senate, and a house of representatives\n3. a size of 22 ft \u00d7 74 ft",
+        "correct_num": 2,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> has [MASK].\n\nOptions:\n1. four UK number-ones\n2. a governor, a senate, and a house of representatives\n3. a size of 22 ft \u00d7 74 ft"
+    },
+    {
+        "test_id": 14,
+        "relation": "HasA",
+        "correct_feat": "a nonvoting representative in the U.S. Congress",
+        "options": "1. a tendency to prioritize prudence when enacting change\n2. a tendency towards extreme assertiveness and irascibility in dealing with other scholars\n3. a nonvoting representative in the U.S. Congress",
+        "correct_num": 3,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> has [MASK].\n\nOptions:\n1. a tendency to prioritize prudence when enacting change\n2. a tendency towards extreme assertiveness and irascibility in dealing with other scholars\n3. a nonvoting representative in the U.S. Congress"
+    },
+    {
+        "test_id": 15,
+        "relation": "HasA",
+        "correct_feat": "a government-debt crisis",
+        "options": "1. a government-debt crisis\n2. a niche\n3. a large portion of Christ's hair on his left side with damage",
+        "correct_num": 1,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> has [MASK].\n\nOptions:\n1. a government-debt crisis\n2. a niche\n3. a large portion of Christ's hair on his left side with damage"
+    },
+    {
+        "test_id": 16,
+        "relation": "HasA",
+        "correct_feat": "a financial oversight board",
+        "options": "1. tuned mass dampers\n2. a financial oversight board\n3. dissident factions like Brit Shalom and Ihud",
+        "correct_num": 2,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> has [MASK].\n\nOptions:\n1. tuned mass dampers\n2. a financial oversight board\n3. dissident factions like Brit Shalom and Ihud"
+    },
+    {
+        "test_id": 17,
+        "relation": "HasA",
+        "correct_feat": "substantial internal self-government",
+        "options": "1. a lawsuit for damages in libel\n2. a second EP titled Gone\n3. substantial internal self-government",
+        "correct_num": 3,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> has [MASK].\n\nOptions:\n1. a lawsuit for damages in libel\n2. a second EP titled Gone\n3. substantial internal self-government"
+    },
+    {
+        "test_id": 18,
+        "relation": "HasFeatureOf",
+        "correct_feat": "being a self-governing Caribbean archipelago",
+        "options": "1. being a self-governing Caribbean archipelago\n2. the Roman Catholic Church taking an active role in the reformation of society\n3. a per curiam decision",
+        "correct_num": 1,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is characterized by [MASK].\n\nOptions:\n1. being a self-governing Caribbean archipelago\n2. the Roman Catholic Church taking an active role in the reformation of society\n3. a per curiam decision"
+    },
+    {
+        "test_id": 19,
+        "relation": "HasFeatureOf",
+        "correct_feat": "being an unincorporated territory of the United States",
+        "options": "1. opposing state atheism\n2. being an unincorporated territory of the United States\n3. opposition to the civil rights movement",
+        "correct_num": 2,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is characterized by [MASK].\n\nOptions:\n1. opposing state atheism\n2. being an unincorporated territory of the United States\n3. opposition to the civil rights movement"
+    },
+    {
+        "test_id": 20,
+        "relation": "HasFeatureOf",
+        "correct_feat": "its official languages being Spanish and English",
+        "options": "1. its perspectiveless style\n2. embittered rants about modern working life\n3. its official languages being Spanish and English",
+        "correct_num": 3,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is characterized by [MASK].\n\nOptions:\n1. its perspectiveless style\n2. embittered rants about modern working life\n3. its official languages being Spanish and English"
+    },
+    {
+        "test_id": 21,
+        "relation": "HasFeatureOf",
+        "correct_feat": "its indigenous Ta\u00edno name, Borik\u00e9n",
+        "options": "1. its indigenous Ta\u00edno name, Borik\u00e9n\n2. allowing re-dos for irregular bounces or interference\n3. the rivalry between players",
+        "correct_num": 1,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is characterized by [MASK].\n\nOptions:\n1. its indigenous Ta\u00edno name, Borik\u00e9n\n2. allowing re-dos for irregular bounces or interference\n3. the rivalry between players"
+    },
+    {
+        "test_id": 22,
+        "relation": "HasFeatureOf",
+        "correct_feat": "its Spanish name meaning 'rich port'",
+        "options": "1. its founder, Seljuk Beg\n2. its Spanish name meaning 'rich port'\n3. taking practice as the sole criterion for testing truth",
+        "correct_num": 2,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is characterized by [MASK].\n\nOptions:\n1. its founder, Seljuk Beg\n2. its Spanish name meaning 'rich port'\n3. taking practice as the sole criterion for testing truth"
+    },
+    {
+        "test_id": 23,
+        "relation": "HasFeatureOf",
+        "correct_feat": "its popular Spanish name meaning 'the island of enchantment'",
+        "options": "1. being popular, influential, and enduring\n2. the use of different cars over the course of the event\n3. its popular Spanish name meaning 'the island of enchantment'",
+        "correct_num": 3,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is characterized by [MASK].\n\nOptions:\n1. being popular, influential, and enduring\n2. the use of different cars over the course of the event\n3. its popular Spanish name meaning 'the island of enchantment'"
+    },
+    {
+        "test_id": 24,
+        "relation": "HasFeatureOf",
+        "correct_feat": "its official Spanish name meaning 'Free Associated State of Puerto Rico'",
+        "options": "1. its official Spanish name meaning 'Free Associated State of Puerto Rico'\n2. high contrast between the space and the subjects\n3. the Berber Spring",
+        "correct_num": 1,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is characterized by [MASK].\n\nOptions:\n1. its official Spanish name meaning 'Free Associated State of Puerto Rico'\n2. high contrast between the space and the subjects\n3. the Berber Spring"
+    },
+    {
+        "test_id": 25,
+        "relation": "HasFeatureOf",
+        "correct_feat": "its official English name being Commonwealth of Puerto Rico",
+        "options": "1. the 2008 race having almost 25,000 runners complete the course\n2. its official English name being Commonwealth of Puerto Rico\n3. side wings",
+        "correct_num": 2,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is characterized by [MASK].\n\nOptions:\n1. the 2008 race having almost 25,000 runners complete the course\n2. its official English name being Commonwealth of Puerto Rico\n3. side wings"
+    },
+    {
+        "test_id": 27,
+        "relation": "HasFeatureOf",
+        "correct_feat": "its status as one of five territories with less representation in the federal government",
+        "options": "1. its status as one of five territories with less representation in the federal government\n2. being in the Ridge-and-Valley region of the Appalachian Mountains\n3. locomotives",
+        "correct_num": 1,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is characterized by [MASK].\n\nOptions:\n1. its status as one of five territories with less representation in the federal government\n2. being in the Ridge-and-Valley region of the Appalachian Mountains\n3. locomotives"
+    },
+    {
+        "test_id": 28,
+        "relation": "HasFeatureOf",
+        "correct_feat": "its classification as a developed jurisdiction by the International Monetary Fund",
+        "options": "1. innocence and lack of embarrassment about nakedness\n2. its classification as a developed jurisdiction by the International Monetary Fund\n3. the humanization of figures and attention to human anatomy",
+        "correct_num": 2,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is characterized by [MASK].\n\nOptions:\n1. innocence and lack of embarrassment about nakedness\n2. its classification as a developed jurisdiction by the International Monetary Fund\n3. the humanization of figures and attention to human anatomy"
+    },
+    {
+        "test_id": 29,
+        "relation": "HasFeatureOf",
+        "correct_feat": "its rank on the Human Development Index",
+        "options": "1. the arrest of Bruce Boynton for trespassing\n2. the Roman Catholic Church taking an active role in the reformation of society\n3. its rank on the Human Development Index",
+        "correct_num": 3,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is characterized by [MASK].\n\nOptions:\n1. the arrest of Bruce Boynton for trespassing\n2. the Roman Catholic Church taking an active role in the reformation of society\n3. its rank on the Human Development Index"
+    },
+    {
+        "test_id": 30,
+        "relation": "HasFeatureOf",
+        "correct_feat": "its major economic sectors being manufacturing, services, tourism, and hospitality",
+        "options": "1. its major economic sectors being manufacturing, services, tourism, and hospitality\n2. a coiled dragon holding a sword in its mouth\n3. a rejection of ideology in general",
+        "correct_num": 1,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is characterized by [MASK].\n\nOptions:\n1. its major economic sectors being manufacturing, services, tourism, and hospitality\n2. a coiled dragon holding a sword in its mouth\n3. a rejection of ideology in general"
+    },
+    {
+        "test_id": 31,
+        "relation": "HasFeatureOf",
+        "correct_feat": "its subordination to the U.S. Constitution in areas such as foreign affairs or defense",
+        "options": "1. colonization in Palestine\n2. its subordination to the U.S. Constitution in areas such as foreign affairs or defense\n3. its large size",
+        "correct_num": 2,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is characterized by [MASK].\n\nOptions:\n1. colonization in Palestine\n2. its subordination to the U.S. Constitution in areas such as foreign affairs or defense\n3. its large size"
+    },
+    {
+        "test_id": 32,
+        "relation": "InfluencedBy",
+        "correct_feat": "the arrival of Christopher Columbus in 1493",
+        "options": "1. the Maoist Communist League\n2. traditionalist conservatism\n3. the arrival of Christopher Columbus in 1493",
+        "correct_num": 3,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> was influenced by [MASK].\n\nOptions:\n1. the Maoist Communist League\n2. traditionalist conservatism\n3. the arrival of Christopher Columbus in 1493"
+    },
+    {
+        "test_id": 33,
+        "relation": "InfluencedBy",
+        "correct_feat": "Spanish settlers",
+        "options": "1. Spanish settlers\n2. Old French\n3. ancient rock art",
+        "correct_num": 1,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> was influenced by [MASK].\n\nOptions:\n1. Spanish settlers\n2. Old French\n3. ancient rock art"
+    },
+    {
+        "test_id": 34,
+        "relation": "InfluencedBy",
+        "correct_feat": "African slaves",
+        "options": "1. the album Streetremixes from D-men\n2. African slaves\n3. Paul Gavarni",
+        "correct_num": 2,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> was influenced by [MASK].\n\nOptions:\n1. the album Streetremixes from D-men\n2. African slaves\n3. Paul Gavarni"
+    },
+    {
+        "test_id": 35,
+        "relation": "InfluencedBy",
+        "correct_feat": "the Spanish\u2013American War",
+        "options": "1. bouncing marbles, steel spheres, and various sizes and shapes of balls across a pond and then a long trough\n2. the Getty Conservation Institute's article \"The Conservation of Outdoor Contemporary Murals\"\n3. the Spanish\u2013American War",
+        "correct_num": 3,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> was influenced by [MASK].\n\nOptions:\n1. bouncing marbles, steel spheres, and various sizes and shapes of balls across a pond and then a long trough\n2. the Getty Conservation Institute's article \"The Conservation of Outdoor Contemporary Murals\"\n3. the Spanish\u2013American War"
+    },
+    {
+        "test_id": 36,
+        "relation": "InfluencedBy",
+        "correct_feat": "the Foraker Act of 1900",
+        "options": "1. the Foraker Act of 1900\n2. the necessity of making life possible in a new and empty land\n3. the categorisation of Islam as having an anti-democratic and anti-modern character",
+        "correct_num": 1,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> was influenced by [MASK].\n\nOptions:\n1. the Foraker Act of 1900\n2. the necessity of making life possible in a new and empty land\n3. the categorisation of Islam as having an anti-democratic and anti-modern character"
+    },
+    {
+        "test_id": 37,
+        "relation": "InfluencedBy",
+        "correct_feat": "the Jones\u2013Shafroth Act of 1917",
+        "options": "1. the Frankfurt School\n2. the Jones\u2013Shafroth Act of 1917\n3. highways",
+        "correct_num": 2,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> was influenced by [MASK].\n\nOptions:\n1. the Frankfurt School\n2. the Jones\u2013Shafroth Act of 1917\n3. highways"
+    },
+    {
+        "test_id": 39,
+        "relation": "InfluencedBy",
+        "correct_feat": "the U.S. government",
+        "options": "1. the U.S. government\n2. the wider reformist trend known as al-Nahda\n3. Manambuchaavadi Venkatasubbayyar",
+        "correct_num": 1,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> was influenced by [MASK].\n\nOptions:\n1. the U.S. government\n2. the wider reformist trend known as al-Nahda\n3. Manambuchaavadi Venkatasubbayyar"
+    },
+    {
+        "test_id": 42,
+        "relation": "InfluencedBy",
+        "correct_feat": "the United Nations Special Committee on Decolonization",
+        "options": "1. the United Nations Special Committee on Decolonization\n2. the invention of the steam locomotive\n3. the success of \"Ain't No Pleasing You\"",
+        "correct_num": 1,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> was influenced by [MASK].\n\nOptions:\n1. the United Nations Special Committee on Decolonization\n2. the invention of the steam locomotive\n3. the success of \"Ain't No Pleasing You\""
+    },
+    {
+        "test_id": 45,
+        "relation": "InfluencedBy",
+        "correct_feat": "Hurricane Maria",
+        "options": "1. Hurricane Maria\n2. Vladimir Lenin's \"Left-Wing\" Communism: An Infantile Disorder\n3. the thoughts of Jos\u00e9 Antonio Primo de Rivera",
+        "correct_num": 1,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> was influenced by [MASK].\n\nOptions:\n1. Hurricane Maria\n2. Vladimir Lenin's \"Left-Wing\" Communism: An Infantile Disorder\n3. the thoughts of Jos\u00e9 Antonio Primo de Rivera"
+    },
+    {
+        "test_id": 46,
+        "relation": "IsA",
+        "correct_feat": "a self-governing Caribbean archipelago",
+        "options": "1. played with a larger ball that gradually becomes softer the more the ball is hit\n2. a self-governing Caribbean archipelago\n3. a contest",
+        "correct_num": 2,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is [MASK].\n\nOptions:\n1. played with a larger ball that gradually becomes softer the more the ball is hit\n2. a self-governing Caribbean archipelago\n3. a contest"
+    },
+    {
+        "test_id": 47,
+        "relation": "IsA",
+        "correct_feat": "an island organized as an unincorporated territory of the United States",
+        "options": "1. a social revolution\n2. a patriotic icon\n3. an island organized as an unincorporated territory of the United States",
+        "correct_num": 3,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is [MASK].\n\nOptions:\n1. a social revolution\n2. a patriotic icon\n3. an island organized as an unincorporated territory of the United States"
+    },
+    {
+        "test_id": 48,
+        "relation": "IsA",
+        "correct_feat": "a commonwealth",
+        "options": "1. a commonwealth\n2. a 12-inch record\n3. a subject in the Nativity of Jesus in art",
+        "correct_num": 1,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is [MASK].\n\nOptions:\n1. a commonwealth\n2. a 12-inch record\n3. a subject in the Nativity of Jesus in art"
+    },
+    {
+        "test_id": 49,
+        "relation": "IsA",
+        "correct_feat": "a territory of the United States",
+        "options": "1. a perfume\n2. a territory of the United States\n3. a non-aristocratic Iranian soldier of Mazanderani origin",
+        "correct_num": 2,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is [MASK].\n\nOptions:\n1. a perfume\n2. a territory of the United States\n3. a non-aristocratic Iranian soldier of Mazanderani origin"
+    },
+    {
+        "test_id": 51,
+        "relation": "IsA",
+        "correct_feat": "not a state",
+        "options": "1. not a state\n2. a political philosophy\n3. a gouache, watercolor, and black crayon on paper",
+        "correct_num": 1,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is [MASK].\n\nOptions:\n1. not a state\n2. a political philosophy\n3. a gouache, watercolor, and black crayon on paper"
+    },
+    {
+        "test_id": 52,
+        "relation": "KnownAs",
+        "correct_feat": "Borinquen",
+        "options": "1. pulling the goose\n2. Borinquen\n3. the Renaissance practice of giving a city classical appearance",
+        "correct_num": 2,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is known as [MASK].\n\nOptions:\n1. pulling the goose\n2. Borinquen\n3. the Renaissance practice of giving a city classical appearance"
+    },
+    {
+        "test_id": 53,
+        "relation": "KnownAs",
+        "correct_feat": "La Isla del Encanto",
+        "options": "1. goose riding\n2. a shadow government or deep state\n3. La Isla del Encanto",
+        "correct_num": 3,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is known as [MASK].\n\nOptions:\n1. goose riding\n2. a shadow government or deep state\n3. La Isla del Encanto"
+    },
+    {
+        "test_id": 54,
+        "relation": "KnownAs",
+        "correct_feat": "'rich port' in Spanish",
+        "options": "1. 'rich port' in Spanish\n2. \"reactionary\"\n3. \"China's Mona Lisa",
+        "correct_num": 1,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is known as [MASK].\n\nOptions:\n1. 'rich port' in Spanish\n2. \"reactionary\"\n3. \"China's Mona Lisa"
+    },
+    {
+        "test_id": 55,
+        "relation": "KnownAs",
+        "correct_feat": "'the island of enchantment'",
+        "options": "1. a subject that includes gifts of gold, frankincense, and myrrh\n2. 'the island of enchantment'\n3. flag football today",
+        "correct_num": 2,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is known as [MASK].\n\nOptions:\n1. a subject that includes gifts of gold, frankincense, and myrrh\n2. 'the island of enchantment'\n3. flag football today"
+    },
+    {
+        "test_id": 56,
+        "relation": "KnownFor",
+        "correct_feat": "its strategic role within the Spanish Empire",
+        "options": "1. its nationalist and anti-Western tendencies\n2. their fashion influence\n3. its strategic role within the Spanish Empire",
+        "correct_num": 3,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is known for [MASK].\n\nOptions:\n1. its nationalist and anti-Western tendencies\n2. their fashion influence\n3. its strategic role within the Spanish Empire"
+    },
+    {
+        "test_id": 57,
+        "relation": "KnownFor",
+        "correct_feat": "its distinct Puerto Rican identity",
+        "options": "1. its distinct Puerto Rican identity\n2. the \"No Hammer Challenge\" category\n3. the song \"U R Man\"",
+        "correct_num": 1,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is known for [MASK].\n\nOptions:\n1. its distinct Puerto Rican identity\n2. the \"No Hammer Challenge\" category\n3. the song \"U R Man\""
+    },
+    {
+        "test_id": 58,
+        "relation": "KnownFor",
+        "correct_feat": "its manufacturing sector, primarily pharmaceuticals, petrochemicals, and electronics",
+        "options": "1. its two brothers, Florian and Olivio Ordo\u00f1ez\n2. its manufacturing sector, primarily pharmaceuticals, petrochemicals, and electronics\n3. their comedy career",
+        "correct_num": 2,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is known for [MASK].\n\nOptions:\n1. its two brothers, Florian and Olivio Ordo\u00f1ez\n2. its manufacturing sector, primarily pharmaceuticals, petrochemicals, and electronics\n3. their comedy career"
+    },
+    {
+        "test_id": 59,
+        "relation": "KnownFor",
+        "correct_feat": "its tourism and hospitality services",
+        "options": "1. answering the \"social question\" surrounding capitalism and the working class\n2. being the first exponent of flamenco music aimed at a non-exclusively flamenco audience\n3. its tourism and hospitality services",
+        "correct_num": 3,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is known for [MASK].\n\nOptions:\n1. answering the \"social question\" surrounding capitalism and the working class\n2. being the first exponent of flamenco music aimed at a non-exclusively flamenco audience\n3. its tourism and hospitality services"
+    },
+    {
+        "test_id": 60,
+        "relation": "LocatedIn",
+        "correct_feat": "between the Dominican Republic in the Greater Antilles and the U.S. Virgin Islands in the Lesser Antilles",
+        "options": "1. between the Dominican Republic in the Greater Antilles and the U.S. Virgin Islands in the Lesser Antilles\n2. in Maharashtra\n3. in Ramat Beit Shemesh",
+        "correct_num": 1,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is located [MASK].\n\nOptions:\n1. between the Dominican Republic in the Greater Antilles and the U.S. Virgin Islands in the Lesser Antilles\n2. in Maharashtra\n3. in Ramat Beit Shemesh"
+    },
+    {
+        "test_id": 61,
+        "relation": "LocatedIn",
+        "correct_feat": "about 1,000 miles southeast of Miami, Florida",
+        "options": "1. in Bologna, Italy\n2. about 1,000 miles southeast of Miami, Florida\n3. in the Holy Roman Empire",
+        "correct_num": 2,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is located [MASK].\n\nOptions:\n1. in Bologna, Italy\n2. about 1,000 miles southeast of Miami, Florida\n3. in the Holy Roman Empire"
+    },
+    {
+        "test_id": 62,
+        "relation": "LocatedIn",
+        "correct_feat": "in the northeastern Caribbean",
+        "options": "1. in Philadelphia, Pennsylvania\n2. in Westminster\n3. in the northeastern Caribbean",
+        "correct_num": 3,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is located [MASK].\n\nOptions:\n1. in Philadelphia, Pennsylvania\n2. in Westminster\n3. in the northeastern Caribbean"
+    },
+    {
+        "test_id": 63,
+        "relation": "MemberOf",
+        "correct_feat": "the Greater Antilles",
+        "options": "1. the Greater Antilles\n2. the Theotokos\n3. the \"Movimento Integralista e Linearista Brasileiro\"",
+        "correct_num": 1,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is a member of [MASK].\n\nOptions:\n1. the Greater Antilles\n2. the Theotokos\n3. the \"Movimento Integralista e Linearista Brasileiro\""
+    },
+    {
+        "test_id": 64,
+        "relation": "OccurredAround",
+        "correct_feat": "2,000 to 4,000 years ago",
+        "options": "1. 1512\n2. 2,000 to 4,000 years ago\n3. 1468",
+        "correct_num": 2,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> occurred around [MASK].\n\nOptions:\n1. 1512\n2. 2,000 to 4,000 years ago\n3. 1468"
+    },
+    {
+        "test_id": 65,
+        "relation": "OriginatedIn",
+        "correct_feat": "the settlement of the Ortoiroid people before 430 BC",
+        "options": "1. Tuscany\n2. China, Shanxi Province, Jinzhong City\n3. the settlement of the Ortoiroid people before 430 BC",
+        "correct_num": 3,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> originated in [MASK].\n\nOptions:\n1. Tuscany\n2. China, Shanxi Province, Jinzhong City\n3. the settlement of the Ortoiroid people before 430 BC"
+    },
+    {
+        "test_id": 66,
+        "relation": "PartOf",
+        "correct_feat": "the Greater Antilles",
+        "options": "1. the Greater Antilles\n2. Bring Me the Horizon\n3. the sport managed by national associations",
+        "correct_num": 1,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is part of [MASK].\n\nOptions:\n1. the Greater Antilles\n2. Bring Me the Horizon\n3. the sport managed by national associations"
+    },
+    {
+        "test_id": 67,
+        "relation": "PartOf",
+        "correct_feat": "the Spanish Empire",
+        "options": "1. the series Space: 1999\n2. the Spanish Empire\n3. the sport with the FIFA World Cup",
+        "correct_num": 2,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is part of [MASK].\n\nOptions:\n1. the series Space: 1999\n2. the Spanish Empire\n3. the sport with the FIFA World Cup"
+    },
+    {
+        "test_id": 69,
+        "relation": "UsedAs",
+        "correct_feat": "a stepping-stone in the passage from Europe to Cuba, Mexico, Central America, and the northern territories of South America",
+        "options": "1. a stepping-stone in the passage from Europe to Cuba, Mexico, Central America, and the northern territories of South America\n2. a target\n3. a venerated icon",
+        "correct_num": 1,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is used as [MASK].\n\nOptions:\n1. a stepping-stone in the passage from Europe to Cuba, Mexico, Central America, and the northern territories of South America\n2. a target\n3. a venerated icon"
+    },
+    {
+        "test_id": 70,
+        "relation": "UsedFor",
+        "correct_feat": "debt restructuring",
+        "options": "1. promoting safe driving\n2. debt restructuring\n3. a reward to those who had already contributed",
+        "correct_num": 2,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is used for [MASK].\n\nOptions:\n1. promoting safe driving\n2. debt restructuring\n3. a reward to those who had already contributed"
+    },
+    {
+        "test_id": 71,
+        "relation": "UsedIn",
+        "correct_feat": "the Spanish Empire",
+        "options": "1. intellectual and student circles in France\n2. Judaism\n3. the Spanish Empire",
+        "correct_num": 3,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is used in [MASK].\n\nOptions:\n1. intellectual and student circles in France\n2. Judaism\n3. the Spanish Empire"
+    },
+    {
+        "test_id": 73,
+        "relation": "UsedTo",
+        "correct_feat": "attract Europeans",
+        "options": "1. simulate different forms of ocean waves\n2. attract Europeans\n3. catapult the animal upwards",
+        "correct_num": 2,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is used to [MASK].\n\nOptions:\n1. simulate different forms of ocean waves\n2. attract Europeans\n3. catapult the animal upwards"
+    }
+]

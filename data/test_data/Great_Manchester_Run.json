@@ -1,0 +1,490 @@
+[
+    {
+        "test_id": 0,
+        "relation": "IsA",
+        "correct_feat": "an annual run through Greater Manchester",
+        "options": "1. an annual run through Greater Manchester\n2. a patrimony\n3. a performing act",
+        "correct_num": 1,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is [MASK].\n\nOptions:\n1. an annual run through Greater Manchester\n2. a patrimony\n3. a performing act"
+    },
+    {
+        "test_id": 1,
+        "relation": "IsA",
+        "correct_feat": "an annual run",
+        "options": "1. a 2003 book\n2. an annual run\n3. a fresco",
+        "correct_num": 2,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is [MASK].\n\nOptions:\n1. a 2003 book\n2. an annual run\n3. a fresco"
+    },
+    {
+        "test_id": 2,
+        "relation": "IsA",
+        "correct_feat": "a 10k run",
+        "options": "1. a notable Greek-style version of the subject\n2. a mural\n3. a 10k run",
+        "correct_num": 3,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is [MASK].\n\nOptions:\n1. a notable Greek-style version of the subject\n2. a mural\n3. a 10k run"
+    },
+    {
+        "test_id": 3,
+        "relation": "IsA",
+        "correct_feat": "a half marathon",
+        "options": "1. a half marathon\n2. a case of incest\n3. moderately conservative",
+        "correct_num": 1,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is [MASK].\n\nOptions:\n1. a half marathon\n2. a case of incest\n3. moderately conservative"
+    },
+    {
+        "test_id": 4,
+        "relation": "IsA",
+        "correct_feat": "the largest 10k race of its type in Europe",
+        "options": "1. a legal precedent\n2. the largest 10k race of its type in Europe\n3. a game that can be played with advanced rules known as WAFU rules",
+        "correct_num": 2,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is [MASK].\n\nOptions:\n1. a legal precedent\n2. the largest 10k race of its type in Europe\n3. a game that can be played with advanced rules known as WAFU rules"
+    },
+    {
+        "test_id": 5,
+        "relation": "IsA",
+        "correct_feat": "the third-largest mass participation running event in the United Kingdom",
+        "options": "1. a portmanteau of agitation and propaganda\n2. a band that released their debut full-length album Invitation to Her's\n3. the third-largest mass participation running event in the United Kingdom",
+        "correct_num": 3,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is [MASK].\n\nOptions:\n1. a portmanteau of agitation and propaganda\n2. a band that released their debut full-length album Invitation to Her's\n3. the third-largest mass participation running event in the United Kingdom"
+    },
+    {
+        "test_id": 6,
+        "relation": "IsA",
+        "correct_feat": "a road race",
+        "options": "1. a road race\n2. a global common good\n3. a critique of abstract expressionism",
+        "correct_num": 1,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is [MASK].\n\nOptions:\n1. a road race\n2. a global common good\n3. a critique of abstract expressionism"
+    },
+    {
+        "test_id": 7,
+        "relation": "IsA",
+        "correct_feat": "a wheelchair race",
+        "options": "1. a work by Leonardo\n2. a wheelchair race\n3. a departure from or moderation of Islamic democracy",
+        "correct_num": 2,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is [MASK].\n\nOptions:\n1. a work by Leonardo\n2. a wheelchair race\n3. a departure from or moderation of Islamic democracy"
+    },
+    {
+        "test_id": 8,
+        "relation": "AssociatedWith",
+        "correct_feat": "the Great Run series of road races in the UK",
+        "options": "1. the Consecration of the National Cemetery\n2. Claud\n3. the Great Run series of road races in the UK",
+        "correct_num": 3,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is associated with [MASK].\n\nOptions:\n1. the Consecration of the National Cemetery\n2. Claud\n3. the Great Run series of road races in the UK"
+    },
+    {
+        "test_id": 9,
+        "relation": "ConsistsOf",
+        "correct_feat": "a 10k run since it was established in 2003",
+        "options": "1. a 10k run since it was established in 2003\n2. optionally one large score house at each end\n3. two angels at Jesus's legs",
+        "correct_num": 1,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> consists of [MASK].\n\nOptions:\n1. a 10k run since it was established in 2003\n2. optionally one large score house at each end\n3. two angels at Jesus's legs"
+    },
+    {
+        "test_id": 10,
+        "relation": "ConsistsOf",
+        "correct_feat": "a half marathon since 2017",
+        "options": "1. various types of Zionism\n2. a half marathon since 2017\n3. an adventure",
+        "correct_num": 2,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> consists of [MASK].\n\nOptions:\n1. various types of Zionism\n2. a half marathon since 2017\n3. an adventure"
+    },
+    {
+        "test_id": 11,
+        "relation": "HasA",
+        "correct_feat": "a 10k run",
+        "options": "1. four principles\n2. a game of sacrifice\n3. a 10k run",
+        "correct_num": 3,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> has [MASK].\n\nOptions:\n1. four principles\n2. a game of sacrifice\n3. a 10k run"
+    },
+    {
+        "test_id": 12,
+        "relation": "HasA",
+        "correct_feat": "a half marathon",
+        "options": "1. a half marathon\n2. a width of 15.9 in. 40.3 cm\n3. reception details",
+        "correct_num": 1,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> has [MASK].\n\nOptions:\n1. a half marathon\n2. a width of 15.9 in. 40.3 cm\n3. reception details"
+    },
+    {
+        "test_id": 13,
+        "relation": "HasFeatureOf",
+        "correct_feat": "being the largest 10k race of its type in Europe",
+        "options": "1. its pragmatic orientation\n2. being the largest 10k race of its type in Europe\n3. humans climbing towards a brighter field",
+        "correct_num": 2,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is characterized by [MASK].\n\nOptions:\n1. its pragmatic orientation\n2. being the largest 10k race of its type in Europe\n3. humans climbing towards a brighter field"
+    },
+    {
+        "test_id": 14,
+        "relation": "HasFeatureOf",
+        "correct_feat": "being the third-largest mass participation running event in the United Kingdom",
+        "options": "1. its Apprentice Program for Technicians\n2. its painting set in gold and silver accoutrements of precious gemstones donated as ex votos from devotees\n3. being the third-largest mass participation running event in the United Kingdom",
+        "correct_num": 3,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is characterized by [MASK].\n\nOptions:\n1. its Apprentice Program for Technicians\n2. its painting set in gold and silver accoutrements of precious gemstones donated as ex votos from devotees\n3. being the third-largest mass participation running event in the United Kingdom"
+    },
+    {
+        "test_id": 15,
+        "relation": "HasFeatureOf",
+        "correct_feat": "its course starting and finishing in Manchester city centre",
+        "options": "1. its course starting and finishing in Manchester city centre\n2. its unique feature for a sea port\n3. crowned pieces that can move and capture backward and forward",
+        "correct_num": 1,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is characterized by [MASK].\n\nOptions:\n1. its course starting and finishing in Manchester city centre\n2. its unique feature for a sea port\n3. crowned pieces that can move and capture backward and forward"
+    },
+    {
+        "test_id": 16,
+        "relation": "HasFeatureOf",
+        "correct_feat": "its half marathon course consisting of the 10k course with a 7-mile detour",
+        "options": "1. a coiled dragon holding a sword in its mouth\n2. its half marathon course consisting of the 10k course with a 7-mile detour\n3. the traditional maniera greca",
+        "correct_num": 2,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is characterized by [MASK].\n\nOptions:\n1. a coiled dragon holding a sword in its mouth\n2. its half marathon course consisting of the 10k course with a 7-mile detour\n3. the traditional maniera greca"
+    },
+    {
+        "test_id": 17,
+        "relation": "HasFeatureOf",
+        "correct_feat": "the 2007 race having an estimated 28,000 participants",
+        "options": "1. its distances\n2. \"untried\" Soviet units in its second edition\n3. the 2007 race having an estimated 28,000 participants",
+        "correct_num": 3,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is characterized by [MASK].\n\nOptions:\n1. its distances\n2. \"untried\" Soviet units in its second edition\n3. the 2007 race having an estimated 28,000 participants"
+    },
+    {
+        "test_id": 18,
+        "relation": "HasFeatureOf",
+        "correct_feat": "the 2008 race having almost 25,000 runners complete the course",
+        "options": "1. the 2008 race having almost 25,000 runners complete the course\n2. its ruling that New York's law was unconstitutional\n3. the practice of torture widely documented as a distinctive trait of the Egyptian police",
+        "correct_num": 1,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is characterized by [MASK].\n\nOptions:\n1. the 2008 race having almost 25,000 runners complete the course\n2. its ruling that New York's law was unconstitutional\n3. the practice of torture widely documented as a distinctive trait of the Egyptian police"
+    },
+    {
+        "test_id": 19,
+        "relation": "HasFeatureOf",
+        "correct_feat": "the 2009 edition being expanded to include the Great City Games",
+        "options": "1. five men, one of whom was a \"Branán\" or chief\n2. the 2009 edition being expanded to include the Great City Games\n3. a per curiam decision",
+        "correct_num": 2,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is characterized by [MASK].\n\nOptions:\n1. five men, one of whom was a \"Branán\" or chief\n2. the 2009 edition being expanded to include the Great City Games\n3. a per curiam decision"
+    },
+    {
+        "test_id": 20,
+        "relation": "HasFeatureOf",
+        "correct_feat": "around 33,000 runners signing up for the 10 kilometres race in 2009",
+        "options": "1. four maps in four colors\n2. being an abstract strategy game\n3. around 33,000 runners signing up for the 10 kilometres race in 2009",
+        "correct_num": 3,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is characterized by [MASK].\n\nOptions:\n1. four maps in four colors\n2. being an abstract strategy game\n3. around 33,000 runners signing up for the 10 kilometres race in 2009"
+    },
+    {
+        "test_id": 21,
+        "relation": "HasFeatureOf",
+        "correct_feat": "the addition of The Great City Games bringing much attention to the event",
+        "options": "1. the addition of The Great City Games bringing much attention to the event\n2. the revival of ancient heritage\n3. its perspectiveless style",
+        "correct_num": 1,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is characterized by [MASK].\n\nOptions:\n1. the addition of The Great City Games bringing much attention to the event\n2. the revival of ancient heritage\n3. its perspectiveless style"
+    },
+    {
+        "test_id": 22,
+        "relation": "HeldIn",
+        "correct_feat": "Greater Manchester",
+        "options": "1. Graham County, Kansas\n2. Greater Manchester\n3. Ottawa, Canada",
+        "correct_num": 2,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> was held in [MASK].\n\nOptions:\n1. Graham County, Kansas\n2. Greater Manchester\n3. Ottawa, Canada"
+    },
+    {
+        "test_id": 23,
+        "relation": "HeldIn",
+        "correct_feat": "Manchester",
+        "options": "1. Ajegunle\n2. Haikou\n3. Manchester",
+        "correct_num": 3,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> was held in [MASK].\n\nOptions:\n1. Ajegunle\n2. Haikou\n3. Manchester"
+    },
+    {
+        "test_id": 24,
+        "relation": "HeldIn",
+        "correct_feat": "Trafford",
+        "options": "1. Trafford\n2. France\n3. schools",
+        "correct_num": 1,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> was held in [MASK].\n\nOptions:\n1. Trafford\n2. France\n3. schools"
+    },
+    {
+        "test_id": 25,
+        "relation": "HeldIn",
+        "correct_feat": "Salford",
+        "options": "1. the West\n2. Salford\n3. the collection of the Byzantine and Christian Museum",
+        "correct_num": 2,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> was held in [MASK].\n\nOptions:\n1. the West\n2. Salford\n3. the collection of the Byzantine and Christian Museum"
+    },
+    {
+        "test_id": 26,
+        "relation": "HeldOn",
+        "correct_feat": "17 May",
+        "options": "1. October 2007\n2. July 20, 1995\n3. 17 May",
+        "correct_num": 3,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> was held on [MASK].\n\nOptions:\n1. October 2007\n2. July 20, 1995\n3. 17 May"
+    },
+    {
+        "test_id": 27,
+        "relation": "LocatedIn",
+        "correct_feat": "in Greater Manchester",
+        "options": "1. in Greater Manchester\n2. in Woolston, Southampton\n3. in the Dormition Cathedral",
+        "correct_num": 1,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is located [MASK].\n\nOptions:\n1. in Greater Manchester\n2. in Woolston, Southampton\n3. in the Dormition Cathedral"
+    },
+    {
+        "test_id": 28,
+        "relation": "LocatedIn",
+        "correct_feat": "in Manchester",
+        "options": "1. in Tbilisi\n2. in Manchester\n3. in Brazil",
+        "correct_num": 2,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is located [MASK].\n\nOptions:\n1. in Tbilisi\n2. in Manchester\n3. in Brazil"
+    },
+    {
+        "test_id": 29,
+        "relation": "LocatedIn",
+        "correct_feat": "in Trafford",
+        "options": "1. in Spain\n2. in the Church of St. Stanislaus Kostka\n3. in Trafford",
+        "correct_num": 3,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is located [MASK].\n\nOptions:\n1. in Spain\n2. in the Church of St. Stanislaus Kostka\n3. in Trafford"
+    },
+    {
+        "test_id": 30,
+        "relation": "LocatedIn",
+        "correct_feat": "in Salford",
+        "options": "1. in Salford\n2. in East St. Louis, Illinois\n3. in Judea",
+        "correct_num": 1,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is located [MASK].\n\nOptions:\n1. in Salford\n2. in East St. Louis, Illinois\n3. in Judea"
+    },
+    {
+        "test_id": 31,
+        "relation": "PartOf",
+        "correct_feat": "the Great Run series of road races in the UK",
+        "options": "1. a musical tradition\n2. the Great Run series of road races in the UK\n3. the central and regional committees of the Communist Party of the Soviet Union",
+        "correct_num": 2,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is part of [MASK].\n\nOptions:\n1. a musical tradition\n2. the Great Run series of road races in the UK\n3. the central and regional committees of the Communist Party of the Soviet Union"
+    },
+    {
+        "test_id": 32,
+        "relation": "PerformedBy",
+        "correct_feat": "Briton Jo Pavey",
+        "options": "1. the International Court of Justice\n2. singers\n3. Briton Jo Pavey",
+        "correct_num": 3,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> was performed by [MASK].\n\nOptions:\n1. the International Court of Justice\n2. singers\n3. Briton Jo Pavey"
+    },
+    {
+        "test_id": 33,
+        "relation": "PerformedBy",
+        "correct_feat": "Kenyan Micah Kogo",
+        "options": "1. Kenyan Micah Kogo\n2. Katrina and the Waves\n3. the United States Supreme Court",
+        "correct_num": 1,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> was performed by [MASK].\n\nOptions:\n1. Kenyan Micah Kogo\n2. Katrina and the Waves\n3. the United States Supreme Court"
+    },
+    {
+        "test_id": 34,
+        "relation": "PerformedBy",
+        "correct_feat": "Rose Cheruiyot",
+        "options": "1. CL Smooth\n2. Rose Cheruiyot\n3. Roman soldiers",
+        "correct_num": 2,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> was performed by [MASK].\n\nOptions:\n1. CL Smooth\n2. Rose Cheruiyot\n3. Roman soldiers"
+    },
+    {
+        "test_id": 35,
+        "relation": "PerformedBy",
+        "correct_feat": "Bezunesh Bekele",
+        "options": "1. the Master of the Horse\n2. Indian forces\n3. Bezunesh Bekele",
+        "correct_num": 3,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> was performed by [MASK].\n\nOptions:\n1. the Master of the Horse\n2. Indian forces\n3. Bezunesh Bekele"
+    },
+    {
+        "test_id": 36,
+        "relation": "PerformedBy",
+        "correct_feat": "Austrian Günther Weidlinger",
+        "options": "1. Austrian Günther Weidlinger\n2. the state commission for relations with religious communities\n3. Duke Filippo Maria Visconti",
+        "correct_num": 1,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> was performed by [MASK].\n\nOptions:\n1. Austrian Günther Weidlinger\n2. the state commission for relations with religious communities\n3. Duke Filippo Maria Visconti"
+    },
+    {
+        "test_id": 37,
+        "relation": "PerformedBy",
+        "correct_feat": "Ukrainian Serhiy Lebid",
+        "options": "1. collaborators on the album\n2. Ukrainian Serhiy Lebid\n3. shamans",
+        "correct_num": 2,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> was performed by [MASK].\n\nOptions:\n1. collaborators on the album\n2. Ukrainian Serhiy Lebid\n3. shamans"
+    },
+    {
+        "test_id": 38,
+        "relation": "PerformedBy",
+        "correct_feat": "Sweden's Mustafa Mohamed",
+        "options": "1. the League of some Italian states led by the Republic of Florence\n2. Abdel Fattah el-Sisi's regime\n3. Sweden's Mustafa Mohamed",
+        "correct_num": 3,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> was performed by [MASK].\n\nOptions:\n1. the League of some Italian states led by the Republic of Florence\n2. Abdel Fattah el-Sisi's regime\n3. Sweden's Mustafa Mohamed"
+    },
+    {
+        "test_id": 39,
+        "relation": "PerformedBy",
+        "correct_feat": "Haile Gebrselassie",
+        "options": "1. Haile Gebrselassie\n2. the Almoravids\n3. radicalized youths",
+        "correct_num": 1,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> was performed by [MASK].\n\nOptions:\n1. Haile Gebrselassie\n2. the Almoravids\n3. radicalized youths"
+    },
+    {
+        "test_id": 40,
+        "relation": "PerformedBy",
+        "correct_feat": "Vivian Cheruiyot",
+        "options": "1. Alyson Michalka\n2. Vivian Cheruiyot\n3. police and army troops",
+        "correct_num": 2,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> was performed by [MASK].\n\nOptions:\n1. Alyson Michalka\n2. Vivian Cheruiyot\n3. police and army troops"
+    },
+    {
+        "test_id": 41,
+        "relation": "PerformedBy",
+        "correct_feat": "Brian Alldis",
+        "options": "1. the state commission for relations with religious communities\n2. Manny Elias\n3. Brian Alldis",
+        "correct_num": 3,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> was performed by [MASK].\n\nOptions:\n1. the state commission for relations with religious communities\n2. Manny Elias\n3. Brian Alldis"
+    },
+    {
+        "test_id": 42,
+        "relation": "PerformedBy",
+        "correct_feat": "Shelly Woods",
+        "options": "1. Shelly Woods\n2. Squadron Leader Anderson\n3. a Court of Oyer and Terminer",
+        "correct_num": 1,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> was performed by [MASK].\n\nOptions:\n1. Shelly Woods\n2. Squadron Leader Anderson\n3. a Court of Oyer and Terminer"
+    },
+    {
+        "test_id": 43,
+        "relation": "PerformedBy",
+        "correct_feat": "Olympic Champions Usain Bolt",
+        "options": "1. collaborators on the album\n2. Olympic Champions Usain Bolt\n3. the weaker player",
+        "correct_num": 2,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> was performed by [MASK].\n\nOptions:\n1. collaborators on the album\n2. Olympic Champions Usain Bolt\n3. the weaker player"
+    },
+    {
+        "test_id": 44,
+        "relation": "PerformedBy",
+        "correct_feat": "Christine Ohuruogu",
+        "options": "1. Roman soldiers\n2. artists\n3. Christine Ohuruogu",
+        "correct_num": 3,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> was performed by [MASK].\n\nOptions:\n1. Roman soldiers\n2. artists\n3. Christine Ohuruogu"
+    },
+    {
+        "test_id": 45,
+        "relation": "PerformedBy",
+        "correct_feat": "Debbie Ferguson-McKenzie",
+        "options": "1. Debbie Ferguson-McKenzie\n2. engineers\n3. individuals motivated by personal profit",
+        "correct_num": 1,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> was performed by [MASK].\n\nOptions:\n1. Debbie Ferguson-McKenzie\n2. engineers\n3. individuals motivated by personal profit"
+    },
+    {
+        "test_id": 46,
+        "relation": "PerformedBy",
+        "correct_feat": "Ivory Williams",
+        "options": "1. Muslim Brotherhood\n2. Ivory Williams\n3. the consul",
+        "correct_num": 2,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> was performed by [MASK].\n\nOptions:\n1. Muslim Brotherhood\n2. Ivory Williams\n3. the consul"
+    },
+    {
+        "test_id": 47,
+        "relation": "PerformedBy",
+        "correct_feat": "British Olympians Marlon Devonish",
+        "options": "1. Stephen Stills\n2. 96 States\n3. British Olympians Marlon Devonish",
+        "correct_num": 3,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> was performed by [MASK].\n\nOptions:\n1. Stephen Stills\n2. 96 States\n3. British Olympians Marlon Devonish"
+    },
+    {
+        "test_id": 48,
+        "relation": "PerformedBy",
+        "correct_feat": "Donna Fraser",
+        "options": "1. Donna Fraser\n2. Nicky Romero\n3. nuns",
+        "correct_num": 1,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> was performed by [MASK].\n\nOptions:\n1. Donna Fraser\n2. Nicky Romero\n3. nuns"
+    },
+    {
+        "test_id": 49,
+        "relation": "UsedFor",
+        "correct_feat": "running",
+        "options": "1. depicting terrain features\n2. running\n3. its artistic purpose",
+        "correct_num": 2,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is used for [MASK].\n\nOptions:\n1. depicting terrain features\n2. running\n3. its artistic purpose"
+    },
+    {
+        "test_id": 50,
+        "relation": "WonBy",
+        "correct_feat": "Briton Jo Pavey",
+        "options": "1. Bigflo and Oli at the Victoires de la Musique for \"Original Song of the Year\"\n2. the Berlin Music Video Awards 2016\n3. Briton Jo Pavey",
+        "correct_num": 3,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> was won by [MASK].\n\nOptions:\n1. Bigflo and Oli at the Victoires de la Musique for \"Original Song of the Year\"\n2. the Berlin Music Video Awards 2016\n3. Briton Jo Pavey"
+    },
+    {
+        "test_id": 51,
+        "relation": "WonBy",
+        "correct_feat": "Kenyan Micah Kogo",
+        "options": "1. Kenyan Micah Kogo\n2. Phileas Fogg\n3. the Charles S. Roberts Award for Best Pre-20th Century Game of 1979",
+        "correct_num": 1,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> was won by [MASK].\n\nOptions:\n1. Kenyan Micah Kogo\n2. Phileas Fogg\n3. the Charles S. Roberts Award for Best Pre-20th Century Game of 1979"
+    },
+    {
+        "test_id": 52,
+        "relation": "WonBy",
+        "correct_feat": "Rose Cheruiyot",
+        "options": "1. the Berlin Music Video Awards 2016\n2. Rose Cheruiyot\n3. the Sceau d'excellence Option consommateurs in 2006",
+        "correct_num": 2,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> was won by [MASK].\n\nOptions:\n1. the Berlin Music Video Awards 2016\n2. Rose Cheruiyot\n3. the Sceau d'excellence Option consommateurs in 2006"
+    },
+    {
+        "test_id": 53,
+        "relation": "WonBy",
+        "correct_feat": "Bezunesh Bekele",
+        "options": "1. Robert Stewart\n2. the Japan Boardgame Prize for the Best Japanese Game in 2002\n3. Bezunesh Bekele",
+        "correct_num": 3,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> was won by [MASK].\n\nOptions:\n1. Robert Stewart\n2. the Japan Boardgame Prize for the Best Japanese Game in 2002\n3. Bezunesh Bekele"
+    },
+    {
+        "test_id": 54,
+        "relation": "WonBy",
+        "correct_feat": "Austrian Günther Weidlinger",
+        "options": "1. Austrian Günther Weidlinger\n2. Sweden\n3. the five women",
+        "correct_num": 1,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> was won by [MASK].\n\nOptions:\n1. Austrian Günther Weidlinger\n2. Sweden\n3. the five women"
+    },
+    {
+        "test_id": 55,
+        "relation": "WonBy",
+        "correct_feat": "Haile Gebrselassie",
+        "options": "1. Bigflo and Oli, receiving over 300,000 sales for an album\n2. Haile Gebrselassie\n3. the Berlin Music Video Awards 2021",
+        "correct_num": 2,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> was won by [MASK].\n\nOptions:\n1. Bigflo and Oli, receiving over 300,000 sales for an album\n2. Haile Gebrselassie\n3. the Berlin Music Video Awards 2021"
+    },
+    {
+        "test_id": 56,
+        "relation": "WonBy",
+        "correct_feat": "Vivian Cheruiyot",
+        "options": "1. the humans\n2. Allied countries\n3. Vivian Cheruiyot",
+        "correct_num": 3,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> was won by [MASK].\n\nOptions:\n1. the humans\n2. Allied countries\n3. Vivian Cheruiyot"
+    },
+    {
+        "test_id": 57,
+        "relation": "WonBy",
+        "correct_feat": "Brian Alldis",
+        "options": "1. Brian Alldis\n2. the five women\n3. the Charles S. Roberts Award for \"Best Initial Release of 1979\"",
+        "correct_num": 1,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> was won by [MASK].\n\nOptions:\n1. Brian Alldis\n2. the five women\n3. the Charles S. Roberts Award for \"Best Initial Release of 1979\""
+    },
+    {
+        "test_id": 58,
+        "relation": "WonBy",
+        "correct_feat": "Shelly Woods",
+        "options": "1. Asa Long\n2. Shelly Woods\n3. Robert D. Yates",
+        "correct_num": 2,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> was won by [MASK].\n\nOptions:\n1. Asa Long\n2. Shelly Woods\n3. Robert D. Yates"
+    },
+    {
+        "test_id": 59,
+        "relation": "WonBy",
+        "correct_feat": "Usain Bolt",
+        "options": "1. the 2018 Berlin Music Video Awards\n2. Bigflo and Oli, receiving over 300,000 sales for an album\n3. Usain Bolt",
+        "correct_num": 3,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> was won by [MASK].\n\nOptions:\n1. the 2018 Berlin Music Video Awards\n2. Bigflo and Oli, receiving over 300,000 sales for an album\n3. Usain Bolt"
+    },
+    {
+        "test_id": 60,
+        "relation": "WonBy",
+        "correct_feat": "Debbie Ferguson-McKenzie",
+        "options": "1. Debbie Ferguson-McKenzie\n2. the Japan Boardgame Prize U-more Award in 2008\n3. the Sceau d'excellence Option consommateurs in 2006",
+        "correct_num": 1,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> was won by [MASK].\n\nOptions:\n1. Debbie Ferguson-McKenzie\n2. the Japan Boardgame Prize U-more Award in 2008\n3. the Sceau d'excellence Option consommateurs in 2006"
+    }
+]

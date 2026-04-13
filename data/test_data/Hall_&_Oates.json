@@ -1,0 +1,330 @@
+[
+    {
+        "test_id": 0,
+        "relation": "About",
+        "correct_feat": "a pop rock duo",
+        "options": "1. a pop rock duo\n2. a rodeo sport involving a rider on a bucking bull\n3. life and time on Horn Island",
+        "correct_num": 1,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is about [MASK].\n\nOptions:\n1. a pop rock duo\n2. a rodeo sport involving a rider on a bucking bull\n3. life and time on Horn Island"
+    },
+    {
+        "test_id": 1,
+        "relation": "AssociatedWith",
+        "correct_feat": "Philadelphia, Pennsylvania",
+        "options": "1. the Fourteenth Amendment\n2. Philadelphia, Pennsylvania\n3. the First Spanish Republic",
+        "correct_num": 2,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is associated with [MASK].\n\nOptions:\n1. the Fourteenth Amendment\n2. Philadelphia, Pennsylvania\n3. the First Spanish Republic"
+    },
+    {
+        "test_id": 2,
+        "relation": "ComposedBy",
+        "correct_feat": "Daryl Hall and John Oates",
+        "options": "1. Johann Sebastian Bach\n2. Michael Brown\n3. Daryl Hall and John Oates",
+        "correct_num": 3,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> was composed by [MASK].\n\nOptions:\n1. Johann Sebastian Bach\n2. Michael Brown\n3. Daryl Hall and John Oates"
+    },
+    {
+        "test_id": 3,
+        "relation": "ConsistsOf",
+        "correct_feat": "Daryl Hall and John Oates",
+        "options": "1. Daryl Hall and John Oates\n2. three blank frames\n3. the Novgorod Znamenie icon",
+        "correct_num": 1,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> consists of [MASK].\n\nOptions:\n1. Daryl Hall and John Oates\n2. three blank frames\n3. the Novgorod Znamenie icon"
+    },
+    {
+        "test_id": 4,
+        "relation": "CreatedBy",
+        "correct_feat": "Daryl Hall and John Oates",
+        "options": "1. Václav Klaus\n2. Daryl Hall and John Oates\n3. Cretan painter Michael Damaskinos",
+        "correct_num": 2,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> was created by [MASK].\n\nOptions:\n1. Václav Klaus\n2. Daryl Hall and John Oates\n3. Cretan painter Michael Damaskinos"
+    },
+    {
+        "test_id": 5,
+        "relation": "CreatedIn",
+        "correct_feat": "Philadelphia, Pennsylvania",
+        "options": "1. Starkville, Mississippi\n2. Serpukhov, Russia\n3. Philadelphia, Pennsylvania",
+        "correct_num": 3,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> was created in [MASK].\n\nOptions:\n1. Starkville, Mississippi\n2. Serpukhov, Russia\n3. Philadelphia, Pennsylvania"
+    },
+    {
+        "test_id": 6,
+        "relation": "FoundedBy",
+        "correct_feat": "Daryl Hall and John Oates",
+        "options": "1. Daryl Hall and John Oates\n2. Herb Teichman\n3. Thomas Stackhouse",
+        "correct_num": 1,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> was founded by [MASK].\n\nOptions:\n1. Daryl Hall and John Oates\n2. Herb Teichman\n3. Thomas Stackhouse"
+    },
+    {
+        "test_id": 7,
+        "relation": "FoundedIn",
+        "correct_feat": "1970",
+        "options": "1. 1616\n2. 1970\n3. 1615",
+        "correct_num": 2,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> was founded in [MASK].\n\nOptions:\n1. 1616\n2. 1970\n3. 1615"
+    },
+    {
+        "test_id": 8,
+        "relation": "HasA",
+        "correct_feat": "a fusion of rock music, soul music, and rhythm and blues",
+        "options": "1. the image of the Child Jesus depicted within a round aureole upon her breast\n2. 12 different scenarios\n3. a fusion of rock music, soul music, and rhythm and blues",
+        "correct_num": 3,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> has [MASK].\n\nOptions:\n1. the image of the Child Jesus depicted within a round aureole upon her breast\n2. 12 different scenarios\n3. a fusion of rock music, soul music, and rhythm and blues"
+    },
+    {
+        "test_id": 9,
+        "relation": "HasA",
+        "correct_feat": "achieved success with two Top Ten albums and six Top 40 singles in the United Kingdom",
+        "options": "1. achieved success with two Top Ten albums and six Top 40 singles in the United Kingdom\n2. scoring houses carved into the two halves of the cover\n3. defining traits such as support for a middle class",
+        "correct_num": 1,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> has [MASK].\n\nOptions:\n1. achieved success with two Top Ten albums and six Top 40 singles in the United Kingdom\n2. scoring houses carved into the two halves of the cover\n3. defining traits such as support for a middle class"
+    },
+    {
+        "test_id": 10,
+        "relation": "HasA",
+        "correct_feat": "spent 120 weeks in the UK Top 75 albums chart",
+        "options": "1. a minimum number of turns\n2. spent 120 weeks in the UK Top 75 albums chart\n3. military and security commanders",
+        "correct_num": 2,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> has [MASK].\n\nOptions:\n1. a minimum number of turns\n2. spent 120 weeks in the UK Top 75 albums chart\n3. military and security commanders"
+    },
+    {
+        "test_id": 11,
+        "relation": "HasA",
+        "correct_feat": "spent 84 weeks in the UK Top 75 singles chart",
+        "options": "1. a racket rim made of plastic, aluminum, carbon or carbon fiber\n2. a time limit of only five phases\n3. spent 84 weeks in the UK Top 75 singles chart",
+        "correct_num": 3,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> has [MASK].\n\nOptions:\n1. a racket rim made of plastic, aluminum, carbon or carbon fiber\n2. a time limit of only five phases\n3. spent 84 weeks in the UK Top 75 singles chart"
+    },
+    {
+        "test_id": 12,
+        "relation": "HasA",
+        "correct_feat": "been credited on albums as Daryl Hall & John Oates on all of their US releases",
+        "options": "1. been credited on albums as Daryl Hall & John Oates on all of their US releases\n2. dogs\n3. mainstream historical types including Liberal, Labor, Revisionist, and Cultural Zionism",
+        "correct_num": 1,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> has [MASK].\n\nOptions:\n1. been credited on albums as Daryl Hall & John Oates on all of their US releases\n2. dogs\n3. mainstream historical types including Liberal, Labor, Revisionist, and Cultural Zionism"
+    },
+    {
+        "test_id": 13,
+        "relation": "HasA",
+        "correct_feat": "reached the US Top 40 with 29 of their 33 singles charting on the Billboard Hot 100",
+        "options": "1. a semi-simultaneous system of play\n2. reached the US Top 40 with 29 of their 33 singles charting on the Billboard Hot 100\n3. been labelled as open attacks on secularism by rivals",
+        "correct_num": 2,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> has [MASK].\n\nOptions:\n1. a semi-simultaneous system of play\n2. reached the US Top 40 with 29 of their 33 singles charting on the Billboard Hot 100\n3. been labelled as open attacks on secularism by rivals"
+    },
+    {
+        "test_id": 14,
+        "relation": "HasA",
+        "correct_feat": "had six number one hits on the Billboard Hot 100",
+        "options": "1. origins in the Old Beverlie pub\n2. complex rules\n3. had six number one hits on the Billboard Hot 100",
+        "correct_num": 3,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> has [MASK].\n\nOptions:\n1. origins in the Old Beverlie pub\n2. complex rules\n3. had six number one hits on the Billboard Hot 100"
+    },
+    {
+        "test_id": 15,
+        "relation": "HasA",
+        "correct_feat": "had 16 US Top Tens",
+        "options": "1. had 16 US Top Tens\n2. led to the abandonment of the Bancroft Treaties\n3. mosaics and stained glass by Albinas Elskus",
+        "correct_num": 1,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> has [MASK].\n\nOptions:\n1. had 16 US Top Tens\n2. led to the abandonment of the Bancroft Treaties\n3. mosaics and stained glass by Albinas Elskus"
+    },
+    {
+        "test_id": 16,
+        "relation": "HasA",
+        "correct_feat": "had seven albums RIAA-certified platinum",
+        "options": "1. a tendency to accumulate immense masses of half-assimilated materials\n2. had seven albums RIAA-certified platinum\n3. a tributary of the Elands River",
+        "correct_num": 2,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> has [MASK].\n\nOptions:\n1. a tendency to accumulate immense masses of half-assimilated materials\n2. had seven albums RIAA-certified platinum\n3. a tributary of the Elands River"
+    },
+    {
+        "test_id": 17,
+        "relation": "HasA",
+        "correct_feat": "had six albums RIAA-certified gold",
+        "options": "1. hundreds of counters\n2. landscapes bedecked with homespun aphorisms\n3. had six albums RIAA-certified gold",
+        "correct_num": 3,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> has [MASK].\n\nOptions:\n1. hundreds of counters\n2. landscapes bedecked with homespun aphorisms\n3. had six albums RIAA-certified gold"
+    },
+    {
+        "test_id": 18,
+        "relation": "HasFeatureOf",
+        "correct_feat": "a fusion of rock music, soul music, and rhythm and blues",
+        "options": "1. a fusion of rock music, soul music, and rhythm and blues\n2. ochre, white, red, yellow, black, and blue/grey colors\n3. the victory condition of the player with the asteroid still best able to function as a mine winning at the end of the last turn",
+        "correct_num": 1,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is characterized by [MASK].\n\nOptions:\n1. a fusion of rock music, soul music, and rhythm and blues\n2. ochre, white, red, yellow, black, and blue/grey colors\n3. the victory condition of the player with the asteroid still best able to function as a mine winning at the end of the last turn"
+    },
+    {
+        "test_id": 19,
+        "relation": "IsA",
+        "correct_feat": "a pop rock duo",
+        "options": "1. a category 1 historic place listed by Heritage New Zealand\n2. a pop rock duo\n3. a public Christian procession",
+        "correct_num": 2,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is [MASK].\n\nOptions:\n1. a category 1 historic place listed by Heritage New Zealand\n2. a pop rock duo\n3. a public Christian procession"
+    },
+    {
+        "test_id": 20,
+        "relation": "IsA",
+        "correct_feat": "the most successful duo of all time",
+        "options": "1. a faction of the Iranian principalists\n2. a mural painting\n3. the most successful duo of all time",
+        "correct_num": 3,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is [MASK].\n\nOptions:\n1. a faction of the Iranian principalists\n2. a mural painting\n3. the most successful duo of all time"
+    },
+    {
+        "test_id": 21,
+        "relation": "IsA",
+        "correct_feat": "a duo",
+        "options": "1. a duo\n2. a secular ideology\n3. a grand tactical monster board wargame",
+        "correct_num": 1,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is [MASK].\n\nOptions:\n1. a duo\n2. a secular ideology\n3. a grand tactical monster board wargame"
+    },
+    {
+        "test_id": 22,
+        "relation": "KnownAs",
+        "correct_feat": "Hall & Oates",
+        "options": "1. Owenism\n2. Hall & Oates\n3. the \"General or Final Judgment\" in Eastern Orthodoxy",
+        "correct_num": 2,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is known as [MASK].\n\nOptions:\n1. Owenism\n2. Hall & Oates\n3. the \"General or Final Judgment\" in Eastern Orthodoxy"
+    },
+    {
+        "test_id": 23,
+        "relation": "KnownFor",
+        "correct_feat": "a fusion of rock music, soul music, and rhythm and blues",
+        "options": "1. its popularity in Atlanta\n2. its \"true national unification\"\n3. a fusion of rock music, soul music, and rhythm and blues",
+        "correct_num": 3,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is known for [MASK].\n\nOptions:\n1. its popularity in Atlanta\n2. its \"true national unification\"\n3. a fusion of rock music, soul music, and rhythm and blues"
+    },
+    {
+        "test_id": 24,
+        "relation": "KnownFor",
+        "correct_feat": "achieving greatest fame from the mid-1970s to the late 1980s",
+        "options": "1. achieving greatest fame from the mid-1970s to the late 1980s\n2. Charley Lupica sitting atop a flagpole platform for 117 days in 1949\n3. its plot",
+        "correct_num": 1,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is known for [MASK].\n\nOptions:\n1. achieving greatest fame from the mid-1970s to the late 1980s\n2. Charley Lupica sitting atop a flagpole platform for 117 days in 1949\n3. its plot"
+    },
+    {
+        "test_id": 25,
+        "relation": "KnownFor",
+        "correct_feat": "six number one hits on the Billboard Hot 100",
+        "options": "1. its nationalist and anti-Western tendencies\n2. six number one hits on the Billboard Hot 100\n3. exhibiting Thomas Hornor's \"Panoramic view of London\", the largest painting ever created",
+        "correct_num": 2,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is known for [MASK].\n\nOptions:\n1. its nationalist and anti-Western tendencies\n2. six number one hits on the Billboard Hot 100\n3. exhibiting Thomas Hornor's \"Panoramic view of London\", the largest painting ever created"
+    },
+    {
+        "test_id": 26,
+        "relation": "KnownFor",
+        "correct_feat": "being the most successful duo of all time",
+        "options": "1. being a Dutch political movement\n2. ruling Portugal\n3. being the most successful duo of all time",
+        "correct_num": 3,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is known for [MASK].\n\nOptions:\n1. being a Dutch political movement\n2. ruling Portugal\n3. being the most successful duo of all time"
+    },
+    {
+        "test_id": 27,
+        "relation": "LocatedIn",
+        "correct_feat": "in Philadelphia, Pennsylvania",
+        "options": "1. in Philadelphia, Pennsylvania\n2. in Williston, North Dakota\n3. in the Altonaer Museum Exhibition",
+        "correct_num": 1,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is located [MASK].\n\nOptions:\n1. in Philadelphia, Pennsylvania\n2. in Williston, North Dakota\n3. in the Altonaer Museum Exhibition"
+    },
+    {
+        "test_id": 28,
+        "relation": "OriginatedIn",
+        "correct_feat": "Philadelphia, Pennsylvania",
+        "options": "1. Delaware\n2. Philadelphia, Pennsylvania\n3. England",
+        "correct_num": 2,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> originated in [MASK].\n\nOptions:\n1. Delaware\n2. Philadelphia, Pennsylvania\n3. England"
+    },
+    {
+        "test_id": 29,
+        "relation": "PartOf",
+        "correct_feat": "pop rock",
+        "options": "1. Prussia\n2. the culture of Afghanistan\n3. pop rock",
+        "correct_num": 3,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is part of [MASK].\n\nOptions:\n1. Prussia\n2. the culture of Afghanistan\n3. pop rock"
+    },
+    {
+        "test_id": 30,
+        "relation": "PerformedBy",
+        "correct_feat": "Daryl Hall and John Oates",
+        "options": "1. Daryl Hall and John Oates\n2. Roman soldiers\n3. Tim Sczerby",
+        "correct_num": 1,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> was performed by [MASK].\n\nOptions:\n1. Daryl Hall and John Oates\n2. Roman soldiers\n3. Tim Sczerby"
+    },
+    {
+        "test_id": 31,
+        "relation": "ProducedBy",
+        "correct_feat": "Arif Mardin",
+        "options": "1. ZeTek\n2. Arif Mardin\n3. successive manufacturers",
+        "correct_num": 2,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> was produced by [MASK].\n\nOptions:\n1. ZeTek\n2. Arif Mardin\n3. successive manufacturers"
+    },
+    {
+        "test_id": 32,
+        "relation": "ProducedBy",
+        "correct_feat": "Todd Rundgren",
+        "options": "1. Jon McKiel\n2. Filippo Lippi\n3. Todd Rundgren",
+        "correct_num": 3,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> was produced by [MASK].\n\nOptions:\n1. Jon McKiel\n2. Filippo Lippi\n3. Todd Rundgren"
+    },
+    {
+        "test_id": 33,
+        "relation": "ProducedBy",
+        "correct_feat": "David Foster",
+        "options": "1. David Foster\n2. Simulations Publications\n3. Moments in History",
+        "correct_num": 1,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> was produced by [MASK].\n\nOptions:\n1. David Foster\n2. Simulations Publications\n3. Moments in History"
+    },
+    {
+        "test_id": 34,
+        "relation": "ProducedBy",
+        "correct_feat": "Robert Fripp",
+        "options": "1. Georg Scharf\n2. Robert Fripp\n3. the staging of public events",
+        "correct_num": 2,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> was produced by [MASK].\n\nOptions:\n1. Georg Scharf\n2. Robert Fripp\n3. the staging of public events"
+    },
+    {
+        "test_id": 35,
+        "relation": "ProducedBy",
+        "correct_feat": "Hall & Oates",
+        "options": "1. Filippo Lippi\n2. the Skopje 2014 project\n3. Hall & Oates",
+        "correct_num": 3,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> was produced by [MASK].\n\nOptions:\n1. Filippo Lippi\n2. the Skopje 2014 project\n3. Hall & Oates"
+    },
+    {
+        "test_id": 36,
+        "relation": "PublishedAs",
+        "correct_feat": "Daryl Hall & John Oates on all of their US releases",
+        "options": "1. Daryl Hall & John Oates on all of their US releases\n2. an exhibition brochure\n3. a boxed set in 1957",
+        "correct_num": 1,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> was published as [MASK].\n\nOptions:\n1. Daryl Hall & John Oates on all of their US releases\n2. an exhibition brochure\n3. a boxed set in 1957"
+    },
+    {
+        "test_id": 37,
+        "relation": "UsedIn",
+        "correct_feat": "rock music",
+        "options": "1. a market\n2. rock music\n3. the American Revolution",
+        "correct_num": 2,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is used in [MASK].\n\nOptions:\n1. a market\n2. rock music\n3. the American Revolution"
+    },
+    {
+        "test_id": 38,
+        "relation": "UsedIn",
+        "correct_feat": "soul music",
+        "options": "1. the International Cherry Pit-Spitting Championship\n2. the Spanish Empire\n3. soul music",
+        "correct_num": 3,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is used in [MASK].\n\nOptions:\n1. the International Cherry Pit-Spitting Championship\n2. the Spanish Empire\n3. soul music"
+    },
+    {
+        "test_id": 39,
+        "relation": "UsedIn",
+        "correct_feat": "rhythm and blues",
+        "options": "1. rhythm and blues\n2. Painted Cave State Historic Park\n3. face-to-face tournaments",
+        "correct_num": 1,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is used in [MASK].\n\nOptions:\n1. rhythm and blues\n2. Painted Cave State Historic Park\n3. face-to-face tournaments"
+    },
+    {
+        "test_id": 40,
+        "relation": "WrittenBy",
+        "correct_feat": "Daryl Hall and John Oates",
+        "options": "1. Bugenhagen\n2. Daryl Hall and John Oates\n3. Fabrice Mazza",
+        "correct_num": 2,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> was written by [MASK].\n\nOptions:\n1. Bugenhagen\n2. Daryl Hall and John Oates\n3. Fabrice Mazza"
+    }
+]

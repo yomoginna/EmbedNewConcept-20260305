@@ -11,7 +11,7 @@ TARGET_CONCEPTS_FILENAME="target_concepts.json"
 LR=0.01
 PROCESS_NUM=2
 SEED_NUM=1 
-INIT_VEC_TYPES=("category_centroid_plus_random" "other_category_COG" "norm_rand_vocab")
+INIT_VEC_TYPE_LST=("category_centroid_plus_random" "other_category_COG" "norm_rand_vocab")
 
 THREAD_ID=0
 CUDA_VISIBLE_DEVICES=3
@@ -32,7 +32,7 @@ nohup uv --no-progress run python src/trainMemVec_fromXvec_gemma_wholeRun.py \
         --lr ${LR} \
         --max_epochs ${MAX_EPOCHS} \
         --cuda_visible_devices ${CUDA_VISIBLE_DEVICES} \
-        --init_vec_types ${INIT_VEC_TYPES} \
+        --init_vec_type_lst ${INIT_VEC_TYPE_LST} \
         --thread_id ${THREAD_ID} \
         --process_num ${PROCESS_NUM} \
         --seed_num ${SEED_NUM} \
@@ -61,7 +61,7 @@ MODEL_SIZE=12
 LR=0.01
 PROCESS_NUM=3
 SEED_NUM=1 
-INIT_VEC_TYPES=("category_centroid_plus_random" "other_category_COG" "norm_rand_vocab")
+INIT_VEC_TYPE_LST=("category_centroid_plus_random" "other_category_COG" "norm_rand_vocab")
 
 THREAD_ID=0
 CUDA_VISIBLE_DEVICES=0
@@ -82,7 +82,7 @@ nohup uv --no-progress run python src/trainMemVec_fromXvec_gemma_wholeRun.py \
         --lr ${LR} \
         --max_epochs ${MAX_EPOCHS} \
         --cuda_visible_devices ${CUDA_VISIBLE_DEVICES} \
-        --init_vec_types ${INIT_VEC_TYPES} \
+        --init_vec_type_lst ${INIT_VEC_TYPE_LST} \
         --thread_id ${THREAD_ID} \
         --process_num ${PROCESS_NUM} \
         --seed_num ${SEED_NUM} \

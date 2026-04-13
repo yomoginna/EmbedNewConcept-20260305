@@ -1,0 +1,914 @@
+[
+    {
+        "test_id": 0,
+        "relation": "About",
+        "correct_feat": "pitting a bull against dogs with the aim of subduing the bull by biting and holding onto its nose or neck",
+        "options": "1. pitting a bull against dogs with the aim of subduing the bull by biting and holding onto its nose or neck\n2. a nationalist phrase and concept of a racially defined national body united with a settlement area\n3. the Bancroft Treaties and their eventual abandonment",
+        "correct_num": 1,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is about [MASK].\n\nOptions:\n1. pitting a bull against dogs with the aim of subduing the bull by biting and holding onto its nose or neck\n2. a nationalist phrase and concept of a racially defined national body united with a settlement area\n3. the Bancroft Treaties and their eventual abandonment"
+    },
+    {
+        "test_id": 1,
+        "relation": "Affects",
+        "correct_feat": "the bull's nose or neck",
+        "options": "1. the anime series Hand Shakers\n2. the bull's nose or neck\n3. the way the particularity of the ethnic Macedonians throughout the Middle Ages and the Roman era is delineated",
+        "correct_num": 2,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> affects [MASK].\n\nOptions:\n1. the anime series Hand Shakers\n2. the bull's nose or neck\n3. the way the particularity of the ethnic Macedonians throughout the Middle Ages and the Roman era is delineated"
+    },
+    {
+        "test_id": 2,
+        "relation": "AssociatedWith",
+        "correct_feat": "blood sport",
+        "options": "1. Rob Turner\n2. the Sultanate of Rum\n3. blood sport",
+        "correct_num": 3,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is associated with [MASK].\n\nOptions:\n1. Rob Turner\n2. the Sultanate of Rum\n3. blood sport"
+    },
+    {
+        "test_id": 3,
+        "relation": "AssociatedWith",
+        "correct_feat": "ancient pagan rituals",
+        "options": "1. ancient pagan rituals\n2. the Abbasid caliphate\n3. Trevor Horn",
+        "correct_num": 1,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is associated with [MASK].\n\nOptions:\n1. ancient pagan rituals\n2. the Abbasid caliphate\n3. Trevor Horn"
+    },
+    {
+        "test_id": 4,
+        "relation": "AssociatedWith",
+        "correct_feat": "butchering bull-beef",
+        "options": "1. ORGA\n2. butchering bull-beef\n3. Peter D\u00fcring on drums",
+        "correct_num": 2,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is associated with [MASK].\n\nOptions:\n1. ORGA\n2. butchering bull-beef\n3. Peter D\u00fcring on drums"
+    },
+    {
+        "test_id": 5,
+        "relation": "AssociatedWith",
+        "correct_feat": "commercial entertainment",
+        "options": "1. the Orange and Alexandria Railroad\n2. the American Revolution\n3. commercial entertainment",
+        "correct_num": 3,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is associated with [MASK].\n\nOptions:\n1. the Orange and Alexandria Railroad\n2. the American Revolution\n3. commercial entertainment"
+    },
+    {
+        "test_id": 6,
+        "relation": "AssociatedWith",
+        "correct_feat": "Hockley-in-the-Hole",
+        "options": "1. Hockley-in-the-Hole\n2. the men's movement\n3. the village of Zarudchi in the Lyubeshiv district",
+        "correct_num": 1,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is associated with [MASK].\n\nOptions:\n1. Hockley-in-the-Hole\n2. the men's movement\n3. the village of Zarudchi in the Lyubeshiv district"
+    },
+    {
+        "test_id": 8,
+        "relation": "AssociatedWith",
+        "correct_feat": "Tutbury",
+        "options": "1. water power from the Lehigh River\n2. Fredrik Olsson\n3. Tutbury",
+        "correct_num": 3,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is associated with [MASK].\n\nOptions:\n1. water power from the Lehigh River\n2. Fredrik Olsson\n3. Tutbury"
+    },
+    {
+        "test_id": 9,
+        "relation": "AssociatedWith",
+        "correct_feat": "the Bull Ring in Wexford",
+        "options": "1. the Bull Ring in Wexford\n2. Sin\u00e9ad O'Connor\n3. Gang Starr",
+        "correct_num": 1,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is associated with [MASK].\n\nOptions:\n1. the Bull Ring in Wexford\n2. Sin\u00e9ad O'Connor\n3. Gang Starr"
+    },
+    {
+        "test_id": 10,
+        "relation": "AssociatedWith",
+        "correct_feat": "The Ring in Kilkenny",
+        "options": "1. the Banu Marin tribe\n2. The Ring in Kilkenny\n3. the Union of Krewo",
+        "correct_num": 2,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is associated with [MASK].\n\nOptions:\n1. the Banu Marin tribe\n2. The Ring in Kilkenny\n3. the Union of Krewo"
+    },
+    {
+        "test_id": 11,
+        "relation": "AssociatedWith",
+        "correct_feat": "Spanish Colonial Rule",
+        "options": "1. the UN Security Council chamber's east wall\n2. the Consecration of the National Cemetery\n3. Spanish Colonial Rule",
+        "correct_num": 3,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is associated with [MASK].\n\nOptions:\n1. the UN Security Council chamber's east wall\n2. the Consecration of the National Cemetery\n3. Spanish Colonial Rule"
+    },
+    {
+        "test_id": 12,
+        "relation": "BelongsTo",
+        "correct_feat": "the history of England",
+        "options": "1. the history of England\n2. the South Korean boy band SS501\n3. the right-wing political spectrum",
+        "correct_num": 1,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> belongs to [MASK].\n\nOptions:\n1. the history of England\n2. the South Korean boy band SS501\n3. the right-wing political spectrum"
+    },
+    {
+        "test_id": 14,
+        "relation": "BelongsTo",
+        "correct_feat": "the history of North America",
+        "options": "1. a political philosophy\n2. board wargames\n3. the history of North America",
+        "correct_num": 3,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> belongs to [MASK].\n\nOptions:\n1. a political philosophy\n2. board wargames\n3. the history of North America"
+    },
+    {
+        "test_id": 15,
+        "relation": "CausedBy",
+        "correct_feat": "the desire to subdue a bull by biting and holding onto its nose or neck",
+        "options": "1. the desire to subdue a bull by biting and holding onto its nose or neck\n2. the Almohad rebellion\n3. women's financial dependence on males",
+        "correct_num": 1,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is caused by [MASK].\n\nOptions:\n1. the desire to subdue a bull by biting and holding onto its nose or neck\n2. the Almohad rebellion\n3. women's financial dependence on males"
+    },
+    {
+        "test_id": 16,
+        "relation": "ConsistsOf",
+        "correct_feat": "pitting a bull against dogs",
+        "options": "1. four straight courses and two diagonal ones\n2. pitting a bull against dogs\n3. four main parts",
+        "correct_num": 2,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> consists of [MASK].\n\nOptions:\n1. four straight courses and two diagonal ones\n2. pitting a bull against dogs\n3. four main parts"
+    },
+    {
+        "test_id": 17,
+        "relation": "ConsistsOf",
+        "correct_feat": "dogs biting and holding onto the bull's nose or neck",
+        "options": "1. Royce da 5\u20329\u2033 and Eminem\n2. state-framed actions like interventions in the public space\n3. dogs biting and holding onto the bull's nose or neck",
+        "correct_num": 3,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> consists of [MASK].\n\nOptions:\n1. Royce da 5\u20329\u2033 and Eminem\n2. state-framed actions like interventions in the public space\n3. dogs biting and holding onto the bull's nose or neck"
+    },
+    {
+        "test_id": 18,
+        "relation": "ConsistsOf",
+        "correct_feat": "the death of the bull",
+        "options": "1. the death of the bull\n2. five witnesses of the crucifixion\n3. intolerance of corruption",
+        "correct_num": 1,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> consists of [MASK].\n\nOptions:\n1. the death of the bull\n2. five witnesses of the crucifixion\n3. intolerance of corruption"
+    },
+    {
+        "test_id": 19,
+        "relation": "CreatedFor",
+        "correct_feat": "entertainment",
+        "options": "1. defensive purposes\n2. entertainment\n3. reinforcing the idea that Jesus was recognized as king from his earliest infancy",
+        "correct_num": 2,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> was created for [MASK].\n\nOptions:\n1. defensive purposes\n2. entertainment\n3. reinforcing the idea that Jesus was recognized as king from his earliest infancy"
+    },
+    {
+        "test_id": 20,
+        "relation": "CreatedFor",
+        "correct_feat": "recreation",
+        "options": "1. the clarification of legal consequences under these obligations for States\n2. the Disney Channel Original Movie Cow Belles\n3. recreation",
+        "correct_num": 3,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> was created for [MASK].\n\nOptions:\n1. the clarification of legal consequences under these obligations for States\n2. the Disney Channel Original Movie Cow Belles\n3. recreation"
+    },
+    {
+        "test_id": 21,
+        "relation": "CreatedFor",
+        "correct_feat": "improving meat quality and tenderness",
+        "options": "1. improving meat quality and tenderness\n2. listeners who enjoy collaborations\n3. a transformed society in which man would exploit neither man nor women",
+        "correct_num": 1,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> was created for [MASK].\n\nOptions:\n1. improving meat quality and tenderness\n2. listeners who enjoy collaborations\n3. a transformed society in which man would exploit neither man nor women"
+    },
+    {
+        "test_id": 22,
+        "relation": "CreatedTo",
+        "correct_feat": "subdue the bull by biting and holding onto its nose or neck",
+        "options": "1. become a gift to the City of Washington DC to celebrate this historical moment in American History\n2. subdue the bull by biting and holding onto its nose or neck\n3. invalidate the death penalty for rape",
+        "correct_num": 2,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> was created to [MASK].\n\nOptions:\n1. become a gift to the City of Washington DC to celebrate this historical moment in American History\n2. subdue the bull by biting and holding onto its nose or neck\n3. invalidate the death penalty for rape"
+    },
+    {
+        "test_id": 23,
+        "relation": "HasA",
+        "correct_feat": "a history in England",
+        "options": "1. a second EP titled Gone\n2. characteristics that are sometimes called 'semifeudal'\n3. a history in England",
+        "correct_num": 3,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> has [MASK].\n\nOptions:\n1. a second EP titled Gone\n2. characteristics that are sometimes called 'semifeudal'\n3. a history in England"
+    },
+    {
+        "test_id": 24,
+        "relation": "HasA",
+        "correct_feat": "a history in Ireland",
+        "options": "1. a history in Ireland\n2. a story that was prefixed to the Jewish story\n3. rules that were initially problematic",
+        "correct_num": 1,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> has [MASK].\n\nOptions:\n1. a history in Ireland\n2. a story that was prefixed to the Jewish story\n3. rules that were initially problematic"
+    },
+    {
+        "test_id": 25,
+        "relation": "HasA",
+        "correct_feat": "a history in North America",
+        "options": "1. a very strong systemic approach\n2. a history in North America\n3. focuses on improving globally under-developed regions",
+        "correct_num": 2,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> has [MASK].\n\nOptions:\n1. a very strong systemic approach\n2. a history in North America\n3. focuses on improving globally under-developed regions"
+    },
+    {
+        "test_id": 26,
+        "relation": "HasA",
+        "correct_feat": "a bull",
+        "options": "1. a tilted head towards her son\n2. compositions that often feature live instruments\n3. a bull",
+        "correct_num": 3,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> has [MASK].\n\nOptions:\n1. a tilted head towards her son\n2. compositions that often feature live instruments\n3. a bull"
+    },
+    {
+        "test_id": 28,
+        "relation": "HasA",
+        "correct_feat": "a bull's nose",
+        "options": "1. a history of economic prosperity\n2. a bull's nose\n3. one long 60-turn campaign game",
+        "correct_num": 2,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> has [MASK].\n\nOptions:\n1. a history of economic prosperity\n2. a bull's nose\n3. one long 60-turn campaign game"
+    },
+    {
+        "test_id": 30,
+        "relation": "HasA",
+        "correct_feat": "a bull's hide",
+        "options": "1. a bull's hide\n2. hands folded in prayer\n3. groupers",
+        "correct_num": 1,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> has [MASK].\n\nOptions:\n1. a bull's hide\n2. hands folded in prayer\n3. groupers"
+    },
+    {
+        "test_id": 32,
+        "relation": "HasA",
+        "correct_feat": "a bear",
+        "options": "1. a pattern of parallel, diagonal ribs\n2. an album titled Trop d'amour\n3. a bear",
+        "correct_num": 3,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> has [MASK].\n\nOptions:\n1. a pattern of parallel, diagonal ribs\n2. an album titled Trop d'amour\n3. a bear"
+    },
+    {
+        "test_id": 33,
+        "relation": "HasFeatureOf",
+        "correct_feat": "the aim of subduing the bull by biting and holding onto its nose or neck",
+        "options": "1. the aim of subduing the bull by biting and holding onto its nose or neck\n2. being in the Ridge-and-Valley region of the Appalachian Mountains\n3. locomotives",
+        "correct_num": 1,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is characterized by [MASK].\n\nOptions:\n1. the aim of subduing the bull by biting and holding onto its nose or neck\n2. being in the Ridge-and-Valley region of the Appalachian Mountains\n3. locomotives"
+    },
+    {
+        "test_id": 34,
+        "relation": "HasFeatureOf",
+        "correct_feat": "the death of the bull",
+        "options": "1. innocence and lack of embarrassment about nakedness\n2. the death of the bull\n3. the humanization of figures and attention to human anatomy",
+        "correct_num": 2,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is characterized by [MASK].\n\nOptions:\n1. innocence and lack of embarrassment about nakedness\n2. the death of the bull\n3. the humanization of figures and attention to human anatomy"
+    },
+    {
+        "test_id": 35,
+        "relation": "HasFeatureOf",
+        "correct_feat": "the Cruelty to Animals Act 1835",
+        "options": "1. the arrest of Bruce Boynton for trespassing\n2. five men, one of whom was a \"Bran\u00e1n\" or chief\n3. the Cruelty to Animals Act 1835",
+        "correct_num": 3,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is characterized by [MASK].\n\nOptions:\n1. the arrest of Bruce Boynton for trespassing\n2. five men, one of whom was a \"Bran\u00e1n\" or chief\n3. the Cruelty to Animals Act 1835"
+    },
+    {
+        "test_id": 36,
+        "relation": "HasFeatureOf",
+        "correct_feat": "ancient pagan rituals",
+        "options": "1. ancient pagan rituals\n2. a coiled dragon holding a sword in its mouth\n3. frequent rains",
+        "correct_num": 1,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is characterized by [MASK].\n\nOptions:\n1. ancient pagan rituals\n2. a coiled dragon holding a sword in its mouth\n3. frequent rains"
+    },
+    {
+        "test_id": 37,
+        "relation": "HasFeatureOf",
+        "correct_feat": "commercial entertainment",
+        "options": "1. the Battle of the Eureka Stockade\n2. commercial entertainment\n3. a game for two, three, or four players",
+        "correct_num": 2,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is characterized by [MASK].\n\nOptions:\n1. the Battle of the Eureka Stockade\n2. commercial entertainment\n3. a game for two, three, or four players"
+    },
+    {
+        "test_id": 41,
+        "relation": "HasFeatureOf",
+        "correct_feat": "Queen Anne",
+        "options": "1. producing its own beats\n2. planned economies\n3. Queen Anne",
+        "correct_num": 3,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is characterized by [MASK].\n\nOptions:\n1. producing its own beats\n2. planned economies\n3. Queen Anne"
+    },
+    {
+        "test_id": 43,
+        "relation": "HeldIn",
+        "correct_feat": "London",
+        "options": "1. Cusco\n2. London\n3. Okene",
+        "correct_num": 2,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> was held in [MASK].\n\nOptions:\n1. Cusco\n2. London\n3. Okene"
+    },
+    {
+        "test_id": 44,
+        "relation": "HeldIn",
+        "correct_feat": "provincial towns",
+        "options": "1. Ukraine\n2. Gaul\n3. provincial towns",
+        "correct_num": 3,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> was held in [MASK].\n\nOptions:\n1. Ukraine\n2. Gaul\n3. provincial towns"
+    },
+    {
+        "test_id": 45,
+        "relation": "HeldIn",
+        "correct_feat": "Birmingham",
+        "options": "1. Birmingham\n2. Ryazan\u2019\n3. Yaound\u00e9",
+        "correct_num": 1,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> was held in [MASK].\n\nOptions:\n1. Birmingham\n2. Ryazan\u2019\n3. Yaound\u00e9"
+    },
+    {
+        "test_id": 46,
+        "relation": "HeldIn",
+        "correct_feat": "Tutbury",
+        "options": "1. the Second Spanish Republic\n2. Tutbury\n3. Europe",
+        "correct_num": 2,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> was held in [MASK].\n\nOptions:\n1. the Second Spanish Republic\n2. Tutbury\n3. Europe"
+    },
+    {
+        "test_id": 47,
+        "relation": "HeldIn",
+        "correct_feat": "Wokingham",
+        "options": "1. a monastery near the town of Gorodets-on-the-Volga\n2. the works of Irenaeus\n3. Wokingham",
+        "correct_num": 3,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> was held in [MASK].\n\nOptions:\n1. a monastery near the town of Gorodets-on-the-Volga\n2. the works of Irenaeus\n3. Wokingham"
+    },
+    {
+        "test_id": 48,
+        "relation": "HeldIn",
+        "correct_feat": "Alresford, Hants",
+        "options": "1. Alresford, Hants\n2. the collection of the Bargello, Florence\n3. Nuremberg",
+        "correct_num": 1,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> was held in [MASK].\n\nOptions:\n1. Alresford, Hants\n2. the collection of the Bargello, Florence\n3. Nuremberg"
+    },
+    {
+        "test_id": 49,
+        "relation": "HeldIn",
+        "correct_feat": "Dublin",
+        "options": "1. Cilegon\n2. Dublin\n3. Patna",
+        "correct_num": 2,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> was held in [MASK].\n\nOptions:\n1. Cilegon\n2. Dublin\n3. Patna"
+    },
+    {
+        "test_id": 50,
+        "relation": "HeldIn",
+        "correct_feat": "Smithfield",
+        "options": "1. America\n2. Prussia\n3. Smithfield",
+        "correct_num": 3,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> was held in [MASK].\n\nOptions:\n1. America\n2. Prussia\n3. Smithfield"
+    },
+    {
+        "test_id": 51,
+        "relation": "HeldIn",
+        "correct_feat": "Wexford",
+        "options": "1. Wexford\n2. Riga\n3. South Dakota",
+        "correct_num": 1,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> was held in [MASK].\n\nOptions:\n1. Wexford\n2. Riga\n3. South Dakota"
+    },
+    {
+        "test_id": 52,
+        "relation": "HeldIn",
+        "correct_feat": "Kilkenny",
+        "options": "1. the National Gallery Prague\n2. Kilkenny\n3. the Church of Evangelistria in Kastro Kefalonia",
+        "correct_num": 2,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> was held in [MASK].\n\nOptions:\n1. the National Gallery Prague\n2. Kilkenny\n3. the Church of Evangelistria in Kastro Kefalonia"
+    },
+    {
+        "test_id": 53,
+        "relation": "HeldOn",
+        "correct_feat": "St. Thomas's Day",
+        "options": "1. 12 July 1962\n2. February 28, 2006\n3. St. Thomas's Day",
+        "correct_num": 3,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> was held on [MASK].\n\nOptions:\n1. 12 July 1962\n2. February 28, 2006\n3. St. Thomas's Day"
+    },
+    {
+        "test_id": 54,
+        "relation": "HeldOn",
+        "correct_feat": "Wednesday",
+        "options": "1. Wednesday\n2. 16, 17, 18, 19 December\n3. 20 November 1945",
+        "correct_num": 1,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> was held on [MASK].\n\nOptions:\n1. Wednesday\n2. 16, 17, 18, 19 December\n3. 20 November 1945"
+    },
+    {
+        "test_id": 55,
+        "relation": "HeldOn",
+        "correct_feat": "December 27",
+        "options": "1. 16, 17, 18, 19 December\n2. December 27\n3. July 1\u20133",
+        "correct_num": 2,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> was held on [MASK].\n\nOptions:\n1. 16, 17, 18, 19 December\n2. December 27\n3. July 1\u20133"
+    },
+    {
+        "test_id": 57,
+        "relation": "HeldOn",
+        "correct_feat": "the feast-day of John the Baptist",
+        "options": "1. the feast-day of John the Baptist\n2. November 23, 2018, with the release of their third album\n3. 7 April",
+        "correct_num": 1,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> was held on [MASK].\n\nOptions:\n1. the feast-day of John the Baptist\n2. November 23, 2018, with the release of their third album\n3. 7 April"
+    },
+    {
+        "test_id": 58,
+        "relation": "Influenced",
+        "correct_feat": "the breeding of the extinct Old English Bulldog",
+        "options": "1. subsequent Supreme Court decisions regarding citizenship\n2. the breeding of the extinct Old English Bulldog\n3. Mesopotamia",
+        "correct_num": 2,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> influenced [MASK].\n\nOptions:\n1. subsequent Supreme Court decisions regarding citizenship\n2. the breeding of the extinct Old English Bulldog\n3. Mesopotamia"
+    },
+    {
+        "test_id": 59,
+        "relation": "Influenced",
+        "correct_feat": "the development of today's modern English bulldog",
+        "options": "1. the political philosophy of Emmanuel Mounier\n2. the regime of Francisco Franco in Spain\n3. the development of today's modern English bulldog",
+        "correct_num": 3,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> influenced [MASK].\n\nOptions:\n1. the political philosophy of Emmanuel Mounier\n2. the regime of Francisco Franco in Spain\n3. the development of today's modern English bulldog"
+    },
+    {
+        "test_id": 60,
+        "relation": "Influenced",
+        "correct_feat": "the decline of bull-baiting as a sport",
+        "options": "1. the decline of bull-baiting as a sport\n2. the establishment of state support of the sciences\n3. the intellectual center of the Mediterranean world",
+        "correct_num": 1,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> influenced [MASK].\n\nOptions:\n1. the decline of bull-baiting as a sport\n2. the establishment of state support of the sciences\n3. the intellectual center of the Mediterranean world"
+    },
+    {
+        "test_id": 61,
+        "relation": "Influenced",
+        "correct_feat": "the passage of the Cruelty to Animals Act 1835",
+        "options": "1. the political philosophy of Heinrich Pesch\n2. the passage of the Cruelty to Animals Act 1835\n3. the anti-miscegenation laws in the U.S",
+        "correct_num": 2,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> influenced [MASK].\n\nOptions:\n1. the political philosophy of Heinrich Pesch\n2. the passage of the Cruelty to Animals Act 1835\n3. the anti-miscegenation laws in the U.S"
+    },
+    {
+        "test_id": 62,
+        "relation": "Influenced",
+        "correct_feat": "the passage of the Cruel Treatment of Cattle Act 1822",
+        "options": "1. Christian Freeling's draughts variant Bushka\n2. the desire to uphold white supremacy being cited as a cause for state secession and the formation of the Confederate States of America\n3. the passage of the Cruel Treatment of Cattle Act 1822",
+        "correct_num": 3,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> influenced [MASK].\n\nOptions:\n1. Christian Freeling's draughts variant Bushka\n2. the desire to uphold white supremacy being cited as a cause for state secession and the formation of the Confederate States of America\n3. the passage of the Cruel Treatment of Cattle Act 1822"
+    },
+    {
+        "test_id": 63,
+        "relation": "InfluencedBy",
+        "correct_feat": "ancient pagan rituals",
+        "options": "1. ancient pagan rituals\n2. Tory critics in England\n3. modern educational psychology",
+        "correct_num": 1,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> was influenced by [MASK].\n\nOptions:\n1. ancient pagan rituals\n2. Tory critics in England\n3. modern educational psychology"
+    },
+    {
+        "test_id": 64,
+        "relation": "InfluencedBy",
+        "correct_feat": "the need for butchering bull-beef",
+        "options": "1. railroad and industry restructuring\n2. the need for butchering bull-beef\n3. Bernard of Clairvaux",
+        "correct_num": 2,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> was influenced by [MASK].\n\nOptions:\n1. railroad and industry restructuring\n2. the need for butchering bull-beef\n3. Bernard of Clairvaux"
+    },
+    {
+        "test_id": 65,
+        "relation": "InfluencedBy",
+        "correct_feat": "the desire for commercial entertainment",
+        "options": "1. the Prespa Agreement\n2. American and British writings\n3. the desire for commercial entertainment",
+        "correct_num": 3,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> was influenced by [MASK].\n\nOptions:\n1. the Prespa Agreement\n2. American and British writings\n3. the desire for commercial entertainment"
+    },
+    {
+        "test_id": 66,
+        "relation": "InfluencedBy",
+        "correct_feat": "claims of an ancient and venerable history",
+        "options": "1. claims of an ancient and venerable history\n2. the victim's diary containing explicit descriptions of sexual liaisons\n3. Reagan-era industrial and EBM",
+        "correct_num": 1,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> was influenced by [MASK].\n\nOptions:\n1. claims of an ancient and venerable history\n2. the victim's diary containing explicit descriptions of sexual liaisons\n3. Reagan-era industrial and EBM"
+    },
+    {
+        "test_id": 67,
+        "relation": "InfluencedBy",
+        "correct_feat": "the Royal Entry of James VI and I",
+        "options": "1. the plaintiffs' argument that the law and judgments against their permits were flawed\n2. the Royal Entry of James VI and I\n3. the desire to refound the Sanhaja union",
+        "correct_num": 2,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> was influenced by [MASK].\n\nOptions:\n1. the plaintiffs' argument that the law and judgments against their permits were flawed\n2. the Royal Entry of James VI and I\n3. the desire to refound the Sanhaja union"
+    },
+    {
+        "test_id": 68,
+        "relation": "InfluencedBy",
+        "correct_feat": "the time of Queen Anne",
+        "options": "1. the traditional hodegetria stance\n2. Fustel de Coulanges\n3. the time of Queen Anne",
+        "correct_num": 3,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> was influenced by [MASK].\n\nOptions:\n1. the traditional hodegetria stance\n2. Fustel de Coulanges\n3. the time of Queen Anne"
+    },
+    {
+        "test_id": 69,
+        "relation": "InfluencedBy",
+        "correct_feat": "the belief that baiting improved meat quality and tenderness",
+        "options": "1. the belief that baiting improved meat quality and tenderness\n2. the Hundred Years' War\n3. the success of their debut album",
+        "correct_num": 1,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> was influenced by [MASK].\n\nOptions:\n1. the belief that baiting improved meat quality and tenderness\n2. the Hundred Years' War\n3. the success of their debut album"
+    },
+    {
+        "test_id": 70,
+        "relation": "InfluencedBy",
+        "correct_feat": "public nuisance",
+        "options": "1. mutualist thinkers such as Lysander Spooner and Benjamin Tucker\n2. public nuisance\n3. Marxist feminism",
+        "correct_num": 2,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> was influenced by [MASK].\n\nOptions:\n1. mutualist thinkers such as Lysander Spooner and Benjamin Tucker\n2. public nuisance\n3. Marxist feminism"
+    },
+    {
+        "test_id": 71,
+        "relation": "InfluencedBy",
+        "correct_feat": "concerns about animal cruelty",
+        "options": "1. the median voter theorem\n2. James Guillaume's pamphlet Ideas on Social Organisation\n3. concerns about animal cruelty",
+        "correct_num": 3,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> was influenced by [MASK].\n\nOptions:\n1. the median voter theorem\n2. James Guillaume's pamphlet Ideas on Social Organisation\n3. concerns about animal cruelty"
+    },
+    {
+        "test_id": 73,
+        "relation": "IsA",
+        "correct_feat": "a blood sport",
+        "options": "1. a movement that seeks to promote the cultural unity of Italy\n2. a blood sport\n3. a supergroup",
+        "correct_num": 2,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is [MASK].\n\nOptions:\n1. a movement that seeks to promote the cultural unity of Italy\n2. a blood sport\n3. a supergroup"
+    },
+    {
+        "test_id": 74,
+        "relation": "IsA",
+        "correct_feat": "a practice",
+        "options": "1. a noble family\n2. a \"united anarchism\"\n3. a practice",
+        "correct_num": 3,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is [MASK].\n\nOptions:\n1. a noble family\n2. a \"united anarchism\"\n3. a practice"
+    },
+    {
+        "test_id": 75,
+        "relation": "IsA",
+        "correct_feat": "a sport",
+        "options": "1. a sport\n2. one of the best games available on ancient warfare\n3. marvellous for lovers of complex, realistic games",
+        "correct_num": 1,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is [MASK].\n\nOptions:\n1. a sport\n2. one of the best games available on ancient warfare\n3. marvellous for lovers of complex, realistic games"
+    },
+    {
+        "test_id": 76,
+        "relation": "IsA",
+        "correct_feat": "a recreation",
+        "options": "1. a patrimony\n2. a recreation\n3. a science fiction board wargame",
+        "correct_num": 2,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is [MASK].\n\nOptions:\n1. a patrimony\n2. a recreation\n3. a science fiction board wargame"
+    },
+    {
+        "test_id": 77,
+        "relation": "IsA",
+        "correct_feat": "a public nuisance",
+        "options": "1. a conventional authoritarian-conservative dictatorship\n2. a painting\n3. a public nuisance",
+        "correct_num": 3,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is [MASK].\n\nOptions:\n1. a conventional authoritarian-conservative dictatorship\n2. a painting\n3. a public nuisance"
+    },
+    {
+        "test_id": 78,
+        "relation": "IsA",
+        "correct_feat": "a barbarous sport",
+        "options": "1. a barbarous sport\n2. an ideology which promotes and performs acts such as terrorism, murder, assassination, and infrastructure sabotage\n3. a successful duo in UK music history",
+        "correct_num": 1,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is [MASK].\n\nOptions:\n1. a barbarous sport\n2. an ideology which promotes and performs acts such as terrorism, murder, assassination, and infrastructure sabotage\n3. a successful duo in UK music history"
+    },
+    {
+        "test_id": 79,
+        "relation": "KnownAs",
+        "correct_feat": "bullbaiting",
+        "options": "1. Madonna of the Yarnwinder\n2. bullbaiting\n3. sungk\u00e2 in the Philippines",
+        "correct_num": 2,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is known as [MASK].\n\nOptions:\n1. Madonna of the Yarnwinder\n2. bullbaiting\n3. sungk\u00e2 in the Philippines"
+    },
+    {
+        "test_id": 80,
+        "relation": "KnownFor",
+        "correct_feat": "pitting a bull against dogs",
+        "options": "1. its village-centric, bottom-up federated approach for political and economic decentralisation\n2. its interpretation of the Citizenship Clause of the Fourteenth Amendment\n3. pitting a bull against dogs",
+        "correct_num": 3,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is known for [MASK].\n\nOptions:\n1. its village-centric, bottom-up federated approach for political and economic decentralisation\n2. its interpretation of the Citizenship Clause of the Fourteenth Amendment\n3. pitting a bull against dogs"
+    },
+    {
+        "test_id": 81,
+        "relation": "KnownFor",
+        "correct_feat": "subduing the bull by biting and holding onto its nose or neck",
+        "options": "1. subduing the bull by biting and holding onto its nose or neck\n2. its base\n3. its wrinkle-resistance",
+        "correct_num": 1,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is known for [MASK].\n\nOptions:\n1. subduing the bull by biting and holding onto its nose or neck\n2. its base\n3. its wrinkle-resistance"
+    },
+    {
+        "test_id": 82,
+        "relation": "KnownFor",
+        "correct_feat": "the death of the bull",
+        "options": "1. its focus on \"complexity, inter-connectedness, and cooperation\"\n2. the death of the bull\n3. its relationship to the board game Ludo",
+        "correct_num": 2,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is known for [MASK].\n\nOptions:\n1. its focus on \"complexity, inter-connectedness, and cooperation\"\n2. the death of the bull\n3. its relationship to the board game Ludo"
+    },
+    {
+        "test_id": 83,
+        "relation": "KnownFor",
+        "correct_feat": "its origins in England",
+        "options": "1. its association with military victories against invasions\n2. answering the \"social question\" surrounding capitalism and the working class\n3. its origins in England",
+        "correct_num": 3,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is known for [MASK].\n\nOptions:\n1. its association with military victories against invasions\n2. answering the \"social question\" surrounding capitalism and the working class\n3. its origins in England"
+    },
+    {
+        "test_id": 86,
+        "relation": "KnownFor",
+        "correct_feat": "the dogs bred for this sport",
+        "options": "1. their comedy career\n2. influencing later High Renaissance depictions of the Madonna and Child\n3. the dogs bred for this sport",
+        "correct_num": 3,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is known for [MASK].\n\nOptions:\n1. their comedy career\n2. influencing later High Renaissance depictions of the Madonna and Child\n3. the dogs bred for this sport"
+    },
+    {
+        "test_id": 87,
+        "relation": "KnownFor",
+        "correct_feat": "its figurative use in literature",
+        "options": "1. its figurative use in literature\n2. its conservatism, skepticism, and reluctance towards the perceived exploitation and scientific misuse caused by the modernisation of technology and large-scale industrialisation\n3. its influence",
+        "correct_num": 1,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is known for [MASK].\n\nOptions:\n1. its figurative use in literature\n2. its conservatism, skepticism, and reluctance towards the perceived exploitation and scientific misuse caused by the modernisation of technology and large-scale industrialisation\n3. its influence"
+    },
+    {
+        "test_id": 88,
+        "relation": "OccurredAround",
+        "correct_feat": "1540 in London",
+        "options": "1. 1520\n2. 1540 in London\n3. the economic crisis of the 1930s",
+        "correct_num": 2,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> occurred around [MASK].\n\nOptions:\n1. 1520\n2. 1540 in London\n3. the economic crisis of the 1930s"
+    },
+    {
+        "test_id": 90,
+        "relation": "OccurredAround",
+        "correct_feat": "1604",
+        "options": "1. 1604\n2. 1906\n3. 1765",
+        "correct_num": 1,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> occurred around [MASK].\n\nOptions:\n1. 1604\n2. 1906\n3. 1765"
+    },
+    {
+        "test_id": 93,
+        "relation": "OccurredAround",
+        "correct_feat": "1801",
+        "options": "1. 1801\n2. 2013\n3. 1757",
+        "correct_num": 1,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> occurred around [MASK].\n\nOptions:\n1. 1801\n2. 2013\n3. 1757"
+    },
+    {
+        "test_id": 96,
+        "relation": "OccurredAround",
+        "correct_feat": "1837",
+        "options": "1. 1837\n2. 1640\n3. 1643",
+        "correct_num": 1,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> occurred around [MASK].\n\nOptions:\n1. 1837\n2. 1640\n3. 1643"
+    },
+    {
+        "test_id": 97,
+        "relation": "OccurredAround",
+        "correct_feat": "1865",
+        "options": "1. 1974\n2. 1865\n3. 1848",
+        "correct_num": 2,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> occurred around [MASK].\n\nOptions:\n1. 1974\n2. 1865\n3. 1848"
+    },
+    {
+        "test_id": 98,
+        "relation": "OriginatedIn",
+        "correct_feat": "England",
+        "options": "1. the music industry\n2. Carlo Cafiero's programme of Anarchy and Communism\n3. England",
+        "correct_num": 3,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> originated in [MASK].\n\nOptions:\n1. the music industry\n2. Carlo Cafiero's programme of Anarchy and Communism\n3. England"
+    },
+    {
+        "test_id": 99,
+        "relation": "OriginatedIn",
+        "correct_feat": "ancient pagan rituals",
+        "options": "1. ancient pagan rituals\n2. the Kazakh Steppe of Turkestan\n3. the Kinik branch of the Oghuz Turks",
+        "correct_num": 1,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> originated in [MASK].\n\nOptions:\n1. ancient pagan rituals\n2. the Kazakh Steppe of Turkestan\n3. the Kinik branch of the Oghuz Turks"
+    },
+    {
+        "test_id": 100,
+        "relation": "OriginatedIn",
+        "correct_feat": "Ireland",
+        "options": "1. Haiti\n2. Ireland\n3. the Dominican Republic",
+        "correct_num": 2,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> originated in [MASK].\n\nOptions:\n1. Haiti\n2. Ireland\n3. the Dominican Republic"
+    },
+    {
+        "test_id": 102,
+        "relation": "OriginatedIn",
+        "correct_feat": "Mexico",
+        "options": "1. Mexico\n2. Russian Federation\n3. Sint Maarten (Dutch part)",
+        "correct_num": 1,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> originated in [MASK].\n\nOptions:\n1. Mexico\n2. Russian Federation\n3. Sint Maarten (Dutch part)"
+    },
+    {
+        "test_id": 103,
+        "relation": "PerformedBy",
+        "correct_feat": "dogs",
+        "options": "1. James Earl Jones\n2. dogs\n3. Casey Hill",
+        "correct_num": 2,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> was performed by [MASK].\n\nOptions:\n1. James Earl Jones\n2. dogs\n3. Casey Hill"
+    },
+    {
+        "test_id": 104,
+        "relation": "PerformedBy",
+        "correct_feat": "specially-trained dogs",
+        "options": "1. laymen\n2. Allah\n3. specially-trained dogs",
+        "correct_num": 3,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> was performed by [MASK].\n\nOptions:\n1. laymen\n2. Allah\n3. specially-trained dogs"
+    },
+    {
+        "test_id": 105,
+        "relation": "PerformedBy",
+        "correct_feat": "bull-dogs",
+        "options": "1. bull-dogs\n2. an Estonian minor\n3. Mary and Joseph",
+        "correct_num": 1,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> was performed by [MASK].\n\nOptions:\n1. bull-dogs\n2. an Estonian minor\n3. Mary and Joseph"
+    },
+    {
+        "test_id": 106,
+        "relation": "PerformedBy",
+        "correct_feat": "Old English Bulldogs",
+        "options": "1. China\n2. Old English Bulldogs\n3. Caesar",
+        "correct_num": 2,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> was performed by [MASK].\n\nOptions:\n1. China\n2. Old English Bulldogs\n3. Caesar"
+    },
+    {
+        "test_id": 107,
+        "relation": "PerformedBy",
+        "correct_feat": "Bullenbeissers",
+        "options": "1. Dutch forces\n2. Saint Etienne\n3. Bullenbeissers",
+        "correct_num": 3,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> was performed by [MASK].\n\nOptions:\n1. Dutch forces\n2. Saint Etienne\n3. Bullenbeissers"
+    },
+    {
+        "test_id": 109,
+        "relation": "PerformedBy",
+        "correct_feat": "Ca de Bous",
+        "options": "1. Greg Reeves\n2. Ca de Bous\n3. the disciples",
+        "correct_num": 2,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> was performed by [MASK].\n\nOptions:\n1. Greg Reeves\n2. Ca de Bous\n3. the disciples"
+    },
+    {
+        "test_id": 110,
+        "relation": "PerformedBy",
+        "correct_feat": "bull and terriers",
+        "options": "1. Lucy Dacus\n2. heterosexual feminists\n3. bull and terriers",
+        "correct_num": 3,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> was performed by [MASK].\n\nOptions:\n1. Lucy Dacus\n2. heterosexual feminists\n3. bull and terriers"
+    },
+    {
+        "test_id": 112,
+        "relation": "UsedAs",
+        "correct_feat": "a blood sport",
+        "options": "1. a means to record player names on the reverse of the board for ultimate wins\n2. a blood sport\n3. a symbol of his role as teacher",
+        "correct_num": 2,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is used as [MASK].\n\nOptions:\n1. a means to record player names on the reverse of the board for ultimate wins\n2. a blood sport\n3. a symbol of his role as teacher"
+    },
+    {
+        "test_id": 113,
+        "relation": "UsedAs",
+        "correct_feat": "commercial entertainment",
+        "options": "1. a foundation for a video\n2. a cultural export of France\n3. commercial entertainment",
+        "correct_num": 3,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is used as [MASK].\n\nOptions:\n1. a foundation for a video\n2. a cultural export of France\n3. commercial entertainment"
+    },
+    {
+        "test_id": 114,
+        "relation": "UsedAs",
+        "correct_feat": "recreation",
+        "options": "1. recreation\n2. a basis for renaming public places\n3. a description for ultranationalist views",
+        "correct_num": 1,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is used as [MASK].\n\nOptions:\n1. recreation\n2. a basis for renaming public places\n3. a description for ultranationalist views"
+    },
+    {
+        "test_id": 115,
+        "relation": "UsedAs",
+        "correct_feat": "a public nuisance",
+        "options": "1. jackets\n2. a public nuisance\n3. a ritual",
+        "correct_num": 2,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is used as [MASK].\n\nOptions:\n1. jackets\n2. a public nuisance\n3. a ritual"
+    },
+    {
+        "test_id": 118,
+        "relation": "UsedFor",
+        "correct_feat": "biting and holding onto the bull's nose or neck",
+        "options": "1. driving fasteners\n2. biting and holding onto the bull's nose or neck\n3. taking advantage of the temperature gradient inherent in a height differential",
+        "correct_num": 2,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is used for [MASK].\n\nOptions:\n1. driving fasteners\n2. biting and holding onto the bull's nose or neck\n3. taking advantage of the temperature gradient inherent in a height differential"
+    },
+    {
+        "test_id": 119,
+        "relation": "UsedFor",
+        "correct_feat": "improving meat quality and tenderness",
+        "options": "1. restoration\n2. concealing a hidden Islamist agenda\n3. improving meat quality and tenderness",
+        "correct_num": 3,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is used for [MASK].\n\nOptions:\n1. restoration\n2. concealing a hidden Islamist agenda\n3. improving meat quality and tenderness"
+    },
+    {
+        "test_id": 120,
+        "relation": "UsedFor",
+        "correct_feat": "entertainment",
+        "options": "1. entertainment\n2. creating blockades\n3. blessing",
+        "correct_num": 1,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is used for [MASK].\n\nOptions:\n1. entertainment\n2. creating blockades\n3. blessing"
+    },
+    {
+        "test_id": 121,
+        "relation": "UsedFor",
+        "correct_feat": "recreation",
+        "options": "1. achieving all pieces home without the opponent getting any home at all\n2. recreation\n3. guiding global action in addressing the climate crisis",
+        "correct_num": 2,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is used for [MASK].\n\nOptions:\n1. achieving all pieces home without the opponent getting any home at all\n2. recreation\n3. guiding global action in addressing the climate crisis"
+    },
+    {
+        "test_id": 122,
+        "relation": "UsedFor",
+        "correct_feat": "fighting bears",
+        "options": "1. promoting the idea of a racially defined national body united with a settlement area\n2. building a barrier against German expansion\n3. fighting bears",
+        "correct_num": 3,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is used for [MASK].\n\nOptions:\n1. promoting the idea of a racially defined national body united with a settlement area\n2. building a barrier against German expansion\n3. fighting bears"
+    },
+    {
+        "test_id": 123,
+        "relation": "UsedIn",
+        "correct_feat": "Britain",
+        "options": "1. Britain\n2. stores\n3. the borough",
+        "correct_num": 1,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is used in [MASK].\n\nOptions:\n1. Britain\n2. stores\n3. the borough"
+    },
+    {
+        "test_id": 124,
+        "relation": "UsedIn",
+        "correct_feat": "rural areas",
+        "options": "1. an exhibit of Degas works\n2. rural areas\n3. the borough",
+        "correct_num": 2,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is used in [MASK].\n\nOptions:\n1. an exhibit of Degas works\n2. rural areas\n3. the borough"
+    },
+    {
+        "test_id": 125,
+        "relation": "UsedIn",
+        "correct_feat": "London",
+        "options": "1. Mississauga\n2. Copenhagen\n3. London",
+        "correct_num": 3,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is used in [MASK].\n\nOptions:\n1. Mississauga\n2. Copenhagen\n3. London"
+    },
+    {
+        "test_id": 126,
+        "relation": "UsedIn",
+        "correct_feat": "provincial towns",
+        "options": "1. provincial towns\n2. clubs\n3. the United States",
+        "correct_num": 1,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is used in [MASK].\n\nOptions:\n1. provincial towns\n2. clubs\n3. the United States"
+    },
+    {
+        "test_id": 127,
+        "relation": "UsedIn",
+        "correct_feat": "Ireland",
+        "options": "1. Grenada\n2. Ireland\n3. Marshall Islands",
+        "correct_num": 2,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is used in [MASK].\n\nOptions:\n1. Grenada\n2. Ireland\n3. Marshall Islands"
+    },
+    {
+        "test_id": 128,
+        "relation": "UsedIn",
+        "correct_feat": "Dublin",
+        "options": "1. Rajpur Sonarpur\n2. Ciudad Apodaca\n3. Dublin",
+        "correct_num": 3,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is used in [MASK].\n\nOptions:\n1. Rajpur Sonarpur\n2. Ciudad Apodaca\n3. Dublin"
+    },
+    {
+        "test_id": 133,
+        "relation": "UsedTo",
+        "correct_feat": "kill bulls",
+        "options": "1. invoke the 12-move count\n2. kill bulls\n3. marshal the forces of the international anarchist movement",
+        "correct_num": 2,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is used to [MASK].\n\nOptions:\n1. invoke the 12-move count\n2. kill bulls\n3. marshal the forces of the international anarchist movement"
+    },
+    {
+        "test_id": 134,
+        "relation": "UsedTo",
+        "correct_feat": "entertain crowds",
+        "options": "1. move different men for each of the throws\n2. protect the climate system\n3. entertain crowds",
+        "correct_num": 3,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is used to [MASK].\n\nOptions:\n1. move different men for each of the throws\n2. protect the climate system\n3. entertain crowds"
+    },
+    {
+        "test_id": 135,
+        "relation": "UsedTo",
+        "correct_feat": "improve meat quality",
+        "options": "1. improve meat quality\n2. depict himself in full view\n3. remember Jesus",
+        "correct_num": 1,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is used to [MASK].\n\nOptions:\n1. improve meat quality\n2. depict himself in full view\n3. remember Jesus"
+    },
+    {
+        "test_id": 136,
+        "relation": "UsedTo",
+        "correct_feat": "improve meat tenderness",
+        "options": "1. predict betrayal by one of the apostles\n2. improve meat tenderness\n3. argue for total segregation",
+        "correct_num": 2,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is used to [MASK].\n\nOptions:\n1. predict betrayal by one of the apostles\n2. improve meat tenderness\n3. argue for total segregation"
+    },
+    {
+        "test_id": 137,
+        "relation": "UsedTo",
+        "correct_feat": "enrage bulls by blowing pepper into their noses",
+        "options": "1. designate a kingdom or an empire\n2. give refuge to the caliph al-Musta'in\n3. enrage bulls by blowing pepper into their noses",
+        "correct_num": 3,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is used to [MASK].\n\nOptions:\n1. designate a kingdom or an empire\n2. give refuge to the caliph al-Musta'in\n3. enrage bulls by blowing pepper into their noses"
+    },
+    {
+        "test_id": 138,
+        "relation": "UsedTo",
+        "correct_feat": "immobilize bulls",
+        "options": "1. immobilize bulls\n2. describe non-Western societies\n3. relieve Walker of detailed painting",
+        "correct_num": 1,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is used to [MASK].\n\nOptions:\n1. immobilize bulls\n2. describe non-Western societies\n3. relieve Walker of detailed painting"
+    },
+    {
+        "test_id": 139,
+        "relation": "UsedTo",
+        "correct_feat": "pin the bull",
+        "options": "1. represent Mary's domesticity\n2. pin the bull\n3. provide ranked abstract games on Boardgamegeek",
+        "correct_num": 2,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is used to [MASK].\n\nOptions:\n1. represent Mary's domesticity\n2. pin the bull\n3. provide ranked abstract games on Boardgamegeek"
+    },
+    {
+        "test_id": 140,
+        "relation": "UsedTo",
+        "correct_feat": "fight bears",
+        "options": "1. depict himself as Christ\n2. promote albums\n3. fight bears",
+        "correct_num": 3,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is used to [MASK].\n\nOptions:\n1. depict himself as Christ\n2. promote albums\n3. fight bears"
+    }
+]

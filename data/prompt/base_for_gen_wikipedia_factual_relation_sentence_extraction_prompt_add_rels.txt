@@ -1,0 +1,88 @@
+
+You are given the full main text of a Wikipedia article describing a specific proper noun.
+
+Your task is to extract factual characteristics of the target object using only the information explicitly stated or clearly implied in the provided Wikipedia text.
+
+### Input
+
+#### Target object
+<target_concept>
+
+#### Wikipedia article text
+<wikipedia_text>
+
+### Task
+
+For the given object, generate exactly 5 sentences for each relation type, filling in the [MASK] part according to the specified format below.
+
+### Relation list (sentence templates)
+
+- IsA: "It is [MASK]."
+- HasA: "It has [MASK]."
+- HasFeatureOf: "It is characterized by [MASK]."
+- UsedFor: "It is used for [MASK]."
+- LocatedIn: "It is located [MASK]."
+- BuiltIn: "It was built [MASK]."
+- BuiltBy: "It was built by [MASK]."
+
+- OriginatedIn: "It originated in [MASK]."
+- FoundedBy: "It was founded by [MASK]."
+- FoundedIn: "It was founded in [MASK]."
+- CreatedBy: "It was created by [MASK]."
+- CreatedIn: "It was created in [MASK]."
+- DevelopedBy: "It was developed by [MASK]."
+- DevelopedIn: "It was developed in [MASK]."
+- DiscoveredBy: "It was discovered by [MASK]."
+- DiscoveredIn: "It was discovered in [MASK]."
+- InventedBy: "It was invented by [MASK]."
+- InventedIn: "It was invented in [MASK]."
+- PublishedIn: "It was published in [MASK]."
+- WrittenBy: "It was written by [MASK]."
+- ComposedBy: "It was composed by [MASK]."
+- DirectedBy: "It was directed by [MASK]."
+- PerformedBy: "It was performed by [MASK]."
+- ManufacturedBy: "It was manufactured by [MASK]."
+- ProducedBy: "It was produced by [MASK]."
+
+- CausedBy: "It is caused by [MASK]."
+- Affects: "It affects [MASK]."
+- ConsistsOf: "It consists of [MASK]."
+- PartOf: "It is part of [MASK]."
+- MemberOf: "It is a member of [MASK]."
+- BelongsTo: "It belongs to [MASK]."
+- KnownFor: "It is known for [MASK]."
+- AssociatedWith: "It is associated with [MASK]."
+- NamedAfter: "It is named after [MASK]."
+
+- OccurredIn: "It occurred in [MASK]."
+- HeldIn: "It was held in [MASK]."
+- WonBy: "It was won by [MASK]."
+
+- About: "It is about [MASK]."
+- InfluencedBy: "It was influenced by [MASK]."
+- Influenced: "It influenced [MASK]."
+
+### Extraction rules
+
+1. Generate exactly 5 sentences per relation type.
+2. Every sentence must be supported by the provided Wikipedia article text.
+   - Do not add information from external knowledge.
+   - Do not speculate or infer beyond what the text justifies.
+3. If a relation is not applicable or not stated in the article, still generate 5 sentences using "unknown" as the [MASK].
+4. Do NOT use parentheses () for explanations.
+   - If additional detail is needed, incorporate it into the main sentence.
+5. Do not mention the target object’s name, aliases, or obvious references in any sentence.
+   - Also avoid "this building", "this museum", etc. Use neutral wording like "It" only.
+6. Avoid generic or category-wide statements.
+   - Bad: "It is a famous place."
+   - Bad: "It is used for various purposes."
+   - Good: Statements that capture unique, document-specific properties.
+7. Keep sentences short, factual, and atomic (one fact per sentence).
+8. Output must strictly follow the required JSON schema.
+   - Output JSON only (no markdown, no explanations).
+
+### Output requirements
+
+- First output the English version.
+- Then output the Japanese translation with the same structure and meaning.
+- Ensure each sentence conforms to the corresponding template for that relation type.

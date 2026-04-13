@@ -1,0 +1,378 @@
+[
+    {
+        "test_id": 0,
+        "relation": "About",
+        "correct_feat": "the Blessed Virgin",
+        "options": "1. the Blessed Virgin\n2. the Bancroft Treaties and their eventual abandonment\n3. folk rock",
+        "correct_num": 1,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is about [MASK].\n\nOptions:\n1. the Blessed Virgin\n2. the Bancroft Treaties and their eventual abandonment\n3. folk rock"
+    },
+    {
+        "test_id": 1,
+        "relation": "AssociatedWith",
+        "correct_feat": "the Haghiosoritissa type iconography",
+        "options": "1. sabotage\n2. the Haghiosoritissa type iconography\n3. Historical Perspectives",
+        "correct_num": 2,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is associated with [MASK].\n\nOptions:\n1. sabotage\n2. the Haghiosoritissa type iconography\n3. Historical Perspectives"
+    },
+    {
+        "test_id": 2,
+        "relation": "AssociatedWith",
+        "correct_feat": "the theme of the prayer of Intercession",
+        "options": "1. the Sultanate of Rum\n2. the Abbasid caliphate\n3. the theme of the prayer of Intercession",
+        "correct_num": 3,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is associated with [MASK].\n\nOptions:\n1. the Sultanate of Rum\n2. the Abbasid caliphate\n3. the theme of the prayer of Intercession"
+    },
+    {
+        "test_id": 3,
+        "relation": "AssociatedWith",
+        "correct_feat": "a certain type of Marian imagery",
+        "options": "1. a certain type of Marian imagery\n2. Trevor Horn\n3. the brand name Waboba",
+        "correct_num": 1,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is associated with [MASK].\n\nOptions:\n1. a certain type of Marian imagery\n2. Trevor Horn\n3. the brand name Waboba"
+    },
+    {
+        "test_id": 4,
+        "relation": "AssociatedWith",
+        "correct_feat": "the legend about St. Alexius",
+        "options": "1. Peter Düring on drums\n2. the legend about St. Alexius\n3. the formation of the Ugandan state",
+        "correct_num": 2,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is associated with [MASK].\n\nOptions:\n1. Peter Düring on drums\n2. the legend about St. Alexius\n3. the formation of the Ugandan state"
+    },
+    {
+        "test_id": 5,
+        "relation": "ConsistsOf",
+        "correct_feat": "tempera on canvas pasted on a wooden board",
+        "options": "1. balls made of either polished Masonite or heavy plastic\n2. a Supreme Court ruling\n3. tempera on canvas pasted on a wooden board",
+        "correct_num": 3,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> consists of [MASK].\n\nOptions:\n1. balls made of either polished Masonite or heavy plastic\n2. a Supreme Court ruling\n3. tempera on canvas pasted on a wooden board"
+    },
+    {
+        "test_id": 6,
+        "relation": "CreatedBy",
+        "correct_feat": "St Luke the Evangelist according to tradition",
+        "options": "1. St Luke the Evangelist according to tradition\n2. Jana Bobošíková\n3. Cryptozoic Entertainment",
+        "correct_num": 1,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> was created by [MASK].\n\nOptions:\n1. St Luke the Evangelist according to tradition\n2. Jana Bobošíková\n3. Cryptozoic Entertainment"
+    },
+    {
+        "test_id": 7,
+        "relation": "CreatedIn",
+        "correct_feat": "Byzantium",
+        "options": "1. 2007\n2. Byzantium\n3. 2008",
+        "correct_num": 2,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> was created in [MASK].\n\nOptions:\n1. 2007\n2. Byzantium\n3. 2008"
+    },
+    {
+        "test_id": 8,
+        "relation": "HasA",
+        "correct_feat": "the Madonna represented without the Child",
+        "options": "1. topics that a syntactic theory is designed to explain\n2. a central king-piece\n3. the Madonna represented without the Child",
+        "correct_num": 3,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> has [MASK].\n\nOptions:\n1. topics that a syntactic theory is designed to explain\n2. a central king-piece\n3. the Madonna represented without the Child"
+    },
+    {
+        "test_id": 9,
+        "relation": "HasA",
+        "correct_feat": "one hand extended forward",
+        "options": "1. one hand extended forward\n2. reciprocal legal and military obligations\n3. tunnels",
+        "correct_num": 1,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> has [MASK].\n\nOptions:\n1. one hand extended forward\n2. reciprocal legal and military obligations\n3. tunnels"
+    },
+    {
+        "test_id": 10,
+        "relation": "HasA",
+        "correct_feat": "the other hand raised to indicate intercession",
+        "options": "1. a debut studio album titled The Cold Vein\n2. the other hand raised to indicate intercession\n3. an ornate wooden post at each end",
+        "correct_num": 2,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> has [MASK].\n\nOptions:\n1. a debut studio album titled The Cold Vein\n2. the other hand raised to indicate intercession\n3. an ornate wooden post at each end"
+    },
+    {
+        "test_id": 11,
+        "relation": "HasA",
+        "correct_feat": "dimness and softness of the colors",
+        "options": "1. similar games that originated around the world\n2. a ROC Car buggy\n3. dimness and softness of the colors",
+        "correct_num": 3,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> has [MASK].\n\nOptions:\n1. similar games that originated around the world\n2. a ROC Car buggy\n3. dimness and softness of the colors"
+    },
+    {
+        "test_id": 12,
+        "relation": "HasA",
+        "correct_feat": "asymmetric shape of the lengthened face",
+        "options": "1. asymmetric shape of the lengthened face\n2. a division of powers between the federal government and the provincial governments\n3. a king that started in the centre",
+        "correct_num": 1,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> has [MASK].\n\nOptions:\n1. asymmetric shape of the lengthened face\n2. a division of powers between the federal government and the provincial governments\n3. a king that started in the centre"
+    },
+    {
+        "test_id": 13,
+        "relation": "HasA",
+        "correct_feat": "eyes with intense look",
+        "options": "1. a commitment to democracy\n2. eyes with intense look\n3. a propeller at the rear",
+        "correct_num": 2,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> has [MASK].\n\nOptions:\n1. a commitment to democracy\n2. eyes with intense look\n3. a propeller at the rear"
+    },
+    {
+        "test_id": 14,
+        "relation": "HasA",
+        "correct_feat": "a wide and thin mouth",
+        "options": "1. four UK number-ones\n2. four shortcut spaces\n3. a wide and thin mouth",
+        "correct_num": 3,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> has [MASK].\n\nOptions:\n1. four UK number-ones\n2. four shortcut spaces\n3. a wide and thin mouth"
+    },
+    {
+        "test_id": 15,
+        "relation": "HasFeatureOf",
+        "correct_feat": "being one of the most venerated Christian icons",
+        "options": "1. being one of the most venerated Christian icons\n2. homophobia\n3. changing patterns of enterprise ownership and management",
+        "correct_num": 1,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is characterized by [MASK].\n\nOptions:\n1. being one of the most venerated Christian icons\n2. homophobia\n3. changing patterns of enterprise ownership and management"
+    },
+    {
+        "test_id": 16,
+        "relation": "HasFeatureOf",
+        "correct_feat": "being considered miraculous",
+        "options": "1. a vertical structure usually located amidships\n2. being considered miraculous\n3. divisions over the nature of the political settlement",
+        "correct_num": 2,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is characterized by [MASK].\n\nOptions:\n1. a vertical structure usually located amidships\n2. being considered miraculous\n3. divisions over the nature of the political settlement"
+    },
+    {
+        "test_id": 17,
+        "relation": "HasFeatureOf",
+        "correct_feat": "faithful adherence to the Byzantine pattern",
+        "options": "1. being an important prestige piece in medieval houses\n2. militarism\n3. faithful adherence to the Byzantine pattern",
+        "correct_num": 3,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is characterized by [MASK].\n\nOptions:\n1. being an important prestige piece in medieval houses\n2. militarism\n3. faithful adherence to the Byzantine pattern"
+    },
+    {
+        "test_id": 18,
+        "relation": "HasFeatureOf",
+        "correct_feat": "the search of a dramatic effect on the part of the artist",
+        "options": "1. the search of a dramatic effect on the part of the artist\n2. its ruling that New York's law was unconstitutional\n3. the practice of torture widely documented as a distinctive trait of the Egyptian police",
+        "correct_num": 1,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is characterized by [MASK].\n\nOptions:\n1. the search of a dramatic effect on the part of the artist\n2. its ruling that New York's law was unconstitutional\n3. the practice of torture widely documented as a distinctive trait of the Egyptian police"
+    },
+    {
+        "test_id": 19,
+        "relation": "HeldIn",
+        "correct_feat": "Edessa church of the Blessed Virgin",
+        "options": "1. Chesham, Bucks\n2. Edessa church of the Blessed Virgin\n3. Kraków",
+        "correct_num": 2,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> was held in [MASK].\n\nOptions:\n1. Chesham, Bucks\n2. Edessa church of the Blessed Virgin\n3. Kraków"
+    },
+    {
+        "test_id": 20,
+        "relation": "HeldIn",
+        "correct_feat": "the Basilica of the Saints Bonifacio and Alexis on the Aventine Hill in Rome, Italy",
+        "options": "1. Beatenberg, Switzerland\n2. basements\n3. the Basilica of the Saints Bonifacio and Alexis on the Aventine Hill in Rome, Italy",
+        "correct_num": 3,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> was held in [MASK].\n\nOptions:\n1. Beatenberg, Switzerland\n2. basements\n3. the Basilica of the Saints Bonifacio and Alexis on the Aventine Hill in Rome, Italy"
+    },
+    {
+        "test_id": 21,
+        "relation": "HeldIn",
+        "correct_feat": "the Chapel of the Most Holy Sacrament on the right side of the south transept of the basilica",
+        "options": "1. the Chapel of the Most Holy Sacrament on the right side of the south transept of the basilica\n2. North Macedonia\n3. Los Angeles",
+        "correct_num": 1,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> was held in [MASK].\n\nOptions:\n1. the Chapel of the Most Holy Sacrament on the right side of the south transept of the basilica\n2. North Macedonia\n3. Los Angeles"
+    },
+    {
+        "test_id": 22,
+        "relation": "InfluencedBy",
+        "correct_feat": "the common image of the Deesis",
+        "options": "1. pan-Africanist ideas\n2. the common image of the Deesis\n3. Washington Irving's writings",
+        "correct_num": 2,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> was influenced by [MASK].\n\nOptions:\n1. pan-Africanist ideas\n2. the common image of the Deesis\n3. Washington Irving's writings"
+    },
+    {
+        "test_id": 23,
+        "relation": "IsA",
+        "correct_feat": "an icon of the Blessed Virgin",
+        "options": "1. a former imperial and royal European dynasty\n2. a political movement\n3. an icon of the Blessed Virgin",
+        "correct_num": 3,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is [MASK].\n\nOptions:\n1. a former imperial and royal European dynasty\n2. a political movement\n3. an icon of the Blessed Virgin"
+    },
+    {
+        "test_id": 24,
+        "relation": "IsA",
+        "correct_feat": "a fine and early example of the iconography of the Haghiosoritissa type",
+        "options": "1. a fine and early example of the iconography of the Haghiosoritissa type\n2. a couple\n3. not usually regarded as an abstract strategy game",
+        "correct_num": 1,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is [MASK].\n\nOptions:\n1. a fine and early example of the iconography of the Haghiosoritissa type\n2. a couple\n3. not usually regarded as an abstract strategy game"
+    },
+    {
+        "test_id": 25,
+        "relation": "IsA",
+        "correct_feat": "a miraculous image",
+        "options": "1. a legislative suggestion\n2. a miraculous image\n3. in the public domain",
+        "correct_num": 2,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is [MASK].\n\nOptions:\n1. a legislative suggestion\n2. a miraculous image\n3. in the public domain"
+    },
+    {
+        "test_id": 26,
+        "relation": "IsA",
+        "correct_feat": "a wonderful object of interest and devotion",
+        "options": "1. a brand of cider\n2. a YouTube channel\n3. a wonderful object of interest and devotion",
+        "correct_num": 3,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is [MASK].\n\nOptions:\n1. a brand of cider\n2. a YouTube channel\n3. a wonderful object of interest and devotion"
+    },
+    {
+        "test_id": 27,
+        "relation": "KnownAs",
+        "correct_feat": "Madonna of St. Alexis",
+        "options": "1. Madonna of St. Alexis\n2. stand-up adaptive tennis\n3. awari in English",
+        "correct_num": 1,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is known as [MASK].\n\nOptions:\n1. Madonna of St. Alexis\n2. stand-up adaptive tennis\n3. awari in English"
+    },
+    {
+        "test_id": 28,
+        "relation": "KnownAs",
+        "correct_feat": "Madonna of Intercession",
+        "options": "1. a single volume in a two-volume set along with The Silmarillion\n2. Madonna of Intercession\n3. Tâheriyân",
+        "correct_num": 2,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is known as [MASK].\n\nOptions:\n1. a single volume in a two-volume set along with The Silmarillion\n2. Madonna of Intercession\n3. Tâheriyân"
+    },
+    {
+        "test_id": 29,
+        "relation": "KnownAs",
+        "correct_feat": "«Madonna di Edessa»",
+        "options": "1. cephalalgia\n2. the Karolinger\n3. «Madonna di Edessa»",
+        "correct_num": 3,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is known as [MASK].\n\nOptions:\n1. cephalalgia\n2. the Karolinger\n3. «Madonna di Edessa»"
+    },
+    {
+        "test_id": 30,
+        "relation": "KnownAs",
+        "correct_feat": "\"Edessa Icon of Madonna\"",
+        "options": "1. \"Edessa Icon of Madonna\"\n2. \"neoconservatives\"\n3. Shashki",
+        "correct_num": 1,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is known as [MASK].\n\nOptions:\n1. \"Edessa Icon of Madonna\"\n2. \"neoconservatives\"\n3. Shashki"
+    },
+    {
+        "test_id": 31,
+        "relation": "KnownAs",
+        "correct_feat": "«Madonna Avvocata»",
+        "options": "1. the renaming of public places\n2. «Madonna Avvocata»\n3. Charlie",
+        "correct_num": 2,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is known as [MASK].\n\nOptions:\n1. the renaming of public places\n2. «Madonna Avvocata»\n3. Charlie"
+    },
+    {
+        "test_id": 32,
+        "relation": "KnownAs",
+        "correct_feat": "«Protectress»",
+        "options": "1. neo-fascist accelerationism\n2. world history\n3. «Protectress»",
+        "correct_num": 3,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is known as [MASK].\n\nOptions:\n1. neo-fascist accelerationism\n2. world history\n3. «Protectress»"
+    },
+    {
+        "test_id": 33,
+        "relation": "KnownAs",
+        "correct_feat": "«Madonna dell'Intercessione»",
+        "options": "1. «Madonna dell'Intercessione»\n2. First Nations feminism in Canada\n3. individual anarchism",
+        "correct_num": 1,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is known as [MASK].\n\nOptions:\n1. «Madonna dell'Intercessione»\n2. First Nations feminism in Canada\n3. individual anarchism"
+    },
+    {
+        "test_id": 34,
+        "relation": "KnownAs",
+        "correct_feat": "\"Our Lady of Intercession\"",
+        "options": "1. the place where the United States and Soviet Armies first met near the end of World War II\n2. \"Our Lady of Intercession\"\n3. Man, Don't Get Angry",
+        "correct_num": 2,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is known as [MASK].\n\nOptions:\n1. the place where the United States and Soviet Armies first met near the end of World War II\n2. \"Our Lady of Intercession\"\n3. Man, Don't Get Angry"
+    },
+    {
+        "test_id": 35,
+        "relation": "KnownFor",
+        "correct_feat": "attracting many Christian pilgrims",
+        "options": "1. favoring European integration\n2. advocating for the realization of a socialist society\n3. attracting many Christian pilgrims",
+        "correct_num": 3,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is known for [MASK].\n\nOptions:\n1. favoring European integration\n2. advocating for the realization of a socialist society\n3. attracting many Christian pilgrims"
+    },
+    {
+        "test_id": 36,
+        "relation": "KnownFor",
+        "correct_feat": "being considered miraculous",
+        "options": "1. being considered miraculous\n2. seeking to eliminate discrimination against men\n3. its performances at the White House",
+        "correct_num": 1,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is known for [MASK].\n\nOptions:\n1. being considered miraculous\n2. seeking to eliminate discrimination against men\n3. its performances at the White House"
+    },
+    {
+        "test_id": 37,
+        "relation": "LocatedIn",
+        "correct_feat": "in the Basilica of the Saints Bonifacio and Alexis on the Aventine Hill in Rome, Italy",
+        "options": "1. in China\n2. in the Basilica of the Saints Bonifacio and Alexis on the Aventine Hill in Rome, Italy\n3. in Spain",
+        "correct_num": 2,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is located [MASK].\n\nOptions:\n1. in China\n2. in the Basilica of the Saints Bonifacio and Alexis on the Aventine Hill in Rome, Italy\n3. in Spain"
+    },
+    {
+        "test_id": 38,
+        "relation": "LocatedIn",
+        "correct_feat": "in the Chapel of the Most Holy Sacrament on the right side of the south transept of the basilica",
+        "options": "1. in Topsfield\n2. in St. Louis, Missouri, where the NTFL was formed\n3. in the Chapel of the Most Holy Sacrament on the right side of the south transept of the basilica",
+        "correct_num": 3,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is located [MASK].\n\nOptions:\n1. in Topsfield\n2. in St. Louis, Missouri, where the NTFL was formed\n3. in the Chapel of the Most Holy Sacrament on the right side of the south transept of the basilica"
+    },
+    {
+        "test_id": 39,
+        "relation": "LocatedIn",
+        "correct_feat": "above the altar of this Chapel",
+        "options": "1. above the altar of this Chapel\n2. in the Diyala River region\n3. in Amstetten, Lower Austria",
+        "correct_num": 1,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is located [MASK].\n\nOptions:\n1. above the altar of this Chapel\n2. in the Diyala River region\n3. in Amstetten, Lower Austria"
+    },
+    {
+        "test_id": 40,
+        "relation": "OriginatedIn",
+        "correct_feat": "Byzantium",
+        "options": "1. the American proslavery movement\n2. Byzantium\n3. Kabylia in Algeria",
+        "correct_num": 2,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> originated in [MASK].\n\nOptions:\n1. the American proslavery movement\n2. Byzantium\n3. Kabylia in Algeria"
+    },
+    {
+        "test_id": 41,
+        "relation": "OriginatedIn",
+        "correct_feat": "Edessa",
+        "options": "1. Sweden\n2. the Netherlands\n3. Edessa",
+        "correct_num": 3,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> originated in [MASK].\n\nOptions:\n1. Sweden\n2. the Netherlands\n3. Edessa"
+    },
+    {
+        "test_id": 42,
+        "relation": "PartOf",
+        "correct_feat": "the Basilica of the Saints Bonifacio and Alexis",
+        "options": "1. the Basilica of the Saints Bonifacio and Alexis\n2. rodeo\n3. planetary systems",
+        "correct_num": 1,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is part of [MASK].\n\nOptions:\n1. the Basilica of the Saints Bonifacio and Alexis\n2. rodeo\n3. planetary systems"
+    },
+    {
+        "test_id": 43,
+        "relation": "UsedAs",
+        "correct_feat": "a miraculous image",
+        "options": "1. a subject of national legislation\n2. a miraculous image\n3. a multi-platinum debut album",
+        "correct_num": 2,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is used as [MASK].\n\nOptions:\n1. a subject of national legislation\n2. a miraculous image\n3. a multi-platinum debut album"
+    },
+    {
+        "test_id": 44,
+        "relation": "UsedFor",
+        "correct_feat": "intercession",
+        "options": "1. withholding income\n2. promotion\n3. intercession",
+        "correct_num": 3,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is used for [MASK].\n\nOptions:\n1. withholding income\n2. promotion\n3. intercession"
+    },
+    {
+        "test_id": 45,
+        "relation": "UsedIn",
+        "correct_feat": "the Basilica of the Saints Bonifacio and Alexis",
+        "options": "1. the Basilica of the Saints Bonifacio and Alexis\n2. discussions of the Antebellum South and Jim Crow laws in the American South\n3. television",
+        "correct_num": 1,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is used in [MASK].\n\nOptions:\n1. the Basilica of the Saints Bonifacio and Alexis\n2. discussions of the Antebellum South and Jim Crow laws in the American South\n3. television"
+    },
+    {
+        "test_id": 46,
+        "relation": "UsedTo",
+        "correct_feat": "invoke the mercy of Christ as judge",
+        "options": "1. supply the Confederate States of America\n2. invoke the mercy of Christ as judge\n3. release a self-titled album",
+        "correct_num": 2,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is used to [MASK].\n\nOptions:\n1. supply the Confederate States of America\n2. invoke the mercy of Christ as judge\n3. release a self-titled album"
+    }
+]

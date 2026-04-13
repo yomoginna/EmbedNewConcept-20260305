@@ -1,0 +1,426 @@
+[
+    {
+        "test_id": 0,
+        "relation": "About",
+        "correct_feat": "the beginning of the Hungarian conquest of the Carpathian Basin in 895",
+        "options": "1. the beginning of the Hungarian conquest of the Carpathian Basin in 895\n2. the Bancroft Treaties and their eventual abandonment\n3. folk rock",
+        "correct_num": 1,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is about [MASK].\n\nOptions:\n1. the beginning of the Hungarian conquest of the Carpathian Basin in 895\n2. the Bancroft Treaties and their eventual abandonment\n3. folk rock"
+    },
+    {
+        "test_id": 1,
+        "relation": "AssociatedWith",
+        "correct_feat": "Árpád Feszty",
+        "options": "1. sabotage\n2. Árpád Feszty\n3. Historical Perspectives",
+        "correct_num": 2,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is associated with [MASK].\n\nOptions:\n1. sabotage\n2. Árpád Feszty\n3. Historical Perspectives"
+    },
+    {
+        "test_id": 2,
+        "relation": "AssociatedWith",
+        "correct_feat": "Mór Jókai",
+        "options": "1. the Sultanate of Rum\n2. the Abbasid caliphate\n3. Mór Jókai",
+        "correct_num": 3,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is associated with [MASK].\n\nOptions:\n1. the Sultanate of Rum\n2. the Abbasid caliphate\n3. Mór Jókai"
+    },
+    {
+        "test_id": 3,
+        "relation": "AssociatedWith",
+        "correct_feat": "the Verecke Pass of the Carpathians",
+        "options": "1. the Verecke Pass of the Carpathians\n2. Trevor Horn\n3. the brand name Waboba",
+        "correct_num": 1,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is associated with [MASK].\n\nOptions:\n1. the Verecke Pass of the Carpathians\n2. Trevor Horn\n3. the brand name Waboba"
+    },
+    {
+        "test_id": 4,
+        "relation": "AssociatedWith",
+        "correct_feat": "the Hungarian press",
+        "options": "1. Peter Düring on drums\n2. the Hungarian press\n3. the formation of the Ugandan state",
+        "correct_num": 2,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is associated with [MASK].\n\nOptions:\n1. Peter Düring on drums\n2. the Hungarian press\n3. the formation of the Ugandan state"
+    },
+    {
+        "test_id": 5,
+        "relation": "AssociatedWith",
+        "correct_feat": "the council of Budapest",
+        "options": "1. cricket\n2. the Ottoman Empire\n3. the council of Budapest",
+        "correct_num": 3,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is associated with [MASK].\n\nOptions:\n1. cricket\n2. the Ottoman Empire\n3. the council of Budapest"
+    },
+    {
+        "test_id": 6,
+        "relation": "AssociatedWith",
+        "correct_feat": "Ignác Újváry",
+        "options": "1. Ignác Újváry\n2. Big Death\n3. white supremacist activists drawing on jihadism",
+        "correct_num": 1,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is associated with [MASK].\n\nOptions:\n1. Ignác Újváry\n2. Big Death\n3. white supremacist activists drawing on jihadism"
+    },
+    {
+        "test_id": 7,
+        "relation": "AssociatedWith",
+        "correct_feat": "László Mednyánszky",
+        "options": "1. the concept of Atchalta De'Geulah\n2. László Mednyánszky\n3. Fredrik Olsson",
+        "correct_num": 2,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is associated with [MASK].\n\nOptions:\n1. the concept of Atchalta De'Geulah\n2. László Mednyánszky\n3. Fredrik Olsson"
+    },
+    {
+        "test_id": 8,
+        "relation": "AssociatedWith",
+        "correct_feat": "Újváry",
+        "options": "1. Sinéad O'Connor\n2. Gang Starr\n3. Újváry",
+        "correct_num": 3,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is associated with [MASK].\n\nOptions:\n1. Sinéad O'Connor\n2. Gang Starr\n3. Újváry"
+    },
+    {
+        "test_id": 9,
+        "relation": "AssociatedWith",
+        "correct_feat": "Spányi",
+        "options": "1. Spányi\n2. the Banu Marin tribe\n3. the Union of Krewo",
+        "correct_num": 1,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is associated with [MASK].\n\nOptions:\n1. Spányi\n2. the Banu Marin tribe\n3. the Union of Krewo"
+    },
+    {
+        "test_id": 10,
+        "relation": "AssociatedWith",
+        "correct_feat": "Pál Vágó",
+        "options": "1. social democratic governments\n2. Pál Vágó\n3. Arab socialism",
+        "correct_num": 2,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is associated with [MASK].\n\nOptions:\n1. social democratic governments\n2. Pál Vágó\n3. Arab socialism"
+    },
+    {
+        "test_id": 11,
+        "relation": "BuiltIn",
+        "correct_feat": "in 1894",
+        "options": "1. in 1999\n2. in Castle Bromwich, Birmingham\n3. in 1894",
+        "correct_num": 3,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> was built [MASK].\n\nOptions:\n1. in 1999\n2. in Castle Bromwich, Birmingham\n3. in 1894"
+    },
+    {
+        "test_id": 12,
+        "relation": "ComposedBy",
+        "correct_feat": "Árpád Feszty and his assistants",
+        "options": "1. Árpád Feszty and his assistants\n2. Daryl Hall and John Oates\n3. Cornelis Drebbel",
+        "correct_num": 1,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> was composed by [MASK].\n\nOptions:\n1. Árpád Feszty and his assistants\n2. Daryl Hall and John Oates\n3. Cornelis Drebbel"
+    },
+    {
+        "test_id": 13,
+        "relation": "ConsistsOf",
+        "correct_feat": "a circular panoramic painting",
+        "options": "1. two opposing teams and a net\n2. a circular panoramic painting\n3. balls made of either polished Masonite or heavy plastic",
+        "correct_num": 2,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> consists of [MASK].\n\nOptions:\n1. two opposing teams and a net\n2. a circular panoramic painting\n3. balls made of either polished Masonite or heavy plastic"
+    },
+    {
+        "test_id": 14,
+        "relation": "CreatedAround",
+        "correct_feat": "1894",
+        "options": "1. 1814\n2. 1712\n3. 1894",
+        "correct_num": 3,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> was created around [MASK].\n\nOptions:\n1. 1814\n2. 1712\n3. 1894"
+    },
+    {
+        "test_id": 15,
+        "relation": "CreatedBy",
+        "correct_feat": "Hungarian painter Árpád Feszty and his assistants",
+        "options": "1. Hungarian painter Árpád Feszty and his assistants\n2. R. J. Mitchell\n3. Tomáš Chalupa",
+        "correct_num": 1,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> was created by [MASK].\n\nOptions:\n1. Hungarian painter Árpád Feszty and his assistants\n2. R. J. Mitchell\n3. Tomáš Chalupa"
+    },
+    {
+        "test_id": 16,
+        "relation": "CreatedFor",
+        "correct_feat": "the 1000th anniversary of the event",
+        "options": "1. the clarification of legal consequences under these obligations for States\n2. the 1000th anniversary of the event\n3. charitable organizations",
+        "correct_num": 2,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> was created for [MASK].\n\nOptions:\n1. the clarification of legal consequences under these obligations for States\n2. the 1000th anniversary of the event\n3. charitable organizations"
+    },
+    {
+        "test_id": 17,
+        "relation": "CreatedIn",
+        "correct_feat": "1894",
+        "options": "1. 1988\n2. 2012\n3. 1894",
+        "correct_num": 3,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> was created in [MASK].\n\nOptions:\n1. 1988\n2. 2012\n3. 1894"
+    },
+    {
+        "test_id": 18,
+        "relation": "CreatedTo",
+        "correct_feat": "depict the beginning of the Hungarian conquest of the Carpathian Basin in 895",
+        "options": "1. depict the beginning of the Hungarian conquest of the Carpathian Basin in 895\n2. be a board game where players race their tokens\n3. serve as a cause for Risorgimento",
+        "correct_num": 1,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> was created to [MASK].\n\nOptions:\n1. depict the beginning of the Hungarian conquest of the Carpathian Basin in 895\n2. be a board game where players race their tokens\n3. serve as a cause for Risorgimento"
+    },
+    {
+        "test_id": 19,
+        "relation": "HasA",
+        "correct_feat": "a length of almost 120 meters",
+        "options": "1. a common root in religio-nationalism\n2. a length of almost 120 meters\n3. a special 55 cent stamp",
+        "correct_num": 2,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> has [MASK].\n\nOptions:\n1. a common root in religio-nationalism\n2. a length of almost 120 meters\n3. a special 55 cent stamp"
+    },
+    {
+        "test_id": 20,
+        "relation": "HasA",
+        "correct_feat": "a height of nearly 15 meters",
+        "options": "1. ordinary dot mileposts costing ECU $1 million\n2. groupers\n3. a height of nearly 15 meters",
+        "correct_num": 3,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> has [MASK].\n\nOptions:\n1. ordinary dot mileposts costing ECU $1 million\n2. groupers\n3. a height of nearly 15 meters"
+    },
+    {
+        "test_id": 21,
+        "relation": "HasA",
+        "correct_feat": "artificial terrain",
+        "options": "1. artificial terrain\n2. a working through corporate groups and trade unions\n3. a lawsuit for damages in libel",
+        "correct_num": 1,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> has [MASK].\n\nOptions:\n1. artificial terrain\n2. a working through corporate groups and trade unions\n3. a lawsuit for damages in libel"
+    },
+    {
+        "test_id": 22,
+        "relation": "HasA",
+        "correct_feat": "hidden speakers playing realistic sound effects",
+        "options": "1. a second EP titled Gone\n2. hidden speakers playing realistic sound effects\n3. a principle called the Internal Revolution or Revolution of the Self",
+        "correct_num": 2,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> has [MASK].\n\nOptions:\n1. a second EP titled Gone\n2. hidden speakers playing realistic sound effects\n3. a principle called the Internal Revolution or Revolution of the Self"
+    },
+    {
+        "test_id": 23,
+        "relation": "HasFeatureOf",
+        "correct_feat": "being a large cyclorama",
+        "options": "1. a per curiam decision\n2. the apparition of modern Galician nationalism\n3. being a large cyclorama",
+        "correct_num": 3,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is characterized by [MASK].\n\nOptions:\n1. a per curiam decision\n2. the apparition of modern Galician nationalism\n3. being a large cyclorama"
+    },
+    {
+        "test_id": 24,
+        "relation": "HasFeatureOf",
+        "correct_feat": "its dimensions of nearly 15 meters tall and almost 120 meters in length",
+        "options": "1. its dimensions of nearly 15 meters tall and almost 120 meters in length\n2. republicanism\n3. being a sport",
+        "correct_num": 1,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is characterized by [MASK].\n\nOptions:\n1. its dimensions of nearly 15 meters tall and almost 120 meters in length\n2. republicanism\n3. being a sport"
+    },
+    {
+        "test_id": 25,
+        "relation": "HasFeatureOf",
+        "correct_feat": "its depiction of the beginning of the Hungarian conquest of the Carpathian Basin in 895",
+        "options": "1. the unit's current strength rating displayed on the unit's face at the 12 o'clock position\n2. its depiction of the beginning of the Hungarian conquest of the Carpathian Basin in 895\n3. embittered rants about modern working life",
+        "correct_num": 2,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is characterized by [MASK].\n\nOptions:\n1. the unit's current strength rating displayed on the unit's face at the 12 o'clock position\n2. its depiction of the beginning of the Hungarian conquest of the Carpathian Basin in 895\n3. embittered rants about modern working life"
+    },
+    {
+        "test_id": 26,
+        "relation": "HasFeatureOf",
+        "correct_feat": "its completion in 1894",
+        "options": "1. individual autonomy\n2. performing tricks derived from skateboarding on the wash of waves\n3. its completion in 1894",
+        "correct_num": 3,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is characterized by [MASK].\n\nOptions:\n1. individual autonomy\n2. performing tricks derived from skateboarding on the wash of waves\n3. its completion in 1894"
+    },
+    {
+        "test_id": 27,
+        "relation": "HasFeatureOf",
+        "correct_feat": "its display in the Ópusztaszer National Heritage Park, Hungary since 1995",
+        "options": "1. its display in the Ópusztaszer National Heritage Park, Hungary since 1995\n2. its founder, Seljuk Beg\n3. a slogan \"Politics first\"",
+        "correct_num": 1,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is characterized by [MASK].\n\nOptions:\n1. its display in the Ópusztaszer National Heritage Park, Hungary since 1995\n2. its founder, Seljuk Beg\n3. a slogan \"Politics first\""
+    },
+    {
+        "test_id": 28,
+        "relation": "HasFeatureOf",
+        "correct_feat": "its inspiration from a panoramic painting by Detaille and Neuville",
+        "options": "1. being popular, influential, and enduring\n2. its inspiration from a panoramic painting by Detaille and Neuville\n3. the use of ropes and harnesses",
+        "correct_num": 2,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is characterized by [MASK].\n\nOptions:\n1. being popular, influential, and enduring\n2. its inspiration from a panoramic painting by Detaille and Neuville\n3. the use of ropes and harnesses"
+    },
+    {
+        "test_id": 29,
+        "relation": "HasFeatureOf",
+        "correct_feat": "its restoration efforts",
+        "options": "1. violence\n2. a vacuum that helps keep riders from skipping\n3. its restoration efforts",
+        "correct_num": 3,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is characterized by [MASK].\n\nOptions:\n1. violence\n2. a vacuum that helps keep riders from skipping\n3. its restoration efforts"
+    },
+    {
+        "test_id": 30,
+        "relation": "HasFeatureOf",
+        "correct_feat": "its damage during the siege of Budapest in World War II",
+        "options": "1. its damage during the siege of Budapest in World War II\n2. a dock from which dogs jump\n3. prioritizing Indigenous cultural values and priorities",
+        "correct_num": 1,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is characterized by [MASK].\n\nOptions:\n1. its damage during the siege of Budapest in World War II\n2. a dock from which dogs jump\n3. prioritizing Indigenous cultural values and priorities"
+    },
+    {
+        "test_id": 31,
+        "relation": "HasFeatureOf",
+        "correct_feat": "its role as the main attraction of the heritage park of Ópusztaszer",
+        "options": "1. a unique glossary of terms\n2. its role as the main attraction of the heritage park of Ópusztaszer\n3. scenarios lasting 20 Turns once hostilities commence",
+        "correct_num": 2,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is characterized by [MASK].\n\nOptions:\n1. a unique glossary of terms\n2. its role as the main attraction of the heritage park of Ópusztaszer\n3. scenarios lasting 20 Turns once hostilities commence"
+    },
+    {
+        "test_id": 32,
+        "relation": "HeldIn",
+        "correct_feat": "London for the 1899 Greater Britain Exhibition",
+        "options": "1. Zürich\n2. Moscow, Russia\n3. London for the 1899 Greater Britain Exhibition",
+        "correct_num": 3,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> was held in [MASK].\n\nOptions:\n1. Zürich\n2. Moscow, Russia\n3. London for the 1899 Greater Britain Exhibition"
+    },
+    {
+        "test_id": 33,
+        "relation": "HeldIn",
+        "correct_feat": "Budapest in 1909",
+        "options": "1. Budapest in 1909\n2. Malaysia\n3. North America",
+        "correct_num": 1,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> was held in [MASK].\n\nOptions:\n1. Budapest in 1909\n2. Malaysia\n3. North America"
+    },
+    {
+        "test_id": 34,
+        "relation": "HeldIn",
+        "correct_feat": "the Ópusztaszer National Heritage Park, Hungary since 1995",
+        "options": "1. New York City\n2. the Ópusztaszer National Heritage Park, Hungary since 1995\n3. Guyana",
+        "correct_num": 2,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> was held in [MASK].\n\nOptions:\n1. New York City\n2. the Ópusztaszer National Heritage Park, Hungary since 1995\n3. Guyana"
+    },
+    {
+        "test_id": 35,
+        "relation": "HeldOn",
+        "correct_feat": "May 13, 1894",
+        "options": "1. March 23, 2018\n2. July 1908\n3. May 13, 1894",
+        "correct_num": 3,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> was held on [MASK].\n\nOptions:\n1. March 23, 2018\n2. July 1908\n3. May 13, 1894"
+    },
+    {
+        "test_id": 36,
+        "relation": "InfluencedBy",
+        "correct_feat": "a panoramic painting by Detaille and Neuville in Paris",
+        "options": "1. a panoramic painting by Detaille and Neuville in Paris\n2. science and reason\n3. violence and discrimination against Mexican Americans",
+        "correct_num": 1,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> was influenced by [MASK].\n\nOptions:\n1. a panoramic painting by Detaille and Neuville in Paris\n2. science and reason\n3. violence and discrimination against Mexican Americans"
+    },
+    {
+        "test_id": 37,
+        "relation": "IsA",
+        "correct_feat": "a large cyclorama",
+        "options": "1. a distinct ethnicity\n2. a large cyclorama\n3. a game system by design rather than just one game",
+        "correct_num": 2,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is [MASK].\n\nOptions:\n1. a distinct ethnicity\n2. a large cyclorama\n3. a game system by design rather than just one game"
+    },
+    {
+        "test_id": 38,
+        "relation": "IsA",
+        "correct_feat": "a circular panoramic painting",
+        "options": "1. a movement\n2. a populist movement\n3. a circular panoramic painting",
+        "correct_num": 3,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is [MASK].\n\nOptions:\n1. a movement\n2. a populist movement\n3. a circular panoramic painting"
+    },
+    {
+        "test_id": 39,
+        "relation": "IsA",
+        "correct_feat": "a painting by Hungarian painter Árpád Feszty and his assistants",
+        "options": "1. a painting by Hungarian painter Árpád Feszty and his assistants\n2. a game with a point-to-point movement system\n3. a photo-reconnaissance aircraft",
+        "correct_num": 1,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is [MASK].\n\nOptions:\n1. a painting by Hungarian painter Árpád Feszty and his assistants\n2. a game with a point-to-point movement system\n3. a photo-reconnaissance aircraft"
+    },
+    {
+        "test_id": 40,
+        "relation": "IsA",
+        "correct_feat": "a depiction of the beginning of the Hungarian conquest of the Carpathian Basin in 895",
+        "options": "1. a 12-inch record\n2. a depiction of the beginning of the Hungarian conquest of the Carpathian Basin in 895\n3. a game where enemy pieces are captured by jumping over them",
+        "correct_num": 2,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is [MASK].\n\nOptions:\n1. a 12-inch record\n2. a depiction of the beginning of the Hungarian conquest of the Carpathian Basin in 895\n3. a game where enemy pieces are captured by jumping over them"
+    },
+    {
+        "test_id": 41,
+        "relation": "IsA",
+        "correct_feat": "the biggest attraction of the millennial exhibition in Hungary",
+        "options": "1. a religious ritual\n2. a daily long-distance passenger train\n3. the biggest attraction of the millennial exhibition in Hungary",
+        "correct_num": 3,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is [MASK].\n\nOptions:\n1. a religious ritual\n2. a daily long-distance passenger train\n3. the biggest attraction of the millennial exhibition in Hungary"
+    },
+    {
+        "test_id": 42,
+        "relation": "IsA",
+        "correct_feat": "the main attraction of the heritage park of Ópusztaszer",
+        "options": "1. the main attraction of the heritage park of Ópusztaszer\n2. a competition\n3. an alliance of Religious-Nationalists",
+        "correct_num": 1,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is [MASK].\n\nOptions:\n1. the main attraction of the heritage park of Ópusztaszer\n2. a competition\n3. an alliance of Religious-Nationalists"
+    },
+    {
+        "test_id": 43,
+        "relation": "KnownAs",
+        "correct_feat": "Feszty Panorama",
+        "options": "1. a \"sail\" in American usage\n2. Feszty Panorama\n3. the Eleven cities tour",
+        "correct_num": 2,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is known as [MASK].\n\nOptions:\n1. a \"sail\" in American usage\n2. Feszty Panorama\n3. the Eleven cities tour"
+    },
+    {
+        "test_id": 44,
+        "relation": "KnownAs",
+        "correct_feat": "Feszty Cyclorama",
+        "options": "1. nerf-styled polo water balls\n2. uril\n3. Feszty Cyclorama",
+        "correct_num": 3,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is known as [MASK].\n\nOptions:\n1. nerf-styled polo water balls\n2. uril\n3. Feszty Cyclorama"
+    },
+    {
+        "test_id": 45,
+        "relation": "KnownFor",
+        "correct_feat": "depicting the beginning of the Hungarian conquest of the Carpathian Basin in 895",
+        "options": "1. depicting the beginning of the Hungarian conquest of the Carpathian Basin in 895\n2. advocating for the systemic transformation of the economy from capitalism to socialism\n3. its compilation documentary style",
+        "correct_num": 1,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is known for [MASK].\n\nOptions:\n1. depicting the beginning of the Hungarian conquest of the Carpathian Basin in 895\n2. advocating for the systemic transformation of the economy from capitalism to socialism\n3. its compilation documentary style"
+    },
+    {
+        "test_id": 46,
+        "relation": "LocatedIn",
+        "correct_feat": "in the Ópusztaszer National Heritage Park, Hungary",
+        "options": "1. in Norway\n2. in the Ópusztaszer National Heritage Park, Hungary\n3. in modern-day Kaesong, North Korea",
+        "correct_num": 2,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is located [MASK].\n\nOptions:\n1. in Norway\n2. in the Ópusztaszer National Heritage Park, Hungary\n3. in modern-day Kaesong, North Korea"
+    },
+    {
+        "test_id": 47,
+        "relation": "LocatedIn",
+        "correct_feat": "near Munkács",
+        "options": "1. in the Texas Hill Country\n2. approximately 30 kilometres south of Jagüey Grande\n3. near Munkács",
+        "correct_num": 3,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is located [MASK].\n\nOptions:\n1. in the Texas Hill Country\n2. approximately 30 kilometres south of Jagüey Grande\n3. near Munkács"
+    },
+    {
+        "test_id": 48,
+        "relation": "PartOf",
+        "correct_feat": "the Ópusztaszer National Heritage Park",
+        "options": "1. the Ópusztaszer National Heritage Park\n2. the Pacte Synarchique\n3. the Holy Roman Empire",
+        "correct_num": 1,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is part of [MASK].\n\nOptions:\n1. the Ópusztaszer National Heritage Park\n2. the Pacte Synarchique\n3. the Holy Roman Empire"
+    },
+    {
+        "test_id": 49,
+        "relation": "UsedAs",
+        "correct_feat": "the main attraction of the heritage park of Ópusztaszer",
+        "options": "1. a representation of French hip hop\n2. the main attraction of the heritage park of Ópusztaszer\n3. a riveter",
+        "correct_num": 2,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is used as [MASK].\n\nOptions:\n1. a representation of French hip hop\n2. the main attraction of the heritage park of Ópusztaszer\n3. a riveter"
+    },
+    {
+        "test_id": 50,
+        "relation": "UsedFor",
+        "correct_feat": "commemorating the 1000th anniversary of the conquest",
+        "options": "1. justifying the expansion into Eastern Europe\n2. tournaments\n3. commemorating the 1000th anniversary of the conquest",
+        "correct_num": 3,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is used for [MASK].\n\nOptions:\n1. justifying the expansion into Eastern Europe\n2. tournaments\n3. commemorating the 1000th anniversary of the conquest"
+    },
+    {
+        "test_id": 51,
+        "relation": "UsedIn",
+        "correct_feat": "the Ópusztaszer National Heritage Park, Hungary",
+        "options": "1. the Ópusztaszer National Heritage Park, Hungary\n2. discussions of the Parthian Empire\n3. seal inscriptions",
+        "correct_num": 1,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is used in [MASK].\n\nOptions:\n1. the Ópusztaszer National Heritage Park, Hungary\n2. discussions of the Parthian Empire\n3. seal inscriptions"
+    },
+    {
+        "test_id": 52,
+        "relation": "UsedTo",
+        "correct_feat": "depict the beginning of the Hungarian conquest of the Carpathian Basin in 895",
+        "options": "1. pit dogs against animals such as elephants, lions, bears and bulls\n2. depict the beginning of the Hungarian conquest of the Carpathian Basin in 895\n3. conceal a hidden Islamist agenda",
+        "correct_num": 2,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is used to [MASK].\n\nOptions:\n1. pit dogs against animals such as elephants, lions, bears and bulls\n2. depict the beginning of the Hungarian conquest of the Carpathian Basin in 895\n3. conceal a hidden Islamist agenda"
+    }
+]

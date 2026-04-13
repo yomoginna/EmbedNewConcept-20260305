@@ -1,0 +1,818 @@
+[
+    {
+        "test_id": 0,
+        "relation": "About",
+        "correct_feat": "establishing and supporting a Jewish homeland through colonization in the region of Palestine",
+        "options": "1. establishing and supporting a Jewish homeland through colonization in the region of Palestine\n2. the Bancroft Treaties and their eventual abandonment\n3. folk rock",
+        "correct_num": 1,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is about [MASK].\n\nOptions:\n1. establishing and supporting a Jewish homeland through colonization in the region of Palestine\n2. the Bancroft Treaties and their eventual abandonment\n3. folk rock"
+    },
+    {
+        "test_id": 1,
+        "relation": "About",
+        "correct_feat": "the creation of a Jewish state in Palestine",
+        "options": "1. the problem of lust gone astray\n2. the creation of a Jewish state in Palestine\n3. celebrating Latino and, more specifically, Chicano culture and influence at The University of Southern California and in Los Angeles",
+        "correct_num": 2,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is about [MASK].\n\nOptions:\n1. the problem of lust gone astray\n2. the creation of a Jewish state in Palestine\n3. celebrating Latino and, more specifically, Chicano culture and influence at The University of Southern California and in Los Angeles"
+    },
+    {
+        "test_id": 2,
+        "relation": "About",
+        "correct_feat": "the repatriation of an indigenous people to the homeland of their ancestors",
+        "options": "1. a particular type of icon of the Theotokos (Virgin Mary)\n2. the Interstate Commerce Act\n3. the repatriation of an indigenous people to the homeland of their ancestors",
+        "correct_num": 3,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is about [MASK].\n\nOptions:\n1. a particular type of icon of the Theotokos (Virgin Mary)\n2. the Interstate Commerce Act\n3. the repatriation of an indigenous people to the homeland of their ancestors"
+    },
+    {
+        "test_id": 3,
+        "relation": "About",
+        "correct_feat": "the belief that Jews constitute a nation and have a right and need for self-determination",
+        "options": "1. the belief that Jews constitute a nation and have a right and need for self-determination\n2. a libel case against the Church of Scientology\n3. a competition or test of the working abilities of herding dogs",
+        "correct_num": 1,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is about [MASK].\n\nOptions:\n1. the belief that Jews constitute a nation and have a right and need for self-determination\n2. a libel case against the Church of Scientology\n3. a competition or test of the working abilities of herding dogs"
+    },
+    {
+        "test_id": 4,
+        "relation": "About",
+        "correct_feat": "the establishment of a Jewish demographic majority in Palestine",
+        "options": "1. the rock era\n2. the establishment of a Jewish demographic majority in Palestine\n3. abstract strategy games among the mancala family of board games",
+        "correct_num": 2,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is about [MASK].\n\nOptions:\n1. the rock era\n2. the establishment of a Jewish demographic majority in Palestine\n3. abstract strategy games among the mancala family of board games"
+    },
+    {
+        "test_id": 5,
+        "relation": "Affects",
+        "correct_feat": "the Israeli-Palestinian conflict",
+        "options": "1. the anime series Ore no Imōto ga Konna ni Kawaii Wake ga Nai\n2. the anime series Ace of Diamond: Act II\n3. the Israeli-Palestinian conflict",
+        "correct_num": 3,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> affects [MASK].\n\nOptions:\n1. the anime series Ore no Imōto ga Konna ni Kawaii Wake ga Nai\n2. the anime series Ace of Diamond: Act II\n3. the Israeli-Palestinian conflict"
+    },
+    {
+        "test_id": 6,
+        "relation": "AssociatedWith",
+        "correct_feat": "Theodor Herzl",
+        "options": "1. Theodor Herzl\n2. Gang Starr\n3. the Banu Marin tribe",
+        "correct_num": 1,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is associated with [MASK].\n\nOptions:\n1. Theodor Herzl\n2. Gang Starr\n3. the Banu Marin tribe"
+    },
+    {
+        "test_id": 7,
+        "relation": "AssociatedWith",
+        "correct_feat": "the Balfour Declaration",
+        "options": "1. the Union of Krewo\n2. the Balfour Declaration\n3. the UN Security Council chamber's east wall",
+        "correct_num": 2,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is associated with [MASK].\n\nOptions:\n1. the Union of Krewo\n2. the Balfour Declaration\n3. the UN Security Council chamber's east wall"
+    },
+    {
+        "test_id": 8,
+        "relation": "AssociatedWith",
+        "correct_feat": "the Mandate for Palestine",
+        "options": "1. the Consecration of the National Cemetery\n2. Claud\n3. the Mandate for Palestine",
+        "correct_num": 3,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is associated with [MASK].\n\nOptions:\n1. the Consecration of the National Cemetery\n2. Claud\n3. the Mandate for Palestine"
+    },
+    {
+        "test_id": 9,
+        "relation": "AssociatedWith",
+        "correct_feat": "the First Zionist Congress",
+        "options": "1. the First Zionist Congress\n2. the Stuart Restoration in 1660\n3. Thurgood Marshall",
+        "correct_num": 1,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is associated with [MASK].\n\nOptions:\n1. the First Zionist Congress\n2. the Stuart Restoration in 1660\n3. Thurgood Marshall"
+    },
+    {
+        "test_id": 10,
+        "relation": "AssociatedWith",
+        "correct_feat": "the Zionist Organization",
+        "options": "1. carnival midways\n2. the Zionist Organization\n3. the German invasion of Greece",
+        "correct_num": 2,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is associated with [MASK].\n\nOptions:\n1. carnival midways\n2. the Zionist Organization\n3. the German invasion of Greece"
+    },
+    {
+        "test_id": 11,
+        "relation": "AssociatedWith",
+        "correct_feat": "Mount Zion",
+        "options": "1. carting dog breeds\n2. the village of Zarudchi in the Lyubeshiv district\n3. Mount Zion",
+        "correct_num": 3,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is associated with [MASK].\n\nOptions:\n1. carting dog breeds\n2. the village of Zarudchi in the Lyubeshiv district\n3. Mount Zion"
+    },
+    {
+        "test_id": 12,
+        "relation": "AssociatedWith",
+        "correct_feat": "the Hebrew Bible",
+        "options": "1. the Hebrew Bible\n2. the Exposition Universelle of 1900\n3. the Roman Republic",
+        "correct_num": 1,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is associated with [MASK].\n\nOptions:\n1. the Hebrew Bible\n2. the Exposition Universelle of 1900\n3. the Roman Republic"
+    },
+    {
+        "test_id": 13,
+        "relation": "AssociatedWith",
+        "correct_feat": "the Babylonian Exile",
+        "options": "1. Pedro León Zapata\n2. the Babylonian Exile\n3. the 2nd millennium",
+        "correct_num": 2,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is associated with [MASK].\n\nOptions:\n1. Pedro León Zapata\n2. the Babylonian Exile\n3. the 2nd millennium"
+    },
+    {
+        "test_id": 14,
+        "relation": "AssociatedWith",
+        "correct_feat": "Jewish messianic belief",
+        "options": "1. the Feast of the Epiphany\n2. the Harry E. Harris Sport of Kings Four-Year-Old Hurdle Stakes\n3. Jewish messianic belief",
+        "correct_num": 3,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is associated with [MASK].\n\nOptions:\n1. the Feast of the Epiphany\n2. the Harry E. Harris Sport of Kings Four-Year-Old Hurdle Stakes\n3. Jewish messianic belief"
+    },
+    {
+        "test_id": 15,
+        "relation": "AssociatedWith",
+        "correct_feat": "the First Jewish Revolt against Roman rule",
+        "options": "1. the First Jewish Revolt against Roman rule\n2. Lex Records\n3. dog training regimes",
+        "correct_num": 1,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is associated with [MASK].\n\nOptions:\n1. the First Jewish Revolt against Roman rule\n2. Lex Records\n3. dog training regimes"
+    },
+    {
+        "test_id": 16,
+        "relation": "BelongsTo",
+        "correct_feat": "ethnocultural nationalist movements",
+        "options": "1. the history of the Fourteenth Amendment\n2. ethnocultural nationalist movements\n3. the mancala family of board games",
+        "correct_num": 2,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> belongs to [MASK].\n\nOptions:\n1. the history of the Fourteenth Amendment\n2. ethnocultural nationalist movements\n3. the mancala family of board games"
+    },
+    {
+        "test_id": 17,
+        "relation": "CausedBy",
+        "correct_feat": "new waves of antisemitism",
+        "options": "1. the Battle of Gettysburg\n2. sepsis following infection due to the wounds caused by the nails or by the scourging\n3. new waves of antisemitism",
+        "correct_num": 3,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is caused by [MASK].\n\nOptions:\n1. the Battle of Gettysburg\n2. sepsis following infection due to the wounds caused by the nails or by the scourging\n3. new waves of antisemitism"
+    },
+    {
+        "test_id": 18,
+        "relation": "CausedBy",
+        "correct_feat": "the Haskalah, or Jewish Enlightenment",
+        "options": "1. the Haskalah, or Jewish Enlightenment\n2. the 1980 Quebec independence referendum\n3. the extinction of the Babenbergs",
+        "correct_num": 1,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is caused by [MASK].\n\nOptions:\n1. the Haskalah, or Jewish Enlightenment\n2. the 1980 Quebec independence referendum\n3. the extinction of the Babenbergs"
+    },
+    {
+        "test_id": 19,
+        "relation": "ConsistsOf",
+        "correct_feat": "various types of Zionism",
+        "options": "1. a larger ball that gradually becomes softer the more the ball is hit\n2. various types of Zionism\n3. eight main elements, one large bottom field and seven separate framed panels",
+        "correct_num": 2,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> consists of [MASK].\n\nOptions:\n1. a larger ball that gradually becomes softer the more the ball is hit\n2. various types of Zionism\n3. eight main elements, one large bottom field and seven separate framed panels"
+    },
+    {
+        "test_id": 20,
+        "relation": "CreatedAround",
+        "correct_feat": "the late 19th century",
+        "options": "1. 1789\n2. 1531 BC\n3. the late 19th century",
+        "correct_num": 3,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> was created around [MASK].\n\nOptions:\n1. 1789\n2. 1531 BC\n3. the late 19th century"
+    },
+    {
+        "test_id": 21,
+        "relation": "CreatedFor",
+        "correct_feat": "the establishment and support of a Jewish homeland",
+        "options": "1. the establishment and support of a Jewish homeland\n2. illustrating a Gulf Coast day\n3. Kreayshawn",
+        "correct_num": 1,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> was created for [MASK].\n\nOptions:\n1. the establishment and support of a Jewish homeland\n2. illustrating a Gulf Coast day\n3. Kreayshawn"
+    },
+    {
+        "test_id": 22,
+        "relation": "CreatedFor",
+        "correct_feat": "the creation of a Jewish state in Palestine",
+        "options": "1. the first figural stained glass window made in the United States\n2. the creation of a Jewish state in Palestine\n3. improving meat quality and tenderness",
+        "correct_num": 2,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> was created for [MASK].\n\nOptions:\n1. the first figural stained glass window made in the United States\n2. the creation of a Jewish state in Palestine\n3. improving meat quality and tenderness"
+    },
+    {
+        "test_id": 23,
+        "relation": "CreatedIn",
+        "correct_feat": "Central and Eastern Europe",
+        "options": "1. Concepción\n2. 1968\n3. Central and Eastern Europe",
+        "correct_num": 3,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> was created in [MASK].\n\nOptions:\n1. Concepción\n2. 1968\n3. Central and Eastern Europe"
+    },
+    {
+        "test_id": 24,
+        "relation": "CreatedTo",
+        "correct_feat": "establish and support a Jewish homeland through colonization in the region of Palestine",
+        "options": "1. establish and support a Jewish homeland through colonization in the region of Palestine\n2. extend its art\n3. inspire other aspiring musicians",
+        "correct_num": 1,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> was created to [MASK].\n\nOptions:\n1. establish and support a Jewish homeland through colonization in the region of Palestine\n2. extend its art\n3. inspire other aspiring musicians"
+    },
+    {
+        "test_id": 25,
+        "relation": "CreatedTo",
+        "correct_feat": "create a Jewish state in Palestine",
+        "options": "1. encourage amateur radio operators to operate portable from protected nature areas\n2. create a Jewish state in Palestine\n3. rule over central and southern Iran, and Iraq",
+        "correct_num": 2,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> was created to [MASK].\n\nOptions:\n1. encourage amateur radio operators to operate portable from protected nature areas\n2. create a Jewish state in Palestine\n3. rule over central and southern Iran, and Iraq"
+    },
+    {
+        "test_id": 26,
+        "relation": "CreatedTo",
+        "correct_feat": "achieve national self-determination for Jews",
+        "options": "1. capture more seeds than one's opponent\n2. clarify the legal consequences under these obligations for States whose actions or omissions have contributed to such emissions and caused harm to the climate and environment\n3. achieve national self-determination for Jews",
+        "correct_num": 3,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> was created to [MASK].\n\nOptions:\n1. capture more seeds than one's opponent\n2. clarify the legal consequences under these obligations for States whose actions or omissions have contributed to such emissions and caused harm to the climate and environment\n3. achieve national self-determination for Jews"
+    },
+    {
+        "test_id": 27,
+        "relation": "CreatedTo",
+        "correct_feat": "achieve a Jewish demographic majority in Palestine",
+        "options": "1. achieve a Jewish demographic majority in Palestine\n2. remind viewers of the dynasty's origins and the importance of its rule\n3. recreate the adrenaline rush and tension experienced during the final minutes of a live escape room within a card game format",
+        "correct_num": 1,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> was created to [MASK].\n\nOptions:\n1. achieve a Jewish demographic majority in Palestine\n2. remind viewers of the dynasty's origins and the importance of its rule\n3. recreate the adrenaline rush and tension experienced during the final minutes of a live escape room within a card game format"
+    },
+    {
+        "test_id": 28,
+        "relation": "HasA",
+        "correct_feat": "a belief that Jews constitute a nation",
+        "options": "1. a very strong wooden shaft and a heavy metal head\n2. a belief that Jews constitute a nation\n3. an empty casket at the foot of the bed",
+        "correct_num": 2,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> has [MASK].\n\nOptions:\n1. a very strong wooden shaft and a heavy metal head\n2. a belief that Jews constitute a nation\n3. an empty casket at the foot of the bed"
+    },
+    {
+        "test_id": 29,
+        "relation": "HasA",
+        "correct_feat": "a moral and historic right and need for self-determination",
+        "options": "1. a pattern of parallel, diagonal ribs\n2. an album titled Trop d'amour\n3. a moral and historic right and need for self-determination",
+        "correct_num": 3,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> has [MASK].\n\nOptions:\n1. a pattern of parallel, diagonal ribs\n2. an album titled Trop d'amour\n3. a moral and historic right and need for self-determination"
+    },
+    {
+        "test_id": 30,
+        "relation": "HasA",
+        "correct_feat": "a goal of establishing a Jewish state in Palestine",
+        "options": "1. a goal of establishing a Jewish state in Palestine\n2. a crowd shouting 'Hosanna!'\n3. a section painted blue for the next President in front of the reflecting pool",
+        "correct_num": 1,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> has [MASK].\n\nOptions:\n1. a goal of establishing a Jewish state in Palestine\n2. a crowd shouting 'Hosanna!'\n3. a section painted blue for the next President in front of the reflecting pool"
+    },
+    {
+        "test_id": 31,
+        "relation": "HasA",
+        "correct_feat": "a goal of establishing a Jewish demographic majority",
+        "options": "1. a second international album titled Dangerous and Moving\n2. a goal of establishing a Jewish demographic majority\n3. a cultural landmark status",
+        "correct_num": 2,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> has [MASK].\n\nOptions:\n1. a second international album titled Dangerous and Moving\n2. a goal of establishing a Jewish demographic majority\n3. a cultural landmark status"
+    },
+    {
+        "test_id": 32,
+        "relation": "HasA",
+        "correct_feat": "a claim to Palestine based on historical right",
+        "options": "1. a nickname\n2. characteristics that are sometimes called 'semifeudal'\n3. a claim to Palestine based on historical right",
+        "correct_num": 3,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> has [MASK].\n\nOptions:\n1. a nickname\n2. characteristics that are sometimes called 'semifeudal'\n3. a claim to Palestine based on historical right"
+    },
+    {
+        "test_id": 33,
+        "relation": "HasA",
+        "correct_feat": "various types of Zionism",
+        "options": "1. various types of Zionism\n2. a niche\n3. a Showdown Phase",
+        "correct_num": 1,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> has [MASK].\n\nOptions:\n1. various types of Zionism\n2. a niche\n3. a Showdown Phase"
+    },
+    {
+        "test_id": 34,
+        "relation": "HasA",
+        "correct_feat": "mainstream historical types including Liberal, Labor, Revisionist, and Cultural Zionism",
+        "options": "1. a king-piece\n2. mainstream historical types including Liberal, Labor, Revisionist, and Cultural Zionism\n3. dimension added to the shallow stage for the figures",
+        "correct_num": 2,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> has [MASK].\n\nOptions:\n1. a king-piece\n2. mainstream historical types including Liberal, Labor, Revisionist, and Cultural Zionism\n3. dimension added to the shallow stage for the figures"
+    },
+    {
+        "test_id": 35,
+        "relation": "HasA",
+        "correct_feat": "dissident factions like Brit Shalom and Ihud",
+        "options": "1. a 6-sided die\n2. a death toll estimate ranging from 2.28 to 7.71 million\n3. dissident factions like Brit Shalom and Ihud",
+        "correct_num": 3,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> has [MASK].\n\nOptions:\n1. a 6-sided die\n2. a death toll estimate ranging from 2.28 to 7.71 million\n3. dissident factions like Brit Shalom and Ihud"
+    },
+    {
+        "test_id": 36,
+        "relation": "HasA",
+        "correct_feat": "a variant called Religious Zionism",
+        "options": "1. a variant called Religious Zionism\n2. a country path that broadens into a road and joins with the city road\n3. a 15th-century Byzantine icon",
+        "correct_num": 1,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> has [MASK].\n\nOptions:\n1. a variant called Religious Zionism\n2. a country path that broadens into a road and joins with the city road\n3. a 15th-century Byzantine icon"
+    },
+    {
+        "test_id": 37,
+        "relation": "HasA",
+        "correct_feat": "a belief that the Jewish claim to Palestine outweighed that of the local Arabs",
+        "options": "1. two brothers as its members\n2. a belief that the Jewish claim to Palestine outweighed that of the local Arabs\n3. singers with open mouths",
+        "correct_num": 2,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> has [MASK].\n\nOptions:\n1. two brothers as its members\n2. a belief that the Jewish claim to Palestine outweighed that of the local Arabs\n3. singers with open mouths"
+    },
+    {
+        "test_id": 38,
+        "relation": "HasFeatureOf",
+        "correct_feat": "ethnocultural nationalism",
+        "options": "1. manipulated cherry stones being found on the spitting range\n2. its message concerned with Venezuela's social present\n3. ethnocultural nationalism",
+        "correct_num": 3,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is characterized by [MASK].\n\nOptions:\n1. manipulated cherry stones being found on the spitting range\n2. its message concerned with Venezuela's social present\n3. ethnocultural nationalism"
+    },
+    {
+        "test_id": 39,
+        "relation": "HasFeatureOf",
+        "correct_feat": "a desire for a Jewish homeland",
+        "options": "1. a desire for a Jewish homeland\n2. being the first depiction of the Paulista Avenue\n3. a plot following a failed attempt by the Rebel Alliance to destroy the second Death Star",
+        "correct_num": 1,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is characterized by [MASK].\n\nOptions:\n1. a desire for a Jewish homeland\n2. being the first depiction of the Paulista Avenue\n3. a plot following a failed attempt by the Rebel Alliance to destroy the second Death Star"
+    },
+    {
+        "test_id": 40,
+        "relation": "HasFeatureOf",
+        "correct_feat": "colonization in Palestine",
+        "options": "1. a king that started in the centre\n2. colonization in Palestine\n3. faithful adherence to the Byzantine pattern",
+        "correct_num": 2,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is characterized by [MASK].\n\nOptions:\n1. a king that started in the centre\n2. colonization in Palestine\n3. faithful adherence to the Byzantine pattern"
+    },
+    {
+        "test_id": 41,
+        "relation": "HasFeatureOf",
+        "correct_feat": "a belief in national self-determination for Jews",
+        "options": "1. the carts being usually themed\n2. its conditions\n3. a belief in national self-determination for Jews",
+        "correct_num": 3,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is characterized by [MASK].\n\nOptions:\n1. the carts being usually themed\n2. its conditions\n3. a belief in national self-determination for Jews"
+    },
+    {
+        "test_id": 42,
+        "relation": "HasFeatureOf",
+        "correct_feat": "the goal of a Jewish demographic majority",
+        "options": "1. the goal of a Jewish demographic majority\n2. being the longest board game ever produced\n3. being used in over 40 television shows and movies",
+        "correct_num": 1,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is characterized by [MASK].\n\nOptions:\n1. the goal of a Jewish demographic majority\n2. being the longest board game ever produced\n3. being used in over 40 television shows and movies"
+    },
+    {
+        "test_id": 43,
+        "relation": "HasFeatureOf",
+        "correct_feat": "a claim to Palestine based on historical right",
+        "options": "1. the shouting of 'Blessed is he who comes in the name of the Lord!'\n2. a claim to Palestine based on historical right\n3. lasting influence on American music and culture",
+        "correct_num": 2,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is characterized by [MASK].\n\nOptions:\n1. the shouting of 'Blessed is he who comes in the name of the Lord!'\n2. a claim to Palestine based on historical right\n3. lasting influence on American music and culture"
+    },
+    {
+        "test_id": 44,
+        "relation": "HasFeatureOf",
+        "correct_feat": "various interpretations and types",
+        "options": "1. variations played throughout India\n2. slight variations as to the layout of the game, number of players and strategy of play\n3. various interpretations and types",
+        "correct_num": 3,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is characterized by [MASK].\n\nOptions:\n1. variations played throughout India\n2. slight variations as to the layout of the game, number of players and strategy of play\n3. various interpretations and types"
+    },
+    {
+        "test_id": 45,
+        "relation": "HasFeatureOf",
+        "correct_feat": "opposition from some groups who view it as supremacist, colonialist, or racist",
+        "options": "1. opposition from some groups who view it as supremacist, colonialist, or racist\n2. the Christ child precociously recognizing the niddy-noddy as a symbol of his destiny\n3. being a jazz duo",
+        "correct_num": 1,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is characterized by [MASK].\n\nOptions:\n1. opposition from some groups who view it as supremacist, colonialist, or racist\n2. the Christ child precociously recognizing the niddy-noddy as a symbol of his destiny\n3. being a jazz duo"
+    },
+    {
+        "test_id": 46,
+        "relation": "Influenced",
+        "correct_feat": "the establishment of the State of Israel",
+        "options": "1. the Ming dynasty\n2. the establishment of the State of Israel\n3. the work of William Butler Yeats",
+        "correct_num": 2,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> influenced [MASK].\n\nOptions:\n1. the Ming dynasty\n2. the establishment of the State of Israel\n3. the work of William Butler Yeats"
+    },
+    {
+        "test_id": 47,
+        "relation": "Influenced",
+        "correct_feat": "the 1948 Palestinian expulsion and flight",
+        "options": "1. the Ming dynasty\n2. video games\n3. the 1948 Palestinian expulsion and flight",
+        "correct_num": 3,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> influenced [MASK].\n\nOptions:\n1. the Ming dynasty\n2. video games\n3. the 1948 Palestinian expulsion and flight"
+    },
+    {
+        "test_id": 48,
+        "relation": "InfluencedBy",
+        "correct_feat": "new waves of antisemitism",
+        "options": "1. new waves of antisemitism\n2. Tintoretto\n3. African slaves",
+        "correct_num": 1,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> was influenced by [MASK].\n\nOptions:\n1. new waves of antisemitism\n2. Tintoretto\n3. African slaves"
+    },
+    {
+        "test_id": 49,
+        "relation": "InfluencedBy",
+        "correct_feat": "the Haskalah, or Jewish Enlightenment",
+        "options": "1. the literary renditions of Ovid and Fulgentius\n2. the Haskalah, or Jewish Enlightenment\n3. the album Streetremixes from D-men",
+        "correct_num": 2,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> was influenced by [MASK].\n\nOptions:\n1. the literary renditions of Ovid and Fulgentius\n2. the Haskalah, or Jewish Enlightenment\n3. the album Streetremixes from D-men"
+    },
+    {
+        "test_id": 50,
+        "relation": "InfluencedBy",
+        "correct_feat": "Leon Pinsker's pamphlet Auto-Emancipation",
+        "options": "1. the personal union between the Kingdom of Poland and the Grand Duchy of Lithuania\n2. the synth-pop sound of Tubeway Army\n3. Leon Pinsker's pamphlet Auto-Emancipation",
+        "correct_num": 3,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> was influenced by [MASK].\n\nOptions:\n1. the personal union between the Kingdom of Poland and the Grand Duchy of Lithuania\n2. the synth-pop sound of Tubeway Army\n3. Leon Pinsker's pamphlet Auto-Emancipation"
+    },
+    {
+        "test_id": 51,
+        "relation": "InfluencedBy",
+        "correct_feat": "Theodor Herzl's writings and actions",
+        "options": "1. Theodor Herzl's writings and actions\n2. the Seleucid Empire\n3. a decline in youth American Football participation",
+        "correct_num": 1,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> was influenced by [MASK].\n\nOptions:\n1. Theodor Herzl's writings and actions\n2. the Seleucid Empire\n3. a decline in youth American Football participation"
+    },
+    {
+        "test_id": 52,
+        "relation": "InfluencedBy",
+        "correct_feat": "the Balfour Declaration",
+        "options": "1. Byzantine art\n2. the Balfour Declaration\n3. trucks",
+        "correct_num": 2,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> was influenced by [MASK].\n\nOptions:\n1. Byzantine art\n2. the Balfour Declaration\n3. trucks"
+    },
+    {
+        "test_id": 53,
+        "relation": "InfluencedBy",
+        "correct_feat": "the Mandate for Palestine",
+        "options": "1. the Ming dynasty\n2. softball\n3. the Mandate for Palestine",
+        "correct_num": 3,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> was influenced by [MASK].\n\nOptions:\n1. the Ming dynasty\n2. softball\n3. the Mandate for Palestine"
+    },
+    {
+        "test_id": 54,
+        "relation": "InfluencedBy",
+        "correct_feat": "the Holocaust",
+        "options": "1. the Holocaust\n2. the development of agriculture\n3. Qin dynasty",
+        "correct_num": 1,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> was influenced by [MASK].\n\nOptions:\n1. the Holocaust\n2. the development of agriculture\n3. Qin dynasty"
+    },
+    {
+        "test_id": 55,
+        "relation": "IsA",
+        "correct_feat": "an ethnocultural nationalist movement",
+        "options": "1. a short-range, high-performance interceptor aircraft\n2. an ethnocultural nationalist movement\n3. a painkiller headache",
+        "correct_num": 2,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is [MASK].\n\nOptions:\n1. a short-range, high-performance interceptor aircraft\n2. an ethnocultural nationalist movement\n3. a painkiller headache"
+    },
+    {
+        "test_id": 56,
+        "relation": "IsA",
+        "correct_feat": "a secular nationalist movement",
+        "options": "1. a maritime, hunter-gatherer society\n2. a common sight on the streets of London\n3. a secular nationalist movement",
+        "correct_num": 3,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is [MASK].\n\nOptions:\n1. a maritime, hunter-gatherer society\n2. a common sight on the streets of London\n3. a secular nationalist movement"
+    },
+    {
+        "test_id": 57,
+        "relation": "IsA",
+        "correct_feat": "a national liberation movement",
+        "options": "1. a national liberation movement\n2. a sport with a history dating back to at least the eighth century in England\n3. a tradition",
+        "correct_num": 1,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is [MASK].\n\nOptions:\n1. a national liberation movement\n2. a sport with a history dating back to at least the eighth century in England\n3. a tradition"
+    },
+    {
+        "test_id": 58,
+        "relation": "IsA",
+        "correct_feat": "a settler colonialist movement",
+        "options": "1. a heated political debate\n2. a settler colonialist movement\n3. a music EP",
+        "correct_num": 2,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is [MASK].\n\nOptions:\n1. a heated political debate\n2. a settler colonialist movement\n3. a music EP"
+    },
+    {
+        "test_id": 59,
+        "relation": "IsA",
+        "correct_feat": "an ideology",
+        "options": "1. a culturally Arabized, Sunni Muslim dynasty\n2. a spectacular mural\n3. an ideology",
+        "correct_num": 3,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is [MASK].\n\nOptions:\n1. a culturally Arabized, Sunni Muslim dynasty\n2. a spectacular mural\n3. an ideology"
+    },
+    {
+        "test_id": 60,
+        "relation": "KnownFor",
+        "correct_feat": "advocating for a Jewish homeland in Palestine",
+        "options": "1. advocating for a Jewish homeland in Palestine\n2. variations in rules, such as WAFU Rules\n3. being the first exponent of flamenco music aimed at a non-exclusively flamenco audience",
+        "correct_num": 1,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is known for [MASK].\n\nOptions:\n1. advocating for a Jewish homeland in Palestine\n2. variations in rules, such as WAFU Rules\n3. being the first exponent of flamenco music aimed at a non-exclusively flamenco audience"
+    },
+    {
+        "test_id": 61,
+        "relation": "KnownFor",
+        "correct_feat": "its role in the establishment of the State of Israel",
+        "options": "1. its global reach with players in over 200 countries and territories\n2. its role in the establishment of the State of Israel\n3. its popularity in school playgrounds",
+        "correct_num": 2,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is known for [MASK].\n\nOptions:\n1. its global reach with players in over 200 countries and territories\n2. its role in the establishment of the State of Israel\n3. its popularity in school playgrounds"
+    },
+    {
+        "test_id": 62,
+        "relation": "KnownFor",
+        "correct_feat": "its varying interpretations and types",
+        "options": "1. being stolen and returned many times\n2. its quest to destroy the One Ring\n3. its varying interpretations and types",
+        "correct_num": 3,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is known for [MASK].\n\nOptions:\n1. being stolen and returned many times\n2. its quest to destroy the One Ring\n3. its varying interpretations and types"
+    },
+    {
+        "test_id": 63,
+        "relation": "KnownFor",
+        "correct_feat": "its historical connection to Mount Zion and the Land of Israel",
+        "options": "1. its historical connection to Mount Zion and the Land of Israel\n2. its role in the Soviet Union\n3. its tender portrayal of the bond between mother and child",
+        "correct_num": 1,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is known for [MASK].\n\nOptions:\n1. its historical connection to Mount Zion and the Land of Israel\n2. its role in the Soviet Union\n3. its tender portrayal of the bond between mother and child"
+    },
+    {
+        "test_id": 64,
+        "relation": "OccurredAround",
+        "correct_feat": "the late 19th century",
+        "options": "1. the 20th–16th centuries BCE\n2. the late 19th century\n3. 300,000 years ago",
+        "correct_num": 2,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> occurred around [MASK].\n\nOptions:\n1. the 20th–16th centuries BCE\n2. the late 19th century\n3. 300,000 years ago"
+    },
+    {
+        "test_id": 65,
+        "relation": "OriginatedIn",
+        "correct_feat": "late 19th-century Europe",
+        "options": "1. Sweden\n2. the release of the video game Donkey Kong in 1981\n3. late 19th-century Europe",
+        "correct_num": 3,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> originated in [MASK].\n\nOptions:\n1. Sweden\n2. the release of the video game Donkey Kong in 1981\n3. late 19th-century Europe"
+    },
+    {
+        "test_id": 66,
+        "relation": "PartOf",
+        "correct_feat": "nationalist movements",
+        "options": "1. nationalist movements\n2. the Benaki Museum collection\n3. mancala games",
+        "correct_num": 1,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is part of [MASK].\n\nOptions:\n1. nationalist movements\n2. the Benaki Museum collection\n3. mancala games"
+    },
+    {
+        "test_id": 67,
+        "relation": "PartOf",
+        "correct_feat": "the history of Jewish self-determination",
+        "options": "1. Bring Me the Horizon\n2. the history of Jewish self-determination\n3. the series Space: 1999",
+        "correct_num": 2,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is part of [MASK].\n\nOptions:\n1. Bring Me the Horizon\n2. the history of Jewish self-determination\n3. the series Space: 1999"
+    },
+    {
+        "test_id": 68,
+        "relation": "UsedAs",
+        "correct_feat": "a term to refer to the Land of Israel poetically",
+        "options": "1. a form of entertainment\n2. a testing ground for new tactics and aircraft\n3. a term to refer to the Land of Israel poetically",
+        "correct_num": 3,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is used as [MASK].\n\nOptions:\n1. a form of entertainment\n2. a testing ground for new tactics and aircraft\n3. a term to refer to the Land of Israel poetically"
+    },
+    {
+        "test_id": 69,
+        "relation": "UsedAs",
+        "correct_feat": "a synecdoche to refer to the Land of Israel",
+        "options": "1. a synecdoche to refer to the Land of Israel\n2. a launch tower\n3. a means to raise awareness for farms and harvests",
+        "correct_num": 1,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is used as [MASK].\n\nOptions:\n1. a synecdoche to refer to the Land of Israel\n2. a launch tower\n3. a means to raise awareness for farms and harvests"
+    },
+    {
+        "test_id": 70,
+        "relation": "UsedAs",
+        "correct_feat": "a term in political contexts in antiquity",
+        "options": "1. a venerated icon\n2. a term in political contexts in antiquity\n3. a narrative in art, literature, and poetry",
+        "correct_num": 2,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is used as [MASK].\n\nOptions:\n1. a venerated icon\n2. a term in political contexts in antiquity\n3. a narrative in art, literature, and poetry"
+    },
+    {
+        "test_id": 71,
+        "relation": "UsedAs",
+        "correct_feat": "a term to describe emigration advocates",
+        "options": "1. a ladder for firefighting/rescue operations\n2. a game that was weakly solved in 2007\n3. a term to describe emigration advocates",
+        "correct_num": 3,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is used as [MASK].\n\nOptions:\n1. a ladder for firefighting/rescue operations\n2. a game that was weakly solved in 2007\n3. a term to describe emigration advocates"
+    },
+    {
+        "test_id": 72,
+        "relation": "UsedAs",
+        "correct_feat": "a term to describe Jewish nationalists",
+        "options": "1. a term to describe Jewish nationalists\n2. a symbol of the three ages of man\n3. a historical artifact",
+        "correct_num": 1,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is used as [MASK].\n\nOptions:\n1. a term to describe Jewish nationalists\n2. a symbol of the three ages of man\n3. a historical artifact"
+    },
+    {
+        "test_id": 73,
+        "relation": "UsedAs",
+        "correct_feat": "a term to describe the activities of the Lovers of Zion",
+        "options": "1. a second voice\n2. a term to describe the activities of the Lovers of Zion\n3. commercial entertainment",
+        "correct_num": 2,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is used as [MASK].\n\nOptions:\n1. a second voice\n2. a term to describe the activities of the Lovers of Zion\n3. commercial entertainment"
+    },
+    {
+        "test_id": 74,
+        "relation": "UsedAs",
+        "correct_feat": "a term to describe the various activities of the Lovers of Zion",
+        "options": "1. a fundraiser for the Steeplechase Cancer Center at the Somerset Medical Center\n2. a radio mast\n3. a term to describe the various activities of the Lovers of Zion",
+        "correct_num": 3,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is used as [MASK].\n\nOptions:\n1. a fundraiser for the Steeplechase Cancer Center at the Somerset Medical Center\n2. a radio mast\n3. a term to describe the various activities of the Lovers of Zion"
+    },
+    {
+        "test_id": 75,
+        "relation": "UsedAs",
+        "correct_feat": "a term to describe the national rebirth of the Jewish people",
+        "options": "1. a term to describe the national rebirth of the Jewish people\n2. a smaller version of Blokus Duo in the Travel version\n3. a patroness of the galleons",
+        "correct_num": 1,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is used as [MASK].\n\nOptions:\n1. a term to describe the national rebirth of the Jewish people\n2. a smaller version of Blokus Duo in the Travel version\n3. a patroness of the galleons"
+    },
+    {
+        "test_id": 76,
+        "relation": "UsedAs",
+        "correct_feat": "a term to describe the creation of a Jewish state",
+        "options": "1. sudden transitory pain\n2. a term to describe the creation of a Jewish state\n3. a cover version of \"Gonna Make You Sweat (Everybody Dance Now)\"",
+        "correct_num": 2,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is used as [MASK].\n\nOptions:\n1. sudden transitory pain\n2. a term to describe the creation of a Jewish state\n3. a cover version of \"Gonna Make You Sweat (Everybody Dance Now)\""
+    },
+    {
+        "test_id": 77,
+        "relation": "UsedAs",
+        "correct_feat": "a term to describe a national liberation movement",
+        "options": "1. a recreational sport\n2. a celebration on Palm Sunday\n3. a term to describe a national liberation movement",
+        "correct_num": 3,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is used as [MASK].\n\nOptions:\n1. a recreational sport\n2. a celebration on Palm Sunday\n3. a term to describe a national liberation movement"
+    },
+    {
+        "test_id": 78,
+        "relation": "UsedFor",
+        "correct_feat": "establishing and supporting a Jewish homeland",
+        "options": "1. establishing and supporting a Jewish homeland\n2. safeguarding participant conduct\n3. building units",
+        "correct_num": 1,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is used for [MASK].\n\nOptions:\n1. establishing and supporting a Jewish homeland\n2. safeguarding participant conduct\n3. building units"
+    },
+    {
+        "test_id": 79,
+        "relation": "UsedFor",
+        "correct_feat": "colonization in the region of Palestine",
+        "options": "1. team attendance at Major and Minor League baseball games\n2. colonization in the region of Palestine\n3. painting a facade and a dining room in the same style",
+        "correct_num": 2,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is used for [MASK].\n\nOptions:\n1. team attendance at Major and Minor League baseball games\n2. colonization in the region of Palestine\n3. painting a facade and a dining room in the same style"
+    },
+    {
+        "test_id": 80,
+        "relation": "UsedFor",
+        "correct_feat": "the creation of a Jewish state",
+        "options": "1. achieving its \"true national unification\"\n2. attacking\n3. the creation of a Jewish state",
+        "correct_num": 3,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is used for [MASK].\n\nOptions:\n1. achieving its \"true national unification\"\n2. attacking\n3. the creation of a Jewish state"
+    },
+    {
+        "test_id": 81,
+        "relation": "UsedFor",
+        "correct_feat": "national self-determination",
+        "options": "1. national self-determination\n2. distinguishing the conical hill named Staufen\n3. achieving all pieces home without the opponent getting any home at all",
+        "correct_num": 1,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is used for [MASK].\n\nOptions:\n1. national self-determination\n2. distinguishing the conical hill named Staufen\n3. achieving all pieces home without the opponent getting any home at all"
+    },
+    {
+        "test_id": 82,
+        "relation": "UsedFor",
+        "correct_feat": "the repatriation of an indigenous people",
+        "options": "1. improving concentration\n2. the repatriation of an indigenous people\n3. ads for Hyundai",
+        "correct_num": 2,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is used for [MASK].\n\nOptions:\n1. improving concentration\n2. the repatriation of an indigenous people\n3. ads for Hyundai"
+    },
+    {
+        "test_id": 83,
+        "relation": "UsedFor",
+        "correct_feat": "establishing a Jewish demographic majority",
+        "options": "1. getting the succeeding player out\n2. forming the subject of many individual works\n3. establishing a Jewish demographic majority",
+        "correct_num": 3,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is used for [MASK].\n\nOptions:\n1. getting the succeeding player out\n2. forming the subject of many individual works\n3. establishing a Jewish demographic majority"
+    },
+    {
+        "test_id": 84,
+        "relation": "UsedFor",
+        "correct_feat": "the removal of the Palestinian population",
+        "options": "1. the removal of the Palestinian population\n2. simulating the conflict between Germany and the Soviet Union during World War II\n3. a campaign to end the practice of children separated from their parents",
+        "correct_num": 1,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is used for [MASK].\n\nOptions:\n1. the removal of the Palestinian population\n2. simulating the conflict between Germany and the Soviet Union during World War II\n3. a campaign to end the practice of children separated from their parents"
+    },
+    {
+        "test_id": 85,
+        "relation": "UsedFor",
+        "correct_feat": "transforming an Arab land into a Jewish state",
+        "options": "1. explaining the sequencing of subject, verb, and object\n2. transforming an Arab land into a Jewish state\n3. passenger rail service",
+        "correct_num": 2,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is used for [MASK].\n\nOptions:\n1. explaining the sequencing of subject, verb, and object\n2. transforming an Arab land into a Jewish state\n3. passenger rail service"
+    },
+    {
+        "test_id": 86,
+        "relation": "UsedIn",
+        "correct_feat": "Judaism",
+        "options": "1. the Palazzo Medici Procession of the Magi\n2. the church of San Damiano\n3. Judaism",
+        "correct_num": 3,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is used in [MASK].\n\nOptions:\n1. the Palazzo Medici Procession of the Magi\n2. the church of San Damiano\n3. Judaism"
+    },
+    {
+        "test_id": 87,
+        "relation": "UsedIn",
+        "correct_feat": "Jewish history",
+        "options": "1. Jewish history\n2. Hatsune Miku: Project DIVA F\n3. the Musée du Luxembourg",
+        "correct_num": 1,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is used in [MASK].\n\nOptions:\n1. Jewish history\n2. Hatsune Miku: Project DIVA F\n3. the Musée du Luxembourg"
+    },
+    {
+        "test_id": 88,
+        "relation": "UsedIn",
+        "correct_feat": "Jewish messianic belief",
+        "options": "1. the context of the Geneva Conventions\n2. Jewish messianic belief\n3. films like Chandramukhi",
+        "correct_num": 2,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is used in [MASK].\n\nOptions:\n1. the context of the Geneva Conventions\n2. Jewish messianic belief\n3. films like Chandramukhi"
+    },
+    {
+        "test_id": 89,
+        "relation": "UsedIn",
+        "correct_feat": "political contexts in antiquity",
+        "options": "1. the Netflix film El Camino: A Breaking Bad Movie\n2. public squares\n3. political contexts in antiquity",
+        "correct_num": 3,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is used in [MASK].\n\nOptions:\n1. the Netflix film El Camino: A Breaking Bad Movie\n2. public squares\n3. political contexts in antiquity"
+    },
+    {
+        "test_id": 90,
+        "relation": "UsedIn",
+        "correct_feat": "coinage issued during the First Jewish Revolt",
+        "options": "1. coinage issued during the First Jewish Revolt\n2. board games\n3. the press",
+        "correct_num": 1,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is used in [MASK].\n\nOptions:\n1. coinage issued during the First Jewish Revolt\n2. board games\n3. the press"
+    },
+    {
+        "test_id": 91,
+        "relation": "UsedIn",
+        "correct_feat": "proto-Zionist texts",
+        "options": "1. Canada\n2. proto-Zionist texts\n3. play by e-mail",
+        "correct_num": 2,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is used in [MASK].\n\nOptions:\n1. Canada\n2. proto-Zionist texts\n3. play by e-mail"
+    },
+    {
+        "test_id": 92,
+        "relation": "UsedIn",
+        "correct_feat": "the activities of Hovevei Zion",
+        "options": "1. Dublin\n2. Australia, New Zealand and Ireland\n3. the activities of Hovevei Zion",
+        "correct_num": 3,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is used in [MASK].\n\nOptions:\n1. Dublin\n2. Australia, New Zealand and Ireland\n3. the activities of Hovevei Zion"
+    },
+    {
+        "test_id": 93,
+        "relation": "UsedIn",
+        "correct_feat": "the activities of the Lovers of Zion",
+        "options": "1. the activities of the Lovers of Zion\n2. the United States\n3. international tournaments called Cricket On Ice",
+        "correct_num": 1,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is used in [MASK].\n\nOptions:\n1. the activities of the Lovers of Zion\n2. the United States\n3. international tournaments called Cricket On Ice"
+    },
+    {
+        "test_id": 94,
+        "relation": "UsedIn",
+        "correct_feat": "the Katowice Conference",
+        "options": "1. the Atlantic Ocean\n2. the Katowice Conference\n3. the South-East Asian theatre",
+        "correct_num": 2,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is used in [MASK].\n\nOptions:\n1. the Atlantic Ocean\n2. the Katowice Conference\n3. the South-East Asian theatre"
+    },
+    {
+        "test_id": 95,
+        "relation": "UsedIn",
+        "correct_feat": "periodicals",
+        "options": "1. John O'Hara's novel BUtterfield 8\n2. the planned Sanctuary of The Divine Mercy\n3. periodicals",
+        "correct_num": 3,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is used in [MASK].\n\nOptions:\n1. John O'Hara's novel BUtterfield 8\n2. the planned Sanctuary of The Divine Mercy\n3. periodicals"
+    },
+    {
+        "test_id": 96,
+        "relation": "UsedTo",
+        "correct_feat": "establish and support a Jewish homeland",
+        "options": "1. establish and support a Jewish homeland\n2. rank competitors\n3. limit the physical contact between players",
+        "correct_num": 1,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is used to [MASK].\n\nOptions:\n1. establish and support a Jewish homeland\n2. rank competitors\n3. limit the physical contact between players"
+    },
+    {
+        "test_id": 97,
+        "relation": "UsedTo",
+        "correct_feat": "create a Jewish state in Palestine",
+        "options": "1. describe economic systems\n2. create a Jewish state in Palestine\n3. practice a religion",
+        "correct_num": 2,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is used to [MASK].\n\nOptions:\n1. describe economic systems\n2. create a Jewish state in Palestine\n3. practice a religion"
+    },
+    {
+        "test_id": 98,
+        "relation": "UsedTo",
+        "correct_feat": "achieve national self-determination for Jews",
+        "options": "1. defeat Coragus\n2. measure jump distance\n3. achieve national self-determination for Jews",
+        "correct_num": 3,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is used to [MASK].\n\nOptions:\n1. defeat Coragus\n2. measure jump distance\n3. achieve national self-determination for Jews"
+    },
+    {
+        "test_id": 99,
+        "relation": "UsedTo",
+        "correct_feat": "establish a Jewish demographic majority",
+        "options": "1. establish a Jewish demographic majority\n2. repel the Swedish invasion of 1709\n3. orient public attention and conversation",
+        "correct_num": 1,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is used to [MASK].\n\nOptions:\n1. establish a Jewish demographic majority\n2. repel the Swedish invasion of 1709\n3. orient public attention and conversation"
+    },
+    {
+        "test_id": 100,
+        "relation": "UsedTo",
+        "correct_feat": "remove the Palestinian population",
+        "options": "1. attack Allied shipping\n2. remove the Palestinian population\n3. grip the wing",
+        "correct_num": 2,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is used to [MASK].\n\nOptions:\n1. attack Allied shipping\n2. remove the Palestinian population\n3. grip the wing"
+    },
+    {
+        "test_id": 101,
+        "relation": "UsedTo",
+        "correct_feat": "transform an Arab land into a Jewish state",
+        "options": "1. elude the grasp of riders\n2. recreate the building of railroad corporations\n3. transform an Arab land into a Jewish state",
+        "correct_num": 3,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is used to [MASK].\n\nOptions:\n1. elude the grasp of riders\n2. recreate the building of railroad corporations\n3. transform an Arab land into a Jewish state"
+    }
+]

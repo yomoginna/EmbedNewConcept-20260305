@@ -1,0 +1,426 @@
+[
+    {
+        "test_id": 0,
+        "relation": "About",
+        "correct_feat": "a Belgian DJ duo composed of brothers Dimitri Thivaios and Michael Thivaios",
+        "options": "1. a Belgian DJ duo composed of brothers Dimitri Thivaios and Michael Thivaios\n2. a rodeo sport involving a rider on a bucking bull\n3. life and time on Horn Island",
+        "correct_num": 1,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is about [MASK].\n\nOptions:\n1. a Belgian DJ duo composed of brothers Dimitri Thivaios and Michael Thivaios\n2. a rodeo sport involving a rider on a bucking bull\n3. life and time on Horn Island"
+    },
+    {
+        "test_id": 1,
+        "relation": "AssociatedWith",
+        "correct_feat": "the record label Smash the House",
+        "options": "1. the Fourteenth Amendment\n2. the record label Smash the House\n3. the First Spanish Republic",
+        "correct_num": 2,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is associated with [MASK].\n\nOptions:\n1. the Fourteenth Amendment\n2. the record label Smash the House\n3. the First Spanish Republic"
+    },
+    {
+        "test_id": 2,
+        "relation": "ConsistsOf",
+        "correct_feat": "brothers Dimitri Thivaios and Michael Thivaios",
+        "options": "1. apostles Peter and John\n2. a rocky outcrop in the foreground\n3. brothers Dimitri Thivaios and Michael Thivaios",
+        "correct_num": 3,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> consists of [MASK].\n\nOptions:\n1. apostles Peter and John\n2. a rocky outcrop in the foreground\n3. brothers Dimitri Thivaios and Michael Thivaios"
+    },
+    {
+        "test_id": 3,
+        "relation": "DirectedBy",
+        "correct_feat": "Belgian directors Adil El Arbi and Bilall Fallah",
+        "options": "1. Belgian directors Adil El Arbi and Bilall Fallah\n2. Kazuyuki Izutsu\n3. Hugo d'Alesi",
+        "correct_num": 1,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> was directed by [MASK].\n\nOptions:\n1. Belgian directors Adil El Arbi and Bilall Fallah\n2. Kazuyuki Izutsu\n3. Hugo d'Alesi"
+    },
+    {
+        "test_id": 4,
+        "relation": "FoundedIn",
+        "correct_feat": "2010",
+        "options": "1. 1977\n2. 2010\n3. 1652",
+        "correct_num": 2,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> was founded in [MASK].\n\nOptions:\n1. 1977\n2. 2010\n3. 1652"
+    },
+    {
+        "test_id": 5,
+        "relation": "HasA",
+        "correct_feat": "a record label named Smash the House",
+        "options": "1. spectators\n2. the Farewell Prayer\n3. a record label named Smash the House",
+        "correct_num": 3,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> has [MASK].\n\nOptions:\n1. spectators\n2. the Farewell Prayer\n3. a record label named Smash the House"
+    },
+    {
+        "test_id": 6,
+        "relation": "HasFeatureOf",
+        "correct_feat": "being ranked No. 1 on DJ Mag's Top 100 DJs list in 2015 and 2019",
+        "options": "1. being ranked No. 1 on DJ Mag's Top 100 DJs list in 2015 and 2019\n2. gliding cross-country for hundreds of kilometers\n3. the use of language",
+        "correct_num": 1,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is characterized by [MASK].\n\nOptions:\n1. being ranked No. 1 on DJ Mag's Top 100 DJs list in 2015 and 2019\n2. gliding cross-country for hundreds of kilometers\n3. the use of language"
+    },
+    {
+        "test_id": 7,
+        "relation": "HeldIn",
+        "correct_feat": "Ibiza at Amnesia",
+        "options": "1. Kish\n2. Ibiza at Amnesia\n3. Sicily",
+        "correct_num": 2,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> was held in [MASK].\n\nOptions:\n1. Kish\n2. Ibiza at Amnesia\n3. Sicily"
+    },
+    {
+        "test_id": 8,
+        "relation": "HeldIn",
+        "correct_feat": "Ibiza at Ushuaïa Ibiza",
+        "options": "1. the National Palace Museum in Taipei, Taiwan\n2. a lawyer's office in Glasgow\n3. Ibiza at Ushuaïa Ibiza",
+        "correct_num": 3,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> was held in [MASK].\n\nOptions:\n1. the National Palace Museum in Taipei, Taiwan\n2. a lawyer's office in Glasgow\n3. Ibiza at Ushuaïa Ibiza"
+    },
+    {
+        "test_id": 9,
+        "relation": "HeldOn",
+        "correct_feat": "16, 17, 18, 19 December",
+        "options": "1. 16, 17, 18, 19 December\n2. 8 May 1995\n3. December 16",
+        "correct_num": 1,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> was held on [MASK].\n\nOptions:\n1. 16, 17, 18, 19 December\n2. 8 May 1995\n3. December 16"
+    },
+    {
+        "test_id": 10,
+        "relation": "IsA",
+        "correct_feat": "a Belgian DJ duo",
+        "options": "1. a viceroy representing Abbasid rule in Persia\n2. a Belgian DJ duo\n3. one martial art",
+        "correct_num": 2,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is [MASK].\n\nOptions:\n1. a viceroy representing Abbasid rule in Persia\n2. a Belgian DJ duo\n3. one martial art"
+    },
+    {
+        "test_id": 11,
+        "relation": "IsA",
+        "correct_feat": "a supergroup consisting of Dimitri Vegas & Like Mike and American DJ Steve Aoki",
+        "options": "1. a game with a transport phase and a building phase\n2. a hazard of shooting\n3. a supergroup consisting of Dimitri Vegas & Like Mike and American DJ Steve Aoki",
+        "correct_num": 3,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is [MASK].\n\nOptions:\n1. a game with a transport phase and a building phase\n2. a hazard of shooting\n3. a supergroup consisting of Dimitri Vegas & Like Mike and American DJ Steve Aoki"
+    },
+    {
+        "test_id": 12,
+        "relation": "IsA",
+        "correct_feat": "known by the stage names Dimitri Vegas and Like Mike",
+        "options": "1. known by the stage names Dimitri Vegas and Like Mike\n2. a main branch of feminism\n3. a war and strategy board wargame",
+        "correct_num": 1,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is [MASK].\n\nOptions:\n1. known by the stage names Dimitri Vegas and Like Mike\n2. a main branch of feminism\n3. a war and strategy board wargame"
+    },
+    {
+        "test_id": 13,
+        "relation": "KnownFor",
+        "correct_feat": "being ranked No. 1 on DJ Mag's Top 100 DJs list in 2015 and 2019",
+        "options": "1. its definition in international conventions\n2. being ranked No. 1 on DJ Mag's Top 100 DJs list in 2015 and 2019\n3. being Marxist–Leninist",
+        "correct_num": 2,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is known for [MASK].\n\nOptions:\n1. its definition in international conventions\n2. being ranked No. 1 on DJ Mag's Top 100 DJs list in 2015 and 2019\n3. being Marxist–Leninist"
+    },
+    {
+        "test_id": 14,
+        "relation": "KnownFor",
+        "correct_feat": "performing at numerous festivals worldwide",
+        "options": "1. its route between Chicago and Seattle or Portland\n2. the 16-inch softball being eventually adopted in Chicago\n3. performing at numerous festivals worldwide",
+        "correct_num": 3,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is known for [MASK].\n\nOptions:\n1. its route between Chicago and Seattle or Portland\n2. the 16-inch softball being eventually adopted in Chicago\n3. performing at numerous festivals worldwide"
+    },
+    {
+        "test_id": 15,
+        "relation": "KnownFor",
+        "correct_feat": "being the official resident DJs at Tomorrowland since 2010",
+        "options": "1. being the official resident DJs at Tomorrowland since 2010\n2. being the second team sport in the United States to be played by women\n3. remaining unsolved",
+        "correct_num": 1,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is known for [MASK].\n\nOptions:\n1. being the official resident DJs at Tomorrowland since 2010\n2. being the second team sport in the United States to be played by women\n3. remaining unsolved"
+    },
+    {
+        "test_id": 16,
+        "relation": "KnownFor",
+        "correct_feat": "holding summer DJ residencies in Ibiza",
+        "options": "1. the Bartz family\n2. holding summer DJ residencies in Ibiza\n3. its popularity in Chicago",
+        "correct_num": 2,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is known for [MASK].\n\nOptions:\n1. the Bartz family\n2. holding summer DJ residencies in Ibiza\n3. its popularity in Chicago"
+    },
+    {
+        "test_id": 17,
+        "relation": "KnownFor",
+        "correct_feat": "running the record label Smash the House",
+        "options": "1. its parallels with Babylonian flood heroes\n2. its economic pragmatism\n3. running the record label Smash the House",
+        "correct_num": 3,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is known for [MASK].\n\nOptions:\n1. its parallels with Babylonian flood heroes\n2. its economic pragmatism\n3. running the record label Smash the House"
+    },
+    {
+        "test_id": 18,
+        "relation": "KnownFor",
+        "correct_feat": "collaborating with artists that include Afrojack, Armin van Buuren, Daddy Yankee, David Guetta, Era Istrefi, Fatboy Slim, Gucci Mane, Hardwell, Martin Garrix, Paris Hilton, Steve Angello, Sebastian Yatra, Kid Ink and Nmixx",
+        "options": "1. collaborating with artists that include Afrojack, Armin van Buuren, Daddy Yankee, David Guetta, Era Istrefi, Fatboy Slim, Gucci Mane, Hardwell, Martin Garrix, Paris Hilton, Steve Angello, Sebastian Yatra, Kid Ink and Nmixx\n2. its lower attrition rate and higher victory-to-loss ratio\n3. its elegant appearance",
+        "correct_num": 1,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is known for [MASK].\n\nOptions:\n1. collaborating with artists that include Afrojack, Armin van Buuren, Daddy Yankee, David Guetta, Era Istrefi, Fatboy Slim, Gucci Mane, Hardwell, Martin Garrix, Paris Hilton, Steve Angello, Sebastian Yatra, Kid Ink and Nmixx\n2. its lower attrition rate and higher victory-to-loss ratio\n3. its elegant appearance"
+    },
+    {
+        "test_id": 19,
+        "relation": "KnownFor",
+        "correct_feat": "remixing artists such as Lady Gaga, the Chainsmokers and (G)I-dle",
+        "options": "1. its route between Chicago and Seattle or Portland\n2. remixing artists such as Lady Gaga, the Chainsmokers and (G)I-dle\n3. its depiction of various modes of transportation",
+        "correct_num": 2,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is known for [MASK].\n\nOptions:\n1. its route between Chicago and Seattle or Portland\n2. remixing artists such as Lady Gaga, the Chainsmokers and (G)I-dle\n3. its depiction of various modes of transportation"
+    },
+    {
+        "test_id": 20,
+        "relation": "KnownFor",
+        "correct_feat": "releasing their first single in 2009, \"Liquid Skies\" under the alias Dnm",
+        "options": "1. its volumetric aspect of the draperies with soft folds\n2. the development of breeds like the Old English Bulldog and Staffordshire Bull Terrier\n3. releasing their first single in 2009, \"Liquid Skies\" under the alias Dnm",
+        "correct_num": 3,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is known for [MASK].\n\nOptions:\n1. its volumetric aspect of the draperies with soft folds\n2. the development of breeds like the Old English Bulldog and Staffordshire Bull Terrier\n3. releasing their first single in 2009, \"Liquid Skies\" under the alias Dnm"
+    },
+    {
+        "test_id": 21,
+        "relation": "KnownFor",
+        "correct_feat": "writing the official anthem for the 2010 edition of Tomorrowland, \"Tomorrow (Give in to the Night)\"",
+        "options": "1. writing the official anthem for the 2010 edition of Tomorrowland, \"Tomorrow (Give in to the Night)\"\n2. its base\n3. its dual creation in Palestine and Israel",
+        "correct_num": 1,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is known for [MASK].\n\nOptions:\n1. writing the official anthem for the 2010 edition of Tomorrowland, \"Tomorrow (Give in to the Night)\"\n2. its base\n3. its dual creation in Palestine and Israel"
+    },
+    {
+        "test_id": 22,
+        "relation": "KnownFor",
+        "correct_feat": "writing the Tomorrowland anthems up to the 2014 edition",
+        "options": "1. being the centerpiece of the Art In Action exhibit\n2. writing the Tomorrowland anthems up to the 2014 edition\n3. being a democratic socialist British political party",
+        "correct_num": 2,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is known for [MASK].\n\nOptions:\n1. being the centerpiece of the Art In Action exhibit\n2. writing the Tomorrowland anthems up to the 2014 edition\n3. being a democratic socialist British political party"
+    },
+    {
+        "test_id": 23,
+        "relation": "PartOf",
+        "correct_feat": "the supergroup 3 Are Legend",
+        "options": "1. a group of \"acute, ironic and cruel observations\"\n2. the Electorate of Saxony\n3. the supergroup 3 Are Legend",
+        "correct_num": 3,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is part of [MASK].\n\nOptions:\n1. a group of \"acute, ironic and cruel observations\"\n2. the Electorate of Saxony\n3. the supergroup 3 Are Legend"
+    },
+    {
+        "test_id": 24,
+        "relation": "ProducedBy",
+        "correct_feat": "Tomorrowland",
+        "options": "1. Tomorrowland\n2. the renaming of public places\n3. Avalon Hill",
+        "correct_num": 1,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> was produced by [MASK].\n\nOptions:\n1. Tomorrowland\n2. the renaming of public places\n3. Avalon Hill"
+    },
+    {
+        "test_id": 25,
+        "relation": "PublishedAs",
+        "correct_feat": "\"Tomorrow (Give in to the Night)\"",
+        "options": "1. a 2006 single\n2. \"Tomorrow (Give in to the Night)\"\n3. the \"Fátima image\"",
+        "correct_num": 2,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> was published as [MASK].\n\nOptions:\n1. a 2006 single\n2. \"Tomorrow (Give in to the Night)\"\n3. the \"Fátima image\""
+    },
+    {
+        "test_id": 26,
+        "relation": "PublishedAs",
+        "correct_feat": "\"Chattahoochee\"",
+        "options": "1. the Organizational Platform of the General Union of Anarchists (Draft)\n2. the 5th edition in 2013\n3. \"Chattahoochee\"",
+        "correct_num": 3,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> was published as [MASK].\n\nOptions:\n1. the Organizational Platform of the General Union of Anarchists (Draft)\n2. the 5th edition in 2013\n3. \"Chattahoochee\""
+    },
+    {
+        "test_id": 27,
+        "relation": "PublishedAs",
+        "correct_feat": "\"Tremor\"",
+        "options": "1. \"Tremor\"\n2. a single volume in 1968\n3. Christ's own \"self-portrait\"",
+        "correct_num": 1,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> was published as [MASK].\n\nOptions:\n1. \"Tremor\"\n2. a single volume in 1968\n3. Christ's own \"self-portrait\""
+    },
+    {
+        "test_id": 28,
+        "relation": "PublishedAs",
+        "correct_feat": "\"The Hum\"",
+        "options": "1. Das Dritte Reich\n2. \"The Hum\"\n3. a free pull-out game in Issue 9 of their house magazine The Wargamer",
+        "correct_num": 2,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> was published as [MASK].\n\nOptions:\n1. Das Dritte Reich\n2. \"The Hum\"\n3. a free pull-out game in Issue 9 of their house magazine The Wargamer"
+    },
+    {
+        "test_id": 29,
+        "relation": "PublishedAs",
+        "correct_feat": "\"Higher Place\"",
+        "options": "1. two DVDs and a bonus disc\n2. heliogravures\n3. \"Higher Place\"",
+        "correct_num": 3,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> was published as [MASK].\n\nOptions:\n1. two DVDs and a bonus disc\n2. heliogravures\n3. \"Higher Place\""
+    },
+    {
+        "test_id": 30,
+        "relation": "PublishedAs",
+        "correct_feat": "\"Hey Baby\"",
+        "options": "1. \"Hey Baby\"\n2. the \"Vatikanskaya\" copy\n3. a free pull-out game in Issue 56 of SPI's house magazine Strategy & Tactics",
+        "correct_num": 1,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> was published as [MASK].\n\nOptions:\n1. \"Hey Baby\"\n2. the \"Vatikanskaya\" copy\n3. a free pull-out game in Issue 56 of SPI's house magazine Strategy & Tactics"
+    },
+    {
+        "test_id": 31,
+        "relation": "PublishedAs",
+        "correct_feat": "\"Complicated\"",
+        "options": "1. Nazi Germany\n2. \"Complicated\"\n3. Christ's own \"self-portrait\"",
+        "correct_num": 2,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> was published as [MASK].\n\nOptions:\n1. Nazi Germany\n2. \"Complicated\"\n3. Christ's own \"self-portrait\""
+    },
+    {
+        "test_id": 32,
+        "relation": "PublishedAs",
+        "correct_feat": "\"He's a Pirate\"",
+        "options": "1. the Lutheran Formula of Concord\n2. an exhibition brochure\n3. \"He's a Pirate\"",
+        "correct_num": 3,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> was published as [MASK].\n\nOptions:\n1. the Lutheran Formula of Concord\n2. an exhibition brochure\n3. \"He's a Pirate\""
+    },
+    {
+        "test_id": 33,
+        "relation": "PublishedAs",
+        "correct_feat": "\"When I Grow Up\"",
+        "options": "1. \"When I Grow Up\"\n2. a boxed set in 1957\n3. the Third Reich",
+        "correct_num": 1,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> was published as [MASK].\n\nOptions:\n1. \"When I Grow Up\"\n2. a boxed set in 1957\n3. the Third Reich"
+    },
+    {
+        "test_id": 34,
+        "relation": "PublishedAs",
+        "correct_feat": "\"Bounce\"",
+        "options": "1. \"Las Nacionalidades\"\n2. \"Bounce\"\n3. Kingdom Death: Monster 1.5",
+        "correct_num": 2,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> was published as [MASK].\n\nOptions:\n1. \"Las Nacionalidades\"\n2. \"Bounce\"\n3. Kingdom Death: Monster 1.5"
+    },
+    {
+        "test_id": 35,
+        "relation": "PublishedIn",
+        "correct_feat": "Belgium",
+        "options": "1. Comoros\n2. Australia\n3. Belgium",
+        "correct_num": 3,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> was published in [MASK].\n\nOptions:\n1. Comoros\n2. Australia\n3. Belgium"
+    },
+    {
+        "test_id": 36,
+        "relation": "PublishedIn",
+        "correct_feat": "The Netherlands",
+        "options": "1. The Netherlands\n2. Marshall Islands\n3. Bulgaria",
+        "correct_num": 1,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> was published in [MASK].\n\nOptions:\n1. The Netherlands\n2. Marshall Islands\n3. Bulgaria"
+    },
+    {
+        "test_id": 37,
+        "relation": "UsedAs",
+        "correct_feat": "an Elusive Target in the video game Hitman III",
+        "options": "1. a variation called 'Kingpin'\n2. an Elusive Target in the video game Hitman III\n3. a historical artifact",
+        "correct_num": 2,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is used as [MASK].\n\nOptions:\n1. a variation called 'Kingpin'\n2. an Elusive Target in the video game Hitman III\n3. a historical artifact"
+    },
+    {
+        "test_id": 38,
+        "relation": "UsedFor",
+        "correct_feat": "DJ residencies in Ibiza",
+        "options": "1. competitions\n2. soaring for hours\n3. DJ residencies in Ibiza",
+        "correct_num": 3,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is used for [MASK].\n\nOptions:\n1. competitions\n2. soaring for hours\n3. DJ residencies in Ibiza"
+    },
+    {
+        "test_id": 39,
+        "relation": "UsedIn",
+        "correct_feat": "the Pirates of the Caribbean: Dead Men Tell No Tales movie",
+        "options": "1. the Pirates of the Caribbean: Dead Men Tell No Tales movie\n2. fountains\n3. the metropolis",
+        "correct_num": 1,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is used in [MASK].\n\nOptions:\n1. the Pirates of the Caribbean: Dead Men Tell No Tales movie\n2. fountains\n3. the metropolis"
+    },
+    {
+        "test_id": 40,
+        "relation": "UsedIn",
+        "correct_feat": "the Belgian movie Gangsta",
+        "options": "1. the mountains of Torres del Paine\n2. the Belgian movie Gangsta\n3. the Witzenhausen competition",
+        "correct_num": 2,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is used in [MASK].\n\nOptions:\n1. the mountains of Torres del Paine\n2. the Belgian movie Gangsta\n3. the Witzenhausen competition"
+    },
+    {
+        "test_id": 41,
+        "relation": "UsedIn",
+        "correct_feat": "the video game Hitman III",
+        "options": "1. the Christian New Testament\n2. Iran\n3. the video game Hitman III",
+        "correct_num": 3,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is used in [MASK].\n\nOptions:\n1. the Christian New Testament\n2. Iran\n3. the video game Hitman III"
+    },
+    {
+        "test_id": 42,
+        "relation": "UsedIn",
+        "correct_feat": "the Elusive Target Arcade Mode",
+        "options": "1. the Elusive Target Arcade Mode\n2. the Netherlands\n3. Wisconsin",
+        "correct_num": 1,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is used in [MASK].\n\nOptions:\n1. the Elusive Target Arcade Mode\n2. the Netherlands\n3. Wisconsin"
+    },
+    {
+        "test_id": 43,
+        "relation": "UsedTo",
+        "correct_feat": "make their first steps as DJs",
+        "options": "1. speak to everyone there of his importance to redemption in Jerusalem\n2. make their first steps as DJs\n3. behave morally and in a \"manly\" disciplined fashion",
+        "correct_num": 2,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is used to [MASK].\n\nOptions:\n1. speak to everyone there of his importance to redemption in Jerusalem\n2. make their first steps as DJs\n3. behave morally and in a \"manly\" disciplined fashion"
+    },
+    {
+        "test_id": 44,
+        "relation": "UsedTo",
+        "correct_feat": "make appearances in small clubs",
+        "options": "1. reduce the size of the grain dole\n2. represent the growth of railroad networks\n3. make appearances in small clubs",
+        "correct_num": 3,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is used to [MASK].\n\nOptions:\n1. reduce the size of the grain dole\n2. represent the growth of railroad networks\n3. make appearances in small clubs"
+    },
+    {
+        "test_id": 45,
+        "relation": "UsedTo",
+        "correct_feat": "be resident BeatFM radio DJs",
+        "options": "1. be resident BeatFM radio DJs\n2. spread through Europe and the Americas\n3. slaughter an animal",
+        "correct_num": 1,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is used to [MASK].\n\nOptions:\n1. be resident BeatFM radio DJs\n2. spread through Europe and the Americas\n3. slaughter an animal"
+    },
+    {
+        "test_id": 46,
+        "relation": "UsedTo",
+        "correct_feat": "tour Europe",
+        "options": "1. build up more solidly the foundations of an independent national economy\n2. tour Europe\n3. pay fees and collect payment for deliveries",
+        "correct_num": 2,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is used to [MASK].\n\nOptions:\n1. build up more solidly the foundations of an independent national economy\n2. tour Europe\n3. pay fees and collect payment for deliveries"
+    },
+    {
+        "test_id": 47,
+        "relation": "UsedTo",
+        "correct_feat": "be a resident in major clubs in Ibiza",
+        "options": "1. hit the ball against a wall\n2. create empty space underneath any part of it\n3. be a resident in major clubs in Ibiza",
+        "correct_num": 3,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is used to [MASK].\n\nOptions:\n1. hit the ball against a wall\n2. create empty space underneath any part of it\n3. be a resident in major clubs in Ibiza"
+    },
+    {
+        "test_id": 48,
+        "relation": "UsedTo",
+        "correct_feat": "write the official anthem for the 2010 edition of Tomorrowland",
+        "options": "1. write the official anthem for the 2010 edition of Tomorrowland\n2. pull the head off a goose\n3. compete against other dogs",
+        "correct_num": 1,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is used to [MASK].\n\nOptions:\n1. write the official anthem for the 2010 edition of Tomorrowland\n2. pull the head off a goose\n3. compete against other dogs"
+    },
+    {
+        "test_id": 49,
+        "relation": "UsedTo",
+        "correct_feat": "write the Tomorrowland anthems up to the 2014 edition",
+        "options": "1. govern\n2. write the Tomorrowland anthems up to the 2014 edition\n3. achieve more complicated multicapture moves",
+        "correct_num": 2,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is used to [MASK].\n\nOptions:\n1. govern\n2. write the Tomorrowland anthems up to the 2014 edition\n3. achieve more complicated multicapture moves"
+    },
+    {
+        "test_id": 50,
+        "relation": "UsedTo",
+        "correct_feat": "release their first single in 2009",
+        "options": "1. get people playing tennis\n2. allow a brief reassertion of autonomy\n3. release their first single in 2009",
+        "correct_num": 3,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is used to [MASK].\n\nOptions:\n1. get people playing tennis\n2. allow a brief reassertion of autonomy\n3. release their first single in 2009"
+    },
+    {
+        "test_id": 51,
+        "relation": "UsedTo",
+        "correct_feat": "score their first Belgian number one",
+        "options": "1. score their first Belgian number one\n2. control, strike, or pass the ball\n3. describe the key concepts of lords, vassals, and fiefs",
+        "correct_num": 1,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is used to [MASK].\n\nOptions:\n1. score their first Belgian number one\n2. control, strike, or pass the ball\n3. describe the key concepts of lords, vassals, and fiefs"
+    },
+    {
+        "test_id": 52,
+        "relation": "UsedTo",
+        "correct_feat": "finish runners-up in DJ Mag's top 100 DJ poll",
+        "options": "1. mark rubbish holes\n2. finish runners-up in DJ Mag's top 100 DJ poll\n3. level up weapons in a mod",
+        "correct_num": 2,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is used to [MASK].\n\nOptions:\n1. mark rubbish holes\n2. finish runners-up in DJ Mag's top 100 DJ poll\n3. level up weapons in a mod"
+    }
+]

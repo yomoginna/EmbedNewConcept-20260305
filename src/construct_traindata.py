@@ -22,6 +22,7 @@ uv run python src/construct_traindata.py
 import argparse
 import json
 import os
+import re
 import sys
 from collections import defaultdict
 
@@ -33,6 +34,7 @@ sys.path.append(project_root)
 
 from utils.wikipedia_api_utils import extract_wiki_main_text, fetch_wikipedia_page
 from utils.handle_data_from_dbpedia_utils import loadProperNounData
+from utils.handle_text_utils import normalize_PublishedIn_facts
 
 generated_facts_dir = os.path.join(project_root, 'data', 'generated_facts_in_wiki')
 wiki_page_save_dir = os.path.join(project_root, 'data', 'wiki_pages')
@@ -40,16 +42,25 @@ os.makedirs(wiki_page_save_dir, exist_ok=True)
 train_data_dir = os.path.join(project_root, 'data', 'train_data')
 os.makedirs(train_data_dir, exist_ok=True)
 train_target_concepts_path = os.path.join(project_root, 'config', 'target_concepts.json')
+rel_to_maskedSentence_path = os.path.join(project_root, 'data', 'templates', 'rel_to_maskedSentence.json')
 
 
-feat_num_threshold = 60     # wikiから抽出された特徴の数がこの数以上の固有名詞のみを学習データ作成の対象とする
+# ******* 人手で調整するパラメータ *******
+feat_num_threshold = 30     # wikiから抽出された特徴の数がこの数以上の固有名詞のみを学習データ作成の対象とする basic: 60
 propnoun_num_for_init_vec=100   # 初期化vecの作成に使う固有名詞の最低数. 例えば100に設定した場合、各カテゴリで最低100個の固有名詞を使用して初期化vecを作成することになる。(実際には、新規概念用にならなかった固有名詞全て使用する)
 propnoun_num_for_new_concept=30 # 新規概念の元にする概念の作成に使う固有名詞の数. 例えば30に設定した場合、各カテゴリで30個の固有名詞を使用して新規概念の元にする概念の作成に使用することになる。
+
+drop_rels = ['OccurredIn', "OccurredOn", "OccurredAt", "OccurredDuring"] # occured系は、test作成時に複数の選択肢が正解になる可能性があったため弾きたい。例えば、1. ABBA occured in Europe 2. ABBA occured in Stockholm. Stockholm \in Europe のためどちらも正解になってしまう。
+# ************************************
 
 
 def main(args):
     
     target_concepts = args.target_concepts
+
+    with open(rel_to_maskedSentence_path, 'r') as f:
+        rel_to_maskedSentence = json.load(f)
+
 
 
     # ****** 生成した固有名詞のリストを取得する ******
@@ -115,13 +126,23 @@ def main(args):
         # wikiを元に生成された特徴データを読み込み
         with open(os.path.join(generated_facts_dir, f"{target_concept.replace(' ', '_')}.json"), "r") as f:
             generated_facts = json.load(f)
-        # unknown な特徴をfilteringする
+
+        # *** filter ***
+        # 'PublishedIn' については、複数の出版年が全て列挙されている場合があるため、最初の年のみを使用する
+        generated_facts['parsed']['english']['PublishedIn'] = normalize_PublishedIn_facts(
+            feats=generated_facts['parsed']['english'].get('PublishedIn', []), 
+            template=rel_to_maskedSentence['PublishedIn']
+        )
+        # drop対象のrelと、unknown な特徴をfilteringする
         fact_sentences = []
         for rel, feats in generated_facts['parsed']['english'].items():
+            if rel in drop_rels:
+                continue
             for feat in feats:
                 if feat.lower() in ["unknown", '不明']:
                     continue
                 fact_sentences.append(feat)
+        # ******
 
         data_sample = {
             "main_text": wiki_info['text'], 

@@ -28,126 +28,14 @@ from transformers import AutoModelForCausalLM, AutoTokenizer
 project_root = os.path.join(os.path.dirname(__file__), "..") # os.path.dirname(__file__): スクリプト自身のパス
 sys.path.append(project_root)
 
-from utils.gemma_train_and_test_utils import fix_seed
-
-initMethods_with_HS = [
-    'category_centroid_by_hidden_state_mean', 'other_category_centroid_by_hidden_state_mean',
-    'categoryCentroid_by_DebiasedHiddenState', 'otherCategoryCentroid_by_DebiasedHiddenState',
-    'categoryCentroid_by_DebiasedHSMixed', 'otherCategoryCentroid_by_DebiasedHSMixed',
-    'CatCentroid_by_OthCatDebiasedHSMixed', 'otherCatCentroid_by_OthCatDebiasedHSMixed',
-    'CatCent_by_GlbPrimDebiasedHSMixed', 'otherCatCent_by_GlbPrimDebiasedHSMixed',
-    'CatCent_by_GlbPrimDebiasedHS', 'otherCatCent_by_GlbPrimDebiasedHS',
-    'CatCent_by_WikiSummaryHS', 'otherCatCent_by_WikiSummaryHS',
-    'CatCent_by_WikiSummaryHSMixed', 'otherCatCent_by_WikiSummaryHSMixed',
-]
+from utils.gemma_train_and_test_utils import fix_seed, load_mem_vec, extract_probability_of_option_numbers, calculate_metrics
+from utils.handle_text_utils import create_test_prompt
 
 
 print_flag = False  # プロンプト表示フラグ
 
-
-test1_dir = os.path.join(project_root, 'data', 'test_data')
-
-
-
-# ************************ 関数群 ************************
-
-def load_mem_vec(model, mem_save_path, memTokenIds):
-    vecs = np.load(mem_save_path)
-    try:
-        vecs_tensor = torch.tensor(vecs, dtype=model.model.embed_tokens.weight.dtype, device=model.model.embed_tokens.weight.device)
-    except:
-        vecs_tensor = torch.tensor(vecs, dtype=model.model.language_model.embed_tokens.weight.dtype, device=model.model.language_model.embed_tokens.weight.device)
-    # print(f"Vector shape: {vecs_tensor.shape}, Embedding weight shape: {model.model.embed_tokens.weight.shape}")
-
-    # 特定の token ID の位置にベクトルを上書き
-    with torch.no_grad():
-        for i, token_id in enumerate(memTokenIds):
-            try:
-                model.model.embed_tokens.weight[token_id] = vecs_tensor[i]
-            except:
-                model.model.language_model.embed_tokens.weight[token_id] = vecs_tensor[i]
-
-    print(f"Loaded trained vectors from {mem_save_path} into model embedding layer.")
-          
-
-def create_test_prompt(test_text, prompt_base, model_name):
-    """test_textを埋め込み、modelに入力するためのpromptを作成する関数
-    """
-    if prompt_base is None or prompt_base.strip() == "":
-        prompt = f"{test_text}\n\nAnswer: " # Answer:の後の空白は重要なのでstripしない. Qwenではこの空白を消すと, prob0.3以上の回答が179→29に減ったため, 空白が必要.
-    else:
-        prompt = f"{prompt_base.strip()}\n\n{test_text}\n\nAnswer: "
-    if model_name.split("/")[-1].startswith("Qwen3") and not model_name.split("/")[-1].endswith("-Base"):
-        # Qwen3-Instruct系の場合は思考モードをオフにする必要がある. https://arc.net/l/quote/uwefkzbz
-        prompt = prompt + "/no_think"
-    return prompt
-
-
-
-def extract_probability_of_option_numbers(target_logits, tokenizer, num_options):
-    """選択肢の数字の生成確率を抽出する
-    Args:
-        target_logits (torch.Tensor): モデルの出力ロジット
-        tokenizer (transformers.AutoTokenizer): トークナイザ
-        num_options (int): 選択肢の数
-    Returns:
-        log_prob_dicts (List[Dict[str, float]]): 各選択肢番号に対する生成log確率辞書のリスト. e.g. [{"1": -1.2, "2": -0.5}, {"1": -0.3, "2": -1.5}, ...]
-        prob_dicts (List[Dict[str, float]]): 各選択肢番号の生成確率辞書のリスト
-    """
-    log_probs = F.log_softmax(target_logits, dim=-1) # logなので, 確率0~1.0は, マイナスor0 になる. 確率が小さいほどlogも小さくなる.
-    probs = torch.exp(log_probs)  # log_probsを確率に変換
-    # print(f"log_probs shape: {log_probs.shape}")  # (batch_size, vocab_size)
-
-    # 選択肢のトークンIDを取得
-    number_token_ids = [tokenizer.convert_tokens_to_ids(str(i)) for i in range(1, num_options + 1)]
-    # 各選択肢番号のトークンIDに対応するlog確率を取得
-    token_log_probs_of_all_q = log_probs[:, number_token_ids]  # 各テスト問題に対する、各選択肢番号tokenのlog確率を取得
-    token_prob_of_all_q = probs[:, number_token_ids]  # 各テスト問題に対する、各選択肢番号tokenの確率を取得
-    # print(f"token_scores_lst shape: {token_scores_lst.shape}")  # (batch_size, num_options)
-
-    # 各選択肢番号のlog確率を取得
-    log_prob_dicts = []
-    for token_log_probs_of_q in token_log_probs_of_all_q:
-        num_2_log_prob = {}
-        for i, score in enumerate(token_log_probs_of_q): # for num_token_id, score in zip(number_token_ids, token_log_probs_of_q):
-            num_2_log_prob[f"{i + 1}"] = score.item() # num_2_log_prob[f"{tokenizer.convert_ids_to_tokens(num_token_id)}"] = score.item()
-        log_prob_dicts.append(num_2_log_prob)
-    
-    prob_dicts = []
-    for q_token_probs_of_q in token_prob_of_all_q:
-        num_2_prob = {}
-        for i, prob in enumerate(q_token_probs_of_q):
-            num_2_prob[f"{i + 1}"] = prob.item()
-        prob_dicts.append(num_2_prob)
-
-    return log_prob_dicts, prob_dicts
-
-
-# ********* calculate metrics **********
-def calculate_metrics(y_pred_lst, y_true_lst):
-    """各種scoreを計算する
-    Args:
-        y_pred_lst (list): モデルの予測結果リスト
-        y_true_lst (list): 正解ラベルリスト
-    Returns:
-        dict: accuracy, precision, recall, F1スコア
-    """
-    # accuracy, precision, recall, F1の計算
-    accuracy = accuracy_score(y_true_lst, y_pred_lst)
-    precision = precision_score(y_true_lst, y_pred_lst, average='weighted', zero_division=0)
-    recall = recall_score(y_true_lst, y_pred_lst, average='weighted', zero_division=0)
-    f1 = f1_score(y_true_lst, y_pred_lst, average='weighted', zero_division=0)
-    return {
-        "accuracy": accuracy,
-        "precision": precision,
-        "recall": recall,
-        "F1": f1
-    }
-
-
-
-
-
+# test1_dir = os.path.join(project_root, 'data', 'test_data')
+test1_dir = os.path.join(project_root, 'data', 'test_data_filtered')
 
 
 
@@ -175,24 +63,10 @@ def main(args):
         raise ValueError(f"Invalid model_size: {model_size}")
 
 
-    # # [WIP] 'it'と'pt'のどちらが良いかは未検証. とりあえず'it'で統一.
-    # model_name = f"google/gemma-{model_version}-{model_size}b-it" # [memo] 'gemma-'部分は変えないこと!! -を消すとモデルがloadできない．さらにそのエラーメッセージは，"huggingface-cli login"をして，という関係ないmessageになるので注意!
-    # model_name_for_dirname = f"gemma-{model_version}-{model_size}B-lr{lr}-{trained_date}"
-    # if layer_idx is not None and init_vec_type in ['category_centroid_by_hidden_state_mean', 'other_category_centroid_by_hidden_state_mean']:
-    #     model_name_for_dirname += f"-hidden_layer{layer_idx}"
-    # model_name_for_dirname += f"-seed{seed}"
-
-
-    # # target_concepts_filename が、target_concepts + '_long' などのsuffixを持つ場合に、model_name_for_dirnameにもそのsuffixを反映させるための処理
-    # if 'target_concepts_' in target_concepts_filename:
-    #     suffix = '-' + target_concepts_filename.replace('target_concepts_', '').replace('.json', '')
-    # else:
-    #     suffix = ''
-
+    # [WIP] 'it'と'pt'のどちらが良いかは未検証. とりあえず'it'で統一.
     model_name = f"google/gemma-{model_version}-{model_size}b-it" # [memo] 'gemma-'部分は変えないこと!! -を消すとモデルがloadできない．さらにそのエラーメッセージは，"huggingface-cli login"をして，という関係ないmessageになるので注意!
-    # model_name_for_dirname = f"gemma-{model_version}-{model_size}B-lr{lr}{suffix}-{trained_date}"
     model_name_for_dirname = f"gemma-{model_version}-{model_size}B-lr{lr}-{trained_date}"
-    if layer_idx is not None and init_vec_type in initMethods_with_HS:
+    if layer_idx is not None:
         model_name_for_dirname += f"-hidden_layer{layer_idx}"
     model_name_for_dirname += f"-seed{seed}"
 
@@ -218,18 +92,6 @@ def main(args):
     config_specified_concept_list = sum(class_to_target_concept_config.values(), [])
     result_dir = os.path.join(project_root, "results", f"{model_name_for_dirname}_{target_concepts_filename.replace('.json', '')}_initvecwith{init_vec_type.replace(' ', '_')}")
     mem_dir = os.path.join(project_root, "memvec_models", f"{model_name_for_dirname}_{target_concepts_filename.replace('.json', '')}_initvecwith{init_vec_type.replace(' ', '_')}")
-
-
-    # if init_vec_type in ['category_COG', 'other_category_COG']:
-    #     mem_dir = os.path.join(project_root, "memvec_models", f"{model_name_for_dirname}_{target_concepts_filename.replace('.json', '')}_initvecwith{init_vec_type.replace(' ', '_')}") + '_4'
-    #     result_dir = os.path.join(project_root, "results", f"{model_name_for_dirname}_{target_concepts_filename.replace('.json', '')}_initvecwith{init_vec_type.replace(' ', '_')}") + '_4'
-    # elif init_vec_type in ['norm_rand_vocab', 'uniform']:
-    #     mem_dir = os.path.join(project_root, "memvec_models", f"{model_name_for_dirname}_{target_concepts_filename.replace('.json', '')}_initvecwith{init_vec_type.replace(' ', '_')}") + '_2'
-    #     result_dir = os.path.join(project_root, "results", f"{model_name_for_dirname}_{target_concepts_filename.replace('.json', '')}_initvecwith{init_vec_type.replace(' ', '_')}") + '_2'
-    # else:
-    #     mem_dir = os.path.join(project_root, "memvec_models", f"{model_name_for_dirname}_{target_concepts_filename.replace('.json', '')}_initvecwith{init_vec_type.replace(' ', '_')}")
-    #     result_dir = os.path.join(project_root, "results", f"{model_name_for_dirname}_{target_concepts_filename.replace('.json', '')}_initvecwith{init_vec_type.replace(' ', '_')}")
-
 
 
     # memvec用token_id割り当て読み込み
@@ -357,9 +219,11 @@ def main(args):
 
             first_token_logits_list = [] # 回答の最初のトークンのlogitsを保存するためのリスト
             label_lst = []  # 正解ラベルを保存するリスト
+            test_id_lst = []
 
             for test1_info in test1_lst:
                 test_id = test1_info['test_id']
+                test_id_lst.append(test_id)
                 test1 = test1_info['test1']
                 correct_num = test1_info['correct_num']
                 label_lst.append(correct_num)
@@ -390,11 +254,11 @@ def main(args):
             y_true_lst = [str(e) for e in label_lst]
             results = []
 
-            for i, (log_prob_dict, prob_dict) in enumerate(zip(log_prob_dicts, prob_dicts)):
+            for i, (test_id, log_prob_dict, prob_dict) in enumerate(zip(test_id_lst, log_prob_dicts, prob_dicts)):
                 # 各選択肢のlog確率を取得
                 pred_option = max(log_prob_dict, key=log_prob_dict.get)  # log確率(value)が最大となる選択肢番号(key)を取得
                 results.append({
-                    'idx': i,
+                    'idx': test_id,
                     # "question": prompts[i][len(prompt_base):],  # ベースプロンプト部分を除去して質問文のみを保存
                     "log_probs": log_prob_dict[pred_option],
                     "probs": prob_dict[pred_option],
@@ -487,9 +351,9 @@ if __name__ == "__main__":
         elif args.model_size=='12':
             # * seed前半
             if seed == 0:
-                args.trained_date = "20260406" 
+                args.trained_date = "20260414" 
             elif seed == 1:
-                args.trained_date = "20260406" 
+                args.trained_date = "20260414" 
             # elif seed == 2:
             #     args.trained_date = "20260313"
             # elif seed == 3:
@@ -521,8 +385,9 @@ if __name__ == "__main__":
             layer_indices = args.layer_indices
         
 
-            if len(layer_indices) < 1 or \
-                init_vec_type not in initMethods_with_HS:
+            # if len(layer_indices) < 1 or \
+            #     init_vec_type not in initMethods_with_HS:
+            if len(layer_indices) < 1:
                 # layer_idxが不要の初期化方法の場合は、layer_indicesを[None]にして、1回だけループするようにする
                 layer_indices = [None]
 

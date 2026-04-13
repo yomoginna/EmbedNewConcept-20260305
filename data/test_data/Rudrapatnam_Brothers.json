@@ -1,0 +1,794 @@
+[
+    {
+        "test_id": 0,
+        "relation": "About",
+        "correct_feat": "Carnatic music",
+        "options": "1. Carnatic music\n2. a rodeo sport involving a rider on a bucking bull\n3. life and time on Horn Island",
+        "correct_num": 1,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is about [MASK].\n\nOptions:\n1. Carnatic music\n2. a rodeo sport involving a rider on a bucking bull\n3. life and time on Horn Island"
+    },
+    {
+        "test_id": 1,
+        "relation": "About",
+        "correct_feat": "a Carnatic vocal duo",
+        "options": "1. the utility requirement for patent applications in the chemical field\n2. a Carnatic vocal duo\n3. a game mode that suffers from players who AFK",
+        "correct_num": 2,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is about [MASK].\n\nOptions:\n1. the utility requirement for patent applications in the chemical field\n2. a Carnatic vocal duo\n3. a game mode that suffers from players who AFK"
+    },
+    {
+        "test_id": 2,
+        "relation": "About",
+        "correct_feat": "a family of musicians",
+        "options": "1. a strategy board game\n2. the Virgin and Child enthroned\n3. a family of musicians",
+        "correct_num": 3,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is about [MASK].\n\nOptions:\n1. a strategy board game\n2. the Virgin and Child enthroned\n3. a family of musicians"
+    },
+    {
+        "test_id": 3,
+        "relation": "About",
+        "correct_feat": "musical traditions",
+        "options": "1. musical traditions\n2. the town's appearance and local community involvement with mural painting\n3. an unspecified large group of people in a country or group who do not express their opinions publicly",
+        "correct_num": 1,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is about [MASK].\n\nOptions:\n1. musical traditions\n2. the town's appearance and local community involvement with mural painting\n3. an unspecified large group of people in a country or group who do not express their opinions publicly"
+    },
+    {
+        "test_id": 4,
+        "relation": "About",
+        "correct_feat": "early life and career",
+        "options": "1. aiming to bring together anarchists of different tendencies into a single federation\n2. early life and career\n3. the prevailing names for the three kings: Gaspar, Melchior, and Balthasar",
+        "correct_num": 2,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is about [MASK].\n\nOptions:\n1. aiming to bring together anarchists of different tendencies into a single federation\n2. early life and career\n3. the prevailing names for the three kings: Gaspar, Melchior, and Balthasar"
+    },
+    {
+        "test_id": 5,
+        "relation": "About",
+        "correct_feat": "education",
+        "options": "1. beach and backyard toys and games\n2. overcoming the patriarchy by coming together in female groups to talk about personal problems\n3. education",
+        "correct_num": 3,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is about [MASK].\n\nOptions:\n1. beach and backyard toys and games\n2. overcoming the patriarchy by coming together in female groups to talk about personal problems\n3. education"
+    },
+    {
+        "test_id": 6,
+        "relation": "About",
+        "correct_feat": "musical career",
+        "options": "1. musical career\n2. the mandate for consistency in the application of the death penalty\n3. the death penalty being cruel and unusual punishment",
+        "correct_num": 1,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is about [MASK].\n\nOptions:\n1. musical career\n2. the mandate for consistency in the application of the death penalty\n3. the death penalty being cruel and unusual punishment"
+    },
+    {
+        "test_id": 7,
+        "relation": "About",
+        "correct_feat": "concerts",
+        "options": "1. a biblical figure associated with the old testament\n2. concerts\n3. the Mandylion",
+        "correct_num": 2,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is about [MASK].\n\nOptions:\n1. a biblical figure associated with the old testament\n2. concerts\n3. the Mandylion"
+    },
+    {
+        "test_id": 8,
+        "relation": "About",
+        "correct_feat": "awards",
+        "options": "1. abstract patterns and Christian imagery\n2. the official ideology of North Korea and its ruling Workers Party of Korea\n3. awards",
+        "correct_num": 3,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is about [MASK].\n\nOptions:\n1. abstract patterns and Christian imagery\n2. the official ideology of North Korea and its ruling Workers Party of Korea\n3. awards"
+    },
+    {
+        "test_id": 9,
+        "relation": "AssociatedWith",
+        "correct_feat": "Carnatic music",
+        "options": "1. Carnatic music\n2. traditional moral values\n3. the United States Supreme Court",
+        "correct_num": 1,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is associated with [MASK].\n\nOptions:\n1. Carnatic music\n2. traditional moral values\n3. the United States Supreme Court"
+    },
+    {
+        "test_id": 10,
+        "relation": "AssociatedWith",
+        "correct_feat": "a family of musicians",
+        "options": "1. right-libertarianism\n2. a family of musicians\n3. the University of Southern California's Graduate Student Lounge within the Ronald Tutor Campus Center",
+        "correct_num": 2,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is associated with [MASK].\n\nOptions:\n1. right-libertarianism\n2. a family of musicians\n3. the University of Southern California's Graduate Student Lounge within the Ronald Tutor Campus Center"
+    },
+    {
+        "test_id": 11,
+        "relation": "AssociatedWith",
+        "correct_feat": "Rudrapatna village",
+        "options": "1. the work of Henri de Saint-Simon, Charles Fourier, Étienne Cabet, and Robert Owen\n2. the United Front of the People\n3. Rudrapatna village",
+        "correct_num": 3,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is associated with [MASK].\n\nOptions:\n1. the work of Henri de Saint-Simon, Charles Fourier, Étienne Cabet, and Robert Owen\n2. the United Front of the People\n3. Rudrapatna village"
+    },
+    {
+        "test_id": 12,
+        "relation": "AssociatedWith",
+        "correct_feat": "Arkalgud Thaluk",
+        "options": "1. Arkalgud Thaluk\n2. anti-Americanism\n3. the Victorian era",
+        "correct_num": 1,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is associated with [MASK].\n\nOptions:\n1. Arkalgud Thaluk\n2. anti-Americanism\n3. the Victorian era"
+    },
+    {
+        "test_id": 13,
+        "relation": "AssociatedWith",
+        "correct_feat": "Hassan district",
+        "options": "1. the use of industry in warfare\n2. Hassan district\n3. castles",
+        "correct_num": 2,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is associated with [MASK].\n\nOptions:\n1. the use of industry in warfare\n2. Hassan district\n3. castles"
+    },
+    {
+        "test_id": 14,
+        "relation": "AssociatedWith",
+        "correct_feat": "Karnataka",
+        "options": "1. the Caribbean\n2. the Socialist Party\n3. Karnataka",
+        "correct_num": 3,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is associated with [MASK].\n\nOptions:\n1. the Caribbean\n2. the Socialist Party\n3. Karnataka"
+    },
+    {
+        "test_id": 15,
+        "relation": "AssociatedWith",
+        "correct_feat": "Tiger Varadachariar",
+        "options": "1. Tiger Varadachariar\n2. preparatory sketches\n3. the family of King Amanullah and King Zahir Shah",
+        "correct_num": 1,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is associated with [MASK].\n\nOptions:\n1. Tiger Varadachariar\n2. preparatory sketches\n3. the family of King Amanullah and King Zahir Shah"
+    },
+    {
+        "test_id": 16,
+        "relation": "AssociatedWith",
+        "correct_feat": "Veda adhyayana",
+        "options": "1. the Australian Kong-Off\n2. Veda adhyayana\n3. funeral homes",
+        "correct_num": 2,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is associated with [MASK].\n\nOptions:\n1. the Australian Kong-Off\n2. Veda adhyayana\n3. funeral homes"
+    },
+    {
+        "test_id": 17,
+        "relation": "AssociatedWith",
+        "correct_feat": "studying Sanskrit",
+        "options": "1. the Federation of Anarchist Communists in Italy\n2. the ancient pottery and sculptures\n3. studying Sanskrit",
+        "correct_num": 3,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is associated with [MASK].\n\nOptions:\n1. the Federation of Anarchist Communists in Italy\n2. the ancient pottery and sculptures\n3. studying Sanskrit"
+    },
+    {
+        "test_id": 18,
+        "relation": "AssociatedWith",
+        "correct_feat": "the Government of India",
+        "options": "1. the Government of India\n2. William Buckland\n3. pseudoscientists, media, and civil society efforts",
+        "correct_num": 1,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is associated with [MASK].\n\nOptions:\n1. the Government of India\n2. William Buckland\n3. pseudoscientists, media, and civil society efforts"
+    },
+    {
+        "test_id": 19,
+        "relation": "BelongsTo",
+        "correct_feat": "a family of musicians",
+        "options": "1. the Maghreb region of North Africa\n2. a family of musicians\n3. Vickers-Armstrong",
+        "correct_num": 2,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> belongs to [MASK].\n\nOptions:\n1. the Maghreb region of North Africa\n2. a family of musicians\n3. Vickers-Armstrong"
+    },
+    {
+        "test_id": 20,
+        "relation": "BelongsTo",
+        "correct_feat": "a musical tradition",
+        "options": "1. the National Park Service\n2. Christian theology\n3. a musical tradition",
+        "correct_num": 3,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> belongs to [MASK].\n\nOptions:\n1. the National Park Service\n2. Christian theology\n3. a musical tradition"
+    },
+    {
+        "test_id": 21,
+        "relation": "BelongsTo",
+        "correct_feat": "the sishya lineage of Manambuchaavadi Venkatasubbayyar",
+        "options": "1. the sishya lineage of Manambuchaavadi Venkatasubbayyar\n2. the Neolithic period\n3. the South Pacific",
+        "correct_num": 1,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> belongs to [MASK].\n\nOptions:\n1. the sishya lineage of Manambuchaavadi Venkatasubbayyar\n2. the Neolithic period\n3. the South Pacific"
+    },
+    {
+        "test_id": 22,
+        "relation": "BelongsTo",
+        "correct_feat": "the Walajapet sishya parampara",
+        "options": "1. the history of Western art\n2. the Walajapet sishya parampara\n3. the history of Morocco",
+        "correct_num": 2,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> belongs to [MASK].\n\nOptions:\n1. the history of Western art\n2. the Walajapet sishya parampara\n3. the history of Morocco"
+    },
+    {
+        "test_id": 23,
+        "relation": "BelongsTo",
+        "correct_feat": "the sishya of Mysore Sadasiva Rao",
+        "options": "1. the non-Zionist political movements\n2. the Nativity cycle in art\n3. the sishya of Mysore Sadasiva Rao",
+        "correct_num": 3,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> belongs to [MASK].\n\nOptions:\n1. the non-Zionist political movements\n2. the Nativity cycle in art\n3. the sishya of Mysore Sadasiva Rao"
+    },
+    {
+        "test_id": 24,
+        "relation": "ConsistsOf",
+        "correct_feat": "brothers R. N. Thyagarajan and Dr. R. N. Tharanathan",
+        "options": "1. brothers R. N. Thyagarajan and Dr. R. N. Tharanathan\n2. 560 1/2\" counters\n3. a heavy solid-rubber ball",
+        "correct_num": 1,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> consists of [MASK].\n\nOptions:\n1. brothers R. N. Thyagarajan and Dr. R. N. Tharanathan\n2. 560 1/2\" counters\n3. a heavy solid-rubber ball"
+    },
+    {
+        "test_id": 25,
+        "relation": "HasA",
+        "correct_feat": "a musical journey spanning more than sixty years",
+        "options": "1. Colonel Brandt\n2. a musical journey spanning more than sixty years\n3. teams of one person and one dog competing in the standard distance toss and fetch event",
+        "correct_num": 2,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> has [MASK].\n\nOptions:\n1. Colonel Brandt\n2. a musical journey spanning more than sixty years\n3. teams of one person and one dog competing in the standard distance toss and fetch event"
+    },
+    {
+        "test_id": 26,
+        "relation": "HasA",
+        "correct_feat": "thousands of concerts",
+        "options": "1. thicker walls\n2. numerous titles\n3. thousands of concerts",
+        "correct_num": 3,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> has [MASK].\n\nOptions:\n1. thicker walls\n2. numerous titles\n3. thousands of concerts"
+    },
+    {
+        "test_id": 27,
+        "relation": "HasA",
+        "correct_feat": "hundreds of sishyas around the globe",
+        "options": "1. hundreds of sishyas around the globe\n2. elements of Pan-Arabism\n3. a tennis ball",
+        "correct_num": 1,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> has [MASK].\n\nOptions:\n1. hundreds of sishyas around the globe\n2. elements of Pan-Arabism\n3. a tennis ball"
+    },
+    {
+        "test_id": 28,
+        "relation": "HasA",
+        "correct_feat": "a family tradition of music",
+        "options": "1. monks gardening in the middle ground\n2. a family tradition of music\n3. two larger holes at each end which are known as the stores",
+        "correct_num": 2,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> has [MASK].\n\nOptions:\n1. monks gardening in the middle ground\n2. a family tradition of music\n3. two larger holes at each end which are known as the stores"
+    },
+    {
+        "test_id": 29,
+        "relation": "HasA",
+        "correct_feat": "a family tradition of Veda adhyayana",
+        "options": "1. single windows on the east and west walls\n2. a bean bag-like design\n3. a family tradition of Veda adhyayana",
+        "correct_num": 3,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> has [MASK].\n\nOptions:\n1. single windows on the east and west walls\n2. a bean bag-like design\n3. a family tradition of Veda adhyayana"
+    },
+    {
+        "test_id": 30,
+        "relation": "HasA",
+        "correct_feat": "a family tradition of studying Sanskrit",
+        "options": "1. a family tradition of studying Sanskrit\n2. a home column for each player\n3. disciplines like Hydro Dash and Air Retrieve",
+        "correct_num": 1,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> has [MASK].\n\nOptions:\n1. a family tradition of studying Sanskrit\n2. a home column for each player\n3. disciplines like Hydro Dash and Air Retrieve"
+    },
+    {
+        "test_id": 31,
+        "relation": "HasA",
+        "correct_feat": "a musical atmosphere",
+        "options": "1. a 10k run\n2. a musical atmosphere\n3. a definition provided by Article 1 of the UN Mercenary Convention",
+        "correct_num": 2,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> has [MASK].\n\nOptions:\n1. a 10k run\n2. a musical atmosphere\n3. a definition provided by Article 1 of the UN Mercenary Convention"
+    },
+    {
+        "test_id": 32,
+        "relation": "HasA",
+        "correct_feat": "a father who was a disciple of Musiri Subramania Iyer",
+        "options": "1. a rubber spaldeen or pensie pinkie ball\n2. two statuary niches\n3. a father who was a disciple of Musiri Subramania Iyer",
+        "correct_num": 3,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> has [MASK].\n\nOptions:\n1. a rubber spaldeen or pensie pinkie ball\n2. two statuary niches\n3. a father who was a disciple of Musiri Subramania Iyer"
+    },
+    {
+        "test_id": 33,
+        "relation": "HasA",
+        "correct_feat": "uncles who are musicians",
+        "options": "1. uncles who are musicians\n2. a height of 45.5 centimeters\n3. the title of King of Holland",
+        "correct_num": 1,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> has [MASK].\n\nOptions:\n1. uncles who are musicians\n2. a height of 45.5 centimeters\n3. the title of King of Holland"
+    },
+    {
+        "test_id": 34,
+        "relation": "HasA",
+        "correct_feat": "a father who was a disciple of Sangita Kalanidhi Mysore T. Chowdiah",
+        "options": "1. a minefield\n2. a father who was a disciple of Sangita Kalanidhi Mysore T. Chowdiah\n3. scoring houses that may be carved into the two halves of the cover",
+        "correct_num": 2,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> has [MASK].\n\nOptions:\n1. a minefield\n2. a father who was a disciple of Sangita Kalanidhi Mysore T. Chowdiah\n3. scoring houses that may be carved into the two halves of the cover"
+    },
+    {
+        "test_id": 35,
+        "relation": "HasFeatureOf",
+        "correct_feat": "a musical atmosphere",
+        "options": "1. two smaller figures located in the corners with the witnesses\n2. the king's trap\n3. a musical atmosphere",
+        "correct_num": 3,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is characterized by [MASK].\n\nOptions:\n1. two smaller figures located in the corners with the witnesses\n2. the king's trap\n3. a musical atmosphere"
+    },
+    {
+        "test_id": 36,
+        "relation": "HasFeatureOf",
+        "correct_feat": "a family tradition of music",
+        "options": "1. a family tradition of music\n2. the artist's knowledge of Michael Damaskinos's tiled floors\n3. a performance reprised by David Prowse, James Earl Jones, and director of photography Gilbert Taylor",
+        "correct_num": 1,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is characterized by [MASK].\n\nOptions:\n1. a family tradition of music\n2. the artist's knowledge of Michael Damaskinos's tiled floors\n3. a performance reprised by David Prowse, James Earl Jones, and director of photography Gilbert Taylor"
+    },
+    {
+        "test_id": 37,
+        "relation": "HasFeatureOf",
+        "correct_feat": "a family tradition of Veda adhyayana",
+        "options": "1. maximum scope for strategy and tactical ingenuity\n2. a family tradition of Veda adhyayana\n3. involvement in major protest campaigns against the Sunningdale Agreement and Anglo-Irish Agreement",
+        "correct_num": 2,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is characterized by [MASK].\n\nOptions:\n1. maximum scope for strategy and tactical ingenuity\n2. a family tradition of Veda adhyayana\n3. involvement in major protest campaigns against the Sunningdale Agreement and Anglo-Irish Agreement"
+    },
+    {
+        "test_id": 38,
+        "relation": "HasFeatureOf",
+        "correct_feat": "a family tradition of studying Sanskrit",
+        "options": "1. a limit of one transfer to a partner in the pair game\n2. players needing to be comfortable with basic operations of addition, subtraction, multiplication, and division\n3. a family tradition of studying Sanskrit",
+        "correct_num": 3,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is characterized by [MASK].\n\nOptions:\n1. a limit of one transfer to a partner in the pair game\n2. players needing to be comfortable with basic operations of addition, subtraction, multiplication, and division\n3. a family tradition of studying Sanskrit"
+    },
+    {
+        "test_id": 39,
+        "relation": "HasFeatureOf",
+        "correct_feat": "adherence to the tradition of Carnatic music",
+        "options": "1. adherence to the tradition of Carnatic music\n2. its association with the Synthesis of the Arts ideology\n3. a number sign key",
+        "correct_num": 1,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is characterized by [MASK].\n\nOptions:\n1. adherence to the tradition of Carnatic music\n2. its association with the Synthesis of the Arts ideology\n3. a number sign key"
+    },
+    {
+        "test_id": 40,
+        "relation": "HasFeatureOf",
+        "correct_feat": "influences from Sri Semmangudi Srinivasa Iyer",
+        "options": "1. its rank on the Human Development Index\n2. influences from Sri Semmangudi Srinivasa Iyer\n3. hierarchical proportion",
+        "correct_num": 2,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is characterized by [MASK].\n\nOptions:\n1. its rank on the Human Development Index\n2. influences from Sri Semmangudi Srinivasa Iyer\n3. hierarchical proportion"
+    },
+    {
+        "test_id": 41,
+        "relation": "HasFeatureOf",
+        "correct_feat": "influences from Sri G.N.Balasubramaniam (GNB)",
+        "options": "1. the bond between handler and dog\n2. European exploration and colonization\n3. influences from Sri G.N.Balasubramaniam (GNB)",
+        "correct_num": 3,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is characterized by [MASK].\n\nOptions:\n1. the bond between handler and dog\n2. European exploration and colonization\n3. influences from Sri G.N.Balasubramaniam (GNB)"
+    },
+    {
+        "test_id": 42,
+        "relation": "HasFeatureOf",
+        "correct_feat": "influences from Sri Ramnad Krishnan",
+        "options": "1. influences from Sri Ramnad Krishnan\n2. animal movements in offensive forms\n3. mandatory eye and ear protection for both competitors and spectators",
+        "correct_num": 1,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is characterized by [MASK].\n\nOptions:\n1. influences from Sri Ramnad Krishnan\n2. animal movements in offensive forms\n3. mandatory eye and ear protection for both competitors and spectators"
+    },
+    {
+        "test_id": 43,
+        "relation": "HasFeatureOf",
+        "correct_feat": "influences from Sri Tanjavur S Kalyanaraman",
+        "options": "1. controversies regarding score verification\n2. influences from Sri Tanjavur S Kalyanaraman\n3. its large size, being too large to move conventionally",
+        "correct_num": 2,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is characterized by [MASK].\n\nOptions:\n1. controversies regarding score verification\n2. influences from Sri Tanjavur S Kalyanaraman\n3. its large size, being too large to move conventionally"
+    },
+    {
+        "test_id": 44,
+        "relation": "HasFeatureOf",
+        "correct_feat": "emphasis on the music of Nayaki, Varali, Begada, Mukhari, Sahana, Madhyamavathi and Thodi",
+        "options": "1. the cherry pip spitting contest being made of a round of heats and then finals\n2. boundary lines considered part of the area\n3. emphasis on the music of Nayaki, Varali, Begada, Mukhari, Sahana, Madhyamavathi and Thodi",
+        "correct_num": 3,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is characterized by [MASK].\n\nOptions:\n1. the cherry pip spitting contest being made of a round of heats and then finals\n2. boundary lines considered part of the area\n3. emphasis on the music of Nayaki, Varali, Begada, Mukhari, Sahana, Madhyamavathi and Thodi"
+    },
+    {
+        "test_id": 45,
+        "relation": "InfluencedBy",
+        "correct_feat": "their predecessors",
+        "options": "1. their predecessors\n2. the French Revolutionary Wars\n3. bear-baiting",
+        "correct_num": 1,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> was influenced by [MASK].\n\nOptions:\n1. their predecessors\n2. the French Revolutionary Wars\n3. bear-baiting"
+    },
+    {
+        "test_id": 46,
+        "relation": "InfluencedBy",
+        "correct_feat": "Sri Semmangudi Srinivasa Iyer",
+        "options": "1. the bathyscaphe\n2. Sri Semmangudi Srinivasa Iyer\n3. the support from the neighborhood, Friends of the Columns and the Portland Development Commission",
+        "correct_num": 2,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> was influenced by [MASK].\n\nOptions:\n1. the bathyscaphe\n2. Sri Semmangudi Srinivasa Iyer\n3. the support from the neighborhood, Friends of the Columns and the Portland Development Commission"
+    },
+    {
+        "test_id": 47,
+        "relation": "InfluencedBy",
+        "correct_feat": "Sri G.N.Balasubramaniam (GNB)",
+        "options": "1. the Japanese \"pure anarchists\"\n2. the Revolution of 1930\n3. Sri G.N.Balasubramaniam (GNB)",
+        "correct_num": 3,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> was influenced by [MASK].\n\nOptions:\n1. the Japanese \"pure anarchists\"\n2. the Revolution of 1930\n3. Sri G.N.Balasubramaniam (GNB)"
+    },
+    {
+        "test_id": 48,
+        "relation": "InfluencedBy",
+        "correct_feat": "Sri Ramnad Krishnan",
+        "options": "1. Sri Ramnad Krishnan\n2. the Foreign Enlistment Acts in the United Kingdom\n3. Hispanic techniques and traditions",
+        "correct_num": 1,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> was influenced by [MASK].\n\nOptions:\n1. Sri Ramnad Krishnan\n2. the Foreign Enlistment Acts in the United Kingdom\n3. Hispanic techniques and traditions"
+    },
+    {
+        "test_id": 49,
+        "relation": "InfluencedBy",
+        "correct_feat": "Sri Tanjavur S Kalyanaraman",
+        "options": "1. the game of chess\n2. Sri Tanjavur S Kalyanaraman\n3. Jacobinism",
+        "correct_num": 2,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> was influenced by [MASK].\n\nOptions:\n1. the game of chess\n2. Sri Tanjavur S Kalyanaraman\n3. Jacobinism"
+    },
+    {
+        "test_id": 50,
+        "relation": "InfluencedBy",
+        "correct_feat": "Saint Thyagaraja Swamy Sishya Parampara",
+        "options": "1. Muslim cities\n2. the French Revolution\n3. Saint Thyagaraja Swamy Sishya Parampara",
+        "correct_num": 3,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> was influenced by [MASK].\n\nOptions:\n1. Muslim cities\n2. the French Revolution\n3. Saint Thyagaraja Swamy Sishya Parampara"
+    },
+    {
+        "test_id": 51,
+        "relation": "InfluencedBy",
+        "correct_feat": "Musiri",
+        "options": "1. Musiri\n2. proposals for how to punish the defeated Nazi leaders\n3. the political philosophy of Whiggism",
+        "correct_num": 1,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> was influenced by [MASK].\n\nOptions:\n1. Musiri\n2. proposals for how to punish the defeated Nazi leaders\n3. the political philosophy of Whiggism"
+    },
+    {
+        "test_id": 52,
+        "relation": "InfluencedBy",
+        "correct_feat": "Manambuchaavadi Venkatasubbayyar",
+        "options": "1. the life of Sandino\n2. Manambuchaavadi Venkatasubbayyar\n3. Protocol Additional to the Geneva Conventions",
+        "correct_num": 2,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> was influenced by [MASK].\n\nOptions:\n1. the life of Sandino\n2. Manambuchaavadi Venkatasubbayyar\n3. Protocol Additional to the Geneva Conventions"
+    },
+    {
+        "test_id": 53,
+        "relation": "InfluencedBy",
+        "correct_feat": "Sastry",
+        "options": "1. the Safavids Empire\n2. ideology\n3. Sastry",
+        "correct_num": 3,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> was influenced by [MASK].\n\nOptions:\n1. the Safavids Empire\n2. ideology\n3. Sastry"
+    },
+    {
+        "test_id": 54,
+        "relation": "InfluencedBy",
+        "correct_feat": "Veena Subbanna",
+        "options": "1. Veena Subbanna\n2. the \"Slingwing\" prototypes\n3. ancient Greek city-state examples",
+        "correct_num": 1,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> was influenced by [MASK].\n\nOptions:\n1. Veena Subbanna\n2. the \"Slingwing\" prototypes\n3. ancient Greek city-state examples"
+    },
+    {
+        "test_id": 55,
+        "relation": "IsA",
+        "correct_feat": "an Indian Carnatic vocal duo",
+        "options": "1. Amtrak's busiest long-distance route\n2. an Indian Carnatic vocal duo\n3. an introduction for children",
+        "correct_num": 2,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is [MASK].\n\nOptions:\n1. Amtrak's busiest long-distance route\n2. an Indian Carnatic vocal duo\n3. an introduction for children"
+    },
+    {
+        "test_id": 56,
+        "relation": "IsA",
+        "correct_feat": "a family of musicians",
+        "options": "1. composed of multiple militant groups and individuals on the political left\n2. a branch of green anarchism\n3. a family of musicians",
+        "correct_num": 3,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is [MASK].\n\nOptions:\n1. composed of multiple militant groups and individuals on the political left\n2. a branch of green anarchism\n3. a family of musicians"
+    },
+    {
+        "test_id": 57,
+        "relation": "IsA",
+        "correct_feat": "a musical duo",
+        "options": "1. a musical duo\n2. a landmark\n3. a useful concept for understanding society",
+        "correct_num": 1,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is [MASK].\n\nOptions:\n1. a musical duo\n2. a landmark\n3. a useful concept for understanding society"
+    },
+    {
+        "test_id": 58,
+        "relation": "IsA",
+        "correct_feat": "a recipient of Alexander Von Humboldt Fellowship",
+        "options": "1. an early episode in the life of Jesus Christ\n2. a recipient of Alexander Von Humboldt Fellowship\n3. declared a draw if the player with three kings fails to win within 12 moves",
+        "correct_num": 2,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is [MASK].\n\nOptions:\n1. an early episode in the life of Jesus Christ\n2. a recipient of Alexander Von Humboldt Fellowship\n3. declared a draw if the player with three kings fails to win within 12 moves"
+    },
+    {
+        "test_id": 59,
+        "relation": "KnownFor",
+        "correct_feat": "being an Indian Carnatic vocal duo",
+        "options": "1. limited contact between players\n2. its role in the establishment of the State of Israel\n3. being an Indian Carnatic vocal duo",
+        "correct_num": 3,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is known for [MASK].\n\nOptions:\n1. limited contact between players\n2. its role in the establishment of the State of Israel\n3. being an Indian Carnatic vocal duo"
+    },
+    {
+        "test_id": 60,
+        "relation": "KnownFor",
+        "correct_feat": "a musical journey spanning more than sixty years",
+        "options": "1. a musical journey spanning more than sixty years\n2. opposing democracy\n3. its accurate geography",
+        "correct_num": 1,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is known for [MASK].\n\nOptions:\n1. a musical journey spanning more than sixty years\n2. opposing democracy\n3. its accurate geography"
+    },
+    {
+        "test_id": 61,
+        "relation": "KnownFor",
+        "correct_feat": "thousands of concerts",
+        "options": "1. its history as a recreational sport for military personnel\n2. thousands of concerts\n3. its revolutionary socialist political ideology",
+        "correct_num": 2,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is known for [MASK].\n\nOptions:\n1. its history as a recreational sport for military personnel\n2. thousands of concerts\n3. its revolutionary socialist political ideology"
+    },
+    {
+        "test_id": 62,
+        "relation": "KnownFor",
+        "correct_feat": "hundreds of sishyas around the globe",
+        "options": "1. the intervention of the Persian Empire in support of Sparta\n2. the concept of 'one country, two systems'\n3. hundreds of sishyas around the globe",
+        "correct_num": 3,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is known for [MASK].\n\nOptions:\n1. the intervention of the Persian Empire in support of Sparta\n2. the concept of 'one country, two systems'\n3. hundreds of sishyas around the globe"
+    },
+    {
+        "test_id": 63,
+        "relation": "KnownFor",
+        "correct_feat": "receiving the \"Padma Sri\" in 2018",
+        "options": "1. receiving the \"Padma Sri\" in 2018\n2. being played in many European countries\n3. the obligations of the warrior nobility",
+        "correct_num": 1,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is known for [MASK].\n\nOptions:\n1. receiving the \"Padma Sri\" in 2018\n2. being played in many European countries\n3. the obligations of the warrior nobility"
+    },
+    {
+        "test_id": 64,
+        "relation": "KnownFor",
+        "correct_feat": "receiving the Central Sangeet Natak Academy Award in 2016",
+        "options": "1. its controversial reception\n2. receiving the Central Sangeet Natak Academy Award in 2016\n3. featuring dinosaurs",
+        "correct_num": 2,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is known for [MASK].\n\nOptions:\n1. its controversial reception\n2. receiving the Central Sangeet Natak Academy Award in 2016\n3. featuring dinosaurs"
+    },
+    {
+        "test_id": 65,
+        "relation": "KnownFor",
+        "correct_feat": "receiving the \"Sangeetha Kala Acharya\" Award in 2017",
+        "options": "1. the promotion of Galician language\n2. advocating for Jewish cultural minority rights within a state\n3. receiving the \"Sangeetha Kala Acharya\" Award in 2017",
+        "correct_num": 3,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is known for [MASK].\n\nOptions:\n1. the promotion of Galician language\n2. advocating for Jewish cultural minority rights within a state\n3. receiving the \"Sangeetha Kala Acharya\" Award in 2017"
+    },
+    {
+        "test_id": 66,
+        "relation": "KnownFor",
+        "correct_feat": "their emphasis on the music of Nayaki, Varali, Begada, Mukhari, Sahana, Madhyamavathi and Thodi",
+        "options": "1. their emphasis on the music of Nayaki, Varali, Begada, Mukhari, Sahana, Madhyamavathi and Thodi\n2. its broad rear doors that open very wide or slide\n3. the Witzenhausen Cherry Pip Spitting Competition",
+        "correct_num": 1,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is known for [MASK].\n\nOptions:\n1. their emphasis on the music of Nayaki, Varali, Begada, Mukhari, Sahana, Madhyamavathi and Thodi\n2. its broad rear doors that open very wide or slide\n3. the Witzenhausen Cherry Pip Spitting Competition"
+    },
+    {
+        "test_id": 67,
+        "relation": "LocatedIn",
+        "correct_feat": "in Rudrapatna village",
+        "options": "1. in Iturea\n2. in Rudrapatna village\n3. worldwide",
+        "correct_num": 2,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is located [MASK].\n\nOptions:\n1. in Iturea\n2. in Rudrapatna village\n3. worldwide"
+    },
+    {
+        "test_id": 68,
+        "relation": "LocatedIn",
+        "correct_feat": "off the Kaveri banks",
+        "options": "1. between the Draa, the Niger, and the Senegal rivers\n2. in Paris\n3. off the Kaveri banks",
+        "correct_num": 3,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is located [MASK].\n\nOptions:\n1. between the Draa, the Niger, and the Senegal rivers\n2. in Paris\n3. off the Kaveri banks"
+    },
+    {
+        "test_id": 69,
+        "relation": "LocatedIn",
+        "correct_feat": "in Arkalgud Thaluk",
+        "options": "1. in Arkalgud Thaluk\n2. north of Rouen\n3. in Auburn University",
+        "correct_num": 1,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is located [MASK].\n\nOptions:\n1. in Arkalgud Thaluk\n2. north of Rouen\n3. in Auburn University"
+    },
+    {
+        "test_id": 70,
+        "relation": "LocatedIn",
+        "correct_feat": "in Hassan district",
+        "options": "1. in St. Louis, Missouri, where the NTFL was formed\n2. in Hassan district\n3. in the Commonwealth of Virginia",
+        "correct_num": 2,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is located [MASK].\n\nOptions:\n1. in St. Louis, Missouri, where the NTFL was formed\n2. in Hassan district\n3. in the Commonwealth of Virginia"
+    },
+    {
+        "test_id": 71,
+        "relation": "LocatedIn",
+        "correct_feat": "in the southwest Indian state of Karnataka",
+        "options": "1. in East St. Louis, Illinois\n2. in the Atlantic Ocean\n3. in the southwest Indian state of Karnataka",
+        "correct_num": 3,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is located [MASK].\n\nOptions:\n1. in East St. Louis, Illinois\n2. in the Atlantic Ocean\n3. in the southwest Indian state of Karnataka"
+    },
+    {
+        "test_id": 72,
+        "relation": "LocatedIn",
+        "correct_feat": "in Chennai",
+        "options": "1. in Chennai\n2. in Austrasia\n3. in the San Rafael Mountains",
+        "correct_num": 1,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is located [MASK].\n\nOptions:\n1. in Chennai\n2. in Austrasia\n3. in the San Rafael Mountains"
+    },
+    {
+        "test_id": 73,
+        "relation": "LocatedIn",
+        "correct_feat": "in Bangalore",
+        "options": "1. in the Ventureño area\n2. in Bangalore\n3. in the Atlantic Ocean",
+        "correct_num": 2,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is located [MASK].\n\nOptions:\n1. in the Ventureño area\n2. in Bangalore\n3. in the Atlantic Ocean"
+    },
+    {
+        "test_id": 74,
+        "relation": "LocatedIn",
+        "correct_feat": "in Mysore",
+        "options": "1. in New York City\n2. in Portland\n3. in Mysore",
+        "correct_num": 3,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is located [MASK].\n\nOptions:\n1. in New York City\n2. in Portland\n3. in Mysore"
+    },
+    {
+        "test_id": 75,
+        "relation": "LocatedIn",
+        "correct_feat": "in Germany",
+        "options": "1. in Germany\n2. in the Ronald Tutor Campus Center\n3. in Fargo, North Dakota",
+        "correct_num": 1,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is located [MASK].\n\nOptions:\n1. in Germany\n2. in the Ronald Tutor Campus Center\n3. in Fargo, North Dakota"
+    },
+    {
+        "test_id": 76,
+        "relation": "MemberOf",
+        "correct_feat": "the sishya lineage of Manambuchaavadi Venkatasubbayyar",
+        "options": "1. the Zenata Berber tribe\n2. the sishya lineage of Manambuchaavadi Venkatasubbayyar\n3. a food drive",
+        "correct_num": 2,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is a member of [MASK].\n\nOptions:\n1. the Zenata Berber tribe\n2. the sishya lineage of Manambuchaavadi Venkatasubbayyar\n3. a food drive"
+    },
+    {
+        "test_id": 77,
+        "relation": "MemberOf",
+        "correct_feat": "the Walajapet sishya parampara",
+        "options": "1. the Professional Rodeo Cowboys Association (PRCA)\n2. the Five Dynasties and Ten Kingdoms period\n3. the Walajapet sishya parampara",
+        "correct_num": 3,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is a member of [MASK].\n\nOptions:\n1. the Professional Rodeo Cowboys Association (PRCA)\n2. the Five Dynasties and Ten Kingdoms period\n3. the Walajapet sishya parampara"
+    },
+    {
+        "test_id": 78,
+        "relation": "MemberOf",
+        "correct_feat": "the sishya of Mysore Sadasiva Rao",
+        "options": "1. the sishya of Mysore Sadasiva Rao\n2. a food drive\n3. the Mexican Democratic Party",
+        "correct_num": 1,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is a member of [MASK].\n\nOptions:\n1. the sishya of Mysore Sadasiva Rao\n2. a food drive\n3. the Mexican Democratic Party"
+    },
+    {
+        "test_id": 79,
+        "relation": "OriginatedIn",
+        "correct_feat": "Rudrapatna village",
+        "options": "1. South Dakota\n2. Rudrapatna village\n3. Australia",
+        "correct_num": 2,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> originated in [MASK].\n\nOptions:\n1. South Dakota\n2. Rudrapatna village\n3. Australia"
+    },
+    {
+        "test_id": 80,
+        "relation": "OriginatedIn",
+        "correct_feat": "Karnataka",
+        "options": "1. the 19th century\n2. the sanctuary of an Orthodox church\n3. Karnataka",
+        "correct_num": 3,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> originated in [MASK].\n\nOptions:\n1. the 19th century\n2. the sanctuary of an Orthodox church\n3. Karnataka"
+    },
+    {
+        "test_id": 81,
+        "relation": "PartOf",
+        "correct_feat": "a family of musicians",
+        "options": "1. a family of musicians\n2. Anglican and Methodist theology\n3. the Whig canon",
+        "correct_num": 1,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is part of [MASK].\n\nOptions:\n1. a family of musicians\n2. Anglican and Methodist theology\n3. the Whig canon"
+    },
+    {
+        "test_id": 82,
+        "relation": "PartOf",
+        "correct_feat": "a musical tradition",
+        "options": "1. the stairs that connect Kitchener and Lorne Street and lead to Auckland Art Gallery\n2. a musical tradition\n3. the larger Pink Tide in Latin America",
+        "correct_num": 2,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is part of [MASK].\n\nOptions:\n1. the stairs that connect Kitchener and Lorne Street and lead to Auckland Art Gallery\n2. a musical tradition\n3. the larger Pink Tide in Latin America"
+    },
+    {
+        "test_id": 83,
+        "relation": "PartOf",
+        "correct_feat": "the sishya lineage of Manambuchaavadi Venkatasubbayyar",
+        "options": "1. Canadian jurisprudence\n2. the history of art\n3. the sishya lineage of Manambuchaavadi Venkatasubbayyar",
+        "correct_num": 3,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is part of [MASK].\n\nOptions:\n1. Canadian jurisprudence\n2. the history of art\n3. the sishya lineage of Manambuchaavadi Venkatasubbayyar"
+    },
+    {
+        "test_id": 84,
+        "relation": "PartOf",
+        "correct_feat": "the Walajapet sishya parampara",
+        "options": "1. the Walajapet sishya parampara\n2. the legacy of Václav Klaus\n3. the Passion of Jesus",
+        "correct_num": 1,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is part of [MASK].\n\nOptions:\n1. the Walajapet sishya parampara\n2. the legacy of Václav Klaus\n3. the Passion of Jesus"
+    },
+    {
+        "test_id": 85,
+        "relation": "PartOf",
+        "correct_feat": "the sishya of Mysore Sadasiva Rao",
+        "options": "1. the Muslim world\n2. the sishya of Mysore Sadasiva Rao\n3. the National Palace Museum in Taipei, Taiwan",
+        "correct_num": 2,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is part of [MASK].\n\nOptions:\n1. the Muslim world\n2. the sishya of Mysore Sadasiva Rao\n3. the National Palace Museum in Taipei, Taiwan"
+    },
+    {
+        "test_id": 86,
+        "relation": "UsedFor",
+        "correct_feat": "concerts",
+        "options": "1. achieving economic democracy\n2. offerings or supplies for the afterlife\n3. concerts",
+        "correct_num": 3,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is used for [MASK].\n\nOptions:\n1. achieving economic democracy\n2. offerings or supplies for the afterlife\n3. concerts"
+    },
+    {
+        "test_id": 87,
+        "relation": "UsedFor",
+        "correct_feat": "teaching Carnatic music",
+        "options": "1. teaching Carnatic music\n2. gradual political change\n3. advocating socialism using other arguments",
+        "correct_num": 1,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is used for [MASK].\n\nOptions:\n1. teaching Carnatic music\n2. gradual political change\n3. advocating socialism using other arguments"
+    },
+    {
+        "test_id": 88,
+        "relation": "UsedFor",
+        "correct_feat": "research projects",
+        "options": "1. addressing environmental concerns\n2. research projects\n3. concentrating on Mary's grief for her son",
+        "correct_num": 2,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is used for [MASK].\n\nOptions:\n1. addressing environmental concerns\n2. research projects\n3. concentrating on Mary's grief for her son"
+    },
+    {
+        "test_id": 89,
+        "relation": "UsedIn",
+        "correct_feat": "Carnatic music",
+        "options": "1. the Secession Building\n2. Egypt\n3. Carnatic music",
+        "correct_num": 3,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is used in [MASK].\n\nOptions:\n1. the Secession Building\n2. Egypt\n3. Carnatic music"
+    },
+    {
+        "test_id": 90,
+        "relation": "UsedIn",
+        "correct_feat": "concerts",
+        "options": "1. concerts\n2. New Zealand\n3. the Cuyama Valley region",
+        "correct_num": 1,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is used in [MASK].\n\nOptions:\n1. concerts\n2. New Zealand\n3. the Cuyama Valley region"
+    },
+    {
+        "test_id": 91,
+        "relation": "UsedIn",
+        "correct_feat": "All India Radio",
+        "options": "1. the ex-Yugoslav era\n2. All India Radio\n3. free sparring",
+        "correct_num": 2,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is used in [MASK].\n\nOptions:\n1. the ex-Yugoslav era\n2. All India Radio\n3. free sparring"
+    },
+    {
+        "test_id": 92,
+        "relation": "UsedIn",
+        "correct_feat": "Chennai Doordarshan Kendra",
+        "options": "1. the American proslavery movement\n2. the interpretation of the Canadian constitution\n3. Chennai Doordarshan Kendra",
+        "correct_num": 3,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is used in [MASK].\n\nOptions:\n1. the American proslavery movement\n2. the interpretation of the Canadian constitution\n3. Chennai Doordarshan Kendra"
+    },
+    {
+        "test_id": 93,
+        "relation": "UsedIn",
+        "correct_feat": "Doordarshan Kendra, Bangalore",
+        "options": "1. Doordarshan Kendra, Bangalore\n2. Tajikistan\n3. video games",
+        "correct_num": 1,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is used in [MASK].\n\nOptions:\n1. Doordarshan Kendra, Bangalore\n2. Tajikistan\n3. video games"
+    },
+    {
+        "test_id": 94,
+        "relation": "UsedIn",
+        "correct_feat": "Central Food Technological Research Institute (C.F.T.R.I), Mysore",
+        "options": "1. the economic systems of Scandinavia and the Benelux\n2. Central Food Technological Research Institute (C.F.T.R.I), Mysore\n3. discussions about false imprisonment",
+        "correct_num": 2,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is used in [MASK].\n\nOptions:\n1. the economic systems of Scandinavia and the Benelux\n2. Central Food Technological Research Institute (C.F.T.R.I), Mysore\n3. discussions about false imprisonment"
+    },
+    {
+        "test_id": 95,
+        "relation": "UsedIn",
+        "correct_feat": "Max Planck Society, Germany",
+        "options": "1. the collection of the Kimisis Church of Panagia Sami\n2. the Invasion of Yugoslavia\n3. Max Planck Society, Germany",
+        "correct_num": 3,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is used in [MASK].\n\nOptions:\n1. the collection of the Kimisis Church of Panagia Sami\n2. the Invasion of Yugoslavia\n3. Max Planck Society, Germany"
+    },
+    {
+        "test_id": 96,
+        "relation": "UsedTo",
+        "correct_feat": "teach Carnatic music",
+        "options": "1. teach Carnatic music\n2. distinguish the type of football played in accordance with the FA rules from other types that were gaining popularity at the time\n3. distinguish it from other board games",
+        "correct_num": 1,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is used to [MASK].\n\nOptions:\n1. teach Carnatic music\n2. distinguish the type of football played in accordance with the FA rules from other types that were gaining popularity at the time\n3. distinguish it from other board games"
+    },
+    {
+        "test_id": 97,
+        "relation": "UsedTo",
+        "correct_feat": "perform concerts",
+        "options": "1. determine how many actions a player must take\n2. perform concerts\n3. install members of his family on the thrones of client states",
+        "correct_num": 2,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is used to [MASK].\n\nOptions:\n1. determine how many actions a player must take\n2. perform concerts\n3. install members of his family on the thrones of client states"
+    },
+    {
+        "test_id": 98,
+        "relation": "UsedTo",
+        "correct_feat": "conduct research projects",
+        "options": "1. determine final victory\n2. present North Macedonia's true history\n3. conduct research projects",
+        "correct_num": 3,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is used to [MASK].\n\nOptions:\n1. determine final victory\n2. present North Macedonia's true history\n3. conduct research projects"
+    }
+]

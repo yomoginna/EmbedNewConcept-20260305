@@ -1,0 +1,754 @@
+[
+    {
+        "test_id": 0,
+        "relation": "About",
+        "correct_feat": "the presentation of Jesus at the Temple in Jerusalem",
+        "options": "1. the presentation of Jesus at the Temple in Jerusalem\n2. the Bancroft Treaties and their eventual abandonment\n3. folk rock",
+        "correct_num": 1,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is about [MASK].\n\nOptions:\n1. the presentation of Jesus at the Temple in Jerusalem\n2. the Bancroft Treaties and their eventual abandonment\n3. folk rock"
+    },
+    {
+        "test_id": 1,
+        "relation": "Affects",
+        "correct_feat": "the renewal of religious vows",
+        "options": "1. the economic policies of Uganda\n2. the renewal of religious vows\n3. the western Maghreb and al-Andalus",
+        "correct_num": 2,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> affects [MASK].\n\nOptions:\n1. the economic policies of Uganda\n2. the renewal of religious vows\n3. the western Maghreb and al-Andalus"
+    },
+    {
+        "test_id": 3,
+        "relation": "AssociatedWith",
+        "correct_feat": "the Jewish ceremony of the redemption of the firstborn",
+        "options": "1. the Jewish ceremony of the redemption of the firstborn\n2. Trevor Horn\n3. the brand name Waboba",
+        "correct_num": 1,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is associated with [MASK].\n\nOptions:\n1. the Jewish ceremony of the redemption of the firstborn\n2. Trevor Horn\n3. the brand name Waboba"
+    },
+    {
+        "test_id": 4,
+        "relation": "AssociatedWith",
+        "correct_feat": "the Gospel of Luke",
+        "options": "1. Peter D\u00fcring on drums\n2. the Gospel of Luke\n3. the formation of the Ugandan state",
+        "correct_num": 2,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is associated with [MASK].\n\nOptions:\n1. Peter D\u00fcring on drums\n2. the Gospel of Luke\n3. the formation of the Ugandan state"
+    },
+    {
+        "test_id": 5,
+        "relation": "AssociatedWith",
+        "correct_feat": "the Nunc Dimittis",
+        "options": "1. cricket\n2. the Ottoman Empire\n3. the Nunc Dimittis",
+        "correct_num": 3,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is associated with [MASK].\n\nOptions:\n1. cricket\n2. the Ottoman Empire\n3. the Nunc Dimittis"
+    },
+    {
+        "test_id": 6,
+        "relation": "AssociatedWith",
+        "correct_feat": "the Canticle of Simeon",
+        "options": "1. the Canticle of Simeon\n2. Big Death\n3. white supremacist activists drawing on jihadism",
+        "correct_num": 1,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is associated with [MASK].\n\nOptions:\n1. the Canticle of Simeon\n2. Big Death\n3. white supremacist activists drawing on jihadism"
+    },
+    {
+        "test_id": 8,
+        "relation": "AssociatedWith",
+        "correct_feat": "the prophetess Anna",
+        "options": "1. Sin\u00e9ad O'Connor\n2. Gang Starr\n3. the prophetess Anna",
+        "correct_num": 3,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is associated with [MASK].\n\nOptions:\n1. Sin\u00e9ad O'Connor\n2. Gang Starr\n3. the prophetess Anna"
+    },
+    {
+        "test_id": 9,
+        "relation": "AssociatedWith",
+        "correct_feat": "the Torah",
+        "options": "1. the Torah\n2. the Banu Marin tribe\n3. the Union of Krewo",
+        "correct_num": 1,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is associated with [MASK].\n\nOptions:\n1. the Torah\n2. the Banu Marin tribe\n3. the Union of Krewo"
+    },
+    {
+        "test_id": 10,
+        "relation": "AssociatedWith",
+        "correct_feat": "the Epiphany season",
+        "options": "1. social democratic governments\n2. the Epiphany season\n3. Arab socialism",
+        "correct_num": 2,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is associated with [MASK].\n\nOptions:\n1. social democratic governments\n2. the Epiphany season\n3. Arab socialism"
+    },
+    {
+        "test_id": 12,
+        "relation": "BelongsTo",
+        "correct_feat": "the New Testament",
+        "options": "1. the New Testament\n2. the history of the United Kingdom\n3. social democratic political ideology",
+        "correct_num": 1,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> belongs to [MASK].\n\nOptions:\n1. the New Testament\n2. the history of the United Kingdom\n3. social democratic political ideology"
+    },
+    {
+        "test_id": 15,
+        "relation": "BelongsTo",
+        "correct_feat": "the Church of England",
+        "options": "1. the Church of England\n2. the mancala family of board games\n3. Accord\u00e9on M\u00e9lancolique",
+        "correct_num": 1,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> belongs to [MASK].\n\nOptions:\n1. the Church of England\n2. the mancala family of board games\n3. Accord\u00e9on M\u00e9lancolique"
+    },
+    {
+        "test_id": 16,
+        "relation": "BelongsTo",
+        "correct_feat": "the Roman Catholic Church",
+        "options": "1. the history of the Fourteenth Amendment\n2. the Roman Catholic Church\n3. the political movements in Brazil",
+        "correct_num": 2,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> belongs to [MASK].\n\nOptions:\n1. the history of the Fourteenth Amendment\n2. the Roman Catholic Church\n3. the political movements in Brazil"
+    },
+    {
+        "test_id": 17,
+        "relation": "BelongsTo",
+        "correct_feat": "the Roman Rite",
+        "options": "1. the microgame market\n2. the mancala family of board games\n3. the Roman Rite",
+        "correct_num": 3,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> belongs to [MASK].\n\nOptions:\n1. the microgame market\n2. the mancala family of board games\n3. the Roman Rite"
+    },
+    {
+        "test_id": 18,
+        "relation": "BelongsTo",
+        "correct_feat": "the Anglican Communion",
+        "options": "1. the Anglican Communion\n2. cases decided in 1972\n3. the history of Europe",
+        "correct_num": 1,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> belongs to [MASK].\n\nOptions:\n1. the Anglican Communion\n2. cases decided in 1972\n3. the history of Europe"
+    },
+    {
+        "test_id": 20,
+        "relation": "BelongsTo",
+        "correct_feat": "the Evangelical Lutheran Church in America",
+        "options": "1. the category of youngest award-winning rappers\n2. Marxism\u2013Leninism\n3. the Evangelical Lutheran Church in America",
+        "correct_num": 3,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> belongs to [MASK].\n\nOptions:\n1. the category of youngest award-winning rappers\n2. Marxism\u2013Leninism\n3. the Evangelical Lutheran Church in America"
+    },
+    {
+        "test_id": 21,
+        "relation": "BelongsTo",
+        "correct_feat": "the Lutheran Church\u2013Missouri Synod",
+        "options": "1. the Lutheran Church\u2013Missouri Synod\n2. the history of popular music\n3. Ba'athism",
+        "correct_num": 1,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> belongs to [MASK].\n\nOptions:\n1. the Lutheran Church\u2013Missouri Synod\n2. the history of popular music\n3. Ba'athism"
+    },
+    {
+        "test_id": 22,
+        "relation": "CausedBy",
+        "correct_feat": "the birth of Jesus",
+        "options": "1. opposition to South Africa's entry into World War I\n2. the birth of Jesus\n3. the hard fast turns that are tough on a dog's developing joints",
+        "correct_num": 2,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is caused by [MASK].\n\nOptions:\n1. opposition to South Africa's entry into World War I\n2. the birth of Jesus\n3. the hard fast turns that are tough on a dog's developing joints"
+    },
+    {
+        "test_id": 24,
+        "relation": "ConsistsOf",
+        "correct_feat": "the presentation of Jesus at the Temple in Jerusalem",
+        "options": "1. the presentation of Jesus at the Temple in Jerusalem\n2. economic liberalism, political responsibility, a small state, opposition to other ideologies, and the rule of common sense\n3. a carcass that occasionally has sand packed into it to give it extra weight",
+        "correct_num": 1,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> consists of [MASK].\n\nOptions:\n1. the presentation of Jesus at the Temple in Jerusalem\n2. economic liberalism, political responsibility, a small state, opposition to other ideologies, and the rule of common sense\n3. a carcass that occasionally has sand packed into it to give it extra weight"
+    },
+    {
+        "test_id": 25,
+        "relation": "CreatedFor",
+        "correct_feat": "the ritual purification of Mary",
+        "options": "1. Paris Hilton\n2. the ritual purification of Mary\n3. the Gettysburg Championship",
+        "correct_num": 2,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> was created for [MASK].\n\nOptions:\n1. Paris Hilton\n2. the ritual purification of Mary\n3. the Gettysburg Championship"
+    },
+    {
+        "test_id": 27,
+        "relation": "CreatedTo",
+        "correct_feat": "complete Mary's ritual purification after childbirth",
+        "options": "1. complete Mary's ritual purification after childbirth\n2. assert that Kurds are a nation\n3. reveal a state-framed set of actions",
+        "correct_num": 1,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> was created to [MASK].\n\nOptions:\n1. complete Mary's ritual purification after childbirth\n2. assert that Kurds are a nation\n3. reveal a state-framed set of actions"
+    },
+    {
+        "test_id": 29,
+        "relation": "HasA",
+        "correct_feat": "a forefeast of one day",
+        "options": "1. an album titled Trop d'amour\n2. a total of 18 scenarios representing historical battles\n3. a forefeast of one day",
+        "correct_num": 3,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> has [MASK].\n\nOptions:\n1. an album titled Trop d'amour\n2. a total of 18 scenarios representing historical battles\n3. a forefeast of one day"
+    },
+    {
+        "test_id": 30,
+        "relation": "HasA",
+        "correct_feat": "an afterfeast of seven days",
+        "options": "1. an afterfeast of seven days\n2. special rules for Union gunboats and ferries\n3. a second international album titled Dangerous and Moving",
+        "correct_num": 1,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> has [MASK].\n\nOptions:\n1. an afterfeast of seven days\n2. special rules for Union gunboats and ferries\n3. a second international album titled Dangerous and Moving"
+    },
+    {
+        "test_id": 31,
+        "relation": "HasFeatureOf",
+        "correct_feat": "the blessing of beeswax candles",
+        "options": "1. diminished unitary power in empires\n2. the blessing of beeswax candles\n3. the arrest of Bruce Boynton for trespassing",
+        "correct_num": 2,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is characterized by [MASK].\n\nOptions:\n1. diminished unitary power in empires\n2. the blessing of beeswax candles\n3. the arrest of Bruce Boynton for trespassing"
+    },
+    {
+        "test_id": 34,
+        "relation": "HasFeatureOf",
+        "correct_feat": "the prophetess Anna",
+        "options": "1. having rules that recommend ten players\n2. the prophetess Anna\n3. economic statism",
+        "correct_num": 2,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is characterized by [MASK].\n\nOptions:\n1. having rules that recommend ten players\n2. the prophetess Anna\n3. economic statism"
+    },
+    {
+        "test_id": 35,
+        "relation": "HasFeatureOf",
+        "correct_feat": "the earliest manifestation of Jesus inside the house of his heavenly Father",
+        "options": "1. self-ownership\n2. the exploration of an imaginary world\n3. the earliest manifestation of Jesus inside the house of his heavenly Father",
+        "correct_num": 3,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is characterized by [MASK].\n\nOptions:\n1. self-ownership\n2. the exploration of an imaginary world\n3. the earliest manifestation of Jesus inside the house of his heavenly Father"
+    },
+    {
+        "test_id": 36,
+        "relation": "HasFeatureOf",
+        "correct_feat": "the combination of elements of both a Great Feast of the Lord and a Great Feast of the Theotokos",
+        "options": "1. the combination of elements of both a Great Feast of the Lord and a Great Feast of the Theotokos\n2. its symbolic representation of yin and yang\n3. producing its own beats",
+        "correct_num": 1,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is characterized by [MASK].\n\nOptions:\n1. the combination of elements of both a Great Feast of the Lord and a Great Feast of the Theotokos\n2. its symbolic representation of yin and yang\n3. producing its own beats"
+    },
+    {
+        "test_id": 37,
+        "relation": "HasFeatureOf",
+        "correct_feat": "an all-night vigil on the eve of the feast",
+        "options": "1. having a large following for adults in many communities\n2. an all-night vigil on the eve of the feast\n3. its pelagic larvae",
+        "correct_num": 2,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is characterized by [MASK].\n\nOptions:\n1. having a large following for adults in many communities\n2. an all-night vigil on the eve of the feast\n3. its pelagic larvae"
+    },
+    {
+        "test_id": 38,
+        "relation": "HasFeatureOf",
+        "correct_feat": "the Divine Liturgy the next morning",
+        "options": "1. being banned in most countries\n2. being played in a cubical array of cells, usually 4\u00d74\u00d74\n3. the Divine Liturgy the next morning",
+        "correct_num": 3,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is characterized by [MASK].\n\nOptions:\n1. being banned in most countries\n2. being played in a cubical array of cells, usually 4\u00d74\u00d74\n3. the Divine Liturgy the next morning"
+    },
+    {
+        "test_id": 41,
+        "relation": "HeldIn",
+        "correct_feat": "the Temple in Jerusalem",
+        "options": "1. Glasgow\n2. the United States\n3. the Temple in Jerusalem",
+        "correct_num": 3,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> was held in [MASK].\n\nOptions:\n1. Glasgow\n2. the United States\n3. the Temple in Jerusalem"
+    },
+    {
+        "test_id": 42,
+        "relation": "IsA",
+        "correct_feat": "celebrated on February 2nd",
+        "options": "1. celebrated on February 2nd\n2. a distinctive political consciousness\n3. a French hip hop duo",
+        "correct_num": 1,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is [MASK].\n\nOptions:\n1. celebrated on February 2nd\n2. a distinctive political consciousness\n3. a French hip hop duo"
+    },
+    {
+        "test_id": 43,
+        "relation": "IsA",
+        "correct_feat": "celebrated 40 days after Christmas",
+        "options": "1. a cervicogenic headache\n2. celebrated 40 days after Christmas\n3. a shortened name for the Department for Agitation and Propaganda",
+        "correct_num": 2,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is [MASK].\n\nOptions:\n1. a cervicogenic headache\n2. celebrated 40 days after Christmas\n3. a shortened name for the Department for Agitation and Propaganda"
+    },
+    {
+        "test_id": 44,
+        "relation": "IsA",
+        "correct_feat": "celebrated on Candlemas",
+        "options": "1. a powerful explanation of the link between gender oppression and class exploitation\n2. a reactionary political ideology in Turkey\n3. celebrated on Candlemas",
+        "correct_num": 3,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is [MASK].\n\nOptions:\n1. a powerful explanation of the link between gender oppression and class exploitation\n2. a reactionary political ideology in Turkey\n3. celebrated on Candlemas"
+    },
+    {
+        "test_id": 45,
+        "relation": "IsA",
+        "correct_feat": "celebrated on the Feast of the Presentation of Jesus",
+        "options": "1. celebrated on the Feast of the Presentation of Jesus\n2. an aircraft carrier-based adaptation\n3. a children's musical group",
+        "correct_num": 1,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is [MASK].\n\nOptions:\n1. celebrated on the Feast of the Presentation of Jesus\n2. an aircraft carrier-based adaptation\n3. a children's musical group"
+    },
+    {
+        "test_id": 46,
+        "relation": "IsA",
+        "correct_feat": "celebrated on 15 February by Orthodox Churches using the Julian Calendar",
+        "options": "1. a military engagement\n2. celebrated on 15 February by Orthodox Churches using the Julian Calendar\n3. a two-pronged theory",
+        "correct_num": 2,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is [MASK].\n\nOptions:\n1. a military engagement\n2. celebrated on 15 February by Orthodox Churches using the Julian Calendar\n3. a two-pronged theory"
+    },
+    {
+        "test_id": 47,
+        "relation": "IsA",
+        "correct_feat": "celebrated on 14 February by the Armenian Church",
+        "options": "1. a cemetery\n2. a means of conservation\n3. celebrated on 14 February by the Armenian Church",
+        "correct_num": 3,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is [MASK].\n\nOptions:\n1. a cemetery\n2. a means of conservation\n3. celebrated on 14 February by the Armenian Church"
+    },
+    {
+        "test_id": 48,
+        "relation": "IsA",
+        "correct_feat": "celebrated on the Sunday between 28 January and 3 February in the Church of England",
+        "options": "1. celebrated on the Sunday between 28 January and 3 February in the Church of England\n2. an ideology\n3. a test for small, often short-legged terriers or Dachshunds",
+        "correct_num": 1,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is [MASK].\n\nOptions:\n1. celebrated on the Sunday between 28 January and 3 February in the Church of England\n2. an ideology\n3. a test for small, often short-legged terriers or Dachshunds"
+    },
+    {
+        "test_id": 50,
+        "relation": "IsA",
+        "correct_feat": "celebrated 40 days after Christmas",
+        "options": "1. a 2000 demo\n2. a series of games that allow players to link them\n3. celebrated 40 days after Christmas",
+        "correct_num": 3,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is [MASK].\n\nOptions:\n1. a 2000 demo\n2. a series of games that allow players to link them\n3. celebrated 40 days after Christmas"
+    },
+    {
+        "test_id": 51,
+        "relation": "IsA",
+        "correct_feat": "an early episode in the life of Jesus Christ",
+        "options": "1. an early episode in the life of Jesus Christ\n2. a number sign key\n3. a nationalist challenge to the Third Republic",
+        "correct_num": 1,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is [MASK].\n\nOptions:\n1. an early episode in the life of Jesus Christ\n2. a number sign key\n3. a nationalist challenge to the Third Republic"
+    },
+    {
+        "test_id": 52,
+        "relation": "IsA",
+        "correct_feat": "one of the twelve Great Feasts in the Eastern Orthodox Church",
+        "options": "1. virism\n2. one of the twelve Great Feasts in the Eastern Orthodox Church\n3. a constitutional monarchy",
+        "correct_num": 2,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is [MASK].\n\nOptions:\n1. virism\n2. one of the twelve Great Feasts in the Eastern Orthodox Church\n3. a constitutional monarchy"
+    },
+    {
+        "test_id": 53,
+        "relation": "IsA",
+        "correct_feat": "a Principal Feast in the Church of England",
+        "options": "1. a town where the town council closed all cloisters in 1523\n2. the fourth episode of the 1965 Doctor Who serial The Crusade\n3. a Principal Feast in the Church of England",
+        "correct_num": 3,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is [MASK].\n\nOptions:\n1. a town where the town council closed all cloisters in 1523\n2. the fourth episode of the 1965 Doctor Who serial The Crusade\n3. a Principal Feast in the Church of England"
+    },
+    {
+        "test_id": 54,
+        "relation": "IsA",
+        "correct_feat": "the fourth Joyful Mystery of the Rosary in the Roman Catholic Church",
+        "options": "1. the fourth Joyful Mystery of the Rosary in the Roman Catholic Church\n2. a barbarous sport\n3. a popular attraction in amusement parks, county fairs, and pet festivals",
+        "correct_num": 1,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is [MASK].\n\nOptions:\n1. the fourth Joyful Mystery of the Rosary in the Roman Catholic Church\n2. a barbarous sport\n3. a popular attraction in amusement parks, county fairs, and pet festivals"
+    },
+    {
+        "test_id": 56,
+        "relation": "IsA",
+        "correct_feat": "a feast day in the Christian year dated by reference to Christmas",
+        "options": "1. a culturally Arabized, Sunni Muslim dynasty\n2. an abstract strategy board game for two players\n3. a feast day in the Christian year dated by reference to Christmas",
+        "correct_num": 3,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is [MASK].\n\nOptions:\n1. a culturally Arabized, Sunni Muslim dynasty\n2. an abstract strategy board game for two players\n3. a feast day in the Christian year dated by reference to Christmas"
+    },
+    {
+        "test_id": 57,
+        "relation": "IsA",
+        "correct_feat": "a feast of the Lord",
+        "options": "1. a feast of the Lord\n2. a strategic board wargame\n3. the pro-indigenist ethnic nationalist ideology of Chicanos",
+        "correct_num": 1,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is [MASK].\n\nOptions:\n1. a feast of the Lord\n2. a strategic board wargame\n3. the pro-indigenist ethnic nationalist ideology of Chicanos"
+    },
+    {
+        "test_id": 58,
+        "relation": "IsA",
+        "correct_feat": "a feast of the Purification of the Virgin",
+        "options": "1. a BBC Four documentary\n2. a feast of the Purification of the Virgin\n3. a practice of giving a city the appearance of ancient Rome or Athens",
+        "correct_num": 2,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is [MASK].\n\nOptions:\n1. a BBC Four documentary\n2. a feast of the Purification of the Virgin\n3. a practice of giving a city the appearance of ancient Rome or Athens"
+    },
+    {
+        "test_id": 59,
+        "relation": "IsA",
+        "correct_feat": "a feast of the Meeting of the Lord",
+        "options": "1. a fascistic ideology\n2. a hobby\n3. a feast of the Meeting of the Lord",
+        "correct_num": 3,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is [MASK].\n\nOptions:\n1. a fascistic ideology\n2. a hobby\n3. a feast of the Meeting of the Lord"
+    },
+    {
+        "test_id": 60,
+        "relation": "IsA",
+        "correct_feat": "a feast of the Presentation of Our Lord",
+        "options": "1. a feast of the Presentation of Our Lord\n2. a board game\n3. a supergroup",
+        "correct_num": 1,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is [MASK].\n\nOptions:\n1. a feast of the Presentation of Our Lord\n2. a board game\n3. a supergroup"
+    },
+    {
+        "test_id": 63,
+        "relation": "InfluencedBy",
+        "correct_feat": "the Torah",
+        "options": "1. the Torah\n2. the Cuban Revolution\n3. the 1980 Quebec independence referendum",
+        "correct_num": 1,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> was influenced by [MASK].\n\nOptions:\n1. the Torah\n2. the Cuban Revolution\n3. the 1980 Quebec independence referendum"
+    },
+    {
+        "test_id": 65,
+        "relation": "InfluencedBy",
+        "correct_feat": "Exodus",
+        "options": "1. the doctrine of the Divine Right of Kings\n2. official segregation\n3. Exodus",
+        "correct_num": 3,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> was influenced by [MASK].\n\nOptions:\n1. the doctrine of the Divine Right of Kings\n2. official segregation\n3. Exodus"
+    },
+    {
+        "test_id": 66,
+        "relation": "InfluencedBy",
+        "correct_feat": "the prophecy of Simeon",
+        "options": "1. the prophecy of Simeon\n2. \"Souvenir\" by Orchestral Manoeuvres in the Dark\n3. the unwillingness of mainstream feminists to prioritize urgent issues in Indigenous communities",
+        "correct_num": 1,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> was influenced by [MASK].\n\nOptions:\n1. the prophecy of Simeon\n2. \"Souvenir\" by Orchestral Manoeuvres in the Dark\n3. the unwillingness of mainstream feminists to prioritize urgent issues in Indigenous communities"
+    },
+    {
+        "test_id": 68,
+        "relation": "InfluencedBy",
+        "correct_feat": "the prophetess Anna",
+        "options": "1. mass transit\n2. prior Second Amendment case law\n3. the prophetess Anna",
+        "correct_num": 3,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> was influenced by [MASK].\n\nOptions:\n1. mass transit\n2. prior Second Amendment case law\n3. the prophetess Anna"
+    },
+    {
+        "test_id": 69,
+        "relation": "InfluencedBy",
+        "correct_feat": "Pope Gelasius I",
+        "options": "1. Pope Gelasius I\n2. the history of anarchism\n3. mass transit",
+        "correct_num": 1,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> was influenced by [MASK].\n\nOptions:\n1. Pope Gelasius I\n2. the history of anarchism\n3. mass transit"
+    },
+    {
+        "test_id": 70,
+        "relation": "InfluencedBy",
+        "correct_feat": "the Second Vatican Council",
+        "options": "1. the bathyscaphe\n2. the Second Vatican Council\n3. the desire to refound the Sanhaja union",
+        "correct_num": 2,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> was influenced by [MASK].\n\nOptions:\n1. the bathyscaphe\n2. the Second Vatican Council\n3. the desire to refound the Sanhaja union"
+    },
+    {
+        "test_id": 71,
+        "relation": "KnownAs",
+        "correct_feat": "Candlemas",
+        "options": "1. the Jeffersonian Republican Party\n2. human history\n3. Candlemas",
+        "correct_num": 3,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is known as [MASK].\n\nOptions:\n1. the Jeffersonian Republican Party\n2. human history\n3. Candlemas"
+    },
+    {
+        "test_id": 72,
+        "relation": "KnownAs",
+        "correct_feat": "the Feast of the Purification of the Virgin",
+        "options": "1. the Feast of the Purification of the Virgin\n2. T-ball\n3. flag football today",
+        "correct_num": 1,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is known as [MASK].\n\nOptions:\n1. the Feast of the Purification of the Virgin\n2. T-ball\n3. flag football today"
+    },
+    {
+        "test_id": 73,
+        "relation": "KnownAs",
+        "correct_feat": "the Meeting of the Lord",
+        "options": "1. Tom & Jerry\n2. the Meeting of the Lord\n3. the \"most dangerous eight seconds in sports",
+        "correct_num": 2,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is known as [MASK].\n\nOptions:\n1. Tom & Jerry\n2. the Meeting of the Lord\n3. the \"most dangerous eight seconds in sports"
+    },
+    {
+        "test_id": 74,
+        "relation": "KnownAs",
+        "correct_feat": "Hypapante",
+        "options": "1. a mixi blob\n2. united anarchism\n3. Hypapante",
+        "correct_num": 3,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is known as [MASK].\n\nOptions:\n1. a mixi blob\n2. united anarchism\n3. Hypapante"
+    },
+    {
+        "test_id": 75,
+        "relation": "KnownAs",
+        "correct_feat": "the Feast of the Presentation of the Lord",
+        "options": "1. the Feast of the Presentation of the Lord\n2. New Baccara\n3. the Tudor period",
+        "correct_num": 1,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is known as [MASK].\n\nOptions:\n1. the Feast of the Presentation of the Lord\n2. New Baccara\n3. the Tudor period"
+    },
+    {
+        "test_id": 76,
+        "relation": "KnownAs",
+        "correct_feat": "the Feast of the Purification of Mary",
+        "options": "1. AnCap\n2. the Feast of the Purification of Mary\n3. comedia suelta in Spanish culture",
+        "correct_num": 2,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is known as [MASK].\n\nOptions:\n1. AnCap\n2. the Feast of the Purification of Mary\n3. comedia suelta in Spanish culture"
+    },
+    {
+        "test_id": 78,
+        "relation": "KnownAs",
+        "correct_feat": "the Presentation of Our Lord Jesus Christ in The Temple (Candlemas)",
+        "options": "1. the Presentation of Our Lord Jesus Christ in The Temple (Candlemas)\n2. the Carolingian Empire\n3. a combination of the words \"mountaineering\" and \"coast\"",
+        "correct_num": 1,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is known as [MASK].\n\nOptions:\n1. the Presentation of Our Lord Jesus Christ in The Temple (Candlemas)\n2. the Carolingian Empire\n3. a combination of the words \"mountaineering\" and \"coast\""
+    },
+    {
+        "test_id": 79,
+        "relation": "KnownAs",
+        "correct_feat": "The Presentation of Christ in the Temple",
+        "options": "1. the Ayyubid Sultanate\n2. The Presentation of Christ in the Temple\n3. House of Jagiellon",
+        "correct_num": 2,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is known as [MASK].\n\nOptions:\n1. the Ayyubid Sultanate\n2. The Presentation of Christ in the Temple\n3. House of Jagiellon"
+    },
+    {
+        "test_id": 80,
+        "relation": "KnownAs",
+        "correct_feat": "The Purification of the Blessed Virgin Mary",
+        "options": "1. Yeni Osmanl\u0131c\u0131l\u0131k\n2. a case that consolidated several petitions\n3. The Purification of the Blessed Virgin Mary",
+        "correct_num": 3,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is known as [MASK].\n\nOptions:\n1. Yeni Osmanl\u0131c\u0131l\u0131k\n2. a case that consolidated several petitions\n3. The Purification of the Blessed Virgin Mary"
+    },
+    {
+        "test_id": 81,
+        "relation": "KnownFor",
+        "correct_feat": "Simeon's proclamation of a light for revelation to the Gentiles",
+        "options": "1. Simeon's proclamation of a light for revelation to the Gentiles\n2. the development of breeds like the Old English Bulldog and Staffordshire Bull Terrier\n3. its redistributive agenda",
+        "correct_num": 1,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is known for [MASK].\n\nOptions:\n1. Simeon's proclamation of a light for revelation to the Gentiles\n2. the development of breeds like the Old English Bulldog and Staffordshire Bull Terrier\n3. its redistributive agenda"
+    },
+    {
+        "test_id": 82,
+        "relation": "KnownFor",
+        "correct_feat": "the blessing of beeswax candles",
+        "options": "1. its low skip profile\n2. the blessing of beeswax candles\n3. its performance at the 2014 Winter Olympics opening ceremony",
+        "correct_num": 2,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is known for [MASK].\n\nOptions:\n1. its low skip profile\n2. the blessing of beeswax candles\n3. its performance at the 2014 Winter Olympics opening ceremony"
+    },
+    {
+        "test_id": 83,
+        "relation": "KnownFor",
+        "correct_feat": "the procession with lighted candles",
+        "options": "1. the song \"Paris\"\n2. championing natural law\n3. the procession with lighted candles",
+        "correct_num": 3,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is known for [MASK].\n\nOptions:\n1. the song \"Paris\"\n2. championing natural law\n3. the procession with lighted candles"
+    },
+    {
+        "test_id": 84,
+        "relation": "KnownFor",
+        "correct_feat": "the canticle of Simeon",
+        "options": "1. the canticle of Simeon\n2. its basis upon the militarist societies of ancient Macedonia and Sparta\n3. its opposition to Arabization",
+        "correct_num": 1,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is known for [MASK].\n\nOptions:\n1. the canticle of Simeon\n2. its basis upon the militarist societies of ancient Macedonia and Sparta\n3. its opposition to Arabization"
+    },
+    {
+        "test_id": 85,
+        "relation": "KnownFor",
+        "correct_feat": "the prophetess Anna",
+        "options": "1. its induction into the Rock and Roll Hall of Fame\n2. the prophetess Anna\n3. its airplane pieces",
+        "correct_num": 2,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is known for [MASK].\n\nOptions:\n1. its induction into the Rock and Roll Hall of Fame\n2. the prophetess Anna\n3. its airplane pieces"
+    },
+    {
+        "test_id": 86,
+        "relation": "KnownFor",
+        "correct_feat": "the ritual of churching of women",
+        "options": "1. its anticommunist stance\n2. its financial difficulties\n3. the ritual of churching of women",
+        "correct_num": 3,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is known for [MASK].\n\nOptions:\n1. its anticommunist stance\n2. its financial difficulties\n3. the ritual of churching of women"
+    },
+    {
+        "test_id": 87,
+        "relation": "KnownFor",
+        "correct_feat": "the meeting of Jesus with Simeon and Anna",
+        "options": "1. the meeting of Jesus with Simeon and Anna\n2. the electoral success of the AKP\n3. its characters Frodo, Sam, Merry, and Pippin",
+        "correct_num": 1,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is known for [MASK].\n\nOptions:\n1. the meeting of Jesus with Simeon and Anna\n2. the electoral success of the AKP\n3. its characters Frodo, Sam, Merry, and Pippin"
+    },
+    {
+        "test_id": 88,
+        "relation": "PartOf",
+        "correct_feat": "the life of Jesus Christ",
+        "options": "1. the Bellevue series novels\n2. the life of Jesus Christ\n3. the game of softball",
+        "correct_num": 2,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is part of [MASK].\n\nOptions:\n1. the Bellevue series novels\n2. the life of Jesus Christ\n3. the game of softball"
+    },
+    {
+        "test_id": 90,
+        "relation": "PerformedBy",
+        "correct_feat": "Simeon",
+        "options": "1. Simeon\n2. basset hounds\n3. Briards",
+        "correct_num": 1,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> was performed by [MASK].\n\nOptions:\n1. Simeon\n2. basset hounds\n3. Briards"
+    },
+    {
+        "test_id": 91,
+        "relation": "PerformedBy",
+        "correct_feat": "Anna",
+        "options": "1. any non-sighthound dogs\n2. Anna\n3. gentlemen dressed as jesters",
+        "correct_num": 2,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> was performed by [MASK].\n\nOptions:\n1. any non-sighthound dogs\n2. Anna\n3. gentlemen dressed as jesters"
+    },
+    {
+        "test_id": 92,
+        "relation": "UsedAs",
+        "correct_feat": "the fourth Joyful Mystery of the Rosary",
+        "options": "1. a basis for one-party states\n2. governors of Khorasan\n3. the fourth Joyful Mystery of the Rosary",
+        "correct_num": 3,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is used as [MASK].\n\nOptions:\n1. a basis for one-party states\n2. governors of Khorasan\n3. the fourth Joyful Mystery of the Rosary"
+    },
+    {
+        "test_id": 93,
+        "relation": "UsedAs",
+        "correct_feat": "a reminder of the Theotokos and Joseph taking the infant Jesus to the Temple",
+        "options": "1. a reminder of the Theotokos and Joseph taking the infant Jesus to the Temple\n2. a case of illness\n3. a hyperboloid tower",
+        "correct_num": 1,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is used as [MASK].\n\nOptions:\n1. a reminder of the Theotokos and Joseph taking the infant Jesus to the Temple\n2. a case of illness\n3. a hyperboloid tower"
+    },
+    {
+        "test_id": 94,
+        "relation": "UsedFor",
+        "correct_feat": "the ritual purification of Mary",
+        "options": "1. acting debut\n2. the ritual purification of Mary\n3. attacking enemy headquarters and lines of communications",
+        "correct_num": 2,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is used for [MASK].\n\nOptions:\n1. acting debut\n2. the ritual purification of Mary\n3. attacking enemy headquarters and lines of communications"
+    },
+    {
+        "test_id": 95,
+        "relation": "UsedFor",
+        "correct_feat": "the redemption of the firstborn son",
+        "options": "1. ending themes of anime\n2. analyses that characterise European politics, economics, and society as reflecting a shared identity\n3. the redemption of the firstborn son",
+        "correct_num": 3,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is used for [MASK].\n\nOptions:\n1. ending themes of anime\n2. analyses that characterise European politics, economics, and society as reflecting a shared identity\n3. the redemption of the firstborn son"
+    },
+    {
+        "test_id": 96,
+        "relation": "UsedFor",
+        "correct_feat": "the blessing of beeswax candles",
+        "options": "1. the blessing of beeswax candles\n2. nation building\n3. buying trains",
+        "correct_num": 1,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is used for [MASK].\n\nOptions:\n1. the blessing of beeswax candles\n2. nation building\n3. buying trains"
+    },
+    {
+        "test_id": 97,
+        "relation": "UsedIn",
+        "correct_feat": "the New Testament",
+        "options": "1. competitions\n2. the New Testament\n3. the Church of San Francesco in San Miniato",
+        "correct_num": 2,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is used in [MASK].\n\nOptions:\n1. competitions\n2. the New Testament\n3. the Church of San Francesco in San Miniato"
+    },
+    {
+        "test_id": 99,
+        "relation": "UsedIn",
+        "correct_feat": "the Eastern Orthodox Church",
+        "options": "1. the Eastern Orthodox Church\n2. the ROC Nations' Cup\n3. countries such as the US, Canada, Germany and France",
+        "correct_num": 1,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is used in [MASK].\n\nOptions:\n1. the Eastern Orthodox Church\n2. the ROC Nations' Cup\n3. countries such as the US, Canada, Germany and France"
+    },
+    {
+        "test_id": 102,
+        "relation": "UsedIn",
+        "correct_feat": "the Roman Catholic Church",
+        "options": "1. the Roman Catholic Church\n2. the Eastern Region\n3. rock music",
+        "correct_num": 1,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is used in [MASK].\n\nOptions:\n1. the Roman Catholic Church\n2. the Eastern Region\n3. rock music"
+    },
+    {
+        "test_id": 103,
+        "relation": "UsedIn",
+        "correct_feat": "the Roman Rite",
+        "options": "1. Nicaragua\n2. the Roman Rite\n3. Chicago",
+        "correct_num": 2,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is used in [MASK].\n\nOptions:\n1. Nicaragua\n2. the Roman Rite\n3. Chicago"
+    },
+    {
+        "test_id": 104,
+        "relation": "UsedIn",
+        "correct_feat": "the Anglican Communion",
+        "options": "1. 1953\n2. competitions\n3. the Anglican Communion",
+        "correct_num": 3,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is used in [MASK].\n\nOptions:\n1. 1953\n2. competitions\n3. the Anglican Communion"
+    },
+    {
+        "test_id": 105,
+        "relation": "UsedIn",
+        "correct_feat": "the Lutheran Church",
+        "options": "1. the Lutheran Church\n2. Morocco\n3. building inscriptions",
+        "correct_num": 1,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is used in [MASK].\n\nOptions:\n1. the Lutheran Church\n2. Morocco\n3. building inscriptions"
+    },
+    {
+        "test_id": 106,
+        "relation": "UsedIn",
+        "correct_feat": "the Evangelical Lutheran Church in America",
+        "options": "1. the public sphere of society in general\n2. the Evangelical Lutheran Church in America\n3. Lost in Reverie",
+        "correct_num": 2,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is used in [MASK].\n\nOptions:\n1. the public sphere of society in general\n2. the Evangelical Lutheran Church in America\n3. Lost in Reverie"
+    },
+    {
+        "test_id": 107,
+        "relation": "UsedTo",
+        "correct_feat": "ward off storms",
+        "options": "1. pull the head off a goose\n2. build modern welfare states\n3. ward off storms",
+        "correct_num": 3,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is used to [MASK].\n\nOptions:\n1. pull the head off a goose\n2. build modern welfare states\n3. ward off storms"
+    },
+    {
+        "test_id": 108,
+        "relation": "UsedTo",
+        "correct_feat": "complete Mary's ritual purification after childbirth",
+        "options": "1. complete Mary's ritual purification after childbirth\n2. encourage and agitate workers to rebel against the state and capitalism\n3. eliminate exploitation",
+        "correct_num": 1,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is used to [MASK].\n\nOptions:\n1. complete Mary's ritual purification after childbirth\n2. encourage and agitate workers to rebel against the state and capitalism\n3. eliminate exploitation"
+    },
+    {
+        "test_id": 109,
+        "relation": "UsedTo",
+        "correct_feat": "perform the redemption of the firstborn son",
+        "options": "1. reduce the amount of force needed for application\n2. perform the redemption of the firstborn son\n3. eliminate exploitation",
+        "correct_num": 2,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is used to [MASK].\n\nOptions:\n1. reduce the amount of force needed for application\n2. perform the redemption of the firstborn son\n3. eliminate exploitation"
+    },
+    {
+        "test_id": 110,
+        "relation": "UsedTo",
+        "correct_feat": "mark the end of the Epiphany season",
+        "options": "1. contribute to political polarization\n2. move another man\n3. mark the end of the Epiphany season",
+        "correct_num": 3,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is used to [MASK].\n\nOptions:\n1. contribute to political polarization\n2. move another man\n3. mark the end of the Epiphany season"
+    },
+    {
+        "test_id": 111,
+        "relation": "UsedTo",
+        "correct_feat": "prophesy the redemption of the world by Jesus",
+        "options": "1. prophesy the redemption of the world by Jesus\n2. create symphonic versions of Manuel de Falla's works\n3. experiment with psychedelic rock",
+        "correct_num": 1,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is used to [MASK].\n\nOptions:\n1. prophesy the redemption of the world by Jesus\n2. create symphonic versions of Manuel de Falla's works\n3. experiment with psychedelic rock"
+    },
+    {
+        "test_id": 112,
+        "relation": "UsedTo",
+        "correct_feat": "prophesy to Mary",
+        "options": "1. skim out to breaking waves\n2. prophesy to Mary\n3. describe fringe parties",
+        "correct_num": 2,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is used to [MASK].\n\nOptions:\n1. skim out to breaking waves\n2. prophesy to Mary\n3. describe fringe parties"
+    },
+    {
+        "test_id": 113,
+        "relation": "UsedTo",
+        "correct_feat": "offer prayers and praise to God for Jesus",
+        "options": "1. insert additional leaves\n2. shift the political legitimacy from royal autocracy, theocracy, and feudalism\n3. offer prayers and praise to God for Jesus",
+        "correct_num": 3,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is used to [MASK].\n\nOptions:\n1. insert additional leaves\n2. shift the political legitimacy from royal autocracy, theocracy, and feudalism\n3. offer prayers and praise to God for Jesus"
+    },
+    {
+        "test_id": 115,
+        "relation": "UsedTo",
+        "correct_feat": "bless beeswax candles",
+        "options": "1. encourage dogs to follow an artificial object with enthusiasm\n2. bless beeswax candles\n3. win music awards",
+        "correct_num": 2,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is used to [MASK].\n\nOptions:\n1. encourage dogs to follow an artificial object with enthusiasm\n2. bless beeswax candles\n3. win music awards"
+    },
+    {
+        "test_id": 116,
+        "relation": "UsedTo",
+        "correct_feat": "ward off storms",
+        "options": "1. show league tables\n2. fight bears\n3. ward off storms",
+        "correct_num": 3,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is used to [MASK].\n\nOptions:\n1. show league tables\n2. fight bears\n3. ward off storms"
+    },
+    {
+        "test_id": 117,
+        "relation": "UsedTo",
+        "correct_feat": "remember the Theotokos and Joseph taking the infant Jesus to the Temple",
+        "options": "1. remember the Theotokos and Joseph taking the infant Jesus to the Temple\n2. hit or touch the seekers with the ball\n3. earn money",
+        "correct_num": 1,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is used to [MASK].\n\nOptions:\n1. remember the Theotokos and Joseph taking the infant Jesus to the Temple\n2. hit or touch the seekers with the ball\n3. earn money"
+    },
+    {
+        "test_id": 118,
+        "relation": "WrittenIn",
+        "correct_feat": "the Gospel of Luke",
+        "options": "1. 1970\n2. the Gospel of Luke\n3. Torgau",
+        "correct_num": 2,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> was written in [MASK].\n\nOptions:\n1. 1970\n2. the Gospel of Luke\n3. Torgau"
+    }
+]

@@ -1,0 +1,794 @@
+[
+    {
+        "test_id": 0,
+        "relation": "About",
+        "correct_feat": "paintings on caves, mountains, cliffs, or other living rock surfaces",
+        "options": "1. paintings on caves, mountains, cliffs, or other living rock surfaces\n2. the Bancroft Treaties and their eventual abandonment\n3. folk rock",
+        "correct_num": 1,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is about [MASK].\n\nOptions:\n1. paintings on caves, mountains, cliffs, or other living rock surfaces\n2. the Bancroft Treaties and their eventual abandonment\n3. folk rock"
+    },
+    {
+        "test_id": 1,
+        "relation": "AssociatedWith",
+        "correct_feat": "religious rituals",
+        "options": "1. sabotage\n2. religious rituals\n3. Historical Perspectives",
+        "correct_num": 2,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is associated with [MASK].\n\nOptions:\n1. sabotage\n2. religious rituals\n3. Historical Perspectives"
+    },
+    {
+        "test_id": 2,
+        "relation": "AssociatedWith",
+        "correct_feat": "astronomical events",
+        "options": "1. the Sultanate of Rum\n2. the Abbasid caliphate\n3. astronomical events",
+        "correct_num": 3,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is associated with [MASK].\n\nOptions:\n1. the Sultanate of Rum\n2. the Abbasid caliphate\n3. astronomical events"
+    },
+    {
+        "test_id": 3,
+        "relation": "ConsistsOf",
+        "correct_feat": "pictographs and petroglyphs",
+        "options": "1. pictographs and petroglyphs\n2. a 24-page rule book, an 8\" x 14\" two-colour paper map, and 135 cardboard counters\n3. dissenting opinions from four justices",
+        "correct_num": 1,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> consists of [MASK].\n\nOptions:\n1. pictographs and petroglyphs\n2. a 24-page rule book, an 8\" x 14\" two-colour paper map, and 135 cardboard counters\n3. dissenting opinions from four justices"
+    },
+    {
+        "test_id": 4,
+        "relation": "CreatedAround",
+        "correct_feat": "3,550 years ago",
+        "options": "1. the late 1960s and early 1970s\n2. 3,550 years ago\n3. the summer of 2019 when inflatable wings were offered by manufacturers",
+        "correct_num": 2,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> was created around [MASK].\n\nOptions:\n1. the late 1960s and early 1970s\n2. 3,550 years ago\n3. the summer of 2019 when inflatable wings were offered by manufacturers"
+    },
+    {
+        "test_id": 5,
+        "relation": "CreatedAround",
+        "correct_feat": "660 years after 3,550 years ago",
+        "options": "1. the mid-19th century\n2. October 2013 when the band signed on the Polydor label\n3. 660 years after 3,550 years ago",
+        "correct_num": 3,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> was created around [MASK].\n\nOptions:\n1. the mid-19th century\n2. October 2013 when the band signed on the Polydor label\n3. 660 years after 3,550 years ago"
+    },
+    {
+        "test_id": 6,
+        "relation": "CreatedAround",
+        "correct_feat": "1787",
+        "options": "1. 1787\n2. 1902\n3. 1816",
+        "correct_num": 1,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> was created around [MASK].\n\nOptions:\n1. 1787\n2. 1902\n3. 1816"
+    },
+    {
+        "test_id": 8,
+        "relation": "CreatedBy",
+        "correct_feat": "the Chumash people",
+        "options": "1. Peter Phillips and Corey Penn\n2. the Cabinet of Jean Chr\u00e9tien\n3. the Chumash people",
+        "correct_num": 3,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> was created by [MASK].\n\nOptions:\n1. Peter Phillips and Corey Penn\n2. the Cabinet of Jean Chr\u00e9tien\n3. the Chumash people"
+    },
+    {
+        "test_id": 9,
+        "relation": "CreatedBy",
+        "correct_feat": "religious specialists known as 'alchuklash",
+        "options": "1. religious specialists known as 'alchuklash\n2. Ptolemy I, a general and bodyguard companion of Alexander the Great\n3. the Hyde Park Chapter of the Chicago Women's Liberation Union",
+        "correct_num": 1,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> was created by [MASK].\n\nOptions:\n1. religious specialists known as 'alchuklash\n2. Ptolemy I, a general and bodyguard companion of Alexander the Great\n3. the Hyde Park Chapter of the Chicago Women's Liberation Union"
+    },
+    {
+        "test_id": 10,
+        "relation": "CreatedBy",
+        "correct_feat": "shamans during vision quests",
+        "options": "1. the ruling Justice and Development Party of Turkey\n2. shamans during vision quests\n3. Cherie de Boer and Jean-Pierre Guiran",
+        "correct_num": 2,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> was created by [MASK].\n\nOptions:\n1. the ruling Justice and Development Party of Turkey\n2. shamans during vision quests\n3. Cherie de Boer and Jean-Pierre Guiran"
+    },
+    {
+        "test_id": 11,
+        "relation": "CreatedBy",
+        "correct_feat": "shamans",
+        "options": "1. the Nicaraguan Sandinista National Liberation Front\n2. General Assembly resolution 77/276 adopted on March 29, 2023\n3. shamans",
+        "correct_num": 3,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> was created by [MASK].\n\nOptions:\n1. the Nicaraguan Sandinista National Liberation Front\n2. General Assembly resolution 77/276 adopted on March 29, 2023\n3. shamans"
+    },
+    {
+        "test_id": 12,
+        "relation": "CreatedBy",
+        "correct_feat": "medicine men",
+        "options": "1. medicine men\n2. Barry Hill Palmer\n3. the staging of public events",
+        "correct_num": 1,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> was created by [MASK].\n\nOptions:\n1. medicine men\n2. Barry Hill Palmer\n3. the staging of public events"
+    },
+    {
+        "test_id": 13,
+        "relation": "CreatedIn",
+        "correct_feat": "Southern California",
+        "options": "1. the context of the future formation of the European Union\n2. Southern California\n3. Nordic countries",
+        "correct_num": 2,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> was created in [MASK].\n\nOptions:\n1. the context of the future formation of the European Union\n2. Southern California\n3. Nordic countries"
+    },
+    {
+        "test_id": 14,
+        "relation": "CreatedIn",
+        "correct_feat": "interior California",
+        "options": "1. Breslau\n2. the 18th century\n3. interior California",
+        "correct_num": 3,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> was created in [MASK].\n\nOptions:\n1. Breslau\n2. the 18th century\n3. interior California"
+    },
+    {
+        "test_id": 15,
+        "relation": "CreatedIn",
+        "correct_feat": "caves",
+        "options": "1. caves\n2. London\n3. Greater Poland",
+        "correct_num": 1,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> was created in [MASK].\n\nOptions:\n1. caves\n2. London\n3. Greater Poland"
+    },
+    {
+        "test_id": 16,
+        "relation": "CreatedIn",
+        "correct_feat": "mountains",
+        "options": "1. the 1830s\n2. mountains\n3. the 1970s",
+        "correct_num": 2,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> was created in [MASK].\n\nOptions:\n1. the 1830s\n2. mountains\n3. the 1970s"
+    },
+    {
+        "test_id": 17,
+        "relation": "CreatedIn",
+        "correct_feat": "cliffs",
+        "options": "1. the 18th century\n2. the ancient Near East\n3. cliffs",
+        "correct_num": 3,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> was created in [MASK].\n\nOptions:\n1. the 18th century\n2. the ancient Near East\n3. cliffs"
+    },
+    {
+        "test_id": 18,
+        "relation": "CreatedIn",
+        "correct_feat": "living rock surfaces",
+        "options": "1. living rock surfaces\n2. medieval Scandinavia\n3. Eastern Europe",
+        "correct_num": 1,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> was created in [MASK].\n\nOptions:\n1. living rock surfaces\n2. medieval Scandinavia\n3. Eastern Europe"
+    },
+    {
+        "test_id": 19,
+        "relation": "CreatedIn",
+        "correct_feat": "Painted Cave State Historic Park",
+        "options": "1. Russia\n2. Painted Cave State Historic Park\n3. the vibrant music scene of Toulouse",
+        "correct_num": 2,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> was created in [MASK].\n\nOptions:\n1. Russia\n2. Painted Cave State Historic Park\n3. the vibrant music scene of Toulouse"
+    },
+    {
+        "test_id": 20,
+        "relation": "CreatedIn",
+        "correct_feat": "canyons above Santa Barbara",
+        "options": "1. the contemporary Macedonian discourse\n2. Stockholm\n3. canyons above Santa Barbara",
+        "correct_num": 3,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> was created in [MASK].\n\nOptions:\n1. the contemporary Macedonian discourse\n2. Stockholm\n3. canyons above Santa Barbara"
+    },
+    {
+        "test_id": 21,
+        "relation": "CreatedIn",
+        "correct_feat": "Painted Rock",
+        "options": "1. Painted Rock\n2. Kabylia in Algeria\n3. the 1930s",
+        "correct_num": 1,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> was created in [MASK].\n\nOptions:\n1. Painted Rock\n2. Kabylia in Algeria\n3. the 1930s"
+    },
+    {
+        "test_id": 22,
+        "relation": "CreatedIn",
+        "correct_feat": "the interior alcove of a horseshoe-shaped rock",
+        "options": "1. 1979\n2. the interior alcove of a horseshoe-shaped rock\n3. the Soviet Union",
+        "correct_num": 2,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> was created in [MASK].\n\nOptions:\n1. 1979\n2. the interior alcove of a horseshoe-shaped rock\n3. the Soviet Union"
+    },
+    {
+        "test_id": 23,
+        "relation": "CreatedTo",
+        "correct_feat": "be part of religious rituals",
+        "options": "1. help prevent military personnel from becoming injured during wartime\n2. rule over central and southern Iran, and Iraq\n3. be part of religious rituals",
+        "correct_num": 3,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> was created to [MASK].\n\nOptions:\n1. help prevent military personnel from becoming injured during wartime\n2. rule over central and southern Iran, and Iraq\n3. be part of religious rituals"
+    },
+    {
+        "test_id": 24,
+        "relation": "CreatedTo",
+        "correct_feat": "be part of astronomical events",
+        "options": "1. be part of astronomical events\n2. advocate the renaissance of Arab culture, values and society\n3. clarify the legal consequences under these obligations for States whose actions or omissions have contributed to such emissions and caused harm to the climate and environment",
+        "correct_num": 1,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> was created to [MASK].\n\nOptions:\n1. be part of astronomical events\n2. advocate the renaissance of Arab culture, values and society\n3. clarify the legal consequences under these obligations for States whose actions or omissions have contributed to such emissions and caused harm to the climate and environment"
+    },
+    {
+        "test_id": 25,
+        "relation": "HasA",
+        "correct_feat": "elaborate and plentiful rock art tradition",
+        "options": "1. been practiced in parts of the Netherlands, Belgium, England, and North America\n2. elaborate and plentiful rock art tradition\n3. a musical group",
+        "correct_num": 2,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> has [MASK].\n\nOptions:\n1. been practiced in parts of the Netherlands, Belgium, England, and North America\n2. elaborate and plentiful rock art tradition\n3. a musical group"
+    },
+    {
+        "test_id": 26,
+        "relation": "HasA",
+        "correct_feat": "brightly colored paintings of humans, animals, and abstract circles",
+        "options": "1. members of several major religions finding that their beliefs about human society fit with socialist principles and ideas\n2. a bull-dog\n3. brightly colored paintings of humans, animals, and abstract circles",
+        "correct_num": 3,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> has [MASK].\n\nOptions:\n1. members of several major religions finding that their beliefs about human society fit with socialist principles and ideas\n2. a bull-dog\n3. brightly colored paintings of humans, animals, and abstract circles"
+    },
+    {
+        "test_id": 27,
+        "relation": "HasA",
+        "correct_feat": "pictographs",
+        "options": "1. pictographs\n2. 100 counters\n3. a pattern of parallel, diagonal ribs",
+        "correct_num": 1,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> has [MASK].\n\nOptions:\n1. pictographs\n2. 100 counters\n3. a pattern of parallel, diagonal ribs"
+    },
+    {
+        "test_id": 28,
+        "relation": "HasA",
+        "correct_feat": "petroglyphs",
+        "options": "1. an album titled Trop d'amour\n2. petroglyphs\n3. a total of 18 scenarios representing historical battles",
+        "correct_num": 2,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> has [MASK].\n\nOptions:\n1. an album titled Trop d'amour\n2. petroglyphs\n3. a total of 18 scenarios representing historical battles"
+    },
+    {
+        "test_id": 29,
+        "relation": "HasA",
+        "correct_feat": "images like humans, animals, celestial bodies, and other shapes and patterns",
+        "options": "1. special rules for Union gunboats and ferries\n2. a second international album titled Dangerous and Moving\n3. images like humans, animals, celestial bodies, and other shapes and patterns",
+        "correct_num": 3,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> has [MASK].\n\nOptions:\n1. special rules for Union gunboats and ferries\n2. a second international album titled Dangerous and Moving\n3. images like humans, animals, celestial bodies, and other shapes and patterns"
+    },
+    {
+        "test_id": 30,
+        "relation": "HasA",
+        "correct_feat": "representational images",
+        "options": "1. representational images\n2. three estates of the realm: the nobility, the clergy, and the peasantry\n3. a nickname",
+        "correct_num": 1,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> has [MASK].\n\nOptions:\n1. representational images\n2. three estates of the realm: the nobility, the clergy, and the peasantry\n3. a nickname"
+    },
+    {
+        "test_id": 32,
+        "relation": "HasA",
+        "correct_feat": "zoomorphic style glyphs",
+        "options": "1. regional, linguistic, age, cultural, racial, and gender differences\n2. seen the revival of anarchism in the mid-20th century\n3. zoomorphic style glyphs",
+        "correct_num": 3,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> has [MASK].\n\nOptions:\n1. regional, linguistic, age, cultural, racial, and gender differences\n2. seen the revival of anarchism in the mid-20th century\n3. zoomorphic style glyphs"
+    },
+    {
+        "test_id": 33,
+        "relation": "HasA",
+        "correct_feat": "red and black pictographs",
+        "options": "1. red and black pictographs\n2. Royalist areas including the countryside, the Shires, and cathedral cities\n3. been both a straitjacket and a lifejacket for the ILO",
+        "correct_num": 1,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> has [MASK].\n\nOptions:\n1. red and black pictographs\n2. Royalist areas including the countryside, the Shires, and cathedral cities\n3. been both a straitjacket and a lifejacket for the ILO"
+    },
+    {
+        "test_id": 34,
+        "relation": "HasA",
+        "correct_feat": "elaborate examples of zoomorphic style glyphs",
+        "options": "1. a Protestant majority in the province of Ulster\n2. elaborate examples of zoomorphic style glyphs\n3. a board size of 8x8",
+        "correct_num": 2,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> has [MASK].\n\nOptions:\n1. a Protestant majority in the province of Ulster\n2. elaborate examples of zoomorphic style glyphs\n3. a board size of 8x8"
+    },
+    {
+        "test_id": 35,
+        "relation": "HasFeatureOf",
+        "correct_feat": "being some of the most elaborate and plentiful rock art tradition in the region",
+        "options": "1. its symbolic representation of yin and yang\n2. producing its own beats\n3. being some of the most elaborate and plentiful rock art tradition in the region",
+        "correct_num": 3,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is characterized by [MASK].\n\nOptions:\n1. its symbolic representation of yin and yang\n2. producing its own beats\n3. being some of the most elaborate and plentiful rock art tradition in the region"
+    },
+    {
+        "test_id": 36,
+        "relation": "HasFeatureOf",
+        "correct_feat": "being brightly colored paintings of humans, animals, and abstract circles",
+        "options": "1. being brightly colored paintings of humans, animals, and abstract circles\n2. having a large following for adults in many communities\n3. its pelagic larvae",
+        "correct_num": 1,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is characterized by [MASK].\n\nOptions:\n1. being brightly colored paintings of humans, animals, and abstract circles\n2. having a large following for adults in many communities\n3. its pelagic larvae"
+    },
+    {
+        "test_id": 37,
+        "relation": "HasFeatureOf",
+        "correct_feat": "being found in caves or on cliffs in the mountains",
+        "options": "1. being banned in most countries\n2. being found in caves or on cliffs in the mountains\n3. being played in a cubical array of cells, usually 4\u00d74\u00d74",
+        "correct_num": 2,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is characterized by [MASK].\n\nOptions:\n1. being banned in most countries\n2. being found in caves or on cliffs in the mountains\n3. being played in a cubical array of cells, usually 4\u00d74\u00d74"
+    },
+    {
+        "test_id": 39,
+        "relation": "HasFeatureOf",
+        "correct_feat": "displaying more colors and complexity than at any other Chumash site",
+        "options": "1. displaying more colors and complexity than at any other Chumash site\n2. historical influences from Sainte-Beuve, Fustel de Coulanges, Hippolyte Taine, and Ernest Renan\n3. operating a paratrooper force known as the Fallschirmj\u00e4ger",
+        "correct_num": 1,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is characterized by [MASK].\n\nOptions:\n1. displaying more colors and complexity than at any other Chumash site\n2. historical influences from Sainte-Beuve, Fustel de Coulanges, Hippolyte Taine, and Ernest Renan\n3. operating a paratrooper force known as the Fallschirmj\u00e4ger"
+    },
+    {
+        "test_id": 41,
+        "relation": "HasFeatureOf",
+        "correct_feat": "elaborate and colorful rock art",
+        "options": "1. all four scenarios and their maps being joined to form a large campaign game covering all four battles from beginning to end\n2. being used in over 40 television shows and movies\n3. elaborate and colorful rock art",
+        "correct_num": 3,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is characterized by [MASK].\n\nOptions:\n1. all four scenarios and their maps being joined to form a large campaign game covering all four battles from beginning to end\n2. being used in over 40 television shows and movies\n3. elaborate and colorful rock art"
+    },
+    {
+        "test_id": 42,
+        "relation": "HasFeatureOf",
+        "correct_feat": "the use of mineralized soil, stone mortar, and liquid binder for paint",
+        "options": "1. the use of mineralized soil, stone mortar, and liquid binder for paint\n2. a reception center\n3. lasting influence on American music and culture",
+        "correct_num": 1,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is characterized by [MASK].\n\nOptions:\n1. the use of mineralized soil, stone mortar, and liquid binder for paint\n2. a reception center\n3. lasting influence on American music and culture"
+    },
+    {
+        "test_id": 43,
+        "relation": "HasFeatureOf",
+        "correct_feat": "the use of hematite or iron oxide for orange and red paint",
+        "options": "1. combat-oriented gameplay\n2. the use of hematite or iron oxide for orange and red paint\n3. arguments that Marxism is a type of historical determinism",
+        "correct_num": 2,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is characterized by [MASK].\n\nOptions:\n1. combat-oriented gameplay\n2. the use of hematite or iron oxide for orange and red paint\n3. arguments that Marxism is a type of historical determinism"
+    },
+    {
+        "test_id": 44,
+        "relation": "HasFeatureOf",
+        "correct_feat": "the use of limonite for yellow paint",
+        "options": "1. potential pieces with special powers\n2. being a jazz duo\n3. the use of limonite for yellow paint",
+        "correct_num": 3,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is characterized by [MASK].\n\nOptions:\n1. potential pieces with special powers\n2. being a jazz duo\n3. the use of limonite for yellow paint"
+    },
+    {
+        "test_id": 45,
+        "relation": "HeldIn",
+        "correct_feat": "caves",
+        "options": "1. caves\n2. Russia\n3. Wexford",
+        "correct_num": 1,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> was held in [MASK].\n\nOptions:\n1. caves\n2. Russia\n3. Wexford"
+    },
+    {
+        "test_id": 46,
+        "relation": "HeldIn",
+        "correct_feat": "mountains",
+        "options": "1. Canc\u00fan\n2. mountains\n3. the Soviet Union",
+        "correct_num": 2,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> was held in [MASK].\n\nOptions:\n1. Canc\u00fan\n2. mountains\n3. the Soviet Union"
+    },
+    {
+        "test_id": 47,
+        "relation": "HeldIn",
+        "correct_feat": "cliffs",
+        "options": "1. Kuala Lumpur, Malaysia\n2. Asheville\n3. cliffs",
+        "correct_num": 3,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> was held in [MASK].\n\nOptions:\n1. Kuala Lumpur, Malaysia\n2. Asheville\n3. cliffs"
+    },
+    {
+        "test_id": 48,
+        "relation": "HeldIn",
+        "correct_feat": "living rock surfaces",
+        "options": "1. living rock surfaces\n2. 1883\n3. Lucca and Piombino",
+        "correct_num": 1,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> was held in [MASK].\n\nOptions:\n1. living rock surfaces\n2. 1883\n3. Lucca and Piombino"
+    },
+    {
+        "test_id": 49,
+        "relation": "HeldIn",
+        "correct_feat": "Painted Cave State Historic Park",
+        "options": "1. the public space\n2. Painted Cave State Historic Park\n3. Holland",
+        "correct_num": 2,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> was held in [MASK].\n\nOptions:\n1. the public space\n2. Painted Cave State Historic Park\n3. Holland"
+    },
+    {
+        "test_id": 50,
+        "relation": "HeldIn",
+        "correct_feat": "canyons above Santa Barbara",
+        "options": "1. the West\n2. Birmingham\n3. canyons above Santa Barbara",
+        "correct_num": 3,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> was held in [MASK].\n\nOptions:\n1. the West\n2. Birmingham\n3. canyons above Santa Barbara"
+    },
+    {
+        "test_id": 51,
+        "relation": "HeldIn",
+        "correct_feat": "Painted Rock",
+        "options": "1. Painted Rock\n2. Northern Ireland\n3. parts of Syria and Iraq",
+        "correct_num": 1,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> was held in [MASK].\n\nOptions:\n1. Painted Rock\n2. Northern Ireland\n3. parts of Syria and Iraq"
+    },
+    {
+        "test_id": 52,
+        "relation": "HeldIn",
+        "correct_feat": "the interior alcove of a horseshoe-shaped rock",
+        "options": "1. Turin\n2. the interior alcove of a horseshoe-shaped rock\n3. the United Kingdom in 2007",
+        "correct_num": 2,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> was held in [MASK].\n\nOptions:\n1. Turin\n2. the interior alcove of a horseshoe-shaped rock\n3. the United Kingdom in 2007"
+    },
+    {
+        "test_id": 53,
+        "relation": "HeldIn",
+        "correct_feat": "the Simi Hills",
+        "options": "1. Malmo, Sweden\n2. Chicago\n3. the Simi Hills",
+        "correct_num": 3,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> was held in [MASK].\n\nOptions:\n1. Malmo, Sweden\n2. Chicago\n3. the Simi Hills"
+    },
+    {
+        "test_id": 54,
+        "relation": "HeldIn",
+        "correct_feat": "cave shelters",
+        "options": "1. cave shelters\n2. a body of water\n3. the United States",
+        "correct_num": 1,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> was held in [MASK].\n\nOptions:\n1. cave shelters\n2. a body of water\n3. the United States"
+    },
+    {
+        "test_id": 55,
+        "relation": "IsA",
+        "correct_feat": "a genre of paintings on caves, mountains, cliffs, or other living rock surfaces",
+        "options": "1. the fourth episode of the 1965 Doctor Who serial The Crusade\n2. a genre of paintings on caves, mountains, cliffs, or other living rock surfaces\n3. a barbarous sport",
+        "correct_num": 2,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is [MASK].\n\nOptions:\n1. the fourth episode of the 1965 Doctor Who serial The Crusade\n2. a genre of paintings on caves, mountains, cliffs, or other living rock surfaces\n3. a barbarous sport"
+    },
+    {
+        "test_id": 56,
+        "relation": "IsA",
+        "correct_feat": "a rock painting tradition",
+        "options": "1. a popular attraction in amusement parks, county fairs, and pet festivals\n2. a heated political debate\n3. a rock painting tradition",
+        "correct_num": 3,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is [MASK].\n\nOptions:\n1. a popular attraction in amusement parks, county fairs, and pet festivals\n2. a heated political debate\n3. a rock painting tradition"
+    },
+    {
+        "test_id": 57,
+        "relation": "IsA",
+        "correct_feat": "a maritime, hunter-gatherer society",
+        "options": "1. a maritime, hunter-gatherer society\n2. a music EP\n3. a culturally Arabized, Sunni Muslim dynasty",
+        "correct_num": 1,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is [MASK].\n\nOptions:\n1. a maritime, hunter-gatherer society\n2. a music EP\n3. a culturally Arabized, Sunni Muslim dynasty"
+    },
+    {
+        "test_id": 58,
+        "relation": "IsA",
+        "correct_feat": "an aesthetic, symbolic representation of significant concepts and entities that is painted on or carved into a rock surface",
+        "options": "1. an abstract strategy board game for two players\n2. an aesthetic, symbolic representation of significant concepts and entities that is painted on or carved into a rock surface\n3. a strategic board wargame",
+        "correct_num": 2,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is [MASK].\n\nOptions:\n1. an abstract strategy board game for two players\n2. an aesthetic, symbolic representation of significant concepts and entities that is painted on or carved into a rock surface\n3. a strategic board wargame"
+    },
+    {
+        "test_id": 59,
+        "relation": "IsA",
+        "correct_feat": "a form of worship based on direct, personal interaction between a shaman and the supernatural",
+        "options": "1. the pro-indigenist ethnic nationalist ideology of Chicanos\n2. a BBC Four documentary\n3. a form of worship based on direct, personal interaction between a shaman and the supernatural",
+        "correct_num": 3,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is [MASK].\n\nOptions:\n1. the pro-indigenist ethnic nationalist ideology of Chicanos\n2. a BBC Four documentary\n3. a form of worship based on direct, personal interaction between a shaman and the supernatural"
+    },
+    {
+        "test_id": 60,
+        "relation": "IsA",
+        "correct_feat": "a typical Chumash style",
+        "options": "1. a typical Chumash style\n2. a practice of giving a city the appearance of ancient Rome or Athens\n3. a fascistic ideology",
+        "correct_num": 1,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is [MASK].\n\nOptions:\n1. a typical Chumash style\n2. a practice of giving a city the appearance of ancient Rome or Athens\n3. a fascistic ideology"
+    },
+    {
+        "test_id": 61,
+        "relation": "KnownAs",
+        "correct_feat": "pictographs",
+        "options": "1. pro wrestling\n2. pictographs\n3. Owenism",
+        "correct_num": 2,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is known as [MASK].\n\nOptions:\n1. pro wrestling\n2. pictographs\n3. Owenism"
+    },
+    {
+        "test_id": 62,
+        "relation": "KnownAs",
+        "correct_feat": "petroglyphs",
+        "options": "1. Skiplane\n2. Jeu des petits chevaux canadiens in France\n3. petroglyphs",
+        "correct_num": 3,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is known as [MASK].\n\nOptions:\n1. Skiplane\n2. Jeu des petits chevaux canadiens in France\n3. petroglyphs"
+    },
+    {
+        "test_id": 63,
+        "relation": "KnownFor",
+        "correct_feat": "the pictographs",
+        "options": "1. the pictographs\n2. its role in economic policy\n3. its ancient precursors in various cultures",
+        "correct_num": 1,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is known for [MASK].\n\nOptions:\n1. the pictographs\n2. its role in economic policy\n3. its ancient precursors in various cultures"
+    },
+    {
+        "test_id": 64,
+        "relation": "KnownFor",
+        "correct_feat": "being some of the most elaborate and plentiful rock art tradition in the region",
+        "options": "1. \"Opportunities (Let's Make Lots of Money)\"\n2. being some of the most elaborate and plentiful rock art tradition in the region\n3. supporting political democracy",
+        "correct_num": 2,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is known for [MASK].\n\nOptions:\n1. \"Opportunities (Let's Make Lots of Money)\"\n2. being some of the most elaborate and plentiful rock art tradition in the region\n3. supporting political democracy"
+    },
+    {
+        "test_id": 65,
+        "relation": "LocatedIn",
+        "correct_feat": "in Southern California",
+        "options": "1. in the context of musical collaborations\n2. in Great Queen Street, London\n3. in Southern California",
+        "correct_num": 3,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is located [MASK].\n\nOptions:\n1. in the context of musical collaborations\n2. in Great Queen Street, London\n3. in Southern California"
+    },
+    {
+        "test_id": 66,
+        "relation": "LocatedIn",
+        "correct_feat": "in the present-day counties of Santa Barbara, Ventura, and San Luis Obispo",
+        "options": "1. in the present-day counties of Santa Barbara, Ventura, and San Luis Obispo\n2. in Los Angeles for the 2028 Summer Olympics\n3. in Chicago",
+        "correct_num": 1,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is located [MASK].\n\nOptions:\n1. in the present-day counties of Santa Barbara, Ventura, and San Luis Obispo\n2. in Los Angeles for the 2028 Summer Olympics\n3. in Chicago"
+    },
+    {
+        "test_id": 67,
+        "relation": "LocatedIn",
+        "correct_feat": "in the Venture\u00f1o area",
+        "options": "1. in Lekeitio\n2. in the Venture\u00f1o area\n3. in York and Adams counties",
+        "correct_num": 2,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is located [MASK].\n\nOptions:\n1. in Lekeitio\n2. in the Venture\u00f1o area\n3. in York and Adams counties"
+    },
+    {
+        "test_id": 68,
+        "relation": "LocatedIn",
+        "correct_feat": "in the Cuyama Valley region",
+        "options": "1. in the history of French music\n2. in Williston, North Dakota\n3. in the Cuyama Valley region",
+        "correct_num": 3,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is located [MASK].\n\nOptions:\n1. in the history of French music\n2. in Williston, North Dakota\n3. in the Cuyama Valley region"
+    },
+    {
+        "test_id": 69,
+        "relation": "LocatedIn",
+        "correct_feat": "in the San Rafael Mountains",
+        "options": "1. in the San Rafael Mountains\n2. in Rivendell\n3. in the Polish city of \u0141\u00f3d\u017a",
+        "correct_num": 1,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is located [MASK].\n\nOptions:\n1. in the San Rafael Mountains\n2. in Rivendell\n3. in the Polish city of \u0141\u00f3d\u017a"
+    },
+    {
+        "test_id": 70,
+        "relation": "LocatedIn",
+        "correct_feat": "in the Sierra Madre Mountains",
+        "options": "1. in north Morocco specifically Tangiers and Tetouan\n2. in the Sierra Madre Mountains\n3. in London",
+        "correct_num": 2,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is located [MASK].\n\nOptions:\n1. in north Morocco specifically Tangiers and Tetouan\n2. in the Sierra Madre Mountains\n3. in London"
+    },
+    {
+        "test_id": 71,
+        "relation": "LocatedIn",
+        "correct_feat": "in Painted Cave State Historic Park",
+        "options": "1. in the Sahara\n2. in the United States\n3. in Painted Cave State Historic Park",
+        "correct_num": 3,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is located [MASK].\n\nOptions:\n1. in the Sahara\n2. in the United States\n3. in Painted Cave State Historic Park"
+    },
+    {
+        "test_id": 72,
+        "relation": "LocatedIn",
+        "correct_feat": "in canyons above Santa Barbara",
+        "options": "1. in canyons above Santa Barbara\n2. in Hartford, Connecticut\n3. in the Davis Mountains Resort in Jeff Davis County",
+        "correct_num": 1,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is located [MASK].\n\nOptions:\n1. in canyons above Santa Barbara\n2. in Hartford, Connecticut\n3. in the Davis Mountains Resort in Jeff Davis County"
+    },
+    {
+        "test_id": 73,
+        "relation": "LocatedIn",
+        "correct_feat": "in Painted Rock",
+        "options": "1. on the French music scene\n2. in Painted Rock\n3. in Forest Park, Illinois, a suburb of Chicago",
+        "correct_num": 2,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is located [MASK].\n\nOptions:\n1. on the French music scene\n2. in Painted Rock\n3. in Forest Park, Illinois, a suburb of Chicago"
+    },
+    {
+        "test_id": 74,
+        "relation": "LocatedIn",
+        "correct_feat": "in the Simi Hills in Ventura County",
+        "options": "1. in Milwaukee, Wisconsin\n2. in El Carpio de Tajo\n3. in the Simi Hills in Ventura County",
+        "correct_num": 3,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is located [MASK].\n\nOptions:\n1. in Milwaukee, Wisconsin\n2. in El Carpio de Tajo\n3. in the Simi Hills in Ventura County"
+    },
+    {
+        "test_id": 76,
+        "relation": "OccurredAround",
+        "correct_feat": "3,550 years ago",
+        "options": "1. 1153\n2. 3,550 years ago\n3. 175 BC",
+        "correct_num": 2,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> occurred around [MASK].\n\nOptions:\n1. 1153\n2. 3,550 years ago\n3. 175 BC"
+    },
+    {
+        "test_id": 77,
+        "relation": "OccurredAround",
+        "correct_feat": "660 years after 3,550 years ago",
+        "options": "1. the end of the Viking Age\n2. 1562\n3. 660 years after 3,550 years ago",
+        "correct_num": 3,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> occurred around [MASK].\n\nOptions:\n1. the end of the Viking Age\n2. 1562\n3. 660 years after 3,550 years ago"
+    },
+    {
+        "test_id": 78,
+        "relation": "OccurredAround",
+        "correct_feat": "1787",
+        "options": "1. 1787\n2. 1682\n3. 1876",
+        "correct_num": 1,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> occurred around [MASK].\n\nOptions:\n1. 1787\n2. 1682\n3. 1876"
+    },
+    {
+        "test_id": 81,
+        "relation": "PartOf",
+        "correct_feat": "religious rituals",
+        "options": "1. religious rituals\n2. the operations of private military companies\n3. the culture of Afghanistan",
+        "correct_num": 1,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is part of [MASK].\n\nOptions:\n1. religious rituals\n2. the operations of private military companies\n3. the culture of Afghanistan"
+    },
+    {
+        "test_id": 82,
+        "relation": "PartOf",
+        "correct_feat": "astronomical events",
+        "options": "1. Loaded Records\n2. astronomical events\n3. Soul Eater media",
+        "correct_num": 2,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is part of [MASK].\n\nOptions:\n1. Loaded Records\n2. astronomical events\n3. Soul Eater media"
+    },
+    {
+        "test_id": 83,
+        "relation": "PerformedBy",
+        "correct_feat": "shamans",
+        "options": "1. champion teams\n2. student-athletes\n3. shamans",
+        "correct_num": 3,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> was performed by [MASK].\n\nOptions:\n1. champion teams\n2. student-athletes\n3. shamans"
+    },
+    {
+        "test_id": 84,
+        "relation": "PerformedBy",
+        "correct_feat": "medicine men",
+        "options": "1. medicine men\n2. units of the Brazilian Navy\n3. Adam Kay",
+        "correct_num": 1,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> was performed by [MASK].\n\nOptions:\n1. medicine men\n2. units of the Brazilian Navy\n3. Adam Kay"
+    },
+    {
+        "test_id": 85,
+        "relation": "PublishedAs",
+        "correct_feat": "drawings in a book",
+        "options": "1. a single\n2. drawings in a book\n3. the first set of rules in 1937 by the Amateur Softball Association",
+        "correct_num": 2,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> was published as [MASK].\n\nOptions:\n1. a single\n2. drawings in a book\n3. the first set of rules in 1937 by the Amateur Softball Association"
+    },
+    {
+        "test_id": 86,
+        "relation": "PublishedIn",
+        "correct_feat": "Petroglyphs of California and Adjoining States",
+        "options": "1. 2001\n2. 2019\n3. Petroglyphs of California and Adjoining States",
+        "correct_num": 3,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> was published in [MASK].\n\nOptions:\n1. 2001\n2. 2019\n3. Petroglyphs of California and Adjoining States"
+    },
+    {
+        "test_id": 87,
+        "relation": "UsedAs",
+        "correct_feat": "a portal to the sacred realm",
+        "options": "1. a portal to the sacred realm\n2. a means of entertainment\n3. a brand identity",
+        "correct_num": 1,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is used as [MASK].\n\nOptions:\n1. a portal to the sacred realm\n2. a means of entertainment\n3. a brand identity"
+    },
+    {
+        "test_id": 89,
+        "relation": "UsedFor",
+        "correct_feat": "religious rituals",
+        "options": "1. clarifying legal consequences for States\n2. getting the succeeding player out\n3. religious rituals",
+        "correct_num": 3,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is used for [MASK].\n\nOptions:\n1. clarifying legal consequences for States\n2. getting the succeeding player out\n3. religious rituals"
+    },
+    {
+        "test_id": 90,
+        "relation": "UsedFor",
+        "correct_feat": "astronomical events",
+        "options": "1. astronomical events\n2. imposing and maintaining cultural, social, political, historical or institutional domination by white people and non-white supporters\n3. ideological indoctrination",
+        "correct_num": 1,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is used for [MASK].\n\nOptions:\n1. astronomical events\n2. imposing and maintaining cultural, social, political, historical or institutional domination by white people and non-white supporters\n3. ideological indoctrination"
+    },
+    {
+        "test_id": 91,
+        "relation": "UsedFor",
+        "correct_feat": "vision quests",
+        "options": "1. establishing a dynasty\n2. vision quests\n3. toasts",
+        "correct_num": 2,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is used for [MASK].\n\nOptions:\n1. establishing a dynasty\n2. vision quests\n3. toasts"
+    },
+    {
+        "test_id": 92,
+        "relation": "UsedFor",
+        "correct_feat": "protection of artifacts, landscapes and sacred places",
+        "options": "1. educating the masses in Juche thinking\n2. decolonization\n3. protection of artifacts, landscapes and sacred places",
+        "correct_num": 3,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is used for [MASK].\n\nOptions:\n1. educating the masses in Juche thinking\n2. decolonization\n3. protection of artifacts, landscapes and sacred places"
+    },
+    {
+        "test_id": 94,
+        "relation": "UsedFor",
+        "correct_feat": "preservation",
+        "options": "1. proving the uninterrupted existence of the contemporary Macedonians\n2. preservation\n3. raising money and awareness for local animal charities",
+        "correct_num": 2,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is used for [MASK].\n\nOptions:\n1. proving the uninterrupted existence of the contemporary Macedonians\n2. preservation\n3. raising money and awareness for local animal charities"
+    },
+    {
+        "test_id": 95,
+        "relation": "UsedFor",
+        "correct_feat": "understanding the meanings of petroglyphs and pictographs",
+        "options": "1. flushing game\n2. demonstrating the consistency of a hunting earthdog\n3. understanding the meanings of petroglyphs and pictographs",
+        "correct_num": 3,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is used for [MASK].\n\nOptions:\n1. flushing game\n2. demonstrating the consistency of a hunting earthdog\n3. understanding the meanings of petroglyphs and pictographs"
+    },
+    {
+        "test_id": 96,
+        "relation": "UsedIn",
+        "correct_feat": "religious rituals",
+        "options": "1. religious rituals\n2. Japan\n3. parts of England",
+        "correct_num": 1,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is used in [MASK].\n\nOptions:\n1. religious rituals\n2. Japan\n3. parts of England"
+    },
+    {
+        "test_id": 97,
+        "relation": "UsedIn",
+        "correct_feat": "astronomical events",
+        "options": "1. the Atlantic Ocean\n2. astronomical events\n3. popular culture",
+        "correct_num": 2,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is used in [MASK].\n\nOptions:\n1. the Atlantic Ocean\n2. astronomical events\n3. popular culture"
+    },
+    {
+        "test_id": 98,
+        "relation": "UsedIn",
+        "correct_feat": "vision quests",
+        "options": "1. heats\n2. deep water\n3. vision quests",
+        "correct_num": 3,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is used in [MASK].\n\nOptions:\n1. heats\n2. deep water\n3. vision quests"
+    },
+    {
+        "test_id": 99,
+        "relation": "UsedIn",
+        "correct_feat": "the Venture\u00f1o area",
+        "options": "1. the Venture\u00f1o area\n2. Syria\n3. the New Left",
+        "correct_num": 1,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is used in [MASK].\n\nOptions:\n1. the Venture\u00f1o area\n2. Syria\n3. the New Left"
+    },
+    {
+        "test_id": 100,
+        "relation": "UsedIn",
+        "correct_feat": "the Cuyama Valley region",
+        "options": "1. Europe\n2. the Cuyama Valley region\n3. the American Revolution",
+        "correct_num": 2,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is used in [MASK].\n\nOptions:\n1. Europe\n2. the Cuyama Valley region\n3. the American Revolution"
+    },
+    {
+        "test_id": 101,
+        "relation": "UsedIn",
+        "correct_feat": "the San Rafael Mountains",
+        "options": "1. films\n2. Glacier National Park\n3. the San Rafael Mountains",
+        "correct_num": 3,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is used in [MASK].\n\nOptions:\n1. films\n2. Glacier National Park\n3. the San Rafael Mountains"
+    },
+    {
+        "test_id": 102,
+        "relation": "UsedIn",
+        "correct_feat": "the Sierra Madre Mountains",
+        "options": "1. the Sierra Madre Mountains\n2. the western Mediterranean\n3. the social media app TikTok",
+        "correct_num": 1,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is used in [MASK].\n\nOptions:\n1. the Sierra Madre Mountains\n2. the western Mediterranean\n3. the social media app TikTok"
+    },
+    {
+        "test_id": 103,
+        "relation": "UsedIn",
+        "correct_feat": "Painted Cave State Historic Park",
+        "options": "1. English usage to refer to Nazi Germany, also called the Third Reich\n2. Painted Cave State Historic Park\n3. the 2019 documentary film The Rise of the Synths",
+        "correct_num": 2,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is used in [MASK].\n\nOptions:\n1. English usage to refer to Nazi Germany, also called the Third Reich\n2. Painted Cave State Historic Park\n3. the 2019 documentary film The Rise of the Synths"
+    },
+    {
+        "test_id": 104,
+        "relation": "UsedIn",
+        "correct_feat": "canyons above Santa Barbara",
+        "options": "1. dog sports\n2. the United States\n3. canyons above Santa Barbara",
+        "correct_num": 3,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is used in [MASK].\n\nOptions:\n1. dog sports\n2. the United States\n3. canyons above Santa Barbara"
+    },
+    {
+        "test_id": 105,
+        "relation": "UsedIn",
+        "correct_feat": "Painted Rock",
+        "options": "1. Painted Rock\n2. Mortal Kombat 1\n3. competitions",
+        "correct_num": 1,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is used in [MASK].\n\nOptions:\n1. Painted Rock\n2. Mortal Kombat 1\n3. competitions"
+    },
+    {
+        "test_id": 108,
+        "relation": "UsedTo",
+        "correct_feat": "compare them with the art and symbolism of the different Indian groups and their respective culture areas",
+        "options": "1. compare them with the art and symbolism of the different Indian groups and their respective culture areas\n2. soar for hours\n3. chart in Australia",
+        "correct_num": 1,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is used to [MASK].\n\nOptions:\n1. compare them with the art and symbolism of the different Indian groups and their respective culture areas\n2. soar for hours\n3. chart in Australia"
+    },
+    {
+        "test_id": 109,
+        "relation": "WrittenIn",
+        "correct_feat": "Petroglyphs of California and Adjoining States",
+        "options": "1. 2024\n2. Petroglyphs of California and Adjoining States\n3. 1999",
+        "correct_num": 2,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> was written in [MASK].\n\nOptions:\n1. 2024\n2. Petroglyphs of California and Adjoining States\n3. 1999"
+    }
+]

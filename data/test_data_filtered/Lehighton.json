@@ -1,0 +1,410 @@
+[
+    {
+        "test_id": 0,
+        "relation": "IsA",
+        "correct_feat": "a borough in Carbon County, in Northeastern Pennsylvania",
+        "options": "1. a borough in Carbon County, in Northeastern Pennsylvania\n2. a patrimony\n3. a performing act",
+        "correct_num": 1,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is [MASK].\n\nOptions:\n1. a borough in Carbon County, in Northeastern Pennsylvania\n2. a patrimony\n3. a performing act"
+    },
+    {
+        "test_id": 1,
+        "relation": "IsA",
+        "correct_feat": "a borough",
+        "options": "1. a cooperative board game\n2. a borough\n3. a means of predicting the future",
+        "correct_num": 2,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is [MASK].\n\nOptions:\n1. a cooperative board game\n2. a borough\n3. a means of predicting the future"
+    },
+    {
+        "test_id": 2,
+        "relation": "IsA",
+        "correct_feat": "the most populous borough in Carbon County",
+        "options": "1. a board wargame\n2. a 2000 demo\n3. the most populous borough in Carbon County",
+        "correct_num": 3,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is [MASK].\n\nOptions:\n1. a board wargame\n2. a 2000 demo\n3. the most populous borough in Carbon County"
+    },
+    {
+        "test_id": 3,
+        "relation": "IsA",
+        "correct_feat": "the county's business hub",
+        "options": "1. the county's business hub\n2. a case of incest\n3. a legal precedent",
+        "correct_num": 1,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is [MASK].\n\nOptions:\n1. the county's business hub\n2. a case of incest\n3. a legal precedent"
+    },
+    {
+        "test_id": 4,
+        "relation": "IsA",
+        "correct_feat": "situated on the west bank of the Lehigh River",
+        "options": "1. a movement that was present during the era of Italian Fascism\n2. situated on the west bank of the Lehigh River\n3. a portmanteau of agitation and propaganda",
+        "correct_num": 2,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is [MASK].\n\nOptions:\n1. a movement that was present during the era of Italian Fascism\n2. situated on the west bank of the Lehigh River\n3. a portmanteau of agitation and propaganda"
+    },
+    {
+        "test_id": 6,
+        "relation": "Affects",
+        "correct_feat": "the county's business hub",
+        "options": "1. the county's business hub\n2. the validity of public-carry gun control laws\n3. the governance of Khorasan",
+        "correct_num": 1,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> affects [MASK].\n\nOptions:\n1. the county's business hub\n2. the validity of public-carry gun control laws\n3. the governance of Khorasan"
+    },
+    {
+        "test_id": 7,
+        "relation": "AssociatedWith",
+        "correct_feat": "water power from the Lehigh River",
+        "options": "1. social democratic governments\n2. water power from the Lehigh River\n3. Arab socialism",
+        "correct_num": 2,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is associated with [MASK].\n\nOptions:\n1. social democratic governments\n2. water power from the Lehigh River\n3. Arab socialism"
+    },
+    {
+        "test_id": 8,
+        "relation": "BelongsTo",
+        "correct_feat": "Northeastern Pennsylvania",
+        "options": "1. the South Korean boy band SS501\n2. the category of arcade games\n3. Northeastern Pennsylvania",
+        "correct_num": 3,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> belongs to [MASK].\n\nOptions:\n1. the South Korean boy band SS501\n2. the category of arcade games\n3. Northeastern Pennsylvania"
+    },
+    {
+        "test_id": 9,
+        "relation": "BuiltIn",
+        "correct_feat": "on the site of the German Moravian Brethren's mission station Gnadenh\u00fctten founded in 1746",
+        "options": "1. on the site of the German Moravian Brethren's mission station Gnadenh\u00fctten founded in 1746\n2. in Counter-Strike 2\n3. in the United States",
+        "correct_num": 1,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> was built [MASK].\n\nOptions:\n1. on the site of the German Moravian Brethren's mission station Gnadenh\u00fctten founded in 1746\n2. in Counter-Strike 2\n3. in the United States"
+    },
+    {
+        "test_id": 10,
+        "relation": "CausedBy",
+        "correct_feat": "restructuring in the railroad industry",
+        "options": "1. a desire for self-determination and national identity among Ugandans\n2. restructuring in the railroad industry\n3. issues with the implementation of communism",
+        "correct_num": 2,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is caused by [MASK].\n\nOptions:\n1. a desire for self-determination and national identity among Ugandans\n2. restructuring in the railroad industry\n3. issues with the implementation of communism"
+    },
+    {
+        "test_id": 11,
+        "relation": "ConsistsOf",
+        "correct_feat": "land and water",
+        "options": "1. a deformed end called the shop head or buck-tail after installation\n2. uniformed ranks\n3. land and water",
+        "correct_num": 3,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> consists of [MASK].\n\nOptions:\n1. a deformed end called the shop head or buck-tail after installation\n2. uniformed ranks\n3. land and water"
+    },
+    {
+        "test_id": 12,
+        "relation": "FoundedIn",
+        "correct_feat": "1746",
+        "options": "1. 1746\n2. 1901\n3. 1742",
+        "correct_num": 1,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> was founded in [MASK].\n\nOptions:\n1. 1746\n2. 1901\n3. 1742"
+    },
+    {
+        "test_id": 13,
+        "relation": "HasA",
+        "correct_feat": "a population of 5,248 as of the 2020 U.S. census",
+        "options": "1. four UK number-ones\n2. a population of 5,248 as of the 2020 U.S. census\n3. four shortcut spaces",
+        "correct_num": 2,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> has [MASK].\n\nOptions:\n1. four UK number-ones\n2. a population of 5,248 as of the 2020 U.S. census\n3. four shortcut spaces"
+    },
+    {
+        "test_id": 14,
+        "relation": "HasA",
+        "correct_feat": "a total area of 1.65 square miles",
+        "options": "1. a slogan \"Texas. It's Like a Whole Other Country\"\n2. a common root in religio-nationalism\n3. a total area of 1.65 square miles",
+        "correct_num": 3,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> has [MASK].\n\nOptions:\n1. a slogan \"Texas. It's Like a Whole Other Country\"\n2. a common root in religio-nationalism\n3. a total area of 1.65 square miles"
+    },
+    {
+        "test_id": 15,
+        "relation": "HasA",
+        "correct_feat": "a Warm Summer Continental Climate",
+        "options": "1. a Warm Summer Continental Climate\n2. a special 55 cent stamp\n3. ordinary dot mileposts costing ECU $1 million",
+        "correct_num": 1,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> has [MASK].\n\nOptions:\n1. a Warm Summer Continental Climate\n2. a special 55 cent stamp\n3. ordinary dot mileposts costing ECU $1 million"
+    },
+    {
+        "test_id": 16,
+        "relation": "HasA",
+        "correct_feat": "large seasonal temperature differences",
+        "options": "1. groupers\n2. large seasonal temperature differences\n3. a working through corporate groups and trade unions",
+        "correct_num": 2,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> has [MASK].\n\nOptions:\n1. groupers\n2. large seasonal temperature differences\n3. a working through corporate groups and trade unions"
+    },
+    {
+        "test_id": 18,
+        "relation": "HasA",
+        "correct_feat": "a median age of 40 years",
+        "options": "1. a median age of 40 years\n2. a principle called the Internal Revolution or Revolution of the Self\n3. a story that was prefixed to the Jewish story",
+        "correct_num": 1,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> has [MASK].\n\nOptions:\n1. a median age of 40 years\n2. a principle called the Internal Revolution or Revolution of the Self\n3. a story that was prefixed to the Jewish story"
+    },
+    {
+        "test_id": 19,
+        "relation": "HasFeatureOf",
+        "correct_feat": "being very green and hilly",
+        "options": "1. the apparition of modern Galician nationalism\n2. being very green and hilly\n3. republicanism",
+        "correct_num": 2,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is characterized by [MASK].\n\nOptions:\n1. the apparition of modern Galician nationalism\n2. being very green and hilly\n3. republicanism"
+    },
+    {
+        "test_id": 20,
+        "relation": "HasFeatureOf",
+        "correct_feat": "being in the Ridge-and-Valley region of the Appalachian Mountains",
+        "options": "1. being a sport\n2. the unit's current strength rating displayed on the unit's face at the 12 o'clock position\n3. being in the Ridge-and-Valley region of the Appalachian Mountains",
+        "correct_num": 3,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is characterized by [MASK].\n\nOptions:\n1. being a sport\n2. the unit's current strength rating displayed on the unit's face at the 12 o'clock position\n3. being in the Ridge-and-Valley region of the Appalachian Mountains"
+    },
+    {
+        "test_id": 21,
+        "relation": "InfluencedBy",
+        "correct_feat": "water power from the Lehigh River",
+        "options": "1. water power from the Lehigh River\n2. Nas\n3. pan-Africanist ideas",
+        "correct_num": 1,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> was influenced by [MASK].\n\nOptions:\n1. water power from the Lehigh River\n2. Nas\n3. pan-Africanist ideas"
+    },
+    {
+        "test_id": 22,
+        "relation": "InfluencedBy",
+        "correct_feat": "the Lehigh Valley Railroad",
+        "options": "1. Washington Irving's writings\n2. the Lehigh Valley Railroad\n3. the Abbasid Caliphate",
+        "correct_num": 2,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> was influenced by [MASK].\n\nOptions:\n1. Washington Irving's writings\n2. the Lehigh Valley Railroad\n3. the Abbasid Caliphate"
+    },
+    {
+        "test_id": 23,
+        "relation": "InfluencedBy",
+        "correct_feat": "railroad and industry restructuring",
+        "options": "1. the Renaissance practice of giving a city classical appearance\n2. the work of Dionysius Thrax\n3. railroad and industry restructuring",
+        "correct_num": 3,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> was influenced by [MASK].\n\nOptions:\n1. the Renaissance practice of giving a city classical appearance\n2. the work of Dionysius Thrax\n3. railroad and industry restructuring"
+    },
+    {
+        "test_id": 24,
+        "relation": "InfluencedBy",
+        "correct_feat": "the coming of the railroad",
+        "options": "1. the coming of the railroad\n2. Fustel de Coulanges\n3. leadership pragmatism",
+        "correct_num": 1,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> was influenced by [MASK].\n\nOptions:\n1. the coming of the railroad\n2. Fustel de Coulanges\n3. leadership pragmatism"
+    },
+    {
+        "test_id": 26,
+        "relation": "KnownFor",
+        "correct_feat": "being an early center for U.S. industrialization",
+        "options": "1. its collaboration with Masayoshi \u014cishi and Tom Hack\n2. believing in organicism\n3. being an early center for U.S. industrialization",
+        "correct_num": 3,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is known for [MASK].\n\nOptions:\n1. its collaboration with Masayoshi \u014cishi and Tom Hack\n2. believing in organicism\n3. being an early center for U.S. industrialization"
+    },
+    {
+        "test_id": 27,
+        "relation": "KnownFor",
+        "correct_feat": "its silk and lace mills",
+        "options": "1. its silk and lace mills\n2. being great patrons of Persian culture, art, literature, and language\n3. being played on Harku Lake",
+        "correct_num": 1,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is known for [MASK].\n\nOptions:\n1. its silk and lace mills\n2. being great patrons of Persian culture, art, literature, and language\n3. being played on Harku Lake"
+    },
+    {
+        "test_id": 29,
+        "relation": "KnownFor",
+        "correct_feat": "its shirt factory",
+        "options": "1. inspiring other similar games like nine square\n2. its language isolate\n3. its shirt factory",
+        "correct_num": 3,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is known for [MASK].\n\nOptions:\n1. inspiring other similar games like nine square\n2. its language isolate\n3. its shirt factory"
+    },
+    {
+        "test_id": 30,
+        "relation": "KnownFor",
+        "correct_feat": "its automatic-press works",
+        "options": "1. its automatic-press works\n2. being the second team sport in the United States to be played by women\n3. \"I'm Too Sexy\"",
+        "correct_num": 1,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is known for [MASK].\n\nOptions:\n1. its automatic-press works\n2. being the second team sport in the United States to be played by women\n3. \"I'm Too Sexy\""
+    },
+    {
+        "test_id": 31,
+        "relation": "KnownFor",
+        "correct_feat": "its car shops",
+        "options": "1. its use in German history\n2. its car shops\n3. being a prized and valued game fish",
+        "correct_num": 2,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is known for [MASK].\n\nOptions:\n1. its use in German history\n2. its car shops\n3. being a prized and valued game fish"
+    },
+    {
+        "test_id": 32,
+        "relation": "KnownFor",
+        "correct_feat": "its stoneworks",
+        "options": "1. its historical references dating back to 1937\n2. advocating the enlightenment of the Arabs\n3. its stoneworks",
+        "correct_num": 3,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is known for [MASK].\n\nOptions:\n1. its historical references dating back to 1937\n2. advocating the enlightenment of the Arabs\n3. its stoneworks"
+    },
+    {
+        "test_id": 33,
+        "relation": "KnownFor",
+        "correct_feat": "its foundries",
+        "options": "1. its foundries\n2. the bond between handler and dog\n3. its abstract strategy gameplay",
+        "correct_num": 1,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is known for [MASK].\n\nOptions:\n1. its foundries\n2. the bond between handler and dog\n3. its abstract strategy gameplay"
+    },
+    {
+        "test_id": 34,
+        "relation": "KnownFor",
+        "correct_feat": "its Mahoning Drive-In Theater",
+        "options": "1. its compositions\n2. its Mahoning Drive-In Theater\n3. being widely believed to be of Ashanti origin",
+        "correct_num": 2,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is known for [MASK].\n\nOptions:\n1. its compositions\n2. its Mahoning Drive-In Theater\n3. being widely believed to be of Ashanti origin"
+    },
+    {
+        "test_id": 35,
+        "relation": "LocatedIn",
+        "correct_feat": "in Carbon County",
+        "options": "1. in Colditz Castle\n2. in northern Gaul\n3. in Carbon County",
+        "correct_num": 3,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is located [MASK].\n\nOptions:\n1. in Colditz Castle\n2. in northern Gaul\n3. in Carbon County"
+    },
+    {
+        "test_id": 36,
+        "relation": "LocatedIn",
+        "correct_feat": "in Northeastern Pennsylvania",
+        "options": "1. in Northeastern Pennsylvania\n2. in Manchester\n3. in Chicago",
+        "correct_num": 1,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is located [MASK].\n\nOptions:\n1. in Northeastern Pennsylvania\n2. in Manchester\n3. in Chicago"
+    },
+    {
+        "test_id": 37,
+        "relation": "LocatedIn",
+        "correct_feat": "in southern Carbon County",
+        "options": "1. in Great Queen Street, London\n2. in southern Carbon County\n3. on the Hudson River",
+        "correct_num": 2,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is located [MASK].\n\nOptions:\n1. in Great Queen Street, London\n2. in southern Carbon County\n3. on the Hudson River"
+    },
+    {
+        "test_id": 38,
+        "relation": "LocatedIn",
+        "correct_feat": "in northeast Pennsylvania",
+        "options": "1. in New York City\n2. in China\n3. in northeast Pennsylvania",
+        "correct_num": 3,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is located [MASK].\n\nOptions:\n1. in New York City\n2. in China\n3. in northeast Pennsylvania"
+    },
+    {
+        "test_id": 39,
+        "relation": "LocatedIn",
+        "correct_feat": "117 miles west of New York City",
+        "options": "1. 117 miles west of New York City\n2. in Spain\n3. in Topsfield",
+        "correct_num": 1,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is located [MASK].\n\nOptions:\n1. 117 miles west of New York City\n2. in Spain\n3. in Topsfield"
+    },
+    {
+        "test_id": 40,
+        "relation": "LocatedIn",
+        "correct_feat": "37 miles south of Wilkes-Barre",
+        "options": "1. in St. Louis, Missouri, where the NTFL was formed\n2. 37 miles south of Wilkes-Barre\n3. in the Diyala River region",
+        "correct_num": 2,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is located [MASK].\n\nOptions:\n1. in St. Louis, Missouri, where the NTFL was formed\n2. 37 miles south of Wilkes-Barre\n3. in the Diyala River region"
+    },
+    {
+        "test_id": 41,
+        "relation": "LocatedIn",
+        "correct_feat": "3 miles south of Jim Thorpe",
+        "options": "1. in Amstetten, Lower Austria\n2. in the West\n3. 3 miles south of Jim Thorpe",
+        "correct_num": 3,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is located [MASK].\n\nOptions:\n1. in Amstetten, Lower Austria\n2. in the West\n3. 3 miles south of Jim Thorpe"
+    },
+    {
+        "test_id": 42,
+        "relation": "LocatedIn",
+        "correct_feat": "7 miles northwest of Palmerton",
+        "options": "1. 7 miles northwest of Palmerton\n2. about 1,000 miles southeast of Miami, Florida\n3. in Portland",
+        "correct_num": 1,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is located [MASK].\n\nOptions:\n1. 7 miles northwest of Palmerton\n2. about 1,000 miles southeast of Miami, Florida\n3. in Portland"
+    },
+    {
+        "test_id": 43,
+        "relation": "LocatedIn",
+        "correct_feat": "across the Lehigh River on the east by Weissport and Franklin Township",
+        "options": "1. in El Carpio de Tajo\n2. across the Lehigh River on the east by Weissport and Franklin Township\n3. in the Grampian Mountains district of western Victoria",
+        "correct_num": 2,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is located [MASK].\n\nOptions:\n1. in El Carpio de Tajo\n2. across the Lehigh River on the east by Weissport and Franklin Township\n3. in the Grampian Mountains district of western Victoria"
+    },
+    {
+        "test_id": 44,
+        "relation": "PartOf",
+        "correct_feat": "the Ridge-and-Valley region of the Appalachian Mountains",
+        "options": "1. rodeo\n2. planetary systems\n3. the Ridge-and-Valley region of the Appalachian Mountains",
+        "correct_num": 3,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is part of [MASK].\n\nOptions:\n1. rodeo\n2. planetary systems\n3. the Ridge-and-Valley region of the Appalachian Mountains"
+    },
+    {
+        "test_id": 46,
+        "relation": "UsedFor",
+        "correct_feat": "water power",
+        "options": "1. withholding income\n2. water power\n3. promotion",
+        "correct_num": 2,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is used for [MASK].\n\nOptions:\n1. withholding income\n2. water power\n3. promotion"
+    },
+    {
+        "test_id": 47,
+        "relation": "UsedFor",
+        "correct_feat": "developing industries",
+        "options": "1. Nazi Germany\n2. developing certain mathematical principles\n3. developing industries",
+        "correct_num": 3,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is used for [MASK].\n\nOptions:\n1. Nazi Germany\n2. developing certain mathematical principles\n3. developing industries"
+    },
+    {
+        "test_id": 48,
+        "relation": "UsedFor",
+        "correct_feat": "silk and lace manufacturing",
+        "options": "1. silk and lace manufacturing\n2. toasts\n3. a Snapchat reality series",
+        "correct_num": 1,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is used for [MASK].\n\nOptions:\n1. silk and lace manufacturing\n2. toasts\n3. a Snapchat reality series"
+    },
+    {
+        "test_id": 49,
+        "relation": "UsedFor",
+        "correct_feat": "meat-packing",
+        "options": "1. encouraging revolt and a change in government\n2. meat-packing\n3. justifying the expansion into Eastern Europe",
+        "correct_num": 2,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is used for [MASK].\n\nOptions:\n1. encouraging revolt and a change in government\n2. meat-packing\n3. justifying the expansion into Eastern Europe"
+    },
+    {
+        "test_id": 52,
+        "relation": "UsedFor",
+        "correct_feat": "car repair",
+        "options": "1. challenging the legitimacy of Hong Kong's administrative structure\n2. car repair\n3. simulating the last four battles fought by Napoleon",
+        "correct_num": 2,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is used for [MASK].\n\nOptions:\n1. challenging the legitimacy of Hong Kong's administrative structure\n2. car repair\n3. simulating the last four battles fought by Napoleon"
+    },
+    {
+        "test_id": 53,
+        "relation": "UsedFor",
+        "correct_feat": "stoneworks",
+        "options": "1. a publicity stunt\n2. promoting classicism\n3. stoneworks",
+        "correct_num": 3,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is used for [MASK].\n\nOptions:\n1. a publicity stunt\n2. promoting classicism\n3. stoneworks"
+    },
+    {
+        "test_id": 54,
+        "relation": "UsedFor",
+        "correct_feat": "foundries",
+        "options": "1. foundries\n2. regaining autonomy\n3. toasts",
+        "correct_num": 1,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is used for [MASK].\n\nOptions:\n1. foundries\n2. regaining autonomy\n3. toasts"
+    },
+    {
+        "test_id": 55,
+        "relation": "UsedIn",
+        "correct_feat": "the Ridge-and-Valley region of the Appalachian Mountains",
+        "options": "1. the US\n2. the Ridge-and-Valley region of the Appalachian Mountains\n3. Rondout, Illinois",
+        "correct_num": 2,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is used in [MASK].\n\nOptions:\n1. the US\n2. the Ridge-and-Valley region of the Appalachian Mountains\n3. Rondout, Illinois"
+    },
+    {
+        "test_id": 56,
+        "relation": "UsedTo",
+        "correct_feat": "employ thousands of workers",
+        "options": "1. deflect light bullets\n2. encourage mutual aid between its members\n3. employ thousands of workers",
+        "correct_num": 3,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is used to [MASK].\n\nOptions:\n1. deflect light bullets\n2. encourage mutual aid between its members\n3. employ thousands of workers"
+    },
+    {
+        "test_id": 57,
+        "relation": "UsedTo",
+        "correct_feat": "attract residents",
+        "options": "1. attract residents\n2. spread freedom across Asia\n3. distinguish it from other board games",
+        "correct_num": 1,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is used to [MASK].\n\nOptions:\n1. attract residents\n2. spread freedom across Asia\n3. distinguish it from other board games"
+    }
+]

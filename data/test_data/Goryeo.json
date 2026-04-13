@@ -1,0 +1,842 @@
+[
+    {
+        "test_id": 0,
+        "relation": "About",
+        "correct_feat": "a Korean state that unified and ruled the Korean Peninsula",
+        "options": "1. a Korean state that unified and ruled the Korean Peninsula\n2. a left-wing set of political philosophies that supports political democracy and some form of a socially owned economy\n3. the Bancroft Treaties and their eventual abandonment",
+        "correct_num": 1,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is about [MASK].\n\nOptions:\n1. a Korean state that unified and ruled the Korean Peninsula\n2. a left-wing set of political philosophies that supports political democracy and some form of a socially owned economy\n3. the Bancroft Treaties and their eventual abandonment"
+    },
+    {
+        "test_id": 1,
+        "relation": "Affects",
+        "correct_feat": "the modern-day Korean identity",
+        "options": "1. the anime series Hand Shakers\n2. the modern-day Korean identity\n3. the political organization of the Spanish nation",
+        "correct_num": 2,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> affects [MASK].\n\nOptions:\n1. the anime series Hand Shakers\n2. the modern-day Korean identity\n3. the political organization of the Spanish nation"
+    },
+    {
+        "test_id": 2,
+        "relation": "AssociatedWith",
+        "correct_feat": "the Later Three Kingdoms period",
+        "options": "1. the 9th to 15th centuries\n2. the Russian Uniate Church – today Ukrainian Greek Catholic Church\n3. the Later Three Kingdoms period",
+        "correct_num": 3,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is associated with [MASK].\n\nOptions:\n1. the 9th to 15th centuries\n2. the Russian Uniate Church – today Ukrainian Greek Catholic Church\n3. the Later Three Kingdoms period"
+    },
+    {
+        "test_id": 3,
+        "relation": "AssociatedWith",
+        "correct_feat": "the establishment of Joseon",
+        "options": "1. the establishment of Joseon\n2. the Virgin of the Passion in Eastern Orthodoxy\n3. the High Priestly Prayer",
+        "correct_num": 1,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is associated with [MASK].\n\nOptions:\n1. the establishment of Joseon\n2. the Virgin of the Passion in Eastern Orthodoxy\n3. the High Priestly Prayer"
+    },
+    {
+        "test_id": 4,
+        "relation": "AssociatedWith",
+        "correct_feat": "the ruling class of the northern kingdom of Balhae",
+        "options": "1. \"may-issue\" systems\n2. the ruling class of the northern kingdom of Balhae\n3. the civil rights movement",
+        "correct_num": 2,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is associated with [MASK].\n\nOptions:\n1. \"may-issue\" systems\n2. the ruling class of the northern kingdom of Balhae\n3. the civil rights movement"
+    },
+    {
+        "test_id": 5,
+        "relation": "AssociatedWith",
+        "correct_feat": "the earlier Three Kingdoms of Korea",
+        "options": "1. the Controlled Substance Act (United States)\n2. ClariS\n3. the earlier Three Kingdoms of Korea",
+        "correct_num": 3,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is associated with [MASK].\n\nOptions:\n1. the Controlled Substance Act (United States)\n2. ClariS\n3. the earlier Three Kingdoms of Korea"
+    },
+    {
+        "test_id": 6,
+        "relation": "AssociatedWith",
+        "correct_feat": "the Golden Age of Buddhism in Korea",
+        "options": "1. the Golden Age of Buddhism in Korea\n2. Pony Canyon\n3. the United Nations",
+        "correct_num": 1,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is associated with [MASK].\n\nOptions:\n1. the Golden Age of Buddhism in Korea\n2. Pony Canyon\n3. the United Nations"
+    },
+    {
+        "test_id": 7,
+        "relation": "AssociatedWith",
+        "correct_feat": "the Middle East",
+        "options": "1. the theme of the prayer of Intercession\n2. the Middle East\n3. the Dormition Cathedral",
+        "correct_num": 2,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is associated with [MASK].\n\nOptions:\n1. the theme of the prayer of Intercession\n2. the Middle East\n3. the Dormition Cathedral"
+    },
+    {
+        "test_id": 8,
+        "relation": "AssociatedWith",
+        "correct_feat": "the Yuan dynasty",
+        "options": "1. golf\n2. One\n3. the Yuan dynasty",
+        "correct_num": 3,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is associated with [MASK].\n\nOptions:\n1. golf\n2. One\n3. the Yuan dynasty"
+    },
+    {
+        "test_id": 9,
+        "relation": "AssociatedWith",
+        "correct_feat": "the Red Turban Rebels from China",
+        "options": "1. the Red Turban Rebels from China\n2. Pia F. Cuneo\n3. men who opposed women's suffrage",
+        "correct_num": 1,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is associated with [MASK].\n\nOptions:\n1. the Red Turban Rebels from China\n2. Pia F. Cuneo\n3. men who opposed women's suffrage"
+    },
+    {
+        "test_id": 10,
+        "relation": "AssociatedWith",
+        "correct_feat": "professional Japanese pirates",
+        "options": "1. the Fall of Constantinople\n2. professional Japanese pirates\n3. the Adams–Onís Treaty",
+        "correct_num": 2,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is associated with [MASK].\n\nOptions:\n1. the Fall of Constantinople\n2. professional Japanese pirates\n3. the Adams–Onís Treaty"
+    },
+    {
+        "test_id": 11,
+        "relation": "AssociatedWith",
+        "correct_feat": "the Ming dynasty",
+        "options": "1. the duchy of Saxe-Wittenberg\n2. Shady XV\n3. the Ming dynasty",
+        "correct_num": 3,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is associated with [MASK].\n\nOptions:\n1. the duchy of Saxe-Wittenberg\n2. Shady XV\n3. the Ming dynasty"
+    },
+    {
+        "test_id": 12,
+        "relation": "BelongsTo",
+        "correct_feat": "Korean history",
+        "options": "1. Korean history\n2. the history of the Fourteenth Amendment\n3. the category of softball variants",
+        "correct_num": 1,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> belongs to [MASK].\n\nOptions:\n1. Korean history\n2. the history of the Fourteenth Amendment\n3. the category of softball variants"
+    },
+    {
+        "test_id": 13,
+        "relation": "CreatedIn",
+        "correct_feat": "918",
+        "options": "1. 2004\n2. 918\n3. Switzerland",
+        "correct_num": 2,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> was created in [MASK].\n\nOptions:\n1. 2004\n2. 918\n3. Switzerland"
+    },
+    {
+        "test_id": 14,
+        "relation": "FoundedBy",
+        "correct_feat": "general Wang Kŏn",
+        "options": "1. Ilya Prusikin\n2. Søren Rasted and Nicolaj Rasted\n3. general Wang Kŏn",
+        "correct_num": 3,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> was founded by [MASK].\n\nOptions:\n1. Ilya Prusikin\n2. Søren Rasted and Nicolaj Rasted\n3. general Wang Kŏn"
+    },
+    {
+        "test_id": 15,
+        "relation": "FoundedIn",
+        "correct_feat": "918",
+        "options": "1. 918\n2. 1746\n3. the 1940s",
+        "correct_num": 1,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> was founded in [MASK].\n\nOptions:\n1. 918\n2. 1746\n3. the 1940s"
+    },
+    {
+        "test_id": 16,
+        "relation": "HasA",
+        "correct_feat": "70 temples in the capital alone in the 11th century",
+        "options": "1. a lawsuit for damages in libel\n2. 70 temples in the capital alone in the 11th century\n3. a second EP titled Gone",
+        "correct_num": 2,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> has [MASK].\n\nOptions:\n1. a lawsuit for damages in libel\n2. 70 temples in the capital alone in the 11th century\n3. a second EP titled Gone"
+    },
+    {
+        "test_id": 17,
+        "relation": "HasA",
+        "correct_feat": "a successor state to Later Goguryeo and Goguryeo",
+        "options": "1. rules for various rebellions\n2. a story that was prefixed to the Jewish story\n3. a successor state to Later Goguryeo and Goguryeo",
+        "correct_num": 3,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> has [MASK].\n\nOptions:\n1. rules for various rebellions\n2. a story that was prefixed to the Jewish story\n3. a successor state to Later Goguryeo and Goguryeo"
+    },
+    {
+        "test_id": 18,
+        "relation": "HasA",
+        "correct_feat": "a prominent maritime hojok based in Kaesong",
+        "options": "1. a prominent maritime hojok based in Kaesong\n2. a Franciscan monastery\n3. no differentiation between towns and villages on the maps",
+        "correct_num": 1,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> has [MASK].\n\nOptions:\n1. a prominent maritime hojok based in Kaesong\n2. a Franciscan monastery\n3. no differentiation between towns and villages on the maps"
+    },
+    {
+        "test_id": 19,
+        "relation": "HasA",
+        "correct_feat": "a strong familial kinship with Balhae",
+        "options": "1. holes of varying point values\n2. a strong familial kinship with Balhae\n3. a mosaic of the United States Flag on either side of the painting",
+        "correct_num": 2,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> has [MASK].\n\nOptions:\n1. holes of varying point values\n2. a strong familial kinship with Balhae\n3. a mosaic of the United States Flag on either side of the painting"
+    },
+    {
+        "test_id": 20,
+        "relation": "HasA",
+        "correct_feat": "a \"relative country\" and \"married country\" relationship with Balhae",
+        "options": "1. compositions that often feature live instruments\n2. a duty on the part of the rich to the poor and to the needy\n3. a \"relative country\" and \"married country\" relationship with Balhae",
+        "correct_num": 3,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> has [MASK].\n\nOptions:\n1. compositions that often feature live instruments\n2. a duty on the part of the rich to the poor and to the needy\n3. a \"relative country\" and \"married country\" relationship with Balhae"
+    },
+    {
+        "test_id": 21,
+        "relation": "HasA",
+        "correct_feat": "a \"true national unification\" by Korean historians",
+        "options": "1. a \"true national unification\" by Korean historians\n2. claims about ethnic Macedonian achievements\n3. an empty background",
+        "correct_num": 1,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> has [MASK].\n\nOptions:\n1. a \"true national unification\" by Korean historians\n2. claims about ethnic Macedonian achievements\n3. an empty background"
+    },
+    {
+        "test_id": 22,
+        "relation": "HasA",
+        "correct_feat": "a Northern Expansion Doctrine to reclaim ancestral lands",
+        "options": "1. missiles\n2. a Northern Expansion Doctrine to reclaim ancestral lands\n3. a song \"Rabbit\" performed in 2016 on Strictly Come Dancing",
+        "correct_num": 2,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> has [MASK].\n\nOptions:\n1. missiles\n2. a Northern Expansion Doctrine to reclaim ancestral lands\n3. a song \"Rabbit\" performed in 2016 on Strictly Come Dancing"
+    },
+    {
+        "test_id": 23,
+        "relation": "HasA",
+        "correct_feat": "a coup d'état led by General Yi Sŏnggye",
+        "options": "1. opponents who argue that it would increase the number of drug users\n2. a point purchase system for \"buying\" opposing forces\n3. a coup d'état led by General Yi Sŏnggye",
+        "correct_num": 3,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> has [MASK].\n\nOptions:\n1. opponents who argue that it would increase the number of drug users\n2. a point purchase system for \"buying\" opposing forces\n3. a coup d'état led by General Yi Sŏnggye"
+    },
+    {
+        "test_id": 24,
+        "relation": "HasA",
+        "correct_feat": "a national policy of integrating Baekje and Goguryeo refugees",
+        "options": "1. a national policy of integrating Baekje and Goguryeo refugees\n2. 29,000 activators\n3. a cherry stone spitting competition",
+        "correct_num": 1,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> has [MASK].\n\nOptions:\n1. a national policy of integrating Baekje and Goguryeo refugees\n2. 29,000 activators\n3. a cherry stone spitting competition"
+    },
+    {
+        "test_id": 25,
+        "relation": "HasA",
+        "correct_feat": "a new central army called the Ku-sŏdang",
+        "options": "1. a smaller board size of 14x14 in the Travel version\n2. a new central army called the Ku-sŏdang\n3. commitments to expanding the welfare state",
+        "correct_num": 2,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> has [MASK].\n\nOptions:\n1. a smaller board size of 14x14 in the Travel version\n2. a new central army called the Ku-sŏdang\n3. commitments to expanding the welfare state"
+    },
+    {
+        "test_id": 26,
+        "relation": "HasFeatureOf",
+        "correct_feat": "what has been called a \"true national unification\" by Korean historians",
+        "options": "1. its exposure\n2. the first set of rules being published in 1937 by the Amateur Softball Association\n3. what has been called a \"true national unification\" by Korean historians",
+        "correct_num": 3,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is characterized by [MASK].\n\nOptions:\n1. its exposure\n2. the first set of rules being published in 1937 by the Amateur Softball Association\n3. what has been called a \"true national unification\" by Korean historians"
+    },
+    {
+        "test_id": 27,
+        "relation": "HasFeatureOf",
+        "correct_feat": "the individual identities of Goguryeo, Baekje and Silla being successfully merged into a single entity",
+        "options": "1. the individual identities of Goguryeo, Baekje and Silla being successfully merged into a single entity\n2. songs carrying profound patriotic themes\n3. a single \"Livet i plastik\" with lyrics referencing Aqua's hit \"Barbie girl\"",
+        "correct_num": 1,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is characterized by [MASK].\n\nOptions:\n1. the individual identities of Goguryeo, Baekje and Silla being successfully merged into a single entity\n2. songs carrying profound patriotic themes\n3. a single \"Livet i plastik\" with lyrics referencing Aqua's hit \"Barbie girl\""
+    },
+    {
+        "test_id": 28,
+        "relation": "HasFeatureOf",
+        "correct_feat": "the name \"Korea\" being derived from its name",
+        "options": "1. the Manjimup cherry spit competition being an annual event\n2. the name \"Korea\" being derived from its name\n3. its interpretation as a symbol of paradise, political order, and dynastic unity",
+        "correct_num": 2,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is characterized by [MASK].\n\nOptions:\n1. the Manjimup cherry spit competition being an annual event\n2. the name \"Korea\" being derived from its name\n3. its interpretation as a symbol of paradise, political order, and dynastic unity"
+    },
+    {
+        "test_id": 29,
+        "relation": "HasFeatureOf",
+        "correct_feat": "being a successor state to Later Goguryeo and Goguryeo",
+        "options": "1. the incorporation of Ireland and Scotland into the Commonwealth\n2. innocence and lack of embarrassment about nakedness\n3. being a successor state to Later Goguryeo and Goguryeo",
+        "correct_num": 3,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is characterized by [MASK].\n\nOptions:\n1. the incorporation of Ireland and Scotland into the Commonwealth\n2. innocence and lack of embarrassment about nakedness\n3. being a successor state to Later Goguryeo and Goguryeo"
+    },
+    {
+        "test_id": 30,
+        "relation": "HasFeatureOf",
+        "correct_feat": "being the \"Golden Age of Buddhism\" in Korea",
+        "options": "1. being the \"Golden Age of Buddhism\" in Korea\n2. the Divine Liturgy the next morning\n3. the arrest of Bruce Boynton for trespassing",
+        "correct_num": 1,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is characterized by [MASK].\n\nOptions:\n1. being the \"Golden Age of Buddhism\" in Korea\n2. the Divine Liturgy the next morning\n3. the arrest of Bruce Boynton for trespassing"
+    },
+    {
+        "test_id": 31,
+        "relation": "HasFeatureOf",
+        "correct_feat": "Buddhism achieving its highest level of influence in Korean history",
+        "options": "1. the 3×3×3 version being played out to a draw by including a 3rd player\n2. Buddhism achieving its highest level of influence in Korean history\n3. terrain that can be converted from one type to another as a result of combat",
+        "correct_num": 2,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is characterized by [MASK].\n\nOptions:\n1. the 3×3×3 version being played out to a draw by including a 3rd player\n2. Buddhism achieving its highest level of influence in Korean history\n3. terrain that can be converted from one type to another as a result of combat"
+    },
+    {
+        "test_id": 32,
+        "relation": "HasFeatureOf",
+        "correct_feat": "commerce flourishing",
+        "options": "1. a rule for exiting the player's base requiring a six\n2. a goal called the 'Circle of Justice'\n3. commerce flourishing",
+        "correct_num": 3,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is characterized by [MASK].\n\nOptions:\n1. a rule for exiting the player's base requiring a six\n2. a goal called the 'Circle of Justice'\n3. commerce flourishing"
+    },
+    {
+        "test_id": 33,
+        "relation": "HasFeatureOf",
+        "correct_feat": "merchants coming from as far as the Middle East",
+        "options": "1. merchants coming from as far as the Middle East\n2. the holding of land in exchange for service or labour\n3. a sculpture of Jesus",
+        "correct_num": 1,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is characterized by [MASK].\n\nOptions:\n1. merchants coming from as far as the Middle East\n2. the holding of land in exchange for service or labour\n3. a sculpture of Jesus"
+    },
+    {
+        "test_id": 34,
+        "relation": "HasFeatureOf",
+        "correct_feat": "its capital being a center of trade and industry",
+        "options": "1. being the location where the Torgauer Artikel was composed\n2. its capital being a center of trade and industry\n3. a ziplock bag in the first edition",
+        "correct_num": 2,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is characterized by [MASK].\n\nOptions:\n1. being the location where the Torgauer Artikel was composed\n2. its capital being a center of trade and industry\n3. a ziplock bag in the first edition"
+    },
+    {
+        "test_id": 35,
+        "relation": "HasFeatureOf",
+        "correct_feat": "great achievements in Korean art and culture",
+        "options": "1. the artist usually appearing as a face in the crowd or group\n2. taking advantage of fountains, canals, and water mirrors in the city\n3. great achievements in Korean art and culture",
+        "correct_num": 3,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is characterized by [MASK].\n\nOptions:\n1. the artist usually appearing as a face in the crowd or group\n2. taking advantage of fountains, canals, and water mirrors in the city\n3. great achievements in Korean art and culture"
+    },
+    {
+        "test_id": 36,
+        "relation": "Influenced",
+        "correct_feat": "the modern-day Korean identity",
+        "options": "1. the modern-day Korean identity\n2. Gregory of Nazianzus' writing of ascending the ladder toward excellence\n3. the prominence of the competition after it was covered in the 2007 documentary The King of Kong",
+        "correct_num": 1,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> influenced [MASK].\n\nOptions:\n1. the modern-day Korean identity\n2. Gregory of Nazianzus' writing of ascending the ladder toward excellence\n3. the prominence of the competition after it was covered in the 2007 documentary The King of Kong"
+    },
+    {
+        "test_id": 37,
+        "relation": "Influenced",
+        "correct_feat": "the establishment of Joseon",
+        "options": "1. the political discourse in Uganda\n2. the establishment of Joseon\n3. the political philosophy of Pope Leo XIII",
+        "correct_num": 2,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> influenced [MASK].\n\nOptions:\n1. the political discourse in Uganda\n2. the establishment of Joseon\n3. the political philosophy of Pope Leo XIII"
+    },
+    {
+        "test_id": 38,
+        "relation": "Influenced",
+        "correct_feat": "the ruling class of the northern kingdom of Balhae",
+        "options": "1. the Beatles\n2. the Life and Labor Commune in Russia\n3. the ruling class of the northern kingdom of Balhae",
+        "correct_num": 3,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> influenced [MASK].\n\nOptions:\n1. the Beatles\n2. the Life and Labor Commune in Russia\n3. the ruling class of the northern kingdom of Balhae"
+    },
+    {
+        "test_id": 39,
+        "relation": "Influenced",
+        "correct_feat": "the earlier Three Kingdoms of Korea",
+        "options": "1. the earlier Three Kingdoms of Korea\n2. the Earth Liberation Front (ELF)\n3. the Interstate Commerce Commission to issue regulations",
+        "correct_num": 1,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> influenced [MASK].\n\nOptions:\n1. the earlier Three Kingdoms of Korea\n2. the Earth Liberation Front (ELF)\n3. the Interstate Commerce Commission to issue regulations"
+    },
+    {
+        "test_id": 40,
+        "relation": "Influenced",
+        "correct_feat": "the Golden Age of Buddhism in Korea",
+        "options": "1. the Party of Free Citizens (Svobodní)\n2. the Golden Age of Buddhism in Korea\n3. the experimentation with wings, foils and kites",
+        "correct_num": 2,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> influenced [MASK].\n\nOptions:\n1. the Party of Free Citizens (Svobodní)\n2. the Golden Age of Buddhism in Korea\n3. the experimentation with wings, foils and kites"
+    },
+    {
+        "test_id": 41,
+        "relation": "Influenced",
+        "correct_feat": "the Middle East",
+        "options": "1. the rise of the Pearl District\n2. the development of death penalty statutes\n3. the Middle East",
+        "correct_num": 3,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> influenced [MASK].\n\nOptions:\n1. the rise of the Pearl District\n2. the development of death penalty statutes\n3. the Middle East"
+    },
+    {
+        "test_id": 42,
+        "relation": "Influenced",
+        "correct_feat": "the Yuan dynasty",
+        "options": "1. the Yuan dynasty\n2. the economic policy of Argentina\n3. the legal status of individuals in armed conflicts",
+        "correct_num": 1,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> influenced [MASK].\n\nOptions:\n1. the Yuan dynasty\n2. the economic policy of Argentina\n3. the legal status of individuals in armed conflicts"
+    },
+    {
+        "test_id": 43,
+        "relation": "Influenced",
+        "correct_feat": "the Red Turban Rebels from China",
+        "options": "1. John Chrysostom's interpretation of gradual ascent by means of virtue\n2. the Red Turban Rebels from China\n3. the building of modern welfare states",
+        "correct_num": 2,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> influenced [MASK].\n\nOptions:\n1. John Chrysostom's interpretation of gradual ascent by means of virtue\n2. the Red Turban Rebels from China\n3. the building of modern welfare states"
+    },
+    {
+        "test_id": 44,
+        "relation": "Influenced",
+        "correct_feat": "professional Japanese pirates",
+        "options": "1. the concept of nationalism outside of France\n2. the developing world\n3. professional Japanese pirates",
+        "correct_num": 3,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> influenced [MASK].\n\nOptions:\n1. the concept of nationalism outside of France\n2. the developing world\n3. professional Japanese pirates"
+    },
+    {
+        "test_id": 45,
+        "relation": "Influenced",
+        "correct_feat": "the Ming dynasty",
+        "options": "1. the Ming dynasty\n2. the work of Ronsard\n3. the formation of national policies",
+        "correct_num": 1,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> influenced [MASK].\n\nOptions:\n1. the Ming dynasty\n2. the work of Ronsard\n3. the formation of national policies"
+    },
+    {
+        "test_id": 46,
+        "relation": "InfluencedBy",
+        "correct_feat": "the erratic Taebong ruler Kung Ye",
+        "options": "1. the linking of the Indian railways across the sub-continent\n2. the erratic Taebong ruler Kung Ye\n3. Manambuchaavadi Venkatasubbayyar",
+        "correct_num": 2,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> was influenced by [MASK].\n\nOptions:\n1. the linking of the Indian railways across the sub-continent\n2. the erratic Taebong ruler Kung Ye\n3. Manambuchaavadi Venkatasubbayyar"
+    },
+    {
+        "test_id": 47,
+        "relation": "InfluencedBy",
+        "correct_feat": "the Later Three Kingdoms period",
+        "options": "1. the custom of dispatching couriers or messengers\n2. Vocaloid 2 singing synthesizer software Hatsune Miku\n3. the Later Three Kingdoms period",
+        "correct_num": 3,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> was influenced by [MASK].\n\nOptions:\n1. the custom of dispatching couriers or messengers\n2. Vocaloid 2 singing synthesizer software Hatsune Miku\n3. the Later Three Kingdoms period"
+    },
+    {
+        "test_id": 48,
+        "relation": "InfluencedBy",
+        "correct_feat": "the ruling class of the northern kingdom of Balhae",
+        "options": "1. the ruling class of the northern kingdom of Balhae\n2. philology\n3. traditionalist conservatism",
+        "correct_num": 1,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> was influenced by [MASK].\n\nOptions:\n1. the ruling class of the northern kingdom of Balhae\n2. philology\n3. traditionalist conservatism"
+    },
+    {
+        "test_id": 49,
+        "relation": "InfluencedBy",
+        "correct_feat": "the earlier Three Kingdoms of Korea",
+        "options": "1. the absence of a saucer\n2. the earlier Three Kingdoms of Korea\n3. the success of \"Ain't No Pleasing You\"",
+        "correct_num": 2,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> was influenced by [MASK].\n\nOptions:\n1. the absence of a saucer\n2. the earlier Three Kingdoms of Korea\n3. the success of \"Ain't No Pleasing You\""
+    },
+    {
+        "test_id": 50,
+        "relation": "InfluencedBy",
+        "correct_feat": "the Golden Age of Buddhism in Korea",
+        "options": "1. Greek mythology\n2. Napoleon's defeat and downfall\n3. the Golden Age of Buddhism in Korea",
+        "correct_num": 3,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> was influenced by [MASK].\n\nOptions:\n1. Greek mythology\n2. Napoleon's defeat and downfall\n3. the Golden Age of Buddhism in Korea"
+    },
+    {
+        "test_id": 51,
+        "relation": "InfluencedBy",
+        "correct_feat": "the Middle East",
+        "options": "1. the Middle East\n2. Warhammer Quest\n3. Georgiana Nehl's painting Guardians: Under the Lovejoy Ramp",
+        "correct_num": 1,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> was influenced by [MASK].\n\nOptions:\n1. the Middle East\n2. Warhammer Quest\n3. Georgiana Nehl's painting Guardians: Under the Lovejoy Ramp"
+    },
+    {
+        "test_id": 52,
+        "relation": "InfluencedBy",
+        "correct_feat": "the Yuan dynasty",
+        "options": "1. the federal government in Washington\n2. the Yuan dynasty\n3. the Facebook–Cambridge Analytica data scandal",
+        "correct_num": 2,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> was influenced by [MASK].\n\nOptions:\n1. the federal government in Washington\n2. the Yuan dynasty\n3. the Facebook–Cambridge Analytica data scandal"
+    },
+    {
+        "test_id": 53,
+        "relation": "InfluencedBy",
+        "correct_feat": "the Red Turban Rebels from China",
+        "options": "1. Czech national conservatism\n2. the environment in which it was created\n3. the Red Turban Rebels from China",
+        "correct_num": 3,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> was influenced by [MASK].\n\nOptions:\n1. Czech national conservatism\n2. the environment in which it was created\n3. the Red Turban Rebels from China"
+    },
+    {
+        "test_id": 54,
+        "relation": "InfluencedBy",
+        "correct_feat": "professional Japanese pirates",
+        "options": "1. professional Japanese pirates\n2. real-life escape rooms\n3. Honoré Daumier",
+        "correct_num": 1,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> was influenced by [MASK].\n\nOptions:\n1. professional Japanese pirates\n2. real-life escape rooms\n3. Honoré Daumier"
+    },
+    {
+        "test_id": 55,
+        "relation": "InfluencedBy",
+        "correct_feat": "the Ming dynasty",
+        "options": "1. biblical apocalyptic literature\n2. the Ming dynasty\n3. improving human rights",
+        "correct_num": 2,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> was influenced by [MASK].\n\nOptions:\n1. biblical apocalyptic literature\n2. the Ming dynasty\n3. improving human rights"
+    },
+    {
+        "test_id": 56,
+        "relation": "IsA",
+        "correct_feat": "a Korean state",
+        "options": "1. a literary-themed race for children\n2. a variant of the game draughts (or checkers)\n3. a Korean state",
+        "correct_num": 3,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is [MASK].\n\nOptions:\n1. a literary-themed race for children\n2. a variant of the game draughts (or checkers)\n3. a Korean state"
+    },
+    {
+        "test_id": 57,
+        "relation": "IsA",
+        "correct_feat": "a successor state to Later Goguryeo and Goguryeo",
+        "options": "1. a successor state to Later Goguryeo and Goguryeo\n2. a boat with a support structure\n3. a contradiction in terms",
+        "correct_num": 1,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is [MASK].\n\nOptions:\n1. a successor state to Later Goguryeo and Goguryeo\n2. a boat with a support structure\n3. a contradiction in terms"
+    },
+    {
+        "test_id": 58,
+        "relation": "IsA",
+        "correct_feat": "a vassal state of the Yuan dynasty",
+        "options": "1. a tournament\n2. a vassal state of the Yuan dynasty\n3. an adventure novel",
+        "correct_num": 2,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is [MASK].\n\nOptions:\n1. a tournament\n2. a vassal state of the Yuan dynasty\n3. an adventure novel"
+    },
+    {
+        "test_id": 59,
+        "relation": "KnownAs",
+        "correct_feat": "\"Korea\"",
+        "options": "1. awari in English\n2. \"Our Lady of Intercession\"\n3. \"Korea\"",
+        "correct_num": 3,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is known as [MASK].\n\nOptions:\n1. awari in English\n2. \"Our Lady of Intercession\"\n3. \"Korea\""
+    },
+    {
+        "test_id": 60,
+        "relation": "KnownAs",
+        "correct_feat": "Koryŏ",
+        "options": "1. Koryŏ\n2. the Weeping Icon at Novgorod\n3. \"scientific communism\"",
+        "correct_num": 1,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is known as [MASK].\n\nOptions:\n1. Koryŏ\n2. the Weeping Icon at Novgorod\n3. \"scientific communism\""
+    },
+    {
+        "test_id": 61,
+        "relation": "KnownAs",
+        "correct_feat": "\"Goryeo\"",
+        "options": "1. 'the personal is political'\n2. \"Goryeo\"\n3. Hummingbirds from the sound electric hackney carriages made",
+        "correct_num": 2,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is known as [MASK].\n\nOptions:\n1. 'the personal is political'\n2. \"Goryeo\"\n3. Hummingbirds from the sound electric hackney carriages made"
+    },
+    {
+        "test_id": 62,
+        "relation": "KnownFor",
+        "correct_feat": "its \"true national unification\"",
+        "options": "1. its accompanying flash animation\n2. its theme of multicultural artistic expression\n3. its \"true national unification\"",
+        "correct_num": 3,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is known for [MASK].\n\nOptions:\n1. its accompanying flash animation\n2. its theme of multicultural artistic expression\n3. its \"true national unification\""
+    },
+    {
+        "test_id": 63,
+        "relation": "KnownFor",
+        "correct_feat": "incorporating much of the ruling class of the northern kingdom of Balhae",
+        "options": "1. incorporating much of the ruling class of the northern kingdom of Balhae\n2. its depictions of seduction\n3. its association with Christianity",
+        "correct_num": 1,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is known for [MASK].\n\nOptions:\n1. incorporating much of the ruling class of the northern kingdom of Balhae\n2. its depictions of seduction\n3. its association with Christianity"
+    },
+    {
+        "test_id": 64,
+        "relation": "KnownFor",
+        "correct_feat": "the merging of individual identities into a single entity",
+        "options": "1. its \"all of power\" meaning\n2. the merging of individual identities into a single entity\n3. the song \"Don't Let Me Down\"",
+        "correct_num": 2,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is known for [MASK].\n\nOptions:\n1. its \"all of power\" meaning\n2. the merging of individual identities into a single entity\n3. the song \"Don't Let Me Down\""
+    },
+    {
+        "test_id": 65,
+        "relation": "KnownFor",
+        "correct_feat": "being the \"Golden Age of Buddhism\" in Korea",
+        "options": "1. its slogan \"Texas. It's Like a Whole Other Country\"\n2. advocating the rule of a Ba'athist vanguard party\n3. being the \"Golden Age of Buddhism\" in Korea",
+        "correct_num": 3,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is known for [MASK].\n\nOptions:\n1. its slogan \"Texas. It's Like a Whole Other Country\"\n2. advocating the rule of a Ba'athist vanguard party\n3. being the \"Golden Age of Buddhism\" in Korea"
+    },
+    {
+        "test_id": 66,
+        "relation": "KnownFor",
+        "correct_feat": "Buddhism achieving its highest level of influence in Korean history",
+        "options": "1. Buddhism achieving its highest level of influence in Korean history\n2. the 16\" Softball Hall of Fame established in 1996\n3. immunotherapy",
+        "correct_num": 1,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is known for [MASK].\n\nOptions:\n1. Buddhism achieving its highest level of influence in Korean history\n2. the 16\" Softball Hall of Fame established in 1996\n3. immunotherapy"
+    },
+    {
+        "test_id": 67,
+        "relation": "KnownFor",
+        "correct_feat": "flourishing commerce",
+        "options": "1. the video for \"Smerti Bolshe Net\" being IC3PEAK's most viewed music video\n2. flourishing commerce\n3. its portrayal of the inauguration day of Avenida Paulista",
+        "correct_num": 2,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is known for [MASK].\n\nOptions:\n1. the video for \"Smerti Bolshe Net\" being IC3PEAK's most viewed music video\n2. flourishing commerce\n3. its portrayal of the inauguration day of Avenida Paulista"
+    },
+    {
+        "test_id": 68,
+        "relation": "KnownFor",
+        "correct_feat": "merchants coming from as far as the Middle East",
+        "options": "1. defeating his political rival Pompey\n2. its role in the Berber Spring\n3. merchants coming from as far as the Middle East",
+        "correct_num": 3,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is known for [MASK].\n\nOptions:\n1. defeating his political rival Pompey\n2. its role in the Berber Spring\n3. merchants coming from as far as the Middle East"
+    },
+    {
+        "test_id": 69,
+        "relation": "KnownFor",
+        "correct_feat": "great achievements in Korean art and culture",
+        "options": "1. great achievements in Korean art and culture\n2. its advanced shadowing method\n3. its themes",
+        "correct_num": 1,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is known for [MASK].\n\nOptions:\n1. great achievements in Korean art and culture\n2. its advanced shadowing method\n3. its themes"
+    },
+    {
+        "test_id": 70,
+        "relation": "KnownFor",
+        "correct_feat": "constantly wrestling with northern empires such as the Liao and Jin",
+        "options": "1. its triangle control frame\n2. constantly wrestling with northern empires such as the Liao and Jin\n3. Simeon's proclamation of a light for revelation to the Gentiles",
+        "correct_num": 2,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is known for [MASK].\n\nOptions:\n1. its triangle control frame\n2. constantly wrestling with northern empires such as the Liao and Jin\n3. Simeon's proclamation of a light for revelation to the Gentiles"
+    },
+    {
+        "test_id": 71,
+        "relation": "KnownFor",
+        "correct_feat": "its Northern Expansion Doctrine",
+        "options": "1. movement along the intertidal zone of a rocky coastline\n2. its noise-influenced work\n3. its Northern Expansion Doctrine",
+        "correct_num": 3,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is known for [MASK].\n\nOptions:\n1. movement along the intertidal zone of a rocky coastline\n2. its noise-influenced work\n3. its Northern Expansion Doctrine"
+    },
+    {
+        "test_id": 72,
+        "relation": "LocatedIn",
+        "correct_feat": "in the Korean Peninsula",
+        "options": "1. in the Korean Peninsula\n2. in the Prof. César Leyton Caravagno Pharmacy Museum\n3. in Manchester",
+        "correct_num": 1,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is located [MASK].\n\nOptions:\n1. in the Korean Peninsula\n2. in the Prof. César Leyton Caravagno Pharmacy Museum\n3. in Manchester"
+    },
+    {
+        "test_id": 73,
+        "relation": "LocatedIn",
+        "correct_feat": "in modern-day Kaesong, North Korea",
+        "options": "1. in the ticketing hall of the gare de Lyon\n2. in modern-day Kaesong, North Korea\n3. in Glasgow",
+        "correct_num": 2,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is located [MASK].\n\nOptions:\n1. in the ticketing hall of the gare de Lyon\n2. in modern-day Kaesong, North Korea\n3. in Glasgow"
+    },
+    {
+        "test_id": 74,
+        "relation": "OccurredBetween",
+        "correct_feat": "the 13th–14th centuries",
+        "options": "1. October 29-30, 1992\n2. November and April in Tajikistan\n3. the 13th–14th centuries",
+        "correct_num": 3,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> occurred between [MASK].\n\nOptions:\n1. October 29-30, 1992\n2. November and April in Tajikistan\n3. the 13th–14th centuries"
+    },
+    {
+        "test_id": 75,
+        "relation": "OriginatedIn",
+        "correct_feat": "the northern regions of Later Silla",
+        "options": "1. the northern regions of Later Silla\n2. South Dakota\n3. the International Cherry Pit-Spitting Championship",
+        "correct_num": 1,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> originated in [MASK].\n\nOptions:\n1. the northern regions of Later Silla\n2. South Dakota\n3. the International Cherry Pit-Spitting Championship"
+    },
+    {
+        "test_id": 76,
+        "relation": "PartOf",
+        "correct_feat": "Korean history",
+        "options": "1. comedia suelta\n2. Korean history\n3. Jewish views",
+        "correct_num": 2,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is part of [MASK].\n\nOptions:\n1. comedia suelta\n2. Korean history\n3. Jewish views"
+    },
+    {
+        "test_id": 77,
+        "relation": "PartOf",
+        "correct_feat": "the Korean Peninsula",
+        "options": "1. an exhibit of Degas works\n2. the history of the United States Supreme Court\n3. the Korean Peninsula",
+        "correct_num": 3,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is part of [MASK].\n\nOptions:\n1. an exhibit of Degas works\n2. the history of the United States Supreme Court\n3. the Korean Peninsula"
+    },
+    {
+        "test_id": 78,
+        "relation": "UsedFor",
+        "correct_feat": "unifying and ruling the Korean Peninsula",
+        "options": "1. unifying and ruling the Korean Peninsula\n2. promoting the sale of war bonds\n3. beginners in the lake or ocean",
+        "correct_num": 1,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is used for [MASK].\n\nOptions:\n1. unifying and ruling the Korean Peninsula\n2. promoting the sale of war bonds\n3. beginners in the lake or ocean"
+    },
+    {
+        "test_id": 79,
+        "relation": "UsedFor",
+        "correct_feat": "incorporating much of the ruling class of the northern kingdom of Balhae",
+        "options": "1. debating Transubstantiation\n2. incorporating much of the ruling class of the northern kingdom of Balhae\n3. developing \"spiritual nationhood\"",
+        "correct_num": 2,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is used for [MASK].\n\nOptions:\n1. debating Transubstantiation\n2. incorporating much of the ruling class of the northern kingdom of Balhae\n3. developing \"spiritual nationhood\""
+    },
+    {
+        "test_id": 80,
+        "relation": "UsedFor",
+        "correct_feat": "merging the individual identities of Goguryeo, Baekje and Silla into a single entity",
+        "options": "1. hitting the ball against a wall\n2. the translation of the Bible into Afrikaans\n3. merging the individual identities of Goguryeo, Baekje and Silla into a single entity",
+        "correct_num": 3,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is used for [MASK].\n\nOptions:\n1. hitting the ball against a wall\n2. the translation of the Bible into Afrikaans\n3. merging the individual identities of Goguryeo, Baekje and Silla into a single entity"
+    },
+    {
+        "test_id": 81,
+        "relation": "UsedFor",
+        "correct_feat": "achieving its \"true national unification\"",
+        "options": "1. achieving its \"true national unification\"\n2. ads for Hyundai\n3. street brawls",
+        "correct_num": 1,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is used for [MASK].\n\nOptions:\n1. achieving its \"true national unification\"\n2. ads for Hyundai\n3. street brawls"
+    },
+    {
+        "test_id": 82,
+        "relation": "UsedFor",
+        "correct_feat": "establishing the basis of the modern-day Korean identity",
+        "options": "1. simulating combat in the inner Solar System\n2. establishing the basis of the modern-day Korean identity\n3. printing plays",
+        "correct_num": 2,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is used for [MASK].\n\nOptions:\n1. simulating combat in the inner Solar System\n2. establishing the basis of the modern-day Korean identity\n3. printing plays"
+    },
+    {
+        "test_id": 83,
+        "relation": "UsedFor",
+        "correct_feat": "claiming Manchuria as its rightful legacy",
+        "options": "1. a campaign to end the practice of children separated from their parents\n2. explaining the sequencing of subject, verb, and object\n3. claiming Manchuria as its rightful legacy",
+        "correct_num": 3,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is used for [MASK].\n\nOptions:\n1. a campaign to end the practice of children separated from their parents\n2. explaining the sequencing of subject, verb, and object\n3. claiming Manchuria as its rightful legacy"
+    },
+    {
+        "test_id": 84,
+        "relation": "UsedFor",
+        "correct_feat": "repopulating and defending the ancient Goguryeo capital of Pyongyang",
+        "options": "1. repopulating and defending the ancient Goguryeo capital of Pyongyang\n2. depicting terrain features\n3. playing on old maliespel courses",
+        "correct_num": 1,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is used for [MASK].\n\nOptions:\n1. repopulating and defending the ancient Goguryeo capital of Pyongyang\n2. depicting terrain features\n3. playing on old maliespel courses"
+    },
+    {
+        "test_id": 85,
+        "relation": "UsedFor",
+        "correct_feat": "annexing Later Silla",
+        "options": "1. shedding\n2. annexing Later Silla\n3. introducing dogs to den work and quarry",
+        "correct_num": 2,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is used for [MASK].\n\nOptions:\n1. shedding\n2. annexing Later Silla\n3. introducing dogs to den work and quarry"
+    },
+    {
+        "test_id": 86,
+        "relation": "UsedFor",
+        "correct_feat": "conquering Later Baekje",
+        "options": "1. moving pieces around a track\n2. capital punishment\n3. conquering Later Baekje",
+        "correct_num": 3,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is used for [MASK].\n\nOptions:\n1. moving pieces around a track\n2. capital punishment\n3. conquering Later Baekje"
+    },
+    {
+        "test_id": 87,
+        "relation": "UsedFor",
+        "correct_feat": "protecting the Balhae refugees",
+        "options": "1. protecting the Balhae refugees\n2. previewing new video, music and dance projects\n3. public display",
+        "correct_num": 1,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is used for [MASK].\n\nOptions:\n1. protecting the Balhae refugees\n2. previewing new video, music and dance projects\n3. public display"
+    },
+    {
+        "test_id": 88,
+        "relation": "UsedIn",
+        "correct_feat": "Korean history",
+        "options": "1. India\n2. Korean history\n3. the context of neo-fascist accelerationism",
+        "correct_num": 2,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is used in [MASK].\n\nOptions:\n1. India\n2. Korean history\n3. the context of neo-fascist accelerationism"
+    },
+    {
+        "test_id": 89,
+        "relation": "UsedIn",
+        "correct_feat": "the Korean Peninsula",
+        "options": "1. films like Chandramukhi\n2. the Netflix film El Camino: A Breaking Bad Movie\n3. the Korean Peninsula",
+        "correct_num": 3,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is used in [MASK].\n\nOptions:\n1. films like Chandramukhi\n2. the Netflix film El Camino: A Breaking Bad Movie\n3. the Korean Peninsula"
+    },
+    {
+        "test_id": 90,
+        "relation": "UsedIn",
+        "correct_feat": "the Middle East",
+        "options": "1. the Middle East\n2. the Cordillera Darwin\n3. the war against the Soviet Union",
+        "correct_num": 1,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is used in [MASK].\n\nOptions:\n1. the Middle East\n2. the Cordillera Darwin\n3. the war against the Soviet Union"
+    },
+    {
+        "test_id": 91,
+        "relation": "UsedIn",
+        "correct_feat": "East Asia",
+        "options": "1. the 1986 film About Last Night\n2. East Asia\n3. the press",
+        "correct_num": 2,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is used in [MASK].\n\nOptions:\n1. the 1986 film About Last Night\n2. East Asia\n3. the press"
+    },
+    {
+        "test_id": 92,
+        "relation": "UsedIn",
+        "correct_feat": "North Korea",
+        "options": "1. the Manjimup Cherry Harmony Festival\n2. many of the other arms of the UK Armed Forces\n3. North Korea",
+        "correct_num": 3,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is used in [MASK].\n\nOptions:\n1. the Manjimup Cherry Harmony Festival\n2. many of the other arms of the UK Armed Forces\n3. North Korea"
+    },
+    {
+        "test_id": 93,
+        "relation": "UsedIn",
+        "correct_feat": "China",
+        "options": "1. China\n2. Cambodia\n3. Luxembourg",
+        "correct_num": 1,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is used in [MASK].\n\nOptions:\n1. China\n2. Cambodia\n3. Luxembourg"
+    },
+    {
+        "test_id": 94,
+        "relation": "UsedIn",
+        "correct_feat": "Japan",
+        "options": "1. Haiti\n2. Japan\n3. the Dominican Republic",
+        "correct_num": 2,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is used in [MASK].\n\nOptions:\n1. Haiti\n2. Japan\n3. the Dominican Republic"
+    },
+    {
+        "test_id": 95,
+        "relation": "UsedTo",
+        "correct_feat": "unify and rule the Korean Peninsula",
+        "options": "1. ascend toward excellence\n2. challenge colonial assumptions\n3. unify and rule the Korean Peninsula",
+        "correct_num": 3,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is used to [MASK].\n\nOptions:\n1. ascend toward excellence\n2. challenge colonial assumptions\n3. unify and rule the Korean Peninsula"
+    },
+    {
+        "test_id": 96,
+        "relation": "UsedTo",
+        "correct_feat": "incorporate much of the ruling class of the northern kingdom of Balhae",
+        "options": "1. incorporate much of the ruling class of the northern kingdom of Balhae\n2. curb excessive-drinking problems\n3. express opposition",
+        "correct_num": 1,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is used to [MASK].\n\nOptions:\n1. incorporate much of the ruling class of the northern kingdom of Balhae\n2. curb excessive-drinking problems\n3. express opposition"
+    },
+    {
+        "test_id": 97,
+        "relation": "UsedTo",
+        "correct_feat": "merge the individual identities of Goguryeo, Baekje and Silla into a single entity",
+        "options": "1. distribute moves among all tokens\n2. merge the individual identities of Goguryeo, Baekje and Silla into a single entity\n3. depict themselves",
+        "correct_num": 2,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is used to [MASK].\n\nOptions:\n1. distribute moves among all tokens\n2. merge the individual identities of Goguryeo, Baekje and Silla into a single entity\n3. depict themselves"
+    },
+    {
+        "test_id": 98,
+        "relation": "UsedTo",
+        "correct_feat": "achieve \"true national unification\"",
+        "options": "1. replace the monarchy of the Ottoman dynasty with the rule of law, popular sovereignty and civic virtue\n2. make the ball un-returnable\n3. achieve \"true national unification\"",
+        "correct_num": 3,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is used to [MASK].\n\nOptions:\n1. replace the monarchy of the Ottoman dynasty with the rule of law, popular sovereignty and civic virtue\n2. make the ball un-returnable\n3. achieve \"true national unification\""
+    },
+    {
+        "test_id": 99,
+        "relation": "UsedTo",
+        "correct_feat": "establish the basis of the modern-day Korean identity",
+        "options": "1. establish the basis of the modern-day Korean identity\n2. create a broad fighting sport\n3. agitate, educate and organize the working classes",
+        "correct_num": 1,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is used to [MASK].\n\nOptions:\n1. establish the basis of the modern-day Korean identity\n2. create a broad fighting sport\n3. agitate, educate and organize the working classes"
+    },
+    {
+        "test_id": 100,
+        "relation": "UsedTo",
+        "correct_feat": "lay claim to Manchuria as its rightful legacy",
+        "options": "1. employ thousands of workers\n2. lay claim to Manchuria as its rightful legacy\n3. moderate radical parties",
+        "correct_num": 2,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is used to [MASK].\n\nOptions:\n1. employ thousands of workers\n2. lay claim to Manchuria as its rightful legacy\n3. moderate radical parties"
+    },
+    {
+        "test_id": 101,
+        "relation": "UsedTo",
+        "correct_feat": "repopulate and defend the ancient Goguryeo capital of Pyongyang",
+        "options": "1. apply a time for arrival in turns\n2. enter a man into the game\n3. repopulate and defend the ancient Goguryeo capital of Pyongyang",
+        "correct_num": 3,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is used to [MASK].\n\nOptions:\n1. apply a time for arrival in turns\n2. enter a man into the game\n3. repopulate and defend the ancient Goguryeo capital of Pyongyang"
+    },
+    {
+        "test_id": 102,
+        "relation": "UsedTo",
+        "correct_feat": "annex Later Silla",
+        "options": "1. annex Later Silla\n2. decrease the amount of money the government spends fighting a war on drugs\n3. keep a state from leaving",
+        "correct_num": 1,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is used to [MASK].\n\nOptions:\n1. annex Later Silla\n2. decrease the amount of money the government spends fighting a war on drugs\n3. keep a state from leaving"
+    },
+    {
+        "test_id": 103,
+        "relation": "UsedTo",
+        "correct_feat": "conquer Later Baekje",
+        "options": "1. drink Yaupon tea containing caffeine\n2. conquer Later Baekje\n3. move a piece if it cannot be brought into the game",
+        "correct_num": 2,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is used to [MASK].\n\nOptions:\n1. drink Yaupon tea containing caffeine\n2. conquer Later Baekje\n3. move a piece if it cannot be brought into the game"
+    },
+    {
+        "test_id": 104,
+        "relation": "UsedTo",
+        "correct_feat": "protect the Balhae refugees",
+        "options": "1. abolish the regularized institution of aggressive coercion\n2. play tiles on a crossword-style grid\n3. protect the Balhae refugees",
+        "correct_num": 3,
+        "test1": "Choose the best word or phrase to fill in the blank [MASK] in the sentence.\n\nSentence:\n<target_token> is used to [MASK].\n\nOptions:\n1. abolish the regularized institution of aggressive coercion\n2. play tiles on a crossword-style grid\n3. protect the Balhae refugees"
+    }
+]
