@@ -46,21 +46,38 @@ uv run python src/listup_properNouns.py
 
 ## ③ Wikipediaから、カテゴリに属する固有名詞の特徴文を生成する
 ### ③-1. wikiから特徴文を生成する
+⚠️ここで生成した後、学習・評価データも作成しないとtrainできないことに注意。
+⚠️ ファイル内のTARGET_CONCEPTSがNoneでない &&  --target_categories の指定あり、で両方指定されているとraise errorを出す。どちらかだけを指定して。
 
 特定の中カテゴリに対して生成する場合:
-```sh
-nohup uv run python src/gen_features_from_wiki.py --target_categories "sport" "ideology" "System of law" "Legal Case" > output.log 2>&1 & # "Painting"
 
+まず、ファイル内でTARGET_CONCEPTSをNoneに指定する。
+```sh
+# nohup uv run python src/gen_features_from_wiki.py --target_categories "sport" "ideology" "System of law" "Legal Case" > output.log 2>&1 & 
+nohup uv run python src/gen_features_from_wiki.py --target_categories "Band" > output.log 2>&1 & 
 ```
 生成済み:  "board game" "Painting" 
-2083547
+一部生成済み: "sport" 
+1111360
+
 
 全カテゴリに対して生成する場合:
+
+まず、ファイル内でTARGET_CONCEPTSをNoneに指定する。
 ```sh
 uv run python src/gen_features_from_wiki.py
 ```
 生成されるファイル：
 - data/generated_facts_in_wiki/*.json : 各固有名詞の特徴文と、その時の生成情報が全て、各concept名をファイル名としたjson形式で保存される.
+
+
+conceptを指定して生成する場合:
+
+まず、ファイル内でTARGET_CONCEPTSを指定する。
+```sh
+uv run python src/gen_features_from_wiki.py
+```
+
 
 現状:
 - Painting カテゴリのみ、以下の条件で生成済み.
@@ -100,4 +117,16 @@ wikiから抽出された特徴が一定以上存在するconceptすべてをtra
 uv run python src/construct_traindata.py
 ```
 
+### ⑤-2. 評価用のデータセットを作成する
+```sh
+uv run python src/construct_testdata.py
+```
+生成されるファイル：
+- data/test_data/{target_concept}.json : 各conceptごとの、評価用のテストサンプルが保存される。テストサンプルは、特徴文のペアと、正解選択肢、不正解選択肢から構成される。
 
+### ⑤-3. 評価用データについて、12Bモデルで、元の名前で解けた問題だけを残す
+```sh
+uv run python src/filter_testdata.py
+```
+生成されるファイル：
+- data/test_data_filtered/{target_concept}.json : 各conceptごとの、評価用のテストサンプルが保存される。テストサンプルは、特徴文のペアと、正解選択肢、不正解選択肢から構成される。
