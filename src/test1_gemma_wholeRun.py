@@ -347,12 +347,12 @@ if __name__ == "__main__":
             else:
                 raise ValueError(f"Invalid seed: {seed}")
 
-        # [memo] 新しく隠れ層を参照する初期化手法を追加した場合は、initMethods_with_HS に追加
+        # [memo] 新しく隠れ層を参照する初期化手法を追加した場合は、initMethods_with_HS に追加 -> 不要になった
         elif args.model_size=='12':
             # * seed前半
             if seed == 0:
-                # args.trained_date = "20260414" 
-                print(f"seed {seed} is already run. skip.")
+                args.trained_date = "20260414" 
+                # print(f"seed {seed} is already run. skip.")
                 continue
             elif seed == 1:
                 args.trained_date = "20260414" 

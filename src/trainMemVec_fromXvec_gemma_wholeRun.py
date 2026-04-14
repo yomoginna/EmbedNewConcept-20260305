@@ -23,7 +23,6 @@ from transformers import AutoModelForCausalLM, AutoTokenizer
 from transformers import logging as transformers_logging
 import wandb
 
-from utils.wikipedia_api_utils import delete_non_English_characters
 
 # ===== Runtime config =====
 transformers_logging.set_verbosity_error()
@@ -37,6 +36,7 @@ from utils.gemma_train_and_test_utils import fix_seed, save_mem_vec, evaluateMod
 from utils.handle_data_from_dbpedia_utils import filterProperNounsWithWikiPage, loadProperNounData #, loadConceptsForFictConcept
 from utils.initialize_embedding_layer_utils import EmbedInitializer
 from utils.wandb_utils import set_wandb_env
+from utils.wikipedia_api_utils import delete_non_English_characters
 
 # os.environ["CUDA_VISIBLE_DEVICES"] = "2" # [memo] genkaiを使う時はコメントアウト!! -> 今はargsで指定している。argsを指定しなければ、CUDAについては何も指定しない。
 n_feat_in_a_sample = 3  # 学習データの1サンプル = summary(wiki中の本文 or summary, 今回はsummaryを使用) + n_feat_in_a_sample個の特徴文
@@ -802,20 +802,21 @@ if __name__ == "__main__":
         
     task_id = -1
     for seed in range(args.seed_num):
-        if seed in [0, 1, 4]:
-            print(f"seed {seed} is already run. skip.")
-            continue
+        # if seed in [0, 1, 4]:
+        #     print(f"seed {seed} is already run. skip.")
+        #     continue
         args.seed = seed # mainにargsとして渡すためにargs.seedに代入している。main内でargs.seedを参照することで、現在のシード値を取得できるようになる。
         
         init_vec_type_lst = args.init_vec_types
 
         for init_vec_type in init_vec_type_lst:
-            if seed == 2 and init_vec_type == 'otherCatCent_by_WikiSummaryRepeatHSMixed':
-                print(f"seed {seed} with init_vec_type {init_vec_type} is already run. skip.")
-                continue
-            if seed == 3 and init_vec_type == 'CatCent_by_WikiSummaryRepeatHSMixed':
-                print(f"seed {seed} with init_vec_type {init_vec_type} is already run. skip.")
-                continue
+
+            # if seed == 2 and init_vec_type == 'otherCatCent_by_WikiSummaryRepeatHSMixed':
+            #     print(f"seed {seed} with init_vec_type {init_vec_type} is already run. skip.")
+            #     continue
+            # if seed == 3 and init_vec_type == 'CatCent_by_WikiSummaryRepeatHSMixed':
+            #     print(f"seed {seed} with init_vec_type {init_vec_type} is already run. skip.")
+            #     continue
             
             layer_indices = args.layer_indices # ここでinit_vec_typeループ毎に読み込まないと、layer_indices = [None] が代入されたループの次のループでも[None]のままになってしまう
 

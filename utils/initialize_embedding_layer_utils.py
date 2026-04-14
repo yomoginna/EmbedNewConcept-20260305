@@ -129,8 +129,9 @@ class EmbedInitializer:
         self.propnoun_to_wikisummary = {}   # これが必要な関数を実行する際に、中身が空なら読み込む。少し時間とメモリを食うので不要なら読み込まない。
         self.repeat_prompt = False   # promptを2回繰り返すプロンプトを使うかどうかのフラグ。
 
-        self.category_to_other_category = {} # other系の初期化の場合、学習対象のカテゴリ毎に、どの他カテゴリを初期化に使うかを固定するための辞書。新規概念毎に異なるカテゴリを使って初期化すると、初期vec間の多様性が同カテゴリ初期化時に比べて大きくなり、不公平になるため。
-        self.other_init_use_the_same_other_category = True # Trueなら、全カテゴリのother系初期化に同じカテゴリを使う。Falseなら、カテゴリ毎にother系初期化に使うカテゴリを変える。
+        # self.category_to_other_category = {} # other系の初期化の場合、学習対象のカテゴリ毎に、どの他カテゴリを初期化に使うかを固定するための辞書。新規概念毎に異なるカテゴリを使って初期化すると、初期vec間の多様性が同カテゴリ初期化時に比べて大きくなり、不公平になるため。
+        # self.other_init_use_the_same_other_category = True # Trueなら、全カテゴリのother系初期化に同じカテゴリを使う。Falseなら、カテゴリ毎にother系初期化に使うカテゴリを変える。
+        self.other_init_use_target_candidates_only = True    # Trueなら、other系の初期化に、学習対象カテゴリの候補カテゴリを使う。Falseなら、学習対象カテゴリの候補カテゴリは使わず、使用可能な全カテゴリからランダムに選ぶ。つまり target_concepts.json中のカテゴリのみ or loadProperNounDataで集めた全てのカテゴリ
         
         # self.category_to_concepts_for_other = {} # 他カテゴリで初期化する場合は、学習データがないカテゴリも参照したい。
         # random.seed(seed)# 呼び出し側でseed固定するので不要そう
@@ -180,8 +181,8 @@ class EmbedInitializer:
                 "noise_scale": NOISE_SCALE,
                 "lamda_": LAMBDA_,
                 # "last_token_is_eos": self.last_token_is_eos # LAST_TOKEN_IS_EOS,
-
-                "other_init_use_the_same_other_category": self.other_init_use_the_same_other_category,
+                # "other_init_use_the_same_other_category": self.other_init_use_the_same_other_category,
+                "other_init_use_target_candidates_only": self.other_init_use_target_candidates_only,
 
             }
 
@@ -1063,25 +1064,33 @@ class EmbedInitializer:
             # *** このカテゴリに対応する初期化vec作成用の固有名詞リストで初期化vecを作成し、
             # このカテゴリに属す固有名詞(新規概念用)に割り当てたtokenのtoken idsの行を、その初期化vecで初期化する ***
             init_terms_candidate = category_to_concepts_for_vec[own_category]
-            init_terms_for_centroid = random.sample(init_terms_candidate, min(len(init_terms_candidate), self.propnoun_num_for_init_vec-10))  # カテゴリ内の固有名詞からランダムに(propnoun_num_for_init_vec-10)個選んで中心vecを作成
+
+            if len(init_terms_candidate) < self.propnoun_num_for_init_vec - 10  +  10 * len(init_token_ids):
+                # カテゴリ内の固有名詞が、初期化vec作成における、「カテゴリ内固定成分 + token毎のランダムな成分」のための固有名詞数に足りない場合は、エラーを出して終了
+                raise ValueError(f"Not enough concepts in category '{own_category}' to sample for centroid vec. Required: at least {self.propnoun_num_for_init_vec}, Available: {len(init_terms_candidate)}. Please reduce the number of concepts needed for centroid vec or add more concepts to the category.")
+            
+
+            init_terms_for_centroid = random.sample(init_terms_candidate, self.propnoun_num_for_init_vec-10)  # カテゴリ内の固有名詞からランダムに(propnoun_num_for_init_vec-10)個選んで中心vecを作成
 
             # centroid vec作成用と、random vec作成用の固有名詞の重複を防ぐため、カテゴリの概念リストから centroid vec作成用の固有名詞を削除
             init_terms_candidate = list(set(init_terms_candidate) - set(init_terms_for_centroid))
 
-            # 新規token毎に初期vecに変化をつけるためのnoiseとして、初期化対象の追加token毎に、10件をランダム選出
-            for init_token_id in init_token_ids:
-                init_terms_for_random = random.sample(init_terms_candidate, min(len(init_terms_candidate), 10)) # カテゴリ内の固有名詞からランダムに10個選んでランダムvecを作成
-                init_terms = init_terms_for_centroid + init_terms_for_random # 中心vec用の固有名詞とランダムvec用の固有名詞を合わせたリストを初期化vec作成に使用
+            # ** 新規token毎に初期vecに変化をつけるためのnoiseとして、初期化対象の追加token毎に、10件をランダム選出する **
+            # init_terms_for_random では、token毎に異なるtermを使いたい（token間で被るとvecの多様性が下がるため)
+            # token毎に重複のない、初期vecのrandom成分用のtermsリスト: termsを重複無しで10個ずつランダムに分けたリストを作成する
+            init_terms_for_random_list = random.sample(init_terms_candidate, 10 * len(init_token_ids))  # まず、元のリストをシャッフルする =カテゴリ内の固有名詞からランダムに(10 * token数)個選ぶ
+            init_terms_for_random_chunks = [init_terms_for_random_list[i:i + 10] for i in range(0, len(init_terms_for_random_list), 10)]  # ランダムに選んだ固有名詞を、10個ずつのチャンクに分ける
+            
+            for i, init_token_id in enumerate(init_token_ids):
+                init_terms_for_random = init_terms_for_random_chunks[i]
+                init_terms = init_terms_for_centroid + init_terms_for_random # 中心vec用の固有名詞 + ランダムvec用の固有名詞 を初期化vec作成に使用
                     
-                init_target_ids = [init_token_id]
-                # model = initvec_func(
                 # init_termsから、初期化vecを作成する
                 init_src = initvec_func(
                     model, 
                     tokenizer, 
                     own_category, 
-                    init_terms, 
-                    # init_target_ids, 
+                    init_terms,
                     layer_idx=layer_idx, 
                     lambda_=LAMBDA_, 
                     mix_layers=mix_layers,
@@ -1091,7 +1100,7 @@ class EmbedInitializer:
                 # 埋め込み層のinit_token_ids (<unusedx>) に該当する行を、まとめてinit_srcで初期化.
                 E = self._get_model_info(model)[0]
                 with torch.no_grad():
-                    init_target_ids = torch.as_tensor(init_target_ids, device=E.device, dtype=torch.long)
+                    init_target_ids = torch.as_tensor([init_token_id], device=E.device, dtype=torch.long)
                     src = init_src.unsqueeze(0).expand(len(init_target_ids), -1)   # (n, d) # 全トークンをカテゴリ重心で埋める
                     E.index_copy_(dim=0, index=init_target_ids, source=src)
                 
@@ -1111,43 +1120,47 @@ class EmbedInitializer:
         mix_layers=False,
         print_flag=False
         ):
-        # [WIP]
-        # 準備: 各カテゴリのcentroid vec作成用の固有名詞リスト(propnoun_num_for_init_vec-10 個)を作成しておく
-        category_to_centroid_terms = {}
 
         # 他のカテゴリのCOGで初期化する場合、category2initoken_ids外（今回新規概念として埋め込むtokenのあるカテゴリ以外）からも候補のカテゴリを選んで良い。そのためcategory_to_concepts_for_vecから直接取得する’
-        for category, init_token_ids in category_to_concepts_for_vec.items():
-            init_terms_candidate = category_to_concepts_for_vec[category]
-            init_terms_for_centroid = random.sample(init_terms_candidate, min(len(init_terms_candidate), self.propnoun_num_for_init_vec-10)) 
-            category_to_centroid_terms[category] = init_terms_for_centroid
+        
+        category_candidates = []
+        if self.other_init_use_target_candidates_only:
+            # category2initoken_idsのカテゴリのみを、他カテゴリ選出候補とする場合
+            category_candidates = list(category2initoken_ids.keys())
+        else:
+            for category, init_token_ids in category_to_concepts_for_vec.items():
+                # カテゴリ内の固有名詞が、初期化vec作成における、「カテゴリ内固定成分 + token毎のランダムな成分」のための固有名詞数に足りるカテゴリのみ、この他カテゴリ選出候補に入れる。
+                if len(category_to_concepts_for_vec[category]) >= self.propnoun_num_for_init_vec - 10  +  10 * len(init_token_ids):
+                    category_candidates.append(category)
+            
 
         # main: 初期化対象token毎に毎回ランダムに選んだ他のカテゴリのCOGで初期化する
         for own_category, init_token_ids in category2initoken_ids.items():
-            other_categories = [c for c in category_to_concepts_for_vec.keys() if c != own_category]
-            if print_flag:
-                print(f"Category '{own_category}' will be initialized with centroid of other {len(other_categories)} categories: {other_categories[:20]}...")
 
-            for init_token_id in init_token_ids:
-                if self.other_init_use_the_same_other_category:
-                    # ** 学習対象のカテゴリ毎に、どの他カテゴリを初期化に使うかを固定する場合
-                    if own_category not in self.category_to_other_category:
-                        # 未固定の場合ここでランダムに選び固定する
-                        self.category_to_other_category[own_category] = random.choice(other_categories) # 学習対象のカテゴリ毎に、どの他カテゴリを初期化に使うかをランダムに選んで固定する
-                    other_category = self.category_to_other_category[own_category]
-                    print(f"\tNew token {tokenizer.decode(init_token_id)} is initialized with other category '{other_category}' (fixed for category '{own_category}').")
-                else:
-                    # ** 他のカテゴリをランダムに選ぶ場合
-                    other_category = random.choice(other_categories)
-                    print(f"\tNew token {tokenizer.decode(init_token_id)} is initialized with other category '{other_category}'.")
-                terms_in_other_category = category_to_concepts_for_vec[other_category]
-                init_terms_for_centroid = category_to_centroid_terms.get(other_category, [])    # configでother_categoryに属す固有名詞リストを含めていない場合はcategory_to_centroid_termsにother_categoryが存在しない可能性があるため、getで取得する
+            # ** 他のカテゴリをランダムに選ぶ
+            other_categories = [c for c in category_candidates if c != own_category]  # terms数の不足するカテゴリを削除済みであるcategory_to_centroid_termsから他カテゴリを選ぶ
+            other_category = random.choice(other_categories)
+            # if print_flag:
+            print(f"Category '{own_category}' is initialized with centroid of other category: {other_category}. This is chosen from {len(other_categories)} categories: {other_categories[:20]}...")
 
-                # centroid vec作成用と、random vec作成用の固有名詞の重複を防ぐため、他カテゴリのリストから centroid vec作成用の固有名詞を削除
-                init_terms_candidate = list(set(terms_in_other_category) - set(init_terms_for_centroid))
+            init_terms_candidate = category_to_concepts_for_vec[other_category]
+            init_terms_for_centroid = random.sample(init_terms_candidate, self.propnoun_num_for_init_vec-10)
+
+            # centroid に使用済みのtermsをterms候補から削除
+            init_terms_candidate = list(set(init_terms_candidate) - set(init_terms_for_centroid))
+
+
+            # 新規token毎に初期vecに変化をつけるためのnoiseとして、初期化対象の追加token毎に、10件をランダム選出
+            # init_terms_for_random では、token毎に異なるtermを使いたい（token間で被るとvecの多様性が下がるため)
+            # token毎に重複のない、初期vecのrandom成分用のtermsリスト: termsを重複無しで10個ずつランダムに分けたリストを作成する
+            init_terms_for_random_list = random.sample(init_terms_candidate, 10 * len(init_token_ids))  # まず、元のリストをシャッフルする =カテゴリ内の固有名詞からランダムに(10 * token数)個選ぶ
+            init_terms_for_random_chunks = [init_terms_for_random_list[i:i + 10] for i in range(0, len(init_terms_for_random_list), 10)]  # ランダムに選んだ固有名詞を、10個ずつのチャンクに分ける
+            
+
+            for i, init_token_id in enumerate(init_token_ids):
+                init_terms_for_random = init_terms_for_random_chunks[i] # token毎のランダム性を保つための成分
+                init_terms = init_terms_for_centroid + init_terms_for_random # 中心vec用の固有名詞 + ランダムvec用の固有名詞 を初期化vec作成に使用
                 
-                # noise として、init_token毎にrandomな10個の固有名詞を選び、複数のinit_token_idにおいて他カテゴリとして同じカテゴリを選んだとしても、初期化vecにinit_token_id間で差が生まれる。
-                init_terms_for_random = random.sample(init_terms_candidate, min(len(init_terms_candidate), 10)) 
-                init_terms = init_terms_for_centroid + init_terms_for_random # 中心vec用の固有名詞とランダムvec用の固有名詞を合わせたリストを初期化vec作成に使用
 
                 if model is not None:
                     # dataの状態を確認するために modelをNoneで呼び出すこともあるため、modelがNoneでない場合にのみ初期化処理を行う

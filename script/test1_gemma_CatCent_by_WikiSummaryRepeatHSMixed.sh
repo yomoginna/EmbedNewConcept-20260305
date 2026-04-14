@@ -23,11 +23,11 @@ NUM_OPTIONS=3
 MODEL_SIZE=12
 LR=0.003
 TARGET_CONCEPTS_FILENAME="target_concepts_mini_13.json"
-PROCESS_NUM=4
-SEED_NUM=5
+PROCESS_NUM=2
+SEED_NUM=1
 NUM_OPTIONS=3
 INIT_VEC_TYPES=("otherCatCent_by_WikiSummaryRepeatHSMixed")
-LAYER_INDICES=(40) # 12 40)
+LAYER_INDICES=(12) # 12 40)
 INIT_VEC_TYPES=("CatCent_by_WikiSummaryRepeatHSMixed" "otherCatCent_by_WikiSummaryRepeatHSMixed")
 # LAYER_INDICES=(1 4 8 10 12 16 20 24 28 32 36 38 40 44 -1)
 # INIT_VEC_TYPES=("CatCent_by_WikiSummaryHS" "otherCatCent_by_WikiSummaryHS" "norm_rand_vocab")
@@ -35,10 +35,10 @@ INIT_VEC_TYPES=("CatCent_by_WikiSummaryRepeatHSMixed" "otherCatCent_by_WikiSumma
 # 全体の層を大まかに調べる: (0 1 8 12 24 36 40 -1)
 
 THREAD_ID=0
-CUDA_VISIBLE_DEVICES=3
+CUDA_VISIBLE_DEVICES=2
 
 THREAD_ID=1
-CUDA_VISIBLE_DEVICES=4
+CUDA_VISIBLE_DEVICES=3
 
 THREAD_ID=2
 CUDA_VISIBLE_DEVICES=3

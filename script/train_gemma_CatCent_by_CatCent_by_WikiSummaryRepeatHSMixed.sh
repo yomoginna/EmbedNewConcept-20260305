@@ -15,7 +15,7 @@ MAX_EPOCHS=4
 TARGET_CONCEPTS_FILENAME="target_concepts_mini_13.json"
 LR=0.003
 PROCESS_NUM=2
-SEED_NUM=5
+SEED_NUM=1
 LAYER_INDICES=(12)
 INIT_VEC_TYPES=("CatCent_by_WikiSummaryRepeatHSMixed" "otherCatCent_by_WikiSummaryRepeatHSMixed")
 POOL_HS_TYPE="mean_pool" #  隠れ状態をプーリングする方法。["eos", "last_token", "mean_pool"] のいずれか。
@@ -26,10 +26,10 @@ INIT_VEC_TYPES=("CatCent_by_WikiSummaryRepeatHSMixed")
 # LAYER_INDICES=(1 4 8 10 12 16 20 24 28 32 36 38 40 44 -1)
 
 THREAD_ID=0
-CUDA_VISIBLE_DEVICES=3
+CUDA_VISIBLE_DEVICES=2
 
 THREAD_ID=1
-CUDA_VISIBLE_DEVICES=4
+CUDA_VISIBLE_DEVICES=3
 
 # THREAD_ID=2
 # CUDA_VISIBLE_DEVICES=3
@@ -52,8 +52,8 @@ nohup uv --no-progress run python src/trainMemVec_fromXvec_gemma_wholeRun.py \
         --seed_num ${SEED_NUM} \
         > log_TrainMemVec_gemma-${MODEL_SIZE}B_lr${LR}_wholeRun${THREAD_ID}.log 2>&1 &
 
-THREAD_ID=0: 345539
-THREAD_ID=1: 346504
+THREAD_ID=0: 475420
+THREAD_ID=1: 476444
 THREAD_ID=2: -
 THREAD_ID=3: 
 
