@@ -83,3 +83,21 @@ def extract_wiki_main_text(text: str) -> str:
     # 空行を整理
     text = re.sub(r"\n{3,}", "\n\n", text).strip()
     return text
+
+def delete_non_English_characters(text: str) -> str:
+    """テキストから英語以外の文字を削除する。
+    Args:
+        text (str): 入力テキスト
+
+    Returns:
+        str: 英語以外の文字が削除されたテキスト
+    
+    wikiのsummaryにおいて、
+    「The Azuchi Screens  (Japanese: 安土図屏風) are a pair of six-panel folding-screens, ...」
+    「The Ayyubid dynasty (Arabic: الأيوبيون, romanized: al-Ayyūbīyūn), also known as ...」
+    のように、元の言語でほぼ答えが含まれていることがあるため。
+    """
+    # 英語のアルファベット、スペース、句読点、数字、一部記号のみを許可する正規表現パターン
+    pattern = r"[^a-zA-Z0-9\s.,!?;:'\"()\-]"
+    cleaned_text = re.sub(pattern, "", text)
+    return cleaned_text

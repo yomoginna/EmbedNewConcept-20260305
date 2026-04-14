@@ -23,6 +23,8 @@ from transformers import AutoModelForCausalLM, AutoTokenizer
 from transformers import logging as transformers_logging
 import wandb
 
+from utils.wikipedia_api_utils import delete_non_English_characters
+
 # ===== Runtime config =====
 transformers_logging.set_verbosity_error()
 
@@ -162,7 +164,7 @@ def prepareGemmaModel(
         propnoun_num_for_init_vec, 
         model, 
         tokenizer, 
-        seed,
+        # seed, # mainのファイルでseed固定するので、ここでseedを渡す必要はなさそう。
         pool_hs_type, # pool_hs_type='single_last',
     )
     model = embed_initializer.initializeEmbed(
@@ -688,6 +690,9 @@ def main(args):
         wiki_text = data['summary'] # data['text']も選べるが、fact sentencesに比べて大き過ぎるのでsummaryを使用している
         facts = data['facts']
 
+        # summaryに、「The Azuchi Screens  (Japanese: 安土図屏風) are a pair of six-panel folding-screens, ...」のようにほぼ答えが含まれることがあるため、英語以外の文字は削除する。
+        wiki_text = delete_non_English_characters(wiki_text)
+
         # concept名/"It" を割り当てられた空tokenに置換 (大小区別なし)
         wiki_text_with_token = re.sub(re.escape(target_concept), unused_token, wiki_text, flags=re.IGNORECASE)
         facts_with_token = [fact.replace('It', unused_token) for fact in facts]
@@ -797,11 +802,20 @@ if __name__ == "__main__":
         
     task_id = -1
     for seed in range(args.seed_num):
+        if seed in [0, 1, 4]:
+            print(f"seed {seed} is already run. skip.")
+            continue
         args.seed = seed # mainにargsとして渡すためにargs.seedに代入している。main内でargs.seedを参照することで、現在のシード値を取得できるようになる。
         
         init_vec_type_lst = args.init_vec_types
 
         for init_vec_type in init_vec_type_lst:
+            if seed == 2 and init_vec_type == 'otherCatCent_by_WikiSummaryRepeatHSMixed':
+                print(f"seed {seed} with init_vec_type {init_vec_type} is already run. skip.")
+                continue
+            if seed == 3 and init_vec_type == 'CatCent_by_WikiSummaryRepeatHSMixed':
+                print(f"seed {seed} with init_vec_type {init_vec_type} is already run. skip.")
+                continue
             
             layer_indices = args.layer_indices # ここでinit_vec_typeループ毎に読み込まないと、layer_indices = [None] が代入されたループの次のループでも[None]のままになってしまう
 

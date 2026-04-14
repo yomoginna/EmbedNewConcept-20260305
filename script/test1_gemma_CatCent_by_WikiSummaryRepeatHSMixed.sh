@@ -23,11 +23,11 @@ NUM_OPTIONS=3
 MODEL_SIZE=12
 LR=0.003
 TARGET_CONCEPTS_FILENAME="target_concepts_mini_13.json"
-PROCESS_NUM=3
-SEED_NUM=1
+PROCESS_NUM=4
+SEED_NUM=5
 NUM_OPTIONS=3
 INIT_VEC_TYPES=("otherCatCent_by_WikiSummaryRepeatHSMixed")
-LAYER_INDICES=(12) # 12 14)
+LAYER_INDICES=(40) # 12 40)
 INIT_VEC_TYPES=("CatCent_by_WikiSummaryRepeatHSMixed" "otherCatCent_by_WikiSummaryRepeatHSMixed")
 # LAYER_INDICES=(1 4 8 10 12 16 20 24 28 32 36 38 40 44 -1)
 # INIT_VEC_TYPES=("CatCent_by_WikiSummaryHS" "otherCatCent_by_WikiSummaryHS" "norm_rand_vocab")
@@ -41,10 +41,10 @@ THREAD_ID=1
 CUDA_VISIBLE_DEVICES=4
 
 THREAD_ID=2
-CUDA_VISIBLE_DEVICES=4
+CUDA_VISIBLE_DEVICES=3
 
 THREAD_ID=3
-CUDA_VISIBLE_DEVICES=0
+CUDA_VISIBLE_DEVICES=4
 
 THREAD_ID=4
 CUDA_VISIBLE_DEVICES=2
@@ -66,10 +66,10 @@ nohup uv --no-progress run python src/test1_gemma_wholeRun.py \
         --layer_indices ${LAYER_INDICES[@]} \
         > log_Test1_gemma-${MODEL_SIZE}B_lr${LR}_wholeRun${THREAD_ID}.log 2>&1 &
 
-# thread0: 220506, 4epoch以降: -
-# thread1: 221478, 4epoch以降: -(まだ) 
-# thread2: 3158326, 4epoch以降: -(まだ)
-# thread3: 1987315
+# thread0: 362988, 4epoch以降: -
+# thread1: 363948, 4epoch以降: -(まだ) 
+# thread2: 364861, 4epoch以降: -(まだ)
+# thread3: 365797
 # thread4: 1988305
 # thread5: 1989324
 
