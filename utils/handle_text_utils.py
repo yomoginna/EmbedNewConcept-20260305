@@ -41,7 +41,7 @@ def get_first_few_sentences(text, min_word_num, max_word_num):
     # return truncated_text if truncated_text != "" else None
     if word_count < min_word_num: # truncated_text == "" or word_count < min_word_num:
         # もし、1文目が既にmax_word_numを超えている、もしくは全文の単語数がmin_word_numより少ない場合は、Noneを返す
-        print(f"skip.  word count: {word_count} < {}, char_count: {char_count}, {parts[0][:200]}...")# , sentence: {sentence}")
+        print(f"skip.  word count: {word_count} < {min_word_num}, char_count: {char_count}, {parts[0][:200]}...")# , sentence: {sentence}")
         return None
     else:
         # print(f"word count: {word_count}, char_count: {char_count}")#, text: {text[:200]}...")# , sentence: {sentence}")

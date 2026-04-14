@@ -29,7 +29,7 @@ N_COMPONENTS = 2
 NOISE_SCALE = 5e-3   # まずは 1e-3 あたりから試す 1e-3だと少ししか改善しなかった, 1e-2だとother_category_COGの方がaccが高くなった 3e-3はいいかんじ。 2e-3はまだ試していないが後で試す
 LAMBDA_ = 0.0   # global_vecを引くときの重み. 0.1あたりから試す. 0.1だと少し改善するが、0.2だとさらに改善する。 0.3はまだ試していないが後で試す
 # LAST_TOKEN_IS_EOS = True  # termの最後のtokenが<EOS>であるかどうか。Trueなら、<eos>トークン位置を最終トークン位置とする。Falseなら、term内の最後のtokenを最終トークン位置とする。
-BATCH_SIZE = 16 #8
+BATCH_SIZE = 4 #16 #8
 
 # *************************** func ***************************
 
@@ -1136,7 +1136,7 @@ class EmbedInitializer:
                     other_category = self.category_to_other_category[own_category]
                     print(f"\tNew token {tokenizer.decode(init_token_id)} is initialized with other category '{other_category}' (fixed for category '{own_category}').")
                 else:
-                    # ** 他のカテゴリをランダムに選ぶ
+                    # ** 他のカテゴリをランダムに選ぶ場合
                     other_category = random.choice(other_categories)
                     print(f"\tNew token {tokenizer.decode(init_token_id)} is initialized with other category '{other_category}'.")
                 terms_in_other_category = category_to_concepts_for_vec[other_category]
@@ -1209,17 +1209,16 @@ class EmbedInitializer:
             summary = self.propnoun_to_wikisummary.get(term)
 
             # 短すぎor長すぎるsummaryがあるため、最初の数文だけをsummaryとして使用する. (30~300単語に収まるように調整) 30単語未満のsummaryは、十分な情報が得られない可能性があるため、初期化vecの計算に使用しない. 
-            min_words, max_words = 30, 200
-            truncated_summary = get_first_few_sentences(summary, min_words, max_words)
-            if truncated_summary is None:
+            min_words, max_words = 30, 300 # 30->50に変更すると、そこまで長いsummaryが少ないようで、init vecが0vecとなりlossがNanになってしまった。minは30でキープする
+            summary = get_first_few_sentences(summary, min_words, max_words)
+            if summary is None:
                 print(f"'{term}' のWikipedia summaryは、{min_words} ~ {max_words}単語の範囲内に収まらないため、スキップします。") # 最初の100文字だけ表示
                 continue
-            target_summary = truncated_summary
 
             if self.repeat_prompt:
                 # *** 初期vecを、固有名詞毎のwikiのsummary文を2回入力して、2回目の文内token位置の隠れ状態から作る場合: https://openreview.net/forum?id=Ahlrf2HGJR の手法 ***
-                target_summary = repeat_text(target_summary, 2)
-            prompt_lst.append(target_summary)
+                summary = repeat_text(summary, 2)
+            prompt_lst.append(summary)
         
         if len(prompt_lst) == 0:
             raise ValueError(f"No valid summaries found for the given terms. Cannot create initialization vector.")

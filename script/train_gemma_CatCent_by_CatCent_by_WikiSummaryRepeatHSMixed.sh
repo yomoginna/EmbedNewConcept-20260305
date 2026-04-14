@@ -12,11 +12,11 @@ MODEL_SIZE=4
 # 全部一気に実行する場合(夜間実行用)
 MODEL_SIZE=12
 MAX_EPOCHS=4
-TARGET_CONCEPTS_FILENAME="target_concepts_mini_12.json"
+TARGET_CONCEPTS_FILENAME="target_concepts_mini_13.json"
 LR=0.003
 PROCESS_NUM=2
 SEED_NUM=1 
-LAYER_INDICES=(12)
+LAYER_INDICES=(40)
 INIT_VEC_TYPES=("CatCent_by_WikiSummaryRepeatHSMixed" "otherCatCent_by_WikiSummaryRepeatHSMixed")
 POOL_HS_TYPE="mean_pool" #  隠れ状態をプーリングする方法。["eos", "last_token", "mean_pool"] のいずれか。
 INIT_VEC_TYPES=("CatCent_by_WikiSummaryRepeatHSMixed")
@@ -52,8 +52,8 @@ nohup uv --no-progress run python src/trainMemVec_fromXvec_gemma_wholeRun.py \
         --seed_num ${SEED_NUM} \
         > log_TrainMemVec_gemma-${MODEL_SIZE}B_lr${LR}_wholeRun${THREAD_ID}.log 2>&1 &
 
-THREAD_ID=0: 4060270
-THREAD_ID=1: 4061242
+THREAD_ID=0: 242351
+THREAD_ID=1: 243320
 THREAD_ID=2: -
 THREAD_ID=3: 
 

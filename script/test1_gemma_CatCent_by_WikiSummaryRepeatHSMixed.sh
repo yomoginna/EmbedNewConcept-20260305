@@ -22,7 +22,7 @@ NUM_OPTIONS=3
 # 利用メモリ: 24415MiB
 MODEL_SIZE=12
 LR=0.003
-TARGET_CONCEPTS_FILENAME="target_concepts_mini_10.json"
+TARGET_CONCEPTS_FILENAME="target_concepts_mini_13.json"
 PROCESS_NUM=3
 SEED_NUM=1
 NUM_OPTIONS=3
@@ -35,7 +35,7 @@ INIT_VEC_TYPES=("CatCent_by_WikiSummaryRepeatHSMixed" "otherCatCent_by_WikiSumma
 # 全体の層を大まかに調べる: (0 1 8 12 24 36 40 -1)
 
 THREAD_ID=0
-CUDA_VISIBLE_DEVICES=2
+CUDA_VISIBLE_DEVICES=3
 
 THREAD_ID=1
 CUDA_VISIBLE_DEVICES=4
@@ -66,8 +66,8 @@ nohup uv --no-progress run python src/test1_gemma_wholeRun.py \
         --layer_indices ${LAYER_INDICES[@]} \
         > log_Test1_gemma-${MODEL_SIZE}B_lr${LR}_wholeRun${THREAD_ID}.log 2>&1 &
 
-# thread0: 3982256, 4epoch以降: -
-# thread1: 3157431, 4epoch以降: -(まだ) 
+# thread0: 220506, 4epoch以降: -
+# thread1: 221478, 4epoch以降: -(まだ) 
 # thread2: 3158326, 4epoch以降: -(まだ)
 # thread3: 1987315
 # thread4: 1988305
