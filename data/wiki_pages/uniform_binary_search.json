@@ -1,0 +1,7 @@
+{
+    "exists": true,
+    "title": "Uniform binary search",
+    "url": "https://en.wikipedia.org/wiki/Uniform_binary_search",
+    "summary": "Uniform binary search is an optimization of the classic binary search algorithm. It was first published by Donald Knuth, in The Art of Computer Programming, who credited its idea to Ashok K. Chandra. It uses a lookup table to update a single array index, rather than taking the midpoint of an upper and a lower bound on each iteration; therefore, it is optimized for architectures (such as Knuth's MIX) on which\n\na table lookup is generally faster than an addition and a shift, and\nmany searches will be performed on the same array, or on several arrays of the same length",
+    "text": "Uniform binary search is an optimization of the classic binary search algorithm. It was first published by Donald Knuth, in The Art of Computer Programming, who credited its idea to Ashok K. Chandra. It uses a lookup table to update a single array index, rather than taking the midpoint of an upper and a lower bound on each iteration; therefore, it is optimized for architectures (such as Knuth's MIX) on which\n\na table lookup is generally faster than an addition and a shift, and\nmany searches will be performed on the same array, or on several arrays of the same length\n\nC implementation\nThe uniform binary search algorithm looks like this, when implemented in C."
+}

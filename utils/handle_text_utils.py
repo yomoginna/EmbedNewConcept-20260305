@@ -9,52 +9,6 @@ project_root = os.path.join(os.path.dirname(__file__), "..")
 
 
 
-def get_first_few_sentences(text, min_word_num, max_word_num):
-    """ textを文に分割して、最初の数文を連結して返す。連結したテキストの単語数がword_thresholdを超えないようにする。
-    ~~ただし1文目ですでにword_thresholdを超える場合は、最初の1文だけを返す。~~
-    1文目がword_thresholdを超える場合は、Noneを返す
-    """
-    if text is None:
-        print("text is None")
-        return None
-    
-    # 文末記号を保持して分割
-    parts = re.split(r'(?<=[。．!?！？\n])\s*', text)
-    # delimiters = re.findall(r'[。．!?！？]', text) -> 上のsplit方法では、文末記号もpartsに含まれるため、delimitersは必要ない
-    # sentences = [s.strip() for s in parts if len(s) > 0]  # 空の文を除外
-    
-    word_count, char_count = 0, 0
-    truncated_text = ""
-    for i, sentence in enumerate(parts):
-        sentence = sentence.strip()
-        if len(sentence) == 0:
-            # 空の文を除外
-            continue
-
-        word_count += len(sentence.split())  # 連結したテキストの単語数をカウント
-        char_count += len(sentence)
-        if word_count > max_word_num or char_count > max_word_num * 5:  # 一定の単語数・文字数を超えないようにする
-            break
-        truncated_text += sentence + " "
-        # print(f"word count: {word_count}, char_count: {char_count}, text: {text[:200]}...")# , sentence: {sentence}")
-    
-    # return truncated_text if truncated_text != "" else None
-    if word_count < min_word_num: # truncated_text == "" or word_count < min_word_num:
-        # もし、1文目が既にmax_word_numを超えている、もしくは全文の単語数がmin_word_numより少ない場合は、Noneを返す
-        print(f"skip.  word count: {word_count} < {min_word_num}, char_count: {char_count}, {parts[0][:200]}...")# , sentence: {sentence}")
-        return None
-    else:
-        # print(f"word count: {word_count}, char_count: {char_count}")#, text: {text[:200]}...")# , sentence: {sentence}")
-        pass
-    return truncated_text.strip()
-
-
-
-def repeat_text(text, times):
-    """textをtimes回繰り返す"""
-    repeated_text = (text + " ") * times
-    return repeated_text.strip()
-
 
 # ***** 言語、国、都市のリストを取得する関数と、単語がそれらのリストに含まれるかを判断する関数 *****
 
@@ -75,6 +29,9 @@ def get_main_lang_lst(print_flag=False):
     if print_flag:
         print(f"Total languages: {len(iso639_1_languages)}, languages: {langs[:10]}, ...")
     return langs
+
+
+
 
 
 
@@ -195,6 +152,10 @@ def is_city(word, city_names):
 
 
 
+
+
+
+
 def get_year_if_it_is_year(word):
     """wordが4桁の数字で表される年であれば、その年を返す。そうでなければFalseを返す
     examples = [
@@ -238,6 +199,11 @@ def normalize_PublishedIn_facts(feats, template):
 
 
 
+
+
+
+
+
 # *** prompt構成のための関数 ***
 def create_test_prompt(test_text, prompt_base, model_name):
     """test_textを埋め込み、modelに入力するためのpromptを作成する関数
@@ -250,3 +216,85 @@ def create_test_prompt(test_text, prompt_base, model_name):
         # Qwen3-Instruct系の場合は思考モードをオフにする必要がある. https://arc.net/l/quote/uwefkzbz
         prompt = prompt + "/no_think"
     return prompt
+
+
+
+
+# *** テキスト自体の操作に関する関数 ***
+
+def get_first_few_sentences(text, min_word_num, max_word_num):
+    """ textを文に分割して、最初の数文を連結して返す。連結したテキストの単語数がword_thresholdを超えないようにする。
+    ~~ただし1文目ですでにword_thresholdを超える場合は、最初の1文だけを返す。~~
+    1文目がword_thresholdを超える場合は、Noneを返す
+    """
+    if text is None:
+        print("text is None")
+        return None
+    
+    # 文末記号を保持して分割
+    parts = re.split(r'(?<=[。．!?！？\n])\s*', text)
+    # delimiters = re.findall(r'[。．!?！？]', text) -> 上のsplit方法では、文末記号もpartsに含まれるため、delimitersは必要ない
+    # sentences = [s.strip() for s in parts if len(s) > 0]  # 空の文を除外
+    
+    word_count, char_count = 0, 0
+    truncated_text = ""
+    for i, sentence in enumerate(parts):
+        sentence = sentence.strip()
+        if len(sentence) == 0:
+            # 空の文を除外
+            continue
+
+        word_count += len(sentence.split())  # 連結したテキストの単語数をカウント
+        char_count += len(sentence)
+        if word_count > max_word_num or char_count > max_word_num * 5:  # 一定の単語数・文字数を超えないようにする
+            break
+        truncated_text += sentence + " "
+        # print(f"word count: {word_count}, char_count: {char_count}, text: {text[:200]}...")# , sentence: {sentence}")
+    
+    # return truncated_text if truncated_text != "" else None
+    if word_count < min_word_num: # truncated_text == "" or word_count < min_word_num:
+        # もし、1文目が既にmax_word_numを超えている、もしくは全文の単語数がmin_word_numより少ない場合は、Noneを返す
+        print(f"skip.  word count: {word_count} < {min_word_num}, char_count: {char_count}, {parts[0][:200]}...")# , sentence: {sentence}")
+        return None
+    else:
+        # print(f"word count: {word_count}, char_count: {char_count}")#, text: {text[:200]}...")# , sentence: {sentence}")
+        pass
+    return truncated_text.strip()
+
+
+
+def repeat_text(text, times):
+    """textをtimes回繰り返す"""
+    repeated_text = (text + " ") * times
+    return repeated_text.strip()
+
+
+
+
+def change_propnoun_to_filename(propnoun):
+    """固有名詞を、ファイル名に使用できない文字を置換して、ファイル名に変換する関数。
+    例: "New York" -> "New_York"
+    例: "A/B" -> "A_B"
+    """
+    filename = re.sub(r'[/\\ ]', '_', propnoun)  # ファイル名に使用できない文字を置換
+    return filename
+
+
+
+def delete_non_English_characters(text: str) -> str:
+    """テキストから英語以外の文字を削除する。
+    Args:
+        text (str): 入力テキスト
+
+    Returns:
+        str: 英語以外の文字が削除されたテキスト
+    
+    wikiのsummaryにおいて、
+    「The Azuchi Screens  (Japanese: 安土図屏風) are a pair of six-panel folding-screens, ...」
+    「The Ayyubid dynasty (Arabic: الأيوبيون, romanized: al-Ayyūbīyūn), also known as ...」
+    のように、元の言語でほぼ答えが含まれていることがあるため。
+    """
+    # 英語のアルファベット、スペース、句読点、数字、一部記号のみを許可する正規表現パターン
+    pattern = r"[^a-zA-Z0-9\s.,!?;:'\"()\-]"
+    cleaned_text = re.sub(pattern, "", text)
+    return cleaned_text

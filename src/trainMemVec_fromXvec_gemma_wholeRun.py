@@ -36,7 +36,7 @@ from utils.gemma_train_and_test_utils import fix_seed, save_mem_vec, evaluateMod
 from utils.handle_data_from_dbpedia_utils import filterProperNounsWithWikiPage, loadProperNounData #, loadConceptsForFictConcept
 from utils.initialize_embedding_layer_utils import EmbedInitializer
 from utils.wandb_utils import set_wandb_env
-from utils.wikipedia_api_utils import delete_non_English_characters
+from utils.handle_text_utils import delete_non_English_characters
 
 # os.environ["CUDA_VISIBLE_DEVICES"] = "2" # [memo] genkaiを使う時はコメントアウト!! -> 今はargsで指定している。argsを指定しなければ、CUDAについては何も指定しない。
 n_feat_in_a_sample = 3  # 学習データの1サンプル = summary(wiki中の本文 or summary, 今回はsummaryを使用) + n_feat_in_a_sample個の特徴文

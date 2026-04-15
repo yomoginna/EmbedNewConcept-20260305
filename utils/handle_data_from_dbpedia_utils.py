@@ -2,8 +2,11 @@
 import os
 import json
 import pandas as pd
+import random
 
 project_root = os.path.join(os.path.dirname(__file__), "..") 
+propNoun_dir = os.path.join(project_root, "data", "dbpedia", "wikidata_Things_childs_LIMIT1000")
+
 
 # *************** 固有名詞データ読み込み ***************
 def loadProperNounData(propnoun_num_threshold=130, print_flag=False):
@@ -17,13 +20,15 @@ def loadProperNounData(propnoun_num_threshold=130, print_flag=False):
 
     # *** dbpediaの各subclassファイルから、そのsubclassに属する固有名詞リストを取得する ***
     whole_df = pd.DataFrame()
-    for filename in os.listdir(os.path.join(project_root, "data", "dbpedia", "wikidata_Things_childs_LIMIT1000")):
-        if filename.replace(".csv", "") in delete_list:
+    for category_file in os.listdir(propNoun_dir):
+        if not category_file.endswith(".csv"):
+            continue
+        if category_file.replace(".csv", "") in delete_list:
             # 削除対象のカテゴリは読み込まない
             continue
-        if filename.endswith(".csv"):
-            df = pd.read_csv(os.path.join(project_root, "data", "dbpedia", "wikidata_Things_childs_LIMIT1000", filename))
-            whole_df = pd.concat([whole_df, df], ignore_index=True)
+        df = pd.read_csv(os.path.join(propNoun_dir, category_file))
+        whole_df = pd.concat([whole_df, df], ignore_index=True)
+
     print(f"Total proper nouns collected: {len(whole_df)}")
     
     # *** fileter ***
@@ -41,17 +46,38 @@ def loadProperNounData(propnoun_num_threshold=130, print_flag=False):
 
     # *** propnoun_num_threshold 以上の固有名詞があるカテゴリについて、属する固有名詞のリストを作成する ***
     filtered_categories = filtered_category_count_df["class_label"].tolist()
-    filtered_category_properNouns_dict = {}
+    filtered_category_to_properNouns_dict = {}
     for category in filtered_categories:
         properNouns = whole_df[whole_df["class_label"] == category]["label"].tolist()
-        filtered_category_properNouns_dict[category] = properNouns
+        filtered_category_to_properNouns_dict[category] = properNouns
 
     # 表示
     if print_flag:
         print("Trainable categories and their proper nouns count:")
-        for category, properNouns in filtered_category_properNouns_dict.items():
+        for category, properNouns in filtered_category_to_properNouns_dict.items():
             print(f"Category: {category}, Proper Nouns Count: {len(properNouns)} {properNouns[:3]}...")
-    return filtered_category_properNouns_dict
+    return filtered_category_to_properNouns_dict
+
+
+def load_prop_nouns(exclude_category=None, per_cat_limit=None):
+    """dbpediaから収集した全ての固有名詞を収集. 
+    loadProperNounDataとは異なり、カテゴリ毎の固有名詞数に基づくフィルタリングは行わない。単純に全ての固有名詞を収集する。
+    """
+    prop_nouns = []
+    for category_file in os.listdir(propNoun_dir):
+        if not category_file.endswith(".csv"):
+            continue
+        # もしexclude_categoryが指定されていれば、そのカテゴリの固有名詞は読み込まない
+        category = category_file.removesuffix(".csv").replace("_", " ")
+        if exclude_category == category:
+            continue
+
+        df = pd.read_csv(os.path.join(propNoun_dir, category_file))
+        labels = df["label"].dropna().tolist()
+        # 全部追加すると多すぎたので、各カテゴリからランダムに指定数(100や20など)個だけ追加することにする
+        k = min(per_cat_limit or len(labels), len(labels))
+        prop_nouns.extend(random.sample(labels, k))
+    return prop_nouns
 
 
 
@@ -78,3 +104,7 @@ def filterProperNounsWithWikiPage(properNouns_list, wiki_page_save_dir):
             filtered_properNouns.append(properNoun)
     print(f"Filtered proper nouns with existing wiki pages: {len(filtered_properNouns)} / {len(properNouns_list)}")
     return filtered_properNouns
+
+
+
+

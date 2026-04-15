@@ -104,7 +104,7 @@ project_root = os.path.join(os.path.dirname(__file__), "..") #
 sys.path.append(project_root)
 
 from utils.wikipedia_api_utils import extract_wiki_main_text, fetch_wikipedia_page
-from utils.gemma_train_and_test_utils import fix_seed
+from utils.gemma_train_and_test_utils import fix_seed, extract_hidden_states
 from utils.handle_text_utils import get_first_few_sentences, repeat_text
 seed = 42
 
@@ -403,99 +403,6 @@ def load_wiki_text(propnoun, text_type="summary"):
             print(f"No main text found in wiki page for '{propnoun}' in wiki_pages.")
             return None
 
-
-
-# =========================
-# pool_hs_type に応じた hidden state を取りvecを作成する関数
-# =========================
-@torch.no_grad()
-def extract_hidden_states(model, tokenizer, text_list, pool_hs_type, data_type, batch_size=8, layer_index=-1, print_flag=False):
-    """
-    各テキストの末尾にEOSを明示的に追加し、
-    EOSトークン位置の hidden state を返す。
-
-    Returns:
-        np.ndarray of shape (N, hidden_dim)
-    """
-    all_vecs = []
-
-    for i in range(0, len(text_list), batch_size):
-        batch_texts = text_list[i:i + batch_size]
-
-        if pool_hs_type == "eos":
-            # EOS を明示的に末尾へ追加
-            batch_texts = [text + tokenizer.eos_token for text in batch_texts]
-        
-        inputs = tokenizer(
-            batch_texts,
-            return_tensors="pt",
-            padding=True,
-            truncation=True,
-            add_special_tokens=False #last_token_is_eos#LAST_TOKEN_IS_EOS, -> pool_hs_type == "eos"の場合は明示的にeosを追加済みなので、ここをTrueにするとeosが重複して2つ付く可能性がある。そのためここはFalseで良い。
-        ).to(model.device) 
-
-        input_ids = inputs["input_ids"]
-        attention_mask = inputs["attention_mask"]
-        
-        with torch.no_grad():
-            outputs = model(**inputs, output_hidden_states=True)
-            # hidden_states は tuple:
-            # 0: embedding出力, 1..L: 各層出力
-            hs = outputs.hidden_states
-            layer_hs = hs[layer_index]      # (B, T, H)
-        
-
-        # *** pool_hs_type に応じて、vectorを抽出 ***
-        if pool_hs_type == "eos":
-            # 各系列について EOS token の最後の出現位置を取る
-            eos_mask = (input_ids == tokenizer.eos_token_id)
-
-        for t_idx in range(input_ids.size(0)):
-
-            # 1 が立っている位置を取得 [0, 0, 0, 0, 0, 0, 1, 1, 1, 1, 1, 1] -> valid_pos = [6, 7, 8, 9, 10, 11] 
-            valid_pos = torch.nonzero(attention_mask[t_idx], as_tuple=False).squeeze(-1)
-            # print(f"valid_pos for batch {t_idx}: {valid_pos}")
-            if valid_pos.numel() == 0:
-                # 全部 padding の場合
-                pos_begin = 0
-                pos_end = 0
-            else:
-                pos_begin = valid_pos[0].item()
-                pos_end = valid_pos[-1].item() + 1   # slice用に end は exclusive
-
-
-            if pool_hs_type == "eos":
-                eos_positions = torch.where(eos_mask[t_idx])[0]
-                if len(eos_positions) == 0:
-                    raise ValueError(f"EOS token が見つかりません: {batch_texts[t_idx]}")
-                eos_pos = eos_positions[-1].item()
-                pos_begin = eos_pos
-                pos_end = eos_pos + 1
-
-            elif pool_hs_type == "last_token":
-                pos_begin = pos_end - 1
-
-
-            elif pool_hs_type == "mean_pool":
-                if data_type == "wiki_summary_repeat":
-                    # wiki summaryを繰り返してプロンプトとする場合は、2回目の文のみの隠れ状態を平均する
-                    # seq_first_half_len = seq_len // 2   # 1文が5tokens → id:0,1,2,3,4 が1文目、id:5,6,7,8,9 が2文目の場合、seq_len=10, seq_first_half_len=5 となる
-                    pos_begin_second_sent = (pos_begin + pos_end) // 2 # == pos_begin + (pos_end - pos_begin) / 2
-                    pos_begin = pos_begin_second_sent
-                
-            else:
-                raise ValueError(f"Unknown pool_hs_type: {pool_hs_type}")
-            
-            vec = layer_hs[t_idx, pos_begin:pos_end, :].mean(dim=0)  # (H,)
-            all_vecs.append(vec.detach().float().cpu().numpy())
-
-            if print_flag:
-                # どの位置のtokenの隠れ状態が使われるのかを確認するためのprint文
-                print(f"pos_begin: {pos_begin}, pos_end: {pos_end}")
-                print(f"\tattention_mask: {attention_mask[t_idx]},\n\t valid_pos: {valid_pos}, \n\t valid part in batch_text: {input_ids[t_idx][pos_begin:pos_end]}")
-
-
-    return np.stack(all_vecs, axis=0)
 
 
 

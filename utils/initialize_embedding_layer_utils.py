@@ -22,8 +22,9 @@ project_root = os.path.join(os.path.dirname(__file__), "..") # os.path.dirname(_
 sys.path.append(project_root)
 print("Project root:", project_root)
 
-from utils.wikipedia_api_utils import extract_wiki_main_text, fetch_wikipedia_page
+from utils.wikipedia_api_utils import extract_wiki_main_text, fetch_wikipedia_page, load_wikisummary
 from utils.handle_text_utils import get_first_few_sentences, repeat_text
+from utils.handle_data_from_dbpedia_utils import load_prop_nouns
 
 N_COMPONENTS = 2
 NOISE_SCALE = 5e-3   # まずは 1e-3 あたりから試す 1e-3だと少ししか改善しなかった, 1e-2だとother_category_COGの方がaccが高くなった 3e-3はいいかんじ。 2e-3はまだ試していないが後で試す
@@ -31,6 +32,8 @@ LAMBDA_ = 0.0   # global_vecを引くときの重み. 0.1あたりから試す. 
 # LAST_TOKEN_IS_EOS = True  # termの最後のtokenが<EOS>であるかどうか。Trueなら、<eos>トークン位置を最終トークン位置とする。Falseなら、term内の最後のtokenを最終トークン位置とする。
 BATCH_SIZE = 4 #16 #8
 
+
+wiki_pages_dir = os.path.join(project_root, "data", "wiki_pages")
 # *************************** func ***************************
 
 def compute_pca_components(X, n_components=10):
@@ -506,7 +509,8 @@ class EmbedInitializer:
 
         # dbpediaから収集した全ての固有名詞を収集
         # [memo] この処理は_load_prop_nouns()に置き換えた
-        prop_nouns = self._load_prop_nouns(exclude_category=None, per_cat_limit=self.num_propNouns_in_cat_for_globalHSMean)
+        # prop_nouns = self._load_prop_nouns(exclude_category=None, per_cat_limit=self.num_propNouns_in_cat_for_globalHSMean)
+        prop_nouns = load_prop_nouns(exclude_category=None, per_cat_limit=self.num_propNouns_in_cat_for_globalHSMean)
 
         E, num_hidden_layers = self._get_model_info(model)
 
@@ -623,7 +627,8 @@ class EmbedInitializer:
 
 
             # [memo] この処理は_load_prop_nouns()に置き換えた
-            prop_nouns = self._load_prop_nouns(
+            # prop_nouns = self._load_prop_nouns(
+            prop_nouns = load_prop_nouns(
                 exclude_category=own_category,                              # own_categoryのprop nounはglobal_hidden_meanの計算に使用しない
                 per_cat_limit=self.num_propNouns_in_cat_for_globalHSMean    # 全部追加すると多すぎたので、各カテゴリからランダムに20個だけ追加することにする
             )
@@ -684,7 +689,8 @@ class EmbedInitializer:
 
         # dbpediaから収集した全ての固有名詞をモデルに入力し、全隠れ層における隠れ状態を平均して保持する
         # [memo] この処理は_load_prop_nouns()に置き換えた
-        prop_nouns = self._load_prop_nouns(
+        # prop_nouns = self._load_prop_nouns(
+        prop_nouns = load_prop_nouns(
             exclude_category=None, 
             per_cat_limit=self.num_propNouns_in_cat_for_globalHSMean    # 全部追加すると多すぎたので、各カテゴリからランダムに20個だけ追加することにする
         )
@@ -1222,7 +1228,8 @@ class EmbedInitializer:
             # ** このterm(prop noun)を説明する wiki page の summary を取得し、前処理を行う **
             # 辞書にまだ保存されていなければ、data dir もしくは wiki apiから取得して、self.propnoun_to_wikisummaryに格納する
             if term not in self.propnoun_to_wikisummary:
-                self._load_wikisummary(term)
+                # self._load_wikisummary(term)
+                self.propnoun_to_wikisummary[term] = load_wikisummary(term, wiki_pages_dir)
             summary = self.propnoun_to_wikisummary.get(term)
 
             # 短すぎor長すぎるsummaryがあるため、最初の数文だけをsummaryとして使用する. (30~300単語に収まるように調整) 30単語未満のsummaryは、十分な情報が得られない可能性があるため、初期化vecの計算に使用しない. 
@@ -1518,26 +1525,27 @@ class EmbedInitializer:
             num_hidden_layers = model.config.text_config.num_hidden_layers
         return E, num_hidden_layers
 
-    def _load_prop_nouns(self, exclude_category=None, per_cat_limit=None):
-        """dbpediaから収集した全ての固有名詞を収集
-        """
-        propNoun_dir = os.path.join(project_root, "data", "dbpedia", "wikidata_Things_childs_LIMIT1000")
+    # [memo] handle_data_from_dbpedia_utils.pyに移動
+    # def _load_prop_nouns(self, exclude_category=None, per_cat_limit=None):
+    #     """dbpediaから収集した全ての固有名詞を収集
+    #     """
+    #     propNoun_dir = os.path.join(project_root, "data", "dbpedia", "wikidata_Things_childs_LIMIT1000")
 
-        prop_nouns = []
-        for category_file in os.listdir(propNoun_dir):
-            if not category_file.endswith(".csv"):
-                continue
-            # もしexclude_categoryが指定されていれば、そのカテゴリの固有名詞は読み込まない
-            category = category_file.removesuffix(".csv").replace("_", " ")
-            if exclude_category == category:
-                continue
+    #     prop_nouns = []
+    #     for category_file in os.listdir(propNoun_dir):
+    #         if not category_file.endswith(".csv"):
+    #             continue
+    #         # もしexclude_categoryが指定されていれば、そのカテゴリの固有名詞は読み込まない
+    #         category = category_file.removesuffix(".csv").replace("_", " ")
+    #         if exclude_category == category:
+    #             continue
 
-            df = pd.read_csv(os.path.join(propNoun_dir, category_file))
-            labels = df["label"].dropna().tolist()
-            # 全部追加すると多すぎたので、各カテゴリからランダムに指定数(100や20など)個だけ追加することにする
-            k = min(per_cat_limit or len(labels), len(labels))
-            prop_nouns.extend(random.sample(labels, k))
-        return prop_nouns
+    #         df = pd.read_csv(os.path.join(propNoun_dir, category_file))
+    #         labels = df["label"].dropna().tolist()
+    #         # 全部追加すると多すぎたので、各カテゴリからランダムに指定数(100や20など)個だけ追加することにする
+    #         k = min(per_cat_limit or len(labels), len(labels))
+    #         prop_nouns.extend(random.sample(labels, k))
+    #     return prop_nouns
 
 
     def _get_mix_layers(self, layer_idx, num_hidden_layers):
@@ -1552,49 +1560,51 @@ class EmbedInitializer:
         return mixed_layers
 
 
-    def _load_wikisummary(self, propnoun):
-        """dbpediaから収集した固有名詞のwikipedia summaryを読み込んで、propnoun_to_wikisummaryに保存する。
-        data/wiki_pages に未保存であれば、data dir もしくは wiki apiから取得して、self.propnoun_to_wikisummaryに保存する
-        """
-        # print("Loading Wikipedia summaries for prop nouns...")
-        wiki_pages_dir = os.path.join(project_root, "data", "wiki_pages")
+    # ** [memo] utilsのwiki utilsに移動
+    # def _load_wikisummary(self, propnoun):
+    #     """dbpediaから収集した固有名詞のwikipedia summaryを読み込んで、propnoun_to_wikisummaryに保存する。
+    #     data/wiki_pages に未保存であれば、data dir もしくは wiki apiから取得して、self.propnoun_to_wikisummaryに保存する
+    #     """
+    #     # print("Loading Wikipedia summaries for prop nouns...")
+    #     wiki_pages_dir = os.path.join(project_root, "data", "wiki_pages")
 
-        filename = self._change_propnoun_to_filename(propnoun) + ".json"  # ファイル名に使用できない文字を置換
-        wikipage_path = os.path.join(wiki_pages_dir, filename)
+    #     filename = self._change_propnoun_to_filename(propnoun) + ".json"  # ファイル名に使用できない文字を置換
+    #     wikipage_path = os.path.join(wiki_pages_dir, filename)
         
-        # * 未取得の場合、wikipedia apiから取得して保存する
-        if not os.path.exists(wikipage_path):
-            wiki_info = fetch_wikipedia_page(propnoun, lang="en")
-            if wiki_info["exists"] == False:
-                print(f"Wikipedia page for concept '{propnoun}' DOES NOT exist. Skipping generation.")
-                return None
-            # 本文を切り出す
-            main_text = extract_wiki_main_text(wiki_info['text'])
-            wiki_info['text'] = main_text
+    #     # * 未取得の場合、wikipedia apiから取得して保存する
+    #     if not os.path.exists(wikipage_path):
+    #         wiki_info = fetch_wikipedia_page(propnoun, lang="en")
+    #         if wiki_info["exists"] == False:
+    #             print(f"Wikipedia page for concept '{propnoun}' DOES NOT exist. Skipping generation.")
+    #             return None
+    #         # 本文を切り出す
+    #         main_text = extract_wiki_main_text(wiki_info['text'])
+    #         wiki_info['text'] = main_text
 
-            # 保存
-            with open(wikipage_path, "w") as f:
-                json.dump(wiki_info, f, ensure_ascii=False, indent=4)
+    #         # 保存
+    #         with open(wikipage_path, "w") as f:
+    #             json.dump(wiki_info, f, ensure_ascii=False, indent=4)
     
-        # * 今ここで保存した or すでに保存されているwikipedia summaryを読み込む
-        with open(wikipage_path, "r") as f:
-            wiki_page = json.load(f)
-            summary = wiki_page.get("summary")
-            if summary:
-                self.propnoun_to_wikisummary[propnoun] = summary
-                # print(f"Loaded Wikipedia summary for '{propnoun}' from wiki_pages.")
-                return summary
-            else:
-                print(f"No summary found in wiki page for '{propnoun}' in wiki_pages.")
-                return None
+    #     # * 今ここで保存した or すでに保存されているwikipedia summaryを読み込む
+    #     with open(wikipage_path, "r") as f:
+    #         wiki_page = json.load(f)
+    #         summary = wiki_page.get("summary")
+    #         if summary:
+    #             self.propnoun_to_wikisummary[propnoun] = summary
+    #             # print(f"Loaded Wikipedia summary for '{propnoun}' from wiki_pages.")
+    #             return summary
+    #         else:
+    #             print(f"No summary found in wiki page for '{propnoun}' in wiki_pages.")
+    #             return None
             
-    def _change_propnoun_to_filename(self, propnoun):
-        """固有名詞を、ファイル名に使用できない文字を置換して、ファイル名に変換する関数。
-        例: "New York" -> "New_York"
-        例: "A/B" -> "A_B"
-        """
-        filename = re.sub(r'[/\\ ]', '_', propnoun)  # ファイル名に使用できない文字を置換
-        return filename
+    # ** [memo] utilsの handle text utilsに移動
+    # def _change_propnoun_to_filename(self, propnoun):
+    #     """固有名詞を、ファイル名に使用できない文字を置換して、ファイル名に変換する関数。
+    #     例: "New York" -> "New_York"
+    #     例: "A/B" -> "A_B"
+    #     """
+    #     filename = re.sub(r'[/\\ ]', '_', propnoun)  # ファイル名に使用できない文字を置換
+    #     return filename
 
 
     def _extract_term_vec(self, inputs, layer_idx, num_hidden_layers, all_hs=None, layer_hs=None, mix_layers=False):
