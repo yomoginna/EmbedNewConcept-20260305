@@ -353,7 +353,7 @@ if __name__ == "__main__":
             if seed == 0:
                 args.trained_date = "20260414" 
                 # print(f"seed {seed} is already run. skip.")
-                continue
+                # continue
             elif seed == 1:
                 args.trained_date = "20260414" 
             elif seed == 2:
@@ -363,16 +363,16 @@ if __name__ == "__main__":
             elif seed == 4:
                 args.trained_date = "20260414"
             # # * seed後半
-            # elif seed == 5:
-            #     args.trained_date = "20260312"
-            # elif seed == 6:
-            #     args.trained_date = "20260312"
-            # elif seed == 7:
-            #     args.trained_date = "20260312"
-            # elif seed == 8:
-            #     args.trained_date = "20260312"
-            # elif seed == 9:
-            #     args.trained_date = "20260312"
+            elif seed == 5:
+                args.trained_date = "20260414"
+            elif seed == 6:
+                args.trained_date = "20260414"
+            elif seed == 7:
+                args.trained_date = "20260414"
+            elif seed == 8:
+                args.trained_date = "20260415"
+            elif seed == 9:
+                args.trained_date = "20260415"
             else:
                 raise ValueError(f"Invalid seed: {seed}")
             

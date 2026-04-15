@@ -1120,34 +1120,38 @@ class EmbedInitializer:
         mix_layers=False,
         print_flag=False
         ):
-
-        # 他のカテゴリのCOGで初期化する場合、category2initoken_ids外（今回新規概念として埋め込むtokenのあるカテゴリ以外）からも候補のカテゴリを選んで良い。そのためcategory_to_concepts_for_vecから直接取得する’
         
-        category_candidates = []
-        if self.other_init_use_target_candidates_only:
-            # category2initoken_idsのカテゴリのみを、他カテゴリ選出候補とする場合
-            category_candidates = list(category2initoken_ids.keys())
-        else:
-            for category, init_token_ids in category_to_concepts_for_vec.items():
-                # カテゴリ内の固有名詞が、初期化vec作成における、「カテゴリ内固定成分 + token毎のランダムな成分」のための固有名詞数に足りるカテゴリのみ、この他カテゴリ選出候補に入れる。
-                if len(category_to_concepts_for_vec[category]) >= self.propnoun_num_for_init_vec - 10  +  10 * len(init_token_ids):
-                    category_candidates.append(category)
-            
 
         # main: 初期化対象token毎に毎回ランダムに選んだ他のカテゴリのCOGで初期化する
         for own_category, init_token_ids in category2initoken_ids.items():
 
+            # 他のカテゴリのCOGで初期化する場合、category2initoken_ids外（今回新規概念として埋め込むtokenのあるカテゴリ以外）からも候補のカテゴリを選んで良い。そのためcategory_to_concepts_for_vecから直接取得する’
+            if self.other_init_use_target_candidates_only:
+                # category2initoken_idsのカテゴリのみを、他カテゴリ選出候補とする場合
+                category_candidates = list(category2initoken_ids.keys())
+            else:
+                # loadProperNounData で取得できた全てのカテゴリを選出候補とする場合
+                category_candidates = list(category_to_concepts_for_vec.keys())
+            
+            other_category_candidates = []
+            for category in category_candidates:
+                # カテゴリ内の固有名詞が、初期化vec作成における、「カテゴリ内固定成分 + token毎のランダムな成分」のための固有名詞数に足りるカテゴリのみ、この他カテゴリ選出候補に入れる。
+                if len(category_to_concepts_for_vec[category]) >= self.propnoun_num_for_init_vec - 10  +  10 * len(init_token_ids):
+                    other_category_candidates.append(category)
+
             # ** 他のカテゴリをランダムに選ぶ
-            other_categories = [c for c in category_candidates if c != own_category]  # terms数の不足するカテゴリを削除済みであるcategory_to_centroid_termsから他カテゴリを選ぶ
+            other_categories = [c for c in other_category_candidates if c != own_category]  # terms数の不足するカテゴリを削除済みであるcategory_to_centroid_termsから他カテゴリを選ぶ
             other_category = random.choice(other_categories)
             # if print_flag:
             print(f"Category '{own_category}' is initialized with centroid of other category: {other_category}. This is chosen from {len(other_categories)} categories: {other_categories[:20]}...")
+
 
             init_terms_candidate = category_to_concepts_for_vec[other_category]
             init_terms_for_centroid = random.sample(init_terms_candidate, self.propnoun_num_for_init_vec-10)
 
             # centroid に使用済みのtermsをterms候補から削除
             init_terms_candidate = list(set(init_terms_candidate) - set(init_terms_for_centroid))
+            print(f"after sampling for centroid: {len(init_terms_candidate)} terms left. ({10 * len(init_token_ids)} terms are needed)")
 
 
             # 新規token毎に初期vecに変化をつけるためのnoiseとして、初期化対象の追加token毎に、10件をランダム選出

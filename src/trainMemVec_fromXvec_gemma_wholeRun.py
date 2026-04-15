@@ -802,9 +802,9 @@ if __name__ == "__main__":
         
     task_id = -1
     for seed in range(args.seed_num):
-        # if seed in [0, 1, 4]:
-        #     print(f"seed {seed} is already run. skip.")
-        #     continue
+        if seed in [0,1,2,3,4,5, 7,8,9]:
+            print(f"seed {seed} is already run. skip.")
+            continue
         args.seed = seed # mainにargsとして渡すためにargs.seedに代入している。main内でargs.seedを参照することで、現在のシード値を取得できるようになる。
         
         init_vec_type_lst = args.init_vec_types

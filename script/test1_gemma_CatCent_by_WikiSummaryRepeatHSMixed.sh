@@ -23,28 +23,28 @@ NUM_OPTIONS=3
 MODEL_SIZE=12
 LR=0.003
 TARGET_CONCEPTS_FILENAME="target_concepts_mini_13.json"
-PROCESS_NUM=2
-SEED_NUM=1
+PROCESS_NUM=4
+SEED_NUM=5
 NUM_OPTIONS=3
-INIT_VEC_TYPES=("otherCatCent_by_WikiSummaryRepeatHSMixed")
 LAYER_INDICES=(12) # 12 40)
 INIT_VEC_TYPES=("CatCent_by_WikiSummaryRepeatHSMixed" "otherCatCent_by_WikiSummaryRepeatHSMixed")
+INIT_VEC_TYPES=("otherCatCent_by_WikiSummaryRepeatHSMixed")
 # LAYER_INDICES=(1 4 8 10 12 16 20 24 28 32 36 38 40 44 -1)
 # INIT_VEC_TYPES=("CatCent_by_WikiSummaryHS" "otherCatCent_by_WikiSummaryHS" "norm_rand_vocab")
 # -1は最終層、0以上の整数はその層の隠れ状態を使用.(0層は埋め込み層の出力) 12B: 48層
 # 全体の層を大まかに調べる: (0 1 8 12 24 36 40 -1)
 
 THREAD_ID=0
-CUDA_VISIBLE_DEVICES=2
+CUDA_VISIBLE_DEVICES=4
 
 THREAD_ID=1
-CUDA_VISIBLE_DEVICES=3
+CUDA_VISIBLE_DEVICES=4
 
 THREAD_ID=2
-CUDA_VISIBLE_DEVICES=3
+CUDA_VISIBLE_DEVICES=1
 
 THREAD_ID=3
-CUDA_VISIBLE_DEVICES=4
+CUDA_VISIBLE_DEVICES=1
 
 THREAD_ID=4
 CUDA_VISIBLE_DEVICES=2
@@ -66,10 +66,10 @@ nohup uv --no-progress run python src/test1_gemma_wholeRun.py \
         --layer_indices ${LAYER_INDICES[@]} \
         > log_Test1_gemma-${MODEL_SIZE}B_lr${LR}_wholeRun${THREAD_ID}.log 2>&1 &
 
-# thread0: 362988, 4epoch以降: -
-# thread1: 363948, 4epoch以降: -(まだ) 
-# thread2: 364861, 4epoch以降: -(まだ)
-# thread3: 365797
+# thread0: 704308, 4epoch以降: -
+# thread1: 769885, 4epoch以降: -(まだ) 
+# thread2: 706328, 4epoch以降: -(まだ)
+# thread3: 707352
 # thread4: 1988305
 # thread5: 1989324
 
