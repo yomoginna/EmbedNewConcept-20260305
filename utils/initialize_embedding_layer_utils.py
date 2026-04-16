@@ -34,6 +34,9 @@ BATCH_SIZE = 4 #16 #8
 
 
 wiki_pages_dir = os.path.join(project_root, "data", "wiki_pages")
+category_similarity_path = os.path.join(project_root, 'data', 'cossim_bw_categories', 'category_similarity_12b_target_concepts_mini_13_catnum_plus_40.json')
+
+
 # *************************** func ***************************
 
 def compute_pca_components(X, n_components=10):
@@ -1140,7 +1143,7 @@ class EmbedInitializer:
         print_flag=False
         ):
 
-        with open(os.path.join(project_root, 'data', 'cossim_bw_categories', 'category_similarity_target_concepts_mini_13.json'), 'r') as f:
+        with open(category_similarity_path, 'r') as f:
             category_similarity = json.load(f)
 
         

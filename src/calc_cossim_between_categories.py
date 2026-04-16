@@ -4,7 +4,6 @@ import json
 import os
 import sys
 import numpy as np
-from language_tool_python.__main__ import config_path
 import torch
 from collections import defaultdict
 from typing import Dict, List, Optional, Tuple
@@ -167,17 +166,43 @@ def main(args):
     else:
         propnouns_outofrange = set()
 
-    config_path = os.path.join(project_root, "config", 'target_concepts.json')
-    with open(config_path, "r") as f:
-        config_all = json.load(f)
-    all_cats = list(config_all.keys())
-        
+   
+
+    # * 全てのカテゴリ・固有名詞リスト の辞書を読み込む (重複等のfiltering済み)
+    category_properNouns_dict = loadProperNounData(
+        propnoun_num_threshold = propnoun_num_for_init_vec + propnoun_num_for_new_concept,
+        print_flag=False
+    )
+
+    # filter: もう新しいwikiページを読み込みたくない場合は、すでに保存済みのwikiページがあるpropernounのみにフィルタリングする
+    if args.dont_get_new_wiki_flag:
+        print("Filtering proper nouns to those with already saved wiki pages...")
+        filtered_category_properNouns_dict = {}
+        for category, propernouns in category_properNouns_dict.items():
+            filtered_propnouns = filterProperNounsWithWikiPage(propernouns, wiki_pages_dir)
+            if len(filtered_propnouns) >= min_num_nouns_per_category:
+                filtered_category_properNouns_dict[category] = filtered_propnouns
+        print(f"concept num: {sum(len(concepts) for concepts in category_properNouns_dict.values())} \
+              -> {sum(len(concepts) for concepts in filtered_category_properNouns_dict.values())}")
+        all_cats = list(filtered_category_properNouns_dict.keys())  # wiki pageのあるカテゴリのみ対象カテゴリとする
+    else:
+        # 新しいwikiページを取得してもいい場合は、config内の全てのカテゴリを対象カテゴリとする
+        filtered_category_properNouns_dict = category_properNouns_dict
+        config_path = os.path.join(project_root, "config", 'target_concepts.json')
+        with open(config_path, "r") as f:
+            config_all = json.load(f)
+        all_cats = list(config_all.keys())
+    print(f"カテゴリ選出対象: {len(all_cats)} categories. {all_cats[:5]}...")
+         
+    # 対象カテゴリの選択
     if args.config_filename == None:
         # config_path = os.path.join(project_root, "config", 'target_concepts.json')
         # with open(config_path, "r") as f:
         #     config = json.load(f)
         # ランダムにcatnum_plusカテゴリを選ぶ
         # all_cats = list(config.keys())
+        if len(all_cats) < catnum_plus:
+            raise ValueError(f"catnum_plus ({catnum_plus}) is larger than the number of available categories ({len(all_cats)}).")
         target_cats = np.random.choice(all_cats, catnum_plus, replace=False)
 
     else:
@@ -187,32 +212,19 @@ def main(args):
         target_cats = [cat for cat, propnouns_for_train in config.items() if len(propnouns_for_train) > 0]
 
         # ランダムにcatnum_plusカテゴリを選び追加する
+        if len(all_cats) - len(target_cats) < catnum_plus:
+            raise ValueError(f"catnum_plus ({catnum_plus}) is larger than the number of available categories to add ({len(all_cats) - len(target_cats)}).")
         target_cats.extend(np.random.choice(list(set(all_cats) - set(target_cats)), catnum_plus, replace=False))
 
-    
-    # filter: 全てのカテゴリ・固有名詞リスト の辞書を読み込む (重複等のfiltering済み)
-    category_properNouns_dict = loadProperNounData(
-        propnoun_num_threshold = propnoun_num_for_init_vec + propnoun_num_for_new_concept,
-        print_flag=False
-    )
-
-    # filter: [memo] もう新しいwikiページを読み込みたくない場合は、すでに保存済みのwikiページがあるpropernounのみにフィルタリングする
-    if args.dont_get_new_wiki_flag:
-        print("Filtering proper nouns to those with already saved wiki pages...")
-        filtered_category_properNouns_dict = {}
-        for category, propernouns in category_properNouns_dict.items():
-            filtered_category_properNouns_dict[category] = filterProperNounsWithWikiPage(propernouns, wiki_pages_dir)
-        print(f"concept num: {sum(len(concepts) for concepts in category_properNouns_dict.values())} \
-              -> {sum(len(concepts) for concepts in filtered_category_properNouns_dict.values())}")
-    else:
-        filtered_category_properNouns_dict = category_properNouns_dict
     
 
     cat_to_input_texts = {}
     for cat in target_cats:
         print('\n')
         propnouns = filtered_category_properNouns_dict.get(cat, [])
+        print(f"Category '{cat}' has {len(propnouns)} proper nouns before filtering with wiki page availability and summary length.")
         propnouns = list(set(propnouns) - propnouns_outofrange) # min_words ~ max_wordsの範囲内にないsummaryを持つpropnounは次回もwiki apiで呼び出すことがないようフィルタリングする
+        print(f"\t -> {len(propnouns)} left after delete proper nouns which has summary out of range.")
         if len(propnouns) < min_num_nouns_per_category:
             print(f"カテゴリ '{cat}' は、{min_num_nouns_per_category} 個未満の固有名詞しかないため、分析から除外されます。")
             continue
@@ -419,7 +431,7 @@ nohup uv run python src/calc_cossim_between_categories.py \
     --cuda_device "3" \
     > logs/calc_cossim_between_categories_12b_layer12_min5_max50.log 2>&1 &
 ```
-1303288
+-
 
 
 ```sh
@@ -431,9 +443,11 @@ nohup uv run python src/calc_cossim_between_categories.py \
     --cuda_device "4" \
     --config_filename "target_concepts_mini_13"\
     --catnum_plus 40 \
+    --dont_get_new_wiki_flag \
     > logs/calc_cossim_between_categories_12b_layer12_min5_max50_catnum_plus40.log 2>&1 &
 ```
 nvidia-smi
+2059743
 
 ```sh
 nohup uv run python src/calc_cossim_between_categories.py \
@@ -446,6 +460,6 @@ nohup uv run python src/calc_cossim_between_categories.py \
     --catnum_plus 40 \
     > logs/calc_cossim_between_categories_4b_layer12_min5_max50_catnum_plus40.log 2>&1 &
 ```
-44780
+-
 
 """
