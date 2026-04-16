@@ -23,7 +23,7 @@ from utils.handle_data_from_dbpedia_utils import loadProperNounData, filterPrope
 wiki_pages_dir = os.path.join(project_root, "data", "wiki_pages")
 
 
-BATCH_SIZE = 8
+BATCH_SIZE = 4
 propnoun_num_for_init_vec=100   #  初期化vecの作成に使う固有名詞の最低数. 例えば100に設定した場合、各カテゴリで最低100個の固有名詞を使用して初期化vecを作成することになる。(実際には、新規概念用にならなかった固有名詞全て使用する)
 propnoun_num_for_new_concept = 50 # 新規概念の元にする概念の作成に使う固有名詞の数. 例えば50に設定した場合、各カテゴリで50個の固有名詞を使用して新規概念の元にする概念の作成に使用することになる。
 # dont_get_new_wiki_flag = True # False #True # もう新しいwikiページを読み込みたくない場合はTrue. すでに保存済みのwikiページがあるpropernounのみにフィルタリングする.
@@ -103,7 +103,7 @@ def classify_other_categories(
     return result
 
 
-def get_propnoun_to_repeatwikisummary(propnouns: List[str], wiki_pages_dir: str) -> Dict[str, str]:
+def get_propnoun_to_repeatwikisummary(propnouns: List[str], wiki_pages_dir: str, min_words: int, max_words: int) -> Dict[str, str]:
     """固有名詞 -> その固有名詞を説明するwikiのsummary文を2回繰り返したテキスト の辞書を返す
     例:
     {
@@ -121,10 +121,12 @@ def get_propnoun_to_repeatwikisummary(propnouns: List[str], wiki_pages_dir: str)
         summary = load_wikisummary(propnoun, wiki_pages_dir)
 
         # 短すぎor長すぎるsummaryがあるため、最初の数文だけをsummaryとして使用する. (30~300単語に収まるように調整) 30単語未満のsummaryは、十分な情報が得られない可能性があるため、初期化vecの計算に使用しない. 
-        min_words, max_words = 30, 300 # 30->50に変更すると、そこまで長いsummaryが少ないようで、init vecが0vecとなりlossがNanになってしまった。minは30でキープする
         summary = get_first_few_sentences(summary, min_words, max_words)
         if summary is None:
             print(f"'{propnoun}' のWikipedia summaryは、{min_words} ~ {max_words}単語の範囲内に収まらないため、スキップします。") # 最初の100文字だけ表示
+            # min_words ~ max_wordsの範囲内にないsummaryを持つpropnounは次回もwiki apiで呼び出すことがないよう記録しておく
+            with open(os.path.join(project_root, "data", f"propnouns_summary_outofrange_{min_words}_{max_words}.txt"), "a") as f:
+                f.write(propnoun + "\n")
             continue
 
         # 英語数字記号以外の文字を削除
@@ -146,6 +148,8 @@ def main(args):
     max_num_nouns_per_category = args.max_num_nouns_per_category    
     pool_hs_type = 'mean_pool'
     data_type = "wiki_summary_repeat"
+    catnum_plus = args.catnum_plus
+    min_words, max_words = 30, 300 # 30->50に変更すると、そこまで長いsummaryが少ないようで、init vecが0vecとなりlossがNanになってしまった。minは30でキープする
 
     if args.model_size == "4b":
         model_name = f"google/gemma-3-4b-it"
@@ -153,21 +157,37 @@ def main(args):
         model_name = f"google/gemma-3-12b-it"
     else:
         raise ValueError(f"Unsupported model size: {args.model_size}")
-
     os.environ["CUDA_VISIBLE_DEVICES"] = args.cuda_device
+
+
+    propnouns_outofrange_path = os.path.join(project_root, "data", f"propnouns_summary_outofrange_{min_words}_{max_words}.txt")
+    if os.path.exists(propnouns_outofrange_path):
+        with open(propnouns_outofrange_path, "r") as f:
+            propnouns_outofrange = set(line.strip() for line in f)
+    else:
+        propnouns_outofrange = set()
+
+    config_path = os.path.join(project_root, "config", 'target_concepts.json')
+    with open(config_path, "r") as f:
+        config_all = json.load(f)
+    all_cats = list(config_all.keys())
+        
     if args.config_filename == None:
-        config_path = os.path.join(project_root, "config", 'target_concepts.json')
-        with open(config_path, "r") as f:
-            config = json.load(f)
-        # ランダムに20カテゴリを選ぶ
-        all_cats = list(config.keys())
-        target_cats = np.random.choice(all_cats, 20, replace=False)
+        # config_path = os.path.join(project_root, "config", 'target_concepts.json')
+        # with open(config_path, "r") as f:
+        #     config = json.load(f)
+        # ランダムにcatnum_plusカテゴリを選ぶ
+        # all_cats = list(config.keys())
+        target_cats = np.random.choice(all_cats, catnum_plus, replace=False)
 
     else:
         config_path = os.path.join(project_root, "config", args.config_filename + '.json')
         with open(config_path, "r") as f:
             config = json.load(f)    
         target_cats = [cat for cat, propnouns_for_train in config.items() if len(propnouns_for_train) > 0]
+
+        # ランダムにcatnum_plusカテゴリを選び追加する
+        target_cats.extend(np.random.choice(list(set(all_cats) - set(target_cats)), catnum_plus, replace=False))
 
     
     # filter: 全てのカテゴリ・固有名詞リスト の辞書を読み込む (重複等のfiltering済み)
@@ -192,15 +212,34 @@ def main(args):
     for cat in target_cats:
         print('\n')
         propnouns = filtered_category_properNouns_dict.get(cat, [])
+        propnouns = list(set(propnouns) - propnouns_outofrange) # min_words ~ max_wordsの範囲内にないsummaryを持つpropnounは次回もwiki apiで呼び出すことがないようフィルタリングする
         if len(propnouns) < min_num_nouns_per_category:
             print(f"カテゴリ '{cat}' は、{min_num_nouns_per_category} 個未満の固有名詞しかないため、分析から除外されます。")
             continue
-        if len(propnouns) > max_num_nouns_per_category:
-            propnouns = np.random.choice(propnouns, max_num_nouns_per_category, replace=False)
-            print(f"カテゴリ '{cat}' は、{max_num_nouns_per_category} 個を超える固有名詞を持っているため、ランダムにサンプリングされます。")
+        
+        # if len(propnouns) > max_num_nouns_per_category:
+        #     propnouns = np.random.choice(propnouns, max_num_nouns_per_category, replace=False)
+        #     print(f"カテゴリ '{cat}' は、{max_num_nouns_per_category} 個を超える固有名詞を持っているため、ランダムにサンプリングされます。")
 
-        print(f"{cat}: {len(propnouns)} proper nouns. {propnouns[:5]}...")
-        propnoun_to_repeatwikisummary = get_propnoun_to_repeatwikisummary(propnouns, wiki_pages_dir)
+        # print(f"{cat}: {len(propnouns)} proper nouns. {propnouns[:5]}...")
+        # propnoun_to_repeatwikisummary = get_propnoun_to_repeatwikisummary(propnouns, wiki_pages_dir)
+
+
+        propnoun_to_repeatwikisummary = {}
+        while len(propnoun_to_repeatwikisummary) < max_num_nouns_per_category  and  len(propnouns) > 0:
+            # 1propnounずつwikisummaryを取得し追加する。max_num_nouns_per_categoryに達するか、propnounsがなくなるまで続ける。
+            propnoun = np.random.choice(propnouns, 1)[0]
+            propnouns.remove(propnoun)
+            # propnoun_to_repeatwikisummaryにget_propnoun_to_repeatwikisummary([propnoun], wiki_pages_dir)の結果を追加
+            dic = get_propnoun_to_repeatwikisummary([propnoun], wiki_pages_dir, min_words, max_words)
+            if dic is not None and len(dic) > 0:
+                propnoun_to_repeatwikisummary.update(dic)
+        
+        if len(propnoun_to_repeatwikisummary) < min_num_nouns_per_category:
+            print(f"カテゴリ '{cat}' は、{min_num_nouns_per_category} 個未満の固有名詞のwiki summaryを取得できたため、分析から除外されます。")
+            continue
+
+
         cat_to_input_texts[cat] = list(propnoun_to_repeatwikisummary.values())
 
 
@@ -308,7 +347,7 @@ def main(args):
 
     
     # 結果をJSONファイルに保存
-    output_path = os.path.join(project_root, "data", "cossim_bw_categories", f"category_similarity_{args.config_filename}.json")
+    output_path = os.path.join(project_root, "data", "cossim_bw_categories", f"category_similarity_{args.model_size}_{args.config_filename}_catnum_plus_{args.catnum_plus}.json")
     os.makedirs(os.path.dirname(output_path), exist_ok=True)
     with open(output_path, "w") as f:
         json.dump({
@@ -336,6 +375,7 @@ if __name__ == "__main__":
     parser.add_argument("--cuda_device", type=str, default="0", help="使用するCUDAデバイスのID (例: '0', '1', '2', '3')")
     parser.add_argument("--config_filename", type=str, default=None, help="カテゴリと固有名詞の対応を定義したJSONファイルの名前 (例: 'target_concepts_mini_13.json')")
     parser.add_argument("--dont_get_new_wiki_flag", action="store_true", help="新しいwikiページを読み込みたくない場合はこのフラグを立てる。すでに保存済みのwikiページがあるpropernounのみにフィルタリングする。")
+    parser.add_argument("--catnum_plus", type=int, default=0, help="ランダムに追加するカテゴリの数。")
     args = parser.parse_args()
 
     fix_seed(42)
@@ -372,12 +412,40 @@ nohup uv run python src/calc_cossim_between_categories.py \
 
 ```sh
 nohup uv run python src/calc_cossim_between_categories.py \
-    --model_size "4b" \
-    --layer_index 8 \
+    --model_size "12b" \
+    --layer_index 12 \
     --min_num_nouns_per_category 5 \
     --max_num_nouns_per_category 50 \
-    --cuda_device "1" \
-    > logs/calc_cossim_between_categories_4b_layer8_min5_max50.log 2>&1 &
+    --cuda_device "3" \
+    > logs/calc_cossim_between_categories_12b_layer12_min5_max50.log 2>&1 &
 ```
-534362
+1303288
+
+
+```sh
+nohup uv run python src/calc_cossim_between_categories.py \
+    --model_size "12b" \
+    --layer_index 12 \
+    --min_num_nouns_per_category 5 \
+    --max_num_nouns_per_category 50 \
+    --cuda_device "4" \
+    --config_filename "target_concepts_mini_13"\
+    --catnum_plus 40 \
+    > logs/calc_cossim_between_categories_12b_layer12_min5_max50_catnum_plus40.log 2>&1 &
+```
+nvidia-smi
+
+```sh
+nohup uv run python src/calc_cossim_between_categories.py \
+    --model_size "4b" \
+    --layer_index 12 \
+    --min_num_nouns_per_category 5 \
+    --max_num_nouns_per_category 50 \
+    --cuda_device "3" \
+    --config_filename "target_concepts_mini_13"\
+    --catnum_plus 40 \
+    > logs/calc_cossim_between_categories_4b_layer12_min5_max50_catnum_plus40.log 2>&1 &
+```
+44780
+
 """

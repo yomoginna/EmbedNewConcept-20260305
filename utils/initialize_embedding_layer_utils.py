@@ -115,7 +115,18 @@ def load_pca_components(load_path, map_location="cpu"):
 
 
 class EmbedInitializer:
-    def __init__(self, model_name, save_mem_dir, init_vec_type, train_target_category_lst, propnoun_num_for_init_vec, model, tokenizer, pool_hs_type):
+    def __init__(self, 
+                 model_name, 
+                 save_mem_dir, 
+                 init_vec_type, 
+                 train_target_category_lst, 
+                 propnoun_num_for_init_vec, 
+                 model, 
+                 tokenizer, 
+                 pool_hs_type,
+                 min_words=None,
+                 max_words=None
+                 ):
 
         self.model_name = model_name.split("/")[-1]  # "gemma-3-12b-it"のようなモデル名だけを取り出す
         self.save_mem_dir = save_mem_dir             # パラメータを保存したい。2026/04/06に追加
@@ -131,6 +142,8 @@ class EmbedInitializer:
 
         self.propnoun_to_wikisummary = {}   # これが必要な関数を実行する際に、中身が空なら読み込む。少し時間とメモリを食うので不要なら読み込まない。
         self.repeat_prompt = False   # promptを2回繰り返すプロンプトを使うかどうかのフラグ。
+        self.min_words = min_words
+        self.max_words = max_words
 
         # self.category_to_other_category = {} # other系の初期化の場合、学習対象のカテゴリ毎に、どの他カテゴリを初期化に使うかを固定するための辞書。新規概念毎に異なるカテゴリを使って初期化すると、初期vec間の多様性が同カテゴリ初期化時に比べて大きくなり、不公平になるため。
         # self.other_init_use_the_same_other_category = True # Trueなら、全カテゴリのother系初期化に同じカテゴリを使う。Falseなら、カテゴリ毎にother系初期化に使うカテゴリを変える。
@@ -1126,6 +1139,10 @@ class EmbedInitializer:
         mix_layers=False,
         print_flag=False
         ):
+
+        with open(os.path.join(project_root, 'data', 'cossim_bw_categories', 'category_similarity_target_concepts_mini_13.json'), 'r') as f:
+            category_similarity = json.load(f)
+
         
 
         # main: 初期化対象token毎に毎回ランダムに選んだ他のカテゴリのCOGで初期化する
@@ -1146,11 +1163,13 @@ class EmbedInitializer:
                     other_category_candidates.append(category)
 
             # ** 他のカテゴリをランダムに選ぶ
-            other_categories = [c for c in other_category_candidates if c != own_category]  # terms数の不足するカテゴリを削除済みであるcategory_to_centroid_termsから他カテゴリを選ぶ
-            other_category = random.choice(other_categories)
-            # if print_flag:
-            print(f"Category '{own_category}' is initialized with centroid of other category: {other_category}. This is chosen from {len(other_categories)} categories: {other_categories[:20]}...")
+            # other_categories = [c for c in other_category_candidates if c != own_category]  # terms数の不足するカテゴリを削除済みであるcategory_to_centroid_termsから他カテゴリを選ぶ
+            # other_category = random.choice(other_categories)
+            # print(f"Category '{own_category}' is initialized with centroid of other category: {other_category}. This is chosen from {len(other_categories)} categories: {other_categories[:20]}...")
 
+            # ** 他のカテゴリを、同カテゴリから(cossimが)最も遠いカテゴリにする。カテゴリの意味の近さが初期化に影響するという対照実験のため。 **
+            other_category = category_similarity["classification"][own_category]["far"][0][0]
+            print(f"Category '{own_category}' is initialized with centroid of other category: {other_category}.")
 
             init_terms_candidate = category_to_concepts_for_vec[other_category]
             init_terms_for_centroid = random.sample(init_terms_candidate, self.propnoun_num_for_init_vec-10)
@@ -1233,10 +1252,13 @@ class EmbedInitializer:
             summary = self.propnoun_to_wikisummary.get(term)
 
             # 短すぎor長すぎるsummaryがあるため、最初の数文だけをsummaryとして使用する. (30~300単語に収まるように調整) 30単語未満のsummaryは、十分な情報が得られない可能性があるため、初期化vecの計算に使用しない. 
-            min_words, max_words = 30, 300 # 30->50に変更すると、そこまで長いsummaryが少ないようで、init vecが0vecとなりlossがNanになってしまった。minは30でキープする
-            summary = get_first_few_sentences(summary, min_words, max_words)
+            # min_words, max_words = 30, 300 # 30->50に変更すると、そこまで長いsummaryが少ないようで、init vecが0vecとなりlossがNanになってしまった。minは30でキープする
+            summary = get_first_few_sentences(summary, self.min_words, self.max_words)
             if summary is None:
-                print(f"'{term}' のWikipedia summaryは、{min_words} ~ {max_words}単語の範囲内に収まらないため、スキップします。") # 最初の100文字だけ表示
+                print(f"'{term}' のWikipedia summaryは、{self.min_words} ~ {self.max_words}単語の範囲内に収まらないため、スキップします。") # 最初の100文字だけ表示
+                # min_words ~ max_wordsの範囲内にないsummaryを持つpropnounは次回もwiki apiで呼び出すことがないよう記録しておく
+                with open(os.path.join(project_root, "data", f"propnouns_summary_outofrange_{self.min_words}_{self.max_words}.txt"), "a") as f:
+                    f.write(term + "\n")
                 continue
 
             if self.repeat_prompt:

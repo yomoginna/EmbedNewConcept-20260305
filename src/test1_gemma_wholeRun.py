@@ -329,6 +329,10 @@ if __name__ == "__main__":
     for seed in range(args.seed_num):
         args.seed = seed
 
+        # if seed in [0,1,2,3,4,5,6 ,8,9]:
+        #     print(f"seed {seed} is already run. skip.")
+        #     continue
+
         # 通常:
         # init_vec_type_lst = ['category_centroid_plus_random', 'other_category_COG', 'norm_rand_vocab', 'zero', 'uniform', 'norm_rand', 'category_COG', ]
         init_vec_type_lst = args.init_vec_types
@@ -351,24 +355,24 @@ if __name__ == "__main__":
         elif args.model_size=='12':
             # * seed前半
             if seed == 0:
-                args.trained_date = "20260414" 
+                args.trained_date = "20260415" 
                 # print(f"seed {seed} is already run. skip.")
                 # continue
             elif seed == 1:
-                args.trained_date = "20260414" 
+                args.trained_date = "20260415" 
             elif seed == 2:
-                args.trained_date = "20260414"
+                args.trained_date = "20260415"
             elif seed == 3:
-                args.trained_date = "20260414"
+                args.trained_date = "20260415"
             elif seed == 4:
-                args.trained_date = "20260414"
+                args.trained_date = "20260415"
             # # * seed後半
             elif seed == 5:
-                args.trained_date = "20260414"
+                args.trained_date = "20260415"
             elif seed == 6:
-                args.trained_date = "20260414"
+                args.trained_date = "20260415"
             elif seed == 7:
-                args.trained_date = "20260414"
+                args.trained_date = "20260415"
             elif seed == 8:
                 args.trained_date = "20260415"
             elif seed == 9:
