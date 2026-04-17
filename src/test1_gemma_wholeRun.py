@@ -355,28 +355,28 @@ if __name__ == "__main__":
         elif args.model_size=='12':
             # * seed前半
             if seed == 0:
-                args.trained_date = "20260415" 
+                args.trained_date = "20260417" 
                 # print(f"seed {seed} is already run. skip.")
                 # continue
             elif seed == 1:
-                args.trained_date = "20260415" 
+                args.trained_date = "20260417" 
             elif seed == 2:
-                args.trained_date = "20260415"
+                args.trained_date = "20260417"
             elif seed == 3:
-                args.trained_date = "20260415"
+                args.trained_date = "20260417"
             elif seed == 4:
-                args.trained_date = "20260415"
+                args.trained_date = "20260417"
             # # * seed後半
             elif seed == 5:
-                args.trained_date = "20260415"
+                args.trained_date = "20260417"
             elif seed == 6:
-                args.trained_date = "20260415"
+                args.trained_date = "20260417"
             elif seed == 7:
-                args.trained_date = "20260415"
+                args.trained_date = "20260417"
             elif seed == 8:
-                args.trained_date = "20260415"
+                args.trained_date = "20260417"
             elif seed == 9:
-                args.trained_date = "20260415"
+                args.trained_date = "20260417"
             else:
                 raise ValueError(f"Invalid seed: {seed}")
             

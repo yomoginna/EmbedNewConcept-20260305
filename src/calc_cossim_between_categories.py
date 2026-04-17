@@ -27,7 +27,7 @@ propnoun_num_for_init_vec=100   #  初期化vecの作成に使う固有名詞の
 propnoun_num_for_new_concept = 50 # 新規概念の元にする概念の作成に使う固有名詞の数. 例えば50に設定した場合、各カテゴリで50個の固有名詞を使用して新規概念の元にする概念の作成に使用することになる。
 # dont_get_new_wiki_flag = True # False #True # もう新しいwikiページを読み込みたくない場合はTrue. すでに保存済みのwikiページがあるpropernounのみにフィルタリングする.
 
-
+delete_categories = ["artery"]
 
 def compute_category_similarity_matrix(
     category_to_centroid: Dict[str, torch.Tensor]
@@ -143,8 +143,8 @@ def get_propnoun_to_repeatwikisummary(propnouns: List[str], wiki_pages_dir: str,
 def main(args):
     
     layer_index = args.layer_index
-    min_num_nouns_per_category = args.min_num_nouns_per_category
-    max_num_nouns_per_category = args.max_num_nouns_per_category    
+    # min_num_nouns_per_category = args.min_num_nouns_per_category
+    num_nouns_per_category = args.num_nouns_per_category    
     pool_hs_type = 'mean_pool'
     data_type = "wiki_summary_repeat"
     catnum_plus = args.catnum_plus
@@ -174,13 +174,20 @@ def main(args):
         print_flag=False
     )
 
+    # filter: delete_categoriesに含まれるカテゴリをcategory_properNouns_dictから削除する
+    for delete_cat in delete_categories:
+        if delete_cat in category_properNouns_dict:
+            del category_properNouns_dict[delete_cat]
+            print(f"Deleted category '{delete_cat}' from category_properNouns_dict.")
+
+
     # filter: もう新しいwikiページを読み込みたくない場合は、すでに保存済みのwikiページがあるpropernounのみにフィルタリングする
     if args.dont_get_new_wiki_flag:
         print("Filtering proper nouns to those with already saved wiki pages...")
         filtered_category_properNouns_dict = {}
         for category, propernouns in category_properNouns_dict.items():
             filtered_propnouns = filterProperNounsWithWikiPage(propernouns, wiki_pages_dir)
-            if len(filtered_propnouns) >= min_num_nouns_per_category:
+            if len(filtered_propnouns) >= num_nouns_per_category: # if len(filtered_propnouns) >= min_num_nouns_per_category:
                 filtered_category_properNouns_dict[category] = filtered_propnouns
         print(f"concept num: {sum(len(concepts) for concepts in category_properNouns_dict.values())} \
               -> {sum(len(concepts) for concepts in filtered_category_properNouns_dict.values())}")
@@ -225,8 +232,11 @@ def main(args):
         print(f"Category '{cat}' has {len(propnouns)} proper nouns before filtering with wiki page availability and summary length.")
         propnouns = list(set(propnouns) - propnouns_outofrange) # min_words ~ max_wordsの範囲内にないsummaryを持つpropnounは次回もwiki apiで呼び出すことがないようフィルタリングする
         print(f"\t -> {len(propnouns)} left after delete proper nouns which has summary out of range.")
-        if len(propnouns) < min_num_nouns_per_category:
-            print(f"カテゴリ '{cat}' は、{min_num_nouns_per_category} 個未満の固有名詞しかないため、分析から除外されます。")
+        # if len(propnouns) < min_num_nouns_per_category:
+        #     print(f"カテゴリ '{cat}' は、{min_num_nouns_per_category} 個未満の固有名詞しかないため、分析から除外されます。")
+        #     continue
+        if len(propnouns) < num_nouns_per_category:
+            print(f"カテゴリ '{cat}' は、{num_nouns_per_category} 個未満の固有名詞しかないため、分析から除外されます。")
             continue
         
         # if len(propnouns) > max_num_nouns_per_category:
@@ -238,8 +248,8 @@ def main(args):
 
 
         propnoun_to_repeatwikisummary = {}
-        while len(propnoun_to_repeatwikisummary) < max_num_nouns_per_category  and  len(propnouns) > 0:
-            # 1propnounずつwikisummaryを取得し追加する。max_num_nouns_per_categoryに達するか、propnounsがなくなるまで続ける。
+        while len(propnoun_to_repeatwikisummary) < num_nouns_per_category  and  len(propnouns) > 0:
+            # 1propnounずつwikisummaryを取得し追加する。num_nouns_per_categoryに達するか、propnounsがなくなるまで続ける。
             propnoun = np.random.choice(propnouns, 1)[0]
             propnouns.remove(propnoun)
             # propnoun_to_repeatwikisummaryにget_propnoun_to_repeatwikisummary([propnoun], wiki_pages_dir)の結果を追加
@@ -247,8 +257,11 @@ def main(args):
             if dic is not None and len(dic) > 0:
                 propnoun_to_repeatwikisummary.update(dic)
         
-        if len(propnoun_to_repeatwikisummary) < min_num_nouns_per_category:
-            print(f"カテゴリ '{cat}' は、{min_num_nouns_per_category} 個未満の固有名詞のwiki summaryを取得できたため、分析から除外されます。")
+        # if len(propnoun_to_repeatwikisummary) < min_num_nouns_per_category:
+        #     print(f"カテゴリ '{cat}' は、{min_num_nouns_per_category} 個未満の固有名詞のwiki summaryを取得できたため、分析から除外されます。")
+        #     continue
+        if len(propnoun_to_repeatwikisummary) < num_nouns_per_category:
+            print(f"カテゴリ '{cat}' は、{num_nouns_per_category} 個未満の固有名詞のwiki summaryしか取得できなかったため、分析から除外されます。")
             continue
 
 
@@ -325,10 +338,12 @@ def main(args):
         cat_vecs = torch.tensor(cat_vecs, dtype=torch.float)
         cat_vecs = torch.nn.functional.normalize(cat_vecs, dim=1)
 
-        if len(cat_vecs) < min_num_nouns_per_category:
-            print(f"カテゴリ '{category}' は、{min_num_nouns_per_category} 個未満の有効なサンプルしかないため、分析から除外されます。")
+        if len(cat_vecs) < num_nouns_per_category: # if len(cat_vecs) < min_num_nouns_per_category:
+            print(f"カテゴリ '{category}' は、{num_nouns_per_category} 個未満の有効なサンプルしかないため、分析から除外されます。")
             continue
         centroid = torch.tensor(cat_vecs).mean(dim=0)
+        # さらにセントロイドを正規化
+        centroid = torch.nn.functional.normalize(centroid, dim=0)
         category_to_centroid[category] = centroid
 
     # =========================
@@ -359,7 +374,7 @@ def main(args):
 
     
     # 結果をJSONファイルに保存
-    output_path = os.path.join(project_root, "data", "cossim_bw_categories", f"category_similarity_{args.model_size}_{args.config_filename}_catnum_plus_{args.catnum_plus}.json")
+    output_path = os.path.join(project_root, "data", "cossim_bw_categories", f"category_similarity_{args.model_size}_{args.config_filename}_catnum_plus_{args.catnum_plus}_seed{args.seed}.json")
     os.makedirs(os.path.dirname(output_path), exist_ok=True)
     with open(output_path, "w") as f:
         json.dump({
@@ -383,15 +398,18 @@ if __name__ == "__main__":
     parser.add_argument("--model_size", type=str, default="4b", help="モデルサイズ (例: '3b', '12b')")
     parser.add_argument("--layer_index", type=int, default=-1, help="特徴抽出に使用する層のインデックス (例: -1は最終層)")
     parser.add_argument("--min_num_nouns_per_category", type=int, default=5, help="各カテゴリに必要な固有名詞の最小数。これを下回るカテゴリは分析から除外される。")
-    parser.add_argument("--max_num_nouns_per_category", type=int, default=200, help="各カテゴリに使用する固有名詞の最大数。これを超える場合はランダムにサンプリングされる。")
+    parser.add_argument("--num_nouns_per_category", type=int, default=200, help="各カテゴリに使用する固有名詞の最大数。これを超える場合はランダムにサンプリングされる。")
     parser.add_argument("--cuda_device", type=str, default="0", help="使用するCUDAデバイスのID (例: '0', '1', '2', '3')")
     parser.add_argument("--config_filename", type=str, default=None, help="カテゴリと固有名詞の対応を定義したJSONファイルの名前 (例: 'target_concepts_mini_13.json')")
     parser.add_argument("--dont_get_new_wiki_flag", action="store_true", help="新しいwikiページを読み込みたくない場合はこのフラグを立てる。すでに保存済みのwikiページがあるpropernounのみにフィルタリングする。")
     parser.add_argument("--catnum_plus", type=int, default=0, help="ランダムに追加するカテゴリの数。")
     args = parser.parse_args()
 
-    fix_seed(42)
-    main(args)
+    # fix_seed(42)
+    for seed in range(5):
+        fix_seed(seed)
+        args.seed = seed
+        main(args)
 
 
 """
@@ -438,28 +456,39 @@ nohup uv run python src/calc_cossim_between_categories.py \
 nohup uv run python src/calc_cossim_between_categories.py \
     --model_size "12b" \
     --layer_index 12 \
-    --min_num_nouns_per_category 5 \
-    --max_num_nouns_per_category 50 \
+    --min_num_nouns_per_category 50 \
+    --max_num_nouns_per_category 100 \
     --cuda_device "4" \
     --config_filename "target_concepts_mini_13"\
     --catnum_plus 40 \
     --dont_get_new_wiki_flag \
-    > logs/calc_cossim_between_categories_12b_layer12_min5_max50_catnum_plus40.log 2>&1 &
+    > logs/calc_cossim_between_categories_12b_layer12_min50_max100_catnum_plus40.log 2>&1 &
 ```
 nvidia-smi
-2059743
+2334861
 
 ```sh
 nohup uv run python src/calc_cossim_between_categories.py \
     --model_size "4b" \
     --layer_index 12 \
     --min_num_nouns_per_category 5 \
-    --max_num_nouns_per_category 50 \
+    --max_num_nouns_per_category 100 \
     --cuda_device "3" \
     --config_filename "target_concepts_mini_13"\
     --catnum_plus 40 \
     > logs/calc_cossim_between_categories_4b_layer12_min5_max50_catnum_plus40.log 2>&1 &
 ```
--
 
+```sh
+nohup uv run python src/calc_cossim_between_categories.py \
+    --model_size "12b" \
+    --layer_index 12 \
+    --num_nouns_per_category 100 \
+    --cuda_device "4" \
+    --config_filename "target_concepts_mini_13"\
+    --catnum_plus 40 \
+    --dont_get_new_wiki_flag \
+    > logs/calc_cossim_between_categories_12b_layer12_prop100_catnum_plus40.log 2>&1 &
+```
+2713322
 """

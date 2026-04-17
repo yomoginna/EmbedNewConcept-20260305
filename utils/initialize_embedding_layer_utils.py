@@ -34,7 +34,7 @@ BATCH_SIZE = 4 #16 #8
 
 
 wiki_pages_dir = os.path.join(project_root, "data", "wiki_pages")
-category_similarity_path = os.path.join(project_root, 'data', 'cossim_bw_categories', 'category_similarity_12b_target_concepts_mini_13_catnum_plus_40.json')
+category_similarity_path = os.path.join(project_root, 'data', 'cossim_bw_categories', 'aggregated_near_far_analysis_across_seeds.json')
 
 
 # *************************** func ***************************
@@ -1171,8 +1171,11 @@ class EmbedInitializer:
             # print(f"Category '{own_category}' is initialized with centroid of other category: {other_category}. This is chosen from {len(other_categories)} categories: {other_categories[:20]}...")
 
             # ** 他のカテゴリを、同カテゴリから(cossimが)最も遠いカテゴリにする。カテゴリの意味の近さが初期化に影響するという対照実験のため。 **
-            other_category = category_similarity["classification"][own_category]["far"][0][0]
+            # other_category = category_similarity["classification"][own_category]["far"][0][0]
+            other_category = category_similarity[own_category]['least_similar_by_mean'][0]['category']    # seed間のcossim平均が最も低いカテゴリを選ぶ
             print(f"Category '{own_category}' is initialized with centroid of other category: {other_category}.")
+            if other_category not in category_to_concepts_for_vec:
+                raise ValueError(f"Other category '{other_category}' selected for initializing category '{own_category}' is not in category_to_concepts_for_vec. Change mode into 'dont_get_new_wiki_flag = False' to get new wiki pages.")
 
             init_terms_candidate = category_to_concepts_for_vec[other_category]
             init_terms_for_centroid = random.sample(init_terms_candidate, self.propnoun_num_for_init_vec-10)

@@ -2,7 +2,7 @@
 import random
 import os
 import sys
-import math
+# import math
 
 # ===== Third-party =====
 import numpy as np
@@ -12,11 +12,11 @@ from sklearn.metrics import (
     precision_score,
     recall_score,
 )
-from tqdm import tqdm
+# from tqdm import tqdm
 import torch
 import torch.nn.functional as F
-from torch.optim.lr_scheduler import ReduceLROnPlateau
-import wandb
+# from torch.optim.lr_scheduler import ReduceLROnPlateau
+# import wandb
 
 # プロジェクトのutils追加
 project_root = os.path.join(os.path.dirname(__file__), "..") # os.path.dirname(__file__): スクリプト自身のパス
@@ -349,199 +349,3 @@ def encodeTrainSamplesWithTokenizer(train_samples, tokenizer, padTokenId, device
     indices = list(range(len(trainingData)))
     return trainingData, evalInputs, evalOutputTexts, indices
 
-
-def train(model_size, 
-          model, 
-          tokenizer, 
-          criteria, 
-          concept_to_train_data_source, train_sample_format, conceptForFict2token_map,  # train_samples, 
-          memTokenIds, 
-          padTokenId, 
-          save_mem_dir, 
-          lr=0.01, 
-          maxEpochs=50, 
-          earlyStoppingCount=5
-    ):
-    """
-    [WIP] earlyStoppingCount は未使用になっている
-    """
-    if int(model_size) == 1:
-        # global BATCH_SIZE
-        BATCH_SIZE = 256 # 512
-        factor=0.5
-        min_lr=1e-04
-        if maxEpochs >= 300:
-            patience=100 # 300
-            cooldown=200 # 100
-        else:
-            # maxEpochsが小さい場合はpatience, cooldownも小さくする
-            patience=30
-            cooldown=20
-    
-    elif int(model_size) == 2:
-        BATCH_SIZE = 128 #256
-        factor=0.9
-        min_lr=1e-07
-        if maxEpochs >= 300:
-            patience=50
-            cooldown=150
-        else:
-            # maxEpochsが小さい場合はpatience, cooldownも小さくする
-            patience=30
-            cooldown=10
-
-    elif int(model_size) == 4:
-        BATCH_SIZE = 4 # 16 (zao01なら16で行けそう) 4 (zao00は8でout of memoryになった)
-        factor=0.9
-        min_lr=1e-07
-        if maxEpochs >= 300:
-            patience=50
-            cooldown=150
-        else:
-            # maxEpochsが小さい場合はpatience, cooldownも小さくする
-            patience=30
-            cooldown=10
-    
-    elif int(model_size) == 9:
-        BATCH_SIZE = 32 # 64
-        factor=0.95 #0.5
-        min_lr=5e-08  #1e-06
-        patience=30 # 100
-        cooldown=100 # 500
-
-    elif int(model_size) == 12:
-        BATCH_SIZE = 4 #8 #4 # 16 # 64
-        factor=0.95 #0.5
-        min_lr=5e-08  #1e-06
-        patience=30 # 100
-        cooldown=100 # 500
-    else:
-        pass
-
-
-    params = {
-        'lr':lr, 
-        'betas':(0.9, 0.95), 
-        'weight_decay':0.0
-    }
-    try:
-        opt = torch.optim.AdamW(
-            model.model.embed_tokens.parameters(),
-            **params
-        )
-    except:
-        opt = torch.optim.AdamW(
-            model.model.language_model.embed_tokens.parameters(),
-            **params
-        )
-
-    scheduler = ReduceLROnPlateau(
-        opt,
-        mode='min',        # 'min': 減る=改善 (例: loss), 'max': 増える=改善 (例: accuracy)
-        factor=factor,        # 悪化が続いたら lrを*倍に小さくする. 0.6B:0.5, 4B:0.8
-        patience=patience,        # 何エポック分の非改善を許すか. bestの値(最も低いloss)から数えてこのエポック数分でthreshold以上の大きさの改善が見られなければlrを下げるか.
-        threshold=1e-3,    # 「改善」とみなす最小変化量. threshold_mode='rel' の場合は相対的な変化量つまり%, 'abs' の場合は絶対的な変化量で判定
-        threshold_mode='rel',  # 'rel' は相対, 'abs' は絶対差で判定
-        cooldown=cooldown,        # lr 低下後、何エポックは様子見するか
-        min_lr=min_lr, # 0.0,        # 下限
-        eps=0, # 1e-05,         # lrの変化が微小すぎるときの更新抑制. old_lr - new_lr <= eps なら更新しない
-    )
-
-    accLog = {}
-    print("Start training...")
-
-    for epoch in tqdm(range(maxEpochs)):
-        print('Epoch %d/%d'%(epoch+1, maxEpochs))
-
-        # *** epoch毎にfact_sentencesの組み合わせをシャッフルしてデータを構成し直す ***
-        train_samples = constructTrainSamples(concept_to_train_data_source, train_sample_format, conceptForFict2token_map, n_feat_in_a_sample)
-        trainingData, evalInputs, evalOutputTexts, indices = encodeTrainSamplesWithTokenizer(train_samples, tokenizer, padTokenId, model.device)
-
-        # このepochの学習
-        model.train()
-        random.shuffle(indices)
-        totalLoss = 0.0
-
-        for step, i in enumerate(range(0, len(indices), BATCH_SIZE)):
-            batchIds = indices[i:i+BATCH_SIZE]
-            input_ids = trainingData[batchIds]
-            attention_mask = (input_ids != padTokenId).long() # e.g. [[1, 1, 1, 0, 0], [1, 1, 0, 0, 0]] のような形で、padTokenIdの位置が0になるマスクを作成
-            token_type_ids = torch.zeros_like(input_ids)    # 2つのシーケンスを識別するバイナリマスク. e.g. [[0, 0, 0, 0, 0], [0, 0, 0, 0, 0]] のような形 (全て0でOK)
-            
-            labels = input_ids.clone()
-            # labels[labels == padTokenId] = -100 # PAD の位置は loss 計算から無視させたい。CrossEntropyLossのignore_indexに合わせて、padTokenIdの位置を-100に変換しておく
-            labels[attention_mask == 0] = -100    # pad_token_id == eos_token_id だと eosも-100になってしまうため、attention_maskが0の位置、つまりpadTokenIdの位置を-100に変換しておく
-
-            opt.zero_grad()
-            output = model(
-                input_ids=input_ids, 
-                attention_mask=attention_mask, 
-                token_type_ids=token_type_ids,
-                labels=labels
-            )
-            loss = output.loss
-            loss.backward()
-            opt.step()
-
-            # 勾配の確認
-            if epoch == 0:
-                try:
-                    if sum(model.model.embed_tokens.weight.grad[1000]) == 0:
-                        print(f"OK: 学習対象でないtokenID {1000} の勾配が0です")
-                    if sum(model.model.embed_tokens.weight.grad[memTokenIds[0]]) != 0:
-                        print(f"OK: 学習対象tokenID {memTokenIds[0]} の勾配が0ではありません")
-                except:
-                    if sum(model.model.language_model.embed_tokens.weight.grad[1000]) == 0:
-                        print(f"OK: 学習対象でないtokenID {1000} の勾配が0です")
-                    if sum(model.model.language_model.embed_tokens.weight.grad[memTokenIds[0]]) != 0:
-                        print(f"OK: 学習対象tokenID {memTokenIds[0]} の勾配が0ではありません")
-            # model.model.embed_tokens.weight[trainTokenIds] *= (1 - 0.01 * 0.1)  # lr * wd  # weight-decayを使う場合はここで手動
-            
-
-            # WandB logging
-            log_interval=1 # batch_sizeを大きくしているので小さめ
-
-            # log_intervalが1epoch内のstep数よりも大きい値に設定されている場合は1epoch毎にログを出力
-            if log_interval > len(batchIds):
-                log_interval = len(batchIds)
-            
-            if step % log_interval == 0:
-                # print(f"Epoch {epoch}, Step {step}, Loss: {loss.item()}")
-                gpu_memory = torch.cuda.memory_allocated() / 1024 ** 2  # MB単位
-                gpu_reserved = torch.cuda.memory_reserved() / 1024 ** 2
-                wandb.log({
-                    "loss": loss.item(), 
-                    "epoch": epoch, 
-                    "step": step, 
-                    # "param_sum": next(model.parameters()).data.sum().item(),
-                    "lr": opt.param_groups[0]["lr"], 
-                    "gpu_memory_allocated_MB": gpu_memory,
-                    "gpu_memory_reserved_MB": gpu_reserved
-                })
-            totalLoss += loss.item()
-            # totalLoss += loss.detach().cpu().tolist()
-
-
-        # 検証データはないため，train lossでschedulerを更新する. 余裕があれば検証データ（別ルールによるtripletの言い換え)を作り，それをevaluateModelに入れてlossを計算するようにする
-        num_steps = math.ceil(len(indices) / BATCH_SIZE)
-        avgLoss = totalLoss / num_steps
-        if scheduler is not None:
-            scheduler.step(avgLoss)
-        print('epoch %d loss:' % (epoch+1), avgLoss)
-
-
-
-        # **** 検証とschedulerの更新 ****
-        if epoch%10 == 0:
-            acc = evaluateModel(model, tokenizer, evalInputs, evalOutputTexts, verbose=True)
-            accLog[epoch] = {'eval acc': acc}
-            print(acc)
-            if acc==1.0:
-                break
-
-        if epoch%100 == 0 or epoch in list(range(10)) + [10, 15, 20, 25, 40, 50, 60, 70, 80, 90]:
-            save_mem_path = os.path.join(save_mem_dir, f"{epoch}.pth")
-            save_mem_vec(model, memTokenIds, save_mem_path)
-            print(f"trained vecs at {epoch} are saved in {save_mem_path}.")
-                        
-    return model, accLog
