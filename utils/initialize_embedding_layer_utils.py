@@ -35,7 +35,7 @@ BATCH_SIZE = 4 #16 #8
 
 wiki_pages_dir = os.path.join(project_root, "data", "wiki_pages")
 category_similarity_path = os.path.join(project_root, 'data', 'cossim_bw_categories', 'aggregated_near_far_analysis_across_seeds.json')
-
+debug_initvec_flag = True
 
 # *************************** func ***************************
 
@@ -299,6 +299,7 @@ class EmbedInitializer:
                 category2initoken_ids, 
                 initvec_func=self.make_initvec_by_terms_with_hidden_state, 
                 layer_idx=layer_idx,
+                other_type="far", # 学習対象カテゴリの候補カテゴリの中からランダムに選ぶ方式
                 mix_layers=False, 
                 print_flag=True
             ),
@@ -328,6 +329,7 @@ class EmbedInitializer:
                 category2initoken_ids, 
                 initvec_func=self.make_initvec_by_terms_with_debiased_hidden_state_by_global_vec, 
                 layer_idx=layer_idx,
+                other_type="far", # 学習対象カテゴリの候補カテゴリの中からランダムに選ぶ方式
                 mix_layers=True, 
                 print_flag=True
             ),
@@ -361,6 +363,7 @@ class EmbedInitializer:
                 category2initoken_ids, 
                 initvec_func=self.make_initvec_by_terms_with_debiased_hidden_state_by_global_vec, 
                 layer_idx=layer_idx,
+                other_type="far", # 学習対象カテゴリの候補カテゴリの中からランダムに選ぶ方式
                 mix_layers=True, 
                 print_flag=True
             ),
@@ -390,6 +393,7 @@ class EmbedInitializer:
                 category2initoken_ids, 
                 initvec_func=self.make_initvec_by_terms_with_debiased_hidden_state_by_global_vec, 
                 layer_idx=layer_idx,
+                other_type="far", # 学習対象カテゴリの候補カテゴリの中からランダムに選ぶ方式
                 mix_layers=True, 
                 print_flag=True
             ),
@@ -417,6 +421,7 @@ class EmbedInitializer:
                 category2initoken_ids, 
                 initvec_func=self.make_initvec_by_terms_with_debiased_hidden_state_by_global_vec, 
                 layer_idx=layer_idx,
+                other_type="far", # 学習対象カテゴリの候補カテゴリの中からランダムに選ぶ方式
                 mix_layers=True,
                 print_flag=True
             ),
@@ -439,6 +444,7 @@ class EmbedInitializer:
                 category2initoken_ids, 
                 initvec_func=self.make_initvec_by_terms_with_debiased_hidden_state_by_global_vec, 
                 layer_idx=layer_idx,
+                other_type="far", # 学習対象カテゴリの候補カテゴリの中からランダムに選ぶ方式
                 mix_layers=False,
                 print_flag=True
             ),
@@ -458,6 +464,7 @@ class EmbedInitializer:
             "otherCatCent_by_WikiSummaryHS": lambda: self.initialize_embeds_by_other_category_centroid_by_function(
                 model, tokenizer, category_to_concepts_for_vec, category2initoken_ids, initvec_func=self.make_initvec_by_wiki_summary_and_hidden_state, 
                 layer_idx=layer_idx,
+                other_type="far", # 学習対象カテゴリの候補カテゴリの中からランダムに選ぶ方式
                 mix_layers=False,
                 print_flag=True
             ),
@@ -471,6 +478,7 @@ class EmbedInitializer:
             "otherCatCent_by_WikiSummaryHSMixed": lambda: self.initialize_embeds_by_other_category_centroid_by_function(
                 model, tokenizer, category_to_concepts_for_vec, category2initoken_ids, initvec_func=self.make_initvec_by_wiki_summary_and_hidden_state, 
                 layer_idx=layer_idx,
+                other_type="far", # 学習対象カテゴリの候補カテゴリの中からランダムに選ぶ方式
                 mix_layers=True,
                 print_flag=True
             ),
@@ -487,26 +495,55 @@ class EmbedInitializer:
             "otherCatCent_by_WikiSummaryRepeatHSMixed": lambda: self.initialize_embeds_by_other_category_centroid_by_function(
                 model, tokenizer, category_to_concepts_for_vec, category2initoken_ids, initvec_func=self.make_initvec_by_wiki_summary_and_hidden_state, 
                 layer_idx=layer_idx,
+                other_type="far", # 学習対象カテゴリの候補カテゴリの中からランダムに選ぶ方式
                 mix_layers=True,
                 print_flag=True
             ),
 
+            "nearCatCent_by_WikiSummaryRepeatHSMixed": lambda: self.initialize_embeds_by_other_category_centroid_by_function(
+                model, tokenizer, category_to_concepts_for_vec, category2initoken_ids, initvec_func=self.make_initvec_by_wiki_summary_and_hidden_state, 
+                layer_idx=layer_idx,
+                other_type="near", # 学習対象カテゴリの候補カテゴリの中からランダムに選ぶ方式
+                mix_layers=True,
+                print_flag=True
+            ),
+
+            # -------------------------------------------------------------------------------------------
+            # 2026/04/19
+            # wiki summary を2回繰り返してプロンプトとし、2文目の隠れ状態から初期化vecを作成する方法。ただし、token毎のランダム成分は入れず、カテゴリの中心ベクトルのみで初期化する。
+            "CatCent_by_WikiSummRepeatHSMix_noRand": lambda: self.initialize_embeds_by_category_centroid_by_function_without_random(
+                model, tokenizer, category_to_concepts_for_vec, category2initoken_ids, initvec_func=self.make_initvec_by_wiki_summary_and_hidden_state, 
+                layer_idx=layer_idx,
+                mix_layers=True,
+                print_flag=True
+            ),
+            "otherCatCent_by_WikiSummRepeatHSMix_noRand": lambda: self.initialize_embeds_by_other_category_centroid_by_function_without_random(
+                model, tokenizer, category_to_concepts_for_vec, category2initoken_ids, initvec_func=self.make_initvec_by_wiki_summary_and_hidden_state, 
+                layer_idx=layer_idx,
+                other_type="far", # 学習対象カテゴリの候補カテゴリの中からランダムに選ぶ方式
+                mix_layers=True,
+                print_flag=True
+            )
+
         }
+        print(handlers.keys())
 
         if init_vec_type in handlers:
+            print(f"Initializing embeddings with method: {init_vec_type}")
             return handlers[init_vec_type]()
 
         if init_vec_type == "other_category_centroid_plus_random":
             raise NotImplementedError("other_category_centroid_plus_random is still WIP")
 
-        # ============================================================================================
-        # ** 指定の語句で初期化 (句の場合は単純にmean poolingする) **
-
-        init_terms = [init_vec_type]     # 'a chair' など
-        return self.initVecWithTokenVec(
-            model, tokenizer, init_terms, train_token2tokenid, print_flag=print_flag
-        )
-
+        # # ============================================================================================
+        # if init_vec_type not in handlers:
+        #     # ** 指定の語句で初期化 (句の場合は単純にmean poolingする) **
+        #     print(f"Initializing embeddings with method: {init_vec_type}")
+        #     init_terms = [init_vec_type]     # 'a chair' など
+        #     return self.initVecWithTokenVec(
+        #         model, tokenizer, init_terms, train_token2tokenid, print_flag=print_flag
+        #     )
+        raise ValueError(f"Unknown init_vec_type: {init_vec_type}. Available methods: {list(handlers.keys())}")
 
     
     
@@ -1138,6 +1175,7 @@ class EmbedInitializer:
         category_to_concepts_for_vec, 
         category2initoken_ids, 
         initvec_func, 
+        other_type,
         layer_idx=None,
         mix_layers=False,
         print_flag=False
@@ -1172,7 +1210,12 @@ class EmbedInitializer:
 
             # ** 他のカテゴリを、同カテゴリから(cossimが)最も遠いカテゴリにする。カテゴリの意味の近さが初期化に影響するという対照実験のため。 **
             # other_category = category_similarity["classification"][own_category]["far"][0][0]
-            other_category = category_similarity[own_category]['least_similar_by_mean'][0]['category']    # seed間のcossim平均が最も低いカテゴリを選ぶ
+            if other_type == "far":
+                other_category = category_similarity[own_category]['least_similar_by_mean'][0]['category']    # seed間のcossim平均が最も低いカテゴリを選ぶ
+            elif other_type == "near":
+                other_category = category_similarity[own_category]['most_similar_by_mean'][0]['category']    # seed間のcossim平均が最も高いカテゴリを選ぶ
+            else:
+                raise ValueError(f"Invalid other_type '{other_type}'. Must be 'far' or 'near'.")
             print(f"Category '{own_category}' is initialized with centroid of other category: {other_category}.")
             if other_category not in category_to_concepts_for_vec:
                 raise ValueError(f"Other category '{other_category}' selected for initializing category '{own_category}' is not in category_to_concepts_for_vec. Change mode into 'dont_get_new_wiki_flag = False' to get new wiki pages.")
@@ -1211,6 +1254,16 @@ class EmbedInitializer:
                         print_flag=print_flag
                     )
 
+                    if debug_initvec_flag:
+                        print(f"[INIT] own_category={own_category}, other_category={other_category}, token_id={init_token_id}")
+                        print(f"[INIT] init_terms size={len(init_terms)}")
+                        print(f"[INIT] init_src shape={tuple(init_src.shape)}")
+                        print(f"[INIT] init_src finite={torch.isfinite(init_src).all().item()}")
+                        print(f"[INIT] init_src has_nan={torch.isnan(init_src).any().item()}, has_inf={torch.isinf(init_src).any().item()}")
+                        print(f"[INIT] init_src min={init_src.min().item()}, max={init_src.max().item()}, mean={init_src.mean().item()}, norm={init_src.norm().item()}")
+
+                        
+
                     # 埋め込み層のinit_token_ids (<unusedx>) に該当する行を、まとめてinit_srcで初期化.
                     E = self._get_model_info(model)[0]
                     with torch.no_grad():
@@ -1219,6 +1272,136 @@ class EmbedInitializer:
                         E.index_copy_(dim=0, index=init_target_ids, source=src)
                     
                 print(f"===\n\tNew token {tokenizer.decode(init_token_id)} in category '{own_category}' is initialized with layer {layer_idx}'s hidden state of {len(init_terms)} concepts: ... ({init_terms[-15:]}), from other category '{other_category}'.")
+        return model
+
+
+
+    # ---------- random成分を除去したversionも実装 ----------
+
+    def initialize_embeds_by_category_centroid_by_function_without_random(
+        self, 
+        model, 
+        tokenizer, 
+        category_to_concepts_for_vec, 
+        category2initoken_ids, 
+        initvec_func, 
+        layer_idx=None,
+        mix_layers=False, 
+        print_flag=False
+        ):
+        # *** 初期vec作成用の固有名詞リストをカテゴリ毎に用意し、任意の関数で初期vecを作成する方法. ***
+
+        for own_category, init_token_ids in category2initoken_ids.items():
+            # *** このカテゴリに対応する初期化vec作成用の固有名詞リストで初期化vecを作成し、
+            # このカテゴリに属す固有名詞(新規概念用)に割り当てたtokenのtoken idsの行を、その初期化vecで初期化する ***
+            init_terms_candidate = category_to_concepts_for_vec[own_category]
+
+            if len(init_terms_candidate) < self.propnoun_num_for_init_vec:
+                # カテゴリ内の固有名詞が、初期化vec作成における、「カテゴリ内固定成分」のための固有名詞数に足りない場合は、エラーを出して終了
+                raise ValueError(f"Not enough concepts in category '{own_category}' to sample for centroid vec. Required: at least {self.propnoun_num_for_init_vec}, Available: {len(init_terms_candidate)}. Please reduce the number of concepts needed for centroid vec or add more concepts to the category.")
+
+            init_terms_for_centroid = random.sample(init_terms_candidate, self.propnoun_num_for_init_vec)  # カテゴリ内の固有名詞からランダムに(propnoun_num_for_init_vec)個選んで中心vecを作成
+
+            # init_termsから、初期化vecを作成する
+            init_src = initvec_func(
+                model, 
+                tokenizer, 
+                own_category, 
+                init_terms_for_centroid,
+                layer_idx=layer_idx, 
+                lambda_=LAMBDA_, 
+                mix_layers=mix_layers,
+                print_flag=print_flag
+            )
+
+            # 埋め込み層のinit_token_ids (<unusedx>) に該当する行を、まとめてinit_srcで初期化.
+            E = self._get_model_info(model)[0]
+            with torch.no_grad():
+                init_target_ids = torch.as_tensor(init_token_ids, device=E.device, dtype=torch.long)
+                src = init_src.unsqueeze(0).expand(len(init_target_ids), -1)   # (n, d) # 全トークンをカテゴリ重心で埋める
+                E.index_copy_(dim=0, index=init_target_ids, source=src)
+            
+            print(f"Initialized category '{own_category}' with {len(init_terms_for_centroid)} concepts: ... ({init_terms_for_centroid[-15:]}).")
+        return model
+
+
+
+    def initialize_embeds_by_other_category_centroid_by_function_without_random(
+        self, 
+        model, 
+        tokenizer, 
+        category_to_concepts_for_vec, 
+        category2initoken_ids, 
+        initvec_func, 
+        layer_idx=None,
+        other_type=None,
+        mix_layers=False,
+        print_flag=False
+        ):
+
+        with open(category_similarity_path, 'r') as f:
+            category_similarity = json.load(f)
+
+        
+
+        # main: 初期化対象token毎に毎回ランダムに選んだ他のカテゴリのCOGで初期化する
+        for own_category, init_token_ids in category2initoken_ids.items():
+
+            # 他のカテゴリのCOGで初期化する場合、category2initoken_ids外（今回新規概念として埋め込むtokenのあるカテゴリ以外）からも候補のカテゴリを選んで良い。そのためcategory_to_concepts_for_vecから直接取得する’
+            if self.other_init_use_target_candidates_only:
+                # category2initoken_idsのカテゴリのみを、他カテゴリ選出候補とする場合
+                category_candidates = list(category2initoken_ids.keys())
+            else:
+                # loadProperNounData で取得できた全てのカテゴリを選出候補とする場合
+                category_candidates = list(category_to_concepts_for_vec.keys())
+            
+            other_category_candidates = []
+            for category in category_candidates:
+                # カテゴリ内の固有名詞が、初期化vec作成における、「カテゴリ内固定成分」のための固有名詞数に足りるカテゴリのみ、この他カテゴリ選出候補に入れる。
+                if len(category_to_concepts_for_vec[category]) >= self.propnoun_num_for_init_vec:
+                    other_category_candidates.append(category)
+
+            # ** 他のカテゴリをランダムに選ぶ
+            # other_categories = [c for c in other_category_candidates if c != own_category]  # terms数の不足するカテゴリを削除済みであるcategory_to_centroid_termsから他カテゴリを選ぶ
+            # other_category = random.choice(other_categories)
+            # print(f"Category '{own_category}' is initialized with centroid of other category: {other_category}. This is chosen from {len(other_categories)} categories: {other_categories[:20]}...")
+
+            # ** 他のカテゴリを、同カテゴリから(cossimが)最も遠いカテゴリにする。カテゴリの意味の近さが初期化に影響するという対照実験のため。 **
+            # other_category = category_similarity["classification"][own_category]["far"][0][0]
+            if other_type == "far":
+                other_category = category_similarity[own_category]['least_similar_by_mean'][0]['category']    # seed間のcossim平均が最も低いカテゴリを選ぶ
+            elif other_type == "near":
+                other_category = category_similarity[own_category]['most_similar_by_mean'][0]['category']    # seed間のcossim平均が最も高いカテゴリを選ぶ
+            else:
+                raise ValueError(f"Invalid other_type '{other_type}'. Must be 'far' or 'near'.")
+            print(f"Category '{own_category}' is initialized with centroid of other category: {other_category}.")
+            if other_category not in category_to_concepts_for_vec:
+                raise ValueError(f"Other category '{other_category}' selected for initializing category '{own_category}' is not in category_to_concepts_for_vec. Change mode into 'dont_get_new_wiki_flag = False' to get new wiki pages.")
+
+            init_terms_for_centroid = random.sample(category_to_concepts_for_vec[other_category], self.propnoun_num_for_init_vec)
+
+            if model is not None:
+                # dataの状態を確認するために modelをNoneで呼び出すこともあるため、modelがNoneでない場合にのみ初期化処理を行う
+   
+                init_src = initvec_func(
+                    model, 
+                    tokenizer, 
+                    own_category, 
+                    init_terms_for_centroid,
+                    layer_idx=layer_idx, 
+                    lambda_=LAMBDA_, 
+                    mix_layers=mix_layers, 
+                    print_flag=print_flag
+                )
+
+                # 埋め込み層のinit_token_ids (<unusedx>) に該当する行を、まとめてinit_srcで初期化.
+                E = self._get_model_info(model)[0]
+                with torch.no_grad():
+                    init_target_ids = torch.as_tensor(init_token_ids, device=E.device, dtype=torch.long)
+                    src = init_src.unsqueeze(0).expand(len(init_target_ids), -1)   # (n, d) # 全トークンをカテゴリ重心で埋める
+                    E.index_copy_(dim=0, index=init_target_ids, source=src)
+                
+            print(f"===\n\tCategory '{own_category}' is initialized with layer {layer_idx}'s hidden state of {len(init_terms_for_centroid)} concepts: ... ({init_terms_for_centroid[-15:]}), from other category '{other_category}'.")
         return model
 
 

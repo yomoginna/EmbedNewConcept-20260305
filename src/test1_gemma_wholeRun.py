@@ -168,7 +168,6 @@ def main(args):
     # epoch_list = epoch_list[:4]
     print(f"Found trained memvec files for epochs: {epoch_list}")
 
-
     for epoch in tqdm(epoch_list, desc="Evaluating test1 over epochs"):
 
         # *** 既にtest1結果が存在する場合はスキップ ***
@@ -179,6 +178,7 @@ def main(args):
             if not os.path.exists(logit_score_path):
                 skip_epoch = False
                 break
+        
         if skip_epoch:
             print(f"All test1 results for epoch {epoch} already exist. Skipping this epoch.")
             continue
@@ -193,13 +193,17 @@ def main(args):
             print("Loaded pre-trained model")
             
         else:
-            if model is None:
-                # epoch0がlistにない場合はmodelがまだ読み込まれていないので，ここで読み込む
-                # model = AutoModelForCausalLM.from_pretrained(model_name, device_map=device_map)
-                model = AutoModelForCausalLM.from_pretrained(model_name, device_map='auto')
-                if need_to_set_pad_token:
-                    model.config.pad_token_id = tokenizer.pad_token_id
+            # if model is None:
+            #     # epoch0がlistにない場合はmodelがまだ読み込まれていないので，ここで読み込む
+            #     # model = AutoModelForCausalLM.from_pretrained(model_name, device_map=device_map)
+            #     model = AutoModelForCausalLM.from_pretrained(model_name, device_map='auto')
+            #     if need_to_set_pad_token:
+            #         model.config.pad_token_id = tokenizer.pad_token_id
 
+            # 毎回モデルを読み込み直す
+            model = AutoModelForCausalLM.from_pretrained(model_name, device_map='auto')
+            if need_to_set_pad_token:
+                model.config.pad_token_id = tokenizer.pad_token_id
             # ** memvecをmodelに挿入・置換 **
             try:
                 mem_save_path = os.path.join(mem_dir, f'{epoch}.pth.npy')
@@ -329,12 +333,11 @@ if __name__ == "__main__":
     for seed in range(args.seed_num):
         args.seed = seed
 
-        # if seed in [0,1,2,3,4,5,6 ,8,9]:
+        # if seed < 10:
         #     print(f"seed {seed} is already run. skip.")
         #     continue
 
         # 通常:
-        # init_vec_type_lst = ['category_centroid_plus_random', 'other_category_COG', 'norm_rand_vocab', 'zero', 'uniform', 'norm_rand', 'category_COG', ]
         init_vec_type_lst = args.init_vec_types
         layer_indices = args.layer_indices
 
@@ -353,30 +356,32 @@ if __name__ == "__main__":
 
         # [memo] 新しく隠れ層を参照する初期化手法を追加した場合は、initMethods_with_HS に追加 -> 不要になった
         elif args.model_size=='12':
-            # * seed前半
-            if seed == 0:
-                args.trained_date = "20260417" 
-                # print(f"seed {seed} is already run. skip.")
-                # continue
-            elif seed == 1:
-                args.trained_date = "20260417" 
-            elif seed == 2:
-                args.trained_date = "20260417"
-            elif seed == 3:
-                args.trained_date = "20260417"
-            elif seed == 4:
-                args.trained_date = "20260417"
-            # # * seed後半
-            elif seed == 5:
-                args.trained_date = "20260417"
-            elif seed == 6:
-                args.trained_date = "20260417"
-            elif seed == 7:
-                args.trained_date = "20260417"
-            elif seed == 8:
-                args.trained_date = "20260417"
-            elif seed == 9:
-                args.trained_date = "20260417"
+            # # * seed前半
+            # if seed == 0:
+            #     args.trained_date = "20260418" 
+            #     # print(f"seed {seed} is already run. skip.")
+            #     # continue
+            # elif seed == 1:
+            #     args.trained_date = "20260418" 
+            # elif seed == 2:
+            #     args.trained_date = "20260418"
+            # elif seed == 3:
+            #     args.trained_date = "20260418"
+            # elif seed == 4:
+            #     args.trained_date = "20260418"
+            # # # * seed後半
+            # elif seed == 5:
+            #     args.trained_date = "20260418"
+            # elif seed == 6:
+            #     args.trained_date = "20260418"
+            # elif seed == 7:
+            #     args.trained_date = "20260418"
+            # elif seed == 8:
+            #     args.trained_date = "20260418"
+            # elif seed == 9:
+            #     args.trained_date = "20260418"
+            if seed >= 0:
+                args.trained_date = "20260420"
             else:
                 raise ValueError(f"Invalid seed: {seed}")
             
@@ -389,10 +394,12 @@ if __name__ == "__main__":
 
             print(f"init_vec_type: {init_vec_type}, layer_indices: {layer_indices}")
             layer_indices = args.layer_indices
+
+            # if init_vec_type == "otherCatCent_by_WikiSummaryRepeatHSMixed" and seed >= 5:
+            #     print(f"Skipping init_vec_type {init_vec_type} for seed {seed} because it is already run.")
+            #     continue
         
 
-            # if len(layer_indices) < 1 or \
-            #     init_vec_type not in initMethods_with_HS:
             if len(layer_indices) < 1:
                 # layer_idxが不要の初期化方法の場合は、layer_indicesを[None]にして、1回だけループするようにする
                 layer_indices = [None]
@@ -405,6 +412,11 @@ if __name__ == "__main__":
                 args.init_vec_type = str(init_vec_type)
 
                 task_id += 1
+
+
+                # if init_vec_type == "CatCent_by_WikiSummaryRepeatHSMixed" and seed == 13:
+                #     print(f"Skipping init_vec_type {init_vec_type} for seed {seed} because it is already run.")
+                #     continue
                 
                 if int(task_id % processNum) != int(args.thread_id):
                     # 複数process同時に実行する場合, thread_idに応じてtask_idが偶数or奇数の設定のみを実行する

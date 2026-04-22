@@ -57,8 +57,8 @@ WANDB_API_KEY = os.getenv("WANDB_API_KEY")
 # login(access_token)
 
 
-
-
+need_wandb = True # False
+regen_train_samples_every_epoch = False
 
 
 
@@ -312,10 +312,11 @@ def main(args):
 
 
     # # Wandb設定
-    PROJECT_NAME = os.path.basename(save_mem_dir) # save_mem_dirの一番最後だけ取ってくる
-    wandb_dir = os.path.join(project_root, "memvec_wandb_logs", model_name_for_dirname)
-    if model is not None:
-        set_wandb_env(PROJECT_NAME, model_name_for_dirname, wandb_dir, WANDB_API_KEY)
+    if need_wandb:
+        PROJECT_NAME = os.path.basename(save_mem_dir) # save_mem_dirの一番最後だけ取ってくる
+        wandb_dir = os.path.join(project_root, "memvec_wandb_logs", model_name_for_dirname)
+        if model is not None:
+            set_wandb_env(PROJECT_NAME, model_name_for_dirname, wandb_dir, WANDB_API_KEY)
 
 
     # ********* model等の準備: 予約済み特殊トークンの埋め込みの初期化など *********
@@ -362,15 +363,17 @@ def main(args):
 
     # 最後のmemory vectorをセーブしたい場合
     save_mem_path = os.path.join(save_mem_dir, f"{maxEpochs}.pth")
-    save_mem_vec(model, memTokenIds, save_mem_path)
-    print(f"trained vecs at {maxEpochs} are saved in {save_mem_path}.")
+    if not os.path.exists(save_mem_path):
+        save_mem_vec(model, memTokenIds, save_mem_path)
+        print(f"trained vecs at {maxEpochs} are saved in {save_mem_path}.")
 
 
     # 訓練ループ全体の時間を計測
     end_time = time.time()
     print(f"Total Training Time: {end_time - start_time:.2f} seconds")
 
-    wandb.finish()
+    if need_wandb:
+        wandb.finish()
 
 
 
@@ -496,6 +499,7 @@ def prepareGemmaModel(
         print_flag=print_flag
     )
 
+
     criteria = torch.nn.CrossEntropyLoss()
     model.train()
     return model, criteria
@@ -602,12 +606,18 @@ def train(model_size,
     accLog = {}
     print("Start training...")
 
-    for epoch in tqdm(range(maxEpochs)):
+    for epoch in tqdm(range(maxEpochs + 1)):
         print('Epoch %d/%d'%(epoch+1, maxEpochs))
 
-        # *** epoch毎にfact_sentencesの組み合わせをシャッフルしてデータを構成し直す ***
-        train_samples = constructTrainSamples(concept_to_train_data_source, train_sample_format, conceptForFict2token_map, n_feat_in_a_sample)
-        trainingData, evalInputs, evalOutputTexts, indices = encodeTrainSamplesWithTokenizer(train_samples, tokenizer, padTokenId, model.device)
+        if regen_train_samples_every_epoch:
+            # *** epoch毎にfact_sentencesの組み合わせをシャッフルしてデータを構成し直す ***
+            # これはあった方が正解率が上がるが、seed間のaccの差が大きくなりすぎる原因になるようなのでキャンセル
+            train_samples = constructTrainSamples(concept_to_train_data_source, train_sample_format, conceptForFict2token_map, n_feat_in_a_sample)
+            trainingData, evalInputs, evalOutputTexts, indices = encodeTrainSamplesWithTokenizer(train_samples, tokenizer, padTokenId, model.device)
+        else:
+            if epoch == 0:
+                train_samples = constructTrainSamples(concept_to_train_data_source, train_sample_format, conceptForFict2token_map, n_feat_in_a_sample)
+                trainingData, evalInputs, evalOutputTexts, indices = encodeTrainSamplesWithTokenizer(train_samples, tokenizer, padTokenId, model.device)
 
         # このepochの学習
         model.train()
@@ -661,15 +671,17 @@ def train(model_size,
                 # print(f"Epoch {epoch}, Step {step}, Loss: {loss.item()}")
                 gpu_memory = torch.cuda.memory_allocated() / 1024 ** 2  # MB単位
                 gpu_reserved = torch.cuda.memory_reserved() / 1024 ** 2
-                wandb.log({
-                    "loss": loss.item(), 
-                    "epoch": epoch, 
-                    "step": step, 
-                    # "param_sum": next(model.parameters()).data.sum().item(),
-                    "lr": opt.param_groups[0]["lr"], 
-                    "gpu_memory_allocated_MB": gpu_memory,
-                    "gpu_memory_reserved_MB": gpu_reserved
-                })
+
+                if need_wandb:
+                    wandb.log({
+                        "loss": loss.item(), 
+                        "epoch": epoch, 
+                        "step": step, 
+                        # "param_sum": next(model.parameters()).data.sum().item(),
+                        "lr": opt.param_groups[0]["lr"], 
+                        "gpu_memory_allocated_MB": gpu_memory,
+                        "gpu_memory_reserved_MB": gpu_reserved
+                    })
             totalLoss += loss.item()
             # totalLoss += loss.detach().cpu().tolist()
 
@@ -725,14 +737,17 @@ if __name__ == "__main__":
         
     task_id = -1
     for seed in range(args.seed_num):
-        if seed in [6,7,8,9]: # [0,1,2,3,4,5,]: #[0,1,2,3,4,5,6 ,8,9]:
-            print(f"seed {seed} is already run. skip.")
-            continue
+        # if seed < 10:
+        #     print(f"seed {seed} is already run. skip.")
+        #     continue
         args.seed = seed # mainにargsとして渡すためにargs.seedに代入している。main内でargs.seedを参照することで、現在のシード値を取得できるようになる。
         
         init_vec_type_lst = args.init_vec_types
 
         for init_vec_type in init_vec_type_lst:
+            # if init_vec_type == 'otherCatCent_by_WikiSummaryRepeatHSMixed' and seed in [10, 11, 12]:
+            #     print(f"seed {seed} with init_vec_type {init_vec_type} is already run. skip.")
+            #     continue
 
             # if seed == 2 and init_vec_type == 'otherCatCent_by_WikiSummaryRepeatHSMixed':
             #     print(f"seed {seed} with init_vec_type {init_vec_type} is already run. skip.")
@@ -757,6 +772,13 @@ if __name__ == "__main__":
                 args.init_vec_type = str(init_vec_type)
 
                 task_id += 1
+
+
+                # if (init_vec_type == 'otherCatCent_by_WikiSummaryRepeatHSMixed' and seed in [10, 11, 12]) or \
+                #     (init_vec_type == 'CatCent_by_WikiSummaryRepeatHSMixed' and seed in [10, 11]):
+                if init_vec_type == 'zero' and seed ==13:
+                    print(f"seed {seed} with init_vec_type {init_vec_type} is already run. skip.")
+                    continue
 
                 if task_id % processNum != args.thread_id:
                     # 複数process同時に実行する場合, thread_idに応じてtask_idが偶数or奇数の設定のみを実行する
