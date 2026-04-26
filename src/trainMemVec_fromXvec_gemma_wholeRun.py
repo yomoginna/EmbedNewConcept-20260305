@@ -12,6 +12,7 @@ import time
 import math
 
 # ===== Third-party =====
+import numpy as np
 from dotenv import load_dotenv
 import pandas as pd
 from tqdm import tqdm
@@ -344,7 +345,8 @@ def main(args):
             save_mem_dir,
             lr, 
             maxEpochs, 
-            earlyStoppingCount=5
+            earlyStoppingCount=5,
+            track_vector_change=True # 学習中のベクトルの変化を追跡するかどうか
         )
         print('accLog:', accLog)
         detailedHistory = accLog
@@ -507,12 +509,12 @@ def prepareGemmaModel(
 
 
 def get_vector(model, token_id):
-    token_id = token_id.device(model.device) # token_idをmodelと同じデバイスに移動
+    # token_id = token_id.device(model.device) # token_idをmodelと同じデバイスに移動
     with torch.no_grad():
         try:
-            return model.model.embed_tokens.weight[token_id].detach().cpu().numpy()
+            return model.model.embed_tokens.weight[token_id].detach().float().cpu().numpy()
         except:
-            return model.model.language_model.embed_tokens.weight[token_id].detach().cpu().numpy()
+            return model.model.language_model.embed_tokens.weight[token_id].detach().float().cpu().numpy()
 
 
 def train(model_size, 
@@ -623,6 +625,8 @@ def train(model_size,
     )
 
     accLog = {}
+    total_steps = 0
+    logged_steps = []
     print("Start training...")
 
     for epoch in tqdm(range(maxEpochs + 1)):
@@ -703,12 +707,14 @@ def train(model_size,
                         "gpu_memory_reserved_MB": gpu_reserved
                     })
                 # ** vector change logging **
+                logged_steps.append(total_steps)
                 if track_vector_change:
                     for token_id in memTokenIds:
                         vector_change_history[token_id].append(get_vector(model, token_id))
 
             totalLoss += loss.item()
             # totalLoss += loss.detach().cpu().tolist()
+            total_steps += 1
 
 
         # 検証データはないため，train lossでschedulerを更新する. 余裕があれば検証データ（別ルールによるtripletの言い換え)を作り，それをevaluateModelに入れてlossを計算するようにする
@@ -733,14 +739,26 @@ def train(model_size,
             save_mem_vec(model, memTokenIds, save_mem_path)
             print(f"trained vecs at {epoch} are saved in {save_mem_path}.")
 
-    
-    # 学習後のベクトルの変化を保存
-    if track_vector_change:
-        vector_change_save_path = os.path.join(save_mem_dir, "vector_change_history.json")
-        with open(vector_change_save_path, "w") as f:
-            json.dump(vector_change_history, f)
-        print(f"Vector change history saved to {vector_change_save_path}")
-                        
+        
+        # 学習後のベクトルの変化を保存 (毎epoch更新しながら保存する)
+        if track_vector_change:
+            vector_change_save_path = os.path.join(save_mem_dir, "tracked_embeddings.npz") # "vector_change_history.npz")
+            # np.savez(vector_change_save_path, vectors=vector_change_history, steps=np.array(total_steps))
+            
+            token_ids = np.array(list(vector_change_history.keys()), dtype=np.int64)
+
+            np.savez(
+                vector_change_save_path,
+                token_ids=token_ids,
+                steps=np.array(logged_steps),
+                vectors=np.stack([
+                    np.stack(vector_change_history[token_id], axis=0)
+                    for token_id in token_ids
+                ], axis=0), # shape: [num_tokens, num_steps, hidden_dim]
+            )
+            print(f"Vector change history saved to {vector_change_save_path}")
+
+
     return model, accLog
 
 
