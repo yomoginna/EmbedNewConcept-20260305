@@ -381,7 +381,7 @@ if __name__ == "__main__":
             # elif seed == 9:
             #     args.trained_date = "20260418"
             if seed >= 0:
-                args.trained_date = "20260420"
+                args.trained_date = "20260423"
             else:
                 raise ValueError(f"Invalid seed: {seed}")
             

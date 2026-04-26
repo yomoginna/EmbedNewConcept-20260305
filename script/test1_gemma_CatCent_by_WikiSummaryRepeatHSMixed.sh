@@ -24,12 +24,13 @@ MODEL_SIZE=12
 LR=0.003
 TARGET_CONCEPTS_FILENAME="target_concepts_mini_13.json"
 PROCESS_NUM=3
-SEED_NUM=20
+SEED_NUM=10
 NUM_OPTIONS=3
 LAYER_INDICES=(12 32) # 12 40)
 
-INIT_VEC_TYPES=("CatCent_by_WikiSummRepeatHSMix_noRand" "otherCatCent_by_WikiSummRepeatHSMix_noRand")
 INIT_VEC_TYPES=("CatCent_by_WikiSummaryRepeatHSMixed" "otherCatCent_by_WikiSummaryRepeatHSMixed")
+
+INIT_VEC_TYPES=("CatCent_by_WikiSummRepeatHSMix_noRand" "otherCatCent_by_WikiSummRepeatHSMix_noRand")
 INIT_VEC_TYPES=("otherCatCent_by_WikiSummaryRepeatHSMixed")
 # LAYER_INDICES=(1 4 8 10 12 16 20 24 28 32 36 38 40 44 -1)
 # INIT_VEC_TYPES=("CatCent_by_WikiSummaryHS" "otherCatCent_by_WikiSummaryHS" "norm_rand_vocab")
@@ -37,22 +38,22 @@ INIT_VEC_TYPES=("otherCatCent_by_WikiSummaryRepeatHSMixed")
 # 全体の層を大まかに調べる: (0 1 8 12 24 36 40 -1)
 
 THREAD_ID=0
-CUDA_VISIBLE_DEVICES=3
+CUDA_VISIBLE_DEVICES=2
 
 THREAD_ID=1
-CUDA_VISIBLE_DEVICES=3
+CUDA_VISIBLE_DEVICES=2
 
 THREAD_ID=2
-CUDA_VISIBLE_DEVICES=3
+CUDA_VISIBLE_DEVICES=2
 
 THREAD_ID=3
-CUDA_VISIBLE_DEVICES=4
+CUDA_VISIBLE_DEVICES=2
 
 THREAD_ID=4
-CUDA_VISIBLE_DEVICES=4
+CUDA_VISIBLE_DEVICES=2
 
 THREAD_ID=5
-CUDA_VISIBLE_DEVICES=4
+CUDA_VISIBLE_DEVICES=2
 
 
 nohup uv --no-progress run python src/test1_gemma_wholeRun.py \
@@ -66,14 +67,14 @@ nohup uv --no-progress run python src/test1_gemma_wholeRun.py \
         --num_options ${NUM_OPTIONS} \
         --init_vec_types ${INIT_VEC_TYPES[@]} \
         --layer_indices ${LAYER_INDICES[@]} \
-        > log_Test1_gemma-${MODEL_SIZE}B_lr${LR}_wholeRun${THREAD_ID}_2.log 2>&1 &
+        > log_Test1_gemma-${MODEL_SIZE}B_lr${LR}_wholeRun${THREAD_ID}.log 2>&1 &
 
-# thread0: 2208805, 4epoch以降: -4011226
-# thread1: 2209729, 4epoch以降: -(まだ) 
-# thread2: 2210630, 4epoch以降: -(まだ)
-# thread3: 2211510
-# thread4: 2212466
-# thread5: 2213489
+# thread0: 2163291, 4epoch以降: -4011226
+# thread1: 2164233, 4epoch以降: -(まだ) 
+# thread2: 2165178, 4epoch以降: -(まだ)
+# thread3: 492767
+# thread4: 493873
+# thread5: 494954
 
 THREAD_ID=0
 CUDA_VISIBLE_DEVICES=2

@@ -17,10 +17,12 @@ LR=0.003
 PROCESS_NUM=2
 SEED_NUM=10
 LAYER_INDICES=(12)
+INIT_VEC_TYPES=("CatCent_by_WikiSummaryRepeatHSMixed" "otherCatCent_by_WikiSummaryRepeatHSMixed")
+POOL_HS_TYPE="mean_pool" #  隠れ状態をプーリングする方法。["eos", "last_token", "mean_pool"] のいずれか。
+
 
 INIT_VEC_TYPES=("CatCent_by_WikiSummaryRepeatHSMixed" "otherCatCent_by_WikiSummaryRepeatHSMixed" "nearCatCent_by_WikiSummaryRepeatHSMixed")
 INIT_VEC_TYPES=("CatCent_by_WikiSummRepeatHSMix_noRand" "otherCatCent_by_WikiSummRepeatHSMix_noRand")
-POOL_HS_TYPE="mean_pool" #  隠れ状態をプーリングする方法。["eos", "last_token", "mean_pool"] のいずれか。
 INIT_VEC_TYPES=("CatCent_by_WikiSummaryRepeatHSMixed")
 INIT_VEC_TYPES=("norm_rand_vocab" "zero")
 
@@ -29,10 +31,10 @@ INIT_VEC_TYPES=("norm_rand_vocab" "zero")
 # LAYER_INDICES=(1 4 8 10 12 16 20 24 28 32 36 38 40 44 -1)
 
 THREAD_ID=0
-CUDA_VISIBLE_DEVICES=3
+CUDA_VISIBLE_DEVICES=1
 
 THREAD_ID=1
-CUDA_VISIBLE_DEVICES=4
+CUDA_VISIBLE_DEVICES=2
 
 # THREAD_ID=2
 # CUDA_VISIBLE_DEVICES=3
@@ -55,8 +57,22 @@ nohup uv --no-progress run python src/trainMemVec_fromXvec_gemma_wholeRun.py \
         --seed_num ${SEED_NUM} \
         > log_TrainMemVec_gemma-${MODEL_SIZE}B_lr${LR}_wholeRun${THREAD_ID}.log 2>&1 &
 
-THREAD_ID=0: 1468249
-THREAD_ID=1: 1469200
+nohup uv --no-progress run python src/trainMemVec_fromXvec_gemma_wholeRun.py \
+        --target_concepts_filename ${TARGET_CONCEPTS_FILENAME} \
+        --model_size ${MODEL_SIZE} \
+        --lr ${LR} \
+        --max_epochs ${MAX_EPOCHS} \
+        --cuda_visible_devices ${CUDA_VISIBLE_DEVICES} \
+        --init_vec_types ${INIT_VEC_TYPES[@]} \
+        --pool_hs_type ${POOL_HS_TYPE} \
+        --layer_indices ${LAYER_INDICES[@]} \
+        --thread_id ${THREAD_ID} \
+        --process_num ${PROCESS_NUM} \
+        --seed_num ${SEED_NUM} \
+        > log_TrainMemVec_gemma-${MODEL_SIZE}B_lr${LR}_wholeRun${THREAD_ID}_printlog.log 2>&1 &
+
+THREAD_ID=0: 1711667
+THREAD_ID=1: 1809358
 THREAD_ID=2: 871316
 THREAD_ID=3: -
 

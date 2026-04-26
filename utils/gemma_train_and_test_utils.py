@@ -32,6 +32,18 @@ def fix_seed(seed=0):
     np.random.seed(seed)
 
 
+def get_gemma_model_version(model_size):
+    model_size = int(model_size)
+    if model_size in [2, 9]:
+        model_version = 2
+    elif model_size in [1, 4, 12]:
+        model_version = 3
+    else:
+        raise ValueError(f"Unsupported model size: {model_size}")
+    return model_version
+
+
+
 def save_mem_vec(model, memTokenIds, mem_save_path):
     os.makedirs(os.path.dirname(mem_save_path), exist_ok=True)
 

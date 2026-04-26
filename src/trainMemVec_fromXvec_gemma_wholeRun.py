@@ -30,7 +30,7 @@ project_root = os.path.join(os.path.dirname(__file__), "..") # os.path.dirname(_
 sys.path.append(project_root)
 print("Project root:", project_root)
 
-from utils.gemma_train_and_test_utils import fix_seed, save_mem_vec, constructTrainSamples, encodeTrainSamplesWithTokenizer, evaluateModel #, train
+from utils.gemma_train_and_test_utils import fix_seed, get_gemma_model_version, save_mem_vec, constructTrainSamples, encodeTrainSamplesWithTokenizer, evaluateModel #, train
 from utils.handle_data_from_dbpedia_utils import filterProperNounsWithWikiPage, loadProperNounData #, loadConceptsForFictConcept
 from utils.initialize_embedding_layer_utils import EmbedInitializer
 from utils.wandb_utils import set_wandb_env
@@ -57,7 +57,9 @@ WANDB_API_KEY = os.getenv("WANDB_API_KEY")
 # login(access_token)
 
 
-need_wandb = True # False
+need_wandb = True # False 通常はTrue. 一時的にwandbをoffにしたい時用. wandbの容量がいっぱいになってエラーを起こす時など
+need_train = True # 通常はTrue. 一時的に学習をoffにしたい時用
+load_model = True # 通常はTrue. 一時的にモデルをロードせずに実行したい時用。例えば学習データとして何が読み込まれるのかを確認したい時など　（あまり調整していないので、途中でmodel==Noneであるというエラーを起こして止まるようにはなっている）
 regen_train_samples_every_epoch = False
 
 
@@ -72,19 +74,14 @@ def main(args):
     init_vec_type = args.init_vec_type
     pool_hs_type = args.pool_hs_type
     layer_idx = args.layer_idx
-    trained_date = datetime.now().strftime("%Y%m%d")
+    trained_date =  datetime.now().strftime("%Y%m%d") # "20260423"
 
 
     # ** モデル保存dirnameの設定 **
     global model_name_for_dirname
-    # [WIP] 'it'と'pt'のどちらが良いかは未検証.とりあえず'it'で統一.
-    if model_size in ['2', '9']:
-        model_version = 2
-    elif model_size in ['1', '4', '12']:
-        model_version = 3
-    else:
-        pass
+    model_version = get_gemma_model_version(model_size)
 
+    # [WIP] 'it'と'pt'のどちらが良いかは未検証.とりあえず'it'で統一.
     model_name = f"google/gemma-{model_version}-{model_size}b-it" # [memo] 'gemma-'部分は変えないこと!! -を消すとモデルがloadできない．さらにそのエラーメッセージは，"huggingface-cli login"をして，という関係ないmessageになるので注意!
     model_name_for_dirname = f"gemma-{model_version}-{model_size}B-lr{lr}-{trained_date}"
     if layer_idx is not None:
@@ -100,8 +97,11 @@ def main(args):
         print('Calculation for non-Gemma3 models is not implemented yet [TODO]')
         raise ValueError("The specified model does not seem Gemma3-based model.")
     
-    # model = None
-    model = AutoModelForCausalLM.from_pretrained(model_name, device_map="auto")
+
+    if load_model:
+        model = AutoModelForCausalLM.from_pretrained(model_name, device_map="auto")
+    else:
+        model = None
 
     if tokenizer.pad_token_id is None:
         # llama系の場合はpad_tokenが設定されていないことがあるため，以下のようにeos_tokenをpad_tokenに設定する. gemma3は設定済みだった
@@ -129,12 +129,14 @@ def main(args):
     while os.path.exists(save_mem_dir):
         save_mem_dir = f"{original_save_mem_dir}_{counter}"
         counter += 1
+    # if need_train and load_model:
     os.makedirs(save_mem_dir, exist_ok=True)
     print('save_mem_dir:', save_mem_dir)
 
 
 
-    # ********* train data取得準備 *********
+    # ************************************ train data ************************************
+    # *** 準備 ***
     # 全てのカテゴリ・固有名詞リスト の辞書を読み込む (重複等のfiltering済み)
     category_properNouns_dict = loadProperNounData(
         propnoun_num_threshold = propnoun_num_for_init_vec + propnoun_num_for_new_concept,
@@ -175,7 +177,7 @@ def main(args):
     print(f"After filtering categories with enough proper nouns, category num: {len(filtered_category_properNouns_dict)}, concept num: {sum(len(concepts) for concepts in filtered_category_properNouns_dict.values())}")
 
 
-    # ***** target_concept_listに学習対象のconcept名を追加 *****
+    # *** target_concept_listに学習対象のconcept名を追加 ***
     # ** 学習データが存在するconcept名のみを抽出.
     trainable_concept_list = []
     for filename in os.listdir(train_data_dir):
@@ -216,18 +218,8 @@ def main(args):
     conceptForFict2category_map = {conceptForFict: category for category, concepts in category_to_conceptsForFict.items() for conceptForFict in concepts} 
     print(f"categories in conceptForFict2category_map: {set(conceptForFict2category_map.values())} ...")
 
-    
-    ## [memo] 他カテゴリをランダムに選ぶ場合はここのコメントアウトを外す:
-    # # filter: あまりたくさんのデータを保持しておくとメモリが足りなくなるため、filtered_category_properNouns_dictには、訓練対象のカテゴリ+それ以外のカテゴリ10個をランダムに選んで保持する。この10個は他カテゴリ初期化時に利用する
-    # n = 5
-    # keep_category_list = list(category_to_conceptsForFict.keys()) + \
-    #     random.sample(list(set(filtered_category_properNouns_dict.keys()) - set(category_to_conceptsForFict.keys())), \
-    #                   min(n, len(filtered_category_properNouns_dict)-len(category_to_conceptsForFict)))
-    # filtered_category_properNouns_dict = {category: filtered_category_properNouns_dict[category] for category in keep_category_list}
-    # print(f"After filtering categories to target categories + {n} random categories, category num: {len(filtered_category_properNouns_dict)}, concept num: {sum(len(concepts) for concepts in filtered_category_properNouns_dict.values())}")
 
-
-    # ***** 各カテゴリ内で、vec初期化に使用する固有名詞を取得 *****
+    # *** 各カテゴリ内で、vec初期化に使用する固有名詞を取得 ***
     # 各カテゴリの全固有名詞の内、架空概念用に特徴生成した固有名詞以外を、全てvec初期化用にする
     category_to_concepts_for_vec = {}
     for category in filtered_category_properNouns_dict.keys():
@@ -240,7 +232,7 @@ def main(args):
             print(f"category: {category}, proper nouns for vec initialization: {len(propernouns_for_init_vec)}, {propernouns_for_init_vec[:5]} ...") # 先頭5個を表示
 
 
-    # ********* train data取得準備 *********
+    # ********* 学習対象埋め込みトークンの用意 *********
     # *** concept数の分だけ空きtokenを確保する ***
     trainTokenIds = [tokenizer.convert_tokens_to_ids(f'<unused{i}>') for i in range(len(target_concept_list))]
     trainTokens = [tokenizer.convert_ids_to_tokens(token_id) for token_id in trainTokenIds]
@@ -263,6 +255,7 @@ def main(args):
         # print(f"{token_id}: {target_concept} -> {trainable_token}")
 
     # concept-token割り当てを保存
+    # if need_train:
     save_path = os.path.join(save_mem_dir, "token_assignment.json")
     with open(save_path, "w") as f:
         json.dump(conceptForFict2token_map, f, ensure_ascii=False, indent=4)
@@ -283,7 +276,7 @@ def main(args):
 
 
 
-    # ****** tripletを読み込み学習データを構築 ******
+    # ********* tripletを読み込み、学習データを構築 *********
     concept_to_train_data_source = {}
     for target_concept in target_concept_list:
         concept_to_train_data_source[target_concept] = []
@@ -310,8 +303,8 @@ def main(args):
     with open(os.path.join(project_root, 'data', 'templates', 'train_sample_format.json'), "r") as f:
         train_sample_format = json.load(f)
 
-
-    # # Wandb設定
+    # ************************************ 学習 ************************************
+    # Wandb設定
     if need_wandb:
         PROJECT_NAME = os.path.basename(save_mem_dir) # save_mem_dirの一番最後だけ取ってくる
         wandb_dir = os.path.join(project_root, "memvec_wandb_logs", model_name_for_dirname)
@@ -338,42 +331,50 @@ def main(args):
 
 
     # ********* train *********
-    start_time = time.time()
-    model, accLog = train(
-        model_size,
-        model,
-        tokenizer,
-        criteria, 
-        concept_to_train_data_source, train_sample_format, conceptForFict2token_map, # train_samples,
-        memTokenIds,
-        padTokenId, 
-        save_mem_dir,
-        lr, 
-        maxEpochs, 
-        earlyStoppingCount=5
-    )
-    print('accLog:', accLog)
-    detailedHistory = accLog
-    df = pd.DataFrame(detailedHistory)
+    if need_train:
+        start_time = time.time()
+        model, accLog = train(
+            model_size,
+            model,
+            tokenizer,
+            criteria, 
+            concept_to_train_data_source, train_sample_format, conceptForFict2token_map, # train_samples,
+            memTokenIds,
+            padTokenId, 
+            save_mem_dir,
+            lr, 
+            maxEpochs, 
+            earlyStoppingCount=5
+        )
+        print('accLog:', accLog)
+        detailedHistory = accLog
+        df = pd.DataFrame(detailedHistory)
 
-    # *** save ***
-    save_hist_path = f'{project_root}/memvec_training_history/{model_name_for_dirname}.csv'
-    os.makedirs(os.path.dirname(save_hist_path), exist_ok=True)
-    df.to_csv(save_hist_path)
+        # *** save ***
+        save_hist_path = f'{project_root}/memvec_training_history/{model_name_for_dirname}.csv'
+        os.makedirs(os.path.dirname(save_hist_path), exist_ok=True)
+        df.to_csv(save_hist_path)
 
-    # 最後のmemory vectorをセーブしたい場合
-    save_mem_path = os.path.join(save_mem_dir, f"{maxEpochs}.pth")
-    if not os.path.exists(save_mem_path):
-        save_mem_vec(model, memTokenIds, save_mem_path)
-        print(f"trained vecs at {maxEpochs} are saved in {save_mem_path}.")
+        # 最後のmemory vectorをセーブしたい場合
+        save_mem_path = os.path.join(save_mem_dir, f"{maxEpochs}.pth")
+        if not os.path.exists(save_mem_path):
+            save_mem_vec(model, memTokenIds, save_mem_path)
+            print(f"trained vecs at {maxEpochs} are saved in {save_mem_path}.")
 
 
-    # 訓練ループ全体の時間を計測
-    end_time = time.time()
-    print(f"Total Training Time: {end_time - start_time:.2f} seconds")
+        # 訓練ループ全体の時間を計測
+        end_time = time.time()
+        print(f"Total Training Time: {end_time - start_time:.2f} seconds")
 
     if need_wandb:
         wandb.finish()
+
+
+
+
+
+
+
 
 
 
@@ -505,6 +506,14 @@ def prepareGemmaModel(
     return model, criteria
 
 
+def get_vector(model, token_id):
+    token_id = token_id.device(model.device) # token_idをmodelと同じデバイスに移動
+    with torch.no_grad():
+        try:
+            return model.model.embed_tokens.weight[token_id].detach().cpu().numpy()
+        except:
+            return model.model.language_model.embed_tokens.weight[token_id].detach().cpu().numpy()
+
 
 def train(model_size, 
           model, 
@@ -516,11 +525,21 @@ def train(model_size,
           save_mem_dir, 
           lr=0.01, 
           maxEpochs=50, 
-          earlyStoppingCount=5
+          earlyStoppingCount=5,
+          track_vector_change=False # 学習中のベクトルの変化を追跡して保存するかどうか
     ):
     """
     [WIP] earlyStoppingCount は未使用になっている
     """
+
+    if track_vector_change:
+        vector_change_history = {token_id: [] for token_id in memTokenIds} # 学習中のベクトルの変化を保存する辞書. token_id -> [vec_epoch1, vec_epoch2, ...]
+        # 学習前のベクトルを保存
+        for token_id in memTokenIds:
+            vector_change_history[token_id].append(get_vector(model, token_id))
+
+
+
     if int(model_size) == 1:
         # global BATCH_SIZE
         BATCH_SIZE = 256 # 512
@@ -659,20 +678,21 @@ def train(model_size,
                         print(f"OK: 学習対象tokenID {memTokenIds[0]} の勾配が0ではありません")
             # model.model.embed_tokens.weight[trainTokenIds] *= (1 - 0.01 * 0.1)  # lr * wd  # weight-decayを使う場合はここで手動
             
-
-            # WandB logging
-            log_interval=1 # batch_sizeを大きくしているので小さめ
+            # *** logをとる ***
+            log_interval=10 # batch_sizeを大きくしているので小さめ
 
             # log_intervalが1epoch内のstep数よりも大きい値に設定されている場合は1epoch毎にログを出力
             if log_interval > len(batchIds):
                 log_interval = len(batchIds)
             
             if step % log_interval == 0:
+
+                # ** WandB logging **
                 # print(f"Epoch {epoch}, Step {step}, Loss: {loss.item()}")
-                gpu_memory = torch.cuda.memory_allocated() / 1024 ** 2  # MB単位
-                gpu_reserved = torch.cuda.memory_reserved() / 1024 ** 2
 
                 if need_wandb:
+                    gpu_memory = torch.cuda.memory_allocated() / 1024 ** 2  # MB単位
+                    gpu_reserved = torch.cuda.memory_reserved() / 1024 ** 2
                     wandb.log({
                         "loss": loss.item(), 
                         "epoch": epoch, 
@@ -682,6 +702,11 @@ def train(model_size,
                         "gpu_memory_allocated_MB": gpu_memory,
                         "gpu_memory_reserved_MB": gpu_reserved
                     })
+                # ** vector change logging **
+                if track_vector_change:
+                    for token_id in memTokenIds:
+                        vector_change_history[token_id].append(get_vector(model, token_id))
+
             totalLoss += loss.item()
             # totalLoss += loss.detach().cpu().tolist()
 
@@ -707,6 +732,14 @@ def train(model_size,
             save_mem_path = os.path.join(save_mem_dir, f"{epoch}.pth")
             save_mem_vec(model, memTokenIds, save_mem_path)
             print(f"trained vecs at {epoch} are saved in {save_mem_path}.")
+
+    
+    # 学習後のベクトルの変化を保存
+    if track_vector_change:
+        vector_change_save_path = os.path.join(save_mem_dir, "vector_change_history.json")
+        with open(vector_change_save_path, "w") as f:
+            json.dump(vector_change_history, f)
+        print(f"Vector change history saved to {vector_change_save_path}")
                         
     return model, accLog
 
@@ -737,7 +770,7 @@ if __name__ == "__main__":
         
     task_id = -1
     for seed in range(args.seed_num):
-        # if seed < 10:
+        # if seed < 2:
         #     print(f"seed {seed} is already run. skip.")
         #     continue
         args.seed = seed # mainにargsとして渡すためにargs.seedに代入している。main内でargs.seedを参照することで、現在のシード値を取得できるようになる。

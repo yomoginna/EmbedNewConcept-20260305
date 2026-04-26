@@ -35,7 +35,10 @@ BATCH_SIZE = 4 #16 #8
 
 wiki_pages_dir = os.path.join(project_root, "data", "wiki_pages")
 category_similarity_path = os.path.join(project_root, 'data', 'cossim_bw_categories', 'aggregated_near_far_analysis_across_seeds.json')
-debug_initvec_flag = True
+
+# for debug
+debug_print_initterms_flag = True
+# debug_print_initterms_prompt_flag = False
 
 # *************************** func ***************************
 
@@ -1254,7 +1257,7 @@ class EmbedInitializer:
                         print_flag=print_flag
                     )
 
-                    if debug_initvec_flag:
+                    if debug_print_initterms_flag:
                         print(f"[INIT] own_category={own_category}, other_category={other_category}, token_id={init_token_id}")
                         print(f"[INIT] init_terms size={len(init_terms)}")
                         print(f"[INIT] init_src shape={tuple(init_src.shape)}")
@@ -1262,6 +1265,25 @@ class EmbedInitializer:
                         print(f"[INIT] init_src has_nan={torch.isnan(init_src).any().item()}, has_inf={torch.isinf(init_src).any().item()}")
                         print(f"[INIT] init_src min={init_src.min().item()}, max={init_src.max().item()}, mean={init_src.mean().item()}, norm={init_src.norm().item()}")
 
+                        if torch.isnan(init_src).any().item():
+                            print(f"[ERROR] init_src contains NaN values for token_id {init_token_id} in category '{own_category}' initialized with other category '{other_category}'. Check the initvec_func for potential issues with NaN generation.")
+                            # for initterm in init_terms:
+                            #     print(f"[ERROR] init term: '{initterm}'")
+
+                            # promptを全て表示するために、debug_print_initterms_prompt_flagをTrueにして再度initvec_funcを呼び出す
+                            # debug_print_initterms_prompt_flag = True
+                            init_src = initvec_func(
+                                model, 
+                                tokenizer, 
+                                own_category, 
+                                init_terms,
+                                layer_idx=layer_idx, 
+                                lambda_=LAMBDA_, 
+                                mix_layers=mix_layers, 
+                                print_flag=print_flag,
+                                debug_print_initterms_prompt_flag=True
+                            )
+                            raise ValueError(f"init_src contains NaN values for token_id {init_token_id} in category '{own_category}' initialized with other category '{other_category}'. Check the initvec_func for potential issues with NaN generation.")
                         
 
                     # 埋め込み層のinit_token_ids (<unusedx>) に該当する行を、まとめてinit_srcで初期化.
@@ -1420,7 +1442,8 @@ class EmbedInitializer:
         layer_idx=None, 
         lambda_=None,   # global vecを使わないので不要
         mix_layers=False,
-        print_flag=False
+        print_flag=False,
+        debug_print_initterms_prompt_flag=False # [memo] この引数は他のinitvec_funcには付けていないため注意。他のinitvec_funcでこの引数をTrueにしても、エラーが出るだけ。
         ):
         # *** 初期vecを、固有名詞毎のwikiのsummary文入力時の隠れ状態から作る。 ***
 
@@ -1449,6 +1472,9 @@ class EmbedInitializer:
                 with open(os.path.join(project_root, "data", f"propnouns_summary_outofrange_{self.min_words}_{self.max_words}.txt"), "a") as f:
                     f.write(term + "\n")
                 continue
+
+            if debug_print_initterms_prompt_flag:
+                print(f"[INIT] term: '{term}'\n summary: '{summary}' \n(length in words: {len(summary.split())})\n")
 
             if self.repeat_prompt:
                 # *** 初期vecを、固有名詞毎のwikiのsummary文を2回入力して、2回目の文内token位置の隠れ状態から作る場合: https://openreview.net/forum?id=Ahlrf2HGJR の手法 ***
@@ -1895,7 +1921,7 @@ class EmbedInitializer:
                 batch_texts,
                 return_tensors="pt",
                 padding=True,
-                truncation=True,
+                truncation=False,   # truncation=Trueとすると、どこかでtokenが切り捨てられてしまい、self.repeat_prompt=True・mean_poolの時に隠れ状態を平均する対象のトークン位置がずれてしまう。
                 add_special_tokens=False #last_token_is_eos#LAST_TOKEN_IS_EOS, -> pool_hs_type == "eos"の場合は明示的にeosを追加済みなので、ここをTrueにするとeosが重複して2つ付く可能性がある。そのためここはFalseで良い。
             ).to(model.device) 
 

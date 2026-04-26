@@ -227,12 +227,13 @@ def get_first_few_sentences(text, min_word_num, max_word_num):
     ~~ただし1文目ですでにword_thresholdを超える場合は、最初の1文だけを返す。~~
     1文目がword_thresholdを超える場合は、Noneを返す
     """
+    text = text.strip() if text else None
     if text is None:
         print("text is None")
         return None
     
     # 文末記号を保持して分割
-    parts = re.split(r'(?<=[。．!?！？\n])\s*', text)
+    parts = re.split(r'(?<=[。．.!?！？\n])\s*', text)
     # delimiters = re.findall(r'[。．!?！？]', text) -> 上のsplit方法では、文末記号もpartsに含まれるため、delimitersは必要ない
     # sentences = [s.strip() for s in parts if len(s) > 0]  # 空の文を除外
     
