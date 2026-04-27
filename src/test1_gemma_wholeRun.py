@@ -28,7 +28,7 @@ from transformers import AutoModelForCausalLM, AutoTokenizer
 project_root = os.path.join(os.path.dirname(__file__), "..") # os.path.dirname(__file__): スクリプト自身のパス
 sys.path.append(project_root)
 
-from utils.gemma_train_and_test_utils import fix_seed, load_mem_vec, extract_probability_of_option_numbers, calculate_metrics
+from utils.gemma_train_and_test_utils import fix_seed, get_gemma_model_version, load_mem_vec, extract_probability_of_option_numbers, calculate_metrics
 from utils.handle_text_utils import create_test_prompt
 
 
@@ -55,12 +55,7 @@ def main(args):
 
     
     global model_name_for_dirname
-    if model_size in ['2', '9']:
-        model_version = 2
-    elif model_size in ['1', '4', '12']:
-        model_version = 3
-    else:
-        raise ValueError(f"Invalid model_size: {model_size}")
+    model_version = get_gemma_model_version(model_size)
 
 
     # [WIP] 'it'と'pt'のどちらが良いかは未検証. とりあえず'it'で統一.
@@ -92,6 +87,8 @@ def main(args):
     config_specified_concept_list = sum(class_to_target_concept_config.values(), [])
     result_dir = os.path.join(project_root, "results", f"{model_name_for_dirname}_{target_concepts_filename.replace('.json', '')}_initvecwith{init_vec_type.replace(' ', '_')}")
     mem_dir = os.path.join(project_root, "memvec_models", f"{model_name_for_dirname}_{target_concepts_filename.replace('.json', '')}_initvecwith{init_vec_type.replace(' ', '_')}")
+    # "work04"が大規模データ保存用のストレージ
+    # mem_dir = os.path.join("/home/work04/toko/memvec_models", f"{model_name_for_dirname}_{target_concepts_filename.replace('.json', '')}_initvecwith{init_vec_type.replace(' ', '_')}")
 
 
     # memvec用token_id割り当て読み込み
@@ -339,7 +336,7 @@ if __name__ == "__main__":
 
         # 通常:
         init_vec_type_lst = args.init_vec_types
-        layer_indices = args.layer_indices
+        # layer_indices = args.layer_indices
 
 
 
@@ -381,7 +378,7 @@ if __name__ == "__main__":
             # elif seed == 9:
             #     args.trained_date = "20260418"
             if seed >= 0:
-                args.trained_date = "20260423"
+                args.trained_date = "20260427"
             else:
                 raise ValueError(f"Invalid seed: {seed}")
             
@@ -392,17 +389,18 @@ if __name__ == "__main__":
 
         for init_vec_type in init_vec_type_lst:
 
+            layer_indices = args.layer_indices                                          # init_vec_typeによってlayer_indices=[None]になることもあるので、init_vec_typeループ毎に取得し直す
+            need_layer_flag = 'HS' in init_vec_type or 'HiddenState' in init_vec_type   # 初期化方法名に'隠れ層'が含まれれば、layer_idxの指定が必要な初期化方法とみなす
+            if len(layer_indices) < 1 or not need_layer_flag:
+                # layer_idxが不要の初期化方法の場合は、layer_indicesを[None]にして、1回だけループするようにする
+                layer_indices = [None]
             print(f"init_vec_type: {init_vec_type}, layer_indices: {layer_indices}")
-            layer_indices = args.layer_indices
 
             # if init_vec_type == "otherCatCent_by_WikiSummaryRepeatHSMixed" and seed >= 5:
             #     print(f"Skipping init_vec_type {init_vec_type} for seed {seed} because it is already run.")
             #     continue
         
 
-            if len(layer_indices) < 1:
-                # layer_idxが不要の初期化方法の場合は、layer_indicesを[None]にして、1回だけループするようにする
-                layer_indices = [None]
 
                 
             for layer_idx in layer_indices:

@@ -122,8 +122,10 @@ def main(args):
 
     # *** dir/file path 設定 ***
     train_data_dir = os.path.join(project_root, 'data', 'train_data') # 🟠train_data_dir = os.path.join(project_root, 'data', 'triplets')
-    save_mem_dir = os.path.join(project_root, "memvec_models", f"{model_name_for_dirname}_{target_concepts_filename.replace('.json', '')}_initvecwith{init_vec_type.replace(' ', '_')}")
-
+    # save_mem_dir = os.path.join(project_root, "memvec_models", f"{model_name_for_dirname}_{target_concepts_filename.replace('.json', '')}_initvecwith{init_vec_type.replace(' ', '_')}")
+    # "work04"が大規模データ保存用のストレージ
+    save_mem_dir = os.path.join("/home/work04/toko/memvec_models",  f"{model_name_for_dirname}_{target_concepts_filename.replace('.json', '')}_initvecwith{init_vec_type.replace(' ', '_')}")
+    
     # もしすでに同名のモデル保存ディレクトリが存在していたら、_2のように末尾に連番をつける
     original_save_mem_dir = save_mem_dir
     counter = 2
