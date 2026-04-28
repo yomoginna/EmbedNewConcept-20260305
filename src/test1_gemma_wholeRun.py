@@ -52,6 +52,7 @@ def main(args):
     trained_date = args.trained_date
     num_options = args.num_options
     layer_idx = args.layer_idx
+    print(layer_idx, type(layer_idx))
 
     
     global model_name_for_dirname
@@ -62,6 +63,7 @@ def main(args):
     model_name = f"google/gemma-{model_version}-{model_size}b-it" # [memo] 'gemma-'部分は変えないこと!! -を消すとモデルがloadできない．さらにそのエラーメッセージは，"huggingface-cli login"をして，という関係ないmessageになるので注意!
     model_name_for_dirname = f"gemma-{model_version}-{model_size}B-lr{lr}-{trained_date}"
     if layer_idx is not None:
+        print(f"Using layer index: {layer_idx}")
         model_name_for_dirname += f"-hidden_layer{layer_idx}"
     model_name_for_dirname += f"-seed{seed}"
 
@@ -86,9 +88,9 @@ def main(args):
         class_to_target_concept_config = json.load(f)
     config_specified_concept_list = sum(class_to_target_concept_config.values(), [])
     result_dir = os.path.join(project_root, "results", f"{model_name_for_dirname}_{target_concepts_filename.replace('.json', '')}_initvecwith{init_vec_type.replace(' ', '_')}")
-    mem_dir = os.path.join(project_root, "memvec_models", f"{model_name_for_dirname}_{target_concepts_filename.replace('.json', '')}_initvecwith{init_vec_type.replace(' ', '_')}")
+    # mem_dir = os.path.join(project_root, "memvec_models", f"{model_name_for_dirname}_{target_concepts_filename.replace('.json', '')}_initvecwith{init_vec_type.replace(' ', '_')}")
     # "work04"が大規模データ保存用のストレージ
-    # mem_dir = os.path.join("/home/work04/toko/memvec_models", f"{model_name_for_dirname}_{target_concepts_filename.replace('.json', '')}_initvecwith{init_vec_type.replace(' ', '_')}")
+    mem_dir = os.path.join("/work04/toko/EmbedNewConcept-20260305/memvec_models", f"{model_name_for_dirname}_{target_concepts_filename.replace('.json', '')}_initvecwith{init_vec_type.replace(' ', '_')}")
 
 
     # memvec用token_id割り当て読み込み
@@ -326,11 +328,12 @@ if __name__ == "__main__":
         os.environ["CUDA_VISIBLE_DEVICES"] = args.cuda_visible_devices
 
     
+    
     task_id = -1
-    for seed in range(args.seed_num):
+    for seed in [2,5,8,11,14,17]:# range(args.seed_num):
         args.seed = seed
 
-        # if seed < 10:
+        # if seed <= 12:
         #     print(f"seed {seed} is already run. skip.")
         #     continue
 
@@ -391,6 +394,7 @@ if __name__ == "__main__":
 
             layer_indices = args.layer_indices                                          # init_vec_typeによってlayer_indices=[None]になることもあるので、init_vec_typeループ毎に取得し直す
             need_layer_flag = 'HS' in init_vec_type or 'HiddenState' in init_vec_type   # 初期化方法名に'隠れ層'が含まれれば、layer_idxの指定が必要な初期化方法とみなす
+            print("need layer flag:", need_layer_flag)
             if len(layer_indices) < 1 or not need_layer_flag:
                 # layer_idxが不要の初期化方法の場合は、layer_indicesを[None]にして、1回だけループするようにする
                 layer_indices = [None]

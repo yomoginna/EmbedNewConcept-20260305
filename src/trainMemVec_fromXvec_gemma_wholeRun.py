@@ -75,7 +75,7 @@ def main(args):
     init_vec_type = args.init_vec_type
     pool_hs_type = args.pool_hs_type
     layer_idx = args.layer_idx
-    trained_date =  datetime.now().strftime("%Y%m%d") # "20260423"
+    trained_date = "20260427" # datetime.now().strftime("%Y%m%d") # "20260427"
 
 
     # ** モデル保存dirnameの設定 **
@@ -124,8 +124,8 @@ def main(args):
     train_data_dir = os.path.join(project_root, 'data', 'train_data') # 🟠train_data_dir = os.path.join(project_root, 'data', 'triplets')
     # save_mem_dir = os.path.join(project_root, "memvec_models", f"{model_name_for_dirname}_{target_concepts_filename.replace('.json', '')}_initvecwith{init_vec_type.replace(' ', '_')}")
     # "work04"が大規模データ保存用のストレージ
-    save_mem_dir = os.path.join("/home/work04/toko/memvec_models",  f"{model_name_for_dirname}_{target_concepts_filename.replace('.json', '')}_initvecwith{init_vec_type.replace(' ', '_')}")
-    
+    save_mem_dir = os.path.join("/work04/toko/EmbedNewConcept-20260305/memvec_models",  f"{model_name_for_dirname}_{target_concepts_filename.replace('.json', '')}_initvecwith{init_vec_type.replace(' ', '_')}")
+
     # もしすでに同名のモデル保存ディレクトリが存在していたら、_2のように末尾に連番をつける
     original_save_mem_dir = save_mem_dir
     counter = 2
@@ -628,7 +628,7 @@ def train(model_size,
 
     accLog = {}
     total_steps = 0
-    logged_steps = []
+    logged_steps = [0] # 学習前に埋め込み状態を追加した分として、0を追加しておく
     print("Start training...")
 
     for epoch in tqdm(range(maxEpochs + 1)):
@@ -790,10 +790,9 @@ if __name__ == "__main__":
         
     task_id = -1
     for seed in range(args.seed_num):
-        # if seed < 2:
+        # if seed <= 12:
         #     print(f"seed {seed} is already run. skip.")
         #     continue
-        args.seed = seed # mainにargsとして渡すためにargs.seedに代入している。main内でargs.seedを参照することで、現在のシード値を取得できるようになる。
         
         init_vec_type_lst = args.init_vec_types
 
@@ -811,27 +810,30 @@ if __name__ == "__main__":
             
             layer_indices = args.layer_indices # ここでinit_vec_typeループ毎に読み込まないと、layer_indices = [None] が代入されたループの次のループでも[None]のままになってしまう
 
-            if len(layer_indices) < 1: #  or 'HS' not in init_vec_type:  
+
+            need_layer_flag = 'HS' in init_vec_type or 'HiddenState' in init_vec_type   # 初期化方法名に'隠れ層'が含まれれば、layer_idxの指定が必要な初期化方法とみなす
+            if len(layer_indices) < 1 or not need_layer_flag:
                 # layer_idxが不要の初期化方法の場合は、layer_indicesを[None]にして、1回だけループするようにする
-                print(f"init_vec_type: {init_vec_type}, layer_indices: {layer_indices}")
+                # print(f"init_vec_type: {init_vec_type}, layer_indices: {layer_indices}")
                 layer_indices = [None]
 
                 
             for layer_idx in layer_indices:
+                args.seed = seed
                 args.layer_idx = layer_idx
+                args.init_vec_type = str(init_vec_type)
 
 
                 print(f"\n\n=== Training with seed: {seed}, init_vec_type: {init_vec_type}, layer_idx: {layer_idx} ===")
-                args.init_vec_type = str(init_vec_type)
 
                 task_id += 1
 
 
                 # if (init_vec_type == 'otherCatCent_by_WikiSummaryRepeatHSMixed' and seed in [10, 11, 12]) or \
                 #     (init_vec_type == 'CatCent_by_WikiSummaryRepeatHSMixed' and seed in [10, 11]):
-                if init_vec_type == 'zero' and seed ==13:
-                    print(f"seed {seed} with init_vec_type {init_vec_type} is already run. skip.")
-                    continue
+                # if init_vec_type == 'zero' and seed ==13:
+                #     print(f"seed {seed} with init_vec_type {init_vec_type} is already run. skip.")
+                #     continue
 
                 if task_id % processNum != args.thread_id:
                     # 複数process同時に実行する場合, thread_idに応じてtask_idが偶数or奇数の設定のみを実行する

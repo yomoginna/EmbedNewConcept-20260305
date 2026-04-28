@@ -179,7 +179,8 @@ class EmbedInitializer:
             self.calculateGlobalHSMean_by_GlbPrimDebiasedHSMixed(model, tokenizer, n_components=N_COMPONENTS, mix_layers=False)   # global_hidden_meanを、全カテゴリの主成分で計算する方法. mix_layers=Trueは、指定層の前後3層の隠れ状態を平均してterm_vecを作る方法. mix_layers=Falseは、指定層の隠れ状態のみでterm_vecを作る方法. どちらも試す
     
         # ** debias なし
-        if init_vec_type in ["CatCent_by_WikiSummaryRepeatHSMixed", "otherCatCent_by_WikiSummaryRepeatHSMixed"]:
+        # if init_vec_type in ["CatCent_by_WikiSummaryRepeatHSMixed", "nearCatCent_by_WikiSummaryRepeatHSMixed", "farCatCent_by_WikiSummaryRepeatHSMixed"]:
+        if "Repeat" in init_vec_type:
             self.repeat_prompt = True
         
         else:
@@ -495,7 +496,8 @@ class EmbedInitializer:
                 mix_layers=True,
                 print_flag=True
             ),
-            "otherCatCent_by_WikiSummaryRepeatHSMixed": lambda: self.initialize_embeds_by_other_category_centroid_by_function(
+            # 旧: otherCatCent_by_WikiSummaryRepeatHSMixed
+            "farCatCent_by_WikiSummaryRepeatHSMixed": lambda: self.initialize_embeds_by_other_category_centroid_by_function(
                 model, tokenizer, category_to_concepts_for_vec, category2initoken_ids, initvec_func=self.make_initvec_by_wiki_summary_and_hidden_state, 
                 layer_idx=layer_idx,
                 other_type="far", # 学習対象カテゴリの候補カテゴリの中からランダムに選ぶ方式
