@@ -10,6 +10,9 @@
 注意点：
 - 既存概念名だけでそのまま生成すると、例えば"Unlock!"のように意味と表層的な単語の意味がマッチしない場合に、正しい目標ベクトルが得られない。
     - そのため、promptに埋め込んで、どの"unlock!"を指しているのかを限定するための工夫が必要。
+
+実行時間:
+- 割とすぐ終わる。(4Bの場合は3分程度)
 """
 
 # ===== Standard library =====
@@ -67,7 +70,7 @@ load_dotenv(os.path.join(project_root, ".env"))
 WANDB_API_KEY = os.getenv("WANDB_API_KEY")
 
 
-debug_without_model = True
+debug_without_model = False #True
 
 # conceptを埋め込む文を取得する関数
 def get_concept_embedding_text(concept, target_name_to_replace_with_concept=None):
@@ -174,8 +177,8 @@ def main(args):
     model_size = args.model_size
     target_concepts_filename = args.target_concepts_filename
     pool_hs_type = args.pool_hs_type
-
-
+    
+    layer_index='all'
     model_version = get_gemma_model_version(model_size)
     
     # ** 保存先 **
@@ -232,7 +235,15 @@ def main(args):
         concept_to_prompt[concept] = prompt
 
     # config_concept_list の順番に対応するpromptのリストを作成
-    text_list = [concept_to_prompt[concept] for concept in config_concept_list]
+    concept_names, text_list = [], []
+    # text_list = [concept_to_prompt[concept] for concept in config_concept_list if concept in concept_to_prompt]
+    for concept in config_concept_list:
+        if concept in concept_to_prompt:
+            concept_names.append(concept)
+            text_list.append(concept_to_prompt[concept])
+        else:
+            # print(f"Warning: No prompt could be created for concept '{concept}' because no suitable sentence was found in the wiki summary. This concept will be skipped.")
+            pass
 
 
     # return 0  # [memo] ここまで動作確認済み
@@ -277,6 +288,10 @@ def main(args):
         device = model.device
 
         # *** pool_hs_type に応じて、vectorを抽出 ***
+        if pool_hs_type == "repeat_mean_pool":
+            data_type = "wiki_summary_repeat"
+        else:
+            data_type = "wiki_summary"
         all_vecs = extract_hidden_states(
             model, 
             tokenizer,
@@ -284,13 +299,22 @@ def main(args):
             pool_hs_type, 
             data_type, 
             batch_size=8, 
-            layer_index='all',
+            layer_index=layer_index,
             print_flag=False
         )   # -> (T, D) or (T, H, D) Tはテキスト数, Hは層の数, Dは隠れ状態の次元
 
         # ベクトルを保存
-        output_path = os.path.join(output_dir, f"goal_embeddings_{model_version}_{model_size}B_{target_concepts_filename.split('.')[0]}_{pool_hs_type}_layer{layer_idx}.npy")
-        np.save(output_path, all_vecs)
+        output_path = os.path.join(output_dir, f"goal_embeddings_{model_size}B_{target_concepts_filename.split('.')[0]}_{pool_hs_type}_layer{layer_index}")
+        np.savez(
+            output_path, 
+            vectors=all_vecs,
+            target_concepts_filename=target_concepts_filename,
+            concept_names=concept_names,
+            text_list=text_list,
+            model_size=model_size,
+            pool_hs_type=pool_hs_type,
+            layer_index=layer_index,
+        )
         print(f"Saved goal embeddings to {output_path}")
 
 
@@ -324,11 +348,14 @@ MODEL_SIZE=4
 uv run python src/generate_goal_embeddings.py \
     --target_concepts_filename ${TARGET_CONCEPTS_FILENAME} \
     --model_size ${MODEL_SIZE} \
+    --pool_hs_type "repeat_mean_pool" \
     --cuda_visible_devices 4
 
 nohup uv run python src/generate_goal_embeddings.py \
     --target_concepts_filename ${TARGET_CONCEPTS_FILENAME} \
     --model_size ${MODEL_SIZE} \
+    --pool_hs_type "repeat_mean_pool" \
     --cuda_visible_devices 4 \
-    > log_generate_goal_embeddings_gemma-${MODEL_SIZE}B_target${TARGET_CONCEPTS_FILENAME}.log 2>&1 &
+    > log_generate_goal_embeddings_gemma-${MODEL_SIZE}B_${TARGET_CONCEPTS_FILENAME}.log 2>&1 &
+
 """

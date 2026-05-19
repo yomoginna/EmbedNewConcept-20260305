@@ -442,7 +442,7 @@ def extract_hidden_states(model, tokenizer, text_list, pool_hs_type, data_type, 
                     layer_hs = hs[l_idx]      # (B, T, H)
                     vec = layer_hs[s_idx, pos_begin:pos_end, :].mean(dim=0)  # (H,)
                     layer_to_vecs.append(vec.detach().float().cpu().numpy())
-                all_vecs.extend(layer_to_vecs)  # (T, H, D) Tはテキスト数, Hは層の数, Dは隠れ状態の次元
+                all_vecs.append(layer_to_vecs)  # (T, H, D) Tはテキスト数, Hは層の数, Dは隠れ状態の次元
 
     return np.stack(all_vecs, axis=0)
 
