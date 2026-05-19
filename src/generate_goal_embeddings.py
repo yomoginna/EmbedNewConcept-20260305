@@ -71,7 +71,12 @@ debug_without_model = True
 
 # conceptを埋め込む文を取得する関数
 def get_concept_embedding_text(concept, target_name_to_replace_with_concept=None):
-    """conceptを埋め込む文を取得する関数. 例えば、conceptが"Apple Inc."であれば、Wikipediaのsummaryの中から"Apple Inc."を含む文を抽出し、その中で最初の文を返す. もし"Apple Inc."を含む文が見つからない場合は、" is the "を含む文を探し、その前の部分を"Apple Inc."に置換して返す. それも見つからない場合は、summary全体を返す.
+    """conceptを埋め込む文を取得する関数. 
+    大抵の wiki page は、概念名とその説明を含む1文から始まっているため、冒頭の文に概念名が含まれればその文を抽出する。含まれなければ、" is the " を含む文を探し、その前の部分を概念名に置換する。
+    例:
+    - conceptが"Apple Inc."であれば、Wikipediaのsummaryの中から"Apple Inc."を含む文を抽出し、その中で「最初の文」を返す. 
+    - もし"Apple Inc."を含む文が見つからない場合は、" is the "を含む文を探し、その前の部分を"Apple Inc."に置換して返す. それも見つからない場合は、summary全体を返す.
+
     Args:
         concept (str): 埋め込みたい概念名
         target_name_to_replace_with_concept (str, optional): concept名に置換する対象名. 例えば，concept="banana", wiki first sent = "banana is yellow" の場合，この最初のbananaを何に置き換えるか．noneの場合は置換なし，none以外の場合は置換する．
@@ -79,46 +84,80 @@ def get_concept_embedding_text(concept, target_name_to_replace_with_concept=None
     Returns:
         str: conceptを埋め込む文
     """
+    special_case_dic = {
+        "&": "and", # wikiタイトルでは 'Adam & Eve' だが、wiki page内文章では 'Adam and Eve' と表現されていた
+        "and": "&",
+
+    }
     
+
     # 辞書にまだ保存されていなければ、data dir もしくは wiki apiから取得して、self.propnoun_to_wikisummaryに格納する
     summary = load_wiki_text(concept, text_type="summary")
 
     # ** concept名が含まれる文だけを抽出し，さらにその中の一番最初の文を収集する．大文字小文字の違いは無視し，記号([]',.')なども無視して比較する．例えば、conceptが"Apple Inc."であれば、summaryの中から"Apple Inc."を含む文を抽出し、その中で最初の文を収集する．このとき、"apple inc"や"Apple, Inc."などもconcept名とみなす．
-    concept_pattern = re.escape(concept)  # concept名を正規表現の特殊文字をエスケープしてパターン化
-    is_the_pattern = re.compile(r'(.+?)\s+is\s+the\s+', re.IGNORECASE)
+    concept_pattern = re.escape(concept)                            # 概念名が含まれるかどうかを調べるパターン。concept名を正規表現の特殊文字をエスケープしてパターン化
+    brackets_dup_pattern = re.compile(r'\s*\(.*?\[.*?\].*?\)\s*')   # ( ... [..] ... ) のような()内に[]が入るパターン. wiki title(data名) と wiki page文章内の綴りが異なっても、( [])内に読み方が含まれれば、その前部分が概念名であるとわかる。例: concept名: 'House of Hohenstaufen' wiki文章: "The Hohenstaufen dynasty (, US also , German: [ˌhoːənˈʃtaʊfn̩]), also known as the Staufer,  ..."
+    is_the_pattern = re.compile(r'(.+?)\s+is\s+the\s+', re.IGNORECASE)      # " is the " が含まれるかどうかを調べるパターン
+    brackets_pattern = re.compile(r'\s*\(.*?\)\s*')                 # (  AB-ə [ˈâbːa]) のような読み方が書かれることがある. 
+
+
+    # concept pattern に含まれる一部の文字が、wiki page内では他の文字で表されている場合があるため、その場合のpatternも作成しておく。
+    concept_patterns = [concept_pattern]
+    for k, v in special_case_dic.items():
+        if k in concept:
+            concept_patterns.append(concept.replace(k, v))
+
 
     sentences = split_text_into_sentences(summary)  # 文の区切りでsummaryを分割
-    concept_sentences = [s for s in sentences if re.search(concept_pattern, s, re.IGNORECASE)]  # concept名を含む文を抽出
+    first_concept_sentence = None
 
+    ## ① ベースとして、概念名orその置換パターンを含む文を探す
+    # concept_sentences = [s for s in sentences if re.search(concept_pattern, s, re.IGNORECASE)]  # concept名を含む文を抽出
+    concept_sentences = [s for s in sentences for concept_pattern in concept_patterns if re.search(concept_pattern, s, re.IGNORECASE)]  # concept名を含む文を抽出
     if concept_sentences:
         first_concept_sentence = concept_sentences[0]
         # print(f"First wiki sentence containing concept '{concept}': \n\t{first_concept_sentence}\n")
 
-    # ** もしconcept名を含む文が見つからない場合は，" is the "を含む文を探してconcept名を含む文を作る．
+
+    # ② 概念名を含む文が見つからない場合 → ( []) を含む文を探す。概念名が違う言語で書かれている場合などがある。この場合、他言語の概念名 (名前 [発音]) の表記であることがあるため、そのパターンを探し、冒頭から()までを概念名に置換する
+    if first_concept_sentence is None:
+        print(f"No sentence containing concept '{concept}' was found in the summary. Trying to find a sentence containing '( ... [..] ... )' pattern to use as a template for the concept name.\n")
+        brackets_dup_sentences = [s for s in sentences if brackets_dup_pattern.search(s)]
+        # for s in brackets_dup_sentences: print(f"\t * Sentence containing '( ... [..] ... )' pattern: \n\t\t{s}\n")
+        if brackets_dup_sentences:
+            first_brackets_dup_sentence = brackets_dup_sentences[0]
+            # modified_sentence = brackets_dup_pattern.sub(concept + " ", first_brackets_dup_sentence)
+            # その文の中の、brackets_dup_patternにマッチする部分とそれ以前を概念名に置換する
+            modified_sentence = re.sub(rf"^.*?{brackets_dup_pattern.pattern}", concept + " ", first_brackets_dup_sentence)           
+            first_concept_sentence = modified_sentence
+            print(f"\t No sentence containing concept '{concept}' was found. Using modified '( ... [..] ... )' sentence: \n\t\t{first_concept_sentence}\n")
+
+    # ③ 概念名を含む文が見つからない場合 → " is the "を含む文を探して概念名を含む文を作る．
     # 例えば 'Arnhem Bridge' のsummaryの1文目は "John Frost Bridge (John Frostbrug in Dutch) is the road bridge over the Lower Rhine at Arnhem, in the Netherlands." である．この is the の前の部分を，concept名に置換して使う．
-    else:
+    if first_concept_sentence is None:
         print(f"No sentence containing concept '{concept}' was found in the summary. Trying to find a sentence containing 'is the' to use as a template for the concept name.\n")
         is_the_sentences = [s for s in sentences if is_the_pattern.search(s)]
-        for s in is_the_sentences:
-            print(f"\t * Sentence containing 'is the': \n\t\t{s}\n")
+        # for s in is_the_sentences: print(f"\t * Sentence containing 'is the': \n\t\t{s}\n")
         if is_the_sentences:
             first_is_the_sentence = is_the_sentences[0]
-            # first_is_the_sentenceのうち，「is the とマッチした部分」を，「concept + " is the "」に置換する処理
+            # first_is_the_sentenceのうち，「is the とマッチした部分」を，「concept + " is the "」に置換する
             modified_sentence = is_the_pattern.sub(concept + " is the ", first_is_the_sentence)
             first_concept_sentence = modified_sentence
             print(f"\t No sentence containing concept '{concept}' was found. Using modified 'is the' sentence: \n\t\t{first_concept_sentence}\n")
-        else:
-            # first_concept_sentence = ""
-            # print(f"\tNo sentence containing concept '{concept}' was found in the summary.\n\t {summary}")
-            raise ValueError(f"No sentence containing concept '{concept}' was found in the summary, and no sentence containing 'is the' was found either. Please check the summary for concept '{concept}': \n {summary}")
-        
+
+    if first_concept_sentence is None:   # 以上で解決できなければ、raise error. or Noneを返す
+        # raise ValueError(f"No sentence containing concept '{concept}' was found in the summary, and no sentence containing 'is the' was found either. Please check the summary for concept '{concept}': \n {summary}")
+        return None
+
     # [memo] この時点で必ず，concept名 を含む文が1つ，first_concept_sentenceとして格納されていることになる．
 
-    # ** first_concept_sentenceのうち、concept_patternにマッチした部分をtarget_name_to_replace_with_conceptに置換する処理
+    # ** 置換先の名前が登録されている場合は、first_concept_sentenceのうち、concept_patternにマッチした部分をtarget_name_to_replace_with_conceptに置換する処理
     if target_name_to_replace_with_concept is not None:
         modified_sentence = re.sub(concept_pattern, target_name_to_replace_with_concept, first_concept_sentence, flags=re.IGNORECASE)
+        # () が含まれる場合、()内を削除. (  AB-ə [ˈâbːa]) のような読み方が書かれることがあるため。
+        brackets_pattern = re.compile(r'\s*\(.*?\)\s*')
         first_concept_sentence = modified_sentence
-        print(f"Modified 'is the' sentence after replacement: \n\t{first_concept_sentence}\n")
+        print(f"Modified first or containing 'is the' sentence after replacement: \n\t{first_concept_sentence}\n")
         
     return first_concept_sentence
     
@@ -154,36 +193,10 @@ def main(args):
     # 該当wiki pageのsummaryを取得する
     concept_to_one_summary_sentence = {}
     for concept in config_concept_list:
-        # # 辞書にまだ保存されていなければ、data dir もしくは wiki apiから取得して、self.propnoun_to_wikisummaryに格納する
-        # summary = load_wiki_text(concept, text_type="summary")
-
-        # # concept名が含まれる文だけを抽出し，さらにその中の一番最初の文を収集する．大文字小文字の違いは無視し，記号([]',.')なども無視して比較する．例えば、conceptが"Apple Inc."であれば、summaryの中から"Apple Inc."を含む文を抽出し、その中で最初の文を収集する．このとき、"apple inc"や"Apple, Inc."などもconcept名とみなす．
-        # concept_pattern = re.escape(concept)  # concept名を正規表現の特殊文字をエスケープしてパターン化
-        # is_the_pattern = re.compile(r'(.+?)\s+is\s+the\s+', re.IGNORECASE)
-
-        # sentences = split_text_into_sentences(summary)  # 文の区切りでsummaryを分割
-        # concept_sentences = [s for s in sentences if re.search(concept_pattern, s, re.IGNORECASE)]  # concept名を含む文を抽出
-        # if concept_sentences:
-        #     first_concept_sentence = concept_sentences[0]
-        #     # print(f"First wiki sentence containing concept '{concept}': \n\t{first_concept_sentence}\n")
-        # else:
-        #     print(f"No sentence containing concept '{concept}' was found in the summary. Trying to find a sentence containing 'is the' to use as a template for the concept name.\n")
-        #     # もしconcept名を含む文が見つからない場合は，" is the "を含む文を探す．例えば 'Arnhem Bridge' のsummaryの1文目は "John Frost Bridge (John Frostbrug in Dutch) is the road bridge over the Lower Rhine at Arnhem, in the Netherlands." である．この is the の前の部分を，concept名に置換して使う．
-        #     is_the_sentences = [s for s in sentences if is_the_pattern.search(s)]
-        #     for s in is_the_sentences:
-        #         print(f"\t * Sentence containing 'is the': \n\t\t{s}\n")
-        #     if is_the_sentences:
-        #         first_is_the_sentence = is_the_sentences[0]
-        #         # first_is_the_sentenceのうち，「is the とマッチした部分」を，「concept + " is the "」に置換する処理
-        #         modified_sentence = is_the_pattern.sub(concept + " is the ", first_is_the_sentence)
-        #         first_concept_sentence = modified_sentence
-        #         print(f"\t No sentence containing concept '{concept}' was found. Using modified 'is the' sentence: \n\t\t{first_concept_sentence}\n")
-        #     else:
-        #         # first_concept_sentence = ""
-        #         # print(f"\tNo sentence containing concept '{concept}' was found in the summary.\n\t {summary}")
-        #         raise ValueError(f"No sentence containing concept '{concept}' was found in the summary, and no sentence containing 'is the' was found either. Please check the summary for concept '{concept}': \n {summary}")
-
         first_concept_sentence = get_concept_embedding_text(concept, "banana")
+        if first_concept_sentence is None:
+            # 現在のget_concept_embedding_text()では、概念を説明する1文がwiki summaryから見つけられなかったためskip.
+            continue
         concept_to_one_summary_sentence[concept] = first_concept_sentence
         # print(f"Summary with concept name for concept '{concept}': {summary}\n")
         print(f"First wiki sentence containing concept '{concept}': \n\t{first_concept_sentence}\n")
@@ -202,7 +215,7 @@ def main(args):
         print(f"Prompt for concept '{concept}': {prompt}")
         concept_to_prompt[concept] = prompt
 
-    return 
+    return 0
     # config_concept_list の順番に対応するpromptのリストを作成
     text_list = [concept_to_prompt[concept] for concept in config_concept_list]
 
@@ -318,14 +331,17 @@ if __name__ == "__main__":
 
 
 """
+TARGET_CONCEPTS_FILENAME="target_concepts_mini_13.json"
+MODEL_SIZE=4
+
 uv run python src/generate_goal_embeddings.py \
-    --target_concepts_filename target_concepts_mini_13.json \
-    --model_size 12 \
-    --cuda_visible_devices 0 
+    --target_concepts_filename ${TARGET_CONCEPTS_FILENAME} \
+    --model_size ${MODEL_SIZE} \
+    --cuda_visible_devices 4
 
 nohup uv run python src/generate_goal_embeddings.py \
-    --target_concepts_filename target_concepts_mini_13.json \
-    --model_size 12 \
-    --cuda_visible_devices 0 \
-    > log_generate_goal_embeddings_gemma-12B_target${TARGET_CONCEPTS_FILENAME}.log 2>&1 &
+    --target_concepts_filename ${TARGET_CONCEPTS_FILENAME} \
+    --model_size ${MODEL_SIZE} \
+    --cuda_visible_devices 4 \
+    > log_generate_goal_embeddings_gemma-${MODEL_SIZE}B_target${TARGET_CONCEPTS_FILENAME}.log 2>&1 &
 """
