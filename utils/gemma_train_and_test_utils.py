@@ -200,23 +200,137 @@ def calculate_metrics(y_pred_lst, y_true_lst):
 
 # =========================
 # pool_hs_type に応じた hidden state を取りvecを作成する関数
-# =========================
+# # =========================
+# @torch.no_grad()
+# def extract_hidden_states(model, tokenizer, text_list, pool_hs_type, data_type, batch_size=8, layer_index=None, print_flag=False):
+#     """
+#     pool_hs_typeに応じて hidden state を返す。
+
+#     Args:
+#         model: 言語モデル
+#         tokenizer: トークナイザ
+#         text_list: テキストのリスト
+#         pool_hs_type: hidden stateのpooling方法 ("eos", "last_token, "mean_pool", "dot" )
+#         data_type: データの種類 (e.g. "wiki_summary_repeat", "wiki_summary", "fact_sentences", etc.) -> pool_hs_typeの"mean_pool"を使用する際に、wiki summaryを繰り返してプロンプトとする場合は、2回目の文のみの隠れ状態を平均するために必要
+#         batch_size: バッチサイズ
+#         layer_index: int or list. 隠れ状態を抽出する層のインデックス. -1: 最終層
+#         print_flag: 抽出するhidden stateの位置を確認するためのprint文を表示するかどうか
+
+#     Returns:
+#         np.ndarray of shape (N, hidden_dim)
+#     """
+#     all_vecs = []
+
+#     for i in range(0, len(text_list), batch_size):
+#         batch_texts = text_list[i:i + batch_size]
+
+#         # ** 前処理 **
+#         if pool_hs_type == "eos":
+#             # EOS を明示的に末尾へ追加
+#             batch_texts = [text + tokenizer.eos_token for text in batch_texts]
+        
+#         # ** tokenize and generate **
+#         inputs = tokenizer(
+#             batch_texts,
+#             return_tensors="pt",
+#             padding=True,
+#             truncation=True,
+#             add_special_tokens=False #last_token_is_eos#LAST_TOKEN_IS_EOS, -> pool_hs_type == "eos"の場合は明示的にeosを追加済みなので、ここをTrueにするとeosが重複して2つ付く可能性がある。そのためここはFalseで良い。
+#         ).to(model.device) 
+
+#         input_ids = inputs["input_ids"]
+#         attention_mask = inputs["attention_mask"]
+        
+#         with torch.no_grad():
+#             outputs = model(**inputs, output_hidden_states=True)
+#             # hidden_states は tuple:
+#             # 0: embedding出力, 1..L: 各層出力
+#             hs = outputs.hidden_states
+#             layer_hs = hs[layer_index]      # (B, T, H)
+        
+
+#         # *** pool_hs_type に応じて、vectorを抽出 ***
+#         if pool_hs_type == "eos":
+#             # 各系列について EOS token の最後の出現位置を取る
+#             eos_mask = (input_ids == tokenizer.eos_token_id)
+
+#         for s_idx in range(input_ids.size(0)):
+
+#             # 1 が立っている位置を取得 [0, 0, 0, 0, 0, 0, 1, 1, 1, 1, 1, 1] -> valid_pos = [6, 7, 8, 9, 10, 11] 
+#             valid_pos = torch.nonzero(attention_mask[s_idx], as_tuple=False).squeeze(-1)
+#             # print(f"valid_pos for batch {s_idx}: {valid_pos}")
+#             if valid_pos.numel() == 0:
+#                 # 全部 padding の場合
+#                 pos_begin = 0
+#                 pos_end = 0
+#             else:
+#                 pos_begin = valid_pos[0].item()
+#                 pos_end = valid_pos[-1].item() + 1   # slice用に end は exclusive
+
+
+#             if pool_hs_type == "eos":
+#                 eos_positions = torch.where(eos_mask[s_idx])[0]
+#                 if len(eos_positions) == 0:
+#                     raise ValueError(f"EOS token が見つかりません: {batch_texts[s_idx]}")
+#                 eos_pos = eos_positions[-1].item()
+#                 pos_begin = eos_pos
+#                 pos_end = eos_pos + 1
+
+#             elif pool_hs_type == "last_token":
+#                 pos_begin = pos_end - 1
+
+
+#             elif pool_hs_type == "mean_pool":
+#                 if data_type == "wiki_summary_repeat":
+#                     # wiki summaryを繰り返してプロンプトとする場合は、2回目の文のみの隠れ状態を平均する
+#                     # seq_first_half_len = seq_len // 2   # 1文が5tokens → id:0,1,2,3,4 が1文目、id:5,6,7,8,9 が2文目の場合、seq_len=10, seq_first_half_len=5 となる
+#                     pos_begin_second_sent = (pos_begin + pos_end) // 2 # == pos_begin + (pos_end - pos_begin) / 2
+#                     pos_begin = pos_begin_second_sent
+
+#             elif pool_hs_type == "dot":
+#                 # dot (.) 位置のベクトルを抽出 (テンソルの中で「0でない（≒True）」要素のインデックスを取得する, その際tupleではなくテンソルで返すためにas_tuple=Falseを指定, さらに次元が1のときに余分な次元を削除するためにsqueeze(-1)を指定)
+#                 dot_pos = (input_ids[s_idx] == tokenizer.convert_tokens_to_ids('.')).nonzero(as_tuple=False).squeeze(-1)
+#                 if dot_pos.numel() == 0:
+#                     # dot がない場合はerror
+#                     raise ValueError(f"Batch {s_idx} のテキスト '{batch_texts[s_idx]}' にはdot(.)が含まれていません。dot(.)を含むテキストを使用してください。")
+#                 pos_begin = dot_pos[0].item()  # 最初のdotの位置を使用
+#                 pos_end = pos_begin + 1
+
+#             else:
+#                 raise ValueError(f"Unknown pool_hs_type: {pool_hs_type}")
+            
+#             vec = layer_hs[s_idx, pos_begin:pos_end, :].mean(dim=0)  # (H,)
+#             all_vecs.append(vec.detach().float().cpu().numpy())
+
+#             if print_flag:
+#                 # どの位置のtokenの隠れ状態が使われるのかを確認するためのprint文
+#                 print(f"pool_hs_type: {pool_hs_type}, data_type: {data_type}")
+#                 print(f"Batch {s_idx} text: '{batch_texts[s_idx]}'")
+#                 print(f"Token IDs: {input_ids[s_idx].tolist()}")
+#                 print(f"pos_begin: {pos_begin}, pos_end: {pos_end}")
+#                 print(f"\tattention_mask: {attention_mask[s_idx]},\n\t valid_pos: {valid_pos}, \n\t valid part in batch_text: {input_ids[s_idx][pos_begin:pos_end]}")
+#     return np.stack(all_vecs, axis=0)
+
 @torch.no_grad()
-def extract_hidden_states(model, tokenizer, text_list, pool_hs_type, data_type, batch_size=8, layer_index=-1, print_flag=False):
+def extract_hidden_states(model, tokenizer, text_list, pool_hs_type, data_type, batch_size=8, layer_index=None, print_flag=False):
     """
-    各テキストの末尾にEOSを明示的に追加し、
-    EOSトークン位置の hidden state を返す。
+    pool_hs_typeに応じて hidden state を返す。
 
     Args:
         model: 言語モデル
         tokenizer: トークナイザ
         text_list: テキストのリスト
         pool_hs_type: hidden stateのpooling方法 ("eos", "last_token, "mean_pool", "dot" )
+        data_type: データの種類 (e.g. "wiki_summary_repeat", "wiki_summary", "fact_sentences", etc.) -> pool_hs_typeの"mean_pool"を使用する際に、wiki summaryを繰り返してプロンプトとする場合は、2回目の文のみの隠れ状態を平均するために必要
+        batch_size: バッチサイズ
+        layer_index: int or list or 'all'. 隠れ状態を抽出する層のインデックス. -1: 最終層
+        print_flag: 抽出するhidden stateの位置を確認するためのprint文を表示するかどうか
 
     Returns:
         np.ndarray of shape (N, hidden_dim)
     """
     all_vecs = []
+    
 
     for i in range(0, len(text_list), batch_size):
         batch_texts = text_list[i:i + batch_size]
@@ -243,19 +357,22 @@ def extract_hidden_states(model, tokenizer, text_list, pool_hs_type, data_type, 
             # hidden_states は tuple:
             # 0: embedding出力, 1..L: 各層出力
             hs = outputs.hidden_states
-            layer_hs = hs[layer_index]      # (B, T, H)
-        
+
+        # layer_indices = []
+        # if type(layer_index) == int:
+        #     layer_indices = [layer_index]
+
 
         # *** pool_hs_type に応じて、vectorを抽出 ***
         if pool_hs_type == "eos":
             # 各系列について EOS token の最後の出現位置を取る
             eos_mask = (input_ids == tokenizer.eos_token_id)
 
-        for t_idx in range(input_ids.size(0)):
+        for s_idx in range(input_ids.size(0)):
 
             # 1 が立っている位置を取得 [0, 0, 0, 0, 0, 0, 1, 1, 1, 1, 1, 1] -> valid_pos = [6, 7, 8, 9, 10, 11] 
-            valid_pos = torch.nonzero(attention_mask[t_idx], as_tuple=False).squeeze(-1)
-            # print(f"valid_pos for batch {t_idx}: {valid_pos}")
+            valid_pos = torch.nonzero(attention_mask[s_idx], as_tuple=False).squeeze(-1)
+            # print(f"valid_pos for batch {s_idx}: {valid_pos}")
             if valid_pos.numel() == 0:
                 # 全部 padding の場合
                 pos_begin = 0
@@ -266,9 +383,9 @@ def extract_hidden_states(model, tokenizer, text_list, pool_hs_type, data_type, 
 
 
             if pool_hs_type == "eos":
-                eos_positions = torch.where(eos_mask[t_idx])[0]
+                eos_positions = torch.where(eos_mask[s_idx])[0]
                 if len(eos_positions) == 0:
-                    raise ValueError(f"EOS token が見つかりません: {batch_texts[t_idx]}")
+                    raise ValueError(f"EOS token が見つかりません: {batch_texts[s_idx]}")
                 eos_pos = eos_positions[-1].item()
                 pos_begin = eos_pos
                 pos_end = eos_pos + 1
@@ -283,18 +400,49 @@ def extract_hidden_states(model, tokenizer, text_list, pool_hs_type, data_type, 
                     # seq_first_half_len = seq_len // 2   # 1文が5tokens → id:0,1,2,3,4 が1文目、id:5,6,7,8,9 が2文目の場合、seq_len=10, seq_first_half_len=5 となる
                     pos_begin_second_sent = (pos_begin + pos_end) // 2 # == pos_begin + (pos_end - pos_begin) / 2
                     pos_begin = pos_begin_second_sent
-                
+
+            elif pool_hs_type == "dot":
+                # dot (.) 位置のベクトルを抽出 (テンソルの中で「0でない（≒True）」要素のインデックスを取得する, その際tupleではなくテンソルで返すためにas_tuple=Falseを指定, さらに次元が1のときに余分な次元を削除するためにsqueeze(-1)を指定)
+                dot_pos = (input_ids[s_idx] == tokenizer.convert_tokens_to_ids('.')).nonzero(as_tuple=False).squeeze(-1)
+                if dot_pos.numel() == 0:
+                    # dot がない場合はerror
+                    raise ValueError(f"Batch {s_idx} のテキスト '{batch_texts[s_idx]}' にはdot(.)が含まれていません。dot(.)を含むテキストを使用してください。")
+                pos_begin = dot_pos[0].item()  # 最初のdotの位置を使用
+                pos_end = pos_begin + 1
+
             else:
                 raise ValueError(f"Unknown pool_hs_type: {pool_hs_type}")
             
-            vec = layer_hs[t_idx, pos_begin:pos_end, :].mean(dim=0)  # (H,)
-            all_vecs.append(vec.detach().float().cpu().numpy())
 
             if print_flag:
                 # どの位置のtokenの隠れ状態が使われるのかを確認するためのprint文
+                print(f"pool_hs_type: {pool_hs_type}, data_type: {data_type}")
+                print(f"Batch {s_idx} text: '{batch_texts[s_idx]}'")
+                print(f"Token IDs: {input_ids[s_idx].tolist()}")
                 print(f"pos_begin: {pos_begin}, pos_end: {pos_end}")
-                print(f"\tattention_mask: {attention_mask[t_idx]},\n\t valid_pos: {valid_pos}, \n\t valid part in batch_text: {input_ids[t_idx][pos_begin:pos_end]}")
+                print(f"\tattention_mask: {attention_mask[s_idx]},\n\t valid_pos: {valid_pos}, \n\t valid part in batch_text: {input_ids[s_idx][pos_begin:pos_end]}")
 
+            # ** 結果のvecをall_vecsに追加
+            if type(layer_index) == int:
+                # layer_indexが1つだけ指定された場合
+                layer_hs = hs[layer_index]      # (B, T, H)
+                vec = layer_hs[s_idx, pos_begin:pos_end, :].mean(dim=0)  # (H,)
+                all_vecs.append(vec.detach().float().cpu().numpy()) # all_vecs: (T, D)  Tはテキスト数, Dは隠れ状態の次元
+            else:
+                if layer_index == 'all':
+                    # layer_indexが'all'の場合は、全ての層の隠れ状態を抽出して連結する
+                    layer_indices = list(range(len(hs)))
+                else:
+                    # layer_indexが複数、intで指定された場合は、指定された全ての層の隠れ状態を抽出して連結する
+                    layer_indices = layer_index
+
+                # layer_indexが複数指定された場合は、指定された全ての層の隠れ状態を抽出して連結する
+                layer_to_vecs = []
+                for l_idx in layer_indices:
+                    layer_hs = hs[l_idx]      # (B, T, H)
+                    vec = layer_hs[s_idx, pos_begin:pos_end, :].mean(dim=0)  # (H,)
+                    layer_to_vecs.append(vec.detach().float().cpu().numpy())
+                all_vecs.extend(layer_to_vecs)  # (T, H, D) Tはテキスト数, Hは層の数, Dは隠れ状態の次元
 
     return np.stack(all_vecs, axis=0)
 

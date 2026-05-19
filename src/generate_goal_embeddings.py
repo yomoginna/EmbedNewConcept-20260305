@@ -45,7 +45,7 @@ sys.path.append(project_root)
 print("Project root:", project_root)
 
 from utils.wikipedia_api_utils import load_wiki_text
-from utils.gemma_train_and_test_utils import fix_seed, get_gemma_model_version, save_mem_vec, constructTrainSamples, encodeTrainSamplesWithTokenizer, evaluateModel #, train
+from utils.gemma_train_and_test_utils import fix_seed, get_gemma_model_version, save_mem_vec, constructTrainSamples, encodeTrainSamplesWithTokenizer, evaluateModel, extract_hidden_states #, train
 from utils.handle_data_from_dbpedia_utils import filterProperNounsWithWikiPage, loadProperNounData #, loadConceptsForFictConcept
 from utils.initialize_embedding_layer_utils import EmbedInitializer
 from utils.handle_text_utils import delete_non_English_characters, split_text_into_sentences
@@ -95,14 +95,16 @@ def get_concept_embedding_text(concept, target_name_to_replace_with_concept=None
     summary = load_wiki_text(concept, text_type="summary")
 
     # ** concept名が含まれる文だけを抽出し，さらにその中の一番最初の文を収集する．大文字小文字の違いは無視し，記号([]',.')なども無視して比較する．例えば、conceptが"Apple Inc."であれば、summaryの中から"Apple Inc."を含む文を抽出し、その中で最初の文を収集する．このとき、"apple inc"や"Apple, Inc."などもconcept名とみなす．
-    concept_pattern = re.escape(concept)                            # 概念名が含まれるかどうかを調べるパターン。concept名を正規表現の特殊文字をエスケープしてパターン化
+    base_concept_pattern = re.escape(concept)                            # 概念名が含まれるかどうかを調べるパターン。concept名を正規表現の特殊文字をエスケープしてパターン化
     brackets_dup_pattern = re.compile(r'\s*\(.*?\[.*?\].*?\)\s*')   # ( ... [..] ... ) のような()内に[]が入るパターン. wiki title(data名) と wiki page文章内の綴りが異なっても、( [])内に読み方が含まれれば、その前部分が概念名であるとわかる。例: concept名: 'House of Hohenstaufen' wiki文章: "The Hohenstaufen dynasty (, US also , German: [ˌhoːənˈʃtaʊfn̩]), also known as the Staufer,  ..."
     is_the_pattern = re.compile(r'(.+?)\s+is\s+the\s+', re.IGNORECASE)      # " is the " が含まれるかどうかを調べるパターン
     brackets_pattern = re.compile(r'\s*\(.*?\)\s*')                 # (  AB-ə [ˈâbːa]) のような読み方が書かれることがある. 
+    brackets_colon_pattern = re.compile(r"\([^()]*[:;][^()]*\)") # (en: Apple Inc.) のような、()内に:が入るパターン. "\([^()]*[:;][^()]*\)"
+    brackets_stylised_pattern = re.compile(r'\s*\(.*?stylised.*?\)\s*') # (stylised as ABC) のようなパターン. これも概念名の一部ではないので削除する.
 
 
     # concept pattern に含まれる一部の文字が、wiki page内では他の文字で表されている場合があるため、その場合のpatternも作成しておく。
-    concept_patterns = [concept_pattern]
+    concept_patterns = [base_concept_pattern]
     for k, v in special_case_dic.items():
         if k in concept:
             concept_patterns.append(concept.replace(k, v))
@@ -116,28 +118,26 @@ def get_concept_embedding_text(concept, target_name_to_replace_with_concept=None
     concept_sentences = [s for s in sentences for concept_pattern in concept_patterns if re.search(concept_pattern, s, re.IGNORECASE)]  # concept名を含む文を抽出
     if concept_sentences:
         first_concept_sentence = concept_sentences[0]
-        # print(f"First wiki sentence containing concept '{concept}': \n\t{first_concept_sentence}\n")
-
+        # もし, 基本の概念名ではなく辞書を元に置換した概念名でマッチした場合もある。それを基本の概念名に戻す。
+        for concept_pattern in concept_patterns:
+            if re.search(concept_pattern, first_concept_sentence, re.IGNORECASE):
+                first_concept_sentence = re.sub(concept_pattern, concept, first_concept_sentence, flags=re.IGNORECASE)
 
     # ② 概念名を含む文が見つからない場合 → ( []) を含む文を探す。概念名が違う言語で書かれている場合などがある。この場合、他言語の概念名 (名前 [発音]) の表記であることがあるため、そのパターンを探し、冒頭から()までを概念名に置換する
     if first_concept_sentence is None:
-        print(f"No sentence containing concept '{concept}' was found in the summary. Trying to find a sentence containing '( ... [..] ... )' pattern to use as a template for the concept name.\n")
         brackets_dup_sentences = [s for s in sentences if brackets_dup_pattern.search(s)]
-        # for s in brackets_dup_sentences: print(f"\t * Sentence containing '( ... [..] ... )' pattern: \n\t\t{s}\n")
         if brackets_dup_sentences:
             first_brackets_dup_sentence = brackets_dup_sentences[0]
-            # modified_sentence = brackets_dup_pattern.sub(concept + " ", first_brackets_dup_sentence)
             # その文の中の、brackets_dup_patternにマッチする部分とそれ以前を概念名に置換する
-            modified_sentence = re.sub(rf"^.*?{brackets_dup_pattern.pattern}", concept + " ", first_brackets_dup_sentence)           
+            modified_sentence = re.sub(rf"^.*?{brackets_dup_pattern.pattern}", concept, first_brackets_dup_sentence)           
             first_concept_sentence = modified_sentence
             print(f"\t No sentence containing concept '{concept}' was found. Using modified '( ... [..] ... )' sentence: \n\t\t{first_concept_sentence}\n")
 
     # ③ 概念名を含む文が見つからない場合 → " is the "を含む文を探して概念名を含む文を作る．
     # 例えば 'Arnhem Bridge' のsummaryの1文目は "John Frost Bridge (John Frostbrug in Dutch) is the road bridge over the Lower Rhine at Arnhem, in the Netherlands." である．この is the の前の部分を，concept名に置換して使う．
     if first_concept_sentence is None:
-        print(f"No sentence containing concept '{concept}' was found in the summary. Trying to find a sentence containing 'is the' to use as a template for the concept name.\n")
+        # print(f"No sentence containing concept '{concept}' was found in the summary. Trying to find a sentence containing 'is the' to use as a template for the concept name.\n")
         is_the_sentences = [s for s in sentences if is_the_pattern.search(s)]
-        # for s in is_the_sentences: print(f"\t * Sentence containing 'is the': \n\t\t{s}\n")
         if is_the_sentences:
             first_is_the_sentence = is_the_sentences[0]
             # first_is_the_sentenceのうち，「is the とマッチした部分」を，「concept + " is the "」に置換する
@@ -153,11 +153,16 @@ def get_concept_embedding_text(concept, target_name_to_replace_with_concept=None
 
     # ** 置換先の名前が登録されている場合は、first_concept_sentenceのうち、concept_patternにマッチした部分をtarget_name_to_replace_with_conceptに置換する処理
     if target_name_to_replace_with_concept is not None:
-        modified_sentence = re.sub(concept_pattern, target_name_to_replace_with_concept, first_concept_sentence, flags=re.IGNORECASE)
-        # () が含まれる場合、()内を削除. (  AB-ə [ˈâbːa]) のような読み方が書かれることがあるため。
-        brackets_pattern = re.compile(r'\s*\(.*?\)\s*')
-        first_concept_sentence = modified_sentence
-        print(f"Modified first or containing 'is the' sentence after replacement: \n\t{first_concept_sentence}\n")
+        first_concept_sentence = re.sub(concept, target_name_to_replace_with_concept, first_concept_sentence, flags=re.IGNORECASE)
+    
+    # ** 文をcleaning
+    first_concept_sentence = re.sub(brackets_dup_pattern, " ", first_concept_sentence)      # ( ... [..] ... ) パターンをスペースに置換
+    first_concept_sentence = re.sub(brackets_colon_pattern, " ", first_concept_sentence)    # ( ... : ... ) パターンをスペースに置換
+    first_concept_sentence = re.sub(brackets_stylised_pattern, " ", first_concept_sentence) # (stylised ...) パターンをスペースに置換
+    first_concept_sentence = re.sub(r'\(\)', ' ', first_concept_sentence)                   # ()のみのパターンをスペースに置換
+    first_concept_sentence = re.sub(r" {2,}", " ", first_concept_sentence)                  # 連続するスペースを1つのスペースに置換
+    first_concept_sentence = re.sub(r"\s+([,.?!])", r"\1", first_concept_sentence)          # スペース + 句読点のパターンを、スペースなしの句読点に置換 (例. "The Ayyubid dynasty , also known as ..." -> "The Ayyubid dynasty, also known as ...")
+    first_concept_sentence = first_concept_sentence.strip()                                 # 先頭と末尾
         
     return first_concept_sentence
     
@@ -168,13 +173,14 @@ def get_concept_embedding_text(concept, target_name_to_replace_with_concept=None
 def main(args):
     model_size = args.model_size
     target_concepts_filename = args.target_concepts_filename
+    pool_hs_type = args.pool_hs_type
 
 
     model_version = get_gemma_model_version(model_size)
     
     # ** 保存先 **
     # output_dir = os.path.join(project_root, "output", f"gemma-{model_version}-{model_size}B_lr{lr}_{target_concepts_filename.split('.')[-1]}_{pool_hs_type}_layer{layer_idx}")
-    output_dir = os.path.join("/work04/toko/EmbedNewConcept-20260305", "goal_embeddings", f"gemma-{model_version}-{model_size}B_{target_concepts_filename.split('.')[-1]}")
+    output_dir = os.path.join("/work04/toko/EmbedNewConcept-20260305", "goal_embeddings", f"gemma-{model_version}-{model_size}B")
     os.makedirs(output_dir, exist_ok=True)
 
 
@@ -190,10 +196,13 @@ def main(args):
     config_concept_list = sum(class_to_target_concepts_config.values(), [])
     print(f"Target concepts specified in config {class_to_target_concepts_path}: {config_concept_list}")
 
-    # 該当wiki pageのsummaryを取得する
+    # *** 該当wiki pageのsummaryから、概念をうまく説明する1文を抽出し、概念名を置換したければ置換する.
     concept_to_one_summary_sentence = {}
     for concept in config_concept_list:
-        first_concept_sentence = get_concept_embedding_text(concept, "banana")
+        first_concept_sentence = get_concept_embedding_text(
+            concept, 
+            None
+        )
         if first_concept_sentence is None:
             # 現在のget_concept_embedding_text()では、概念を説明する1文がwiki summaryから見つけられなかったためskip.
             continue
@@ -201,23 +210,32 @@ def main(args):
         # print(f"Summary with concept name for concept '{concept}': {summary}\n")
         print(f"First wiki sentence containing concept '{concept}': \n\t{first_concept_sentence}\n")
 
-
-
+    # 何割について文を抽出できたかを確認
+    extracted_count = len(concept_to_one_summary_sentence)
+    total_count = len(config_concept_list)
+    print(f"Extracted sentences for {extracted_count}/{total_count} concepts ({extracted_count/total_count*100:.2f}%)")
 
     # =========================
     # promptの作成 (目標vec生成用) 
     # =========================
     # prompt_base = "It is the <target_concept>."
     concept_to_prompt = {}
-    for concept in config_concept_list:
+    for concept, one_summary_sentence in concept_to_one_summary_sentence.items():   # in config_concept_list:
         print(f"Processing concept: {concept}")
-        prompt = concept_to_one_summary_sentence[concept] * 2 
+        if pool_hs_type == "repeat_mean_pool":
+            # 目標ベクトルを生成するためのpromptを作成. 例えば、"It is the apple. It is the apple." のように、同じ文を2回繰り返すことで、gemmaのattentionが、後半の文の方に向くようにする。
+            prompt = one_summary_sentence * 2 
+            pool_hs_type = "mean_pool" # pool_hs_typeがrepeat_mean_poolの場合は、pool_hs_typeをmean_poolに変更して、後半の文の隠れ状態の平均を目標ベクトルとする. これにより、gemmaのattentionが、後半の文の方に向くようにする。
+        else:
+            prompt = one_summary_sentence
         print(f"Prompt for concept '{concept}': {prompt}")
         concept_to_prompt[concept] = prompt
 
-    return 0
     # config_concept_list の順番に対応するpromptのリストを作成
     text_list = [concept_to_prompt[concept] for concept in config_concept_list]
+
+
+    # return 0  # [memo] ここまで動作確認済み
 
 
     # =========================
@@ -252,65 +270,33 @@ def main(args):
     # =========================
     # *** 全層の隠れ状態を全て記録に残す．最終dot(.)位置のみのベクトル，全体のmean pool, の2種類を記録する．***
     # =========================
-    batch_size = 8
     if debug_without_model:
         device = torch.device("cpu")
     else:
         model.eval() # 評価モードに切り替え (これにより、dropoutなどの挙動が変わる)
         device = model.device
 
-    for i in range(0, len(text_list), batch_size):
-        batch_texts = text_list[i:i + batch_size]
-        # ** tokenize and generate **
-        inputs = tokenizer(
-            batch_texts,
-            return_tensors="pt",
-            padding=True,
-            truncation=True,
-            add_special_tokens=False #last_token_is_eos#LAST_TOKEN_IS_EOS, -> pool_hs_type == "eos"の場合は明示的にeosを追加済みなので、ここをTrueにするとeosが重複して2つ付く可能性がある。そのためここはFalseで良い。
-        ).to(device) 
-
-        input_ids = inputs["input_ids"]
-        attention_mask = inputs["attention_mask"]
-        
-        # with torch.no_grad():
-        #     outputs = model(**inputs, output_hidden_states=True)
-        #     # hidden_states は tuple:
-        #     # 0: embedding出力, 1..L: 各層出力
-        #     hs = outputs.hidden_states
-        #     # layer_hs = hs[layer_index]      # (B, T, H)
-
-
         # *** pool_hs_type に応じて、vectorを抽出 ***
-        for s_idx in range(input_ids.size(0)):
+        all_vecs = extract_hidden_states(
+            model, 
+            tokenizer,
+            text_list, 
+            pool_hs_type, 
+            data_type, 
+            batch_size=8, 
+            layer_index='all',
+            print_flag=False
+        )   # -> (T, D) or (T, H, D) Tはテキスト数, Hは層の数, Dは隠れ状態の次元
 
-            # 1 が立っている位置を取得 [0, 0, 0, 0, 0, 0, 1, 1, 1, 1, 1, 1] -> valid_pos = [6, 7, 8, 9, 10, 11] 
-            valid_pos = torch.nonzero(attention_mask[s_idx], as_tuple=False).squeeze(-1)
-            # print(f"valid_pos for batch {s_idx}: {valid_pos}")
-            if valid_pos.numel() == 0:
-                # 全部 padding の場合
-                pos_begin = 0
-                pos_end = 0
-            else:
-                pos_begin = valid_pos[0].item()
-                pos_end = valid_pos[-1].item() + 1   # slice用に end は exclusive
+        # ベクトルを保存
+        output_path = os.path.join(output_dir, f"goal_embeddings_{model_version}_{model_size}B_{target_concepts_filename.split('.')[0]}_{pool_hs_type}_layer{layer_idx}.npy")
+        np.save(output_path, all_vecs)
+        print(f"Saved goal embeddings to {output_path}")
 
-            # dot (.) 位置のベクトルを抽出 (テンソルの中で「0でない（≒True）」要素のインデックスを取得する, その際tupleではなくテンソルで返すためにas_tuple=Falseを指定, さらに次元が1のときに余分な次元を削除するためにsqueeze(-1)を指定)
-            dot_pos = (input_ids[s_idx] == tokenizer.convert_tokens_to_ids('.')).nonzero(as_tuple=False).squeeze(-1)
-            if dot_pos.numel() == 0:
-                # # dotがない場合は、最後のトークン位置をdot位置とする
-                # dot_pos = pos_end - 1
-                # dot がない場合はerror
-                raise ValueError(f"Batch {s_idx} のテキスト '{batch_texts[s_idx]}' にはdot(.)が含まれていません。dot(.)を含むテキストを使用してください。")
 
-            # debug
-            print(f"Batch {s_idx} text: '{batch_texts[s_idx]}'")
-            print(f"Token IDs: {input_ids[s_idx]}")
-            print(f"Attention Mask: {attention_mask[s_idx]}")
-            print(f"Valid token positions: {valid_pos}")
-            print(f"Dot positions: {dot_pos}")
-            print(f"pos_begin: {pos_begin}, pos_end: {pos_end}")
 
+
+    
 
         
 
@@ -320,6 +306,7 @@ if __name__ == "__main__":
     parser = argparse.ArgumentParser(description="Generate goal embeddings for target concepts using a specified Gemma model.")
     parser.add_argument('--target_concepts_filename', type=str, default='target_concepts.json', help='学習対象とするconcept群を指定したjsonファイル名 (configディレクトリ内). 例: "target_concepts.json"') # *** 🟠 
     parser.add_argument("--model_size", type=int, default=3, help="Size of the Gemma model in billions (e.g., 3 for Gemma-3B).")
+    parser.add_argument("--pool_hs_type", type=str, default="repeat_mean_pool", help='hidden stateのpooling方法. "eos": 最後のEOSトークンの隠れ状態を使用. "last_token": 最後のトークンの隠れ状態を使用. "mean_pool": テキスト全体の隠れ状態の平均を使用. "repeat_mean_pool": テキストを2回繰り返した内の後のtextの隠れ状態の平均を使用. "dot": テキスト全体の隠れ状態を平均したものと、最後のトークンの隠れ状態を連結して使用.')
     parser.add_argument('--cuda_visible_devices', type=str, default=None, help='CUDA_VISIBLE_DEVICESの設定. ただし数字は1つだけ指定すること. 例: "2"')
     args = parser.parse_args()
 
