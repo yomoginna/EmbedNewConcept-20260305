@@ -12,7 +12,13 @@
     - そのため、promptに埋め込んで、どの"unlock!"を指しているのかを限定するための工夫が必要。
 
 実行時間:
-- 割とすぐ終わる。(4Bの場合は3分程度)
+- 割とすぐ終わる。(4Bの場合は3分程度, 12Bでもそんなに変わらない。zao00でも12Bを実施できた。prompt短いし学習ないから。)
+
+実行後:
+- このコードを実行すると、目標vecのnpzファイルがwork04に保存される。
+- これを可視化するために、src_visualize/plot_vecs_3dPCA.pyを実行する。
+    - 3次元PCA, 概念毎の色分け
+
 """
 
 # ===== Standard library =====
@@ -312,7 +318,7 @@ def main(args):
             concept_names=concept_names,
             text_list=text_list,
             model_size=model_size,
-            pool_hs_type=pool_hs_type,
+            pool_hs_type=args.pool_hs_type, # repeat_の場合、途中でmean_poolに変えてしまったため、pool_hs_typeではなく、元のargs.pool_hs_typeを保存する
             layer_index=layer_index,
         )
         print(f"Saved goal embeddings to {output_path}")
@@ -343,7 +349,7 @@ if __name__ == "__main__":
 
 """
 TARGET_CONCEPTS_FILENAME="target_concepts_mini_13.json"
-MODEL_SIZE=4
+MODEL_SIZE=12
 
 uv run python src/generate_goal_embeddings.py \
     --target_concepts_filename ${TARGET_CONCEPTS_FILENAME} \
@@ -357,5 +363,7 @@ nohup uv run python src/generate_goal_embeddings.py \
     --pool_hs_type "repeat_mean_pool" \
     --cuda_visible_devices 4 \
     > log_generate_goal_embeddings_gemma-${MODEL_SIZE}B_${TARGET_CONCEPTS_FILENAME}.log 2>&1 &
+
+3748904
 
 """
