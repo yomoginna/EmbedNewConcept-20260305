@@ -712,7 +712,8 @@ def train(model_size,
                 logged_steps.append(total_steps)
                 if track_vector_change:
                     for token_id in memTokenIds:
-                        vector_change_history[token_id].append(get_vector(model, token_id))
+                        vector_change_history[token_id].append(get_vector(model, token_id)) # 各token_idのkeyに対応するリストに、現在のstepにおけるベクトルを追加していく
+                        # vector_change_history shape: [num_tokens, num_logged_steps, hidden_dim] ({token_id: [vec_epoch1, vec_epoch2, ...], ...})
 
             totalLoss += loss.item()
             # totalLoss += loss.detach().cpu().tolist()
@@ -790,9 +791,9 @@ if __name__ == "__main__":
         
     task_id = -1
     for seed in range(args.seed_num):
-        # if seed <= 12:
-        #     print(f"seed {seed} is already run. skip.")
-        #     continue
+        if seed <= 1:
+            print(f"seed {seed} is already run. skip.")
+            continue
         
         init_vec_type_lst = args.init_vec_types
 

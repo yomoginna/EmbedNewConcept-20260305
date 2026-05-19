@@ -27,9 +27,18 @@ sys.path.append(project_root)
 
 def fix_seed(seed=0):
     """Fix random seed for reproducibility."""
-    torch.manual_seed(seed)
+    # torch.manual_seed(seed)
+    # random.seed(seed)
+    # np.random.seed(seed)
+
     random.seed(seed)
     np.random.seed(seed)
+    torch.manual_seed(seed)
+    torch.cuda.manual_seed_all(seed)
+
+    torch.backends.cudnn.deterministic = True
+    torch.backends.cudnn.benchmark = False
+    torch.use_deterministic_algorithms(True)
 
 
 def get_gemma_model_version(model_size):
@@ -198,6 +207,12 @@ def extract_hidden_states(model, tokenizer, text_list, pool_hs_type, data_type, 
     各テキストの末尾にEOSを明示的に追加し、
     EOSトークン位置の hidden state を返す。
 
+    Args:
+        model: 言語モデル
+        tokenizer: トークナイザ
+        text_list: テキストのリスト
+        pool_hs_type: hidden stateのpooling方法 ("eos", "last_token, "mean_pool", "dot" )
+
     Returns:
         np.ndarray of shape (N, hidden_dim)
     """
@@ -206,10 +221,12 @@ def extract_hidden_states(model, tokenizer, text_list, pool_hs_type, data_type, 
     for i in range(0, len(text_list), batch_size):
         batch_texts = text_list[i:i + batch_size]
 
+        # ** 前処理 **
         if pool_hs_type == "eos":
             # EOS を明示的に末尾へ追加
             batch_texts = [text + tokenizer.eos_token for text in batch_texts]
         
+        # ** tokenize and generate **
         inputs = tokenizer(
             batch_texts,
             return_tensors="pt",

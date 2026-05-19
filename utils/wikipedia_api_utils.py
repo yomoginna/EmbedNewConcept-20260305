@@ -139,3 +139,52 @@ def load_wikisummary(propnoun, wiki_pages_dir):
         
 
 
+
+
+def load_wiki_text(propnoun, text_type="summary"):
+    """dbpediaから収集した固有名詞のwikipedia summaryを読み込んで、propnoun_to_wikisummaryに保存する。
+    data/wiki_pages に未保存であれば、data dir もしくは wiki apiから取得して、self.propnoun_to_wikisummaryに保存する
+    """
+    # print("Loading Wikipedia summaries for prop nouns...")
+    wiki_pages_dir = os.path.join(project_root, "data", "wiki_pages")
+
+    filename = re.sub(r'[/\\ ]', '_', propnoun) + ".json"  # ファイル名に使用できない文字を置換
+    wikipage_path = os.path.join(wiki_pages_dir, filename)
+    
+
+    # * 未取得の場合、wikipedia apiから取得して保存する
+    if not os.path.exists(wikipage_path):
+        wiki_info = fetch_wikipedia_page(propnoun, lang="en")
+        if wiki_info["exists"] == False:
+            print(f"Wikipedia page for concept '{propnoun}' DOES NOT exist. Skipping generation.")
+            return None
+        # 本文を切り出す
+        main_text = extract_wiki_main_text(wiki_info['text'])
+        wiki_info['text'] = main_text
+
+        # 保存
+        with open(wikipage_path, "w") as f:
+            json.dump(wiki_info, f, ensure_ascii=False, indent=4)
+
+
+    # * 今ここで保存した or すでに保存されているwikipedia summaryを読み込む
+    with open(wikipage_path, "r") as f:
+        wiki_page = json.load(f)
+
+    if text_type == "summary":
+        summary = wiki_page.get("summary")
+        if summary:
+            return summary
+        else:
+            print(f"No summary found in wiki page for '{propnoun}' in wiki_pages.")
+            return None
+        
+    elif text_type == "main_text":
+        main_text = wiki_page.get("text")
+        if main_text:
+            return main_text
+        else:
+            print(f"No main text found in wiki page for '{propnoun}' in wiki_pages.")
+            return None
+
+

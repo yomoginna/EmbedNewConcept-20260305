@@ -330,10 +330,13 @@ if __name__ == "__main__":
     
     
     task_id = -1
-    for seed in [2,5,8,11,14,17]:# range(args.seed_num):
+    seed_list = list(range(args.seed_num))
+    # ⇩ 降順にしたい場合はこのコメントアウトを外す
+    # seed_list = sorted(seed_list, reverse=True)
+    for seed in seed_list: #range(args.seed_num):
         args.seed = seed
 
-        # if seed <= 12:
+        # if seed <= 13:
         #     print(f"seed {seed} is already run. skip.")
         #     continue
 

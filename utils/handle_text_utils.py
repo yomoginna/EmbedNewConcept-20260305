@@ -222,6 +222,15 @@ def create_test_prompt(test_text, prompt_base, model_name):
 
 # *** テキスト自体の操作に関する関数 ***
 
+def split_text_into_sentences(text):
+    """textを文に分割してリストで返す。文末記号は保持する。
+    例: "This is a sentence. This is another sentence!" -> ["This is a sentence.", "This is another sentence!"]
+    """
+    # 文末記号を保持して分割
+    parts = re.split(r'(?<=[。．.!?！？\n])\s*', text.strip())
+    sentences = [s.strip() for s in parts if len(s) > 0]  # 空の文を除外
+    return sentences
+
 def get_first_few_sentences(text, min_word_num, max_word_num):
     """ textを文に分割して、最初の数文を連結して返す。連結したテキストの単語数がword_thresholdを超えないようにする。
     ~~ただし1文目ですでにword_thresholdを超える場合は、最初の1文だけを返す。~~
@@ -233,7 +242,8 @@ def get_first_few_sentences(text, min_word_num, max_word_num):
         return None
     
     # 文末記号を保持して分割
-    parts = re.split(r'(?<=[。．.!?！？\n])\s*', text)
+    # parts = re.split(r'(?<=[。．.!?！？\n])\s*', text)
+    parts = split_text_into_sentences(text)
     # delimiters = re.findall(r'[。．!?！？]', text) -> 上のsplit方法では、文末記号もpartsに含まれるため、delimitersは必要ない
     # sentences = [s.strip() for s in parts if len(s) > 0]  # 空の文を除外
     
