@@ -29,7 +29,7 @@ project_root = os.path.join(os.path.dirname(__file__), "..") # os.path.dirname(_
 sys.path.append(project_root)
 
 from utils.embedding_utils import load_mem_vec
-from utils.gemma_train_and_test_utils import fix_seed, get_gemma_model_version, extract_probability_of_option_numbers, calculate_metrics
+from utils.gemma_train_and_test_utils import fix_seed, get_gemma_model_version, extract_probability_of_option_numbers, calculate_metrics, set_flag
 from utils.handle_text_utils import create_test_prompt
 
 
@@ -73,11 +73,13 @@ def main(args):
     tokenizer = AutoTokenizer.from_pretrained(model_name, padding_side='left')
     model = None # = AutoModelForCausalLM.from_pretrained(model_name, device_map="auto") # [memo] 初期モデルはepoch0の時, もしくはmodel未loadの際にそのepoch内で読み込むので，ここではNoneを読み込む
     
-    # llama系はpad_tokenが設定されていないことがあるため，その場合はeos_tokenをpad_tokenに設定する
-    need_to_set_pad_token = False
-    if tokenizer.pad_token_id is None:
-        tokenizer.pad_token_id = tokenizer.eos_token_id
-        need_to_set_pad_token = True
+    # # llama系はpad_tokenが設定されていないことがあるため，その場合はeos_tokenをpad_tokenに設定する
+    # need_to_set_pad_token = False
+    # if tokenizer.pad_token_id is None:
+    #     tokenizer.pad_token_id = tokenizer.eos_token_id
+    #     need_to_set_pad_token = True
+
+    need_to_set_pad_token = set_flag(tokenizer)
     print(f"Loaded model and tokenizer: {model_name}")
 
     # **** 結果dirの準備 ****

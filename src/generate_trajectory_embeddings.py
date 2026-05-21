@@ -50,7 +50,7 @@ sys.path.append(project_root)
 print("Project root:", project_root)
 
 from utils.embedding_utils import load_mem_vec
-from utils.gemma_train_and_test_utils import fix_seed, get_gemma_model_version
+from utils.gemma_train_and_test_utils import fix_seed, get_gemma_model_version, set_flag
 from utils.embedding_utils import extract_hidden_states, get_concept_embedding_text
 
 global BATCH_SIZE
@@ -60,7 +60,7 @@ dont_get_new_wiki_flag = False # False #True # もう新しいwikiページを�
 print_flag = False
 
 debug_without_model = False #True
-
+debug_print_flag = False
 
 def construct_model_name_for_dirname(model_size, lr, trained_date, layer_idx, random_seed):
     model_version = get_gemma_model_version(model_size)
@@ -81,25 +81,37 @@ def main(args):
     model_size = args.model_size
     target_concepts_filename = args.target_concepts_filename
     pool_hs_type = args.pool_hs_type
+    init_vec_type = args.init_vec_type
     lr = args.lr
     trained_date = args.trained_date
-    layer_idx = args.layer_idx
+    trained_layer_index = args.trained_layer_index
     seed = args.seed
 
-    layer_index='all'
+    visualize_layer_index='all'
     model_version = get_gemma_model_version(model_size)
 
+    need_layer_flag = 'HS' in init_vec_type or 'HiddenState' in init_vec_type   # 初期化方法名に'隠れ層'が含まれれば、layer_idxの指定が必要な初期化方法とみなす
+    print("need layer flag:", need_layer_flag)
 
+    if not need_layer_flag:
+        # HSを初期vec作成に使わない場合は、layer_indexは指定されていないものとして扱う
+        trained_layer_index = None
+
+
+    # [WIP] 'it'と'pt'のどちらが良いかは未検証.とりあえず'it'で統一.
+    model_name = f"google/gemma-{model_version}-{model_size}b-it" # [memo] 'gemma-'部分は変えないこと!! -を消すとモデルがloadできない．さらにそのエラーメッセージは，"huggingface-cli login"をして，という関係ないmessageになるので注意!
+    
     model_name_for_dirname = construct_model_name_for_dirname(
         model_size=model_size,
         lr=lr,
         trained_date=trained_date,
-        layer_idx=layer_idx,
+        layer_idx=trained_layer_index,
         random_seed=seed,
     )
 
     # ** 保存先 **
-    output_dir = os.path.join("/work04/toko/EmbedNewConcept-20260305", "goal_embeddings", f"gemma-{model_version}-{model_size}B")
+    output_dir = os.path.join("/work04/toko/EmbedNewConcept-20260305", "trajectory_embeddings", f"gemma-{model_version}-{model_size}B")
+    output_dir = os.path.join(output_dir, pool_hs_type)
     os.makedirs(output_dir, exist_ok=True)
 
     # ** memvec_modelsが保存されているディレクトリ **
@@ -110,6 +122,21 @@ def main(args):
     # =========================
     # data load
     # =========================
+    # epoch_listを取得
+    epoch_list = []
+    for file_name in os.listdir(mem_dir):
+        if file_name.endswith('.pth.npy'):
+            epoch_num_str = file_name.split('.')[0]  # '10.pth.npy' -> '10'
+            epoch_num = int(re.findall(r'\d+', epoch_num_str)[0])  # '10' -> 10
+            epoch_list.append(epoch_num)
+    epoch_list.sort()
+    print(f"Found memvec files for epochs: {epoch_list}")
+
+
+    tokenizer = AutoTokenizer.from_pretrained(model_name)
+    need_to_set_pad_token = set_flag(tokenizer)
+
+
     # * 学習時に保存した、memvec用token_id割り当て読み込み *
     assign_saved_path = os.path.join(mem_dir, 'token_assignment.json')
     with open(assign_saved_path, 'r') as f:
@@ -159,6 +186,20 @@ def main(args):
     concept_to_one_summary_sentence = concept_to_one_summary_sentence_new
 
 
+    # * デバッグ: tokenizerの動作確認. text_listの各テキストがどのようにtokenizeされるか、またdecodeするとどうなるかを確認する. これにより、tokenizerが想定通りに動いているか、特にEOSトークンの扱いがどうなっているかを確認できる.
+    if debug_print_flag:
+        print(f"dot token id: {tokenizer.convert_tokens_to_ids('.')}")
+        for concept, text in concept_to_one_summary_sentence.items():
+            assigned_token = concept2trainable_tk_map[concept]
+            print(f"Concept: {concept} -> token: {assigned_token}, token_id: {tokenizer.convert_tokens_to_ids(assigned_token)}")
+            encoded = tokenizer(text, return_tensors="pt")
+            print(f"Tokenized the text of concept '{concept}': {encoded}")
+            decoded = tokenizer.decode(encoded["input_ids"][0])
+            print(f"Decoded back: {decoded}\n")
+
+    # return 0 # [memo] ここまで動作確認済み
+
+
     # =========================
     # promptの作成 (目標vec生成用) 
     # =========================
@@ -168,7 +209,7 @@ def main(args):
         print(f"Processing concept: {concept}")
         if pool_hs_type == "repeat_mean_pool":
             # 目標ベクトルを生成するためのpromptを作成. 例えば、"It is the apple. It is the apple." のように、同じ文を2回繰り返すことで、gemmaのattentionが、後半の文の方に向くようにする。
-            prompt = one_summary_sentence * 2 
+            prompt = one_summary_sentence + " " + one_summary_sentence 
             pool_hs_type = "mean_pool" # pool_hs_typeがrepeat_mean_poolの場合は、pool_hs_typeをmean_poolに変更して、後半の文の隠れ状態の平均を目標ベクトルとする. これにより、gemmaのattentionが、後半の文の方に向くようにする。
         else:
             prompt = one_summary_sentence
@@ -187,47 +228,44 @@ def main(args):
             pass
 
 
-    return 0  # [memo] ここまで動作確認済み
-
-
-    # =========================
-    # ** モデル読み込み **
-    # =========================
-    print("Loading model and tokenizer...")
-    model_version = get_gemma_model_version(model_size)
-
-    # [WIP] 'it'と'pt'のどちらが良いかは未検証.とりあえず'it'で統一.
-    model_name = f"google/gemma-{model_version}-{model_size}b-it" # [memo] 'gemma-'部分は変えないこと!! -を消すとモデルがloadできない．さらにそのエラーメッセージは，"huggingface-cli login"をして，という関係ないmessageになるので注意!
-    
-    tokenizer = AutoTokenizer.from_pretrained(model_name)
-    if not debug_without_model:
-        model = AutoModelForCausalLM.from_pretrained(model_name, device_map="auto")
-
-
-    if tokenizer.pad_token_id is None:
-        # llama系の場合はpad_tokenが設定されていないことがあるため，以下のようにeos_tokenをpad_tokenに設定する. gemma3は設定済みだった
-        tokenizer.pad_token_id = tokenizer.eos_token_id
-        if not debug_without_model:
-            model.config.pad_token_id = tokenizer.pad_token_id
+    # return 0  # [memo] ここまで動作確認済み
 
 
     # * デバッグ: tokenizerの動作確認. text_listの各テキストがどのようにtokenizeされるか、またdecodeするとどうなるかを確認する. これにより、tokenizerが想定通りに動いているか、特にEOSトークンの扱いがどうなっているかを確認できる.
-    print(f"dot token id: {tokenizer.convert_tokens_to_ids('.')}")
-    for i, text in enumerate(text_list):
-        encoded = tokenizer(text, return_tensors="pt")
-        print(f"Tokenized the text of concept '{config_concept_list[i]}': {encoded}")
-        decoded = tokenizer.decode(encoded["input_ids"][0])
+    if debug_print_flag:
+        print(f"dot token id: {tokenizer.convert_tokens_to_ids('.')}")
+        for i, text in enumerate(text_list):
+            encoded = tokenizer(text, return_tensors="pt")
+            print(f"Tokenized the text of concept '{config_concept_list[i]}': {encoded}")
+            decoded = tokenizer.decode(encoded["input_ids"][0])
         print(f"Decoded back: {decoded}\n")
 
+    # return 0 # [memo] ここまで動作確認済み
+
+
+
+    # # =========================
+    # # ** モデル読み込み **
+    # # =========================
+    # print("Loading model...")
+    # if not debug_without_model:
+    #     model = AutoModelForCausalLM.from_pretrained(model_name, device_map="auto")
+        
+    # if tokenizer.pad_token_id is None:
+    #     # llama系の場合はpad_tokenが設定されていないことがあるため，以下のようにeos_tokenをpad_tokenに設定する. gemma3は設定済みだった
+    #     tokenizer.pad_token_id = tokenizer.eos_token_id
+    #     if not debug_without_model:
+    #         model.config.pad_token_id = tokenizer.pad_token_id
+
+
+
     # =========================
-    # *** 全層の隠れ状態を全て記録に残す．最終dot(.)位置のみのベクトル，全体のmean pool, の2種類を記録する．***
-    # [WIP] ここに、embedding層の一部をepoch毎に記録したembed層paramで置換するコードを追加する。どの部分に入れるかは要検討
-    # 
+    # 全層の隠れ状態を全て記録に残す．最終dot(.)位置のみのベクトル，全体のmean pool, の2種類を記録する．
     # =========================
     if debug_without_model:
         device = torch.device("cpu")
     else:
-        for epoch in epoch_list: # [WIP] epoch_listは記録したファイル名から取得しておく
+        for epoch in epoch_list:
             print(f"epoch: {epoch}")
 
             # ****** epoch毎にmodel読み込み・memvec挿入 ******
@@ -261,6 +299,7 @@ def main(args):
                 model.config.pad_token_id = tokenizer.pad_token_id
 
             
+
             model.eval() # 評価モードに切り替え (これにより、dropoutなどの挙動が変わる)
             device = model.device
 
@@ -276,13 +315,12 @@ def main(args):
                 pool_hs_type, 
                 data_type, 
                 batch_size=8, 
-                layer_index=layer_index,
+                layer_index=visualize_layer_index,
                 print_flag=False
             )   # -> (T, D) or (T, H, D) Tはテキスト数, Hは層の数, Dは隠れ状態の次元
 
-            # ベクトルを保存
-            # output_path = os.path.join(output_dir, f"goal_embeddings_{model_size}B_{target_concepts_filename.split('.')[0]}_{pool_hs_type}_layer{layer_index}")
-            # [WIP] output_path名は、epochによって変える
+            # ベクトルを保存, output_path名は、epochによって変える
+            output_path = os.path.join(output_dir, f"trajectory_embeddings_{model_size}B_{target_concepts_filename.split('.')[0]}_initvecwith{init_vec_type.replace(' ', '_')}_vislayer{visualize_layer_index}_epoch{epoch}")
             np.savez(
                 output_path, 
                 vectors=all_vecs,
@@ -291,9 +329,9 @@ def main(args):
                 text_list=text_list,
                 model_size=model_size,
                 pool_hs_type=args.pool_hs_type, # repeat_の場合、途中でmean_poolに変えてしまったため、pool_hs_typeではなく、元のargs.pool_hs_typeを保存する
-                layer_index=layer_index,
+                layer_index=visualize_layer_index,
             )
-            print(f"Saved goal embeddings to {output_path}")
+            print(f"Saved trajectory embeddings to {output_path}")
 
 
 
@@ -311,9 +349,10 @@ if __name__ == "__main__":
     parser.add_argument("--pool_hs_type", type=str, default="repeat_mean_pool", help='hidden stateのpooling方法. "eos": 最後のEOSトークンの隠れ状態を使用. "last_token": 最後のトークンの隠れ状態を使用. "mean_pool": テキスト全体の隠れ状態の平均を使用. "repeat_mean_pool": テキストを2回繰り返した内の後のtextの隠れ状態の平均を使用. "dot": テキスト全体の隠れ状態を平均したものと、最後のトークンの隠れ状態を連結して使用.')
     parser.add_argument('--cuda_visible_devices', type=str, default=None, help='CUDA_VISIBLE_DEVICESの設定. ただし数字は1つだけ指定すること. 例: "2"')
     
+    parser.add_argument('--init_vec_type', type=str, default="CatCent_by_WikiSummaryRepeatHSMixed", help='目memory vectorの初期化方法')
     parser.add_argument('--lr', type=float, default=0.003, help='学習率. 例: 3e-3')
     parser.add_argument('--trained_date', type=str, default="", help='学習した日付. 例: "20260427"')
-    parser.add_argument('--layer_index', type=int, default=12, help='使用する層のインデックス. 例: 12')
+    parser.add_argument('--trained_layer_index', type=int, default=12, help='学習時に訓練対象token_vecの初期vecとして使用した層のインデックス. 例: 12')
     parser.add_argument('--seed', type=int, default=42, help='乱数シード. 例: 42')
 
     args = parser.parse_args()
@@ -328,19 +367,28 @@ if __name__ == "__main__":
 """
 TARGET_CONCEPTS_FILENAME="target_concepts_mini_13.json"
 MODEL_SIZE=12
+CUDA_VISIBLE_DEVICES=4
 
 LR=0.003
 NUM_OPTIONS=3
-LAYER_INDEX=12
+TRAINED_LAYER_INDEX=12
 TRAINED_DATE="20260427"
 SEED=0
 
-nohup uv run python src/generate_goal_embeddings.py \
+INIT_VEC_TYPE="zero" 
+# "CatCent_by_WikiSummaryRepeatHSMixed" "nearCatCent_by_WikiSummaryRepeatHSMixed" "otherCatCent_by_WikiSummaryRepeatHSMixed" "zero" "norm_rand_vocab"
+
+nohup uv run python src/generate_trajectory_embeddings.py \
     --target_concepts_filename ${TARGET_CONCEPTS_FILENAME} \
     --model_size ${MODEL_SIZE} \
     --pool_hs_type "repeat_mean_pool" \
-    --cuda_visible_devices 4 \
-    > log_generate_goal_embeddings_gemma-${MODEL_SIZE}B_${TARGET_CONCEPTS_FILENAME}.log 2>&1 &
+    --cuda_visible_devices ${CUDA_VISIBLE_DEVICES} \
+    --init_vec_type ${INIT_VEC_TYPE} \
+    --lr ${LR} \
+    --trained_date ${TRAINED_DATE} \
+    --trained_layer_index ${TRAINED_LAYER_INDEX} \
+    --seed ${SEED} \
+    > log_generate_trajectory_embeddings_gemma-${MODEL_SIZE}B_${TARGET_CONCEPTS_FILENAME}.log 2>&1 &
 
 3748904
 

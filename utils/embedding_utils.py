@@ -3,6 +3,7 @@
 import random
 import os
 import sys
+import re
 # import math
 
 # ===== Third-party =====
@@ -24,7 +25,7 @@ project_root = os.path.join(os.path.dirname(__file__), "..") # os.path.dirname(_
 sys.path.append(project_root)
 
 from utils.wikipedia_api_utils import load_wiki_text
-
+from utils.handle_text_utils import split_text_into_sentences
 
 # wiki_page_save_dir = os.path.join(project_root, 'data', 'wiki_pages')
 # dont_get_new_wiki_flag = False # False #True # もう新しいwikiページを読み込みたくない場合はTrue. すでに保存済みのwikiページがあるpropernounのみにフィルタリングする.

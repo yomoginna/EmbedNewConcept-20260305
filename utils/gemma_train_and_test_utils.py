@@ -526,3 +526,16 @@ def encodeTrainSamplesWithTokenizer(train_samples, tokenizer, padTokenId, device
     indices = list(range(len(trainingData)))
     return trainingData, evalInputs, evalOutputTexts, indices
 
+
+
+
+def set_flag(tokenizer):
+    """
+    自動的に立てられるフラグを立てる。他にもflagを設定するかもしれないので関数化した。
+    """
+    # llama系はpad_tokenが設定されていないことがあるため，その場合はeos_tokenをpad_tokenに設定する
+    need_to_set_pad_token = False
+    if tokenizer.pad_token_id is None:
+        tokenizer.pad_token_id = tokenizer.eos_token_id
+        need_to_set_pad_token = True
+    return need_to_set_pad_token
