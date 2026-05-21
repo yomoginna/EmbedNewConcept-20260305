@@ -28,7 +28,8 @@ from transformers import AutoModelForCausalLM, AutoTokenizer
 project_root = os.path.join(os.path.dirname(__file__), "..") # os.path.dirname(__file__): スクリプト自身のパス
 sys.path.append(project_root)
 
-from utils.gemma_train_and_test_utils import fix_seed, get_gemma_model_version, load_mem_vec, extract_probability_of_option_numbers, calculate_metrics
+from utils.embedding_utils import load_mem_vec
+from utils.gemma_train_and_test_utils import fix_seed, get_gemma_model_version, extract_probability_of_option_numbers, calculate_metrics
 from utils.handle_text_utils import create_test_prompt
 
 

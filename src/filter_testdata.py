@@ -43,7 +43,7 @@ project_root = os.path.join(os.path.dirname(__file__), "..")
 sys.path.append(project_root)
 
 
-from utils.gemma_train_and_test_utils import fix_seed, load_mem_vec, extract_probability_of_option_numbers, calculate_metrics
+from utils.gemma_train_and_test_utils import fix_seed, extract_probability_of_option_numbers, calculate_metrics
 from utils.handle_text_utils import create_test_prompt
 
 

@@ -15,7 +15,8 @@ sys.path.append(project_root)
 
 from utils.wikipedia_api_utils import load_wikisummary
 from utils.handle_text_utils import get_first_few_sentences, repeat_text, delete_non_English_characters
-from utils.gemma_train_and_test_utils import fix_seed,  extract_hidden_states
+from utils.gemma_train_and_test_utils import fix_seed,  #extract_hidden_states
+from utils.embedding_utils import extract_hidden_states
 from utils.handle_data_from_dbpedia_utils import loadProperNounData, filterProperNounsWithWikiPage
 
 

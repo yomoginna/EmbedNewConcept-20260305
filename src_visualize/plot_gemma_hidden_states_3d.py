@@ -104,7 +104,8 @@ project_root = os.path.join(os.path.dirname(__file__), "..") #
 sys.path.append(project_root)
 
 from utils.wikipedia_api_utils import extract_wiki_main_text, fetch_wikipedia_page, load_wiki_text
-from utils.gemma_train_and_test_utils import fix_seed, extract_hidden_states
+from utils.gemma_train_and_test_utils import fix_seed, # extract_hidden_states
+from utils.embedding_utils import extract_hidden_states
 from utils.handle_text_utils import get_first_few_sentences, repeat_text
 seed = 42
 

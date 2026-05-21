@@ -1,11 +1,17 @@
 """
-目標点となるベクトルを生成するコード。
+[WIP] 5/20作業中のコード
+
+学習過程のベクトルを生成するコード。
 経緯：
 - 学習中の過程を、新規概念毎に追うために目標ベクトルが必要になった。
 - 概念毎に、その学習ステップ時点でのベクトルから目標ベクトルまでの距離を可視化するのに使う。
 
 方法:
 - promptに新規概念の元になった既存概念名を埋め込むことで、ベクトルを作成する。
+
+関係するコード:
+- src/generate_goal_embeddings.py: 目標ベクトルを生成するコード。promptに新規概念の元になった既存概念名を埋め込むことで、ベクトルを作成する。
+- src_visualize/plot_vecs_3dPCA.py: 生成したベクトを3次元PCAでプロットするコード。概念毎に色分けして、ホバーで概念名と層のインデックスを表示する。
 
 注意点：
 - 既存概念名だけでそのまま生成すると、例えば"Unlock!"のように意味と表層的な単語の意味がマッチしない場合に、正しい目標ベクトルが得られない。
@@ -43,6 +49,7 @@ project_root = os.path.join(os.path.dirname(__file__), "..") # os.path.dirname(_
 sys.path.append(project_root)
 print("Project root:", project_root)
 
+from utils.embedding_utils import load_mem_vec
 from utils.gemma_train_and_test_utils import fix_seed, get_gemma_model_version
 from utils.embedding_utils import extract_hidden_states, get_concept_embedding_text
 
@@ -55,6 +62,18 @@ print_flag = False
 debug_without_model = False #True
 
 
+def construct_model_name_for_dirname(model_size, lr, trained_date, layer_idx, random_seed):
+    model_version = get_gemma_model_version(model_size)
+
+    model_name_for_dirname = f"gemma-{model_version}-{model_size}B-lr{lr}-{trained_date}"
+    if layer_idx is not None:
+        print(f"Using layer index: {layer_idx}")
+        model_name_for_dirname += f"-hidden_layer{layer_idx}"
+    model_name_for_dirname += f"-seed{random_seed}"
+
+    return model_name_for_dirname
+
+
 
 
 # *************************************************************** main ***************************************************************
@@ -62,20 +81,44 @@ def main(args):
     model_size = args.model_size
     target_concepts_filename = args.target_concepts_filename
     pool_hs_type = args.pool_hs_type
-    
+    lr = args.lr
+    trained_date = args.trained_date
+    layer_idx = args.layer_idx
+    seed = args.seed
+
     layer_index='all'
     model_version = get_gemma_model_version(model_size)
-    
+
+
+    model_name_for_dirname = construct_model_name_for_dirname(
+        model_size=model_size,
+        lr=lr,
+        trained_date=trained_date,
+        layer_idx=layer_idx,
+        random_seed=seed,
+    )
+
     # ** 保存先 **
-    # output_dir = os.path.join(project_root, "output", f"gemma-{model_version}-{model_size}B_lr{lr}_{target_concepts_filename.split('.')[-1]}_{pool_hs_type}_layer{layer_idx}")
     output_dir = os.path.join("/work04/toko/EmbedNewConcept-20260305", "goal_embeddings", f"gemma-{model_version}-{model_size}B")
     os.makedirs(output_dir, exist_ok=True)
+
+    # ** memvec_modelsが保存されているディレクトリ **
+    mem_dir = os.path.join("/work04/toko/EmbedNewConcept-20260305/memvec_models", f"{model_name_for_dirname}_{target_concepts_filename.replace('.json', '')}_initvecwith{init_vec_type.replace(' ', '_')}")
+
 
 
     # =========================
     # data load
     # =========================
-    # *** config/{target_concepts_filename}で指定されたconcept群を学習対象とする ***
+    # * 学習時に保存した、memvec用token_id割り当て読み込み *
+    assign_saved_path = os.path.join(mem_dir, 'token_assignment.json')
+    with open(assign_saved_path, 'r') as f:
+        concept2trainable_tk_map = json.load(f)
+    MemTokenIds = [tokenizer.vocab[resSpeTk] for resSpeTk in concept2trainable_tk_map.values()]
+    print(f"Loaded concept2trainable_tk_map from {assign_saved_path}")
+
+
+    # * config/{target_concepts_filename}で指定されたconcept群を学習対象とする *
     class_to_target_concepts_path = os.path.join(project_root, 'config', target_concepts_filename)
     if not os.path.exists(class_to_target_concepts_path) or target_concepts_filename.split('.')[-1] != 'json':
         raise ValueError(f"指定されたtarget_concepts_filename '{target_concepts_filename}' が存在しないか，jsonファイルではありません。configディレクトリ内の正しいjsonファイル名を指定してください。")
@@ -84,12 +127,13 @@ def main(args):
     config_concept_list = sum(class_to_target_concepts_config.values(), [])
     print(f"Target concepts specified in config {class_to_target_concepts_path}: {config_concept_list}")
 
-    # *** 該当wiki pageのsummaryから、概念をうまく説明する1文を抽出し、概念名を置換したければ置換する.
+
+    # * 該当wiki pageのsummaryから、概念をうまく説明する1文を抽出し、概念名を置換したければ置換する. *
     concept_to_one_summary_sentence = {}
     for concept in config_concept_list:
         first_concept_sentence = get_concept_embedding_text(
             concept, 
-            None
+            "<target_concept_name>", # [memo] src/generate_goal_embeddings.py と異なる点
         )
         if first_concept_sentence is None:
             # 現在のget_concept_embedding_text()では、概念を説明する1文がwiki summaryから見つけられなかったためskip.
@@ -102,6 +146,18 @@ def main(args):
     extracted_count = len(concept_to_one_summary_sentence)
     total_count = len(config_concept_list)
     print(f"Extracted sentences for {extracted_count}/{total_count} concepts ({extracted_count/total_count*100:.2f}%)")
+
+
+    # ** 各promptの "<target_concept_name>" -> 対応するtoken に書き換える. またconcept2trainable_tk_mapに無いconceptは対象から除外する ** 
+    concept_to_one_summary_sentence_new = {}
+    for concept, one_summary_sentence in concept_to_one_summary_sentence.items():
+        if concept not in concept2trainable_tk_map:
+            print(f"Concept {concept} not in concept2trainable_tk_map. Skipping this concept.")
+            continue
+        assigned_token = concept2trainable_tk_map[concept]
+        concept_to_one_summary_sentence_new[concept] = one_summary_sentence.replace("<target_concept_name>", assigned_token)
+    concept_to_one_summary_sentence = concept_to_one_summary_sentence_new
+
 
     # =========================
     # promptの作成 (目標vec生成用) 
@@ -131,7 +187,7 @@ def main(args):
             pass
 
 
-    # return 0  # [memo] ここまで動作確認済み
+    return 0  # [memo] ここまで動作確認済み
 
 
     # =========================
@@ -165,42 +221,79 @@ def main(args):
 
     # =========================
     # *** 全層の隠れ状態を全て記録に残す．最終dot(.)位置のみのベクトル，全体のmean pool, の2種類を記録する．***
+    # [WIP] ここに、embedding層の一部をepoch毎に記録したembed層paramで置換するコードを追加する。どの部分に入れるかは要検討
+    # 
     # =========================
     if debug_without_model:
         device = torch.device("cpu")
     else:
-        model.eval() # 評価モードに切り替え (これにより、dropoutなどの挙動が変わる)
-        device = model.device
+        for epoch in epoch_list: # [WIP] epoch_listは記録したファイル名から取得しておく
+            print(f"epoch: {epoch}")
 
-        # *** pool_hs_type に応じて、vectorを抽出 ***
-        if pool_hs_type == "repeat_mean_pool":
-            data_type = "wiki_summary_repeat"
-        else:
-            data_type = "wiki_summary"
-        all_vecs = extract_hidden_states(
-            model, 
-            tokenizer,
-            text_list, 
-            pool_hs_type, 
-            data_type, 
-            batch_size=8, 
-            layer_index=layer_index,
-            print_flag=False
-        )   # -> (T, D) or (T, H, D) Tはテキスト数, Hは層の数, Dは隠れ状態の次元
+            # ****** epoch毎にmodel読み込み・memvec挿入 ******
+            if epoch == 0:
+                # epoch0は未追加学習のモデル
+                model = AutoModelForCausalLM.from_pretrained(model_name, device_map="auto")
+                print("Loaded pre-trained model")
+                
+            else:
+                # if model is None:
+                #     # epoch0がlistにない場合はmodelがまだ読み込まれていないので，ここで読み込む
+                #     # model = AutoModelForCausalLM.from_pretrained(model_name, device_map=device_map)
+                #     model = AutoModelForCausalLM.from_pretrained(model_name, device_map='auto')
+                #     if need_to_set_pad_token:
+                #         model.config.pad_token_id = tokenizer.pad_token_id
 
-        # ベクトルを保存
-        output_path = os.path.join(output_dir, f"goal_embeddings_{model_size}B_{target_concepts_filename.split('.')[0]}_{pool_hs_type}_layer{layer_index}")
-        np.savez(
-            output_path, 
-            vectors=all_vecs,
-            target_concepts_filename=target_concepts_filename,
-            concept_names=concept_names,
-            text_list=text_list,
-            model_size=model_size,
-            pool_hs_type=args.pool_hs_type, # repeat_の場合、途中でmean_poolに変えてしまったため、pool_hs_typeではなく、元のargs.pool_hs_typeを保存する
-            layer_index=layer_index,
-        )
-        print(f"Saved goal embeddings to {output_path}")
+                # 毎回モデルを読み込み直す場合はこちら
+                model = AutoModelForCausalLM.from_pretrained(model_name, device_map='auto')
+
+                # ** memvecをmodelに挿入・置換 **
+                try:
+                    mem_save_path = os.path.join(mem_dir, f'{epoch}.pth.npy')
+                    load_mem_vec(model, mem_save_path, MemTokenIds)
+                except Exception as e:
+                    print(f"Error loading memvec for epoch {epoch} from {mem_save_path}: {e}")
+                    continue  # 学習済みembed層が保存されていなければ、このepochの評価はスキップ
+
+                print(f"Loaded memvec for epoch {epoch} from {mem_save_path} & replaced model embeddings.")
+
+            if need_to_set_pad_token:
+                model.config.pad_token_id = tokenizer.pad_token_id
+
+            
+            model.eval() # 評価モードに切り替え (これにより、dropoutなどの挙動が変わる)
+            device = model.device
+
+            # *** pool_hs_type に応じて、vectorを抽出 ***
+            if pool_hs_type == "repeat_mean_pool":
+                data_type = "wiki_summary_repeat"
+            else:
+                data_type = "wiki_summary"
+            all_vecs = extract_hidden_states(
+                model, 
+                tokenizer,
+                text_list, 
+                pool_hs_type, 
+                data_type, 
+                batch_size=8, 
+                layer_index=layer_index,
+                print_flag=False
+            )   # -> (T, D) or (T, H, D) Tはテキスト数, Hは層の数, Dは隠れ状態の次元
+
+            # ベクトルを保存
+            # output_path = os.path.join(output_dir, f"goal_embeddings_{model_size}B_{target_concepts_filename.split('.')[0]}_{pool_hs_type}_layer{layer_index}")
+            # [WIP] output_path名は、epochによって変える
+            np.savez(
+                output_path, 
+                vectors=all_vecs,
+                target_concepts_filename=target_concepts_filename,
+                concept_names=concept_names,
+                text_list=text_list,
+                model_size=model_size,
+                pool_hs_type=args.pool_hs_type, # repeat_の場合、途中でmean_poolに変えてしまったため、pool_hs_typeではなく、元のargs.pool_hs_typeを保存する
+                layer_index=layer_index,
+            )
+            print(f"Saved goal embeddings to {output_path}")
 
 
 
@@ -217,6 +310,12 @@ if __name__ == "__main__":
     parser.add_argument("--model_size", type=int, default=3, help="Size of the Gemma model in billions (e.g., 3 for Gemma-3B).")
     parser.add_argument("--pool_hs_type", type=str, default="repeat_mean_pool", help='hidden stateのpooling方法. "eos": 最後のEOSトークンの隠れ状態を使用. "last_token": 最後のトークンの隠れ状態を使用. "mean_pool": テキスト全体の隠れ状態の平均を使用. "repeat_mean_pool": テキストを2回繰り返した内の後のtextの隠れ状態の平均を使用. "dot": テキスト全体の隠れ状態を平均したものと、最後のトークンの隠れ状態を連結して使用.')
     parser.add_argument('--cuda_visible_devices', type=str, default=None, help='CUDA_VISIBLE_DEVICESの設定. ただし数字は1つだけ指定すること. 例: "2"')
+    
+    parser.add_argument('--lr', type=float, default=0.003, help='学習率. 例: 3e-3')
+    parser.add_argument('--trained_date', type=str, default="", help='学習した日付. 例: "20260427"')
+    parser.add_argument('--layer_index', type=int, default=12, help='使用する層のインデックス. 例: 12')
+    parser.add_argument('--seed', type=int, default=42, help='乱数シード. 例: 42')
+
     args = parser.parse_args()
 
     if args.cuda_visible_devices is not None:
@@ -230,11 +329,11 @@ if __name__ == "__main__":
 TARGET_CONCEPTS_FILENAME="target_concepts_mini_13.json"
 MODEL_SIZE=12
 
-uv run python src/generate_goal_embeddings.py \
-    --target_concepts_filename ${TARGET_CONCEPTS_FILENAME} \
-    --model_size ${MODEL_SIZE} \
-    --pool_hs_type "repeat_mean_pool" \
-    --cuda_visible_devices 4
+LR=0.003
+NUM_OPTIONS=3
+LAYER_INDEX=12
+TRAINED_DATE="20260427"
+SEED=0
 
 nohup uv run python src/generate_goal_embeddings.py \
     --target_concepts_filename ${TARGET_CONCEPTS_FILENAME} \
