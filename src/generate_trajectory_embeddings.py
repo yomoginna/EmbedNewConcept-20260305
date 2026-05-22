@@ -217,12 +217,13 @@ def main(args):
         concept_to_prompt[concept] = prompt
 
     # config_concept_list の順番に対応するpromptのリストを作成
-    concept_names, text_list = [], []
+    concept_names, text_list, concept_unused_tk_names = [], [], []
     # text_list = [concept_to_prompt[concept] for concept in config_concept_list if concept in concept_to_prompt]
     for concept in config_concept_list:
         if concept in concept_to_prompt:
             concept_names.append(concept)
             text_list.append(concept_to_prompt[concept])
+            concept_unused_tk_names.append(concept2trainable_tk_map[concept])
         else:
             # print(f"Warning: No prompt could be created for concept '{concept}' because no suitable sentence was found in the wiki summary. This concept will be skipped.")
             pass
@@ -314,14 +315,18 @@ def main(args):
                 text_list, 
                 pool_hs_type, 
                 data_type, 
-                batch_size=8, 
+                # batch_size=8, 
+                mean_pool_target_texts=concept_unused_tk_names if pool_hs_type=="target_seq_mean_pool" else None,   # pool_hs_type=='target_seq_mean_pool'のとき、各textの対象unused_tk位置でmean_poolするためのテキストのリスト。text_listと同順で、各textのmean_poolの対象となるテキストが入っていることを想定。
                 layer_index=visualize_layer_index,
                 print_flag=False
             )   # -> (T, D) or (T, H, D) Tはテキスト数, Hは層の数, Dは隠れ状態の次元
 
             # ベクトルを保存, output_path名は、epochによって変える
             # output_path = os.path.join(output_dir, f"trajectory_embeddings_{model_size}B_{target_concepts_filename.split('.')[0]}_initvecwith{init_vec_type.replace(' ', '_')}_vislayer{visualize_layer_index}_epoch{epoch}")
-            output_path = os.path.join(output_dir, f"{target_concepts_filename.split('.')[0]}_initlayer{init_layer_index}_seed{seed}_initvecwith{init_vec_type.replace(' ', '_')}_vislayer{visualize_layer_index}_epoch{epoch}")
+            if not need_layer_flag:
+                output_path = os.path.join(output_dir, f"{target_concepts_filename.split('.')[0]}_seed{seed}_initvecwith{init_vec_type.replace(' ', '_')}_vislayer{visualize_layer_index}_epoch{epoch}")
+            else:
+                output_path = os.path.join(output_dir, f"{target_concepts_filename.split('.')[0]}_initlayer{init_layer_index}_seed{seed}_initvecwith{init_vec_type.replace(' ', '_')}_vislayer{visualize_layer_index}_epoch{epoch}")
             np.savez(
                 output_path, 
                 vectors=all_vecs,
@@ -350,7 +355,8 @@ if __name__ == "__main__":
     parser.add_argument("--pool_hs_type", type=str, default="repeat_mean_pool", help='hidden stateのpooling方法. "eos": 最後のEOSトークンの隠れ状態を使用. "last_token": 最後のトークンの隠れ状態を使用. "mean_pool": テキスト全体の隠れ状態の平均を使用. "repeat_mean_pool": テキストを2回繰り返した内の後のtextの隠れ状態の平均を使用. "dot": テキスト全体の隠れ状態を平均したものと、最後のトークンの隠れ状態を連結して使用.')
     parser.add_argument('--cuda_visible_devices', type=str, default=None, help='CUDA_VISIBLE_DEVICESの設定. ただし数字は1つだけ指定すること. 例: "2"')
     
-    parser.add_argument('--init_vec_type', type=str, default="CatCent_by_WikiSummaryRepeatHSMixed", help='目memory vectorの初期化方法')
+    # parser.add_argument('--init_vec_type', type=str, default="CatCent_by_WikiSummaryRepeatHSMixed", help='目memory vectorの初期化方法')
+    parser.add_argument('--init_vec_type_list', type=str, nargs='+', default=["CatCent_by_WikiSummaryRepeatHSMixed"], help='目memory vectorの初期化方法のリスト. 例: "CatCent_by_WikiSummaryRepeatHSMixed" "nearCatCent_by_WikiSummaryRepeatHSMixed" "otherCatCent_by_WikiSummaryRepeatHSMixed" "zero" "norm_rand_vocab"')
     parser.add_argument('--lr', type=float, default=0.003, help='学習率. 例: 3e-3')
     parser.add_argument('--trained_date', type=str, default="", help='学習した日付. 例: "20260427"')
     parser.add_argument('--init_layer_index', type=int, default=12, help='学習時に訓練対象token_vecの初期vecとして使用した層のインデックス. 例: 12')
@@ -361,8 +367,10 @@ if __name__ == "__main__":
     if args.cuda_visible_devices is not None:
         os.environ["CUDA_VISIBLE_DEVICES"] = args.cuda_visible_devices
 
-
-    main(args)
+    for init_vec_type in args.init_vec_type_list:
+        print(f"Generating trajectory embeddings with init_vec_type: {init_vec_type}")
+        args.init_vec_type = init_vec_type
+        main(args)
 
 
 """
@@ -375,16 +383,17 @@ NUM_OPTIONS=3
 INIT_LAYER_INDEX=12
 TRAINED_DATE="20260427"
 SEED=0
+POOL_HS_TYPE="eos" # "repeat_mean_pool"
 
-INIT_VEC_TYPE="zero" 
-# "CatCent_by_WikiSummaryRepeatHSMixed" "nearCatCent_by_WikiSummaryRepeatHSMixed" "otherCatCent_by_WikiSummaryRepeatHSMixed" "zero" "norm_rand_vocab"
+INIT_VEC_TYPE_LIST=("CatCent_by_WikiSummaryRepeatHSMixed" "nearCatCent_by_WikiSummaryRepeatHSMixed" "otherCatCent_by_WikiSummaryRepeatHSMixed" "zero" "norm_rand_vocab") 
+
 
 nohup uv run python src/generate_trajectory_embeddings.py \
     --target_concepts_filename ${TARGET_CONCEPTS_FILENAME} \
     --model_size ${MODEL_SIZE} \
-    --pool_hs_type "repeat_mean_pool" \
+    --pool_hs_type ${POOL_HS_TYPE} \
     --cuda_visible_devices ${CUDA_VISIBLE_DEVICES} \
-    --init_vec_type ${INIT_VEC_TYPE} \
+    --init_vec_type_list ${INIT_VEC_TYPE_LIST} \
     --lr ${LR} \
     --trained_date ${TRAINED_DATE} \
     --init_layer_index ${INIT_LAYER_INDEX} \

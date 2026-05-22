@@ -56,6 +56,18 @@ debug_without_model = False #True
 
 
 
+def construct_model_name_for_dirname(model_size, lr, trained_date, layer_idx, random_seed):
+    model_version = get_gemma_model_version(model_size)
+
+    model_name_for_dirname = f"gemma-{model_version}-{model_size}B-lr{lr}-{trained_date}"
+    if layer_idx is not None:
+        print(f"Using layer index: {layer_idx}")
+        model_name_for_dirname += f"-hidden_layer{layer_idx}"
+    model_name_for_dirname += f"-seed{random_seed}"
+
+    return model_name_for_dirname
+
+
 
 # *************************************************************** main ***************************************************************
 def main(args):
@@ -113,7 +125,7 @@ def main(args):
         if pool_hs_type == "repeat_mean_pool":
             # 目標ベクトルを生成するためのpromptを作成. 例えば、"It is the apple. It is the apple." のように、同じ文を2回繰り返すことで、gemmaのattentionが、後半の文の方に向くようにする。
             prompt = one_summary_sentence * 2 
-            pool_hs_type = "mean_pool" # pool_hs_typeがrepeat_mean_poolの場合は、pool_hs_typeをmean_poolに変更して、後半の文の隠れ状態の平均を目標ベクトルとする. これにより、gemmaのattentionが、後半の文の方に向くようにする。
+            # pool_hs_type = "mean_pool" # pool_hs_typeがrepeat_mean_poolの場合は、pool_hs_typeをmean_poolに変更して、後半の文の隠れ状態の平均を目標ベクトルとする. これにより、gemmaのattentionが、後半の文の方に向くようにする。
         else:
             prompt = one_summary_sentence
         print(f"Prompt for concept '{concept}': {prompt}")
@@ -175,15 +187,17 @@ def main(args):
         # *** pool_hs_type に応じて、vectorを抽出 ***
         if pool_hs_type == "repeat_mean_pool":
             data_type = "wiki_summary_repeat"
+            # pool_hs_type_for_extraction = "mean_pool" # pool_hs_typeがrepeat_mean_poolの場合は、pool_hs_type_for_extractionをmean_poolに変更が必要
         else:
             data_type = "wiki_summary"
         all_vecs = extract_hidden_states(
             model, 
             tokenizer,
             text_list, 
-            pool_hs_type, 
+            pool_hs_type,
             data_type, 
-            batch_size=8, 
+            # batch_size=8, 
+            mean_pool_target_text=concept_names if pool_hs_type=="target_seq_mean_pool" else None,   # pool_hs_type=='target_seq_mean_pool'のとき、各textの対象テキスト位置でmean_poolするためのテキストのリスト。text_listと同順で、各textのmean_poolの対象となるテキストが入っていることを想定。
             layer_index=layer_index,
             print_flag=False
         )   # -> (T, D) or (T, H, D) Tはテキスト数, Hは層の数, Dは隠れ状態の次元
@@ -230,17 +244,18 @@ if __name__ == "__main__":
 """
 TARGET_CONCEPTS_FILENAME="target_concepts_mini_13.json"
 MODEL_SIZE=12
+POOL_HS_TYPE="target_seq_mean_pool"   # "eos"  # repeat_mean_pool
 
 uv run python src/generate_goal_embeddings.py \
     --target_concepts_filename ${TARGET_CONCEPTS_FILENAME} \
     --model_size ${MODEL_SIZE} \
-    --pool_hs_type "repeat_mean_pool" \
+    --pool_hs_type ${POOL_HS_TYPE} \
     --cuda_visible_devices 4
 
 nohup uv run python src/generate_goal_embeddings.py \
     --target_concepts_filename ${TARGET_CONCEPTS_FILENAME} \
     --model_size ${MODEL_SIZE} \
-    --pool_hs_type "repeat_mean_pool" \
+    --pool_hs_type ${POOL_HS_TYPE} \
     --cuda_visible_devices 4 \
     > log_generate_goal_embeddings_gemma-${MODEL_SIZE}B_${TARGET_CONCEPTS_FILENAME}.log 2>&1 &
 
