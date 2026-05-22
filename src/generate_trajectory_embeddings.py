@@ -383,7 +383,7 @@ NUM_OPTIONS=3
 INIT_LAYER_INDEX=12
 TRAINED_DATE="20260427"
 SEED=0
-POOL_HS_TYPE="eos" # "repeat_mean_pool"
+POOL_HS_TYPE="target_seq_mean_pool" #"eos" # "repeat_mean_pool"
 
 INIT_VEC_TYPE_LIST=("CatCent_by_WikiSummaryRepeatHSMixed" "nearCatCent_by_WikiSummaryRepeatHSMixed" "otherCatCent_by_WikiSummaryRepeatHSMixed" "zero" "norm_rand_vocab") 
 

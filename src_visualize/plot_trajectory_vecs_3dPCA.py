@@ -324,8 +324,8 @@ INIT_LAYER_INDEX=12
 TRAINED_DATE="20260427"
 SEED=0
 
-POOL_HS_TYPE="eos" # "repeat_mean_pool"
-INIT_VEC_TYPE="otherCatCent_by_WikiSummaryRepeatHSMixed" 
+POOL_HS_TYPE="target_seq_mean_pool" # "repeat_mean_pool" "eos"
+INIT_VEC_TYPE="CatCent_by_WikiSummaryRepeatHSMixed" 
 # "CatCent_by_WikiSummaryRepeatHSMixed" "nearCatCent_by_WikiSummaryRepeatHSMixed" "otherCatCent_by_WikiSummaryRepeatHSMixed" "zero" "norm_rand_vocab"
 
 VISUALIZE_LAYER_INDEX=12    # 'all' にすると全層プロットするが、プロットが見づらくなる可能性があるので、特定の層のインデックスを指定した方が良い

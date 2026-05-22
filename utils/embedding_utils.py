@@ -160,15 +160,56 @@ def find_subsequence(sequence, subsequence):
     for i in range(len(sequence) - n + 1):
         if sequence[i:i+n] == subsequence:
             return i
-
+    print(f"Error: Subsequence ***{subsequence}*** not found in sequence ***{sequence}***.")
     return -1
 
 
+
+def get_span_subseq_in_fullseq_use_offset(
+    text,
+    target_text,
+    tokenizer,
+):
+    """
+    hidden_states: (seq_len, hidden_dim)
+    """
+
+    encoding = tokenizer(
+        text,
+        return_offsets_mapping=True,
+        add_special_tokens=False,
+    )
+
+    input_ids = encoding["input_ids"]
+    offsets = encoding["offset_mapping"]
+
+    # target_text の文字位置
+    char_start = text.index(target_text)
+    char_end = char_start + len(target_text)
+
+    token_indices = []
+
+    for token_idx, (start, end) in enumerate(offsets):
+
+        # token と target span が overlap
+        if not (end <= char_start or start >= char_end):
+            token_indices.append(token_idx)
+
+    if len(token_indices) == 0:
+        raise ValueError("No tokens matched target_text")
+
+    start_token_idx = token_indices[0]
+    end_token_idx = token_indices[-1] + 1  # endはexclusiveにするために+1
+
+    return start_token_idx, end_token_idx
+
+
+
+# ** こちらだと、full_idsとsubseq_idsが完全に一致する必要があるため、tokenizerの違いなどでうまくいかない可能性がある。その場合は上のget_span_subseq_in_fullseq_use_offsetを使う
 def get_span_subseq_in_fullseq(
     full_ids,
     target_text,
     tokenizer,
-    hidden_states,
 ):
     """
     Parameters
@@ -179,8 +220,6 @@ def get_span_subseq_in_fullseq(
         mean pooling したい単語列
     tokenizer :
         HuggingFace tokenizer
-    hidden_states : torch.Tensor
-        shape: (seq_len, hidden_dim)
 
     Returns
     -------
@@ -198,6 +237,8 @@ def get_span_subseq_in_fullseq(
     start_idx = find_subsequence(full_ids, target_ids)
 
     if start_idx == -1:
+        print(f"decoded full_ids: ***{tokenizer.decode(full_ids)}***")
+        print(f"decoded subsequence: ***{tokenizer.decode(target_ids)}***")
         raise ValueError(f"target_text not found: {target_text}")
 
     end_idx = start_idx + len(target_ids)
@@ -421,7 +462,7 @@ def extract_hidden_states(model, tokenizer, text_list, pool_hs_type, data_type=N
     all_vecs = []
     
 
-    for i in range(0, len(text_list), batch_size):
+    for i in range(len(text_list)):
 
         # ** 前処理 **
         if pool_hs_type == "eos":
@@ -475,9 +516,10 @@ def extract_hidden_states(model, tokenizer, text_list, pool_hs_type, data_type=N
             if pool_hs_type == "target_seq_mean_pool":
                 # target_textに基づいてspanを特定し、その部分の隠れ状態を平均する方法
                 # text = text_list[s_id]
-                full_ids = input_ids[s_id].tolist()  # 文全体の token ids
+                # full_ids = input_ids[s_id].tolist()  # 文全体の token ids
                 target_text = mean_pool_target_texts[s_id]  # target_textsはtext_listと同順でtarget_textが入っているリストであることを想定
-                pos_begin, pos_end = get_span_subseq_in_fullseq(full_ids, target_text, tokenizer)
+                # pos_begin, pos_end = get_span_subseq_in_fullseq(full_ids, target_text, tokenizer)
+                pos_begin, pos_end = get_span_subseq_in_fullseq_use_offset(text_list[s_id], target_text, tokenizer)
 
 
 
