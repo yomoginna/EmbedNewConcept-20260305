@@ -315,11 +315,12 @@ def main(args):
                 text_list, 
                 pool_hs_type, 
                 data_type, 
-                # batch_size=8, 
+                batch_size=8, 
                 mean_pool_target_texts=concept_unused_tk_names if pool_hs_type=="target_seq_mean_pool" else None,   # pool_hs_type=='target_seq_mean_pool'のとき、各textの対象unused_tk位置でmean_poolするためのテキストのリスト。text_listと同順で、各textのmean_poolの対象となるテキストが入っていることを想定。
                 layer_index=visualize_layer_index,
                 print_flag=False
             )   # -> (T, D) or (T, H, D) Tはテキスト数, Hは層の数, Dは隠れ状態の次元
+            print(f"shape of all_vecs for epoch {epoch}: {all_vecs.shape}")
 
             # ベクトルを保存, output_path名は、epochによって変える
             # output_path = os.path.join(output_dir, f"trajectory_embeddings_{model_size}B_{target_concepts_filename.split('.')[0]}_initvecwith{init_vec_type.replace(' ', '_')}_vislayer{visualize_layer_index}_epoch{epoch}")
@@ -386,6 +387,7 @@ SEED=0
 POOL_HS_TYPE="target_seq_mean_pool" #"eos" # "repeat_mean_pool"
 
 INIT_VEC_TYPE_LIST=("CatCent_by_WikiSummaryRepeatHSMixed" "nearCatCent_by_WikiSummaryRepeatHSMixed" "otherCatCent_by_WikiSummaryRepeatHSMixed" "zero" "norm_rand_vocab") 
+INIT_VEC_TYPE_LIST=("nearCatCent_by_WikiSummaryRepeatHSMixed" "otherCatCent_by_WikiSummaryRepeatHSMixed" "zero" "norm_rand_vocab") 
 
 
 nohup uv run python src/generate_trajectory_embeddings.py \

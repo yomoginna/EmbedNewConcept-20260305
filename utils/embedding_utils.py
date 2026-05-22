@@ -442,7 +442,7 @@ def get_span_subseq_in_fullseq(
 
 
 @torch.no_grad()
-def extract_hidden_states(model, tokenizer, text_list, pool_hs_type, data_type=None, layer_index=None, mean_pool_target_texts=None, print_flag=False):
+def extract_hidden_states(model, tokenizer, text_list, pool_hs_type, data_type=None, batch_size=8, layer_index=None, mean_pool_target_texts=None, print_flag=False):
     """
     pool_hs_typeに応じて hidden state を返す。
 
@@ -452,6 +452,7 @@ def extract_hidden_states(model, tokenizer, text_list, pool_hs_type, data_type=N
         text_list: テキストのリスト
         pool_hs_type: hidden stateのpooling方法 ("eos", "last_token, "mean_pool", "dot" ) + ("repeat_mean_pool" "target_seq_mean_pool" も追加) 2026/05/22
         data_type: データの種類 (e.g. "wiki_summary_repeat", "wiki_summary", "fact_sentences", etc.) -> pool_hs_typeの"mean_pool"を使用する際に、wiki summaryを繰り返してプロンプトとする場合は、2回目の文のみの隠れ状態を平均するために必要
+        batch_size: バッチサイズ
         mean_pool_target_texts: mean_poolの対象となるテキストのリスト. pool_hs_typeが"target_seq_mean_pool"のときのみ使用
         layer_index: int or list or 'all'. 隠れ状態を抽出する層のインデックス. -1: 最終層
         print_flag: 抽出するhidden stateの位置を確認するためのprint文を表示するかどうか
@@ -462,16 +463,20 @@ def extract_hidden_states(model, tokenizer, text_list, pool_hs_type, data_type=N
     all_vecs = []
     
 
-    for i in range(len(text_list)):
+    for i in range(0, len(text_list), batch_size):
+        batch_texts = text_list[i:i+batch_size]
+        if mean_pool_target_texts is not None:
+            batch_mean_pool_target_texts = mean_pool_target_texts[i:i+batch_size]
+        
 
         # ** 前処理 **
         if pool_hs_type == "eos":
             # EOS を明示的に末尾へ追加
-            text_list = [text + tokenizer.eos_token for text in text_list]
+            batch_texts = [text + tokenizer.eos_token for text in batch_texts]
         
         # ** tokenize and generate **
         inputs = tokenizer(
-            text_list,
+            batch_texts,
             return_tensors="pt",
             padding=True,
             truncation=True,
@@ -517,16 +522,16 @@ def extract_hidden_states(model, tokenizer, text_list, pool_hs_type, data_type=N
                 # target_textに基づいてspanを特定し、その部分の隠れ状態を平均する方法
                 # text = text_list[s_id]
                 # full_ids = input_ids[s_id].tolist()  # 文全体の token ids
-                target_text = mean_pool_target_texts[s_id]  # target_textsはtext_listと同順でtarget_textが入っているリストであることを想定
+                target_text = batch_mean_pool_target_texts[s_id]  # target_textsはtext_listと同順でtarget_textが入っているリストであることを想定
                 # pos_begin, pos_end = get_span_subseq_in_fullseq(full_ids, target_text, tokenizer)
-                pos_begin, pos_end = get_span_subseq_in_fullseq_use_offset(text_list[s_id], target_text, tokenizer)
+                pos_begin, pos_end = get_span_subseq_in_fullseq_use_offset(batch_texts[s_id], target_text, tokenizer)
 
 
 
             if pool_hs_type == "eos":
                 eos_positions = torch.where(eos_mask[s_id])[0]
                 if len(eos_positions) == 0:
-                    raise ValueError(f"EOS token が見つかりません: {text_list[s_id]}")
+                    raise ValueError(f"EOS token が見つかりません: {batch_texts[s_id]}")
                 eos_pos = eos_positions[-1].item()
                 pos_begin = eos_pos
                 pos_end = eos_pos + 1
@@ -548,7 +553,7 @@ def extract_hidden_states(model, tokenizer, text_list, pool_hs_type, data_type=N
                 dot_pos = (input_ids[s_id] == tokenizer.convert_tokens_to_ids('.')).nonzero(as_tuple=False).squeeze(-1)
                 if dot_pos.numel() == 0:
                     # dot がない場合はerror
-                    err_text = f"Batch {s_id} のテキスト '{text_list[s_id]}' にはdot(.)が含まれていません。dot(.)を含むテキストを使用してください。"
+                    err_text = f"Batch {s_id} のテキスト '{batch_texts[s_id]}' にはdot(.)が含まれていません。dot(.)を含むテキストを使用してください。"
                     raise ValueError(err_text)
                 pos_begin = dot_pos[0].item()  # 最初のdotの位置を使用
                 pos_end = pos_begin + 1
@@ -560,7 +565,7 @@ def extract_hidden_states(model, tokenizer, text_list, pool_hs_type, data_type=N
             if print_flag:
                 # どの位置のtokenの隠れ状態が使われるのかを確認するためのprint文
                 print(f"pool_hs_type: {pool_hs_type}, data_type: {data_type}")
-                print(f"Batch {s_id} text: '{text_list[s_id]}'")
+                print(f"Batch {s_id} text: '{batch_texts[s_id]}'")
                 print(f"Token IDs: {input_ids[s_id].tolist()}")
                 print(f"pos_begin: {pos_begin}, pos_end: {pos_end}")
                 print(f"\tattention_mask: {attention_mask[s_id]},\n\t valid_pos: {valid_pos}, \n\t valid part in text: {input_ids[s_id][pos_begin:pos_end]}")
