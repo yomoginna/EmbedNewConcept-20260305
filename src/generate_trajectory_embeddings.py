@@ -84,7 +84,7 @@ def main(args):
     init_vec_type = args.init_vec_type
     lr = args.lr
     trained_date = args.trained_date
-    trained_layer_index = args.trained_layer_index
+    init_layer_index = args.init_layer_index
     seed = args.seed
 
     visualize_layer_index='all'
@@ -95,7 +95,7 @@ def main(args):
 
     if not need_layer_flag:
         # HSを初期vec作成に使わない場合は、layer_indexは指定されていないものとして扱う
-        trained_layer_index = None
+        init_layer_index = None
 
 
     # [WIP] 'it'と'pt'のどちらが良いかは未検証.とりあえず'it'で統一.
@@ -105,7 +105,7 @@ def main(args):
         model_size=model_size,
         lr=lr,
         trained_date=trained_date,
-        layer_idx=trained_layer_index,
+        layer_idx=init_layer_index,
         random_seed=seed,
     )
 
@@ -320,7 +320,8 @@ def main(args):
             )   # -> (T, D) or (T, H, D) Tはテキスト数, Hは層の数, Dは隠れ状態の次元
 
             # ベクトルを保存, output_path名は、epochによって変える
-            output_path = os.path.join(output_dir, f"trajectory_embeddings_{model_size}B_{target_concepts_filename.split('.')[0]}_initvecwith{init_vec_type.replace(' ', '_')}_vislayer{visualize_layer_index}_epoch{epoch}")
+            # output_path = os.path.join(output_dir, f"trajectory_embeddings_{model_size}B_{target_concepts_filename.split('.')[0]}_initvecwith{init_vec_type.replace(' ', '_')}_vislayer{visualize_layer_index}_epoch{epoch}")
+            output_path = os.path.join(output_dir, f"{target_concepts_filename.split('.')[0]}_initlayer{init_layer_index}_seed{seed}_initvecwith{init_vec_type.replace(' ', '_')}_vislayer{visualize_layer_index}_epoch{epoch}")
             np.savez(
                 output_path, 
                 vectors=all_vecs,
@@ -352,7 +353,7 @@ if __name__ == "__main__":
     parser.add_argument('--init_vec_type', type=str, default="CatCent_by_WikiSummaryRepeatHSMixed", help='目memory vectorの初期化方法')
     parser.add_argument('--lr', type=float, default=0.003, help='学習率. 例: 3e-3')
     parser.add_argument('--trained_date', type=str, default="", help='学習した日付. 例: "20260427"')
-    parser.add_argument('--trained_layer_index', type=int, default=12, help='学習時に訓練対象token_vecの初期vecとして使用した層のインデックス. 例: 12')
+    parser.add_argument('--init_layer_index', type=int, default=12, help='学習時に訓練対象token_vecの初期vecとして使用した層のインデックス. 例: 12')
     parser.add_argument('--seed', type=int, default=42, help='乱数シード. 例: 42')
 
     args = parser.parse_args()
@@ -371,7 +372,7 @@ CUDA_VISIBLE_DEVICES=4
 
 LR=0.003
 NUM_OPTIONS=3
-TRAINED_LAYER_INDEX=12
+INIT_LAYER_INDEX=12
 TRAINED_DATE="20260427"
 SEED=0
 
@@ -386,7 +387,7 @@ nohup uv run python src/generate_trajectory_embeddings.py \
     --init_vec_type ${INIT_VEC_TYPE} \
     --lr ${LR} \
     --trained_date ${TRAINED_DATE} \
-    --trained_layer_index ${TRAINED_LAYER_INDEX} \
+    --init_layer_index ${INIT_LAYER_INDEX} \
     --seed ${SEED} \
     > log_generate_trajectory_embeddings_gemma-${MODEL_SIZE}B_${TARGET_CONCEPTS_FILENAME}.log 2>&1 &
 

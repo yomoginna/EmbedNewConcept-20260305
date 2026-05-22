@@ -189,7 +189,8 @@ def main(args):
         )   # -> (T, D) or (T, H, D) Tはテキスト数, Hは層の数, Dは隠れ状態の次元
 
         # ベクトルを保存
-        output_path = os.path.join(output_dir, f"goal_embeddings_{model_size}B_{target_concepts_filename.split('.')[0]}_{pool_hs_type}_layer{layer_index}")
+        # output_path = os.path.join(output_dir, f"goal_embeddings_{model_size}B_{target_concepts_filename.split('.')[0]}_{pool_hs_type}_layer{layer_index}")
+        output_path = os.path.join(output_dir, f"{target_concepts_filename.split('.')[0]}_{pool_hs_type}_layer{layer_index}")
         np.savez(
             output_path, 
             vectors=all_vecs,

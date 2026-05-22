@@ -41,12 +41,24 @@ sys.path.append(project_root)
 from utils.handle_text_utils import get_year_if_it_is_year, normalize_PublishedIn_facts, create_test_prompt
 
 
+mem_dir = "/work04/toko/EmbedNewConcept-20260305/"
 
 
 def main(args):
 
-    goal_vector_file = args.goal_vector_file
-    # trajectory_vector_file = args.trajectory_vector_file
+    model_size = args.model_size
+    target_concepts_filename = args.target_concepts_filename
+    pool_hs_type = args.pool_hs_type
+    init_vec_type = args.init_vec_type
+    lr = args.lr
+    trained_date = args.trained_date
+    init_layer_index = args.init_layer_index
+    seed = args.seed
+    visualize_layer_index = args.visualize_layer_index
+
+    goal_vector_file = os.path.join(mem_dir, "goal_embeddings", f"gemma-{model_size}B", f"{target_concepts_filename}_{pool_hs_type}_layer{init_layer_index}.npz")
+    trajectory_vec_file_format = os.path.join(mem_dir, "trajectory_embeddings", f"{target_concepts_filename.split('.')[0]}_initlayer{init_layer_index}_seed{seed}_initvecwith{init_vec_type.replace(' ', '_')}_vislayer{visualize_layer_index}_epoch<epoch>.npz")
+
 
     # ======================
     # ベクトルの読み込み
@@ -74,22 +86,10 @@ def main(args):
     else:
         layer_indices = [int(layer_index)] # 指定された層のインデックス
 
-    # [WIP] plotのhoverやcolorがまだ設定できていない!!
-    
 
-    concept_names_for_hover = [concept_name for concept_name in concept_names for layer_id in layer_indices]
-    concept_name_and_layer_index = [f"{concept_name}_layer{layer_id}" for concept_name in concept_names for layer_id in layer_indices]
-    color_intensity = np.linspace(0, 1, len(layer_indices))                  # 層のインデックスに基づいて色の強さを決定
-    color_intensity_norm = (color_intensity - color_intensity.min()) / (color_intensity.max() - color_intensity.min()) # 0〜1に正規化
-    color_intensity_norm = np.tile(color_intensity_norm, len(concept_names)) # 各概念について、層の数だけ色の強さを繰り返す
-
-    print(f"concept_names_for_hover: {len(concept_names_for_hover)}")
-    print(f"concept_name_and_layer_index: {len(concept_name_and_layer_index)}")
-    print(f"color_intensity_norm: {len(color_intensity_norm)}")
-
-
-    trajectory_vector_dir = "/work04/toko/EmbedNewConcept-20260305/trajectory_embeddings/gemma-3-12B/repeat_mean_pool"
-    trajectory_vec_file_format = "trajectory_embeddings_12B_target_concepts_mini_13_initvecwithCatCent_by_WikiSummaryRepeatHSMixed_vislayerall_epoch<epoch>.npz"
+    # [WIP] どのファイルかは引数で調節したい
+    # trajectory_vector_dir = "/work04/toko/EmbedNewConcept-20260305/trajectory_embeddings/gemma-3-12B/repeat_mean_pool"
+    # trajectory_vec_file_format = "trajectory_embeddings_12B_target_concepts_mini_13_initvecwithCatCent_by_WikiSummaryRepeatHSMixed_vislayerall_epoch<epoch>.npz"
     epoch_to_trajectory_vecs = {}
     for epoch in range(11):
         trajectory_vec_file = trajectory_vec_file_format.replace("<epoch>", f"{epoch}")
@@ -103,6 +103,20 @@ def main(args):
             print(f"Trajectory vector file not found for epoch {epoch}: {trajectory_vec_path}")
 
     trajectory_epoch_list = sorted(epoch_to_trajectory_vecs.keys())
+    # [WIP] plotのhoverやcolorがまだ設定できていない!!
+    
+
+    concept_names_for_hover = [concept_name for concept_name in concept_names for epoch in trajectory_epoch_list for layer_id in layer_indices] # 各概念名を、層の数とepochの数だけ繰り返すリスト. 例: ['concept1', 'concept1', 'concept1', 'concept2', 'concept2', 'concept2', ...] (epoch=0, layer=0), (epoch=0, layer=1), ..., (epoch=10, layer=11) の順で繰り返す
+    concept_name_and_epoch_and_layer_index = [f"{concept_name}_epoch{epoch}_layer{layer_id}" for concept_name in concept_names for epoch in trajectory_epoch_list for layer_id in layer_indices]
+    color_intensity = np.linspace(0, 1, len(layer_indices))                  # 層のインデックスに基づいて色の強さを決定
+    color_intensity_norm = (color_intensity - color_intensity.min()) / (color_intensity.max() - color_intensity.min()) # 0〜1に正規化
+    color_intensity_norm = np.tile(color_intensity_norm, len(concept_names) * len(trajectory_epoch_list)) # 層の数だけ色の強さを、各概念とepochの数だけ繰り返す
+
+    print(f"concept_names_for_hover: {len(concept_names_for_hover)}")
+    print(f"concept_name_and_epoch_and_layer_index: {len(concept_name_and_epoch_and_layer_index)}")
+    print(f"color_intensity_norm: {len(color_intensity_norm)}")
+
+
 
     # ======================
     # ベクトルの差分を計算
@@ -140,7 +154,7 @@ def main(args):
         "PC2": coords[:, 1],
         "PC3": coords[:, 2],
         "concept_names_for_hover": concept_names_for_hover,
-        "concept_name_and_init_layer_index_and_epoch": concept_name_and_layer_index,
+        "concept_name_and_epoch_and_layer_index": concept_name_and_epoch_and_layer_index,
         "color_intensity_norm": color_intensity_norm,
     })
 
@@ -172,7 +186,7 @@ def main(args):
         y="PC2",
         z="PC3",
         color="concept_names_for_hover",
-        hover_name="concept_name_and_layer_index",
+        hover_name="concept_name_and_epoch_and_layer_index",
         hover_data={"PC1": ':.3f', "PC2": ':.3f', "PC3": ':.3f'},
         title=title,
     )
@@ -193,7 +207,7 @@ def main(args):
 
 
     # 保存
-    output_dir = os.path.join(project_root, "src_visualize", "output", "pca_plot")
+    output_dir = os.path.join(project_root, "src_visualize", "output", "pca_plot_diffvecs")
     output_path = os.path.join(output_dir, f"{model_size}B_layer{layer_index}_{target_concepts_filename.split('.')[0]}_poolHStype_{pool_hs_type}_pca_3d.html")
     
     os.makedirs(output_dir, exist_ok=True)
@@ -225,8 +239,17 @@ def blend_with_white(hex_color, amount):
 
 if __name__ == "__main__":
     parser = argparse.ArgumentParser(description="Generate goal embeddings for target concepts using a specified Gemma model.")
-    parser.add_argument("--goal_vector_file", type=str, required=True, help="Path to the .npy file containing the vectors to be plotted.")
-    parser.add_argument("--trajectory_vector_file", type=str, required=True, help="Path to the .npy file containing the vectors to be plotted.")
+    parser.add_argument('--target_concepts_filename', type=str, default='target_concepts.json', help='学習対象とするconcept群を指定したjsonファイル名 (configディレクトリ内). 例: "target_concepts.json"') # *** 🟠 
+    parser.add_argument("--model_size", type=int, default=3, help="Size of the Gemma model in billions (e.g., 3 for Gemma-3B).")
+    parser.add_argument("--pool_hs_type", type=str, default="repeat_mean_pool", help='hidden stateのpooling方法. "eos": 最後のEOSトークンの隠れ状態を使用. "last_token": 最後のトークンの隠れ状態を使用. "mean_pool": テキスト全体の隠れ状態の平均を使用. "repeat_mean_pool": テキストを2回繰り返した内の後のtextの隠れ状態の平均を使用. "dot": テキスト全体の隠れ状態を平均したものと、最後のトークンの隠れ状態を連結して使用.')
+
+    parser.add_argument('--init_vec_type', type=str, default="CatCent_by_WikiSummaryRepeatHSMixed", help='目memory vectorの初期化方法')
+    parser.add_argument('--lr', type=float, default=0.003, help='学習率. 例: 3e-3')
+    parser.add_argument('--trained_date', type=str, default="", help='学習した日付. 例: "20260427"')
+    parser.add_argument('--init_layer_index', type=int, default=12, help='学習時に訓練対象token_vecの初期vecとして使用した層のインデックス. 例: 12')
+    parser.add_argument('--seed', type=int, default=42, help='乱数シード. 例: 42')
+    parser.add_argument('--visualize_layer_index', type=int, default='all', help='プロットする際の層のインデックス. 例: 12')
+
     args = parser.parse_args()
 
     main(args)
