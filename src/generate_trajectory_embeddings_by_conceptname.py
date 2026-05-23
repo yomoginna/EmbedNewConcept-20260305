@@ -1,6 +1,7 @@
 """
-目標点となるベクトルを生成するコード。
-ただしベクトルは、新規概念の元になった既存概念名をwiki summaryの説明文に埋め込んだpromptを入力したときの隠れ状態から作成する。
+学習過程のベクトルを生成するコード。
+ただしベクトルは、新規概念の元になった既存概念名そのものをpromptとした際の隠れ状態から作成する。
+(最もsimpleな方法)
 
 経緯：
 - 学習中の過程を、新規概念毎に追うために目標ベクトルが必要になった。
@@ -8,6 +9,10 @@
 
 方法:
 - promptに新規概念の元になった既存概念名を埋め込むことで、ベクトルを作成する。
+
+関係するコード:
+- src/generate_goal_embeddings.py: 目標ベクトルを生成するコード。promptに新規概念の元になった既存概念名を埋め込むことで、ベクトルを作成する。
+- src_visualize/plot_vecs_3dPCA.py: 生成したベクトを3次元PCAでプロットするコード。概念毎に色分けして、ホバーで概念名と層のインデックスを表示する。
 
 注意点：
 - 既存概念名だけでそのまま生成すると、例えば"Unlock!"のように意味と表層的な単語の意味がマッチしない場合に、正しい目標ベクトルが得られない。
@@ -22,19 +27,15 @@
     - 3次元PCA, 概念毎の色分け
 
 """
-
 # ===== Standard library =====
 import argparse
 import json
 import os
-import random
 import re
 import sys
 
 # ===== Third-party =====
 import numpy as np
-import pandas as pd
-from tqdm import tqdm
 import torch
 from transformers import AutoModelForCausalLM, AutoTokenizer
 
@@ -45,8 +46,9 @@ project_root = os.path.join(os.path.dirname(__file__), "..") # os.path.dirname(_
 sys.path.append(project_root)
 print("Project root:", project_root)
 
-from utils.gemma_train_and_test_utils import get_gemma_model_version, set_tokenizer_and_model
-from utils.embedding_utils import extract_hidden_states, get_concept_containing_text_using_wiki_summary
+from utils.embedding_utils import load_mem_vec
+from utils.gemma_train_and_test_utils import get_gemma_model_version, set_tokenizer_and_model # , set_flag
+from utils.embedding_utils import extract_hidden_states
 
 global BATCH_SIZE
 
@@ -54,7 +56,7 @@ wiki_page_save_dir = os.path.join(project_root, 'data', 'wiki_pages')
 dont_get_new_wiki_flag = False # False #True # もう新しいwikiページを読み込みたくない場合はTrue. すでに保存済みのwikiページがあるpropernounのみにフィルタリングする.
 print_flag = False
 
-
+debug_print_flag = False
 
 def construct_model_name_for_dirname(model_size, lr, trained_date, layer_idx, random_seed):
     model_version = get_gemma_model_version(model_size)
@@ -69,25 +71,30 @@ def construct_model_name_for_dirname(model_size, lr, trained_date, layer_idx, ra
 
 
 
+
 # *************************************************************** main ***************************************************************
 def main(args):
     model_size = args.model_size
     target_concepts_filename = args.target_concepts_filename
     pool_hs_type = args.pool_hs_type
-    
+
     visualize_layer_index='all'
     model_version = get_gemma_model_version(model_size)
+
+    # [WIP] 'it'と'pt'のどちらが良いかは未検証.とりあえず'it'で統一.
+    model_name = f"google/gemma-{model_version}-{model_size}b-it" # [memo] 'gemma-'部分は変えないこと!! -を消すとモデルがloadできない．さらにそのエラーメッセージは，"huggingface-cli login"をして，という関係ないmessageになるので注意!
     
     # ** 保存先 **
-    # output_dir = os.path.join(project_root, "output", f"gemma-{model_version}-{model_size}B_lr{lr}_{target_concepts_filename.split('.')[-1]}_{pool_hs_type}_layer{layer_idx}")
-    output_dir = os.path.join("/work04/toko/EmbedNewConcept-20260305", "goal_embeddings", "by_embed_conceptname_in_wikisummary", f"gemma-{model_version}-{model_size}B")
+    output_dir = os.path.join("/work04/toko/EmbedNewConcept-20260305", "goal_embeddings", "by_conceptname", f"gemma-{model_version}-{model_size}B")
+    output_dir = os.path.join(output_dir, pool_hs_type)
     os.makedirs(output_dir, exist_ok=True)
-
 
     # =========================
     # data load
     # =========================
-    # *** config/{target_concepts_filename}で指定されたconcept群を学習対象とする ***
+    tokenizer = AutoTokenizer.from_pretrained(model_name)
+
+    # * config/{target_concepts_filename}で指定されたconcept群を学習対象とする *
     class_to_target_concepts_path = os.path.join(project_root, 'config', target_concepts_filename)
     if not os.path.exists(class_to_target_concepts_path) or target_concepts_filename.split('.')[-1] != 'json':
         raise ValueError(f"指定されたtarget_concepts_filename '{target_concepts_filename}' が存在しないか，jsonファイルではありません。configディレクトリ内の正しいjsonファイル名を指定してください。")
@@ -98,59 +105,6 @@ def main(args):
         raise ValueError("No concepts found in target concept config.")
     print(f"Target concepts specified in config {class_to_target_concepts_path}: {config_concept_list}")
 
-    # *** 該当wiki pageのsummaryから、概念をうまく説明する1文を抽出し、概念名を置換したければ置換する.
-    concept_to_one_summary_sentence = {}
-    for concept in config_concept_list:
-        first_concept_sentence = get_concept_containing_text_using_wiki_summary(
-            concept, 
-            None
-        )
-        if first_concept_sentence is None:
-            # 現在のget_concept_containing_text_using_wiki_summary()では、概念を説明する1文がwiki summaryから見つけられなかったためskip.
-            continue
-        concept_to_one_summary_sentence[concept] = first_concept_sentence
-        print(f"First wiki sentence containing concept '{concept}': \n\t{first_concept_sentence}\n")
-    if len(concept_to_one_summary_sentence) == 0:
-        raise ValueError("No concept embedding texts could be extracted.")
-
-    # 何割について文を抽出できたかを確認
-    extracted_count = len(concept_to_one_summary_sentence)
-    total_count = len(config_concept_list)
-    print(
-        f"Extracted sentences for {extracted_count}/{total_count} concepts "
-        f"({extracted_count / total_count * 100:.2f}%)"
-    )
-
-    # =========================
-    # promptの作成 (目標vec生成用) 
-    # =========================
-    # prompt_base = "It is the <target_concept>."
-    concept_to_prompt = {}
-    for concept, one_summary_sentence in concept_to_one_summary_sentence.items():   # in config_concept_list:
-        print(f"Processing concept: {concept}")
-        if "repeat" in pool_hs_type:
-            # 目標ベクトルを生成するためのpromptを作成. 例えば、"It is the apple. It is the apple." のように、同じ文を2回繰り返すことで、gemmaのattentionが、後半の文の方に向くようにする。
-            prompt = one_summary_sentence + " " + one_summary_sentence
-            # pool_hs_type = "mean_pool" # pool_hs_typeがrepeat_mean_poolの場合は、pool_hs_typeをmean_poolに変更して、後半の文の隠れ状態の平均を目標ベクトルとする. これにより、gemmaのattentionが、後半の文の方に向くようにする。
-        else:
-            prompt = one_summary_sentence
-        print(f"Prompt for concept '{concept}': {prompt}")
-        concept_to_prompt[concept] = prompt
-
-    # config_concept_list の順番に対応するpromptのリストを作成
-    concept_names, text_list = [], []
-    # text_list = [concept_to_prompt[concept] for concept in config_concept_list if concept in concept_to_prompt]
-    for concept in config_concept_list:
-        if concept in concept_to_prompt:
-            concept_names.append(concept)
-            text_list.append(concept_to_prompt[concept])
-        else:
-            # print(f"Warning: No prompt could be created for concept '{concept}' because no suitable sentence was found in the wiki summary. This concept will be skipped.")
-            pass
-
-
-    # return 0  # [memo] ここまで動作確認済み
-
 
     # =========================
     # ** モデル読み込み **
@@ -159,21 +113,19 @@ def main(args):
     model_version = get_gemma_model_version(model_size)
 
     # [WIP] 'it'と'pt'のどちらが良いかは未検証.とりあえず'it'で統一.
-    model_name = f"google/gemma-{model_version}-{model_size}b-it" # [memo] 'gemma-'部分は変えないこと!! -を消すとモデルがloadできない．さらにそのエラーメッセージは，"huggingface-cli login"をして，という関係ないmessageになるので注意!
-    
-    tokenizer = AutoTokenizer.from_pretrained(model_name)
     model = AutoModelForCausalLM.from_pretrained(model_name, device_map="auto")
     set_tokenizer_and_model(tokenizer, model)
 
 
     # * デバッグ: tokenizerの動作確認. text_listの各テキストがどのようにtokenizeされるか、またdecodeするとどうなるかを確認する. これにより、tokenizerが想定通りに動いているか、特にEOSトークンの扱いがどうなっているかを確認できる.
-    # dot_ids = tokenizer.encode(".", add_special_tokens=False)
-    # print(f"dot token ids: {dot_ids}, tokens: {tokenizer.convert_ids_to_tokens(dot_ids)}")
-    for concept, text in zip(concept_names, text_list):
-        encoded = tokenizer(text, return_tensors="pt")
-        print(f"Tokenized the text of concept '{concept}': {encoded}")
+    dot_ids = tokenizer.encode(".", add_special_tokens=False)
+    print(f"dot token ids: {dot_ids}, tokens: {tokenizer.convert_ids_to_tokens(dot_ids)}")
+    for concept_name in config_concept_list:
+        encoded = tokenizer(concept_name, return_tensors="pt", add_special_tokens=False)
+        print(f"Tokenized the text of concept '{concept_name}': {encoded}")
         decoded = tokenizer.decode(encoded["input_ids"][0])
         print(f"Decoded back: {decoded}\n")
+
 
     # =========================
     # *** 全層の隠れ状態を全て記録に残す．最終dot(.)位置のみのベクトル，全体のmean pool, の2種類を記録する．***
@@ -184,10 +136,10 @@ def main(args):
     all_vecs = extract_hidden_states(
         model, 
         tokenizer,
-        text_list, 
+        config_concept_list, 
         pool_hs_type,
         batch_size=8, 
-        mean_pool_target_texts=concept_names, # if pool_hs_type=="target_seq_mean_pool" else None,   # pool_hs_type=='target_seq_mean_pool'のとき、各textの対象テキスト位置でmean_poolするためのテキストのリスト。text_listと同順で、各textのmean_poolの対象となるテキストが入っていることを想定。
+        mean_pool_target_texts=None, # if pool_hs_type=="target_seq_mean_pool" else None,   # pool_hs_type=='target_seq_mean_pool'のとき、各textの対象テキスト位置でmean_poolするためのテキストのリスト。text_listと同順で、各textのmean_poolの対象となるテキストが入っていることを想定。
         layer_index=visualize_layer_index,
         print_flag=False
     )   # -> (T, D) or (T, H, D) Tはテキスト数, Hは層の数, Dは隠れ状態の次元
@@ -199,25 +151,24 @@ def main(args):
         output_path, 
         vectors=all_vecs,
         target_concepts_filename=target_concepts_filename,
-        concept_names=np.array(concept_names, dtype=str),
-        text_list=np.array(text_list, dtype=str),
+        concept_names=np.array(config_concept_list, dtype=str),
+        text_list=np.array(config_concept_list, dtype=str),
         model_size=model_size,
-        pool_hs_type=args.pool_hs_type, # repeat_の場合、途中でmean_poolに変えてしまったため、pool_hs_typeではなく、元のargs.pool_hs_typeを保存する
+        pool_hs_type=pool_hs_type,
         layer_index=visualize_layer_index,
     )
     print(f"Saved goal embeddings to {output_path}")
 
 
 
-
     
 
-        
+
 
 
 
 if __name__ == "__main__":
-    print("Starting the process to generate goal embeddings by embedding concept names in wiki summaries...")
+    print("Starting the process to generate goal embeddings by mean pooling the hidden states of input 'concept names'...")
     parser = argparse.ArgumentParser(description="Generate goal embeddings for target concepts using a specified Gemma model.")
     parser.add_argument('--target_concepts_filename', type=str, default='target_concepts.json', help='学習対象とするconcept群を指定したjsonファイル名 (configディレクトリ内). 例: "target_concepts.json"') # *** 🟠 
     parser.add_argument("--model_size", type=int, default=4, help="Size of the Gemma model in billions (e.g., 4 for Gemma-3-4B).")
@@ -228,26 +179,20 @@ if __name__ == "__main__":
     if args.cuda_visible_devices is not None:
         os.environ["CUDA_VISIBLE_DEVICES"] = args.cuda_visible_devices
 
-
     main(args)
 
 
 """
 TARGET_CONCEPTS_FILENAME="target_concepts_mini_13.json"
 MODEL_SIZE=12
-POOL_HS_TYPE="target_seq_repeat_mean_pool"   # "eos"  # repeat_mean_pool
+POOL_HS_TYPE="mean_pool"   # "eos"  # repeat_mean_pool
 
-uv run python src/generate_goal_embeddings_by_embed_conceptname_in_wikisummary.py \
+
+nohup uv run python src/generate_goal_embeddings_by_conceptname.py \
     --target_concepts_filename ${TARGET_CONCEPTS_FILENAME} \
     --model_size ${MODEL_SIZE} \
     --pool_hs_type ${POOL_HS_TYPE} \
-    --cuda_visible_devices 4
-
-nohup uv run python src/generate_goal_embeddings_by_embed_conceptname_in_wikisummary.py \
-    --target_concepts_filename ${TARGET_CONCEPTS_FILENAME} \
-    --model_size ${MODEL_SIZE} \
-    --pool_hs_type ${POOL_HS_TYPE} \
-    --cuda_visible_devices 4 \
+    --cuda_visible_devices 3 \
     > log_generate_goal_embeddings_gemma-${MODEL_SIZE}B_${TARGET_CONCEPTS_FILENAME}.log 2>&1 &
 
 3748904

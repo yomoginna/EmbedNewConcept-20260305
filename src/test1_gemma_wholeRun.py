@@ -2,25 +2,13 @@
 
 # ===== Standard library =====
 import argparse
-from datetime import datetime
 import json
 import os
-import random
 import sys
 import time
 
 # ===== Third-party =====
-from dotenv import load_dotenv
-import numpy as np
-import pandas as pd
-from sklearn.metrics import (
-    accuracy_score,
-    f1_score,
-    precision_score,
-    recall_score,
-)
 import torch
-import torch.nn.functional as F
 from tqdm import tqdm
 from transformers import AutoModelForCausalLM, AutoTokenizer
 
@@ -387,7 +375,7 @@ if __name__ == "__main__":
             # elif seed == 9:
             #     args.trained_date = "20260418"
             if seed >= 0:
-                args.trained_date = "20260427"
+                args.trained_date = "20260523"
             else:
                 raise ValueError(f"Invalid seed: {seed}")
             

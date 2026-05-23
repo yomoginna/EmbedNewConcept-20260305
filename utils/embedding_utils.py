@@ -218,7 +218,7 @@ def extract_hidden_states(
                 pass
 
             elif pool_hs_type == "target_seq_repeat_mean_pool":
-                """textを2回repeatし、2文目のtextにおけるtarget_text部分の隠れ状態を取得する方法。target_textが2tokens以上の場合は、そのtokensで平均する"""
+                """textを2回repeatし、2文目のtextにおける、target_text(concept名等)部分のみの隠れ状態を平均する方法。target_textが2tokens以上の場合は、そのtokensで平均する"""
                 if batch_mean_pool_target_texts is None:
                     raise ValueError("mean_pool_target_texts must be provided when pool_hs_type is 'target_seq_repeat_mean_pool'")
                 text = batch_texts[s_id]
@@ -286,8 +286,8 @@ def extract_hidden_states(
 
 
 
-def get_concept_embedding_text(concept, target_name_to_replace_with_concept=None):
-    """conceptを埋め込む文を取得する関数. 
+def get_concept_containing_text_using_wiki_summary(concept, target_name_to_replace_with_concept=None):
+    """conceptが含まれるwikisummary内の文、もしくは concept名を target_name_to_replace_with_concept に置換した文を取得する関数. 
     大抵の wiki page は、概念名とその説明を含む1文から始まっているため、冒頭の文に概念名が含まれればその文を抽出する。含まれなければ、" is the " を含む文を探し、その前の部分を概念名に置換する。
     例:
     - conceptが"Apple Inc."であれば、Wikipediaのsummaryの中から"Apple Inc."を含む文を抽出し、その中で「最初の文」を返す. 

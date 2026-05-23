@@ -1,7 +1,7 @@
 """
-[WIP] 5/20作業中のコード
-
 学習過程のベクトルを生成するコード。
+ただしベクトルは、新規概念の元になった既存概念名をwiki summaryの説明文に埋め込んだpromptを入力したときの隠れ状態から作成する。
+
 経緯：
 - 学習中の過程を、新規概念毎に追うために目標ベクトルが必要になった。
 - 概念毎に、その学習ステップ時点でのベクトルから目標ベクトルまでの距離を可視化するのに使う。
@@ -48,7 +48,7 @@ print("Project root:", project_root)
 
 from utils.embedding_utils import load_mem_vec
 from utils.gemma_train_and_test_utils import get_gemma_model_version, set_tokenizer_and_model # , set_flag
-from utils.embedding_utils import extract_hidden_states, get_concept_embedding_text
+from utils.embedding_utils import extract_hidden_states, get_concept_containing_text_using_wiki_summary
 
 global BATCH_SIZE
 
@@ -106,7 +106,7 @@ def main(args):
     )
 
     # ** 保存先 **
-    output_dir = os.path.join("/work04/toko/EmbedNewConcept-20260305", "trajectory_embeddings", f"gemma-{model_version}-{model_size}B")
+    output_dir = os.path.join("/work04/toko/EmbedNewConcept-20260305", "trajectory_embeddings", "by_embed_conceptname_in_wikisummary", f"gemma-{model_version}-{model_size}B")
     output_dir = os.path.join(output_dir, pool_hs_type)
     os.makedirs(output_dir, exist_ok=True)
 
@@ -156,12 +156,12 @@ def main(args):
     # * 該当wiki pageのsummaryから、概念をうまく説明する1文を抽出し、概念名を置換したければ置換する. *
     concept_to_one_summary_sentence = {}
     for concept in config_concept_list:
-        first_concept_sentence = get_concept_embedding_text(
+        first_concept_sentence = get_concept_containing_text_using_wiki_summary(
             concept, 
             "<target_concept_name>", # [memo] src/generate_goal_embeddings.py と異なる点
         )
         if first_concept_sentence is None:
-            # 現在のget_concept_embedding_text()では、概念を説明する1文がwiki summaryから見つけられなかったためskip.
+            # 現在のget_concept_containing_text_using_wiki_summary()では、概念を説明する1文がwiki summaryから見つけられなかったためskip.
             continue
         concept_to_one_summary_sentence[concept] = first_concept_sentence
         print(f"First wiki sentence containing concept '{concept}': \n\t{first_concept_sentence}\n")
@@ -329,6 +329,7 @@ def main(args):
 
 
 if __name__ == "__main__":
+    print("Starting the process to generate trajectory embeddings by embedding concept names in wiki summaries...")
     parser = argparse.ArgumentParser(description="Generate goal embeddings for target concepts using a specified Gemma model.")
     parser.add_argument('--target_concepts_filename', type=str, default='target_concepts.json', help='学習対象とするconcept群を指定したjsonファイル名 (configディレクトリ内). 例: "target_concepts.json"') # *** 🟠 
     parser.add_argument("--model_size", type=int, default=3, help="Size of the Gemma model in billions (e.g., 3 for Gemma-3B).")
@@ -369,7 +370,7 @@ INIT_VEC_TYPE_LIST=("CatCent_by_WikiSummaryRepeatHSMixed" "nearCatCent_by_WikiSu
 INIT_VEC_TYPE_LIST=("nearCatCent_by_WikiSummaryRepeatHSMixed" "otherCatCent_by_WikiSummaryRepeatHSMixed" "zero" "norm_rand_vocab") 
 
 
-nohup uv run python src/generate_trajectory_embeddings.py \
+nohup uv run python src/generate_trajectory_embeddings_by_embed_conceptname_in_wikisummary.py \
     --target_concepts_filename ${TARGET_CONCEPTS_FILENAME} \
     --model_size ${MODEL_SIZE} \
     --pool_hs_type ${POOL_HS_TYPE} \
