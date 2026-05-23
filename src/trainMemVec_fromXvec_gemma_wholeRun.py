@@ -423,7 +423,7 @@ def prepareGemmaModel(
         init_vec_type: memory vectorの初期化方法。zeroまたはuniform, または語句. zero->0vec, uniform->一様分布, 語句->指定の語句の埋め込みベクトルで初期化, 数字->指定のコサイン類似度で近い語句のベクトルで初期化
         pool_hs_type: 隠れ状態をプーリングする方法。["eos", "last_token", "mean_pool"] のいずれか。init_vec_typeが 'category_centroid_by_hidden_state_mean' の場合に使用
         category_to_concepts_for_vec: カテゴリごとのvec初期化に使用する概念のリスト。init_vec_typeが 'category_COG' の場合に使用
-        layer_idx: 隠れ状態を取得する層のインデックス。-1なら最終層、0以上の整数ならその層の隠れ状態を使用する。init_vec_typeが 'category_centroid_by_hidden_state_mean' の場合に使用
+        layer_idx: 初期vec作成用の隠れ状態を取得する層のインデックス。-1なら最終層、0以上の整数ならその層の隠れ状態を使用する。init_vec_typeが 'category_centroid_by_hidden_state_mean' の場合に使用
         category2initoken_ids: カテゴリごとの初期化トークンIDのリスト。init_vec_typeが 'category_COG' の場合に使用
     memo:
     * Qwenとは違い，special_tokenが最初から用意されているため，tokenizerの拡張は不要．
@@ -493,7 +493,6 @@ def prepareGemmaModel(
 
 
 def get_vector(model, token_id):
-    token_id = token_id.device(model.device) # token_idをmodelと同じデバイスに移動
     with torch.no_grad():
         embedding_layer = model.get_input_embeddings()
         return embedding_layer.weight[token_id].detach().float().cpu().numpy()
@@ -797,9 +796,6 @@ if __name__ == "__main__":
         
     task_id = -1
     for seed in range(args.seed_num):
-        if seed <= 1:
-            print(f"seed {seed} is already run. skip.")
-            continue
         
         init_vec_type_lst = args.init_vec_types
         for init_vec_type in init_vec_type_lst:

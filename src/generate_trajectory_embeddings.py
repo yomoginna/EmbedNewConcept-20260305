@@ -305,16 +305,15 @@ def main(args):
             device = model.device
 
             # *** pool_hs_type に応じて、vectorを抽出 ***
-            if pool_hs_type == "repeat_mean_pool":
-                data_type = "wiki_summary_repeat"
-            else:
-                data_type = "wiki_summary"
+            # if pool_hs_type == "repeat_mean_pool":
+            #     data_type = "wiki_summary_repeat"
+            # else:
+            #     data_type = "wiki_summary"
             all_vecs = extract_hidden_states(
                 model, 
                 tokenizer,
                 text_list, 
                 pool_hs_type, 
-                data_type, 
                 batch_size=8, 
                 mean_pool_target_texts=concept_unused_tk_names, # if pool_hs_type=="target_seq_mean_pool" else None,   # pool_hs_type=='target_seq_mean_pool'のとき、各textの対象unused_tk位置でmean_poolするためのテキストのリスト。text_listと同順で、各textのmean_poolの対象となるテキストが入っていることを想定。
                 layer_index=visualize_layer_index,

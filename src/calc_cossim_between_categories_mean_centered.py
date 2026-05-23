@@ -209,7 +209,7 @@ def main(args):
     layer_index = args.layer_index
     num_nouns_per_category = args.num_nouns_per_category    
     pool_hs_type = 'mean_pool'
-    data_type = "wiki_summary_repeat"
+    # data_type = "wiki_summary_repeat"
     catnum_plus = args.catnum_plus
     min_words, max_words = 30, 300 # 30->50に変更すると、そこまで長いsummaryが少ないようで、init vecが0vecとなりlossがNanになってしまった。minは30でキープする
 
@@ -373,7 +373,6 @@ def main(args):
         tokenizer,
         input_texts,
         pool_hs_type=pool_hs_type,
-        data_type=data_type,
         batch_size=BATCH_SIZE,
         layer_index=layer_index,
     )

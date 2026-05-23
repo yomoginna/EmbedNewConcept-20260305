@@ -43,7 +43,7 @@ project_root = os.path.join(os.path.dirname(__file__), "..") # os.path.dirname(_
 sys.path.append(project_root)
 print("Project root:", project_root)
 
-from utils.gemma_train_and_test_utils import fix_seed, get_gemma_model_version
+from utils.gemma_train_and_test_utils import get_gemma_model_version
 from utils.embedding_utils import extract_hidden_states, get_concept_embedding_text
 
 global BATCH_SIZE
@@ -185,17 +185,16 @@ def main(args):
         device = model.device
 
         # *** pool_hs_type に応じて、vectorを抽出 ***
-        if pool_hs_type == "repeat_mean_pool":
-            data_type = "wiki_summary_repeat"
-            # pool_hs_type_for_extraction = "mean_pool" # pool_hs_typeがrepeat_mean_poolの場合は、pool_hs_type_for_extractionをmean_poolに変更が必要
-        else:
-            data_type = "wiki_summary"
+        # if pool_hs_type == "repeat_mean_pool":
+        #     data_type = "wiki_summary_repeat"
+        #     # pool_hs_type_for_extraction = "mean_pool" # pool_hs_typeがrepeat_mean_poolの場合は、pool_hs_type_for_extractionをmean_poolに変更が必要
+        # else:
+        #     data_type = "wiki_summary"
         all_vecs = extract_hidden_states(
             model, 
             tokenizer,
             text_list, 
             pool_hs_type,
-            data_type, 
             batch_size=8, 
             mean_pool_target_texts=concept_names, # if pool_hs_type=="target_seq_mean_pool" else None,   # pool_hs_type=='target_seq_mean_pool'のとき、各textの対象テキスト位置でmean_poolするためのテキストのリスト。text_listと同順で、各textのmean_poolの対象となるテキストが入っていることを想定。
             layer_index=layer_index,

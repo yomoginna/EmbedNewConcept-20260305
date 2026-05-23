@@ -68,7 +68,7 @@ nohup uv --no-progress run python src/trainMemVec_fromXvec_gemma_wholeRun.py \
         --seed_num ${SEED_NUM} \
         > log_TrainMemVec_gemma-${MODEL_SIZE}B_lr${LR}_wholeRun${THREAD_ID}_printlog.log 2>&1 &
 
-THREAD_ID=0: 298172
+THREAD_ID=0: 305908
 THREAD_ID=1: -
 THREAD_ID=2: -
 THREAD_ID=3: -
