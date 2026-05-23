@@ -31,14 +31,11 @@
 import argparse
 import json
 import os
-import random
 import re
 import sys
 
 # ===== Third-party =====
 import numpy as np
-import pandas as pd
-from tqdm import tqdm
 import torch
 from transformers import AutoModelForCausalLM, AutoTokenizer
 
@@ -50,7 +47,7 @@ sys.path.append(project_root)
 print("Project root:", project_root)
 
 from utils.embedding_utils import load_mem_vec
-from utils.gemma_train_and_test_utils import fix_seed, get_gemma_model_version, set_flag
+from utils.gemma_train_and_test_utils import get_gemma_model_version, set_tokenizer_and_model # , set_flag
 from utils.embedding_utils import extract_hidden_states, get_concept_embedding_text
 
 global BATCH_SIZE
@@ -59,7 +56,6 @@ wiki_page_save_dir = os.path.join(project_root, 'data', 'wiki_pages')
 dont_get_new_wiki_flag = False # False #True # もう新しいwikiページを読み込みたくない場合はTrue. すでに保存済みのwikiページがあるpropernounのみにフィルタリングする.
 print_flag = False
 
-debug_without_model = False #True
 debug_print_flag = False
 
 def construct_model_name_for_dirname(model_size, lr, trained_date, layer_idx, random_seed):
@@ -134,7 +130,7 @@ def main(args):
 
 
     tokenizer = AutoTokenizer.from_pretrained(model_name)
-    need_to_set_pad_token = set_flag(tokenizer)
+    # need_to_set_pad_token = set_flag(tokenizer)
 
 
     # * 学習時に保存した、memvec用token_id割り当て読み込み *
@@ -152,6 +148,8 @@ def main(args):
     with open(class_to_target_concepts_path, 'r') as f:
         class_to_target_concepts_config = json.load(f)
     config_concept_list = sum(class_to_target_concepts_config.values(), [])
+    if len(config_concept_list) == 0:
+        raise ValueError("No concepts found in target concept config.")
     print(f"Target concepts specified in config {class_to_target_concepts_path}: {config_concept_list}")
 
 
@@ -166,14 +164,18 @@ def main(args):
             # 現在のget_concept_embedding_text()では、概念を説明する1文がwiki summaryから見つけられなかったためskip.
             continue
         concept_to_one_summary_sentence[concept] = first_concept_sentence
-        # print(f"Summary with concept name for concept '{concept}': {summary}\n")
         print(f"First wiki sentence containing concept '{concept}': \n\t{first_concept_sentence}\n")
+
+    if len(concept_to_one_summary_sentence) == 0:
+        raise ValueError("No concept embedding texts could be extracted.")
 
     # 何割について文を抽出できたかを確認
     extracted_count = len(concept_to_one_summary_sentence)
     total_count = len(config_concept_list)
-    print(f"Extracted sentences for {extracted_count}/{total_count} concepts ({extracted_count/total_count*100:.2f}%)")
-
+    print(
+        f"Extracted sentences for {extracted_count}/{total_count} concepts "
+        f"({extracted_count / total_count * 100:.2f}%)"
+    )
 
     # ** 各promptの "<target_concept_name>" -> 対応するtoken に書き換える. またconcept2trainable_tk_mapに無いconceptは対象から除外する ** 
     concept_to_one_summary_sentence_new = {}
@@ -188,7 +190,8 @@ def main(args):
 
     # * デバッグ: tokenizerの動作確認. text_listの各テキストがどのようにtokenizeされるか、またdecodeするとどうなるかを確認する. これにより、tokenizerが想定通りに動いているか、特にEOSトークンの扱いがどうなっているかを確認できる.
     if debug_print_flag:
-        print(f"dot token id: {tokenizer.convert_tokens_to_ids('.')}")
+        dot_ids = tokenizer.encode(".", add_special_tokens=False)
+        print(f"dot token ids: {dot_ids}, tokens: {tokenizer.convert_ids_to_tokens(dot_ids)}")
         for concept, text in concept_to_one_summary_sentence.items():
             assigned_token = concept2trainable_tk_map[concept]
             print(f"Concept: {concept} -> token: {assigned_token}, token_id: {tokenizer.convert_tokens_to_ids(assigned_token)}")
@@ -235,109 +238,86 @@ def main(args):
     # * デバッグ: tokenizerの動作確認. text_listの各テキストがどのようにtokenizeされるか、またdecodeするとどうなるかを確認する. これにより、tokenizerが想定通りに動いているか、特にEOSトークンの扱いがどうなっているかを確認できる.
     if debug_print_flag:
         print(f"dot token id: {tokenizer.convert_tokens_to_ids('.')}")
-        for i, text in enumerate(text_list):
+        for concept, text in zip(concept_names, text_list):
             encoded = tokenizer(text, return_tensors="pt")
-            print(f"Tokenized the text of concept '{config_concept_list[i]}': {encoded}")
+            print(f"Tokenized the text of concept '{concept}': {encoded}")
             decoded = tokenizer.decode(encoded["input_ids"][0])
-        print(f"Decoded back: {decoded}\n")
+            print(f"Decoded back: {decoded}\n")
 
     # return 0 # [memo] ここまで動作確認済み
-
-
-
-    # # =========================
-    # # ** モデル読み込み **
-    # # =========================
-    # print("Loading model...")
-    # if not debug_without_model:
-    #     model = AutoModelForCausalLM.from_pretrained(model_name, device_map="auto")
-        
-    # if tokenizer.pad_token_id is None:
-    #     # llama系の場合はpad_tokenが設定されていないことがあるため，以下のようにeos_tokenをpad_tokenに設定する. gemma3は設定済みだった
-    #     tokenizer.pad_token_id = tokenizer.eos_token_id
-    #     if not debug_without_model:
-    #         model.config.pad_token_id = tokenizer.pad_token_id
-
 
 
     # =========================
     # 全層の隠れ状態を全て記録に残す．最終dot(.)位置のみのベクトル，全体のmean pool, の2種類を記録する．
     # =========================
-    if debug_without_model:
-        device = torch.device("cpu")
-    else:
-        for epoch in epoch_list:
-            print(f"epoch: {epoch}")
+    for epoch in epoch_list:
+        print(f"epoch: {epoch}")
 
-            # ****** epoch毎にmodel読み込み・memvec挿入 ******
-            if epoch == 0:
-                # epoch0は未追加学習のモデル
-                model = AutoModelForCausalLM.from_pretrained(model_name, device_map="auto")
-                print("Loaded pre-trained model")
-                
-            else:
-                # if model is None:
-                #     # epoch0がlistにない場合はmodelがまだ読み込まれていないので，ここで読み込む
-                #     # model = AutoModelForCausalLM.from_pretrained(model_name, device_map=device_map)
-                #     model = AutoModelForCausalLM.from_pretrained(model_name, device_map='auto')
-                #     if need_to_set_pad_token:
-                #         model.config.pad_token_id = tokenizer.pad_token_id
-
-                # 毎回モデルを読み込み直す場合はこちら
-                model = AutoModelForCausalLM.from_pretrained(model_name, device_map='auto')
-
-                # ** memvecをmodelに挿入・置換 **
-                try:
-                    mem_save_path = os.path.join(mem_dir, f'{epoch}.npy')
-                    load_mem_vec(model, mem_save_path, MemTokenIds)
-                except Exception as e:
-                    print(f"Error loading memvec for epoch {epoch} from {mem_save_path}: {e}")
-                    continue  # 学習済みembed層が保存されていなければ、このepochの評価はスキップ
-
-                print(f"Loaded memvec for epoch {epoch} from {mem_save_path} & replaced model embeddings.")
-
-            if need_to_set_pad_token:
-                model.config.pad_token_id = tokenizer.pad_token_id
-
+        # ****** epoch毎にmodel読み込み・memvec挿入 ******
+        if epoch == 0:
+            # epoch0は未追加学習のモデル
+            model = AutoModelForCausalLM.from_pretrained(model_name, device_map="auto")
+            print("Loaded pre-trained model")
             
+        else:
+            # if model is None:
+            #     # epoch0がlistにない場合はmodelがまだ読み込まれていないので，ここで読み込む
+            #     # model = AutoModelForCausalLM.from_pretrained(model_name, device_map=device_map)
+            #     model = AutoModelForCausalLM.from_pretrained(model_name, device_map='auto')
+            #     if need_to_set_pad_token:
+            #         model.config.pad_token_id = tokenizer.pad_token_id
 
-            model.eval() # 評価モードに切り替え (これにより、dropoutなどの挙動が変わる)
-            device = model.device
+            # 毎回モデルを読み込み直す場合はこちら
+            model = AutoModelForCausalLM.from_pretrained(model_name, device_map='auto')
 
-            # *** pool_hs_type に応じて、vectorを抽出 ***
-            # if pool_hs_type == "repeat_mean_pool":
-            #     data_type = "wiki_summary_repeat"
-            # else:
-            #     data_type = "wiki_summary"
-            all_vecs = extract_hidden_states(
-                model, 
-                tokenizer,
-                text_list, 
-                pool_hs_type, 
-                batch_size=8, 
-                mean_pool_target_texts=concept_unused_tk_names, # if pool_hs_type=="target_seq_mean_pool" else None,   # pool_hs_type=='target_seq_mean_pool'のとき、各textの対象unused_tk位置でmean_poolするためのテキストのリスト。text_listと同順で、各textのmean_poolの対象となるテキストが入っていることを想定。
-                layer_index=visualize_layer_index,
-                print_flag=False
-            )   # -> (T, D) or (T, H, D) Tはテキスト数, Hは層の数, Dは隠れ状態の次元
-            print(f"shape of all_vecs for epoch {epoch}: {all_vecs.shape}")
+            # ** memvecをmodelに挿入・置換 **
+            try:
+                mem_save_path = os.path.join(mem_dir, f'{epoch}.npy')
+                load_mem_vec(model, mem_save_path, MemTokenIds)
+            except Exception as e:
+                print(f"Error loading memvec for epoch {epoch} from {mem_save_path}: {e}")
+                continue  # 学習済みembed層が保存されていなければ、このepochの評価はスキップ
 
-            # ベクトルを保存, output_path名は、epochによって変える
-            # output_path = os.path.join(output_dir, f"trajectory_embeddings_{model_size}B_{target_concepts_filename.split('.')[0]}_initvecwith{init_vec_type.replace(' ', '_')}_vislayer{visualize_layer_index}_epoch{epoch}")
-            if not need_layer_flag:
-                output_path = os.path.join(output_dir, f"{target_concepts_filename.split('.')[0]}_seed{seed}_initvecwith{init_vec_type.replace(' ', '_')}_vislayer{visualize_layer_index}_epoch{epoch}")
-            else:
-                output_path = os.path.join(output_dir, f"{target_concepts_filename.split('.')[0]}_initlayer{init_layer_index}_seed{seed}_initvecwith{init_vec_type.replace(' ', '_')}_vislayer{visualize_layer_index}_epoch{epoch}")
-            np.savez(
-                output_path, 
-                vectors=all_vecs,
-                target_concepts_filename=target_concepts_filename,
-                concept_names=concept_names,
-                text_list=text_list,
-                model_size=model_size,
-                pool_hs_type=args.pool_hs_type, # repeat_の場合、途中でmean_poolに変えてしまったため、pool_hs_typeではなく、元のargs.pool_hs_typeを保存する
-                layer_index=visualize_layer_index,
-            )
-            print(f"Saved trajectory embeddings to {output_path}")
+            print(f"Loaded memvec for epoch {epoch} from {mem_save_path} & replaced model embeddings.")
+
+        # if need_to_set_pad_token:
+        #     tokenizer.pad_token = tokenizer.eos_token
+        #     model.config.pad_token_id = tokenizer.pad_token_id
+        set_tokenizer_and_model(tokenizer, model)
+        
+
+        model.eval() # 評価モードに切り替え (これにより、dropoutなどの挙動が変わる)
+
+        # *** pool_hs_type に応じて、vectorを抽出 ***
+        all_vecs = extract_hidden_states(
+            model, 
+            tokenizer,
+            text_list, 
+            pool_hs_type, 
+            batch_size=8, 
+            mean_pool_target_texts=concept_unused_tk_names, # if pool_hs_type=="target_seq_mean_pool" else None,   # pool_hs_type=='target_seq_mean_pool'のとき、各textの対象unused_tk位置でmean_poolするためのテキストのリスト。text_listと同順で、各textのmean_poolの対象となるテキストが入っていることを想定。
+            layer_index=visualize_layer_index,
+            print_flag=False
+        )   # -> (T, D) or (T, H, D) Tはテキスト数, Hは層の数, Dは隠れ状態の次元
+        print(f"shape of all_vecs for epoch {epoch}: {all_vecs.shape}")
+
+        # ベクトルを保存, output_path名は、epochによって変える
+        # output_path = os.path.join(output_dir, f"trajectory_embeddings_{model_size}B_{target_concepts_filename.split('.')[0]}_initvecwith{init_vec_type.replace(' ', '_')}_vislayer{visualize_layer_index}_epoch{epoch}")
+        if not need_layer_flag:
+            output_path = os.path.join(output_dir, f"{target_concepts_filename.split('.')[0]}_seed{seed}_initvecwith{init_vec_type.replace(' ', '_')}_vislayer{visualize_layer_index}_epoch{epoch}.npz")
+        else:
+            output_path = os.path.join(output_dir, f"{target_concepts_filename.split('.')[0]}_initlayer{init_layer_index}_seed{seed}_initvecwith{init_vec_type.replace(' ', '_')}_vislayer{visualize_layer_index}_epoch{epoch}.npz")
+        np.savez(
+            output_path, 
+            vectors=all_vecs,
+            target_concepts_filename=target_concepts_filename,
+            concept_names=concept_names,
+            text_list=text_list,
+            model_size=model_size,
+            pool_hs_type=args.pool_hs_type, # repeat_の場合、途中でmean_poolに変えてしまったため、pool_hs_typeではなく、元のargs.pool_hs_typeを保存する
+            layer_index=visualize_layer_index,
+        )
+        print(f"Saved trajectory embeddings to {output_path}")
 
 
 

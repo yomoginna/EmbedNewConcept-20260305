@@ -94,6 +94,8 @@ def main(args):
     with open(class_to_target_concepts_path, 'r') as f:
         class_to_target_concepts_config = json.load(f)
     config_concept_list = sum(class_to_target_concepts_config.values(), [])
+    if len(config_concept_list) == 0:
+        raise ValueError("No concepts found in target concept config.")
     print(f"Target concepts specified in config {class_to_target_concepts_path}: {config_concept_list}")
 
     # *** 該当wiki pageのsummaryから、概念をうまく説明する1文を抽出し、概念名を置換したければ置換する.
@@ -107,13 +109,17 @@ def main(args):
             # 現在のget_concept_embedding_text()では、概念を説明する1文がwiki summaryから見つけられなかったためskip.
             continue
         concept_to_one_summary_sentence[concept] = first_concept_sentence
-        # print(f"Summary with concept name for concept '{concept}': {summary}\n")
         print(f"First wiki sentence containing concept '{concept}': \n\t{first_concept_sentence}\n")
+    if len(concept_to_one_summary_sentence) == 0:
+        raise ValueError("No concept embedding texts could be extracted.")
 
     # 何割について文を抽出できたかを確認
     extracted_count = len(concept_to_one_summary_sentence)
     total_count = len(config_concept_list)
-    print(f"Extracted sentences for {extracted_count}/{total_count} concepts ({extracted_count/total_count*100:.2f}%)")
+    print(
+        f"Extracted sentences for {extracted_count}/{total_count} concepts "
+        f"({extracted_count / total_count * 100:.2f}%)"
+    )
 
     # =========================
     # promptの作成 (目標vec生成用) 
@@ -124,7 +130,7 @@ def main(args):
         print(f"Processing concept: {concept}")
         if "repeat" in pool_hs_type:
             # 目標ベクトルを生成するためのpromptを作成. 例えば、"It is the apple. It is the apple." のように、同じ文を2回繰り返すことで、gemmaのattentionが、後半の文の方に向くようにする。
-            prompt = one_summary_sentence * 2 
+            prompt = one_summary_sentence + " " + one_summary_sentence
             # pool_hs_type = "mean_pool" # pool_hs_typeがrepeat_mean_poolの場合は、pool_hs_typeをmean_poolに変更して、後半の文の隠れ状態の平均を目標ベクトルとする. これにより、gemmaのattentionが、後半の文の方に向くようにする。
         else:
             prompt = one_summary_sentence
@@ -162,34 +168,27 @@ def main(args):
 
     if tokenizer.pad_token_id is None:
         # llama系の場合はpad_tokenが設定されていないことがあるため，以下のようにeos_tokenをpad_tokenに設定する. gemma3は設定済みだった
-        tokenizer.pad_token_id = tokenizer.eos_token_id
+        tokenizer.pad_token = tokenizer.eos_token
         if not debug_without_model:
             model.config.pad_token_id = tokenizer.pad_token_id
 
 
     # * デバッグ: tokenizerの動作確認. text_listの各テキストがどのようにtokenizeされるか、またdecodeするとどうなるかを確認する. これにより、tokenizerが想定通りに動いているか、特にEOSトークンの扱いがどうなっているかを確認できる.
-    print(f"dot token id: {tokenizer.convert_tokens_to_ids('.')}")
-    for i, text in enumerate(text_list):
+    dot_ids = tokenizer.encode(".", add_special_tokens=False)
+    print(f"dot token ids: {dot_ids}, tokens: {tokenizer.convert_ids_to_tokens(dot_ids)}")
+    for concept, text in zip(concept_names, text_list):
         encoded = tokenizer(text, return_tensors="pt")
-        print(f"Tokenized the text of concept '{config_concept_list[i]}': {encoded}")
+        print(f"Tokenized the text of concept '{concept}': {encoded}")
         decoded = tokenizer.decode(encoded["input_ids"][0])
         print(f"Decoded back: {decoded}\n")
 
     # =========================
     # *** 全層の隠れ状態を全て記録に残す．最終dot(.)位置のみのベクトル，全体のmean pool, の2種類を記録する．***
     # =========================
-    if debug_without_model:
-        device = torch.device("cpu")
-    else:
+    if not debug_without_model:
         model.eval() # 評価モードに切り替え (これにより、dropoutなどの挙動が変わる)
-        device = model.device
 
         # *** pool_hs_type に応じて、vectorを抽出 ***
-        # if pool_hs_type == "repeat_mean_pool":
-        #     data_type = "wiki_summary_repeat"
-        #     # pool_hs_type_for_extraction = "mean_pool" # pool_hs_typeがrepeat_mean_poolの場合は、pool_hs_type_for_extractionをmean_poolに変更が必要
-        # else:
-        #     data_type = "wiki_summary"
         all_vecs = extract_hidden_states(
             model, 
             tokenizer,
@@ -203,13 +202,13 @@ def main(args):
 
         # ベクトルを保存
         # output_path = os.path.join(output_dir, f"goal_embeddings_{model_size}B_{target_concepts_filename.split('.')[0]}_{pool_hs_type}_layer{layer_index}")
-        output_path = os.path.join(output_dir, f"{target_concepts_filename.split('.')[0]}_{pool_hs_type}_layer{layer_index}")
+        output_path = os.path.join(output_dir, f"{target_concepts_filename.split('.')[0]}_{pool_hs_type}_layer{layer_index}.npz")
         np.savez(
             output_path, 
             vectors=all_vecs,
             target_concepts_filename=target_concepts_filename,
-            concept_names=concept_names,
-            text_list=text_list,
+            concept_names=np.array(concept_names, dtype=str),
+            text_list=np.array(text_list, dtype=str),
             model_size=model_size,
             pool_hs_type=args.pool_hs_type, # repeat_の場合、途中でmean_poolに変えてしまったため、pool_hs_typeではなく、元のargs.pool_hs_typeを保存する
             layer_index=layer_index,
@@ -228,7 +227,7 @@ def main(args):
 if __name__ == "__main__":
     parser = argparse.ArgumentParser(description="Generate goal embeddings for target concepts using a specified Gemma model.")
     parser.add_argument('--target_concepts_filename', type=str, default='target_concepts.json', help='学習対象とするconcept群を指定したjsonファイル名 (configディレクトリ内). 例: "target_concepts.json"') # *** 🟠 
-    parser.add_argument("--model_size", type=int, default=3, help="Size of the Gemma model in billions (e.g., 3 for Gemma-3B).")
+    parser.add_argument("--model_size", type=int, default=4, help="Size of the Gemma model in billions (e.g., 4 for Gemma-3-4B).")
     parser.add_argument("--pool_hs_type", type=str, default="repeat_mean_pool", help='hidden stateのpooling方法. "eos": 最後のEOSトークンの隠れ状態を使用. "last_token": 最後のトークンの隠れ状態を使用. "mean_pool": テキスト全体の隠れ状態の平均を使用. "repeat_mean_pool": テキストを2回繰り返した内の後のtextの隠れ状態の平均を使用. "dot": テキスト全体の隠れ状態を平均したものと、最後のトークンの隠れ状態を連結して使用.')
     parser.add_argument('--cuda_visible_devices', type=str, default=None, help='CUDA_VISIBLE_DEVICESの設定. ただし数字は1つだけ指定すること. 例: "2"')
     args = parser.parse_args()

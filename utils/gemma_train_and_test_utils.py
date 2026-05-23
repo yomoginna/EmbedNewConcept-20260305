@@ -304,14 +304,23 @@ def encodeTrainSamplesWithTokenizer(train_samples, tokenizer, padTokenId, device
 
 
 
-def set_flag(tokenizer):
+# def set_flag(tokenizer):
+#     """
+#     自動的に立てられるフラグを立てる。他にもflagを設定するかもしれないので関数化した。
+#     """
+#     # llama系はpad_tokenが設定されていないことがあるため，その場合はeos_tokenをpad_tokenに設定する
+#     need_to_set_pad_token = False
+#     if tokenizer.pad_token_id is None:
+#         # tokenizer.pad_token_id = tokenizer.eos_token_id
+#         tokenizer.pad_token = tokenizer.eos_token
+#         need_to_set_pad_token = True
+#     return need_to_set_pad_token
+
+
+def set_tokenizer_and_model(tokenizer, model):
     """
-    自動的に立てられるフラグを立てる。他にもflagを設定するかもしれないので関数化した。
+    tokenizerとmodelの共通設定を行う関数
     """
-    # llama系はpad_tokenが設定されていないことがあるため，その場合はeos_tokenをpad_tokenに設定する
-    need_to_set_pad_token = False
     if tokenizer.pad_token_id is None:
-        # tokenizer.pad_token_id = tokenizer.eos_token_id
         tokenizer.pad_token = tokenizer.eos_token
-        need_to_set_pad_token = True
-    return need_to_set_pad_token
+        model.config.pad_token_id = tokenizer.pad_token_id

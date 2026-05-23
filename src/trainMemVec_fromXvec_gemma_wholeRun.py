@@ -510,6 +510,7 @@ def train(
     earlyStoppingCount=2,
     eval_interval = 1,
     min_delta_acc=0.0,
+    min_delta_loss=1e-4,
     track_vector_change=False # 学習中のベクトルの変化を追跡して保存するかどうか
     ):
     """
@@ -606,9 +607,11 @@ def train(
     logged_steps = [0] # 学習前に埋め込み状態を追加した分として、0を追加しておく
 
     best_acc = -float("inf")
+    best_loss = float("inf")
     early_stop_counter = 0
     best_epoch = -1
     best_mem_path = os.path.join(save_mem_dir, "best.npy")
+
 
     print("Start training...")
     for epoch in tqdm(range(maxEpochs)): # [memo] for epoch in tqdm(range(maxEpochs + 1)): maxEpochs=10なら10epochまで学習させたかったが不自然らしいの+1を消した
@@ -738,34 +741,71 @@ def train(
 
         if epoch % eval_interval == 0:
             acc = evaluateModel(model, tokenizer, evalInputs, evalOutputTexts, verbose=True)
-            accLog[epoch] = {'eval acc': acc}
+            accLog[epoch] = {
+                'eval acc': acc,
+                'train loss': avgLoss,
+            }
             print(f"eval acc: {acc}")
+            print(f"train loss: {avgLoss}")
 
-            if acc > best_acc + min_delta_acc:
-                best_acc = acc
+            # =================
+            # accベースでearly stopする場合の処理
+            # ただし、現状では毎回acc=0.0となりearly stopの機能が働かないため非推奨
+            # =================
+            # if acc > best_acc + min_delta_acc:
+            #     best_acc = acc
+            #     best_epoch = epoch
+            #     early_stop_counter = 0
+
+            #     save_mem_vec(model, memTokenIds, best_mem_path)
+            #     print(f"New best acc: {best_acc:.4f} at epoch {epoch}. Saved to {best_mem_path}")
+
+            # else:
+            #     early_stop_counter += 1
+            #     print(
+            #         f"No improvement. EarlyStopping counter: "
+            #         f"{early_stop_counter}/{earlyStoppingCount}"
+            #     )
+
+
+            # if acc == 1.0:
+            #     print("Accuracy reached 1.0. Stop training.")
+            #     break
+
+            # if early_stop_counter >= earlyStoppingCount:
+            #     print(
+            #         f"Early stopping at epoch {epoch}. "
+            #         f"Best acc: {best_acc:.4f} at epoch {best_epoch}"
+            #     )
+            #     break   # early stoppingの条件を満たしたら、学習ループを抜ける
+
+            # =================
+            # lossベースでearly stopする場合の処理
+            # =================
+            if avgLoss < best_loss - min_delta_loss:
+                best_loss = avgLoss
                 best_epoch = epoch
                 early_stop_counter = 0
 
                 save_mem_vec(model, memTokenIds, best_mem_path)
-                print(f"New best acc: {best_acc:.4f} at epoch {epoch}. Saved to {best_mem_path}")
-
+                print(
+                    f"New best loss: {best_loss:.6f} at epoch {epoch}. "
+                    f"Saved to {best_mem_path}"
+                )
             else:
                 early_stop_counter += 1
                 print(
-                    f"No improvement. EarlyStopping counter: "
+                    f"No loss improvement. EarlyStopping counter: "
                     f"{early_stop_counter}/{earlyStoppingCount}"
                 )
-
-            if acc == 1.0:
-                print("Accuracy reached 1.0. Stop training.")
-                break
-
+                
             if early_stop_counter >= earlyStoppingCount:
                 print(
                     f"Early stopping at epoch {epoch}. "
-                    f"Best acc: {best_acc:.4f} at epoch {best_epoch}"
+                    f"Best loss: {best_loss:.6f} at epoch {best_epoch}"
                 )
-                break   # early stoppingの条件を満たしたら、学習ループを抜ける
+                break
+
         
     return model, accLog
 
