@@ -122,7 +122,7 @@ def main(args):
     concept_to_prompt = {}
     for concept, one_summary_sentence in concept_to_one_summary_sentence.items():   # in config_concept_list:
         print(f"Processing concept: {concept}")
-        if pool_hs_type == "repeat_mean_pool":
+        if "repeat" in pool_hs_type:
             # 目標ベクトルを生成するためのpromptを作成. 例えば、"It is the apple. It is the apple." のように、同じ文を2回繰り返すことで、gemmaのattentionが、後半の文の方に向くようにする。
             prompt = one_summary_sentence * 2 
             # pool_hs_type = "mean_pool" # pool_hs_typeがrepeat_mean_poolの場合は、pool_hs_typeをmean_poolに変更して、後半の文の隠れ状態の平均を目標ベクトルとする. これにより、gemmaのattentionが、後半の文の方に向くようにする。
@@ -197,7 +197,7 @@ def main(args):
             pool_hs_type,
             data_type, 
             batch_size=8, 
-            mean_pool_target_texts=concept_names if pool_hs_type=="target_seq_mean_pool" else None,   # pool_hs_type=='target_seq_mean_pool'のとき、各textの対象テキスト位置でmean_poolするためのテキストのリスト。text_listと同順で、各textのmean_poolの対象となるテキストが入っていることを想定。
+            mean_pool_target_texts=concept_names, # if pool_hs_type=="target_seq_mean_pool" else None,   # pool_hs_type=='target_seq_mean_pool'のとき、各textの対象テキスト位置でmean_poolするためのテキストのリスト。text_listと同順で、各textのmean_poolの対象となるテキストが入っていることを想定。
             layer_index=layer_index,
             print_flag=False
         )   # -> (T, D) or (T, H, D) Tはテキスト数, Hは層の数, Dは隠れ状態の次元
@@ -244,7 +244,7 @@ if __name__ == "__main__":
 """
 TARGET_CONCEPTS_FILENAME="target_concepts_mini_13.json"
 MODEL_SIZE=12
-POOL_HS_TYPE="target_seq_mean_pool"   # "eos"  # repeat_mean_pool
+POOL_HS_TYPE="target_seq_repeat_mean_pool"   # "eos"  # repeat_mean_pool
 
 uv run python src/generate_goal_embeddings.py \
     --target_concepts_filename ${TARGET_CONCEPTS_FILENAME} \

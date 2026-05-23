@@ -1,24 +1,12 @@
 
 
-import random
 import os
 import sys
 import re
-# import math
 
 # ===== Third-party =====
 import numpy as np
-from sklearn.metrics import (
-    accuracy_score,
-    f1_score,
-    precision_score,
-    recall_score,
-)
-# from tqdm import tqdm
 import torch
-import torch.nn.functional as F
-# from torch.optim.lr_scheduler import ReduceLROnPlateau
-# import wandb
 
 # プロジェクトのutils追加
 project_root = os.path.join(os.path.dirname(__file__), "..") # os.path.dirname(__file__): スクリプト自身のパス
@@ -171,32 +159,54 @@ def get_span_subseq_in_fullseq_use_offset(
     tokenizer,
 ):
     """
-    hidden_states: (seq_len, hidden_dim)
+    一番最後に見つけたtarget_textのspanを、tokenizerのoffsetを使ってfull sequence内で特定する
     """
 
     encoding = tokenizer(
         text,
-        return_offsets_mapping=True,
+        return_offsets_mapping=True,    # offset: tokenizerが作った各tokenが、元の文字列の何文字目から何文字目に対応しているかを表す位置情報
         add_special_tokens=False,
     )
 
     input_ids = encoding["input_ids"]
     offsets = encoding["offset_mapping"]
 
-    # target_text の文字位置
-    char_start = text.index(target_text)
+    # # target_text の文字位置
+    # char_start = text.index(target_text)
+    # char_end = char_start + len(target_text)
+
+    # token_indices = []
+
+    # # for token_idx, (start, end) in enumerate(offsets):
+    # # 逆順にループすることで、text内で最後に出現するtarget_textのspanを特定できるようにする
+    # for token_idx, (start, end) in reversed(list(enumerate(offsets))):
+
+    #     # token と target span が overlap
+    #     if not (end <= char_start or start >= char_end):
+    #         token_indices.append(token_idx)
+
+    # if len(token_indices) == 0:
+    #     raise ValueError("No tokens matched target_text")
+
+    ## [memo] 修正版
+
+    offsets = encoding["offset_mapping"]
+
+    # * text内で最後に出現するtarget_textのspan(何文字目から何文字目まで)を特定する *
+    char_start = text.rfind(target_text)    # textの後からtarget_textを探す. text内で最後に出現するtarget_textのspanを特定のため.
+    if char_start == -1:
+        raise ValueError(f"target_text not found in text: {target_text}")
     char_end = char_start + len(target_text)
 
+    # * text内で最後に出現するtarget_textのspanとoverlapするtokenをoffsetを使って特定する *
     token_indices = []
-
     for token_idx, (start, end) in enumerate(offsets):
-
-        # token と target span が overlap
+        # 「token の範囲 (start, end) と target の範囲 (char_start, char_end) が重なっているか」を判定
         if not (end <= char_start or start >= char_end):
             token_indices.append(token_idx)
 
     if len(token_indices) == 0:
-        raise ValueError("No tokens matched target_text")
+        raise ValueError(f"No tokens matched target_text: {target_text}")
 
     start_token_idx = token_indices[0]
     end_token_idx = token_indices[-1] + 1  # endはexclusiveにするために+1
@@ -442,6 +452,7 @@ def get_span_subseq_in_fullseq(
 
 
 @torch.no_grad()
+# [WIP] ここは後で修正する。特にwiki_summary_repeatを無くして repeatに統合したい
 def extract_hidden_states(model, tokenizer, text_list, pool_hs_type, data_type=None, batch_size=8, layer_index=None, mean_pool_target_texts=None, print_flag=False):
     """
     pool_hs_typeに応じて hidden state を返す。
@@ -450,10 +461,10 @@ def extract_hidden_states(model, tokenizer, text_list, pool_hs_type, data_type=N
         model: 言語モデル
         tokenizer: トークナイザ
         text_list: テキストのリスト
-        pool_hs_type: hidden stateのpooling方法 ("eos", "last_token, "mean_pool", "dot" ) + ("repeat_mean_pool" "target_seq_mean_pool" も追加) 2026/05/22
+        pool_hs_type: hidden stateのpooling方法 ("eos", "last_token, "mean_pool", "dot" ) + ("repeat_mean_pool" "target_seq_repeat_mean_pool" も追加) 2026/05/22
         data_type: データの種類 (e.g. "wiki_summary_repeat", "wiki_summary", "fact_sentences", etc.) -> pool_hs_typeの"mean_pool"を使用する際に、wiki summaryを繰り返してプロンプトとする場合は、2回目の文のみの隠れ状態を平均するために必要
         batch_size: バッチサイズ
-        mean_pool_target_texts: mean_poolの対象となるテキストのリスト. pool_hs_typeが"target_seq_mean_pool"のときのみ使用
+        mean_pool_target_texts: mean_poolの対象となるテキストのリスト. pool_hs_typeが"target_seq_repeat_mean_pool"のときのみ使用
         layer_index: int or list or 'all'. 隠れ状態を抽出する層のインデックス. -1: 最終層
         print_flag: 抽出するhidden stateの位置を確認するためのprint文を表示するかどうか
 
@@ -462,7 +473,6 @@ def extract_hidden_states(model, tokenizer, text_list, pool_hs_type, data_type=N
     """
     all_vecs = []
     
-
     for i in range(0, len(text_list), batch_size):
         batch_texts = text_list[i:i+batch_size]
         if mean_pool_target_texts is not None:
@@ -471,9 +481,11 @@ def extract_hidden_states(model, tokenizer, text_list, pool_hs_type, data_type=N
 
         # ** 前処理 **
         if pool_hs_type == "eos":
+            """eosの隠れ状態を取得する方法"""
             # EOS を明示的に末尾へ追加
             batch_texts = [text + tokenizer.eos_token for text in batch_texts]
         
+
         # ** tokenize and generate **
         inputs = tokenizer(
             batch_texts,
@@ -499,7 +511,7 @@ def extract_hidden_states(model, tokenizer, text_list, pool_hs_type, data_type=N
 
         # *** pool_hs_type に応じて、vectorを抽出 ***
         if pool_hs_type == "eos":
-            # 各系列について EOS token の最後の出現位置を取る
+            # 各系列について EOS token の最後の出現位置を取る   
             eos_mask = (input_ids == tokenizer.eos_token_id)
 
 
@@ -518,13 +530,14 @@ def extract_hidden_states(model, tokenizer, text_list, pool_hs_type, data_type=N
 
             
 
-            if pool_hs_type == "target_seq_mean_pool":
-                # target_textに基づいてspanを特定し、その部分の隠れ状態を平均する方法
-                # text = text_list[s_id]
+            if pool_hs_type == "target_seq_repeat_mean_pool":
+                """textを2回repeatし、2文目のtextにおけるtarget_text部分の隠れ状態を取得する方法。target_textが2tokens以上の場合は、そのtokensで平均する"""
+                text = batch_texts[s_id]
                 # full_ids = input_ids[s_id].tolist()  # 文全体の token ids
                 target_text = batch_mean_pool_target_texts[s_id]  # target_textsはtext_listと同順でtarget_textが入っているリストであることを想定
+
                 # pos_begin, pos_end = get_span_subseq_in_fullseq(full_ids, target_text, tokenizer)
-                pos_begin, pos_end = get_span_subseq_in_fullseq_use_offset(batch_texts[s_id], target_text, tokenizer)
+                pos_begin, pos_end = get_span_subseq_in_fullseq_use_offset(text, target_text, tokenizer)
 
 
 
@@ -536,7 +549,9 @@ def extract_hidden_states(model, tokenizer, text_list, pool_hs_type, data_type=N
                 pos_begin = eos_pos
                 pos_end = eos_pos + 1
 
+
             elif pool_hs_type == "last_token":
+                """最後のtokenの隠れ状態を取得する方法"""
                 pos_begin = pos_end - 1
 
 
@@ -635,7 +650,7 @@ def get_concept_embedding_text(concept, target_name_to_replace_with_concept=None
     concept_patterns = [base_concept_pattern]
     for k, v in special_case_dic.items():
         if k in concept:
-            concept_patterns.append(concept.replace(k, v))
+            concept_patterns.append(re.escape(concept.replace(k, v)))
 
 
     sentences = split_text_into_sentences(summary)  # 文の区切りでsummaryを分割
@@ -681,7 +696,12 @@ def get_concept_embedding_text(concept, target_name_to_replace_with_concept=None
 
     # ** 置換先の名前が登録されている場合は、first_concept_sentenceのうち、concept_patternにマッチした部分をtarget_name_to_replace_with_conceptに置換する処理
     if target_name_to_replace_with_concept is not None:
-        first_concept_sentence = re.sub(concept, target_name_to_replace_with_concept, first_concept_sentence, flags=re.IGNORECASE)
+        first_concept_sentence = re.sub(
+                    re.escape(concept),
+                    target_name_to_replace_with_concept,
+                    first_concept_sentence,
+                    flags=re.IGNORECASE,
+                )
     
     # ** 文をcleaning
     first_concept_sentence = re.sub(brackets_dup_pattern, " ", first_concept_sentence)      # ( ... [..] ... ) パターンをスペースに置換
@@ -696,24 +716,48 @@ def get_concept_embedding_text(concept, target_name_to_replace_with_concept=None
     
 
 
+# [memo] 2026/05/23 修正した
+# def load_mem_vec(model, mem_save_path, memTokenIds):
+#     vecs = np.load(mem_save_path)
+    # try:
+    #     vecs_tensor = torch.tensor(vecs, dtype=model.model.embed_tokens.weight.dtype, device=model.model.embed_tokens.weight.device)
+    # except:
+    #     vecs_tensor = torch.tensor(vecs, dtype=model.model.language_model.embed_tokens.weight.dtype, device=model.model.language_model.embed_tokens.weight.device)
+    # print(f"Vector shape: {vecs_tensor.shape}, Embedding weight shape: {model.model.embed_tokens.weight.shape}")
 
+    # # 特定の token ID の位置にベクトルを上書き
+    # with torch.no_grad():
+    #     for i, token_id in enumerate(memTokenIds):
+    #         try:
+    #             model.model.embed_tokens.weight[token_id] = vecs_tensor[i]
+    #         except:
+    #             model.model.language_model.embed_tokens.weight[token_id] = vecs_tensor[i]
 
+    # print(f"Loaded trained vectors from {mem_save_path} into model embedding layer.")
 def load_mem_vec(model, mem_save_path, memTokenIds):
     vecs = np.load(mem_save_path)
-    try:
-        vecs_tensor = torch.tensor(vecs, dtype=model.model.embed_tokens.weight.dtype, device=model.model.embed_tokens.weight.device)
-    except:
-        vecs_tensor = torch.tensor(vecs, dtype=model.model.language_model.embed_tokens.weight.dtype, device=model.model.language_model.embed_tokens.weight.device)
-    # print(f"Vector shape: {vecs_tensor.shape}, Embedding weight shape: {model.model.embed_tokens.weight.shape}")
+
+    embedding_layer = model.get_input_embeddings()
+    weight = embedding_layer.weight
+
+    vecs_tensor = torch.as_tensor(
+        vecs,
+        dtype=weight.dtype,
+        device=weight.device,
+    )
+
+    if vecs_tensor.shape[0] != len(memTokenIds):
+        raise ValueError(
+            f"Number of vectors ({vecs_tensor.shape[0]}) does not match "
+            f"number of token IDs ({len(memTokenIds)})."
+        )
 
     # 特定の token ID の位置にベクトルを上書き
     with torch.no_grad():
-        for i, token_id in enumerate(memTokenIds):
-            try:
-                model.model.embed_tokens.weight[token_id] = vecs_tensor[i]
-            except:
-                model.model.language_model.embed_tokens.weight[token_id] = vecs_tensor[i]
+        weight[memTokenIds] = vecs_tensor
 
     print(f"Loaded trained vectors from {mem_save_path} into model embedding layer.")
+
+
           
 # def insert_mem_vec_into_model(model, mem_vecs, memTokenIds, ):

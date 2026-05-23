@@ -125,8 +125,8 @@ def main(args):
     # epoch_listを取得
     epoch_list = []
     for file_name in os.listdir(mem_dir):
-        if file_name.endswith('.pth.npy'):
-            epoch_num_str = file_name.split('.')[0]  # '10.pth.npy' -> '10'
+        if file_name.endswith('.npy'):
+            epoch_num_str = file_name.split('.')[0]  # '10.npy' -> '10'
             epoch_num = int(re.findall(r'\d+', epoch_num_str)[0])  # '10' -> 10
             epoch_list.append(epoch_num)
     epoch_list.sort()
@@ -207,7 +207,7 @@ def main(args):
     concept_to_prompt = {}
     for concept, one_summary_sentence in concept_to_one_summary_sentence.items():   # in config_concept_list:
         print(f"Processing concept: {concept}")
-        if pool_hs_type == "repeat_mean_pool":
+        if "repeat" in pool_hs_type:
             # 目標ベクトルを生成するためのpromptを作成. 例えば、"It is the apple. It is the apple." のように、同じ文を2回繰り返すことで、gemmaのattentionが、後半の文の方に向くようにする。
             prompt = one_summary_sentence + " " + one_summary_sentence 
             pool_hs_type = "mean_pool" # pool_hs_typeがrepeat_mean_poolの場合は、pool_hs_typeをmean_poolに変更して、後半の文の隠れ状態の平均を目標ベクトルとする. これにより、gemmaのattentionが、後半の文の方に向くようにする。
@@ -288,7 +288,7 @@ def main(args):
 
                 # ** memvecをmodelに挿入・置換 **
                 try:
-                    mem_save_path = os.path.join(mem_dir, f'{epoch}.pth.npy')
+                    mem_save_path = os.path.join(mem_dir, f'{epoch}.npy')
                     load_mem_vec(model, mem_save_path, MemTokenIds)
                 except Exception as e:
                     print(f"Error loading memvec for epoch {epoch} from {mem_save_path}: {e}")
@@ -316,7 +316,7 @@ def main(args):
                 pool_hs_type, 
                 data_type, 
                 batch_size=8, 
-                mean_pool_target_texts=concept_unused_tk_names if pool_hs_type=="target_seq_mean_pool" else None,   # pool_hs_type=='target_seq_mean_pool'のとき、各textの対象unused_tk位置でmean_poolするためのテキストのリスト。text_listと同順で、各textのmean_poolの対象となるテキストが入っていることを想定。
+                mean_pool_target_texts=concept_unused_tk_names, # if pool_hs_type=="target_seq_mean_pool" else None,   # pool_hs_type=='target_seq_mean_pool'のとき、各textの対象unused_tk位置でmean_poolするためのテキストのリスト。text_listと同順で、各textのmean_poolの対象となるテキストが入っていることを想定。
                 layer_index=visualize_layer_index,
                 print_flag=False
             )   # -> (T, D) or (T, H, D) Tはテキスト数, Hは層の数, Dは隠れ状態の次元
@@ -384,7 +384,7 @@ NUM_OPTIONS=3
 INIT_LAYER_INDEX=12
 TRAINED_DATE="20260427"
 SEED=0
-POOL_HS_TYPE="target_seq_mean_pool" #"eos" # "repeat_mean_pool"
+POOL_HS_TYPE="target_seq_repeat_mean_pool" #"eos" # "repeat_mean_pool"
 
 INIT_VEC_TYPE_LIST=("CatCent_by_WikiSummaryRepeatHSMixed" "nearCatCent_by_WikiSummaryRepeatHSMixed" "otherCatCent_by_WikiSummaryRepeatHSMixed" "zero" "norm_rand_vocab") 
 INIT_VEC_TYPE_LIST=("nearCatCent_by_WikiSummaryRepeatHSMixed" "otherCatCent_by_WikiSummaryRepeatHSMixed" "zero" "norm_rand_vocab") 

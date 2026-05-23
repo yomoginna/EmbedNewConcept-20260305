@@ -211,7 +211,7 @@ def main(args):
         for concept_name, amount in zip(df["concept_names_for_hover"], df["alpha_like"])
     ]
     
-    title=f"3D PCA of EOS hidden states ({model_size}B, layer={layer_index}, pool_hs_type={pool_hs_type})"
+    title=f"3D PCA of hidden states ({model_size}B, layer={layer_index}, pool_hs_type={pool_hs_type}, init_vec_type={init_vec_type})"
 
 
     # ======================
@@ -324,8 +324,8 @@ INIT_LAYER_INDEX=12
 TRAINED_DATE="20260427"
 SEED=0
 
-POOL_HS_TYPE="target_seq_mean_pool" # "repeat_mean_pool" "eos"
-INIT_VEC_TYPE="CatCent_by_WikiSummaryRepeatHSMixed" 
+POOL_HS_TYPE="repeat_mean_pool"   # "target_seq_mean_pool" # "repeat_mean_pool" "eos"
+INIT_VEC_TYPE="nearCatCent_by_WikiSummaryRepeatHSMixed" 
 # "CatCent_by_WikiSummaryRepeatHSMixed" "nearCatCent_by_WikiSummaryRepeatHSMixed" "otherCatCent_by_WikiSummaryRepeatHSMixed" "zero" "norm_rand_vocab"
 
 VISUALIZE_LAYER_INDEX=12    # 'all' にすると全層プロットするが、プロットが見づらくなる可能性があるので、特定の層のインデックスを指定した方が良い

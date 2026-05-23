@@ -37,6 +37,18 @@ from utils.initialize_embedding_layer_utils import EmbedInitializer
 from utils.wandb_utils import set_wandb_env
 from utils.handle_text_utils import delete_non_English_characters
 
+# os.environ["CUDA_VISIBLE_DEVICES"] = "2" # [memo] genkaiを使う時はコメントアウト!! -> 今はargsで指定している。argsを指定しなければ、CUDAについては何も指定しない。
+n_feat_in_a_sample = 3  # 学習データの1サンプル = summary(wiki中の本文 or summary, 今回はsummaryを使用) + n_feat_in_a_sample個の特徴文
+propnoun_num_for_init_vec=100   #  初期化vecの作成に使う固有名詞の最低数. 例えば100に設定した場合、各カテゴリで最低100個の固有名詞を使用して初期化vecを作成することになる。(実際には、新規概念用にならなかった固有名詞全て使用する)
+propnoun_num_for_new_concept = 50 # 新規概念の元にする概念の作成に使う固有名詞の数. 例えば50に設定した場合、各カテゴリで50個の固有名詞を使用して新規概念の元にする概念の作成に使用することになる。
+min_words, max_words = 30, 300 # 30->50に変更すると、そこまで長いsummaryが少ないようで、init vecが0vecとなりlossがNanになってしまった。minは30でキープする
+
+global BATCH_SIZE
+
+wiki_page_save_dir = os.path.join(project_root, 'data', 'wiki_pages')
+dont_get_new_wiki_flag = False # False #True # もう新しいwikiページを読み込みたくない場合はTrue. すでに保存済みのwikiページがあるpropernounのみにフィルタリングする.
+print_flag = False
+
 # 環境変数読み込み
 load_dotenv(os.path.join(project_root, ".env"))
 WANDB_API_KEY = os.getenv("WANDB_API_KEY")
@@ -45,14 +57,6 @@ WANDB_API_KEY = os.getenv("WANDB_API_KEY")
 # access_token = os.getenv("HUGGINGFACE_HUB_TOKEN")
 # login(access_token)
 
-wiki_page_save_dir = os.path.join(project_root, 'data', 'wiki_pages')
-dont_get_new_wiki_flag = False # False #True # もう新しいwikiページを読み込みたくない場合はTrue. すでに保存済みのwikiページがあるpropernounのみにフィルタリングする.
-print_flag = False
-
-n_feat_in_a_sample = 3  # 学習データの1サンプル = summary(wiki中の本文 or summary, 今回はsummaryを使用) + n_feat_in_a_sample個の特徴文
-propnoun_num_for_init_vec=100   #  初期化vecの作成に使う固有名詞の最低数. 例えば100に設定した場合、各カテゴリで最低100個の固有名詞を使用して初期化vecを作成することになる。(実際には、新規概念用にならなかった固有名詞全て使用する)
-propnoun_num_for_new_concept = 50 # 新規概念の元にする概念の作成に使う固有名詞の数. 例えば50に設定した場合、各カテゴリで50個の固有名詞を使用して新規概念の元にする概念の作成に使用することになる。
-min_words, max_words = 30, 300 # 30->50に変更すると、そこまで長いsummaryが少ないようで、init vecが0vecとなりlossがNanになってしまった。minは30でキープする
 
 need_wandb = True # False 通常はTrue. 一時的にwandbをoffにしたい時用. wandbの容量がいっぱいになってエラーを起こす時など
 need_train = True # 通常はTrue. 一時的に学習をoffにしたい時用
@@ -61,18 +65,17 @@ regen_train_samples_every_epoch = False
 
 
 
-
 # *************************************************************** main ***************************************************************
 def main(args):
     seed = args.seed
     model_size = args.model_size
     lr = args.lr
-    maxEpochs = args.max_epochs
+    maxEpochs = args.max_epoch
     target_concepts_filename = args.target_concepts_filename
     init_vec_type = args.init_vec_type
     pool_hs_type = args.pool_hs_type
     layer_idx = args.layer_idx
-    trained_date = datetime.now().strftime("%Y%m%d") # "20260427" 
+    trained_date = "20260427" # datetime.now().strftime("%Y%m%d") # "20260427"
 
 
     # ** モデル保存dirnameの設定 **
@@ -118,8 +121,10 @@ def main(args):
     
 
     # *** dir/file path 設定 ***
-    train_data_dir = os.path.join(project_root, 'data', 'train_data')
-    save_mem_dir = os.path.join("/work04/toko/EmbedNewConcept-20260305/memvec_models",  f"{model_name_for_dirname}_{target_concepts_filename.replace('.json', '')}_initvecwith{init_vec_type.replace(' ', '_')}")   # "work04"が大規模データ保存用のストレージ
+    train_data_dir = os.path.join(project_root, 'data', 'train_data') # 🟠train_data_dir = os.path.join(project_root, 'data', 'triplets')
+    # save_mem_dir = os.path.join(project_root, "memvec_models", f"{model_name_for_dirname}_{target_concepts_filename.replace('.json', '')}_initvecwith{init_vec_type.replace(' ', '_')}")
+    # "work04"が大規模データ保存用のストレージ
+    save_mem_dir = os.path.join("/work04/toko/EmbedNewConcept-20260305/memvec_models",  f"{model_name_for_dirname}_{target_concepts_filename.replace('.json', '')}_initvecwith{init_vec_type.replace(' ', '_')}")
 
     # もしすでに同名のモデル保存ディレクトリが存在していたら、_2のように末尾に連番をつける
     original_save_mem_dir = save_mem_dir
@@ -141,7 +146,7 @@ def main(args):
         print_flag=print_flag
     )
 
-    # filter: もう新しいwikiページを読み込みたくない場合は、すでに保存済みのwikiページがあるpropernounのみに対してフィルタリングする
+    # filter: もう新しいwikiページを読み込みたくない場合は、すでに保存済みのwikiページがあるpropernounのみにフィルタリングする
     if dont_get_new_wiki_flag:
         print("Filtering proper nouns to those with already saved wiki pages...")
         filtered_category_properNouns_dict = {}
@@ -311,7 +316,7 @@ def main(args):
 
 
     # ********* model等の準備: 予約済み特殊トークンの埋め込みの初期化など *********
-    model = prepareGemmaModel(
+    model, criteria = prepareGemmaModel(
         model_name,
         save_mem_dir,
         model, 
@@ -335,15 +340,14 @@ def main(args):
             model_size,
             model,
             tokenizer,
+            # criteria, [memo] criteriaではなくoutput.lossを使用しているため不要
             concept_to_train_data_source, train_sample_format, conceptForFict2token_map, # train_samples,
             memTokenIds,
             padTokenId, 
             save_mem_dir,
             lr, 
             maxEpochs, 
-            earlyStoppingCount=2,
-            eval_interval = 1,
-            min_delta_acc=0.0,
+            earlyStoppingCount=5,
             track_vector_change=True # 学習中のベクトルの変化を追跡するかどうか
         )
         print('accLog:', accLog)
@@ -356,7 +360,7 @@ def main(args):
         df.to_csv(save_hist_path)
 
         # 最後のmemory vectorをセーブしたい場合
-        save_mem_path = os.path.join(save_mem_dir, f"{maxEpochs}.npy")  # [memo] 実際には np.save()で保存し自動的に.npyが付くため、.pthはつけない
+        save_mem_path = os.path.join(save_mem_dir, f"{maxEpochs}.pth")
         if not os.path.exists(save_mem_path):
             save_mem_vec(model, memTokenIds, save_mem_path)
             print(f"trained vecs at {maxEpochs} are saved in {save_mem_path}.")
@@ -445,18 +449,33 @@ def prepareGemmaModel(
 
         # [WIP] [memo] 下の処理をhuggingfaceの関数で統一. これが効くかわからないのでwip
         embedding_layer = model.get_input_embeddings()
-        embedding_weight = embedding_layer.weight
-
-        # token_id ごとに True / False を直接切り替えることはできない. 勾配フック(GradZeroHook)を使って、訓練対象の token_id 以外の勾配を 0 とし凍結する
         embedding_layer.weight.requires_grad = True
+        # # [memo] ここでembed_tokens.weightが見つからないというerror。1bでは大丈夫だったのになぜ -> gemma-3-1bは言語モデルのみだが、4b以降はvision encoderが含まれているため、(vision_tower)と(language_model)の2つの大きなモジュールがmodelの直下に存在している。そのため、embedding層にアクセスするにはmodel.model.language_model.embed_tokens.weightとなる。model.model.embed_tokens.weightが見つからなかった時にprint(model.model)を表示したことで判明。
+        # # token_id ごとに True / False を直接切り替えることはできない. 勾配フック(GradZeroHook)を使って、学習したい token_id 以外の勾配を 0 にする
+        # try:
+        #     # * 1b以下はvision_towerがないため、従来通りでOK
+        #     model.model.embed_tokens.weight.requires_grad = True
+        # except:
+        #     # print(model.model)
+        #     # raise ValueError("モデルに embed_tokens.weight が見つかりません。Gemma3ベースのモデルを指定していることを確認してください。")
+        #     # * 4b以上はvision_towerがあるため、language_modelを経由してアクセスする
+        #     model.model.language_model.embed_tokens.weight.requires_grad = True
+        
 
+        # # *** embedding層内でも，対象外のtoken(reserved_special_token以外)の勾配を凍結 ***
+        # # <unused0>から順にnum_trainTargetTokens個のtokenIDを学習対象とし、この予約済み特殊token以外は勾配が0.0になるようにhookをかける. 
+        # # 学習可能tokenをなるべく少なく制限する理由は、gemma3のtokenizerに6242個もunused tokenが存在しており、これら全てを学習対象にしてしまうとモデルサイズが大きくなりすぎてしまうため。
         trainTokenIds = list(train_token2tokenid.values())
-        embeddingsToKeep = [
-            i for i in range(embedding_weight.shape[0])
-            if i not in trainTokenIds   
-        ]   # 学習対象token id 以外の idのリスト
-        gzh = GradZeroHook(embeddingsToKeep)
-        embedding_weight.register_hook(gzh.setGradsToZeroHook)
+        
+        try:
+            # 上のtry-except同様の理由(vision_towerの有無)で処理を分ける.
+            embeddingsToKeep = [i for i in range(model.model.embed_tokens.weight.shape[0]) if i not in trainTokenIds]
+            gzh = GradZeroHook(embeddingsToKeep)
+            model.model.embed_tokens.weight.register_hook(gzh.setGradsToZeroHook) # 登録したフックは勾配計算直後に呼び出される．関数の返り値がNoneなら元の勾配が，返り値がテンソルならそのテンソルが新しい勾配として使われる．
+        except:
+            embeddingsToKeep = [i for i in range(model.model.language_model.embed_tokens.weight.shape[0]) if i not in trainTokenIds]
+            gzh = GradZeroHook(embeddingsToKeep)
+            model.model.language_model.embed_tokens.weight.register_hook(gzh.setGradsToZeroHook)
 
 
 
@@ -487,21 +506,27 @@ def prepareGemmaModel(
         layer_idx,
         print_flag=print_flag
     )
-    
+
+
+    # criteria = torch.nn.CrossEntropyLoss()    # [memo] criteriaは使用していないため、返り値からも削除する
     model.train()
-    return model
+    return model#, criteria
 
 
 def get_vector(model, token_id):
-    token_id = token_id.device(model.device) # token_idをmodelと同じデバイスに移動
+    # token_id = token_id.device(model.device) # token_idをmodelと同じデバイスに移動
     with torch.no_grad():
-        embedding_layer = model.get_input_embeddings()
-        return embedding_layer.weight[token_id].detach().float().cpu().numpy()
+        try:
+            return model.model.embed_tokens.weight[token_id].detach().float().cpu().numpy()
+        except:
+            return model.model.language_model.embed_tokens.weight[token_id].detach().float().cpu().numpy()
+
 
 def train(
     model_size, 
     model, 
-    tokenizer,
+    tokenizer, 
+    # criteria, [memo] criteriaではなくoutput.lossを使用しているため不要
     concept_to_train_data_source, train_sample_format, conceptForFict2token_map,  # train_samples, 
     memTokenIds, 
     padTokenId, 
@@ -525,6 +550,7 @@ def train(
 
 
     if int(model_size) == 1:
+        # global BATCH_SIZE
         BATCH_SIZE = 256 # 512
         factor=0.5
         min_lr=1e-04
@@ -582,10 +608,21 @@ def train(
         'betas':(0.9, 0.95), 
         'weight_decay':0.0
     }
+    # [WIP] [memo] 下の処理をhuggingfaceの関数で統一. これが効くかわからないのでwip
     opt = torch.optim.AdamW(
         model.get_input_embeddings().parameters(),
         **params
     )
+    # try:
+    #     opt = torch.optim.AdamW(
+    #         model.model.embed_tokens.parameters(),
+    #         **params
+    #     )
+    # except:
+    #     opt = torch.optim.AdamW(
+    #         model.model.language_model.embed_tokens.parameters(),
+    #         **params
+    #     )
 
     scheduler = ReduceLROnPlateau(
         opt,
@@ -609,7 +646,7 @@ def train(
     best_acc = -float("inf")
     early_stop_counter = 0
     best_epoch = -1
-    best_mem_path = os.path.join(save_mem_dir, "best.npy")
+    best_mem_path = os.path.join(save_mem_dir, "best.pth")
 
     print("Start training...")
     for epoch in tqdm(range(maxEpochs)): # [memo] for epoch in tqdm(range(maxEpochs + 1)): maxEpochs=10なら10epochまで学習させたかったが不自然らしいの+1を消した
@@ -634,7 +671,7 @@ def train(
             batchIds = indices[i:i+BATCH_SIZE]
             input_ids = trainingData[batchIds]
             attention_mask = (input_ids != padTokenId).long() # e.g. [[1, 1, 1, 0, 0], [1, 1, 0, 0, 0]] のような形で、padTokenIdの位置が0になるマスクを作成
-            token_type_ids = torch.zeros_like(input_ids)    # 2つのシーケンスを識別するバイナリマスク. e.g. [[0, 0, 0, 0, 0], [0, 0, 0, 0, 0]] のような形 (全て0でOK)
+            # token_type_ids = torch.zeros_like(input_ids)    # 2つのシーケンスを識別するバイナリマスク. e.g. [[0, 0, 0, 0, 0], [0, 0, 0, 0, 0]] のような形 (全て0でOK)
             
             labels = input_ids.clone()
             # labels[labels == padTokenId] = -100 # PAD の位置は loss 計算から無視させたい。CrossEntropyLossのignore_indexに合わせて、padTokenIdの位置を-100に変換しておく
@@ -644,35 +681,34 @@ def train(
             output = model(
                 input_ids=input_ids, 
                 attention_mask=attention_mask, 
-                token_type_ids=token_type_ids,    # [memo] token_type_idsの指定は必須だったので削除しないで。
+                # token_type_ids=token_type_ids,    # [memo] CausalLM系では不要らしいので削除してみた
                 labels=labels
             )
             loss = output.loss
             loss.backward()
             opt.step()
 
-
-            # ** [debug] 勾配の確認。学習したいtokenIDの勾配が0でないこと、学習したくないtokenIDの勾配が0であることを確認する **
+            # 勾配の確認
             if epoch == 0:
-                embedding_layer = model.get_input_embeddings()
-                grad = embedding_layer.weight.grad
-
-                non_target_token_id_example = 1000
-                target_token_id_example = memTokenIds[0]
-
-                if grad is None:
-                    print("Warning: embedding gradient is None.")
-                else:
-                    if torch.all(grad[non_target_token_id_example] == 0):
-                        print(f"OK: 学習対象でないtokenID {non_target_token_id_example} の勾配が0です")
-
-                    if torch.any(grad[target_token_id_example] != 0):
-                        print(f"OK: 学習対象tokenID {target_token_id_example} の勾配が0ではありません")
-                    
-                # model.model.embed_tokens.weight[trainTokenIds] *= (1 - 0.01 * 0.1)  # lr * wd  # weight-decayを使う場合はここで手動
-
-
+                try:
+                    if sum(model.model.embed_tokens.weight.grad[1000]) == 0:
+                        print(f"OK: 学習対象でないtokenID {1000} の勾配が0です")
+                    if sum(model.model.embed_tokens.weight.grad[memTokenIds[0]]) != 0:
+                        print(f"OK: 学習対象tokenID {memTokenIds[0]} の勾配が0ではありません")
+                except:
+                    if sum(model.model.language_model.embed_tokens.weight.grad[1000]) == 0:
+                        print(f"OK: 学習対象でないtokenID {1000} の勾配が0です")
+                    if sum(model.model.language_model.embed_tokens.weight.grad[memTokenIds[0]]) != 0:
+                        print(f"OK: 学習対象tokenID {memTokenIds[0]} の勾配が0ではありません")
+            # model.model.embed_tokens.weight[trainTokenIds] *= (1 - 0.01 * 0.1)  # lr * wd  # weight-decayを使う場合はここで手動
+            
             # *** logをとる ***
+            # log_interval=10 # batch_sizeを大きくしているので小さめ
+
+            # # log_intervalが1epoch内のstep数よりも大きい値に設定されている場合は1epoch毎にログを出力
+            # if log_interval > len(batchIds):
+            #     log_interval = len(batchIds)
+
             num_batches = math.ceil(len(indices) / BATCH_SIZE)
             log_interval = min(10, num_batches)
             
@@ -707,14 +743,16 @@ def train(
         # 学習後のベクトルの変化を保存 (毎epoch更新しながら保存する)
         # ===================================================
         # 毎epoch保存するように変更 # 旧: if epoch%100 == 0 or epoch in list(range(10)) + [10, 15, 20, 25, 40, 50, 60, 70, 80, 90]:
-        save_mem_path = os.path.join(save_mem_dir, f"{epoch}.npy")
+        save_mem_path = os.path.join(save_mem_dir, f"{epoch}.pth")
         save_mem_vec(model, memTokenIds, save_mem_path)
         print(f"trained vecs at {epoch} are saved in {save_mem_path}.")
 
         if track_vector_change:
             vector_change_save_path = os.path.join(save_mem_dir, "tracked_embeddings.npz") # "vector_change_history.npz")
-        
+            # np.savez(vector_change_save_path, vectors=vector_change_history, steps=np.array(total_steps))
+            
             token_ids = np.array(list(vector_change_history.keys()), dtype=np.int64)
+
             np.savez(
                 vector_change_save_path,
                 token_ids=token_ids,
@@ -802,7 +840,9 @@ if __name__ == "__main__":
             continue
         
         init_vec_type_lst = args.init_vec_types
+
         for init_vec_type in init_vec_type_lst:
+
             layer_indices = args.layer_indices # ここでinit_vec_typeループ毎に読み込まないと、layer_indices = [None] が代入されたループの次のループでも[None]のままになってしまう
 
             need_layer_flag = 'HS' in init_vec_type or 'HiddenState' in init_vec_type   # 初期化方法名に'隠れ層'が含まれれば、layer_idxの指定が必要な初期化方法とみなす
@@ -813,14 +853,15 @@ if __name__ == "__main__":
 
                 
             for layer_idx in layer_indices:
-                task_id += 1
                 args.seed = seed
                 args.layer_idx = layer_idx
                 args.init_vec_type = str(init_vec_type)
+
                 print(f"\n\n=== Training with seed: {seed}, init_vec_type: {init_vec_type}, layer_idx: {layer_idx} ===")
 
-                # 複数process同時に実行する場合, thread_idに応じてtask_idが偶数or奇数の設定のみを実行する
+                task_id += 1
                 if task_id % processNum != args.thread_id:
+                    # 複数process同時に実行する場合, thread_idに応じてtask_idが偶数or奇数の設定のみを実行する
                     print(f"Skipping task_id {task_id} for thread_id {args.thread_id}")
                     continue
 

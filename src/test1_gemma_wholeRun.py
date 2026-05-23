@@ -161,8 +161,8 @@ def main(args):
     # ********* test1 *********
     epoch_list = []
     for filename in os.listdir(mem_dir):
-        if filename.endswith('.pth.npy'):
-            epoch_num = int(filename.split('.pth.npy')[0])
+        if filename.endswith('.npy'):
+            epoch_num = int(filename.split('.npy')[0])
             epoch_list.append(epoch_num)
     epoch_list = sorted(epoch_list)
 
@@ -208,7 +208,7 @@ def main(args):
                 model.config.pad_token_id = tokenizer.pad_token_id
             # ** memvecをmodelに挿入・置換 **
             try:
-                mem_save_path = os.path.join(mem_dir, f'{epoch}.pth.npy')
+                mem_save_path = os.path.join(mem_dir, f'{epoch}.npy')
                 load_mem_vec(model, mem_save_path, MemTokenIds)
             except Exception as e:
                 print(f"Error loading memvec for epoch {epoch} from {mem_save_path}: {e}")
