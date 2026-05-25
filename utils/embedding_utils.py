@@ -126,11 +126,11 @@ def get_span_subseq_in_fullseq(
 def extract_hidden_states(
     model, 
     tokenizer, 
-    text_list, 
+    prompts, 
     pool_hs_type,
     batch_size=8, 
     layer_index=None, 
-    mean_pool_target_texts=None, 
+    pool_hs_target_texts=None, 
     print_flag=False):
     """
     pool_hs_typeに応じて hidden state を返す。
@@ -138,10 +138,10 @@ def extract_hidden_states(
     Args:
         model: 言語モデル
         tokenizer: トークナイザ
-        text_list: テキストのリスト
+        prompts: テキストのリスト
         pool_hs_type: hidden stateのpooling方法 ("eos", "last_token, "mean_pool", "dot" ) + ("repeat_mean_pool" "target_seq_repeat_mean_pool" も追加) 2026/05/22
         batch_size: バッチサイズ
-        mean_pool_target_texts: mean_poolの対象となるテキストのリスト. pool_hs_typeが"target_seq_repeat_mean_pool"のときのみ使用
+        pool_hs_target_texts: mean_poolの対象となるテキストのリスト. pool_hs_typeが"target_seq_repeat_mean_pool"のときのみ使用
         layer_index: int or list or 'all'. 隠れ状態を抽出する層のインデックス. -1: 最終層
         print_flag: 抽出するhidden stateの位置を確認するためのprint文を表示するかどうか
 
@@ -155,10 +155,10 @@ def extract_hidden_states(
 
 
     all_vecs = []
-    for i in range(0, len(text_list), batch_size):
-        batch_texts = text_list[i:i+batch_size]
-        if mean_pool_target_texts is not None:
-            batch_mean_pool_target_texts = mean_pool_target_texts[i:i+batch_size]
+    for i in range(0, len(prompts), batch_size):
+        batch_texts = prompts[i:i+batch_size]
+        if pool_hs_target_texts is not None:
+            batch_pool_hs_target_texts = pool_hs_target_texts[i:i+batch_size]
         
 
         # ** 前処理 **
@@ -215,15 +215,28 @@ def extract_hidden_states(
             elif pool_hs_type == "mean_pool":
                 """text全体の隠れ状態を平均する方法"""
                 # pos_begin, pos_end はすでに valid part の範囲を示しているので、その範囲内で平均する
+                # print('!here!')
                 pass
 
             elif pool_hs_type == "target_seq_repeat_mean_pool":
                 """textを2回repeatし、2文目のtextにおける、target_text(concept名等)部分のみの隠れ状態を平均する方法。target_textが2tokens以上の場合は、そのtokensで平均する"""
-                if batch_mean_pool_target_texts is None:
-                    raise ValueError("mean_pool_target_texts must be provided when pool_hs_type is 'target_seq_repeat_mean_pool'")
+                if batch_pool_hs_target_texts is None:
+                    raise ValueError("pool_hs_target_texts must be provided when pool_hs_type is 'target_seq_repeat_mean_pool'")
                 text = batch_texts[s_id]
-                target_text = batch_mean_pool_target_texts[s_id]  # target_textsはtext_listと同順でtarget_textが入っているリストであることを想定
+                target_text = batch_pool_hs_target_texts[s_id]  # target_textsはpromptsと同順でtarget_textが入っているリストであることを想定
                 pos_begin, pos_end = get_span_subseq_in_fullseq_use_offset(text, target_text, tokenizer)
+
+            elif pool_hs_type == "target_seq_last_token":
+                """target_textの最後のtokenの隠れ状態を取得する方法 
+                例. target_textが "New York" で、tokenizerが "New" と "York" を別々のtokenにする場合、"York" の隠れ状態を取得する方法。 
+                """
+                if batch_pool_hs_target_texts is None:
+                    raise ValueError("pool_hs_target_texts must be provided when pool_hs_type is 'target_seq_last_token'")
+                text = batch_texts[s_id]
+                target_text = batch_pool_hs_target_texts[s_id]  # target_textsはpromptsと同順でtarget_textが入っているリストであることを想定
+                pos_begin, pos_end = get_span_subseq_in_fullseq_use_offset(text, target_text, tokenizer)
+                pos_begin = pos_end - 1  # 最後のtokenの位置にするために、pos_beginをpos_end-1にする
+
 
             elif pool_hs_type == "last_token":
                 """最後のtokenの隠れ状態を取得する方法"""

@@ -1,12 +1,9 @@
 """
 src/generate_goal_embeddings.py と src/generate_trajectory_embeddings.py で生成したvecの差分vecをpcaで次元削減して、3次元でプロットするコード。
+plot_trajectory_vecs_3dPCA.pyとは違い、指定した複数の初期化手法によるvecsの軌跡を一緒にPCAし、同じプロット上に描画するコード。
 
-uv run python src_visualize/plot_trajectory_vecs_3dPCA.py \
-...
 
-uv run python src_visualize/plot_trajectory_vecs_3dPCA.py \
-    --goal_vector_file "/work04/toko/EmbedNewConcept-20260305/goal_embeddings/gemma-3-12B/goal_embeddings_12B_target_concepts_mini_13_mean_pool_layerall.npz"
-    # --trajectory_vector_dir "/work04/toko/EmbedNewConcept-20260305/trajectory_embeddings/gemma-3-12B/repeat_mean_pool/trajectory_embeddings_12B_target_concepts_mini_13_initvecwithCatCent_by_WikiSummaryRepeatHSMixed_vislayerall_epoch10.npz"
+uv run python src_visualize/plot_trajectory_vecs_3dPCA_inittypes_together.py \
 
 
 特徴
@@ -112,11 +109,6 @@ def main(args):
         visualize_layer_indices = [int(idx) for idx in visualize_layer_index] # 指定された層のインデックスのリスト
     else:
         visualize_layer_indices = [int(visualize_layer_index)] # 指定された層のインデックス
-
-
-    # [WIP] どのファイルかは引数で調節したい
-    # trajectory_vector_dir = "/work04/toko/EmbedNewConcept-20260305/trajectory_embeddings/gemma-3-12B/repeat_mean_pool"
-    # trajectory_vec_file_format = "trajectory_embeddings_12B_target_concepts_mini_13_initvecwithCatCent_by_WikiSummaryRepeatHSMixed_vislayerall_epoch<epoch>.npz"
 
     epoch_to_trajectory_vecs = {}
     for epoch in range(100):  # maxのepochを100と仮定してループするが、実際には存在するepochのファイルのみ読み込むようにする

@@ -1,5 +1,5 @@
 """
-学習過程のベクトルを生成するコード。
+目標のtoken vecを生成するコード。
 ただしベクトルは、新規概念の元になった既存概念名そのものをpromptとした際の隠れ状態から作成する。
 (最もsimpleな方法)
 
@@ -11,7 +11,7 @@
 - promptに新規概念の元になった既存概念名を埋め込むことで、ベクトルを作成する。
 
 関係するコード:
-- src/generate_goal_embeddings.py: 目標ベクトルを生成するコード。promptに新規概念の元になった既存概念名を埋め込むことで、ベクトルを作成する。
+- src/generate_goal_embeddings*.py: 目標ベクトルを生成するコード。promptに新規概念の元になった既存概念名を埋め込むことで、ベクトルを作成する。
 - src_visualize/plot_vecs_3dPCA.py: 生成したベクトを3次元PCAでプロットするコード。概念毎に色分けして、ホバーで概念名と層のインデックスを表示する。
 
 注意点：
@@ -47,7 +47,7 @@ sys.path.append(project_root)
 print("Project root:", project_root)
 
 from utils.embedding_utils import load_mem_vec
-from utils.gemma_train_and_test_utils import get_gemma_model_version, set_tokenizer_and_model # , set_flag
+from utils.gemma_train_and_test_utils import get_gemma_model_version, set_tokenizer_and_model
 from utils.embedding_utils import extract_hidden_states
 
 global BATCH_SIZE
@@ -58,18 +58,6 @@ print_flag = False
 
 debug_print_flag = False
 
-def construct_model_name_for_dirname(model_size, lr, trained_date, layer_idx, random_seed):
-    model_version = get_gemma_model_version(model_size)
-
-    model_name_for_dirname = f"gemma-{model_version}-{model_size}B-lr{lr}-{trained_date}"
-    if layer_idx is not None:
-        print(f"Using layer index: {layer_idx}")
-        model_name_for_dirname += f"-hidden_layer{layer_idx}"
-    model_name_for_dirname += f"-seed{random_seed}"
-
-    return model_name_for_dirname
-
-
 
 
 # *************************************************************** main ***************************************************************
@@ -78,7 +66,7 @@ def main(args):
     target_concepts_filename = args.target_concepts_filename
     pool_hs_type = args.pool_hs_type
 
-    visualize_layer_index='all'
+    # visualize_layer_index='all'   # [memo] 大して変わらないので、毎回全層のベクトルを保存するようにした。そのため必ず'all'を各関数で直接指定するよう変更した
     model_version = get_gemma_model_version(model_size)
 
     # [WIP] 'it'と'pt'のどちらが良いかは未検証.とりあえず'it'で統一.
@@ -139,14 +127,15 @@ def main(args):
         config_concept_list, 
         pool_hs_type,
         batch_size=8, 
-        mean_pool_target_texts=None, # if pool_hs_type=="target_seq_mean_pool" else None,   # pool_hs_type=='target_seq_mean_pool'のとき、各textの対象テキスト位置でmean_poolするためのテキストのリスト。text_listと同順で、各textのmean_poolの対象となるテキストが入っていることを想定。
-        layer_index=visualize_layer_index,
+        pool_hs_target_texts=None, # pool_hs_type=='target_seq_mean_pool' や 'target_seq_last_token'のときに使う。各textの対象テキスト位置でmean_poolするためのテキストのリスト。text_listと同順で、各textのmean_poolの対象となるテキストが入っていることを想定。
+        layer_index='all', # visualize_layer_index,
         print_flag=False
     )   # -> (T, D) or (T, H, D) Tはテキスト数, Hは層の数, Dは隠れ状態の次元
 
     # ベクトルを保存
     # output_path = os.path.join(output_dir, f"goal_embeddings_{model_size}B_{target_concepts_filename.split('.')[0]}_{pool_hs_type}_layer{layer_index}")
-    output_path = os.path.join(output_dir, f"{target_concepts_filename.split('.')[0]}_{pool_hs_type}_layer{visualize_layer_index}.npz")
+    # output_path = os.path.join(output_dir, f"{target_concepts_filename.split('.')[0]}_layer{visualize_layer_index}.npz")
+    output_path = os.path.join(output_dir, f"{target_concepts_filename.split('.')[0]}_layerall.npz")
     np.savez(
         output_path, 
         vectors=all_vecs,
@@ -155,7 +144,7 @@ def main(args):
         text_list=np.array(config_concept_list, dtype=str),
         model_size=model_size,
         pool_hs_type=pool_hs_type,
-        layer_index=visualize_layer_index,
+        layer_index='all', # visualize_layer_index,
     )
     print(f"Saved goal embeddings to {output_path}")
 

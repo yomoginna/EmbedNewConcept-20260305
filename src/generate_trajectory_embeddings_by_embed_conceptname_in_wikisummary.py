@@ -47,7 +47,7 @@ sys.path.append(project_root)
 print("Project root:", project_root)
 
 from utils.embedding_utils import load_mem_vec
-from utils.gemma_train_and_test_utils import get_gemma_model_version, set_tokenizer_and_model # , set_flag
+from utils.gemma_train_and_test_utils import get_gemma_model_version, set_tokenizer_and_model, construct_model_name_for_dirname
 from utils.embedding_utils import extract_hidden_states, get_concept_containing_text_using_wiki_summary
 
 global BATCH_SIZE
@@ -58,16 +58,16 @@ print_flag = False
 
 debug_print_flag = False
 
-def construct_model_name_for_dirname(model_size, lr, trained_date, layer_idx, random_seed):
-    model_version = get_gemma_model_version(model_size)
+# def construct_model_name_for_dirname(model_size, lr, trained_date, layer_idx, random_seed):
+#     model_version = get_gemma_model_version(model_size)
 
-    model_name_for_dirname = f"gemma-{model_version}-{model_size}B-lr{lr}-{trained_date}"
-    if layer_idx is not None:
-        print(f"Using layer index: {layer_idx}")
-        model_name_for_dirname += f"-hidden_layer{layer_idx}"
-    model_name_for_dirname += f"-seed{random_seed}"
+#     model_name_for_dirname = f"gemma-{model_version}-{model_size}B-lr{lr}-{trained_date}"
+#     if layer_idx is not None:
+#         print(f"Using layer index: {layer_idx}")
+#         model_name_for_dirname += f"-hidden_layer{layer_idx}"
+#     model_name_for_dirname += f"-seed{random_seed}"
 
-    return model_name_for_dirname
+#     return model_name_for_dirname
 
 
 
@@ -96,7 +96,6 @@ def main(args):
 
     # [WIP] 'it'と'pt'のどちらが良いかは未検証.とりあえず'it'で統一.
     model_name = f"google/gemma-{model_version}-{model_size}b-it" # [memo] 'gemma-'部分は変えないこと!! -を消すとモデルがloadできない．さらにそのエラーメッセージは，"huggingface-cli login"をして，という関係ないmessageになるので注意!
-    
     model_name_for_dirname = construct_model_name_for_dirname(
         model_size=model_size,
         lr=lr,
@@ -106,8 +105,14 @@ def main(args):
     )
 
     # ** 保存先 **
-    output_dir = os.path.join("/work04/toko/EmbedNewConcept-20260305", "trajectory_embeddings", "by_embed_conceptname_in_wikisummary", f"gemma-{model_version}-{model_size}B")
-    output_dir = os.path.join(output_dir, pool_hs_type)
+    output_dir = os.path.join(
+        "/work04/toko/EmbedNewConcept-20260305", 
+        "trajectory_embeddings",                # ⭐️
+        "by_embed_conceptname_in_wikisummary",  # ⭐️
+        f"gemma-{model_version}-{model_size}B",
+        pool_hs_type
+    )
+    # output_dir = os.path.join(output_dir, pool_hs_type)
     os.makedirs(output_dir, exist_ok=True)
 
     # ** memvec_modelsが保存されているディレクトリ **
@@ -130,8 +135,6 @@ def main(args):
 
 
     tokenizer = AutoTokenizer.from_pretrained(model_name)
-    # need_to_set_pad_token = set_flag(tokenizer)
-
 
     # * 学習時に保存した、memvec用token_id割り当て読み込み *
     assign_saved_path = os.path.join(mem_dir, 'token_assignment.json')
@@ -220,12 +223,12 @@ def main(args):
         concept_to_prompt[concept] = prompt
 
     # config_concept_list の順番に対応するpromptのリストを作成
-    concept_names, text_list, concept_unused_tk_names = [], [], []
-    # text_list = [concept_to_prompt[concept] for concept in config_concept_list if concept in concept_to_prompt]
+    concept_names, prompts, concept_unused_tk_names = [], [], []
+    # prompts = [concept_to_prompt[concept] for concept in config_concept_list if concept in concept_to_prompt]
     for concept in config_concept_list:
         if concept in concept_to_prompt:
             concept_names.append(concept)
-            text_list.append(concept_to_prompt[concept])
+            prompts.append(concept_to_prompt[concept])
             concept_unused_tk_names.append(concept2trainable_tk_map[concept])
         else:
             # print(f"Warning: No prompt could be created for concept '{concept}' because no suitable sentence was found in the wiki summary. This concept will be skipped.")
@@ -238,9 +241,9 @@ def main(args):
     # * デバッグ: tokenizerの動作確認. text_listの各テキストがどのようにtokenizeされるか、またdecodeするとどうなるかを確認する. これにより、tokenizerが想定通りに動いているか、特にEOSトークンの扱いがどうなっているかを確認できる.
     if debug_print_flag:
         print(f"dot token id: {tokenizer.convert_tokens_to_ids('.')}")
-        for concept, text in zip(concept_names, text_list):
-            encoded = tokenizer(text, return_tensors="pt")
-            print(f"Tokenized the text of concept '{concept}': {encoded}")
+        for concept, prompt in zip(concept_names, prompts):
+            encoded = tokenizer(prompt, return_tensors="pt")
+            print(f"Tokenized the prompt of concept '{concept}': {encoded}")
             decoded = tokenizer.decode(encoded["input_ids"][0])
             print(f"Decoded back: {decoded}\n")
 
@@ -248,7 +251,7 @@ def main(args):
 
 
     # =========================
-    # 全層の隠れ状態を全て記録に残す．最終dot(.)位置のみのベクトル，全体のmean pool, の2種類を記録する．
+    # 全層の隠れ状態(vec)を全て記録に残す
     # =========================
     for epoch in epoch_list:
         print(f"epoch: {epoch}")
@@ -280,19 +283,14 @@ def main(args):
 
             print(f"Loaded memvec for epoch {epoch} from {mem_save_path} & replaced model embeddings.")
 
-        # if need_to_set_pad_token:
-        #     tokenizer.pad_token = tokenizer.eos_token
-        #     model.config.pad_token_id = tokenizer.pad_token_id
         set_tokenizer_and_model(tokenizer, model)
-        
-
         model.eval() # 評価モードに切り替え (これにより、dropoutなどの挙動が変わる)
 
         # *** pool_hs_type に応じて、vectorを抽出 ***
         all_vecs = extract_hidden_states(
             model, 
             tokenizer,
-            text_list, 
+            prompts, 
             pool_hs_type, 
             batch_size=8, 
             mean_pool_target_texts=concept_unused_tk_names, # if pool_hs_type=="target_seq_mean_pool" else None,   # pool_hs_type=='target_seq_mean_pool'のとき、各textの対象unused_tk位置でmean_poolするためのテキストのリスト。text_listと同順で、各textのmean_poolの対象となるテキストが入っていることを想定。
@@ -312,7 +310,7 @@ def main(args):
             vectors=all_vecs,
             target_concepts_filename=target_concepts_filename,
             concept_names=concept_names,
-            text_list=text_list,
+            prompts=prompts,
             model_size=model_size,
             pool_hs_type=args.pool_hs_type, # repeat_の場合、途中でmean_poolに変えてしまったため、pool_hs_typeではなく、元のargs.pool_hs_typeを保存する
             layer_index=visualize_layer_index,

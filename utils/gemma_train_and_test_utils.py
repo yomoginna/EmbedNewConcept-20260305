@@ -24,7 +24,6 @@ sys.path.append(project_root)
 
 
 
-
 def fix_seed(seed=0):
     """Fix random seed for reproducibility."""
     # torch.manual_seed(seed)
@@ -324,3 +323,17 @@ def set_tokenizer_and_model(tokenizer, model):
     if tokenizer.pad_token_id is None:
         tokenizer.pad_token = tokenizer.eos_token
         model.config.pad_token_id = tokenizer.pad_token_id
+
+
+
+def construct_model_name_for_dirname(model_size, lr, trained_date, layer_idx, random_seed):
+    model_version = get_gemma_model_version(model_size)
+
+    model_name_for_dirname = f"gemma-{model_version}-{model_size}B-lr{lr}-{trained_date}"
+    if layer_idx is not None:
+        print(f"Using layer index: {layer_idx}")
+        model_name_for_dirname += f"-hidden_layer{layer_idx}"
+    model_name_for_dirname += f"-seed{random_seed}"
+
+    return model_name_for_dirname
+

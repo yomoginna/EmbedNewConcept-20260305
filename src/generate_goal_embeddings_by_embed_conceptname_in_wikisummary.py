@@ -45,7 +45,7 @@ project_root = os.path.join(os.path.dirname(__file__), "..") # os.path.dirname(_
 sys.path.append(project_root)
 print("Project root:", project_root)
 
-from utils.gemma_train_and_test_utils import get_gemma_model_version, set_tokenizer_and_model
+from utils.gemma_train_and_test_utils import get_gemma_model_version, set_tokenizer_and_model, construct_model_name_for_dirname
 from utils.embedding_utils import extract_hidden_states, get_concept_containing_text_using_wiki_summary
 
 global BATCH_SIZE
@@ -53,19 +53,6 @@ global BATCH_SIZE
 wiki_page_save_dir = os.path.join(project_root, 'data', 'wiki_pages')
 dont_get_new_wiki_flag = False # False #True # もう新しいwikiページを読み込みたくない場合はTrue. すでに保存済みのwikiページがあるpropernounのみにフィルタリングする.
 print_flag = False
-
-
-
-def construct_model_name_for_dirname(model_size, lr, trained_date, layer_idx, random_seed):
-    model_version = get_gemma_model_version(model_size)
-
-    model_name_for_dirname = f"gemma-{model_version}-{model_size}B-lr{lr}-{trained_date}"
-    if layer_idx is not None:
-        print(f"Using layer index: {layer_idx}")
-        model_name_for_dirname += f"-hidden_layer{layer_idx}"
-    model_name_for_dirname += f"-seed{random_seed}"
-
-    return model_name_for_dirname
 
 
 
@@ -138,12 +125,12 @@ def main(args):
         concept_to_prompt[concept] = prompt
 
     # config_concept_list の順番に対応するpromptのリストを作成
-    concept_names, text_list = [], []
-    # text_list = [concept_to_prompt[concept] for concept in config_concept_list if concept in concept_to_prompt]
+    concept_names, prompts = [], []
+    # prompts = [concept_to_prompt[concept] for concept in config_concept_list if concept in concept_to_prompt]
     for concept in config_concept_list:
         if concept in concept_to_prompt:
             concept_names.append(concept)
-            text_list.append(concept_to_prompt[concept])
+            prompts.append(concept_to_prompt[concept])
         else:
             # print(f"Warning: No prompt could be created for concept '{concept}' because no suitable sentence was found in the wiki summary. This concept will be skipped.")
             pass
@@ -166,12 +153,12 @@ def main(args):
     set_tokenizer_and_model(tokenizer, model)
 
 
-    # * デバッグ: tokenizerの動作確認. text_listの各テキストがどのようにtokenizeされるか、またdecodeするとどうなるかを確認する. これにより、tokenizerが想定通りに動いているか、特にEOSトークンの扱いがどうなっているかを確認できる.
+    # * デバッグ: tokenizerの動作確認. promptsの各テキストがどのようにtokenizeされるか、またdecodeするとどうなるかを確認する. これにより、tokenizerが想定通りに動いているか、特にEOSトークンの扱いがどうなっているかを確認できる.
     # dot_ids = tokenizer.encode(".", add_special_tokens=False)
     # print(f"dot token ids: {dot_ids}, tokens: {tokenizer.convert_ids_to_tokens(dot_ids)}")
-    for concept, text in zip(concept_names, text_list):
-        encoded = tokenizer(text, return_tensors="pt")
-        print(f"Tokenized the text of concept '{concept}': {encoded}")
+    for concept, prompt in zip(concept_names, prompts):
+        encoded = tokenizer(prompt, return_tensors="pt")
+        print(f"Tokenized the prompt of concept '{concept}': {encoded}")
         decoded = tokenizer.decode(encoded["input_ids"][0])
         print(f"Decoded back: {decoded}\n")
 
@@ -184,10 +171,10 @@ def main(args):
     all_vecs = extract_hidden_states(
         model, 
         tokenizer,
-        text_list, 
+        prompts, 
         pool_hs_type,
         batch_size=8, 
-        mean_pool_target_texts=concept_names, # if pool_hs_type=="target_seq_mean_pool" else None,   # pool_hs_type=='target_seq_mean_pool'のとき、各textの対象テキスト位置でmean_poolするためのテキストのリスト。text_listと同順で、各textのmean_poolの対象となるテキストが入っていることを想定。
+        mean_pool_target_texts=concept_names, # if pool_hs_type=="target_seq_mean_pool" else None,   # pool_hs_type=='target_seq_mean_pool'のとき、各textの対象テキスト位置でmean_poolするためのテキストのリスト。promptsと同順で、各promptのmean_poolの対象となるテキストが入っていることを想定。
         layer_index=visualize_layer_index,
         print_flag=False
     )   # -> (T, D) or (T, H, D) Tはテキスト数, Hは層の数, Dは隠れ状態の次元
@@ -200,7 +187,7 @@ def main(args):
         vectors=all_vecs,
         target_concepts_filename=target_concepts_filename,
         concept_names=np.array(concept_names, dtype=str),
-        text_list=np.array(text_list, dtype=str),
+        prompts=np.array(prompts, dtype=str),
         model_size=model_size,
         pool_hs_type=args.pool_hs_type, # repeat_の場合、途中でmean_poolに変えてしまったため、pool_hs_typeではなく、元のargs.pool_hs_typeを保存する
         layer_index=visualize_layer_index,

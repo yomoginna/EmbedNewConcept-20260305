@@ -1,6 +1,6 @@
 """
 学習過程のベクトルを生成するコード。
-ただしベクトルは、新規概念の元になった既存概念名そのものをpromptとした際の隠れ状態から作成する。
+ただしベクトルは、新規概念名を埋め込んだtest問題にを入力した際の隠れ状態から作成する。
 (最もsimpleな方法)
 
 経緯：
@@ -52,6 +52,7 @@ from utils.embedding_utils import extract_hidden_states
 
 global BATCH_SIZE
 
+test1_dir = os.path.join(project_root, 'data', 'test_data_filtered')
 wiki_page_save_dir = os.path.join(project_root, 'data', 'wiki_pages')
 dont_get_new_wiki_flag = False # False #True # もう新しいwikiページを読み込みたくない場合はTrue. すでに保存済みのwikiページがあるpropernounのみにフィルタリングする.
 print_flag = False
@@ -147,9 +148,43 @@ def main(args):
     print(f"Target concepts specified in config {class_to_target_concepts_path}: {config_concept_list}")
 
 
-    # ** 各concept名に対応させた予約済み特殊トークン名を prompt とする
-    prompts = [concept2trainable_tk_map.get(conceptname) for conceptname in config_concept_list]
-    print(f"Prompts corresponding to concept names: {prompts}")
+    
+    # ** test1 data のあるconcept名を取得する
+    concept_with_test1_list = [filename.split('.json')[0].replace('_', ' ') for filename in os.listdir(test1_dir)]
+    concept_to_test1_data = {}
+    for concept_name in config_concept_list:
+        if concept_name in concept_with_test1_list:
+            test1_path = os.path.join(test1_dir, concept_name.replace(' ', '_') + '.json')
+            with open(test1_path, 'r') as f:
+                test1_data = json.load(f)
+            concept_to_test1_data[concept_name] = test1_data
+        else:
+            print(f"Warning: Concept '{concept_name}' does not have a corresponding test1 data file in {test1_dir}. It will be skipped for test-based embedding generation.")
+
+    # [WIP] 各概念の複数テスト問題のうち、とりあえずそれぞれの1つ目の問題だけでベクトルを作成する。全ての問題を使うかどうかはまだ決めてない。
+    concept_to_test1_question = {concept_name: test1_data[0]['test1'] for concept_name, test1_data in concept_to_test1_data.items()}
+    
+    # ** <target_token> を新規概念名(<unusedXX>)に置換する
+    for concept_name, test1_question in concept_to_test1_question.copy().items():
+        print(f"Concept: {concept_name}")
+        test1_question = test1_question.replace("<target_token>", concept2trainable_tk_map[concept_name])
+        concept_to_test1_question[concept_name] = test1_question
+        print(f"Test1 question used for embedding generation: \n{test1_question}\n\n")
+    
+    # return 0    # [memo] 動作確認済み
+
+    # config_concept_list の順にpromptリストを作成
+    concepts, prompts = [], []
+    for concept_name in config_concept_list:
+        if concept_name in concept_to_test1_question:
+            concepts.append(concept_name)
+            prompts.append(concept_to_test1_question[concept_name])
+        else:
+            print(f"Warning: Concept '{concept_name}' does not have test1 question data. It will be skipped for test-based embedding generation.")
+
+    pool_hs_target_texts = ["[MASK]." for _ in prompts]  # "Sentence:\nElfstedentocht is about [MASK]." のような問題文中の[MASK].の最後の'.'部分の隠れ状態をvecとして取り出す。
+
+
 
     # =========================
     # ** モデル読み込み **
@@ -162,12 +197,10 @@ def main(args):
     set_tokenizer_and_model(tokenizer, model)
 
 
-    # * デバッグ: tokenizerの動作確認. text_listの各テキストがどのようにtokenizeされるか、またdecodeするとどうなるかを確認する. これにより、tokenizerが想定通りに動いているか、特にEOSトークンの扱いがどうなっているかを確認できる.
-    dot_ids = tokenizer.encode(".", add_special_tokens=False)
-    print(f"dot token ids: {dot_ids}, tokens: {tokenizer.convert_ids_to_tokens(dot_ids)}")
-    for concept_name in config_concept_list:
-        encoded = tokenizer(concept_name, return_tensors="pt", add_special_tokens=False)
-        print(f"Tokenized the text of concept '{concept_name}': {encoded}")
+    # * デバッグ: tokenizerの動作確認. text_listの各テキストがどのようにtokenizeされるか、またdecodeするとどうなるかを確認する. 
+    for prompt in prompts:
+        encoded = tokenizer(prompt, return_tensors="pt", add_special_tokens=False)
+        print(f"Tokenized the text: {encoded}")
         decoded = tokenizer.decode(encoded["input_ids"][0])
         print(f"Decoded back: {decoded}\n")
 
@@ -215,7 +248,7 @@ def main(args):
             prompts, 
             pool_hs_type,
             batch_size=8, 
-            pool_hs_target_texts=None,  # pool_hs_type=='target_seq_mean_pool' や 'target_seq_last_token'のときに使う。各textの対象テキスト位置でmean_poolするためのテキストのリスト。text_listと同順で、各textのmean_poolの対象となるテキストが入っていることを想定。
+            pool_hs_target_texts=pool_hs_target_texts,  # pool_hs_type=='target_seq_mean_pool' や 'target_seq_last_token'のときに使う。各textの対象テキスト位置でmean_poolするためのテキストのリスト。text_listと同順で、各textのmean_poolの対象となるテキストが入っていることを想定。
             layer_index=visualize_layer_index,
             print_flag=False
         )   # -> (T, D) or (T, H, D) Tはテキスト数, Hは層の数, Dは隠れ状態の次元
