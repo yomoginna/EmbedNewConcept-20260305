@@ -17,7 +17,7 @@ project_root = os.path.join(os.path.dirname(__file__), "..") # os.path.dirname(_
 sys.path.append(project_root)
 
 from utils.embedding_utils import load_mem_vec
-from utils.gemma_train_and_test_utils import fix_seed, get_gemma_model_version, extract_probability_of_option_numbers, calculate_metrics, set_flag
+from utils.gemma_train_and_test_utils import fix_seed, get_gemma_model_version, extract_probability_of_option_numbers, calculate_metrics, set_tokenizer_and_model
 from utils.handle_text_utils import create_test_prompt
 
 
@@ -59,16 +59,7 @@ def main(args):
 
     # ********* tokenizerとmodelの準備 *********
     tokenizer = AutoTokenizer.from_pretrained(model_name, padding_side='left')
-    model = None # = AutoModelForCausalLM.from_pretrained(model_name, device_map="auto") # [memo] 初期モデルはepoch0の時, もしくはmodel未loadの際にそのepoch内で読み込むので，ここではNoneを読み込む
-    
-    # # llama系はpad_tokenが設定されていないことがあるため，その場合はeos_tokenをpad_tokenに設定する
-    # need_to_set_pad_token = False
-    # if tokenizer.pad_token_id is None:
-    #     tokenizer.pad_token_id = tokenizer.eos_token_id
-    #     need_to_set_pad_token = True
-
-    need_to_set_pad_token = set_flag(tokenizer)
-    print(f"Loaded model and tokenizer: {model_name}")
+    print(f"model_name: {model_name}")
 
     # **** 結果dirの準備 ****
     # *** 🟠 修正後(2026/01/18~) 引数でconfig/{target_concepts_filename}で指定されたconcept群を学習対象とするように変更 ***
@@ -149,13 +140,10 @@ def main(args):
     # ********* test1 *********
     epoch_list = []
     for filename in os.listdir(mem_dir):
-        if filename.endswith('.npy'):
+        if filename.endswith('.npy') and filename != "best.npy":
             epoch_num = int(filename.split('.npy')[0])
             epoch_list.append(epoch_num)
     epoch_list = sorted(epoch_list)
-
-    # [WIP] 特例 3まで
-    # epoch_list = epoch_list[:4]
     print(f"Found trained memvec files for epochs: {epoch_list}")
 
     for epoch in tqdm(epoch_list, desc="Evaluating test1 over epochs"):
@@ -175,34 +163,21 @@ def main(args):
 
         # ****** epoch毎にmodel読み込み・memvec挿入 ******
         print(f"epoch: {epoch}")
-        if epoch == 0:
-            # 初期モデル
-            model = AutoModelForCausalLM.from_pretrained(model_name, device_map="auto")
-            if need_to_set_pad_token:
-                model.config.pad_token_id = tokenizer.pad_token_id
-            print("Loaded pre-trained model")
-            
-        else:
-            # if model is None:
-            #     # epoch0がlistにない場合はmodelがまだ読み込まれていないので，ここで読み込む
-            #     # model = AutoModelForCausalLM.from_pretrained(model_name, device_map=device_map)
-            #     model = AutoModelForCausalLM.from_pretrained(model_name, device_map='auto')
-            #     if need_to_set_pad_token:
-            #         model.config.pad_token_id = tokenizer.pad_token_id
 
-            # 毎回モデルを読み込み直す
-            model = AutoModelForCausalLM.from_pretrained(model_name, device_map='auto')
-            if need_to_set_pad_token:
-                model.config.pad_token_id = tokenizer.pad_token_id
-            # ** memvecをmodelに挿入・置換 **
-            try:
-                mem_save_path = os.path.join(mem_dir, f'{epoch}.npy')
-                load_mem_vec(model, mem_save_path, MemTokenIds)
-            except Exception as e:
-                print(f"Error loading memvec for epoch {epoch} from {mem_save_path}: {e}")
-                continue  # 学習済みembed層が保存されていなければ、このepochの評価はスキップ
+        # 毎回モデルを読み込み直す
+        model = AutoModelForCausalLM.from_pretrained(model_name, device_map='auto')
+        set_tokenizer_and_model(tokenizer, model)
 
-            print(f"Loaded memvec for epoch {epoch} from {mem_save_path} & replaced model embeddings.")
+        # ** memvecをmodelに挿入・置換 **
+        try:
+            # [memo] 0epoch目もmemvecを読み込む。0epoch目の.npyファイルには、各初期化手法を適応した初期状態が保存されている。
+            mem_save_path = os.path.join(mem_dir, f'{epoch}.npy')
+            load_mem_vec(model, mem_save_path, MemTokenIds)
+        except Exception as e:
+            print(f"Error loading memvec for epoch {epoch} from {mem_save_path}: {e}")
+            continue  # 学習済みembed層が保存されていなければ、このepochの評価はスキップ
+
+        print(f"Loaded memvec for epoch {epoch} from {mem_save_path} & replaced model embeddings.")
 
         model.eval()
 
@@ -375,7 +350,7 @@ if __name__ == "__main__":
             # elif seed == 9:
             #     args.trained_date = "20260418"
             if seed >= 0:
-                args.trained_date = "20260523"
+                args.trained_date = "20260529"
             else:
                 raise ValueError(f"Invalid seed: {seed}")
             

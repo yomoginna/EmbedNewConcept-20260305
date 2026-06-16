@@ -82,10 +82,8 @@ def main(args):
     # ベクトルの読み込み
     # ======================
     goal_data = np.load(goal_vector_file, allow_pickle=True) # (N, D) or (N, H, D)
-    # trajectory_data = np.load(trajectory_vector_file, allow_pickle=True) # (N, D) or (N, H, D)
-
+    
     goal_vecs = goal_data["vectors"]
-    # trajectory_vecs = trajectory_data["vectors"]
     concept_names = goal_data["concept_names"]
     # model_size = goal_data["model_size"]
     pool_hs_type = goal_data["pool_hs_type"]
@@ -113,10 +111,6 @@ def main(args):
     else:
         visualize_layer_indices = [int(visualize_layer_index)] # 指定された層のインデックス
 
-
-    # [WIP] どのファイルかは引数で調節したい
-    # trajectory_vector_dir = "/work04/toko/EmbedNewConcept-20260305/trajectory_embeddings/gemma-3-12B/repeat_mean_pool"
-    # trajectory_vec_file_format = "trajectory_embeddings_12B_target_concepts_mini_13_initvecwithCatCent_by_WikiSummaryRepeatHSMixed_vislayerall_epoch<epoch>.npz"
 
     epoch_to_trajectory_vecs = {}
     for epoch in range(100):  # maxのepochを100と仮定してループするが、実際には存在するepochのファイルのみ読み込むようにする

@@ -179,31 +179,31 @@ def main(args):
         print(f"epoch: {epoch}")
 
         # ****** epoch毎にmodel読み込み・memvec挿入 ******
-        if epoch == 0:
-            # epoch0は未追加学習のモデル
-            model = AutoModelForCausalLM.from_pretrained(model_name, device_map="auto")
-            print("Loaded pre-trained model")
+        # if epoch == 0:
+        #     # epoch0は未追加学習のモデル
+        #     model = AutoModelForCausalLM.from_pretrained(model_name, device_map="auto")
+        #     print("Loaded pre-trained model")
             
-        else:
-            # if model is None:
-            #     # epoch0がlistにない場合はmodelがまだ読み込まれていないので，ここで読み込む
-            #     # model = AutoModelForCausalLM.from_pretrained(model_name, device_map=device_map)
-            #     model = AutoModelForCausalLM.from_pretrained(model_name, device_map='auto')
-            #     if need_to_set_pad_token:
-            #         model.config.pad_token_id = tokenizer.pad_token_id
+        # else:
+        #     # if model is None:
+        #     #     # epoch0がlistにない場合はmodelがまだ読み込まれていないので，ここで読み込む
+        #     #     # model = AutoModelForCausalLM.from_pretrained(model_name, device_map=device_map)
+        #     #     model = AutoModelForCausalLM.from_pretrained(model_name, device_map='auto')
+        #     #     if need_to_set_pad_token:
+        #     #         model.config.pad_token_id = tokenizer.pad_token_id
 
-            # 毎回モデルを読み込み直す場合はこちら
-            model = AutoModelForCausalLM.from_pretrained(model_name, device_map='auto')
+        # 毎回モデルを読み込み直す場合はこちら
+        model = AutoModelForCausalLM.from_pretrained(model_name, device_map='auto')
 
-            # ** memvecをmodelに挿入・置換 **
-            try:
-                mem_save_path = os.path.join(mem_dir, f'{epoch}.npy')   # .pth.npyになっている場合がある (20260427以前に保存したモデル)
-                load_mem_vec(model, mem_save_path, MemTokenIds)
-            except Exception as e:
-                print(f"Error loading memvec for epoch {epoch} from {mem_save_path}: {e}")
-                continue  # 学習済みembed層が保存されていなければ、このepochの評価はスキップ
+        # ** memvecをmodelに挿入・置換 **
+        try:
+            mem_save_path = os.path.join(mem_dir, f'{epoch}.npy')   # .pth.npyになっている場合がある (20260427以前に保存したモデル)
+            load_mem_vec(model, mem_save_path, MemTokenIds)
+        except Exception as e:
+            print(f"Error loading memvec for epoch {epoch} from {mem_save_path}: {e}")
+            continue  # 学習済みembed層が保存されていなければ、このepochの評価はスキップ
 
-            print(f"Loaded memvec for epoch {epoch} from {mem_save_path} & replaced model embeddings.")
+        print(f"Loaded memvec for epoch {epoch} from {mem_save_path} & replaced model embeddings.")
 
         set_tokenizer_and_model(tokenizer, model)
         model.eval() # 評価モードに切り替え (これにより、dropoutなどの挙動が変わる)
@@ -280,7 +280,7 @@ CUDA_VISIBLE_DEVICES=4
 LR=0.003
 NUM_OPTIONS=3
 INIT_LAYER_INDEX=12
-TRAINED_DATE="20260523" #"20260427"
+TRAINED_DATE="20260529" # "20260523" #"20260427"
 SEED=0
 POOL_HS_TYPE="mean_pool" # "target_seq_repeat_mean_pool" #"eos" # "repeat_mean_pool"
 
@@ -288,7 +288,7 @@ POOL_HS_TYPE="mean_pool" # "target_seq_repeat_mean_pool" #"eos" # "repeat_mean_p
 INIT_VEC_TYPE_LIST=("CatCent_by_WikiSummaryRepeatHSMixed" "nearCatCent_by_WikiSummaryRepeatHSMixed" "farCatCent_by_WikiSummaryRepeatHSMixed" "zero" "norm_rand_vocab") 
 # INIT_VEC_TYPE_LIST=("CatCent_by_WikiSummaryRepeatHSMixed" "nearCatCent_by_WikiSummaryRepeatHSMixed" "otherCatCent_by_WikiSummaryRepeatHSMixed" "zero" "norm_rand_vocab") 
 INIT_VEC_TYPE_LIST=("CatCent_by_WikiSummaryRepeatHSMixed")
-INIT_VEC_TYPE_LIST=("nearCatCent_by_WikiSummaryRepeatHSMixed" "otherCatCent_by_WikiSummaryRepeatHSMixed" "zero" "norm_rand_vocab") 
+INIT_VEC_TYPE_LIST=("nearCatCent_by_WikiSummaryRepeatHSMixed" "farCatCent_by_WikiSummaryRepeatHSMixed" "zero" "norm_rand_vocab") 
 INIT_VEC_TYPE_LIST=("CatCent_by_WikiSummaryRepeatHSMixed" "nearCatCent_by_WikiSummaryRepeatHSMixed" "norm_rand_vocab") 
 
 

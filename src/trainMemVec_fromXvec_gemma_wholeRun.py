@@ -465,15 +465,13 @@ def prepareGemmaModel(
     print(f"train_target_category_lst: {train_target_category_lst}")
 
     embed_initializer = EmbedInitializer(
-        model_name,
-        save_mem_dir,
-        init_vec_type, 
-        train_target_category_lst,
-        propnoun_num_for_init_vec, 
-        model, 
-        tokenizer, 
+        init_vec_type,
         # seed, # mainのファイルでseed固定するので、ここでseedを渡す必要はなさそう。
         pool_hs_type, # pool_hs_type='single_last',
+        train_target_category_lst,
+        propnoun_num_for_init_vec, 
+        model_name,
+        save_mem_dir,
         min_words=min_words,
         max_words=max_words,
     )
@@ -613,9 +611,14 @@ def train(
     best_mem_path = os.path.join(save_mem_dir, "best.npy")
 
 
+    # 学習前の状態をepoch0として保存
+    save_mem_path = os.path.join(save_mem_dir, "0.npy")
+    save_mem_vec(model, memTokenIds, save_mem_path)
+
+
     print("Start training...")
-    for epoch in tqdm(range(maxEpochs)): # [memo] for epoch in tqdm(range(maxEpochs + 1)): maxEpochs=10なら10epochまで学習させたかったが不自然らしいの+1を消した
-        print('Epoch %d/%d'%(epoch+1, maxEpochs))
+    for epoch in tqdm(range(1, maxEpochs+1)): # [memo] for epoch in tqdm(range(maxEpochs + 1)): maxEpochs=10なら10epochまで学習させたかったが不自然らしいの+1を消した
+        print('Epoch %d/%d'%(epoch, maxEpochs))
 
         if regen_train_samples_every_epoch:
             # *** epoch毎にfact_sentencesの組み合わせをシャッフルしてデータを構成し直す ***
@@ -623,7 +626,7 @@ def train(
             train_samples = constructTrainSamples(concept_to_train_data_source, train_sample_format, conceptForFict2token_map, n_feat_in_a_sample)
             trainingData, evalInputs, evalOutputTexts, indices = encodeTrainSamplesWithTokenizer(train_samples, tokenizer, padTokenId, model.device)
         else:
-            if epoch == 0:
+            if epoch == 1:
                 train_samples = constructTrainSamples(concept_to_train_data_source, train_sample_format, conceptForFict2token_map, n_feat_in_a_sample)
                 trainingData, evalInputs, evalOutputTexts, indices = encodeTrainSamplesWithTokenizer(train_samples, tokenizer, padTokenId, model.device)
 
@@ -655,7 +658,7 @@ def train(
 
 
             # ** [debug] 勾配の確認。学習したいtokenIDの勾配が0でないこと、学習したくないtokenIDの勾配が0であることを確認する **
-            if epoch == 0:
+            if epoch == 1:
                 embedding_layer = model.get_input_embeddings()
                 grad = embedding_layer.weight.grad
 
@@ -737,7 +740,7 @@ def train(
         avgLoss = totalLoss / num_steps
         if scheduler is not None:
             scheduler.step(avgLoss)
-        print('epoch %d loss:' % (epoch+1), avgLoss)
+        print('epoch %d loss:' % (epoch), avgLoss)
 
         if epoch % eval_interval == 0:
             acc = evaluateModel(model, tokenizer, evalInputs, evalOutputTexts, verbose=True)
@@ -821,7 +824,7 @@ if __name__ == "__main__":
     parser.add_argument('--max_epochs', type=int, default=600, help='最大エポック数')
     parser.add_argument('--cuda_visible_devices', type=str, default=None, help='CUDA_VISIBLE_DEVICESの設定. ただし数字は1つだけ指定すること. 例: "2"')
     parser.add_argument('--init_vec_types', type=str, nargs='+', default=['zero', 'uniform', 'norm_rand'], help='memory vectorの初期化方法のリスト. ')
-    parser.add_argument("--pool_hs_type", type=str, default="eos", choices=["eos", "last_token", "mean_pool"], help="隠れ状態のプーリング方法。")
+    parser.add_argument("--pool_hs_type", type=str, default="mean_pool", choices=["eos", "last_token", "mean_pool"], help="隠れ状態のプーリング方法。")
     parser.add_argument('--layer_indices', type=int, nargs='*', default=None, help='隠れ状態を取得する層のインデックス。-1なら最終層、0以上の整数ならその層の隠れ状態を使用する。init_vec_typeが \'category_centroid_by_hidden_state_mean\' の場合に使用')
     parser.add_argument('--thread_id', type=int, nargs='?', default=0, help='複数process同時に実行する場合のthread id (0 or 1). これにより,実行する設定(seed, init_vec_typeの組)が被らないように調整する')
     parser.add_argument('--process_num', type=int, nargs='?', default=2, help='同時に実行するprocess数')

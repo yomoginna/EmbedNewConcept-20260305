@@ -78,7 +78,12 @@ def main(args):
     model_name = f"google/gemma-{model_version}-{model_size}b-it" # [memo] 'gemma-'部分は変えないこと!! -を消すとモデルがloadできない．さらにそのエラーメッセージは，"huggingface-cli login"をして，という関係ないmessageになるので注意!
     
     # ** 保存先 **
-    output_dir = os.path.join("/work04/toko/EmbedNewConcept-20260305", "goal_embeddings", "by_conceptname", f"gemma-{model_version}-{model_size}B")
+    output_dir = os.path.join(
+        "/work04/toko/EmbedNewConcept-20260305", 
+        "goal_embeddings", 
+        "by_embed_conceptname_in_test", 
+        f"gemma-{model_version}-{model_size}B"
+    )
     output_dir = os.path.join(output_dir, pool_hs_type)
     os.makedirs(output_dir, exist_ok=True)
 
@@ -173,7 +178,7 @@ def main(args):
 
     # ベクトルを保存
     # output_path = os.path.join(output_dir, f"goal_embeddings_{model_size}B_{target_concepts_filename.split('.')[0]}_{pool_hs_type}_layer{layer_index}")
-    output_path = os.path.join(output_dir, f"{target_concepts_filename.split('.')[0]}_{pool_hs_type}_layer{visualize_layer_index}.npz")
+    output_path = os.path.join(output_dir, f"{target_concepts_filename.split('.')[0]}_layer{visualize_layer_index}.npz")
     np.savez(
         output_path, 
         vectors=all_vecs,
@@ -218,7 +223,7 @@ nohup uv run python src/generate_goal_embeddings_by_embed_conceptname_in_test.py
     --target_concepts_filename ${TARGET_CONCEPTS_FILENAME} \
     --model_size ${MODEL_SIZE} \
     --cuda_visible_devices ${CUDA_VISIBLE_DEVICES} \
-    > log_generate_goal_embeddings_gemma-${MODEL_SIZE}B_${TARGET_CONCEPTS_FILENAME}.log 2>&1 &
+    > log_generate_goal_embeddings_gemma-${MODEL_SIZE}B_${TARGET_CONCEPTS_FILENAME}_conceptname_in_test.log 2>&1 &
 
 3748904
 

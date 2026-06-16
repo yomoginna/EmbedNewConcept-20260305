@@ -320,8 +320,9 @@ def set_tokenizer_and_model(tokenizer, model):
     """
     tokenizerとmodelの共通設定を行う関数
     """
+    
     if tokenizer.pad_token_id is None:
-        tokenizer.pad_token = tokenizer.eos_token
+        tokenizer.pad_token = tokenizer.eos_token   # llama系はpad_tokenが設定されていないことがあるため，その場合はeos_tokenをpad_tokenに設定する
         model.config.pad_token_id = tokenizer.pad_token_id
 
 

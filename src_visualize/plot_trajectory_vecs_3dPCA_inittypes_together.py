@@ -7,7 +7,8 @@ uv run python src_visualize/plot_trajectory_vecs_3dPCA_inittypes_together.py \
 
 
 特徴
-- 3次元PCAでプロット
+- 3次元PCAでプロット+2次元も
+- 原点(=目標ベクトルの位置)に最も近い点に行くまでの軌跡を、epochの順番に線で結ぶ
 - 概念毎に色分け
 - ホバーで、概念名と層のインデックスを表示
 - 色の濃さは層のインデックスに基づいて変化
@@ -31,6 +32,7 @@ import numpy as np
 import pandas as pd
 import plotly.express as px
 import plotly.graph_objects as go
+from plotly.validator_cache import ValidatorCache
 from sklearn.decomposition import PCA
 
 project_root = os.path.join(os.path.dirname(__file__), "..")
@@ -46,152 +48,337 @@ def main(args):
     model_size = args.model_size
     target_concepts_filename = args.target_concepts_filename
     pool_hs_type = args.pool_hs_type
-    init_vec_type = args.init_vec_type
+    init_vec_type_list = args.init_vec_type_list
     lr = args.lr
     trained_date = args.trained_date
     init_layer_index = args.init_layer_index
     seed = args.seed
     visualize_layer_index = args.visualize_layer_index
-
+    embed_vec_type = args.embed_vec_type
 
     model_version = get_gemma_model_version(model_size)
-    need_layer_flag = 'HS' in init_vec_type or 'HiddenState' in init_vec_type   # 初期化方法名に'隠れ層'が含まれれば、layer_idxの指定が必要な初期化方法とみなす
-    print("need layer flag:", need_layer_flag)
 
 
     # goal_vector_file = os.path.join(mem_dir, "goal_embeddings", f"gemma-{model_version}-{model_size}B", f"{target_concepts_filename.split('.')[0]}_{pool_hs_type}_layer{visualize_layer_index}.npz")
     goal_vector_file = os.path.join(
-        mem_dir, "goal_embeddings", args.embed_vec_type, f"gemma-{model_version}-{model_size}B", pool_hs_type, 
+        mem_dir, "goal_embeddings", embed_vec_type, f"gemma-{model_version}-{model_size}B", pool_hs_type, 
         f"{target_concepts_filename.split('.')[0]}_layerall.npz"
     )
-    trajectory_vec_dir = os.path.join(mem_dir, "trajectory_embeddings", args.embed_vec_type, f"gemma-{model_version}-{model_size}B", pool_hs_type)
-
-    if not need_layer_flag:
-        # HSを初期vec作成に使わない場合は、layer_indexは指定されていないものとして扱う
-        # trajectory_vec_filename_format = f"{target_concepts_filename.split('.')[0]}_seed{seed}_initvecwith{init_vec_type.replace(' ', '_')}_vislayer{visualize_layer_index}_epoch<epoch>.npz"
-        trajectory_vec_filename_format = f"{target_concepts_filename.split('.')[0]}_{trained_date}_seed{seed}_initvecwith{init_vec_type.replace(' ', '_')}_vislayerall_epoch<epoch>.npz"
-    else:
-        # trajectory_vec_filename_format = f"{target_concepts_filename.split('.')[0]}_initlayer{init_layer_index}_seed{seed}_initvecwith{init_vec_type.replace(' ', '_')}_vislayer{visualize_layer_index}_epoch<epoch>.npz"
-        trajectory_vec_filename_format = f"{target_concepts_filename.split('.')[0]}_{trained_date}_initlayer{init_layer_index}_seed{seed}_initvecwith{init_vec_type.replace(' ', '_')}_vislayerall_epoch<epoch>.npz"
-
+    trajectory_vec_dir = os.path.join(
+        mem_dir, 
+        "trajectory_embeddings", 
+        embed_vec_type, 
+        f"gemma-{model_version}-{model_size}B", 
+        pool_hs_type
+    )
+    output_dir = os.path.join(
+        project_root, "src_visualize", "output", 
+        "pca_plot_diffvecs", 
+        f"{model_size}B", 
+        embed_vec_type,
+        # str(pool_hs_type)
+    )
 
     # ======================
-    # ベクトルの読み込み
+    # 目標ベクトルの読み込み
     # ======================
     goal_data = np.load(goal_vector_file, allow_pickle=True) # (N, D) or (N, H, D)
-    # trajectory_data = np.load(trajectory_vector_file, allow_pickle=True) # (N, D) or (N, H, D)
-
     goal_vecs = goal_data["vectors"]
-    # trajectory_vecs = trajectory_data["vectors"]
     concept_names = goal_data["concept_names"]
     # model_size = goal_data["model_size"]
     pool_hs_type = goal_data["pool_hs_type"]
     layer_index = goal_data["layer_index"]
     target_concepts_filename = str(goal_data["target_concepts_filename"])
-
     print(f"goal_vecs.shape: {goal_vecs.shape}")
     print(f"concept_names: {len(concept_names)}, {concept_names}")
     print(f"layer_index: {layer_index}")
 
-
-    # 全visualize_layer_indexをplotしたら多すぎたので、引数visualize_layer_indexで指定した層のインデックスのみplotするように変更したい
-    if visualize_layer_index != 'all':
-        if goal_vecs.ndim == 3: # (N, H, D) の場合、指定した層のインデックスに基づいてgoal_vecsをスライスして (N, D) の形状にする
-            goal_vecs = goal_vecs[:, visualize_layer_index, :]
-        # trajectory_vecsも同様にスライスして (N, num_epochs, D) の形状にする必要があるが、trajectory_vecsはまだ読み込んでいないので、後で読み込む際にスライスするようにする
-
-
-
-    visualize_layer_indices = []
-    if layer_index == "all" and visualize_layer_index == 'all': # if layer_index == "all":
-        visualize_layer_indices = list(range(goal_vecs.shape[1])) # 0からH-1までの層のインデックス
-    elif type(visualize_layer_index) == list:
-        visualize_layer_indices = [int(idx) for idx in visualize_layer_index] # 指定された層のインデックスのリスト
-    else:
-        visualize_layer_indices = [int(visualize_layer_index)] # 指定された層のインデックス
-
-    epoch_to_trajectory_vecs = {}
-    for epoch in range(100):  # maxのepochを100と仮定してループするが、実際には存在するepochのファイルのみ読み込むようにする
-        # 読み込み
-        trajectory_vec_file = trajectory_vec_filename_format.replace("<epoch>", f"{epoch}")
-        trajectory_vec_path = os.path.join(trajectory_vec_dir, trajectory_vec_file)
-        if os.path.exists(trajectory_vec_path):
-            trajectory_data = np.load(trajectory_vec_path, allow_pickle=True)
-            trajectory_vecs = trajectory_data["vectors"]
-            trajectory_concept_names = trajectory_data["concept_names"]
-            print(f"Loaded trajectory vectors from {trajectory_vec_path}, shape: {trajectory_vecs.shape}")
-
-            # trajectory_vecsを、goalのconcept_namesの順に並び替える
-            trajectory_vecs = check_concept_name_match_and_sort(
-                concept_names,              # 並び替えたい目標順の名前リスト
-                trajectory_vecs,            # 並び替え対象のリスト
-                trajectory_concept_names    # trajectory_vecs の現在の名前リスト
-            )
-            print(f"After sorting, trajectory_vecs shape: {trajectory_vecs.shape}")
-
-
-            # visualize_layer_indexに基づいてtrajectory_vecsをスライスして (N, H, D) の場合は (N, D) の形状にする
-            if visualize_layer_index != 'all' and trajectory_vecs.ndim == 3:
-                trajectory_vecs = trajectory_vecs[:, visualize_layer_index, :]
-                print(f"Sliced trajectory_vecs to visualize layer {visualize_layer_index}, new shape: {trajectory_vecs.shape}")
-
-            epoch_to_trajectory_vecs[epoch] = trajectory_vecs
+    
+    # visualize_layer_index を all / list[int] に正規化
+    if visualize_layer_index == "all":
+        visualize_layer_index_norm = "all"
+    elif isinstance(visualize_layer_index, int):
+        visualize_layer_index_norm = [visualize_layer_index]
+    elif isinstance(visualize_layer_index, str):
+        if "," in visualize_layer_index:
+            visualize_layer_index_norm = [
+                int(v.strip()) for v in visualize_layer_index.split(",")
+                if v.strip() != ""
+            ]
         else:
-            print(f"Trajectory vector file not found for epoch {epoch}: {trajectory_vec_path}")
-            # そのepochのファイルがない場合は、それ以降のepochについても学習が行われていないとしてループを抜ける
-            break
-            
+            visualize_layer_index_norm = [int(visualize_layer_index)]
+    elif isinstance(visualize_layer_index, (list, tuple)):
+        visualize_layer_index_norm = [int(v) for v in visualize_layer_index]
+    else:
+        raise ValueError(f"Invalid visualize_layer_index: {visualize_layer_index}")
 
-    trajectory_epoch_list = sorted(epoch_to_trajectory_vecs.keys())
-    print(f"Loaded trajectory vectors for epochs: {trajectory_epoch_list}")
+    # 描画対象 layer を決定
+    if goal_vecs.ndim == 3: # (N, H, D) の場合、
+        num_layers = goal_vecs.shape[1]
+
+        if visualize_layer_index_norm == "all":
+            visualize_layer_indices = list(range(num_layers))
+        else:
+            visualize_layer_indices = visualize_layer_index_norm
+
+        for layer_id in visualize_layer_indices:
+            if layer_id < 0 or layer_id >= num_layers:
+                raise ValueError(
+                    f"visualize_layer_index={layer_id} is out of range. "
+                    f"Available layers: 0..{num_layers - 1}"
+                )
+
+    elif goal_vecs.ndim == 2:
+        if visualize_layer_index_norm == "all":
+            visualize_layer_indices = [int(layer_index)] if str(layer_index) != "all" else [-1]
+        else:
+            visualize_layer_indices = visualize_layer_index_norm
+    else:
+        raise ValueError(f"goal_vecs must be 2D or 3D, but got shape {goal_vecs.shape}")
+
+    print(f"visualize_layer_indices: {visualize_layer_indices}")
+
+
+
+    # ==================================
+    # 初期化手法毎の学習過程ベクトルの読み込み
+    # ==================================
+    initvectype_to_epoch_to_trajectory_vecs = {} # {init_vec_type: {epoch: [conceptname's trajectory_vecs of each layer]}} or {init_vec_type: {epoch: [conceptname's trajectory_vec at one layer]}} 
+    for init_vec_type in init_vec_type_list:
+        # ** trajectory_vecsのファイル名のフォーマットを作成 **
+        need_layer_flag = 'HS' in init_vec_type or 'HiddenState' in init_vec_type   # 初期化方法名に'隠れ層'が含まれれば、layer_idxの指定が必要な初期化方法とみなす
+        if not need_layer_flag:
+            # HSを初期vec作成に使わない場合は、layer_indexは指定されていないものとして扱う
+            # trajectory_vec_filename_format = f"{target_concepts_filename.split('.')[0]}_seed{seed}_initvecwith{init_vec_type.replace(' ', '_')}_vislayer{visualize_layer_index}_epoch<epoch>.npz"
+            trajectory_vec_filename_format = f"{target_concepts_filename.split('.')[0]}_{trained_date}_seed{seed}_initvecwith{init_vec_type.replace(' ', '_')}_vislayerall_epoch<epoch>.npz"
+        else:
+            # trajectory_vec_filename_format = f"{target_concepts_filename.split('.')[0]}_initlayer{init_layer_index}_seed{seed}_initvecwith{init_vec_type.replace(' ', '_')}_vislayer{visualize_layer_index}_epoch<epoch>.npz"
+            trajectory_vec_filename_format = f"{target_concepts_filename.split('.')[0]}_{trained_date}_initlayer{init_layer_index}_seed{seed}_initvecwith{init_vec_type.replace(' ', '_')}_vislayerall_epoch<epoch>.npz"
+
+
+        # ** epoch毎のtrajectory_vecsのファイルを読み込んで、epoch_to_trajectory_vecsに保存 **
+        epoch_to_trajectory_vecs = {}
+        for epoch in range(100):  # maxのepochを100と仮定してループするが、実際には存在するepochのファイルのみ読み込むようにする
+            # 読み込み
+            trajectory_vec_file = trajectory_vec_filename_format.replace("<epoch>", f"{epoch}")
+            trajectory_vec_path = os.path.join(trajectory_vec_dir, trajectory_vec_file)
+            if os.path.exists(trajectory_vec_path):
+                trajectory_data = np.load(trajectory_vec_path, allow_pickle=True)
+                trajectory_vecs = trajectory_data["vectors"]
+                trajectory_concept_names = trajectory_data["concept_names"]
+                print(f"Loaded trajectory vectors from {trajectory_vec_path}, shape: {trajectory_vecs.shape}")
+
+                # ** trajectory_vecsを、goalのconcept_namesの順に並び替える **
+                trajectory_vecs = check_concept_name_match_and_sort(
+                    concept_names,              # 並び替えたい目標順の名前リスト
+                    trajectory_vecs,            # 並び替え対象のリスト
+                    trajectory_concept_names    # trajectory_vecs の現在の名前リスト
+                )
+                print(f"After sorting, trajectory_vecs shape: {trajectory_vecs.shape}")
+
+                # [memo] sliceは後で
+                # # ** visualize_layer_indexに基づいてtrajectory_vecsをスライスして (N, H, D) の場合は (N, D) の形状にする **
+                # if visualize_layer_index != 'all' and trajectory_vecs.ndim == 3:
+                #     trajectory_vecs = trajectory_vecs[:, visualize_layer_index, :]
+                #     print(f"Sliced trajectory_vecs to visualize layer {visualize_layer_index}, new shape: {trajectory_vecs.shape}")
+
+                epoch_to_trajectory_vecs[epoch] = trajectory_vecs
+
+            else:
+                print(f"Trajectory vector file not found for epoch {epoch}: {trajectory_vec_path}")
+                # そのepochのファイルがない場合は、それ以降のepochについても学習が行われていないとしてループを抜ける
+                break
+
+        initvectype_to_epoch_to_trajectory_vecs[init_vec_type] = epoch_to_trajectory_vecs
+        trajectory_epoch_list = sorted(epoch_to_trajectory_vecs.keys())
+        print(f"Loaded trajectory vectors for epochs: {trajectory_epoch_list}")
     
 
-    concept_names_for_hover = [concept_name for concept_name in concept_names for epoch in trajectory_epoch_list for layer_id in visualize_layer_indices] # 各概念名を、層の数とepochの数だけ繰り返すリスト. 例: ['concept1', 'concept1', 'concept1', 'concept2', 'concept2', 'concept2', ...] (epoch=0, layer=0), (epoch=0, layer=1), ..., (epoch=10, layer=11) の順で繰り返す
-    concept_name_and_epoch_and_layer_index = [f"{concept_name}_epoch{epoch}_layer{layer_id}" for concept_name in concept_names for epoch in trajectory_epoch_list for layer_id in visualize_layer_indices]
-    if len( visualize_layer_indices) == 1:
-        # color_intensity_norm = np.array([0.8])  # 単一の層の場合、色の強さを固定
-        # 単一層をplotする場合は、epochが大きいほど濃い色にする
-        color_intensity = np.linspace(0.2, 1, len(trajectory_epoch_list)) # epochの数に基づいて色の強さを決定
-        color_intensity_norm = (color_intensity - color_intensity.min()) / (color_intensity.max() - color_intensity.min()) # 0〜1に正規化
-        color_intensity_norm = np.tile(color_intensity_norm, len(concept_names)) # epochの数だけ色の強さを、各概念の数だけ繰り返す
-    else:
-        color_intensity = np.linspace(0, 1, len(visualize_layer_indices))                  # 層のインデックスに基づいて色の強さを決定
-        color_intensity_norm = (color_intensity - color_intensity.min()) / (color_intensity.max() - color_intensity.min()) # 0〜1に正規化
-        color_intensity_norm = np.tile(color_intensity_norm, len(concept_names) * len(trajectory_epoch_list)) # 層の数だけ色の強さを、各概念とepochの数だけ繰り返す
 
+    # ** 初期化手法毎にplot点の形を変えるためのリストを作成 **
+    # # plotlyの散布図で使用可能なマークリストを取得
+    # SymbolValidator = ValidatorCache.get_validator("scatter.marker", "symbol")  
+    # raw_symbols = SymbolValidator.values
+    # initvectype_to_marker_symbol = {}
+    # for i, init_vec_type in enumerate(init_vec_type_list):
+    #     initvectype_to_marker_symbol[init_vec_type] = raw_symbols[i % len(raw_symbols)] # 初期化手法の数だけ、plotlyのマークリストから順番にシンボルを割り当てる
+    
+    # scatter3d で使用可能な marker symbol
+    raw_symbols = [
+        "circle",
+        "x",
+        "diamond",
+        "cross",
+        "square",
+        "square-open",
+        "diamond-open",
+        "circle-open",
+    ]
+    initvectype_to_marker_symbol = {
+        init_vec_type: raw_symbols[i % len(raw_symbols)]
+        for i, init_vec_type in enumerate(init_vec_type_list)
+    }
+
+    point_symbols = []   # 各点のシンボルを格納するリスト. 初期化手法の名前に基づいてシンボルを割り当てる. visualize_layer_indexが複数ある場合は、layer_idに基づいて色の濃さを変え、単一の場合はepochに基づいて色の濃さを変える.
+    for concept_name in concept_names:
+        for init_vec_type in init_vec_type_list:
+            trajectory_epoch_list = sorted(initvectype_to_epoch_to_trajectory_vecs[init_vec_type].keys())
+            for epoch in trajectory_epoch_list:
+                for layer_id in visualize_layer_indices:
+                    point_symbols.append(initvectype_to_marker_symbol[init_vec_type])
+
+    # ** conceptname毎にplot点の色を変えるためのリストを作成 **
+    base_palette = px.colors.qualitative.Alphabet     # 例: ['#636EFA', '#EF553B', '#00CC96', ...]
+    base_colors = {
+        concept_name: base_palette[i % len(base_palette)]
+        for i, concept_name in enumerate(concept_names)
+    }
+
+    line_dash_list = [
+    "solid",
+    "dash",
+    "longdashdot",
+    "dashdot",
+    "longdash",
+    "longdashdot",
+    "dot",
+    ]
+
+    initvectype_to_line_dash = {
+        init_vec_type: line_dash_list[i % len(line_dash_list)]
+        for i, init_vec_type in enumerate(init_vec_type_list)
+    }
+
+
+    # ========================================================================================
+    # 初期化手法毎に、目標vec と 学習過程vec の差分を計算しつつ、metadata も同じ順番で作る
+    # ========================================================================================
+    flattened_vecs = []
+    concept_names_for_hover = []
+    concept_name_and_epoch_and_layer_index = []
+    point_symbols = []
+    point_colors = []
+    max_trajectory_epoch_list = []
+    init_vec_types_for_hover = []
+    epochs_for_hover = []
+    layer_ids_for_hover = []
+
+    for init_vec_type in init_vec_type_list:
+        epoch_to_trajectory_vecs = initvectype_to_epoch_to_trajectory_vecs[init_vec_type]
+        trajectory_epoch_list = sorted(epoch_to_trajectory_vecs.keys())
+        max_trajectory_epoch_list = trajectory_epoch_list if len(trajectory_epoch_list) > len(max_trajectory_epoch_list) else max_trajectory_epoch_list
+
+        if len(trajectory_epoch_list) == 0:
+            print(f"No trajectory vectors found for init_vec_type={init_vec_type}")
+            continue
+
+        # color_intensity = np.linspace(0.2, 1, len(trajectory_epoch_list)) # epochの数に基づいて色の強さを決定
+        # color_intensity_norm = (color_intensity - color_intensity.min()) / (color_intensity.max() - color_intensity.min()) # 0〜1に正規化   
+        # alpha_like = 0.25 + 0.75 * color_intensity_norm # 0.25〜1.0の範囲でalphaのような値を作る
+
+        for epoch_pos, epoch in enumerate(trajectory_epoch_list):
+            trajectory_vecs = epoch_to_trajectory_vecs[epoch]
+            # color_strength = 0.25 + 0.75 * (epoch_pos / (len(trajectory_epoch_list) - 1)) if len(trajectory_epoch_list) > 1 else 0.8
+            # print(f"color_strength for epoch {epoch}: {color_strength}")
+
+
+            if goal_vecs.ndim == 3:
+                if trajectory_vecs.ndim != 3:
+                    raise ValueError(
+                        f"trajectory_vecs must be 3D when goal_vecs is 3D. "
+                        f"Got trajectory_vecs.shape={trajectory_vecs.shape}"
+                    )
+                for concept_idx, concept_name in enumerate(concept_names):
+                    for layer_pos, layer_id in enumerate(visualize_layer_indices):
+                        # ** trajectory_vecs と goal_vecs の差分を計算 **
+                        diff_vec = (
+                            trajectory_vecs[concept_idx, layer_id, :]
+                            - goal_vecs[concept_idx, layer_id, :]
+                        )
+                        flattened_vecs.append(diff_vec)
+
+                        concept_names_for_hover.append(concept_name)
+                        concept_name_and_epoch_and_layer_index.append(
+                            f"{concept_name}, init_vec_type: {init_vec_type}, "
+                            f"epoch: {epoch}, layer: {layer_id}"
+                        )
+
+                        init_vec_types_for_hover.append(init_vec_type)
+                        epochs_for_hover.append(epoch)
+                        layer_ids_for_hover.append(layer_id)
+
+                        # ** plot点の形を決める
+                        point_symbols.append(initvectype_to_marker_symbol[init_vec_type])
+
+                        # ** plot colorを決める
+                        if len(trajectory_epoch_list) <= 1:
+                            color_strength = 0.8
+                        else:
+                            color_strength = 0.25 + 0.75 * (
+                                epoch_pos / (len(trajectory_epoch_list) - 1)
+                            )
+                        point_colors.append(
+                            blend_with_white(base_colors[concept_name], color_strength)
+                        )
+
+            elif goal_vecs.ndim == 2:
+                if trajectory_vecs.ndim != 2:
+                    raise ValueError(
+                        f"trajectory_vecs must be 2D when goal_vecs is 2D. "
+                        f"Got trajectory_vecs.shape={trajectory_vecs.shape}"
+                    )
+                
+                for concept_idx, concept_name in enumerate(concept_names):
+                    diff_vec = trajectory_vecs[concept_idx, :] - goal_vecs[concept_idx, :]
+
+                    flattened_vecs.append(diff_vec)
+                    concept_names_for_hover.append(concept_name)
+                    concept_name_and_epoch_and_layer_index.append(
+                        f"{concept_name}, init_vec_type: {init_vec_type}, "
+                        f"epoch: {epoch}, layer: {visualize_layer_indices[0]}"
+                    )
+                    point_symbols.append(initvectype_to_marker_symbol[init_vec_type])
+                    init_vec_types_for_hover.append(init_vec_type)
+                    epochs_for_hover.append(epoch)
+                    layer_ids_for_hover.append(visualize_layer_indices[0])
+
+                    if len(trajectory_epoch_list) <= 1:
+                        color_strength = 0.8
+                    else:
+                        color_strength = 0.25 + 0.75 * (
+                            epoch_pos / (len(trajectory_epoch_list) - 1)
+                        )
+
+                    point_colors.append(
+                        blend_with_white(base_colors[concept_name], color_strength)
+                    )
+
+    flattened_vecs = np.asarray(flattened_vecs)
+
+    print(f"flattened_vecs.shape: {flattened_vecs.shape}")
     print(f"concept_names_for_hover: {len(concept_names_for_hover)}")
     print(f"concept_name_and_epoch_and_layer_index: {len(concept_name_and_epoch_and_layer_index)}")
-    print(f"color_intensity_norm: {len(color_intensity_norm)}")
+    print(f"point_symbols: {len(point_symbols)}")
+    print(f"point_colors: {len(point_colors)}")
 
+    if flattened_vecs.shape[0] == 0:
+        raise ValueError("No vectors were loaded. Please check trajectory vector files.")
 
-
-    # ======================
-    # ベクトルの差分を計算
-    # ======================
-    vecs = []
-    for epoch, trajectory_vecs in epoch_to_trajectory_vecs.items():
-        if goal_vecs.ndim == 3 and trajectory_vecs.ndim == 3:
-            # (N, H, D) の場合、層ごとに差分を計算して、(N, H, D)の形状を維持
-            diff_vecs = trajectory_vecs - goal_vecs # (N, H, D)
-        elif goal_vecs.ndim == 2 and trajectory_vecs.ndim == 2:
-            # (N, D) の場合、そのまま差分を計算
-            diff_vecs = trajectory_vecs - goal_vecs # (N, D)
-        else:
-            raise ValueError("goal_vecs and trajectory_vecs must have the same number of dimensions (both should be either 2D or 3D).")
-        vecs.append(diff_vecs)
+    if flattened_vecs.shape[0] < 3:
+        raise ValueError(
+            f"PCA(n_components=3) requires at least 3 samples, "
+            f"but got {flattened_vecs.shape[0]} samples."
+        )
     
-    print(f"shape of vecs before stacking: {[v.shape for v in vecs]}") # 各epochのvecの形状を表示
-    vecs = np.stack(vecs, axis=1) # before: list of (N, H, D) or (N, D) -> after: (N, num_epochs, H, D) or (N, num_epochs, D), 最初の次元が概念の数Nとなるように変換するため、axis=1
-    print(f"shape of vecs after stacking: {vecs.shape}")
-
+    
     # ======================
     # PCAで次元削減
     # ======================
-    flattened_vecs = vecs.reshape(-1, vecs.shape[-1]) # 次元Dを固定. (N*H, D) または (N, D)
-    print(f"vecs.shape: {vecs.shape}, flattened_vecs.shape: {flattened_vecs.shape}")
-
     pca = PCA(n_components=3)
     coords = pca.fit_transform(flattened_vecs) # (N, 3)
+
+    # 寄与率を取得
+    explained = pca.explained_variance_ratio_
 
     # ======================
     # DataFrame化
@@ -201,28 +388,29 @@ def main(args):
         "PC2": coords[:, 1],
         "PC3": coords[:, 2],
         "concept_names_for_hover": concept_names_for_hover,
+        "init_vec_type": init_vec_types_for_hover,
+        "epoch": epochs_for_hover,
+        "layer_id": layer_ids_for_hover,
         "concept_name_and_epoch_and_layer_index": concept_name_and_epoch_and_layer_index,
-        "color_intensity_norm": color_intensity_norm,
+        "point_symbol": point_symbols,
+        "point_color": point_colors,
     })
+
+    assert len(df) == len(flattened_vecs)
+    assert len(df) == len(concept_names_for_hover)
+    assert len(df) == len(concept_name_and_epoch_and_layer_index)
+    assert len(df) == len(point_symbols)
+    assert len(df) == len(point_colors)
+    assert len(df) == len(init_vec_types_for_hover)
+    assert len(df) == len(epochs_for_hover)
+    assert len(df) == len(layer_ids_for_hover)
+
 
     # ======================
     # 描画準備
     # ======================
-    # base_palette = px.colors.qualitative.Plotly     # 例: ['#636EFA', '#EF553B', '#00CC96', ...]
-    base_palette = px.colors.qualitative.Alphabet
-    base_colors = {
-        concept_name: base_palette[i % len(base_palette)]
-        for i, concept_name in enumerate(concept_names)
-    }
-    # intensity を 0.25〜1.0 に正規化すると、薄すぎる点を避けられる
-    df["alpha_like"] = 0.25 + 0.75 * df["color_intensity_norm"]
-    df["point_color"] = [
-        blend_with_white(base_colors[concept_name], amount)
-        for concept_name, amount in zip(df["concept_names_for_hover"], df["alpha_like"])
-    ]
-    
     title=f"3D PCA of hidden states ({model_size}B, layer={layer_index}, pool_hs_type={pool_hs_type}, init_vec_type={init_vec_type})"
-
+    maker_size = 4
 
     # ======================
     # 3D散布図の描画
@@ -232,25 +420,61 @@ def main(args):
         x="PC1",
         y="PC2",
         z="PC3",
-        color="concept_names_for_hover",
+        color="concept_names_for_hover",   # conceptname の凡例を出す
         hover_name="concept_name_and_epoch_and_layer_index",
-        hover_data={"PC1": ':.3f', "PC2": ':.3f', "PC3": ':.3f'},
+        hover_data={
+            "PC1": ':.3f', 
+            "PC2": ':.3f', 
+            "PC3": ':.3f',
+            "concept_names_for_hover": True,
+            "point_symbol": False,
+            "point_color": False,
+        },
         title=title,
     )
-    fig.update_traces(marker=dict(size=6))
 
+    concept_name_set = set(df["concept_names_for_hover"])
     for trace in fig.data:
         concept_name = trace.name
+
+        if concept_name not in concept_name_set:
+            continue
+
         sub_df = df[df["concept_names_for_hover"] == concept_name]
 
+        trace.marker.size = maker_size
+        trace.marker.symbol = sub_df["point_symbol"].tolist()
         trace.marker.color = sub_df["point_color"].tolist()
-        trace.marker.size = 3 # 5
         trace.marker.opacity = 1.0
 
+        # concept 凡例をクリックしたとき、同じ concept の線も一緒に消すため
+        trace.legendgroup = concept_name
+
+
+    # ** 軸ラベルとレイアウト **
+    # PCA の各軸がどれくらい情報を持っているか(寄与率)を表示し、3D グラフの X/Y/Z 軸名を設定する
+    fig.update_layout(
+        scene=dict(
+            xaxis_title=f"PC1 ({explained[0] * 100:.2f}%)",
+            yaxis_title=f"PC2 ({explained[1] * 100:.2f}%)",
+            zaxis_title=f"PC3 ({explained[2] * 100:.2f}%)",
+        ),
+        width=1000,
+        height=800,
+    )
+
+    # ** タイトルと凡例の更新 **
     fig.update_layout(
         title=title,
         legend_title_text="Concept",
     )
+
+    fig.update_layout(
+        legend=dict(
+            groupclick="togglegroup"
+        )
+    )
+
     # (0,0,0)の点を打つ
     fig.add_trace(
         go.Scatter3d(
@@ -259,7 +483,7 @@ def main(args):
             z=[0],
             mode="markers",
             marker=dict(
-                size=5,
+                size=maker_size*1.5,
                 color="black",
                 opacity=0.5,
             ),
@@ -268,16 +492,319 @@ def main(args):
         )
     )
 
+    # ======================
+    # 初期化手法ごとのマーカー凡例を追加
+    # ======================
+    for init_vec_type, marker_symbol in initvectype_to_marker_symbol.items():
+        fig.add_trace(
+            go.Scatter3d(
+                x=[None],
+                y=[None],
+                z=[None],
+                mode="markers",
+                marker=dict(
+                    size=8,
+                    symbol=marker_symbol,
+                    color="gray",
+                    opacity=1.0,
+                ),
+                name=f"init: {init_vec_type}",
+                showlegend=True,
+                legendgroup="init_vec_type",
+            )
+        )
+
+    # ======================
+    # 各 init_vec_type・concept ごとに、
+    # 原点に一番近い点までの軌跡線を追加
+    # ======================
+
+    # [WIP] ! 元のvec同士で距離を計算する。PCA後ではなく前のvec
+    # df["dist_to_origin_3d"] = np.sqrt(
+    #     df["PC1"] ** 2 + df["PC2"] ** 2 + df["PC3"] ** 2
+    # )
+    df["dist_to_origin_3d"] = np.linalg.norm(flattened_vecs, axis=1) # PCA前のベクトル空間での原点からの距離を計算する。これにより、PCA後の空間での距離が歪んでいても、元の空間で原点に近い点を正しく特定できるようにする。
+
+
+    for (init_vec_type, concept_name, layer_id), group_df in df.groupby(
+        ["init_vec_type", "concept_names_for_hover", "layer_id"]
+    ):
+        # epoch, layer_id の順に並べる
+        group_df = group_df.sort_values(["epoch", "layer_id"]).reset_index(drop=True)
+
+        if len(group_df) < 2:
+            continue
+
+        # 原点に最も近い点の index
+        closest_pos = group_df["dist_to_origin_3d"].idxmin()
+
+        # reset_index 後なので、0..closest_pos までを軌跡として使う
+        traj_df = group_df.iloc[:closest_pos + 1]
+
+        if len(traj_df) < 2:
+            continue
+
+        fig.add_trace(
+            go.Scatter3d(
+                x=traj_df["PC1"],
+                y=traj_df["PC2"],
+                z=traj_df["PC3"],
+                mode="lines",
+                # line=dict(
+                #     color=base_colors[concept_name],
+                #     width=2,
+                # ),
+                line=dict(
+                    color=hex_to_rgba(base_colors[concept_name], 0.5),
+                    width=2,
+                    dash=initvectype_to_line_dash[init_vec_type],
+                ),
+                name=f"path: {concept_name}, {init_vec_type}, layer={layer_id}",
+
+                # 点 trace と同じ legendgroup にする
+                legendgroup=concept_name,
+
+                # 凡例には線を出さない
+                showlegend=False,
+                hoverinfo="skip",
+            )
+        )
+
 
     # 保存
-    output_dir = os.path.join(project_root, "src_visualize", "output", "pca_plot_diffvecs", f"{model_size}B", str(pool_hs_type))
     os.makedirs(output_dir, exist_ok=True)
-    output_path = os.path.join(output_dir, f"{model_size}B_{target_concepts_filename.split('.')[0]}_initlayer{init_layer_index}_seed{seed}_initvecwith{init_vec_type.replace(' ', '_')}_vislayer{visualize_layer_index}_pca_3d.html")
-
+    save_filename = (
+        f"{model_size}B"
+        f"_{target_concepts_filename.split('.')[0]}"
+        f"_initlayer{init_layer_index}"
+        f"_seed{seed}"
+        "_multi_init_vis"
+        f"_vislayer{visualize_layer_index}"
+        f"_pca_3d.html"
+    )# f"_initvecwith{init_vec_type.replace(' ', '_')}"
+    output_path = os.path.join(
+        output_dir, 
+        save_filename
+        # f"{model_size}B_{target_concepts_filename.split('.')[0]}_initlayer{init_layer_index}_seed{seed}_initvecwith{init_vec_type.replace(' ', '_')}_vislayer{visualize_layer_index}_pca_3d.html")
+    )
     
     os.makedirs(output_dir, exist_ok=True)
     fig.write_html(output_path)
     print(f"Plot saved to: {output_path}")
+
+
+
+
+    # ======================
+    # 2D散布図の描画・保存
+    # ======================
+    maker_size = 10
+    title_2d = (
+        f"2D PCA of hidden states "
+        f"({model_size}B, layer={layer_index}, "
+        f"pool_hs_type={pool_hs_type}, init_vec_types=multi)"
+    )
+
+    fig_2d = px.scatter(
+        df,
+        x="PC1",
+        y="PC2",
+        color="concept_names_for_hover",   # conceptname の凡例を出す
+        hover_name="concept_name_and_epoch_and_layer_index",
+        hover_data={
+            "PC1": ':.3f',
+            "PC2": ':.3f',
+            "PC3": ':.3f',
+            "concept_names_for_hover": True,
+            "point_symbol": False,
+            "point_color": False,
+        },
+        title=title_2d,
+    )
+
+    # concept ごとの trace に対して、対応する symbol/color を設定
+    concept_name_set = set(df["concept_names_for_hover"])
+
+    for trace in fig_2d.data:
+        concept_name = trace.name
+
+        if concept_name not in concept_name_set:
+            continue
+
+        sub_df = df[df["concept_names_for_hover"] == concept_name]
+
+        trace.marker.size = maker_size
+        trace.marker.symbol = sub_df["point_symbol"].tolist()
+        trace.marker.color = sub_df["point_color"].tolist()
+        trace.marker.opacity = 1.0
+
+        trace.legendgroup = concept_name
+
+
+    # ** 軸ラベルとレイアウト **
+    # PCA の各軸がどれくらい情報を持っているか(寄与率)を表示し、3D グラフの X/Y/Z 軸名を設定する
+    fig_2d.update_layout(
+        xaxis_title=f"PC1 ({explained[0] * 100:.2f}%)",
+        yaxis_title=f"PC2 ({explained[1] * 100:.2f}%)",
+        width=1300,
+        height=900,
+        title=title_2d,
+        legend_title_text="Concept",
+    )
+
+    # 原点を追加
+    fig_2d.add_trace(
+        go.Scatter(
+            x=[0],
+            y=[0],
+            mode="markers",
+            marker=dict(
+                size=maker_size * 1.5,
+                color="black",
+                opacity=0.5,
+            ),
+            name="origin",
+            showlegend=False,
+        )
+    )
+
+    # # ======================
+    # # epoch 0 の点を大きく強調表示
+    # # これがないとepoch0の点が他の点と重なって見つけられなかったため
+    # # ======================
+    # epoch0_df = df[df["epoch"] == 0].copy()
+
+    # for concept_name, concept_df in epoch0_df.groupby("concept_names_for_hover"):
+    #     fig_2d.add_trace(
+    #         go.Scatter(
+    #             x=concept_df["PC1"],
+    #             y=concept_df["PC2"],
+    #             mode="markers",
+    #             marker=dict(
+    #                 size=18,
+    #                 color=concept_df["point_color"],
+    #                 opacity=1.0,
+    #                 symbol="circle-open",
+    #                 line=dict(
+    #                     width=3,
+    #                     color=base_colors[concept_name],
+    #                 ),
+    #             ),
+    #             text=concept_df["concept_name_and_epoch_and_layer_index"],
+    #             hoverinfo="text",
+    #             name=f"epoch 0: {concept_name}",
+    #             legendgroup=concept_name,
+    #             showlegend=False,
+    #         )
+    #     )
+
+    # ======================
+    # 初期化手法ごとのマーカー凡例を追加
+    # ======================
+    for init_vec_type, marker_symbol in initvectype_to_marker_symbol.items():
+        fig_2d.add_trace(
+            go.Scatter(
+                x=[0],
+                y=[0],
+                mode="markers",
+                marker=dict(
+                    size=8,
+                    symbol=marker_symbol,
+                    color="gray",
+                    opacity=1.0,
+                ),
+                name=f"init: {init_vec_type}",
+                showlegend=True,
+                visible="legendonly",
+                legendgroup="init_vec_type",
+            )
+        )
+
+    # ======================
+    # 各 init_vec_type・concept ごとに、
+    # 原点に一番近い点までの軌跡線を追加
+    # ======================
+    # df["dist_to_origin_2d"] = np.sqrt(
+    #     df["PC1"] ** 2 + df["PC2"] ** 2
+    # )
+
+    # [WIP] ! 元のvec同士で距離を計算する。PCA後ではなく前のvec
+
+    for (init_vec_type, concept_name, layer_id), group_df in df.groupby(
+        ["init_vec_type", "concept_names_for_hover", "layer_id"]
+    ):
+        group_df = group_df.sort_values("epoch").reset_index(drop=True)
+
+        if len(group_df) < 2:
+            continue
+
+        closest_pos = group_df["dist_to_origin_2d"].idxmin()
+        traj_df = group_df.iloc[:closest_pos + 1]
+
+        if len(traj_df) < 2:
+            continue
+
+        fig_2d.add_trace(
+            go.Scatter(
+                x=traj_df["PC1"],
+                y=traj_df["PC2"],
+                mode="lines",
+                # line=dict(
+                #     color=base_colors[concept_name],
+                #     width=2,
+                # ),
+                line=dict(
+                    color=hex_to_rgba(base_colors[concept_name], 0.5),
+                    width=2,
+                    dash=initvectype_to_line_dash[init_vec_type],
+                ),
+                name=f"path: {concept_name}, {init_vec_type}, layer={layer_id}",
+                legendgroup=concept_name,
+                showlegend=False,
+                hoverinfo="skip",
+            )
+        )
+
+    fig_2d.update_layout(
+        legend=dict(
+            groupclick="togglegroup"
+        )
+    )
+
+
+    save_filename_2d = (
+        f"{model_size}B"
+        f"_{target_concepts_filename.split('.')[0]}"
+        f"_initlayer{init_layer_index}"
+        f"_seed{seed}"
+        "_multi_init_vis"
+        f"_vislayer{visualize_layer_index}"
+        f"_pca_2d.html"
+    )
+
+    output_path_2d = os.path.join(output_dir, save_filename_2d)
+
+    fig_2d.write_html(output_path_2d)
+    print(f"2D Plot saved to: {output_path_2d}")
+
+    # 画像で保存するならこちら
+    # save_filename_2d = (
+    #     f"{model_size}B"
+    #     f"_{target_concepts_filename.split('.')[0]}"
+    #     f"_initlayer{init_layer_index}"
+    #     f"_seed{seed}"
+    #     "_multi_init_vis"
+    #     f"_vislayer{visualize_layer_index}"
+    #     f"_pca_2d.png"
+    # )
+
+    # output_path_2d = os.path.join(output_dir, save_filename_2d)
+
+    # fig_2d.write_image(output_path_2d, scale=2)
+    # print(f"2D PCA image saved to: {output_path_2d}")
+
+
+
 
 
 # **** 白と基本色を混ぜて、薄い色〜濃い色を作る関数 ****
@@ -288,18 +815,24 @@ def hex_to_rgb(hex_color):
         int(hex_color[2:4], 16),
         int(hex_color[4:6], 16),
     ])
-def blend_with_white(hex_color, amount):
+def blend_with_white(hex_color, color_strength):
     """
-    amount = 0 -> white
-    amount = 1 -> original color
+    color_strength = 0 -> white
+    color_strength = 1 -> original color
     """
     rgb = hex_to_rgb(hex_color)
     white = np.array([255, 255, 255])
-    mixed = white * (1 - amount) + rgb * amount
+    mixed = white * (1 - color_strength) + rgb * color_strength
     mixed = mixed.astype(int)
     return f"rgb({mixed[0]}, {mixed[1]}, {mixed[2]})"
 
-
+def hex_to_rgba(hex_color, alpha):
+    """
+    hex color -> rgba string
+    alpha = 0.0〜1.0
+    """
+    rgb = hex_to_rgb(hex_color)
+    return f"rgba({rgb[0]}, {rgb[1]}, {rgb[2]}, {alpha})"
 
 
 def check_concept_name_match_and_sort(
@@ -365,34 +898,42 @@ if __name__ == "__main__":
     if args.visualize_layer_index is None:
         args.visualize_layer_index = 'all'
     
-    for init_vec_type in args.init_vec_type_list:
-        print(f"Visualizing trajectory vectors with init_vec_type: {init_vec_type}")
-        args.init_vec_type = init_vec_type
-
-        main(args)
+    main(args)
 
 
 
 """
 TARGET_CONCEPTS_FILENAME="target_concepts_mini_13.json"
 MODEL_SIZE=12
-CUDA_VISIBLE_DEVICES=4
-
 LR=0.003
-NUM_OPTIONS=3
 INIT_LAYER_INDEX=12
 TRAINED_DATE="20260523"
 SEED=0
 
-EMBED_VEC_TYPE="by_conceptname"   # "by_conceptname" 
-POOL_HS_TYPE="mean_pool"   # "target_seq_mean_pool" # "repeat_mean_pool" "eos" "mean_pool"
-INIT_VEC_TYPE_LIST=("nearCatCent_by_WikiSummaryRepeatHSMixed" "farCatCent_by_WikiSummaryRepeatHSMixed" "norm_rand_vocab") 
-
-INIT_VEC_TYPE_LIST=("CatCent_by_WikiSummaryRepeatHSMixed" "nearCatCent_by_WikiSummaryRepeatHSMixed" "otherCatCent_by_WikiSummaryRepeatHSMixed" "zero" "norm_rand_vocab")
-
 VISUALIZE_LAYER_INDEX=12    # 'all' にすると全層プロットするが、プロットが見づらくなる可能性があるので、特定の層のインデックスを指定した方が良い
 
-nohup uv run python src_visualize/plot_trajectory_vecs_3dPCA.py \
+
+INIT_VEC_TYPE_LIST=("CatCent_by_WikiSummaryRepeatHSMixed" "farCatCent_by_WikiSummaryRepeatHSMixed" "norm_rand_vocab") 
+
+INIT_VEC_TYPE_LIST=("CatCent_by_WikiSummaryRepeatHSMixed" "nearCatCent_by_WikiSummaryRepeatHSMixed" "farCatCent_by_WikiSummaryRepeatHSMixed" "norm_rand_vocab") 
+
+INIT_VEC_TYPE_LIST=("CatCent_by_WikiSummaryRepeatHSMixed" "nearCatCent_by_WikiSummaryRepeatHSMixed" "farCatCent_by_WikiSummaryRepeatHSMixed" "zero" "norm_rand_vocab")
+
+
+## by_embed_conceptname_in_wikisummaryの場合
+EMBED_VEC_TYPE="by_embed_conceptname_in_wikisummary"
+POOL_HS_TYPE="target_seq_repeat_mean_pool"
+
+## by_conceptnameの場合
+EMBED_VEC_TYPE="by_conceptname"
+POOL_HS_TYPE="mean_pool"
+
+## by_embed_conceptname_in_testの場合
+EMBED_VEC_TYPE="by_embed_conceptname_in_test"
+POOL_HS_TYPE="target_seq_last_token"
+
+
+nohup uv run python src_visualize/plot_trajectory_vecs_3dPCA_inittypes_together.py \
     --target_concepts_filename ${TARGET_CONCEPTS_FILENAME} \
     --model_size ${MODEL_SIZE} \
     --pool_hs_type ${POOL_HS_TYPE} \
@@ -404,7 +945,6 @@ nohup uv run python src_visualize/plot_trajectory_vecs_3dPCA.py \
     --seed ${SEED} \
     --visualize_layer_index ${VISUALIZE_LAYER_INDEX} \
     > log_plot_trajectory_vecs_3dPCA_gemma-${MODEL_SIZE}B_${TARGET_CONCEPTS_FILENAME}.log 2>&1 &
-
 
 
 """

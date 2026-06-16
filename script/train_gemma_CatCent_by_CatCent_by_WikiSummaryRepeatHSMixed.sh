@@ -14,7 +14,7 @@ MODEL_SIZE=12
 MAX_EPOCHS=10
 TARGET_CONCEPTS_FILENAME="target_concepts_mini_13.json"
 LR=0.003
-PROCESS_NUM=1
+PROCESS_NUM=6
 SEED_NUM=20
 LAYER_INDICES=(12)
 INIT_VEC_TYPES=("CatCent_by_WikiSummaryRepeatHSMixed" "nearCatCent_by_WikiSummaryRepeatHSMixed" "farCatCent_by_WikiSummaryRepeatHSMixed" "norm_rand_vocab" "zero")
@@ -28,16 +28,23 @@ INIT_VEC_TYPES=("zero")
 # LAYER_INDICES=(1 4 8 10 12 16 20 24 28 32 36 38 40 44 -1)
 
 THREAD_ID=0
-CUDA_VISIBLE_DEVICES=6
+CUDA_VISIBLE_DEVICES=0
 
-# THREAD_ID=1
-# CUDA_VISIBLE_DEVICES=3
+THREAD_ID=1
+CUDA_VISIBLE_DEVICES=1
 
-# THREAD_ID=2
-# CUDA_VISIBLE_DEVICES=4
+THREAD_ID=2
+CUDA_VISIBLE_DEVICES=2
 
-# THREAD_ID=3
-# CUDA_VISIBLE_DEVICES=4
+THREAD_ID=3
+CUDA_VISIBLE_DEVICES=3
+
+THREAD_ID=4
+CUDA_VISIBLE_DEVICES=4
+
+THREAD_ID=5
+CUDA_VISIBLE_DEVICES=5
+
 
 
 nohup uv --no-progress run python src/trainMemVec_fromXvec_gemma_wholeRun.py \
@@ -66,12 +73,15 @@ nohup uv --no-progress run python src/trainMemVec_fromXvec_gemma_wholeRun.py \
         --thread_id ${THREAD_ID} \
         --process_num ${PROCESS_NUM} \
         --seed_num ${SEED_NUM} \
-        > log_TrainMemVec_gemma-${MODEL_SIZE}B_lr${LR}_wholeRun${THREAD_ID}_printlog.log 2>&1 &
+        > log_TrainMemVec_gemma-${MODEL_SIZE}B_lr${LR}_wholeRun${THREAD_ID}_printlog_0.log 2>&1 &
 
-THREAD_ID=0: 311412
-THREAD_ID=1: -
-THREAD_ID=2: -
-THREAD_ID=3: -
+THREAD_ID=0: 506329
+THREAD_ID=1: 508828
+THREAD_ID=2: 509951
+THREAD_ID=3: 511104
+THREAD_ID=4: 512120
+THREAD_ID=5: 513500
+
 332032
 
 

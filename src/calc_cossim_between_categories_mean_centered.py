@@ -720,12 +720,12 @@ if __name__ == "__main__":
     parser.add_argument("--seed_list", type=int, nargs="*", default=[0], help="実験の乱数シードのリスト。")
     args = parser.parse_args()
 
-    # # for seed in range(args.seed_range):
-    # for seed in args.seed_list:
-    #     args.seed = seed
-    #     main(args)
+    # for seed in range(args.seed_range):
+    for seed in args.seed_list:
+        args.seed = seed
+        main(args)
     
-    # main(args)
+    main(args)
 
     # 結果まとめ
     aggregate_results_and_analyze(args)

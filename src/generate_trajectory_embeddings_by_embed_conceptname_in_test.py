@@ -67,12 +67,12 @@ debug_print_flag = False
 def main(args):
     model_size = args.model_size
     target_concepts_filename = args.target_concepts_filename
-    pool_hs_type = args.pool_hs_type
     init_vec_type = args.init_vec_type
     lr = args.lr
     trained_date = args.trained_date
     init_layer_index = args.init_layer_index
     seed = args.seed
+    pool_hs_type = 'target_seq_last_token'
 
     visualize_layer_index='all'
     model_version = get_gemma_model_version(model_size)
@@ -99,7 +99,7 @@ def main(args):
     output_dir = os.path.join(
         "/work04/toko/EmbedNewConcept-20260305", 
         "trajectory_embeddings",    # [memo] change here
-        "by_conceptname",           # [memo] change here depends on the method to create ves for visualization.
+        "by_embed_conceptname_in_test",           # [memo] change here depends on the method to create ves for visualization.
         f"gemma-{model_version}-{model_size}B",
         pool_hs_type
     )
@@ -255,7 +255,9 @@ def main(args):
 
         # ベクトルを保存, output_path名は、epochによって変える
         if not need_layer_flag:
-            output_path = os.path.join(output_dir, f"{target_concepts_filename.split('.')[0]}_{trained_date}_seed{seed}_initvecwith{init_vec_type.replace(' ', '_')}_vislayer{visualize_layer_index}_epoch{epoch}.npz")
+            output_path = os.path.join(
+                output_dir, 
+                f"{target_concepts_filename.split('.')[0]}_{trained_date}_seed{seed}_initvecwith{init_vec_type.replace(' ', '_')}_vislayer{visualize_layer_index}_epoch{epoch}.npz")
         else:
             output_path = os.path.join(output_dir, f"{target_concepts_filename.split('.')[0]}_{trained_date}_initlayer{init_layer_index}_seed{seed}_initvecwith{init_vec_type.replace(' ', '_')}_vislayer{visualize_layer_index}_epoch{epoch}.npz")
         
@@ -284,7 +286,7 @@ if __name__ == "__main__":
     parser = argparse.ArgumentParser(description="Generate goal embeddings for target concepts using a specified Gemma model.")
     parser.add_argument('--target_concepts_filename', type=str, default='target_concepts.json', help='学習対象とするconcept群を指定したjsonファイル名 (configディレクトリ内). 例: "target_concepts.json"') # *** 🟠 
     parser.add_argument("--model_size", type=int, default=4, help="Size of the Gemma model in billions (e.g., 4 for Gemma-3-4B).")
-    parser.add_argument("--pool_hs_type", type=str, default="repeat_mean_pool", help='hidden stateのpooling方法. "eos": 最後のEOSトークンの隠れ状態を使用. "last_token": 最後のトークンの隠れ状態を使用. "mean_pool": テキスト全体の隠れ状態の平均を使用. "repeat_mean_pool": テキストを2回繰り返した内の後のtextの隠れ状態の平均を使用. "dot": テキスト全体の隠れ状態を平均したものと、最後のトークンの隠れ状態を連結して使用.')
+    # parser.add_argument("--pool_hs_type", type=str, default="repeat_mean_pool", help='hidden stateのpooling方法. "eos": 最後のEOSトークンの隠れ状態を使用. "last_token": 最後のトークンの隠れ状態を使用. "mean_pool": テキスト全体の隠れ状態の平均を使用. "repeat_mean_pool": テキストを2回繰り返した内の後のtextの隠れ状態の平均を使用. "dot": テキスト全体の隠れ状態を平均したものと、最後のトークンの隠れ状態を連結して使用.')
     parser.add_argument('--cuda_visible_devices', type=str, default=None, help='CUDA_VISIBLE_DEVICESの設定. ただし数字は1つだけ指定すること. 例: "2"')
     
     parser.add_argument('--init_vec_type_list', type=str, nargs='+', default=["CatCent_by_WikiSummaryRepeatHSMixed"], help='目memory vectorの初期化方法のリスト. 例: "CatCent_by_WikiSummaryRepeatHSMixed" "nearCatCent_by_WikiSummaryRepeatHSMixed" "otherCatCent_by_WikiSummaryRepeatHSMixed" "zero" "norm_rand_vocab"')
@@ -311,12 +313,9 @@ MODEL_SIZE=12
 CUDA_VISIBLE_DEVICES=4
 
 LR=0.003
-NUM_OPTIONS=3
 INIT_LAYER_INDEX=12
 TRAINED_DATE="20260523" #"20260427"
 SEED=0
-POOL_HS_TYPE="mean_pool" # "target_seq_repeat_mean_pool" #"eos" # "repeat_mean_pool"
-
 
 INIT_VEC_TYPE_LIST=("CatCent_by_WikiSummaryRepeatHSMixed" "nearCatCent_by_WikiSummaryRepeatHSMixed" "farCatCent_by_WikiSummaryRepeatHSMixed" "zero" "norm_rand_vocab") 
 # INIT_VEC_TYPE_LIST=("CatCent_by_WikiSummaryRepeatHSMixed" "nearCatCent_by_WikiSummaryRepeatHSMixed" "otherCatCent_by_WikiSummaryRepeatHSMixed" "zero" "norm_rand_vocab") 
@@ -325,17 +324,16 @@ INIT_VEC_TYPE_LIST=("nearCatCent_by_WikiSummaryRepeatHSMixed" "otherCatCent_by_W
 INIT_VEC_TYPE_LIST=("CatCent_by_WikiSummaryRepeatHSMixed" "nearCatCent_by_WikiSummaryRepeatHSMixed" "norm_rand_vocab") 
 
 
-nohup uv run python src/generate_trajectory_embeddings_by_conceptname.py \
+nohup uv run python src/generate_trajectory_embeddings_by_embed_conceptname_in_test.py \
     --target_concepts_filename ${TARGET_CONCEPTS_FILENAME} \
     --model_size ${MODEL_SIZE} \
-    --pool_hs_type ${POOL_HS_TYPE} \
     --cuda_visible_devices ${CUDA_VISIBLE_DEVICES} \
     --init_vec_type_list ${INIT_VEC_TYPE_LIST} \
     --lr ${LR} \
     --trained_date ${TRAINED_DATE} \
     --init_layer_index ${INIT_LAYER_INDEX} \
     --seed ${SEED} \
-    > log_generate_trajectory_embeddings_gemma-${MODEL_SIZE}B_${TARGET_CONCEPTS_FILENAME}.log 2>&1 &
+    > log_generate_trajectory_embeddings_gemma-${MODEL_SIZE}B_${TARGET_CONCEPTS_FILENAME}_conceptname_in_test.log 2>&1 &
 
     
 3393797

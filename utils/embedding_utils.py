@@ -129,8 +129,9 @@ def extract_hidden_states(
     prompts, 
     pool_hs_type,
     batch_size=8, 
-    layer_index=None, 
     pool_hs_target_texts=None, 
+    layer_index=None, 
+    mix_layers=False,
     print_flag=False):
     """
     pool_hs_typeに応じて hidden state を返す。
@@ -184,6 +185,7 @@ def extract_hidden_states(
             # hidden_states は tuple:
             # 0: embedding出力, 1..L: 各層出力
             hs = outputs.hidden_states
+            
 
         # *** pool_hs_type に応じて、vectorを抽出 ***
         if pool_hs_type == "eos":
@@ -274,11 +276,11 @@ def extract_hidden_states(
                 print(f"\tattention_mask: {attention_mask[s_id]},\n\t valid_pos: {valid_pos}, \n\t valid part in text: {input_ids[s_id][pos_begin:pos_end]}")
 
             # ** 結果のvecをall_vecsに追加
+            _, num_hidden_layers = get_model_info(model)
+            
             if type(layer_index) == int:
                 # layer_indexが1つだけ指定された場合
-                layer_hs = hs[layer_index]      # (B, T, H)
-                vec = layer_hs[s_id, pos_begin:pos_end, :].mean(dim=0)  # (H,)
-                all_vecs.append(vec.detach().float().cpu().numpy()) # all_vecs: (T, D)  Tはテキスト数, Dは隠れ状態の次元
+                layer_indices = [layer_index]
             else:
                 if layer_index == 'all':
                     # layer_indexが'all'の場合は、全ての層の隠れ状態を抽出して連結する
@@ -287,16 +289,55 @@ def extract_hidden_states(
                     # layer_indexが複数、intで指定された場合は、指定された全ての層の隠れ状態を抽出して連結する
                     layer_indices = layer_index
 
-                # layer_indexが複数指定された場合は、指定された全ての層の隠れ状態を抽出して連結する
-                layer_to_vecs = []
-                for l_idx in layer_indices:
-                    layer_hs = hs[l_idx]      # (B, T, H)
+            # layer_indexが複数指定された場合は、指定された全ての層の隠れ状態を抽出して連結する
+            layer_to_vecs = []
+            for layer_index in layer_indices:
+                if mix_layers:
+                    # ** 前後3層mixでterm_vecを作る場合 **
+                    layer_hs = torch.stack(
+                        [hs[lid] for lid in get_mix_layers(layer_index, num_hidden_layers)],
+                        dim=0
+                    )  # 指定層の出力 [3, batch_size, seq_len, d]
+                    vec = layer_hs[:, s_id, pos_begin:pos_end, :].mean(dim=0).mean(dim=0)  # (mix層数, batch_size, seq_len, d) -> batch内のt_idxに該当する層&平均対象のtoken位置を指定: (mix層数, meanpool対象token数, d) -> 前後3層を平均した隠れ状態のうち、valid_tokenの部分を平均する: (meanpool対象token数, d) -> meanpool対象tokenを平均する: (d)
+                else:
+                    # ** 単一層でterm_vecを作る場合 **
+                    layer_hs = hs[layer_index]      # (B, T, H)
                     vec = layer_hs[s_id, pos_begin:pos_end, :].mean(dim=0)  # (H,)
+                
+
+                if len(layer_indices) == 1:
+                    # layer_indexが1つだけ指定された場合は、層の次元だけのベクトルをall_vecsに追加する
+                    all_vecs.append(vec.detach().float().cpu().numpy()) # all_vecs: (T, D)  Tはテキスト数, Dは隠れ状態の次元
+                
+                else:        
+                    # layer_indexが複数指定された場合は、層の次元だけのベクトルをlayer_to_vecsに追加し、最後にlayer_to_vecsをall_vecsに追加する
                     layer_to_vecs.append(vec.detach().float().cpu().numpy())
+            if len(layer_indices) != 1:
                 all_vecs.append(layer_to_vecs)  # (T, H, D) Tはテキスト数, Hは層の数, Dは隠れ状態の次元
 
     return np.stack(all_vecs, axis=0)
 
+
+def get_mix_layers( layer_idx, num_hidden_layers):
+    if layer_idx == -1 or layer_idx == num_hidden_layers:
+        mixed_layers = [-1, -2, -3]                           # 最終層とその前の2層を平均する
+    elif layer_idx == 0:
+        mixed_layers = [0, 1, 2]                              # 最初の層とその後の2層を平均する
+    else:
+        mixed_layers = [layer_idx-1, layer_idx, layer_idx+1]  # 指定層の前後3層を平均する
+    # else:
+    #     raise ValueError(f"Invalid layer_idx: {layer_idx}. Must be -1, 0, or a positive integer less than num_hidden_layers.")
+    return mixed_layers
+
+
+def get_model_info(model):
+    try:
+        E = model.model.embed_tokens.weight
+        num_hidden_layers = model.config.num_hidden_layers
+    except AttributeError:
+        E = model.model.language_model.embed_tokens.weight
+        num_hidden_layers = model.config.text_config.num_hidden_layers
+    return E, num_hidden_layers
 
 
 def get_concept_containing_text_using_wiki_summary(concept, target_name_to_replace_with_concept=None):
